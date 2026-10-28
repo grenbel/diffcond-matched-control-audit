@@ -1,0 +1,198 @@
+{
+  "written_at": "2026-09-10T15:45:42+0800",
+  "m0_sentinel": "gap_a_logs/M0_PASS.json",
+  "m0_sentinel_sha256": "413ffcdac7780d287cfb5170e9f02184d51641de3e753862b617660e0fe00d07",
+  "runs": {
+    "v1_lambda0_seed43": {
+      "ckpt": "experiments/AdaPoinTr_DiffCond_v1_lambda0/ShapeNet55_models/diffcond_v1_lambda0_seed43/ckpt-epoch-030.pth",
+      "ckpt_sha256": "e20a5a987a24575d80383fec7295019d7b281fe1c0b6348ef930384e8178a7e4",
+      "ckpt_bytes": 395871791,
+      "train_log": "experiments/AdaPoinTr_DiffCond_v1_lambda0/ShapeNet55_models/diffcond_v1_lambda0_seed43/20260910_032344.log",
+      "train_log_sha256": "169d7f6479200c1802bffe48d50a49cdba85c84ec8418af2c4b96a33586d61b1",
+      "train_meta": "gap_a_logs/train_meta_v1_lambda0_seed43.json",
+      "train_meta_sha256": "907f42789401002eb4e52eb17edeb03d5acd269ef1d550293f333b4c716361ad",
+      "train_end": "gap_a_logs/train_end_v1_lambda0_seed43.json",
+      "train_end_sha256": "5d265ce0712c68a324d2273f4e3473e36b0f3a7bcc8c728aab23a86548c1bc92",
+      "config_sha256": "fcaeae8b9295cbbfa8c2f9b857f3278b136120773cb545094dc2e5650f845993",
+      "seed": 43,
+      "start_ckpt": "experiments/AdaPoinTr/ShapeNet55_models/baseline_sn55/ckpt-best.pth",
+      "start_ckpt_sha256": "f1acb03baa1f80c5c4eeb361d9b23a0193e9891d31df1a0de0b4de37bee534b3"
+    },
+    "v1_lambda0_seed44": {
+      "ckpt": "experiments/AdaPoinTr_DiffCond_v1_lambda0/ShapeNet55_models/diffcond_v1_lambda0_seed44/ckpt-epoch-030.pth",
+      "ckpt_sha256": "1bb39ab2896eea0e926490b660fa4b03f2fde7fd548600b0154db5b69dc4f5a2",
+      "ckpt_bytes": 395871791,
+      "train_log": "experiments/AdaPoinTr_DiffCond_v1_lambda0/ShapeNet55_models/diffcond_v1_lambda0_seed44/20260910_055039.log",
+      "train_log_sha256": "32a3b592f066bbab2d2edb91371a25eb1ea434f8ba913bfaafae74ded925655d",
+      "train_meta": "gap_a_logs/train_meta_v1_lambda0_seed44.json",
+      "train_meta_sha256": "7d2b8a3c4616278e8f82ba3d9bec9b63070067fff1205e565f679da97b5a981d",
+      "train_end": "gap_a_logs/train_end_v1_lambda0_seed44.json",
+      "train_end_sha256": "fabd1ca6fa35509f2ebf87f217b96af5816485149cb641aa0e9770d15fc86b26",
+      "config_sha256": "fcaeae8b9295cbbfa8c2f9b857f3278b136120773cb545094dc2e5650f845993",
+      "seed": 44,
+      "start_ckpt": "experiments/AdaPoinTr/ShapeNet55_models/baseline_sn55/ckpt-best.pth",
+      "start_ckpt_sha256": "f1acb03baa1f80c5c4eeb361d9b23a0193e9891d31df1a0de0b4de37bee534b3"
+    },
+    "v2b_seed43": {
+      "ckpt": "experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-epoch-030.pth",
+      "ckpt_sha256": "8af6dc2c56f1a0599d8a4b3cb53fa54ce6e3d164636309fda58a0a319605dd28",
+      "ckpt_bytes": 395871791,
+      "train_log": "experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/20260910_081731.log",
+      "train_log_sha256": "5fdccb243b860ab72f7daec2dd094a67a0c7b2fc1bc743ce145bf138d6f3511f",
+      "train_meta": "gap_a_logs/train_meta_v2b_seed43.json",
+      "train_meta_sha256": "0cec85db1f91ccd1228b9f5548fd1bb6e8f82a9b5e2b85b13f90fd81e3766419",
+      "train_end": "gap_a_logs/train_end_v2b_seed43.json",
+      "train_end_sha256": "5c1393fcdb73181b354dcec5644eccd47eb047afe35cce7999f5f29414d2797a",
+      "config_sha256": "6e4ac340b7ca9a8c8ee73cde299db912ebe2bb7a8e8b5fa03513e65dc935ec4b",
+      "seed": 43,
+      "start_ckpt": "experiments/AdaPoinTr/ShapeNet55_models/baseline_sn55/ckpt-best.pth",
+      "start_ckpt_sha256": "f1acb03baa1f80c5c4eeb361d9b23a0193e9891d31df1a0de0b4de37bee534b3"
+    },
+    "v2b_seed44": {
+      "ckpt": "experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed44/ckpt-epoch-030.pth",
+      "ckpt_sha256": "a132394ed4447c4a0b83a77d7c96f6350ca8e1f63ac6797b57710ba89ad8f62c",
+      "ckpt_bytes": 395871791,
+      "train_log": "experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed44/20260910_104348.log",
+      "train_log_sha256": "da7557bc65c87698108b2bfbb4105c168cd27b761982a31700c2595e7d147e07",
+      "train_meta": "gap_a_logs/train_meta_v2b_seed44.json",
+      "train_meta_sha256": "b6ef61e09e0e09b76f7c8f815007fec02515e7ec346e8b08e5e81ccaa125e8dd",
+      "train_end": "gap_a_logs/train_end_v2b_seed44.json",
+      "train_end_sha256": "ba2f6b58dcfa8034d5131b2e42204c02cd766e160010111458157cdc39c95d69",
+      "config_sha256": "6e4ac340b7ca9a8c8ee73cde299db912ebe2bb7a8e8b5fa03513e65dc935ec4b",
+      "seed": 44,
+      "start_ckpt": "experiments/AdaPoinTr/ShapeNet55_models/baseline_sn55/ckpt-best.pth",
+      "start_ckpt_sha256": "f1acb03baa1f80c5c4eeb361d9b23a0193e9891d31df1a0de0b4de37bee534b3"
+    }
+  },
+  "params": {
+    "r100": "experiments/AdaPoinTr/ShapeNet55_models/baseline_sn55/ckpt-best.pth",
+    "r100_sha256": "f1acb03baa1f80c5c4eeb361d9b23a0193e9891d31df1a0de0b4de37bee534b3",
+    "v2b42": "experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b/ckpt-epoch-030.pth",
+    "v2b42_sha256": "3f8c329a186a1f204eeefe0027cce0ee6eb250db68146c5657684bd5725b6d28",
+    "cells": [
+      "v1_lambda0",
+      "v2b"
+    ],
+    "seeds": [
+      43,
+      44
+    ],
+    "configs": {
+      "v1_lambda0": {
+        "path": "cfgs/ShapeNet55_models/AdaPoinTr_DiffCond_v1_lambda0.yaml",
+        "sha256": "fcaeae8b9295cbbfa8c2f9b857f3278b136120773cb545094dc2e5650f845993"
+      },
+      "v2b": {
+        "path": "cfgs/ShapeNet55_models/AdaPoinTr_DiffCond_v2b.yaml",
+        "sha256": "6e4ac340b7ca9a8c8ee73cde299db912ebe2bb7a8e8b5fa03513e65dc935ec4b"
+      }
+    },
+    "reference_log_sha256": "f41bf5396ae8429c72e7461d09d0c78092206254eeb472a9c0646db47d2bd8aa"
+  },
+  "schedule": {
+    "parallel": 1,
+    "threads": 24,
+    "gpus": "0",
+    "cuda_visible_devices": "0"
+  },
+  "accepted_paths": [
+    "/attestation/declared_tree_sha256",
+    "/attestation/file_sha256",
+    "/attestation/live_attest_tree_sha256",
+    "/code/attest_tree_sha256",
+    "/code/per_file/tools/gap_a_digests.py",
+    "/code/per_file/tools/gap_a_results.py",
+    "/code/tree_sha256",
+    "/environment/driver",
+    "/environment/env_sha256",
+    "/environment/gpus",
+    "/environment/platform"
+  ],
+  "accepted_differences": [
+    {
+      "path": "/attestation/declared_tree_sha256",
+      "why": "code_attestation.json re-issued for the revised tools",
+      "sentinel": "05cf7705694b5f2c130e9689996e673a207ead07ea41e25e9600485d98a0918d",
+      "now": "cb5895a92631e98cbf93bf3069bf7cc2b71564c347eee91345a8244b38261c16"
+    },
+    {
+      "path": "/attestation/file_sha256",
+      "why": "code_attestation.json re-issued for the revised tools",
+      "sentinel": "08919f2206453155e3b01adb785e3a2fb37e8f9ed09b6f78b7f7eb66406ef58e",
+      "now": "bab3436001f1f31f7874564c452c9424dddbb6a3808253d6fbc5e4b6057931d6"
+    },
+    {
+      "path": "/attestation/live_attest_tree_sha256",
+      "why": "code-tree digest (follows the tool files above)",
+      "sentinel": "05cf7705694b5f2c130e9689996e673a207ead07ea41e25e9600485d98a0918d",
+      "now": "cb5895a92631e98cbf93bf3069bf7cc2b71564c347eee91345a8244b38261c16"
+    },
+    {
+      "path": "/code/attest_tree_sha256",
+      "why": "code-tree digest (follows the tool files above)",
+      "sentinel": "05cf7705694b5f2c130e9689996e673a207ead07ea41e25e9600485d98a0918d",
+      "now": "cb5895a92631e98cbf93bf3069bf7cc2b71564c347eee91345a8244b38261c16"
+    },
+    {
+      "path": "/code/per_file/tools/gap_a_digests.py",
+      "why": "provenance tool revised for the host change",
+      "sentinel": "a8f902b613ee4e06c2b28d17db486425e220b805649c87ebbc238903de5db204",
+      "now": "be810752f9c6a3351edcd4f7d5b0d556e48be31f85c4c272c711e440bc26bfe1"
+    },
+    {
+      "path": "/code/per_file/tools/gap_a_results.py",
+      "why": "provenance tool revised for the host change",
+      "sentinel": "af2e5d0a651ec6e2b4cc6ecfc30d766725488f0fb416ae337c435c80263ecfdb",
+      "now": "7a1c46ec87d972efdd0a2e898a0279e43084c8455f875503a0f8e25704e4cfdb"
+    },
+    {
+      "path": "/code/tree_sha256",
+      "why": "code-tree digest (follows the tool files above)",
+      "sentinel": "0fdaa00e7f598200247d91ca57dd9f9d1805c3665829687f6fc4fd44c549cec5",
+      "now": "9c81220af75012dabef9bd1a9293e56ff985e456921e08b36075a02025202dad"
+    },
+    {
+      "path": "/environment/driver",
+      "why": "host software: NVIDIA kernel driver version (torch / CUDA runtime / cudnn are still compared)",
+      "sentinel": "580.76.05",
+      "now": "595.71.05"
+    },
+    {
+      "path": "/environment/env_sha256",
+      "why": "derived digest of the environment block",
+      "sentinel": "59d782f085c4b24dcb5e72b585e743b6c9b6694bc0583c8bfed3da2b9d396b1b",
+      "now": "08b3fe97c46df899ca42e0e9eef92ac824713c1e9ceeee2bc10de57671f44ede"
+    },
+    {
+      "path": "/environment/gpus",
+      "why": "host identity: GPU UUID (same GPU name and memory required)",
+      "sentinel": [
+        "NVIDIA GeForce RTX 5090, GPU-1c5c0b91-01be-7b32-9941-5dc5b42211f3, 32607 MiB"
+      ],
+      "now": [
+        "NVIDIA GeForce RTX 5090, GPU-bf3eceb5-ee21-d1c5-ff12-f9c1122432b1, 32607 MiB"
+      ]
+    },
+    {
+      "path": "/environment/platform",
+      "why": "host software: kernel / platform string",
+      "sentinel": "Linux-5.15.0-119-generic-x86_64-with-glibc2.35",
+      "now": "Linux-5.15.0-94-generic-x86_64-with-glibc2.35"
+    }
+  ],
+  "sealed_on_m0_host": false,
+  "host_at_seal": {
+    "cpu_quota": "2500000 100000",
+    "gpus": [
+      "NVIDIA GeForce RTX 5090, GPU-bf3eceb5-ee21-d1c5-ff12-f9c1122432b1, 32607 MiB"
+    ]
+  },
+  "attestation_at_seal": {
+    "present": true,
+    "file_sha256": "bab3436001f1f31f7874564c452c9424dddbb6a3808253d6fbc5e4b6057931d6",
+    "head": "41b5474f763d615115e41e30505816a28128e548",
+    "declared_tree_sha256": "cb5895a92631e98cbf93bf3069bf7cc2b71564c347eee91345a8244b38261c16",
+    "live_attest_tree_sha256": "cb5895a92631e98cbf93bf3069bf7cc2b71564c347eee91345a8244b38261c16",
+    "ok": true
+  }
+}

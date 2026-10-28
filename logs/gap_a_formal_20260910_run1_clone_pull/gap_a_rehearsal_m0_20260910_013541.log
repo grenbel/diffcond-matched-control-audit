@@ -1,0 +1,630 @@
+[01:35:55] namespace=rehearsal stage=m0 PARALLEL=1 cells=[v1_lambda0 v2b] seeds=[43 44] final epoch 0; train devices=0 (threads 24) eval device=0 (threads 24); cgroup cores 25
+[01:35:55] === M0 SANITY START (namespace rehearsal) ===
+  device 0 (CUDA_VISIBLE_DEVICES=0): NVIDIA GeForce RTX 5090 31.4 GiB
+[01:35:57] M0a skipped: the retained seed-42 reproduction exists only in the formal namespace
+[01:35:57] M0b: one-epoch smoke train (v2b recipe, seed 43) with gap_a_rehearsal/rehearsal_cfgs/AdaPoinTr_DiffCond_v2b_gapA_smoke0.yaml
+/root/miniconda3/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+2026-09-10 01:36:02,709 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Copy the Config file from gap_a_rehearsal/rehearsal_cfgs/AdaPoinTr_DiffCond_v2b_gapA_smoke0.yaml to ./experiments/AdaPoinTr_DiffCond_v2b_gapA_smoke0/rehearsal_cfgs/gapA_smoke_v2b_seed43/config.yaml
+2026-09-10 01:36:02,709 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.config : gap_a_rehearsal/rehearsal_cfgs/AdaPoinTr_DiffCond_v2b_gapA_smoke0.yaml
+2026-09-10 01:36:02,709 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.launcher : none
+2026-09-10 01:36:02,709 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.local_rank : 0
+2026-09-10 01:36:02,709 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.num_workers : 4
+2026-09-10 01:36:02,709 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.seed : 43
+2026-09-10 01:36:02,709 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.deterministic : False
+2026-09-10 01:36:02,709 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.sync_bn : False
+2026-09-10 01:36:02,709 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.exp_name : gapA_smoke_v2b_seed43
+2026-09-10 01:36:02,709 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.start_ckpts : experiments/AdaPoinTr/ShapeNet55_models/baseline_sn55/ckpt-best.pth
+2026-09-10 01:36:02,709 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.ckpts : None
+2026-09-10 01:36:02,709 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.val_freq : 1
+2026-09-10 01:36:02,709 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.resume : False
+2026-09-10 01:36:02,709 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.test : False
+2026-09-10 01:36:02,709 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.mode : None
+2026-09-10 01:36:02,709 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.difficulty_source : oracle
+2026-09-10 01:36:02,709 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.experiment_path : ./experiments/AdaPoinTr_DiffCond_v2b_gapA_smoke0/rehearsal_cfgs/gapA_smoke_v2b_seed43
+2026-09-10 01:36:02,709 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.tfboard_path : ./experiments/AdaPoinTr_DiffCond_v2b_gapA_smoke0/rehearsal_cfgs/TFBoard/gapA_smoke_v2b_seed43
+2026-09-10 01:36:02,709 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.log_name : AdaPoinTr_DiffCond_v2b_gapA_smoke0
+2026-09-10 01:36:02,709 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.use_gpu : True
+2026-09-10 01:36:02,709 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.distributed : False
+2026-09-10 01:36:02,709 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.optimizer = edict()
+2026-09-10 01:36:02,709 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.optimizer.type : AdamW
+2026-09-10 01:36:02,709 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.optimizer.kwargs = edict()
+2026-09-10 01:36:02,709 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.optimizer.kwargs.lr : 0.0001
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.optimizer.kwargs.weight_decay : 0.0005
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.scheduler = edict()
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.scheduler.type : LambdaLR
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.scheduler.kwargs = edict()
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.scheduler.kwargs.decay_step : 21
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.scheduler.kwargs.lr_decay : 0.9
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.scheduler.kwargs.lowest_decay : 0.02
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.bnmscheduler = edict()
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.bnmscheduler.type : Lambda
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.bnmscheduler.kwargs = edict()
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.bnmscheduler.kwargs.decay_step : 21
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.bnmscheduler.kwargs.bn_decay : 0.5
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.bnmscheduler.kwargs.bn_momentum : 0.9
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.bnmscheduler.kwargs.lowest_decay : 0.01
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset = edict()
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.train = edict()
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.train._base_ = edict()
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.train._base_.NAME : ShapeNet
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.train._base_.DATA_PATH : gap_a_rehearsal/ShapeNet-55
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.train._base_.N_POINTS : 8192
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.train._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.train.others = edict()
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.train.others.subset : train
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.train.others.bs : 48
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.val = edict()
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.val._base_ = edict()
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.val._base_.NAME : ShapeNet
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.val._base_.DATA_PATH : gap_a_rehearsal/ShapeNet-55
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.val._base_.N_POINTS : 8192
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.val._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.val.others = edict()
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.val.others.subset : test
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.test = edict()
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.test._base_ = edict()
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.test._base_.NAME : ShapeNet
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.test._base_.DATA_PATH : gap_a_rehearsal/ShapeNet-55
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.test._base_.N_POINTS : 8192
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.test._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.test.others = edict()
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.test.others.subset : test
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model = edict()
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.NAME : AdaPoinTr_DiffCond
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.num_query : 512
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.num_points : 8192
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.center_num : [512, 256]
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.global_feature_dim : 1024
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.encoder_type : graph
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.decoder_type : fc
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.use_vanilla_ranking : True
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.ce_lambda : 0
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.encoder_config = edict()
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.encoder_config.embed_dim : 384
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.encoder_config.depth : 6
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.encoder_config.num_heads : 6
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.encoder_config.k : 8
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.encoder_config.n_group : 2
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.encoder_config.mlp_ratio : 2.0
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.encoder_config.block_style_list : ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn']
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.encoder_config.combine_style : concat
+2026-09-10 01:36:02,710 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.decoder_config = edict()
+2026-09-10 01:36:02,711 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.decoder_config.embed_dim : 384
+2026-09-10 01:36:02,711 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.decoder_config.depth : 8
+2026-09-10 01:36:02,711 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.decoder_config.num_heads : 6
+2026-09-10 01:36:02,711 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.decoder_config.k : 8
+2026-09-10 01:36:02,711 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.decoder_config.n_group : 2
+2026-09-10 01:36:02,711 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.decoder_config.mlp_ratio : 2.0
+2026-09-10 01:36:02,711 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.decoder_config.self_attn_block_style_list : ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn']
+2026-09-10 01:36:02,711 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.decoder_config.self_attn_combine_style : concat
+2026-09-10 01:36:02,711 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.decoder_config.cross_attn_block_style_list : ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn']
+2026-09-10 01:36:02,711 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.decoder_config.cross_attn_combine_style : concat
+2026-09-10 01:36:02,711 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.total_bs : 48
+2026-09-10 01:36:02,711 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.step_per_update : 1
+2026-09-10 01:36:02,711 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.max_epoch : 0
+2026-09-10 01:36:02,711 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.consider_metric : CDL2
+2026-09-10 01:36:02,711 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Distributed training: False
+2026-09-10 01:36:02,711 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Set random seed to 43, deterministic: False
+2026-09-10 01:36:03,341 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Loading weights from experiments/AdaPoinTr/ShapeNet55_models/baseline_sn55/ckpt-best.pth...
+2026-09-10 01:36:03,650 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - DiffCond load: missing=13, unexpected=0
+2026-09-10 01:36:03,650 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - ckpts @ 290 epoch( performance = {'F-Score': 0.39654017948523784, 'CDL1': 13.109447510155132, 'CDL2': 0.7939230617268641, 'EMDistance': 0.0})
+2026-09-10 01:36:03,651 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Trainable_parameters:
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - =========================
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.grouper.input_trans.weight
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.grouper.input_trans.bias
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.grouper.layer1.0.weight
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.grouper.layer1.1.weight
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.grouper.layer1.1.bias
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.grouper.layer2.0.weight
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.grouper.layer2.1.weight
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.grouper.layer2.1.bias
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.grouper.layer3.0.weight
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.grouper.layer3.1.weight
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.grouper.layer3.1.bias
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.grouper.layer4.0.weight
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.grouper.layer4.1.weight
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.grouper.layer4.1.bias
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.pos_embed.0.weight
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.pos_embed.0.bias
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.pos_embed.2.weight
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.pos_embed.2.bias
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.input_proj.0.weight
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.input_proj.0.bias
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.input_proj.2.weight
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.input_proj.2.bias
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.0.norm1.weight
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.0.norm1.bias
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.0.norm2.weight
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.0.norm2.bias
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.0.mlp.fc1.weight
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.0.mlp.fc1.bias
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.0.mlp.fc2.weight
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.0.mlp.fc2.bias
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.0.attn.qkv.weight
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.0.attn.qkv.bias
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.0.attn.proj.weight
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.0.attn.proj.bias
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.0.local_attn.knn_map.0.weight
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.0.local_attn.knn_map.0.bias
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.0.merge_map.weight
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.0.merge_map.bias
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.1.norm1.weight
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.1.norm1.bias
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.1.norm2.weight
+2026-09-10 01:36:03,652 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.1.norm2.bias
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.1.mlp.fc1.weight
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.1.mlp.fc1.bias
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.1.mlp.fc2.weight
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.1.mlp.fc2.bias
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.1.attn.qkv.weight
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.1.attn.qkv.bias
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.1.attn.proj.weight
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.1.attn.proj.bias
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.2.norm1.weight
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.2.norm1.bias
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.2.norm2.weight
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.2.norm2.bias
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.2.mlp.fc1.weight
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.2.mlp.fc1.bias
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.2.mlp.fc2.weight
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.2.mlp.fc2.bias
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.2.attn.qkv.weight
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.2.attn.qkv.bias
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.2.attn.proj.weight
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.2.attn.proj.bias
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.3.norm1.weight
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.3.norm1.bias
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.3.norm2.weight
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.3.norm2.bias
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.3.mlp.fc1.weight
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.3.mlp.fc1.bias
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.3.mlp.fc2.weight
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.3.mlp.fc2.bias
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.3.attn.qkv.weight
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.3.attn.qkv.bias
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.3.attn.proj.weight
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.3.attn.proj.bias
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.4.norm1.weight
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.4.norm1.bias
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.4.norm2.weight
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.4.norm2.bias
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.4.mlp.fc1.weight
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.4.mlp.fc1.bias
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.4.mlp.fc2.weight
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.4.mlp.fc2.bias
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.4.attn.qkv.weight
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.4.attn.qkv.bias
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.4.attn.proj.weight
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.4.attn.proj.bias
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.5.norm1.weight
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.5.norm1.bias
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.5.norm2.weight
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.5.norm2.bias
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.5.mlp.fc1.weight
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.5.mlp.fc1.bias
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.5.mlp.fc2.weight
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.5.mlp.fc2.bias
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.5.attn.qkv.weight
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.5.attn.qkv.bias
+2026-09-10 01:36:03,653 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.5.attn.proj.weight
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.blocks.blocks.5.attn.proj.bias
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.norm.weight
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.encoder.norm.bias
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.increase_dim.0.weight
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.increase_dim.0.bias
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.increase_dim.2.weight
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.increase_dim.2.bias
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.coarse_pred.0.weight
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.coarse_pred.0.bias
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.coarse_pred.2.weight
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.coarse_pred.2.bias
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.mlp_query.0.weight
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.mlp_query.0.bias
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.mlp_query.2.weight
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.mlp_query.2.bias
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.mlp_query.4.weight
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.mlp_query.4.bias
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.0.norm2.weight
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.0.norm2.bias
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.0.mlp.fc1.weight
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.0.mlp.fc1.bias
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.0.mlp.fc2.weight
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.0.mlp.fc2.bias
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.0.norm1.weight
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.0.norm1.bias
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.0.self_attn.qkv.weight
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.0.self_attn.qkv.bias
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.0.self_attn.proj.weight
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.0.self_attn.proj.bias
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.0.local_self_attn.knn_map.0.weight
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.0.local_self_attn.knn_map.0.bias
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.0.self_attn_merge_map.weight
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.0.self_attn_merge_map.bias
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.0.norm_q.weight
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.0.norm_q.bias
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.0.norm_v.weight
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.0.norm_v.bias
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.0.cross_attn.q_map.weight
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.0.cross_attn.q_map.bias
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.0.cross_attn.k_map.weight
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.0.cross_attn.k_map.bias
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.0.cross_attn.v_map.weight
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.0.cross_attn.v_map.bias
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.0.cross_attn.proj.weight
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.0.cross_attn.proj.bias
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.0.local_cross_attn.knn_map.0.weight
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.0.local_cross_attn.knn_map.0.bias
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.0.cross_attn_merge_map.weight
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.0.cross_attn_merge_map.bias
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.1.norm2.weight
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.1.norm2.bias
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.1.mlp.fc1.weight
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.1.mlp.fc1.bias
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.1.mlp.fc2.weight
+2026-09-10 01:36:03,654 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.1.mlp.fc2.bias
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.1.norm1.weight
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.1.norm1.bias
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.1.self_attn.qkv.weight
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.1.self_attn.qkv.bias
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.1.self_attn.proj.weight
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.1.self_attn.proj.bias
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.1.norm_q.weight
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.1.norm_q.bias
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.1.norm_v.weight
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.1.norm_v.bias
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.1.cross_attn.q_map.weight
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.1.cross_attn.q_map.bias
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.1.cross_attn.k_map.weight
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.1.cross_attn.k_map.bias
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.1.cross_attn.v_map.weight
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.1.cross_attn.v_map.bias
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.1.cross_attn.proj.weight
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.1.cross_attn.proj.bias
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.2.norm2.weight
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.2.norm2.bias
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.2.mlp.fc1.weight
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.2.mlp.fc1.bias
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.2.mlp.fc2.weight
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.2.mlp.fc2.bias
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.2.norm1.weight
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.2.norm1.bias
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.2.self_attn.qkv.weight
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.2.self_attn.qkv.bias
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.2.self_attn.proj.weight
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.2.self_attn.proj.bias
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.2.norm_q.weight
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.2.norm_q.bias
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.2.norm_v.weight
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.2.norm_v.bias
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.2.cross_attn.q_map.weight
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.2.cross_attn.q_map.bias
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.2.cross_attn.k_map.weight
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.2.cross_attn.k_map.bias
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.2.cross_attn.v_map.weight
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.2.cross_attn.v_map.bias
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.2.cross_attn.proj.weight
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.2.cross_attn.proj.bias
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.3.norm2.weight
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.3.norm2.bias
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.3.mlp.fc1.weight
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.3.mlp.fc1.bias
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.3.mlp.fc2.weight
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.3.mlp.fc2.bias
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.3.norm1.weight
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.3.norm1.bias
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.3.self_attn.qkv.weight
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.3.self_attn.qkv.bias
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.3.self_attn.proj.weight
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.3.self_attn.proj.bias
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.3.norm_q.weight
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.3.norm_q.bias
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.3.norm_v.weight
+2026-09-10 01:36:03,655 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.3.norm_v.bias
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.3.cross_attn.q_map.weight
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.3.cross_attn.q_map.bias
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.3.cross_attn.k_map.weight
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.3.cross_attn.k_map.bias
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.3.cross_attn.v_map.weight
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.3.cross_attn.v_map.bias
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.3.cross_attn.proj.weight
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.3.cross_attn.proj.bias
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.4.norm2.weight
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.4.norm2.bias
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.4.mlp.fc1.weight
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.4.mlp.fc1.bias
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.4.mlp.fc2.weight
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.4.mlp.fc2.bias
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.4.norm1.weight
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.4.norm1.bias
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.4.self_attn.qkv.weight
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.4.self_attn.qkv.bias
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.4.self_attn.proj.weight
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.4.self_attn.proj.bias
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.4.norm_q.weight
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.4.norm_q.bias
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.4.norm_v.weight
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.4.norm_v.bias
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.4.cross_attn.q_map.weight
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.4.cross_attn.q_map.bias
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.4.cross_attn.k_map.weight
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.4.cross_attn.k_map.bias
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.4.cross_attn.v_map.weight
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.4.cross_attn.v_map.bias
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.4.cross_attn.proj.weight
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.4.cross_attn.proj.bias
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.5.norm2.weight
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.5.norm2.bias
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.5.mlp.fc1.weight
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.5.mlp.fc1.bias
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.5.mlp.fc2.weight
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.5.mlp.fc2.bias
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.5.norm1.weight
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.5.norm1.bias
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.5.self_attn.qkv.weight
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.5.self_attn.qkv.bias
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.5.self_attn.proj.weight
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.5.self_attn.proj.bias
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.5.norm_q.weight
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.5.norm_q.bias
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.5.norm_v.weight
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.5.norm_v.bias
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.5.cross_attn.q_map.weight
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.5.cross_attn.q_map.bias
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.5.cross_attn.k_map.weight
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.5.cross_attn.k_map.bias
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.5.cross_attn.v_map.weight
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.5.cross_attn.v_map.bias
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.5.cross_attn.proj.weight
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.5.cross_attn.proj.bias
+2026-09-10 01:36:03,656 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.6.norm2.weight
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.6.norm2.bias
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.6.mlp.fc1.weight
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.6.mlp.fc1.bias
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.6.mlp.fc2.weight
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.6.mlp.fc2.bias
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.6.norm1.weight
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.6.norm1.bias
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.6.self_attn.qkv.weight
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.6.self_attn.qkv.bias
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.6.self_attn.proj.weight
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.6.self_attn.proj.bias
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.6.norm_q.weight
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.6.norm_q.bias
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.6.norm_v.weight
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.6.norm_v.bias
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.6.cross_attn.q_map.weight
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.6.cross_attn.q_map.bias
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.6.cross_attn.k_map.weight
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.6.cross_attn.k_map.bias
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.6.cross_attn.v_map.weight
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.6.cross_attn.v_map.bias
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.6.cross_attn.proj.weight
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.6.cross_attn.proj.bias
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.7.norm2.weight
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.7.norm2.bias
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.7.mlp.fc1.weight
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.7.mlp.fc1.bias
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.7.mlp.fc2.weight
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.7.mlp.fc2.bias
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.7.norm1.weight
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.7.norm1.bias
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.7.self_attn.qkv.weight
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.7.self_attn.qkv.bias
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.7.self_attn.proj.weight
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.7.self_attn.proj.bias
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.7.norm_q.weight
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.7.norm_q.bias
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.7.norm_v.weight
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.7.norm_v.bias
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.7.cross_attn.q_map.weight
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.7.cross_attn.q_map.bias
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.7.cross_attn.k_map.weight
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.7.cross_attn.k_map.bias
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.7.cross_attn.v_map.weight
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.7.cross_attn.v_map.bias
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.7.cross_attn.proj.weight
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.decoder.blocks.blocks.7.cross_attn.proj.bias
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.query_ranking.0.weight
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.query_ranking.0.bias
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.query_ranking.2.weight
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.query_ranking.2.bias
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.query_ranking.4.weight
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.query_ranking.4.bias
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.diff_cond_embedding.embed.weight
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.diff_cond_query_ranking.base_scorer.0.weight
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.diff_cond_query_ranking.base_scorer.0.bias
+2026-09-10 01:36:03,657 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.diff_cond_query_ranking.base_scorer.2.weight
+2026-09-10 01:36:03,658 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.diff_cond_query_ranking.base_scorer.2.bias
+2026-09-10 01:36:03,658 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.diff_cond_query_ranking.base_scorer.4.weight
+2026-09-10 01:36:03,658 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.diff_cond_query_ranking.base_scorer.4.bias
+2026-09-10 01:36:03,658 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.diff_cond_query_ranking.diff_delta.0.weight
+2026-09-10 01:36:03,658 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.diff_cond_query_ranking.diff_delta.0.bias
+2026-09-10 01:36:03,658 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.diff_cond_query_ranking.diff_delta.2.weight
+2026-09-10 01:36:03,658 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.diff_cond_query_ranking.diff_delta.2.bias
+2026-09-10 01:36:03,658 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.diff_cond_gate.0.weight
+2026-09-10 01:36:03,658 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.diff_cond_gate.0.bias
+2026-09-10 01:36:03,658 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.diff_cond_proj.weight
+2026-09-10 01:36:03,658 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.diff_cond_proj.bias
+2026-09-10 01:36:03,658 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.diff_predictor.0.weight
+2026-09-10 01:36:03,658 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.diff_predictor.0.bias
+2026-09-10 01:36:03,658 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.diff_predictor.2.weight
+2026-09-10 01:36:03,658 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - base_model.diff_predictor.2.bias
+2026-09-10 01:36:03,658 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - decode_head.layer.fc1.weight
+2026-09-10 01:36:03,658 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - decode_head.layer.fc1.bias
+2026-09-10 01:36:03,658 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - decode_head.layer.fc2.weight
+2026-09-10 01:36:03,658 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - decode_head.layer.fc2.bias
+2026-09-10 01:36:03,658 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - increase_dim.0.weight
+2026-09-10 01:36:03,658 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - increase_dim.0.bias
+2026-09-10 01:36:03,658 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - increase_dim.1.weight
+2026-09-10 01:36:03,658 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - increase_dim.1.bias
+2026-09-10 01:36:03,658 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - increase_dim.3.weight
+2026-09-10 01:36:03,658 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - increase_dim.3.bias
+2026-09-10 01:36:03,658 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - reduce_map.weight
+2026-09-10 01:36:03,658 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - reduce_map.bias
+2026-09-10 01:36:03,658 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - =========================
+2026-09-10 01:36:03,658 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Untrainable_parameters:
+2026-09-10 01:36:03,658 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - =========================
+2026-09-10 01:36:03,659 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - =========================
+2026-09-10 01:36:03,659 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Using Data parallel ...
+Create experiment path successfully at ./experiments/AdaPoinTr_DiffCond_v2b_gapA_smoke0/rehearsal_cfgs/gapA_smoke_v2b_seed43
+Create TFBoard path successfully at ./experiments/AdaPoinTr_DiffCond_v2b_gapA_smoke0/rehearsal_cfgs/TFBoard/gapA_smoke_v2b_seed43
+[DATASET] Open file gap_a_rehearsal/ShapeNet-55/train.txt
+[DATASET] 96 instances were loaded
+[DATASET] Open file gap_a_rehearsal/ShapeNet-55/test.txt
+[DATASET] 16 instances were loaded
+using group version 2
+2026-09-10 01:36:05,989 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - [Epoch 0/0][Batch 1/2] BatchTime = 2.324 (s) DataTime = 0.177 (s) Losses = ['5.3799', '37.8834'] lr = 0.000100
+2026-09-10 01:36:06,334 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - [Training] EPOCH: 0 EpochTime = 2.669 (s) Losses = ['6.9102', '43.6329']
+2026-09-10 01:36:06,335 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - [VALIDATION] Start validating epoch 0
+2026-09-10 01:36:06,757 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Test[1/16] Taxonomy = 03759954 Sample = 109f1779a6993782f6426d6e3b63c5ce Losses = ['18.1155', '1.6152', '10.0064', '0.3743'] Metrics = ['0.6796', '10.0064', '0.3743', '0.0000']
+2026-09-10 01:36:06,798 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Test[2/16] Taxonomy = 03759954 Sample = b726f3df205d3b5911daf38720b2dbe4 Losses = ['32.1801', '10.7972', '15.1693', '2.3649'] Metrics = ['0.7241', '15.1693', '2.3649', '0.0000']
+2026-09-10 01:36:06,835 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Test[3/16] Taxonomy = 04330267 Sample = aa0f6ff9f592b327eadb8f8b5bc7d9a5 Losses = ['35.3040', '4.6308', '16.4840', '0.6862'] Metrics = ['0.2046', '16.4840', '0.6862', '0.0000']
+2026-09-10 01:36:06,875 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Test[4/16] Taxonomy = 04330267 Sample = 966ea3afa71e3a574bba687d3dbe6227 Losses = ['45.6636', '7.5639', '24.2050', '1.6675'] Metrics = ['0.1198', '24.2050', '1.6675', '0.0000']
+2026-09-10 01:36:06,913 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Test[5/16] Taxonomy = 03759954 Sample = baca1996923c25f943a6722dac94523b Losses = ['30.3295', '6.2599', '13.6223', '1.2318'] Metrics = ['0.6176', '13.6223', '1.2318', '0.0000']
+2026-09-10 01:36:06,953 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Test[6/16] Taxonomy = 04330267 Sample = bc2daa0406ad3324d724d9ce5af6d8e Losses = ['42.7332', '7.1715', '22.7686', '1.5109'] Metrics = ['0.1359', '22.7686', '1.5109', '0.0000']
+2026-09-10 01:36:06,991 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Test[7/16] Taxonomy = 04330267 Sample = f56ea6d924207b5515c4fa96a52ac4ff Losses = ['39.0396', '6.9963', '19.1641', '1.1090'] Metrics = ['0.1942', '19.1641', '1.1090', '0.0000']
+2026-09-10 01:36:07,030 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Test[8/16] Taxonomy = 03261776 Sample = 64ab866236bd012a43ccf9e3e30b934d Losses = ['32.3502', '4.4215', '15.0137', '0.8651'] Metrics = ['0.3909', '15.0137', '0.8651', '0.0000']
+2026-09-10 01:36:07,071 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Test[9/16] Taxonomy = 04330267 Sample = f5c26b7b35991739281d68269dab9234 Losses = ['38.7720', '7.2064', '24.7302', '3.4679'] Metrics = ['0.5617', '24.7302', '3.4679', '0.0000']
+2026-09-10 01:36:07,109 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Test[10/16] Taxonomy = 04330267 Sample = a95a8fc9fa81aadf40332412c5d013fb Losses = ['34.5594', '4.3215', '20.7507', '1.2961'] Metrics = ['0.1886', '20.7507', '1.2961', '0.0000']
+2026-09-10 01:36:07,150 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Test[11/16] Taxonomy = 03261776 Sample = 5bb7c6bcd79bd45e16262e5b395acc86 Losses = ['32.1131', '3.8543', '20.3901', '1.5352'] Metrics = ['0.2324', '20.3901', '1.5352', '0.0000']
+2026-09-10 01:36:07,188 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Test[12/16] Taxonomy = 04330267 Sample = 821634b0caa5cdb57f0571f06b666f9f Losses = ['27.6555', '2.7025', '14.7562', '0.5608'] Metrics = ['0.2892', '14.7562', '0.5608', '0.0000']
+2026-09-10 01:36:07,227 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Test[13/16] Taxonomy = 03513137 Sample = ba62b73074d51637b61d7759f8544b8a Losses = ['33.7621', '4.3389', '13.8719', '0.4687'] Metrics = ['0.2920', '13.8719', '0.4687', '0.0000']
+2026-09-10 01:36:07,264 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Test[14/16] Taxonomy = 03759954 Sample = e491db83f21a5a6c4fdb7f619836e43d Losses = ['18.0897', '1.1429', '11.6126', '0.3191'] Metrics = ['0.4082', '11.6126', '0.3191', '0.0000']
+2026-09-10 01:36:07,302 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Test[15/16] Taxonomy = 03513137 Sample = 89815c92980efb27226eabe1cca3e850 Losses = ['40.5710', '6.0374', '23.8087', '1.8158'] Metrics = ['0.1380', '23.8087', '1.8158', '0.0000']
+2026-09-10 01:36:07,343 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Test[16/16] Taxonomy = 04330267 Sample = 65eb72bf33da5b1511ff208156ce047 Losses = ['39.6019', '6.2341', '20.5698', '1.6343'] Metrics = ['0.2099', '20.5698', '1.6343', '0.0000']
+2026-09-10 01:36:07,423 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - [Validation] EPOCH: 0  Metrics = ['0.3430', '17.3934', '1.2266', '0.0000']
+2026-09-10 01:36:07,423 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - ============================ TEST RESULTS ============================
+2026-09-10 01:36:07,423 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2026-09-10 01:36:07,423 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - 03759954	4	0.607 	12.603 	1.073 	0.000 	microphone	
+2026-09-10 01:36:07,423 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - 04330267	8	0.238 	20.429 	1.492 	0.000 	stove	
+2026-09-10 01:36:07,424 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - 03261776	2	0.312 	17.702 	1.200 	0.000 	earphone	
+2026-09-10 01:36:07,424 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - 03513137	2	0.215 	18.840 	1.142 	0.000 	helmet	
+2026-09-10 01:36:07,424 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Overall		0.343 	17.393 	1.227 	0.000 	
+2026-09-10 01:36:07,868 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b_gapA_smoke0/rehearsal_cfgs/gapA_smoke_v2b_seed43/ckpt-best.pth
+2026-09-10 01:36:08,298 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b_gapA_smoke0/rehearsal_cfgs/gapA_smoke_v2b_seed43/ckpt-last.pth
+2026-09-10 01:36:08,736 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b_gapA_smoke0/rehearsal_cfgs/gapA_smoke_v2b_seed43/ckpt-epoch-000.pth
+[01:36:10] M0c: eval the smoke ckpt on the hard bin (pipeline check only; the number is NOT a result)
+/root/miniconda3/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Copy the Config file from gap_a_rehearsal/rehearsal_cfgs/AdaPoinTr_DiffCond_v2b_gapA_smoke0.yaml to ./experiments/AdaPoinTr_DiffCond_v2b_gapA_smoke0/rehearsal_cfgs/test_gapA_smoke_v2b_seed43_eval_hard_hard/config.yaml
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.config : gap_a_rehearsal/rehearsal_cfgs/AdaPoinTr_DiffCond_v2b_gapA_smoke0.yaml
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.launcher : none
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.local_rank : 0
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.num_workers : 4
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.seed : 0
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.deterministic : True
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.sync_bn : False
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.exp_name : test_gapA_smoke_v2b_seed43_eval_hard_hard
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.start_ckpts : None
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.ckpts : experiments/AdaPoinTr_DiffCond_v2b_gapA_smoke0/rehearsal_cfgs/gapA_smoke_v2b_seed43/ckpt-last.pth
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.val_freq : 1
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.resume : False
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.test : True
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.mode : hard
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.difficulty_source : oracle
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.experiment_path : ./experiments/AdaPoinTr_DiffCond_v2b_gapA_smoke0/rehearsal_cfgs/test_gapA_smoke_v2b_seed43_eval_hard_hard
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.tfboard_path : ./experiments/AdaPoinTr_DiffCond_v2b_gapA_smoke0/rehearsal_cfgs/TFBoard/test_gapA_smoke_v2b_seed43_eval_hard_hard
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.log_name : AdaPoinTr_DiffCond_v2b_gapA_smoke0
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.use_gpu : True
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - args.distributed : False
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.optimizer = edict()
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.optimizer.type : AdamW
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.optimizer.kwargs = edict()
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.optimizer.kwargs.lr : 0.0001
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.optimizer.kwargs.weight_decay : 0.0005
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.scheduler = edict()
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.scheduler.type : LambdaLR
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.scheduler.kwargs = edict()
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.scheduler.kwargs.decay_step : 21
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.scheduler.kwargs.lr_decay : 0.9
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.scheduler.kwargs.lowest_decay : 0.02
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.bnmscheduler = edict()
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.bnmscheduler.type : Lambda
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.bnmscheduler.kwargs = edict()
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.bnmscheduler.kwargs.decay_step : 21
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.bnmscheduler.kwargs.bn_decay : 0.5
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.bnmscheduler.kwargs.bn_momentum : 0.9
+2026-09-10 01:36:15,443 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.bnmscheduler.kwargs.lowest_decay : 0.01
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset = edict()
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.train = edict()
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.train._base_ = edict()
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.train._base_.NAME : ShapeNet
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.train._base_.DATA_PATH : gap_a_rehearsal/ShapeNet-55
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.train._base_.N_POINTS : 8192
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.train._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.train.others = edict()
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.train.others.subset : train
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.train.others.bs : 48
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.val = edict()
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.val._base_ = edict()
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.val._base_.NAME : ShapeNet
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.val._base_.DATA_PATH : gap_a_rehearsal/ShapeNet-55
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.val._base_.N_POINTS : 8192
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.val._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.val.others = edict()
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.val.others.subset : test
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.test = edict()
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.test._base_ = edict()
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.test._base_.NAME : ShapeNet
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.test._base_.DATA_PATH : gap_a_rehearsal/ShapeNet-55
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.test._base_.N_POINTS : 8192
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.test._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.test.others = edict()
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.dataset.test.others.subset : test
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model = edict()
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.NAME : AdaPoinTr_DiffCond
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.num_query : 512
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.num_points : 8192
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.center_num : [512, 256]
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.global_feature_dim : 1024
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.encoder_type : graph
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.decoder_type : fc
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.use_vanilla_ranking : True
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.ce_lambda : 0
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.encoder_config = edict()
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.encoder_config.embed_dim : 384
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.encoder_config.depth : 6
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.encoder_config.num_heads : 6
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.encoder_config.k : 8
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.encoder_config.n_group : 2
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.encoder_config.mlp_ratio : 2.0
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.encoder_config.block_style_list : ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn']
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.encoder_config.combine_style : concat
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.decoder_config = edict()
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.decoder_config.embed_dim : 384
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.decoder_config.depth : 8
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.decoder_config.num_heads : 6
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.decoder_config.k : 8
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.decoder_config.n_group : 2
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.decoder_config.mlp_ratio : 2.0
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.decoder_config.self_attn_block_style_list : ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn']
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.decoder_config.self_attn_combine_style : concat
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.decoder_config.cross_attn_block_style_list : ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn']
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.model.decoder_config.cross_attn_combine_style : concat
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.total_bs : 48
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.step_per_update : 1
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.max_epoch : 0
+2026-09-10 01:36:15,444 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - config.consider_metric : CDL2
+2026-09-10 01:36:15,445 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Distributed training: False
+2026-09-10 01:36:15,445 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Set random seed to 0, deterministic: True
+2026-09-10 01:36:15,445 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Tester start ... 
+2026-09-10 01:36:15,832 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Loading weights from experiments/AdaPoinTr_DiffCond_v2b_gapA_smoke0/rehearsal_cfgs/gapA_smoke_v2b_seed43/ckpt-last.pth...
+2026-09-10 01:36:16,132 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - DiffCond load: missing=0, unexpected=0
+2026-09-10 01:36:16,132 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - ckpts @ 0 epoch( performance = {'F-Score': 0.34301176690496504, 'CDL1': 17.393373370170593, 'CDL2': 1.2266169600188732, 'EMDistance': 0.0})
+Create experiment path successfully at ./experiments/AdaPoinTr_DiffCond_v2b_gapA_smoke0/rehearsal_cfgs/test_gapA_smoke_v2b_seed43_eval_hard_hard
+Create TFBoard path successfully at ./experiments/AdaPoinTr_DiffCond_v2b_gapA_smoke0/rehearsal_cfgs/TFBoard/test_gapA_smoke_v2b_seed43_eval_hard_hard
+[DATASET] Open file gap_a_rehearsal/ShapeNet-55/test.txt
+[DATASET] 16 instances were loaded
+using group version 2
+2026-09-10 01:36:21,031 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - [TEST] Metrics = ['0.3006', '23.1316', '3.0756', '0.0000']
+2026-09-10 01:36:21,032 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - ============================ TEST RESULTS ============================
+2026-09-10 01:36:21,032 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2026-09-10 01:36:21,032 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - 03759954	32	0.514 	20.172 	3.371 	0.000 	microphone	
+2026-09-10 01:36:21,032 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - 04330267	64	0.214 	22.100 	1.999 	0.000 	stove	
+2026-09-10 01:36:21,032 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - 03261776	16	0.292 	25.219 	4.297 	0.000 	earphone	
+2026-09-10 01:36:21,032 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - 03513137	16	0.182 	25.035 	2.635 	0.000 	helmet	
+2026-09-10 01:36:21,032 - AdaPoinTr_DiffCond_v2b_gapA_smoke0 - INFO - Overall 		0.301 	23.132 	3.076 	0.000 	
+[01:36:22] writing the M0 sentinel (full dataset re-hash + live snapshot)
+M0 sentinel written: gap_a_logs_rehearsal/M0_PASS.json
+[01:36:44] === M0 DONE: gap_a_logs_rehearsal/M0_PASS.json ===

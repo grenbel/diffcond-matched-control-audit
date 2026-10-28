@@ -1,0 +1,89 @@
+Using checkpoint: ckpt-epoch-030.pth (found in all runs)
+[R300(DiffCond-oracle)] ckpt: ckpt-epoch-030.pth
+[R300(DiffCond-predict)] ckpt: ckpt-epoch-030.pth
+[R200C(matched-vanilla)] ckpt: ckpt-epoch-030.pth
+
+================================================================================
+  Phase 2.6 MATCHED CONTROL: R200C(vanilla+DiffCond-crop) vs R300(DiffCond)
+  Both warmstarted from R100 ckpt-best, same seed, same crop path, same 30ep
+  Only difference: DiffCond modules (embedding + ranking delta + gated injection + predictor)
+================================================================================
+  [R300(DiffCond-oracle)] --mode easy ...
+  [R300(DiffCond-oracle)] easy F-Score=0.388 CDL1=12.666 CDL2=0.601 EMD=0.0000
+  [R300(DiffCond-oracle)] --mode median ...
+  [R300(DiffCond-oracle)] median F-Score=0.375 CDL1=13.829 CDL2=0.836 EMD=0.0000
+  [R300(DiffCond-oracle)] --mode hard ...
+  [R300(DiffCond-oracle)] hard F-Score=0.327 CDL1=17.270 CDL2=1.619 EMD=0.0000
+  [R300(DiffCond-predict)] --mode easy ...
+  [R300(DiffCond-predict)] easy F-Score=0.388 CDL1=12.667 CDL2=0.601 EMD=0.0000
+  [R300(DiffCond-predict)] --mode median ...
+  [R300(DiffCond-predict)] median F-Score=0.375 CDL1=13.834 CDL2=0.838 EMD=0.0000
+  [R300(DiffCond-predict)] --mode hard ...
+  [R300(DiffCond-predict)] hard F-Score=0.327 CDL1=17.273 CDL2=1.620 EMD=0.0000
+  [R200C(matched-vanilla)] --mode easy ...
+  [R200C(matched-vanilla)] easy F-Score=0.398 CDL1=12.431 CDL2=0.568 EMD=0.0000
+  [R200C(matched-vanilla)] --mode median ...
+  [R200C(matched-vanilla)] median F-Score=0.380 CDL1=13.690 CDL2=0.810 EMD=0.0000
+  [R200C(matched-vanilla)] --mode hard ...
+  [R200C(matched-vanilla)] hard F-Score=0.337 CDL1=16.905 CDL2=1.529 EMD=0.0000
+
+================================================================================================
+  Phase 2.6 MATCHED Results: CDL2 Comparison (lower = better, decision metric)
+  R300(DiffCond-oracle): ckpt-epoch-030.pth
+  R300(DiffCond-predict): ckpt-epoch-030.pth
+  R200C(matched-vanilla): ckpt-epoch-030.pth
+================================================================================================
+  Mode       R200C(matched)   R300(oracle)   R300(predict)    Oracle%     Pred%    BL300ep
+  --------------------------------------------------------------------------------------------
+  easy                0.568          0.601           0.601     -5.81%    -5.81%      0.520
+  median              0.810          0.836           0.838     -3.21%    -3.46%      0.734
+  hard                1.529          1.619           1.620     -5.89%    -5.95%      1.352
+================================================================================================
+
+================================================================================================
+  Phase 2.6 Full Metrics (for paper SOTA table)
+================================================================================================
+
+  -- F-Score (higher better) --
+  Mode           R200C   R300(oracle)   R300(predict)
+  --------  ----------  -------------  --------------
+  easy          0.3980         0.3880          0.3880
+  median        0.3800         0.3750          0.3750
+  hard          0.3370         0.3270          0.3270
+
+  -- CDL1 (lower better) --
+  Mode           R200C   R300(oracle)   R300(predict)
+  --------  ----------  -------------  --------------
+  easy          12.431         12.666          12.667
+  median        13.690         13.829          13.834
+  hard          16.905         17.270          17.273
+
+  -- CDL2 (lower better) --
+  Mode           R200C   R300(oracle)   R300(predict)
+  --------  ----------  -------------  --------------
+  easy           0.568          0.601           0.601
+  median         0.810          0.836           0.838
+  hard           1.529          1.619           1.620
+
+  -- EMD (lower better) --
+  Mode           R200C   R300(oracle)   R300(predict)
+  --------  ----------  -------------  --------------
+  easy          0.0000         0.0000          0.0000
+  median        0.0000         0.0000          0.0000
+  hard          0.0000         0.0000          0.0000
+
+================================================================================================
+
+[DiffCond contribution, MATCHED control - this is the final verdict]
+  Oracle Hard:  R200C=1.529  R300=1.619   (-5.89%)
+  Oracle Mean:  R200C=0.969  R300=1.019   (-5.13%)
+  Predict Hard: R200C=1.529  R300=1.620  (-5.95%)
+  Predict Mean: R200C=0.969  R300=1.020  (-5.23%)
+
+Decision thresholds (pre-registered, applied to ORACLE):
+  GO:    Mean >= +3.0%, or (Hard >= +3.0% AND Mean >= 0%)
+  NO-GO: |Hard improve| < 2.0% AND |Mean improve| < 2.0%
+
+>>> NO-GO (SEVERE REVERSE): DiffCond actively HURTS performance (Hard -5.89%, Mean -5.13%)
+>>> Next step: Plan D (negative-result paper) -- strong evidence DiffCond does not help
+>>> SEVERE: at least one mode degraded >=3%; investigate before publishing

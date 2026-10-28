@@ -1,0 +1,116 @@
+{
+  "_provenance": {
+    "description": "From-scratch 30-epoch AdaPoinTr baseline on ShapeNet-55, stratified S/M/H eval. Provides a reproducible matched-configuration replay of the Pitfall 2 warm-start comparison; total 7h37min GPU on a single RTX 5090 (cudnn.benchmark=True for throughput).",
+    "purpose": "Reproducible raw artefact for the warm-start inflation comparison referenced in sec3.2 Pitfall 2.",
+    "config": "cfgs/ShapeNet55_models/AdaPoinTr_baseline_smoke30.yaml (byte-exact match Apr 13-14 original run)",
+    "args": {
+      "seed": 42,
+      "val_freq": 10,
+      "start_ckpts": null,
+      "ckpts": null,
+      "num_workers": 4
+    },
+    "ckpt": "experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-epoch-030.pth",
+    "ckpt_md5": "0d1ecab406d7f998700cd0dff486625d",
+    "ckpt_size_bytes": 389534051,
+    "eval_protocol": "ShapeNet-55 official 8-viewpoint stratified S/M/H eval (n=2048/4096/6144 incomplete points -> 8192 complete)",
+    "n_test_samples_per_mode": 10518,
+    "reproducibility_caveat": "cudnn.benchmark=True causes minor (<2%) nondeterminism in per-batch loss accumulation over 30 epochs. Epoch 0 batch 1 loss is BIT-EXACT match to original; epoch 10 val CDL2 drifts <0.2%; epoch 30 final CDL2 drifts <1%. S/M/H eval CDL2 (this artefact) drifts up to -3.8% on Hard vs paper original."
+  },
+  "training_validation_summary": {
+    "description": "Validation results during training (val_freq=10 triggers at epoch 0, 10, 20, 30). Verified against original Apr 13-14 run.",
+    "metric_order": ["F-Score", "CDL1", "CDL2", "EMD"],
+    "by_epoch": {
+      "0": {
+        "new": [0.2141, 33.1029, 5.6174, 0.0000],
+        "original_apr13": [0.2114, 33.4486, 5.6941, 0.0000],
+        "cdl2_drift_pct": 1.347
+      },
+      "10": {
+        "new": [0.3252, 17.8733, 1.4660, 0.0000],
+        "original_apr13": [0.3225, 18.0062, 1.4638, 0.0000],
+        "cdl2_drift_pct": 0.150
+      },
+      "20": {
+        "new": [0.3336, 16.6765, 1.3339, 0.0000],
+        "original_apr13": [0.3312, 16.5824, 1.3129, 0.0000],
+        "cdl2_drift_pct": 1.600
+      },
+      "30": {
+        "new": [0.3427, 15.7425, 1.1293, 0.0000],
+        "original_apr13": [0.3473, 15.6166, 1.1402, 0.0000],
+        "cdl2_drift_pct": -0.956
+      }
+    }
+  },
+  "smh_eval": {
+    "description": "Stratified Simple/Moderate/Hard CD-L2 eval on ckpt-epoch-030.pth. This is the V_fromscratch baseline used as denominator for paper sec3.2 double-digit (+14-21%) warm-start inflation paired delta computation.",
+    "metric_order": ["F-Score", "CDL1", "CDL2", "EMD"],
+    "by_mode": {
+      "easy": {
+        "Overall": [0.363, 14.047, 0.730, 0.000],
+        "raw_log": "smh_results/eval_easy.log",
+        "summary": "smh_results/eval_easy_summary.txt",
+        "eval_wall_time_s": 1671,
+        "completed": "2026-05-18 03:14:07"
+      },
+      "median": {
+        "Overall": [0.346, 15.358, 1.028, 0.000],
+        "raw_log": "smh_results/eval_median.log",
+        "summary": "smh_results/eval_median_summary.txt",
+        "eval_wall_time_s": 1499,
+        "completed": "2026-05-18 03:39:07"
+      },
+      "hard": {
+        "Overall": [0.305, 18.889, 1.903, 0.000],
+        "raw_log": "smh_results/eval_hard.log",
+        "summary": "smh_results/eval_hard_summary.txt",
+        "eval_wall_time_s": 1357,
+        "completed": "2026-05-18 04:01:45"
+      }
+    }
+  },
+  "paired_delta_vs_diffcond_oracle": {
+    "description": "Paper sec3.2 warm-start inflation gain (+14-21% double-digit per bin). The primary calculation is seed-matched (V_fromscratch_seed42 vs D_diffcond_oracle_seed42). A secondary calculation against the DiffCond 3-seed mean is reported only for cross-reference; it is NOT a true paired test (it mixes a single from-scratch seed with a 3-seed DiffCond mean).",
+    "formula_primary_seed_matched": "gain_pct = (V_fromscratch_seed42 - D_diffcond_oracle_seed42) / V_fromscratch_seed42 * 100",
+    "by_bin_seed_matched": {
+      "Simple": {
+        "V_fromscratch_seed42": 0.730,
+        "D_diffcond_oracle_seed42": 0.601,
+        "gain_pct": 17.671
+      },
+      "Moderate": {
+        "V_fromscratch_seed42": 1.028,
+        "D_diffcond_oracle_seed42": 0.836,
+        "gain_pct": 18.677
+      },
+      "Hard": {
+        "V_fromscratch_seed42": 1.903,
+        "D_diffcond_oracle_seed42": 1.619,
+        "gain_pct": 14.924
+      }
+    },
+    "reading_seed_matched": "Under seed-matched (seed 42 only) comparison, all three bins yield positive double-digit warm-start inflation: Simple +17.67%, Moderate +18.68%, Hard +14.92%. This reproduces the per-bin double-digit signature reported in the paper. The pilot per-bin estimates (Simple +18.01%, Moderate +20.53%, Hard +17.23%) referenced in sec3.2 derive from an earlier exploratory run whose raw aggregate was not retained in the bundle; the rerun reported here corroborates direction and order of magnitude.",
+    "secondary_for_reference_only_not_paired": {
+      "description": "Cross-check using DiffCond 3-seed mean as denominator. Not a paired test (mixes 1 from-scratch seed with 3 DiffCond seeds), included only to document the calculation referenced in earlier drafts.",
+      "formula": "gain_pct = (V_fromscratch_seed42 - D_diffcond_oracle_3seed_mean) / V_fromscratch_seed42 * 100",
+      "by_bin": {
+        "Simple": {
+          "D_diffcond_oracle_3seed_mean": 0.598,
+          "D_diffcond_oracle_per_seed": {"42": 0.601, "43": 0.606, "44": 0.587},
+          "gain_pct_3seed_mean": 18.082
+        },
+        "Moderate": {
+          "D_diffcond_oracle_3seed_mean": 0.8457,
+          "D_diffcond_oracle_per_seed": {"42": 0.836, "43": 0.853, "44": 0.848},
+          "gain_pct_3seed_mean": 17.737
+        },
+        "Hard": {
+          "D_diffcond_oracle_3seed_mean": 1.637,
+          "D_diffcond_oracle_per_seed": {"42": 1.619, "43": 1.695, "44": 1.597},
+          "gain_pct_3seed_mean": 13.978
+        }
+      }
+    }
+  }
+}

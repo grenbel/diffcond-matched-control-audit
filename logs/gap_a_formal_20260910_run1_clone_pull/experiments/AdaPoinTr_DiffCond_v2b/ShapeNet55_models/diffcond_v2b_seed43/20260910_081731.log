@@ -1,0 +1,1086 @@
+2026-09-10 08:17:31,573 - AdaPoinTr_DiffCond_v2b - INFO - Copy the Config file from cfgs/ShapeNet55_models/AdaPoinTr_DiffCond_v2b.yaml to ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/config.yaml
+2026-09-10 08:17:31,573 - AdaPoinTr_DiffCond_v2b - INFO - args.config : cfgs/ShapeNet55_models/AdaPoinTr_DiffCond_v2b.yaml
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - args.launcher : none
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - args.local_rank : 0
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - args.num_workers : 4
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - args.seed : 43
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - args.deterministic : False
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - args.sync_bn : False
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - args.exp_name : diffcond_v2b_seed43
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - args.start_ckpts : experiments/AdaPoinTr/ShapeNet55_models/baseline_sn55/ckpt-best.pth
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - args.ckpts : None
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - args.val_freq : 10
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - args.resume : False
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - args.test : False
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - args.mode : None
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - args.difficulty_source : oracle
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - args.experiment_path : ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - args.tfboard_path : ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/TFBoard/diffcond_v2b_seed43
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - args.log_name : AdaPoinTr_DiffCond_v2b
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - args.use_gpu : True
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - args.distributed : False
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.optimizer = edict()
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.optimizer.type : AdamW
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.optimizer.kwargs = edict()
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.optimizer.kwargs.lr : 0.0001
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.optimizer.kwargs.weight_decay : 0.0005
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.scheduler = edict()
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.scheduler.type : LambdaLR
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.scheduler.kwargs = edict()
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.scheduler.kwargs.decay_step : 21
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.scheduler.kwargs.lr_decay : 0.9
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.scheduler.kwargs.lowest_decay : 0.02
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.bnmscheduler = edict()
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.bnmscheduler.type : Lambda
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.bnmscheduler.kwargs = edict()
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.bnmscheduler.kwargs.decay_step : 21
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.bnmscheduler.kwargs.bn_decay : 0.5
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.bnmscheduler.kwargs.bn_momentum : 0.9
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.bnmscheduler.kwargs.lowest_decay : 0.01
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset = edict()
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.train = edict()
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.train._base_ = edict()
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.train._base_.NAME : ShapeNet
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.train._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.train._base_.N_POINTS : 8192
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.train._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.train.others = edict()
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.train.others.subset : train
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.train.others.bs : 48
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.val = edict()
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.val._base_ = edict()
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.val._base_.NAME : ShapeNet
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.val._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.val._base_.N_POINTS : 8192
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.val._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.val.others = edict()
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.val.others.subset : test
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.test = edict()
+2026-09-10 08:17:31,574 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.test._base_ = edict()
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.test._base_.NAME : ShapeNet
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.test._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.test._base_.N_POINTS : 8192
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.test._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.test.others = edict()
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.test.others.subset : test
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.model = edict()
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.model.NAME : AdaPoinTr_DiffCond
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.model.num_query : 512
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.model.num_points : 8192
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.model.center_num : [512, 256]
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.model.global_feature_dim : 1024
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.model.encoder_type : graph
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.model.decoder_type : fc
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.model.use_vanilla_ranking : True
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.model.ce_lambda : 0
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.model.encoder_config = edict()
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.model.encoder_config.embed_dim : 384
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.model.encoder_config.depth : 6
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.model.encoder_config.num_heads : 6
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.model.encoder_config.k : 8
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.model.encoder_config.n_group : 2
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.model.encoder_config.mlp_ratio : 2.0
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.model.encoder_config.block_style_list : ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn']
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.model.encoder_config.combine_style : concat
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.model.decoder_config = edict()
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.model.decoder_config.embed_dim : 384
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.model.decoder_config.depth : 8
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.model.decoder_config.num_heads : 6
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.model.decoder_config.k : 8
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.model.decoder_config.n_group : 2
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.model.decoder_config.mlp_ratio : 2.0
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.model.decoder_config.self_attn_block_style_list : ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn']
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.model.decoder_config.self_attn_combine_style : concat
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.model.decoder_config.cross_attn_block_style_list : ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn']
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.model.decoder_config.cross_attn_combine_style : concat
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.total_bs : 48
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.step_per_update : 1
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.max_epoch : 30
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - config.consider_metric : CDL2
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - Distributed training: False
+2026-09-10 08:17:31,575 - AdaPoinTr_DiffCond_v2b - INFO - Set random seed to 43, deterministic: False
+2026-09-10 08:17:32,211 - AdaPoinTr_DiffCond_v2b - INFO - Loading weights from experiments/AdaPoinTr/ShapeNet55_models/baseline_sn55/ckpt-best.pth...
+2026-09-10 08:17:32,525 - AdaPoinTr_DiffCond_v2b - INFO - DiffCond load: missing=13, unexpected=0
+2026-09-10 08:17:32,525 - AdaPoinTr_DiffCond_v2b - INFO - ckpts @ 290 epoch( performance = {'F-Score': 0.39654017948523784, 'CDL1': 13.109447510155132, 'CDL2': 0.7939230617268641, 'EMDistance': 0.0})
+2026-09-10 08:17:32,526 - AdaPoinTr_DiffCond_v2b - INFO - Trainable_parameters:
+2026-09-10 08:17:32,526 - AdaPoinTr_DiffCond_v2b - INFO - =========================
+2026-09-10 08:17:32,526 - AdaPoinTr_DiffCond_v2b - INFO - base_model.grouper.input_trans.weight
+2026-09-10 08:17:32,526 - AdaPoinTr_DiffCond_v2b - INFO - base_model.grouper.input_trans.bias
+2026-09-10 08:17:32,526 - AdaPoinTr_DiffCond_v2b - INFO - base_model.grouper.layer1.0.weight
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.grouper.layer1.1.weight
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.grouper.layer1.1.bias
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.grouper.layer2.0.weight
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.grouper.layer2.1.weight
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.grouper.layer2.1.bias
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.grouper.layer3.0.weight
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.grouper.layer3.1.weight
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.grouper.layer3.1.bias
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.grouper.layer4.0.weight
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.grouper.layer4.1.weight
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.grouper.layer4.1.bias
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.pos_embed.0.weight
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.pos_embed.0.bias
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.pos_embed.2.weight
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.pos_embed.2.bias
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.input_proj.0.weight
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.input_proj.0.bias
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.input_proj.2.weight
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.input_proj.2.bias
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.0.norm1.weight
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.0.norm1.bias
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.0.norm2.weight
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.0.norm2.bias
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.0.mlp.fc1.weight
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.0.mlp.fc1.bias
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.0.mlp.fc2.weight
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.0.mlp.fc2.bias
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.0.attn.qkv.weight
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.0.attn.qkv.bias
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.0.attn.proj.weight
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.0.attn.proj.bias
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.0.local_attn.knn_map.0.weight
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.0.local_attn.knn_map.0.bias
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.0.merge_map.weight
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.0.merge_map.bias
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.1.norm1.weight
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.1.norm1.bias
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.1.norm2.weight
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.1.norm2.bias
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.1.mlp.fc1.weight
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.1.mlp.fc1.bias
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.1.mlp.fc2.weight
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.1.mlp.fc2.bias
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.1.attn.qkv.weight
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.1.attn.qkv.bias
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.1.attn.proj.weight
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.1.attn.proj.bias
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.2.norm1.weight
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.2.norm1.bias
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.2.norm2.weight
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.2.norm2.bias
+2026-09-10 08:17:32,527 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.2.mlp.fc1.weight
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.2.mlp.fc1.bias
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.2.mlp.fc2.weight
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.2.mlp.fc2.bias
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.2.attn.qkv.weight
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.2.attn.qkv.bias
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.2.attn.proj.weight
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.2.attn.proj.bias
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.3.norm1.weight
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.3.norm1.bias
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.3.norm2.weight
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.3.norm2.bias
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.3.mlp.fc1.weight
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.3.mlp.fc1.bias
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.3.mlp.fc2.weight
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.3.mlp.fc2.bias
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.3.attn.qkv.weight
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.3.attn.qkv.bias
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.3.attn.proj.weight
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.3.attn.proj.bias
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.4.norm1.weight
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.4.norm1.bias
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.4.norm2.weight
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.4.norm2.bias
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.4.mlp.fc1.weight
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.4.mlp.fc1.bias
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.4.mlp.fc2.weight
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.4.mlp.fc2.bias
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.4.attn.qkv.weight
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.4.attn.qkv.bias
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.4.attn.proj.weight
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.4.attn.proj.bias
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.5.norm1.weight
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.5.norm1.bias
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.5.norm2.weight
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.5.norm2.bias
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.5.mlp.fc1.weight
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.5.mlp.fc1.bias
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.5.mlp.fc2.weight
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.5.mlp.fc2.bias
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.5.attn.qkv.weight
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.5.attn.qkv.bias
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.5.attn.proj.weight
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.blocks.blocks.5.attn.proj.bias
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.norm.weight
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.encoder.norm.bias
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.increase_dim.0.weight
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.increase_dim.0.bias
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.increase_dim.2.weight
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.increase_dim.2.bias
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.coarse_pred.0.weight
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.coarse_pred.0.bias
+2026-09-10 08:17:32,528 - AdaPoinTr_DiffCond_v2b - INFO - base_model.coarse_pred.2.weight
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.coarse_pred.2.bias
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.mlp_query.0.weight
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.mlp_query.0.bias
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.mlp_query.2.weight
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.mlp_query.2.bias
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.mlp_query.4.weight
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.mlp_query.4.bias
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.0.norm2.weight
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.0.norm2.bias
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.0.mlp.fc1.weight
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.0.mlp.fc1.bias
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.0.mlp.fc2.weight
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.0.mlp.fc2.bias
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.0.norm1.weight
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.0.norm1.bias
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.0.self_attn.qkv.weight
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.0.self_attn.qkv.bias
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.0.self_attn.proj.weight
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.0.self_attn.proj.bias
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.0.local_self_attn.knn_map.0.weight
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.0.local_self_attn.knn_map.0.bias
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.0.self_attn_merge_map.weight
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.0.self_attn_merge_map.bias
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.0.norm_q.weight
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.0.norm_q.bias
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.0.norm_v.weight
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.0.norm_v.bias
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.0.cross_attn.q_map.weight
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.0.cross_attn.q_map.bias
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.0.cross_attn.k_map.weight
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.0.cross_attn.k_map.bias
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.0.cross_attn.v_map.weight
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.0.cross_attn.v_map.bias
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.0.cross_attn.proj.weight
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.0.cross_attn.proj.bias
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.0.local_cross_attn.knn_map.0.weight
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.0.local_cross_attn.knn_map.0.bias
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.0.cross_attn_merge_map.weight
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.0.cross_attn_merge_map.bias
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.1.norm2.weight
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.1.norm2.bias
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.1.mlp.fc1.weight
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.1.mlp.fc1.bias
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.1.mlp.fc2.weight
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.1.mlp.fc2.bias
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.1.norm1.weight
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.1.norm1.bias
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.1.self_attn.qkv.weight
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.1.self_attn.qkv.bias
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.1.self_attn.proj.weight
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.1.self_attn.proj.bias
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.1.norm_q.weight
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.1.norm_q.bias
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.1.norm_v.weight
+2026-09-10 08:17:32,529 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.1.norm_v.bias
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.1.cross_attn.q_map.weight
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.1.cross_attn.q_map.bias
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.1.cross_attn.k_map.weight
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.1.cross_attn.k_map.bias
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.1.cross_attn.v_map.weight
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.1.cross_attn.v_map.bias
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.1.cross_attn.proj.weight
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.1.cross_attn.proj.bias
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.2.norm2.weight
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.2.norm2.bias
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.2.mlp.fc1.weight
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.2.mlp.fc1.bias
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.2.mlp.fc2.weight
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.2.mlp.fc2.bias
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.2.norm1.weight
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.2.norm1.bias
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.2.self_attn.qkv.weight
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.2.self_attn.qkv.bias
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.2.self_attn.proj.weight
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.2.self_attn.proj.bias
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.2.norm_q.weight
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.2.norm_q.bias
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.2.norm_v.weight
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.2.norm_v.bias
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.2.cross_attn.q_map.weight
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.2.cross_attn.q_map.bias
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.2.cross_attn.k_map.weight
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.2.cross_attn.k_map.bias
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.2.cross_attn.v_map.weight
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.2.cross_attn.v_map.bias
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.2.cross_attn.proj.weight
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.2.cross_attn.proj.bias
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.3.norm2.weight
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.3.norm2.bias
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.3.mlp.fc1.weight
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.3.mlp.fc1.bias
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.3.mlp.fc2.weight
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.3.mlp.fc2.bias
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.3.norm1.weight
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.3.norm1.bias
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.3.self_attn.qkv.weight
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.3.self_attn.qkv.bias
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.3.self_attn.proj.weight
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.3.self_attn.proj.bias
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.3.norm_q.weight
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.3.norm_q.bias
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.3.norm_v.weight
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.3.norm_v.bias
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.3.cross_attn.q_map.weight
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.3.cross_attn.q_map.bias
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.3.cross_attn.k_map.weight
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.3.cross_attn.k_map.bias
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.3.cross_attn.v_map.weight
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.3.cross_attn.v_map.bias
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.3.cross_attn.proj.weight
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.3.cross_attn.proj.bias
+2026-09-10 08:17:32,530 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.4.norm2.weight
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.4.norm2.bias
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.4.mlp.fc1.weight
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.4.mlp.fc1.bias
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.4.mlp.fc2.weight
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.4.mlp.fc2.bias
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.4.norm1.weight
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.4.norm1.bias
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.4.self_attn.qkv.weight
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.4.self_attn.qkv.bias
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.4.self_attn.proj.weight
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.4.self_attn.proj.bias
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.4.norm_q.weight
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.4.norm_q.bias
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.4.norm_v.weight
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.4.norm_v.bias
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.4.cross_attn.q_map.weight
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.4.cross_attn.q_map.bias
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.4.cross_attn.k_map.weight
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.4.cross_attn.k_map.bias
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.4.cross_attn.v_map.weight
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.4.cross_attn.v_map.bias
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.4.cross_attn.proj.weight
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.4.cross_attn.proj.bias
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.5.norm2.weight
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.5.norm2.bias
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.5.mlp.fc1.weight
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.5.mlp.fc1.bias
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.5.mlp.fc2.weight
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.5.mlp.fc2.bias
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.5.norm1.weight
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.5.norm1.bias
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.5.self_attn.qkv.weight
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.5.self_attn.qkv.bias
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.5.self_attn.proj.weight
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.5.self_attn.proj.bias
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.5.norm_q.weight
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.5.norm_q.bias
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.5.norm_v.weight
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.5.norm_v.bias
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.5.cross_attn.q_map.weight
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.5.cross_attn.q_map.bias
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.5.cross_attn.k_map.weight
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.5.cross_attn.k_map.bias
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.5.cross_attn.v_map.weight
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.5.cross_attn.v_map.bias
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.5.cross_attn.proj.weight
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.5.cross_attn.proj.bias
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.6.norm2.weight
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.6.norm2.bias
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.6.mlp.fc1.weight
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.6.mlp.fc1.bias
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.6.mlp.fc2.weight
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.6.mlp.fc2.bias
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.6.norm1.weight
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.6.norm1.bias
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.6.self_attn.qkv.weight
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.6.self_attn.qkv.bias
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.6.self_attn.proj.weight
+2026-09-10 08:17:32,531 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.6.self_attn.proj.bias
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.6.norm_q.weight
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.6.norm_q.bias
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.6.norm_v.weight
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.6.norm_v.bias
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.6.cross_attn.q_map.weight
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.6.cross_attn.q_map.bias
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.6.cross_attn.k_map.weight
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.6.cross_attn.k_map.bias
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.6.cross_attn.v_map.weight
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.6.cross_attn.v_map.bias
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.6.cross_attn.proj.weight
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.6.cross_attn.proj.bias
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.7.norm2.weight
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.7.norm2.bias
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.7.mlp.fc1.weight
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.7.mlp.fc1.bias
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.7.mlp.fc2.weight
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.7.mlp.fc2.bias
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.7.norm1.weight
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.7.norm1.bias
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.7.self_attn.qkv.weight
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.7.self_attn.qkv.bias
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.7.self_attn.proj.weight
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.7.self_attn.proj.bias
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.7.norm_q.weight
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.7.norm_q.bias
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.7.norm_v.weight
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.7.norm_v.bias
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.7.cross_attn.q_map.weight
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.7.cross_attn.q_map.bias
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.7.cross_attn.k_map.weight
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.7.cross_attn.k_map.bias
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.7.cross_attn.v_map.weight
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.7.cross_attn.v_map.bias
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.7.cross_attn.proj.weight
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.decoder.blocks.blocks.7.cross_attn.proj.bias
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.query_ranking.0.weight
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.query_ranking.0.bias
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.query_ranking.2.weight
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.query_ranking.2.bias
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.query_ranking.4.weight
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.query_ranking.4.bias
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.diff_cond_embedding.embed.weight
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.diff_cond_query_ranking.base_scorer.0.weight
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.diff_cond_query_ranking.base_scorer.0.bias
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.diff_cond_query_ranking.base_scorer.2.weight
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.diff_cond_query_ranking.base_scorer.2.bias
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.diff_cond_query_ranking.base_scorer.4.weight
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.diff_cond_query_ranking.base_scorer.4.bias
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.diff_cond_query_ranking.diff_delta.0.weight
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.diff_cond_query_ranking.diff_delta.0.bias
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.diff_cond_query_ranking.diff_delta.2.weight
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.diff_cond_query_ranking.diff_delta.2.bias
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.diff_cond_gate.0.weight
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.diff_cond_gate.0.bias
+2026-09-10 08:17:32,532 - AdaPoinTr_DiffCond_v2b - INFO - base_model.diff_cond_proj.weight
+2026-09-10 08:17:32,533 - AdaPoinTr_DiffCond_v2b - INFO - base_model.diff_cond_proj.bias
+2026-09-10 08:17:32,533 - AdaPoinTr_DiffCond_v2b - INFO - base_model.diff_predictor.0.weight
+2026-09-10 08:17:32,533 - AdaPoinTr_DiffCond_v2b - INFO - base_model.diff_predictor.0.bias
+2026-09-10 08:17:32,533 - AdaPoinTr_DiffCond_v2b - INFO - base_model.diff_predictor.2.weight
+2026-09-10 08:17:32,533 - AdaPoinTr_DiffCond_v2b - INFO - base_model.diff_predictor.2.bias
+2026-09-10 08:17:32,533 - AdaPoinTr_DiffCond_v2b - INFO - decode_head.layer.fc1.weight
+2026-09-10 08:17:32,533 - AdaPoinTr_DiffCond_v2b - INFO - decode_head.layer.fc1.bias
+2026-09-10 08:17:32,533 - AdaPoinTr_DiffCond_v2b - INFO - decode_head.layer.fc2.weight
+2026-09-10 08:17:32,533 - AdaPoinTr_DiffCond_v2b - INFO - decode_head.layer.fc2.bias
+2026-09-10 08:17:32,533 - AdaPoinTr_DiffCond_v2b - INFO - increase_dim.0.weight
+2026-09-10 08:17:32,533 - AdaPoinTr_DiffCond_v2b - INFO - increase_dim.0.bias
+2026-09-10 08:17:32,533 - AdaPoinTr_DiffCond_v2b - INFO - increase_dim.1.weight
+2026-09-10 08:17:32,533 - AdaPoinTr_DiffCond_v2b - INFO - increase_dim.1.bias
+2026-09-10 08:17:32,533 - AdaPoinTr_DiffCond_v2b - INFO - increase_dim.3.weight
+2026-09-10 08:17:32,533 - AdaPoinTr_DiffCond_v2b - INFO - increase_dim.3.bias
+2026-09-10 08:17:32,533 - AdaPoinTr_DiffCond_v2b - INFO - reduce_map.weight
+2026-09-10 08:17:32,533 - AdaPoinTr_DiffCond_v2b - INFO - reduce_map.bias
+2026-09-10 08:17:32,533 - AdaPoinTr_DiffCond_v2b - INFO - =========================
+2026-09-10 08:17:32,533 - AdaPoinTr_DiffCond_v2b - INFO - Untrainable_parameters:
+2026-09-10 08:17:32,533 - AdaPoinTr_DiffCond_v2b - INFO - =========================
+2026-09-10 08:17:32,533 - AdaPoinTr_DiffCond_v2b - INFO - =========================
+2026-09-10 08:17:32,533 - AdaPoinTr_DiffCond_v2b - INFO - Using Data parallel ...
+2026-09-10 08:17:34,493 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 0/30][Batch 1/874] BatchTime = 1.954 (s) DataTime = 0.185 (s) Losses = ['5.1813', '37.8252'] lr = 0.000100
+2026-09-10 08:18:00,911 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 0/30][Batch 101/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.6088', '41.2399'] lr = 0.000100
+2026-09-10 08:18:27,368 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 0/30][Batch 201/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.1774', '37.6954'] lr = 0.000100
+2026-09-10 08:18:53,795 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 0/30][Batch 301/874] BatchTime = 0.266 (s) DataTime = 0.002 (s) Losses = ['5.5185', '40.0063'] lr = 0.000100
+2026-09-10 08:19:20,258 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 0/30][Batch 401/874] BatchTime = 0.267 (s) DataTime = 0.002 (s) Losses = ['5.2466', '39.1130'] lr = 0.000100
+2026-09-10 08:19:46,707 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 0/30][Batch 501/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['5.4571', '45.4151'] lr = 0.000100
+2026-09-10 08:20:13,226 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 0/30][Batch 601/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['5.3277', '43.4489'] lr = 0.000100
+2026-09-10 08:20:39,696 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 0/30][Batch 701/874] BatchTime = 0.266 (s) DataTime = 0.003 (s) Losses = ['5.3313', '40.9257'] lr = 0.000100
+2026-09-10 08:21:06,232 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 0/30][Batch 801/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['5.0353', '43.8441'] lr = 0.000100
+2026-09-10 08:21:25,621 - AdaPoinTr_DiffCond_v2b - INFO - [Training] EPOCH: 0 EpochTime = 233.081 (s) Losses = ['5.3198', '42.2801']
+2026-09-10 08:21:25,622 - AdaPoinTr_DiffCond_v2b - INFO - [VALIDATION] Start validating epoch 0
+2026-09-10 08:22:04,851 - AdaPoinTr_DiffCond_v2b - INFO - Test[1051/10518] Taxonomy = 02691156 Sample = c7749c0a8b61f43bc9b9e28055202e3d Losses = ['22.1000', '1.9651', '9.3590', '0.2816'] Metrics = ['0.5688', '9.3590', '0.2816', '0.0000']
+2026-09-10 08:22:43,656 - AdaPoinTr_DiffCond_v2b - INFO - Test[2102/10518] Taxonomy = 03211117 Sample = ab2f9418c111cc6ddb965514105122a4 Losses = ['21.5224', '1.6626', '7.9979', '0.1910'] Metrics = ['0.6580', '7.9979', '0.1910', '0.0000']
+2026-09-10 08:23:22,346 - AdaPoinTr_DiffCond_v2b - INFO - Test[3153/10518] Taxonomy = 02876657 Sample = c5032e4be091aabb36fe7a88df793982 Losses = ['37.7703', '6.3715', '14.9538', '0.9808'] Metrics = ['0.3665', '14.9538', '0.9808', '0.0000']
+2026-09-10 08:24:00,999 - AdaPoinTr_DiffCond_v2b - INFO - Test[4204/10518] Taxonomy = 03211117 Sample = 722df1da5778d45b1e43523279c7f09f Losses = ['29.5349', '3.2201', '11.9734', '0.4775'] Metrics = ['0.4296', '11.9734', '0.4775', '0.0000']
+2026-09-10 08:24:39,815 - AdaPoinTr_DiffCond_v2b - INFO - Test[5255/10518] Taxonomy = 02828884 Sample = 14b63361a48a9fffe4a048c146e8bd43 Losses = ['33.8689', '4.2134', '15.0665', '0.9996'] Metrics = ['0.3871', '15.0665', '0.9996', '0.0000']
+2026-09-10 08:25:18,468 - AdaPoinTr_DiffCond_v2b - INFO - Test[6306/10518] Taxonomy = 03211117 Sample = d330d50a0255529d19ed6e1a590c9122 Losses = ['29.9563', '3.5075', '12.9743', '0.5771'] Metrics = ['0.4318', '12.9743', '0.5771', '0.0000']
+2026-09-10 08:25:57,240 - AdaPoinTr_DiffCond_v2b - INFO - Test[7357/10518] Taxonomy = 04379243 Sample = b1ca280d9567270ade98d10ab5975b59 Losses = ['32.4201', '3.8092', '15.3107', '0.7662'] Metrics = ['0.2628', '15.3107', '0.7662', '0.0000']
+2026-09-10 08:26:36,315 - AdaPoinTr_DiffCond_v2b - INFO - Test[8408/10518] Taxonomy = 03001627 Sample = 89208a619341d9fdb8c516ed5c4ce32 Losses = ['32.5541', '3.8536', '16.0036', '0.8960'] Metrics = ['0.2709', '16.0036', '0.8960', '0.0000']
+2026-09-10 08:27:14,874 - AdaPoinTr_DiffCond_v2b - INFO - Test[9459/10518] Taxonomy = 03001627 Sample = d0255120e3351121c3bd24f986301745 Losses = ['36.3233', '4.7889', '16.6991', '1.0230'] Metrics = ['0.2492', '16.6991', '1.0230', '0.0000']
+2026-09-10 08:27:53,514 - AdaPoinTr_DiffCond_v2b - INFO - Test[10510/10518] Taxonomy = 03636649 Sample = ea9ec4d9db2e06202471e6dd5ac3ef92 Losses = ['31.2613', '4.4373', '6.9579', '0.1597'] Metrics = ['0.8068', '6.9579', '0.1597', '0.0000']
+2026-09-10 08:27:53,904 - AdaPoinTr_DiffCond_v2b - INFO - [Validation] EPOCH: 0  Metrics = ['0.3769', '14.1661', '0.9107', '0.0000']
+2026-09-10 08:27:53,904 - AdaPoinTr_DiffCond_v2b - INFO - ============================ TEST RESULTS ============================
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - 03759954	14	0.517 	13.943 	1.240 	0.000 	microphone	
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - 04330267	44	0.296 	15.105 	0.903 	0.000 	stove	
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - 03261776	15	0.334 	16.915 	1.348 	0.000 	earphone	
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - 03513137	33	0.216 	20.759 	2.156 	0.000 	helmet	
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - 04460130	27	0.452 	13.896 	0.900 	0.000 	tower	
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - 04468005	78	0.407 	12.677 	0.688 	0.000 	train	
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - 03761084	31	0.247 	16.321 	1.031 	0.000 	microwaves	
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - 04004475	34	0.280 	16.159 	1.124 	0.000 	printer	
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - 03938244	20	0.324 	13.868 	0.703 	0.000 	pillow	
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - 02992529	167	0.422 	11.376 	0.459 	0.000 	cellphone	
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - 02808440	172	0.300 	14.930 	0.902 	0.000 	bathtub	
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - 04530566	388	0.519 	11.296 	0.593 	0.000 	watercraft	
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - 02871439	91	0.258 	15.875 	0.958 	0.000 	bookshelf	
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - 03593526	120	0.280 	16.992 	1.350 	0.000 	jar	
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - 04554684	34	0.230 	18.011 	1.507 	0.000 	washer	
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - 03467517	160	0.820 	6.877 	0.201 	0.000 	guitar	
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - 04401088	218	0.424 	11.254 	0.439 	0.000 	telephone	
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - 02954340	12	0.309 	14.373 	0.773 	0.000 	cap	
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - 02933112	315	0.245 	15.383 	0.828 	0.000 	cabinet	
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - 03642806	92	0.383 	11.913 	0.479 	0.000 	laptop	
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - 02924116	188	0.368 	12.759 	0.591 	0.000 	bus	
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - 02946921	22	0.259 	15.626 	0.926 	0.000 	can	
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - 02818832	47	0.300 	15.460 	0.981 	0.000 	bed	
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - 04256520	635	0.308 	14.244 	0.732 	0.000 	sofa	
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - 04379243	1687	0.397 	12.882 	0.754 	0.000 	table	
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - 02747177	69	0.203 	17.548 	1.146 	0.000 	trash bin	
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - 03046257	131	0.320 	14.705 	0.865 	0.000 	clock	
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - 04225987	31	0.568 	10.097 	0.476 	0.000 	skateboard	
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - 03797390	43	0.200 	18.305 	1.330 	0.000 	mug	
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - 03001627	1356	0.381 	13.715 	0.818 	0.000 	chair	
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - 03691459	320	0.260 	17.026 	1.228 	0.000 	loudspeaker	
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - 02942699	23	0.251 	20.203 	2.133 	0.000 	camera	
+2026-09-10 08:27:53,905 - AdaPoinTr_DiffCond_v2b - INFO - 03636649	464	0.543 	13.348 	1.270 	0.000 	lamp	
+2026-09-10 08:27:53,906 - AdaPoinTr_DiffCond_v2b - INFO - 02691156	809	0.594 	9.653 	0.420 	0.000 	airplane	
+2026-09-10 08:27:53,906 - AdaPoinTr_DiffCond_v2b - INFO - 02773838	17	0.368 	14.225 	1.066 	0.000 	bag	
+2026-09-10 08:27:53,906 - AdaPoinTr_DiffCond_v2b - INFO - 02958343	703	0.228 	16.170 	0.898 	0.000 	car	
+2026-09-10 08:27:53,906 - AdaPoinTr_DiffCond_v2b - INFO - 02880940	38	0.233 	16.019 	0.952 	0.000 	bowl	
+2026-09-10 08:27:53,906 - AdaPoinTr_DiffCond_v2b - INFO - 04099429	17	0.716 	9.493 	0.605 	0.000 	rocket	
+2026-09-10 08:27:53,906 - AdaPoinTr_DiffCond_v2b - INFO - 02828884	363	0.455 	11.272 	0.531 	0.000 	bench	
+2026-09-10 08:27:53,906 - AdaPoinTr_DiffCond_v2b - INFO - 04090263	475	0.713 	8.553 	0.382 	0.000 	rifle	
+2026-09-10 08:27:53,906 - AdaPoinTr_DiffCond_v2b - INFO - 03211117	219	0.359 	13.414 	0.719 	0.000 	display	
+2026-09-10 08:27:53,906 - AdaPoinTr_DiffCond_v2b - INFO - 02876657	100	0.446 	11.577 	0.515 	0.000 	bottle	
+2026-09-10 08:27:53,906 - AdaPoinTr_DiffCond_v2b - INFO - 03710193	19	0.512 	12.174 	0.757 	0.000 	mailbox	
+2026-09-10 08:27:53,906 - AdaPoinTr_DiffCond_v2b - INFO - 03790512	68	0.271 	16.146 	1.016 	0.000 	motorbike	
+2026-09-10 08:27:53,906 - AdaPoinTr_DiffCond_v2b - INFO - 03325088	149	0.473 	14.334 	1.256 	0.000 	faucet	
+2026-09-10 08:27:53,906 - AdaPoinTr_DiffCond_v2b - INFO - 02801938	23	0.245 	15.786 	0.930 	0.000 	basket	
+2026-09-10 08:27:53,906 - AdaPoinTr_DiffCond_v2b - INFO - 03337140	60	0.245 	16.273 	1.016 	0.000 	file cabinet	
+2026-09-10 08:27:53,906 - AdaPoinTr_DiffCond_v2b - INFO - 02843684	15	0.251 	19.865 	2.046 	0.000 	birdhouse	
+2026-09-10 08:27:53,906 - AdaPoinTr_DiffCond_v2b - INFO - 03624134	85	0.772 	7.670 	0.298 	0.000 	knife	
+2026-09-10 08:27:53,906 - AdaPoinTr_DiffCond_v2b - INFO - 03991062	121	0.252 	18.588 	1.506 	0.000 	flowerpot	
+2026-09-10 08:27:53,906 - AdaPoinTr_DiffCond_v2b - INFO - 03948459	62	0.488 	11.849 	0.615 	0.000 	pistol	
+2026-09-10 08:27:53,906 - AdaPoinTr_DiffCond_v2b - INFO - 03928116	48	0.299 	15.336 	1.003 	0.000 	piano	
+2026-09-10 08:27:53,906 - AdaPoinTr_DiffCond_v2b - INFO - 03207941	19	0.242 	16.288 	1.019 	0.000 	dishwasher	
+2026-09-10 08:27:53,906 - AdaPoinTr_DiffCond_v2b - INFO - 04074963	14	0.477 	10.602 	0.391 	0.000 	remote	
+2026-09-10 08:27:53,906 - AdaPoinTr_DiffCond_v2b - INFO - 03085013	13	0.467 	10.007 	0.316 	0.000 	keyboard	
+2026-09-10 08:27:53,906 - AdaPoinTr_DiffCond_v2b - INFO - Overall		0.377 	14.166 	0.911 	0.000 	
+2026-09-10 08:27:54,363 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-best.pth
+2026-09-10 08:27:54,738 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-last.pth
+2026-09-10 08:27:55,345 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 1/30][Batch 1/874] BatchTime = 0.606 (s) DataTime = 0.205 (s) Losses = ['5.2994', '42.0083'] lr = 0.000099
+2026-09-10 08:28:21,731 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 1/30][Batch 101/874] BatchTime = 0.266 (s) DataTime = 0.002 (s) Losses = ['5.3548', '39.6773'] lr = 0.000099
+2026-09-10 08:28:48,125 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 1/30][Batch 201/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.3946', '42.2694'] lr = 0.000099
+2026-09-10 08:29:14,540 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 1/30][Batch 301/874] BatchTime = 0.266 (s) DataTime = 0.002 (s) Losses = ['5.2823', '42.4436'] lr = 0.000099
+2026-09-10 08:29:40,999 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 1/30][Batch 401/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['5.4487', '46.1276'] lr = 0.000099
+2026-09-10 08:30:07,461 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 1/30][Batch 501/874] BatchTime = 0.267 (s) DataTime = 0.002 (s) Losses = ['5.5263', '40.0231'] lr = 0.000099
+2026-09-10 08:30:33,937 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 1/30][Batch 601/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['4.9382', '47.9533'] lr = 0.000099
+2026-09-10 08:31:00,425 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 1/30][Batch 701/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['5.2056', '45.3265'] lr = 0.000099
+2026-09-10 08:31:26,872 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 1/30][Batch 801/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.0653', '39.7560'] lr = 0.000099
+2026-09-10 08:31:46,255 - AdaPoinTr_DiffCond_v2b - INFO - [Training] EPOCH: 1 EpochTime = 231.516 (s) Losses = ['5.3162', '43.2271']
+2026-09-10 08:31:46,975 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-last.pth
+2026-09-10 08:31:47,418 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 2/30][Batch 1/874] BatchTime = 0.441 (s) DataTime = 0.174 (s) Losses = ['5.2009', '43.9239'] lr = 0.000099
+2026-09-10 08:32:13,927 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 2/30][Batch 101/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.1166', '45.9154'] lr = 0.000099
+2026-09-10 08:32:40,371 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 2/30][Batch 201/874] BatchTime = 0.262 (s) DataTime = 0.002 (s) Losses = ['5.6369', '54.2823'] lr = 0.000099
+2026-09-10 08:33:06,670 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 2/30][Batch 301/874] BatchTime = 0.264 (s) DataTime = 0.001 (s) Losses = ['5.4215', '41.4630'] lr = 0.000099
+2026-09-10 08:33:32,993 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 2/30][Batch 401/874] BatchTime = 0.264 (s) DataTime = 0.001 (s) Losses = ['5.2439', '37.8991'] lr = 0.000099
+2026-09-10 08:33:59,334 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 2/30][Batch 501/874] BatchTime = 0.261 (s) DataTime = 0.001 (s) Losses = ['5.0771', '46.7938'] lr = 0.000099
+2026-09-10 08:34:25,674 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 2/30][Batch 601/874] BatchTime = 0.262 (s) DataTime = 0.002 (s) Losses = ['5.0798', '47.7766'] lr = 0.000099
+2026-09-10 08:34:52,011 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 2/30][Batch 701/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['5.4665', '42.4128'] lr = 0.000099
+2026-09-10 08:35:18,387 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 2/30][Batch 801/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.2180', '41.6217'] lr = 0.000099
+2026-09-10 08:35:37,736 - AdaPoinTr_DiffCond_v2b - INFO - [Training] EPOCH: 2 EpochTime = 230.759 (s) Losses = ['5.3745', '44.4426']
+2026-09-10 08:35:38,453 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-last.pth
+2026-09-10 08:35:38,918 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 3/30][Batch 1/874] BatchTime = 0.463 (s) DataTime = 0.189 (s) Losses = ['5.4511', '41.4023'] lr = 0.000099
+2026-09-10 08:36:05,408 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 3/30][Batch 101/874] BatchTime = 0.266 (s) DataTime = 0.002 (s) Losses = ['5.1301', '39.2761'] lr = 0.000099
+2026-09-10 08:36:31,779 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 3/30][Batch 201/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.2536', '41.5195'] lr = 0.000099
+2026-09-10 08:36:58,117 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 3/30][Batch 301/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['5.0739', '39.9795'] lr = 0.000099
+2026-09-10 08:37:24,410 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 3/30][Batch 401/874] BatchTime = 0.263 (s) DataTime = 0.001 (s) Losses = ['5.3637', '41.3712'] lr = 0.000099
+2026-09-10 08:37:50,750 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 3/30][Batch 501/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['5.3345', '43.0959'] lr = 0.000099
+2026-09-10 08:38:17,134 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 3/30][Batch 601/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.2770', '40.1545'] lr = 0.000099
+2026-09-10 08:38:43,477 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 3/30][Batch 701/874] BatchTime = 0.262 (s) DataTime = 0.002 (s) Losses = ['5.3682', '49.7312'] lr = 0.000099
+2026-09-10 08:39:09,803 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 3/30][Batch 801/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.4834', '48.0841'] lr = 0.000099
+2026-09-10 08:39:29,149 - AdaPoinTr_DiffCond_v2b - INFO - [Training] EPOCH: 3 EpochTime = 230.694 (s) Losses = ['5.3534', '43.6984']
+2026-09-10 08:39:29,841 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-last.pth
+2026-09-10 08:39:30,314 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 4/30][Batch 1/874] BatchTime = 0.471 (s) DataTime = 0.201 (s) Losses = ['5.3768', '44.5084'] lr = 0.000098
+2026-09-10 08:39:56,771 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 4/30][Batch 101/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.3509', '41.3853'] lr = 0.000098
+2026-09-10 08:40:23,232 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 4/30][Batch 201/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.7614', '47.6055'] lr = 0.000098
+2026-09-10 08:40:49,609 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 4/30][Batch 301/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['5.2144', '47.9772'] lr = 0.000098
+2026-09-10 08:41:15,997 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 4/30][Batch 401/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.5762', '42.9661'] lr = 0.000098
+2026-09-10 08:41:42,466 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 4/30][Batch 501/874] BatchTime = 0.270 (s) DataTime = 0.002 (s) Losses = ['5.2357', '41.2984'] lr = 0.000098
+2026-09-10 08:42:08,994 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 4/30][Batch 601/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.5817', '46.1455'] lr = 0.000098
+2026-09-10 08:42:35,371 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 4/30][Batch 701/874] BatchTime = 0.265 (s) DataTime = 0.001 (s) Losses = ['5.0743', '38.1193'] lr = 0.000098
+2026-09-10 08:43:01,673 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 4/30][Batch 801/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['5.3570', '43.1219'] lr = 0.000098
+2026-09-10 08:43:20,974 - AdaPoinTr_DiffCond_v2b - INFO - [Training] EPOCH: 4 EpochTime = 231.131 (s) Losses = ['5.4235', '44.5871']
+2026-09-10 08:43:21,392 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-last.pth
+2026-09-10 08:43:21,859 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 5/30][Batch 1/874] BatchTime = 0.466 (s) DataTime = 0.193 (s) Losses = ['5.3364', '40.0222'] lr = 0.000098
+2026-09-10 08:43:48,176 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 5/30][Batch 101/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.2302', '41.0383'] lr = 0.000098
+2026-09-10 08:44:14,538 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 5/30][Batch 201/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.4309', '45.1676'] lr = 0.000098
+2026-09-10 08:44:40,956 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 5/30][Batch 301/874] BatchTime = 0.267 (s) DataTime = 0.002 (s) Losses = ['5.4665', '39.1197'] lr = 0.000098
+2026-09-10 08:45:07,382 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 5/30][Batch 401/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.1137', '39.6909'] lr = 0.000098
+2026-09-10 08:45:33,800 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 5/30][Batch 501/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.5376', '45.8348'] lr = 0.000098
+2026-09-10 08:46:00,211 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 5/30][Batch 601/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['5.3293', '45.8816'] lr = 0.000098
+2026-09-10 08:46:26,812 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 5/30][Batch 701/874] BatchTime = 0.268 (s) DataTime = 0.002 (s) Losses = ['5.5557', '45.8626'] lr = 0.000098
+2026-09-10 08:46:53,419 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 5/30][Batch 801/874] BatchTime = 0.269 (s) DataTime = 0.002 (s) Losses = ['5.2347', '38.3375'] lr = 0.000098
+2026-09-10 08:47:12,831 - AdaPoinTr_DiffCond_v2b - INFO - [Training] EPOCH: 5 EpochTime = 231.438 (s) Losses = ['5.3136', '43.5123']
+2026-09-10 08:47:13,522 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-last.pth
+2026-09-10 08:47:13,998 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 6/30][Batch 1/874] BatchTime = 0.474 (s) DataTime = 0.199 (s) Losses = ['5.1483', '41.2337'] lr = 0.000097
+2026-09-10 08:47:40,400 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 6/30][Batch 101/874] BatchTime = 0.262 (s) DataTime = 0.002 (s) Losses = ['5.5899', '50.1662'] lr = 0.000097
+2026-09-10 08:48:06,841 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 6/30][Batch 201/874] BatchTime = 0.266 (s) DataTime = 0.002 (s) Losses = ['5.7259', '46.2099'] lr = 0.000097
+2026-09-10 08:48:33,287 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 6/30][Batch 301/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['4.9081', '47.0310'] lr = 0.000097
+2026-09-10 08:48:59,695 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 6/30][Batch 401/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.2130', '48.1411'] lr = 0.000097
+2026-09-10 08:49:26,142 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 6/30][Batch 501/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.2692', '44.6034'] lr = 0.000097
+2026-09-10 08:49:52,601 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 6/30][Batch 601/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.0283', '38.8598'] lr = 0.000097
+2026-09-10 08:50:19,064 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 6/30][Batch 701/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.0572', '40.8379'] lr = 0.000097
+2026-09-10 08:50:45,459 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 6/30][Batch 801/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.3553', '42.1104'] lr = 0.000097
+2026-09-10 08:51:04,820 - AdaPoinTr_DiffCond_v2b - INFO - [Training] EPOCH: 6 EpochTime = 231.296 (s) Losses = ['5.3283', '44.5589']
+2026-09-10 08:51:05,553 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-last.pth
+2026-09-10 08:51:06,024 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 7/30][Batch 1/874] BatchTime = 0.470 (s) DataTime = 0.196 (s) Losses = ['5.0962', '45.8272'] lr = 0.000097
+2026-09-10 08:51:32,447 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 7/30][Batch 101/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.4120', '41.3790'] lr = 0.000097
+2026-09-10 08:51:58,870 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 7/30][Batch 201/874] BatchTime = 0.267 (s) DataTime = 0.002 (s) Losses = ['5.3496', '43.9830'] lr = 0.000097
+2026-09-10 08:52:25,366 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 7/30][Batch 301/874] BatchTime = 0.268 (s) DataTime = 0.002 (s) Losses = ['5.4889', '40.8304'] lr = 0.000097
+2026-09-10 08:52:52,148 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 7/30][Batch 401/874] BatchTime = 0.264 (s) DataTime = 0.003 (s) Losses = ['4.9142', '49.2363'] lr = 0.000097
+2026-09-10 08:53:18,665 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 7/30][Batch 501/874] BatchTime = 0.266 (s) DataTime = 0.002 (s) Losses = ['5.1742', '40.4622'] lr = 0.000097
+2026-09-10 08:53:45,178 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 7/30][Batch 601/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.1759', '41.4795'] lr = 0.000097
+2026-09-10 08:54:11,753 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 7/30][Batch 701/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.1447', '51.3211'] lr = 0.000097
+2026-09-10 08:54:38,329 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 7/30][Batch 801/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.0620', '43.1489'] lr = 0.000097
+2026-09-10 08:54:57,814 - AdaPoinTr_DiffCond_v2b - INFO - [Training] EPOCH: 7 EpochTime = 232.260 (s) Losses = ['5.3428', '43.6161']
+2026-09-10 08:54:58,607 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-last.pth
+2026-09-10 08:54:59,088 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 8/30][Batch 1/874] BatchTime = 0.479 (s) DataTime = 0.209 (s) Losses = ['5.3708', '49.5994'] lr = 0.000096
+2026-09-10 08:55:25,631 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 8/30][Batch 101/874] BatchTime = 0.266 (s) DataTime = 0.002 (s) Losses = ['5.5403', '42.3450'] lr = 0.000096
+2026-09-10 08:55:52,188 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 8/30][Batch 201/874] BatchTime = 0.266 (s) DataTime = 0.002 (s) Losses = ['5.7486', '46.4869'] lr = 0.000096
+2026-09-10 08:56:18,653 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 8/30][Batch 301/874] BatchTime = 0.262 (s) DataTime = 0.002 (s) Losses = ['4.7169', '44.9842'] lr = 0.000096
+2026-09-10 08:56:45,098 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 8/30][Batch 401/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['5.0743', '42.2148'] lr = 0.000096
+2026-09-10 08:57:11,589 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 8/30][Batch 501/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['5.5127', '47.8543'] lr = 0.000096
+2026-09-10 08:57:38,010 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 8/30][Batch 601/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.4759', '46.7283'] lr = 0.000096
+2026-09-10 08:58:04,416 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 8/30][Batch 701/874] BatchTime = 0.262 (s) DataTime = 0.002 (s) Losses = ['5.2955', '52.5522'] lr = 0.000096
+2026-09-10 08:58:30,914 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 8/30][Batch 801/874] BatchTime = 0.266 (s) DataTime = 0.002 (s) Losses = ['5.4343', '41.6601'] lr = 0.000096
+2026-09-10 08:58:50,358 - AdaPoinTr_DiffCond_v2b - INFO - [Training] EPOCH: 8 EpochTime = 231.749 (s) Losses = ['5.3380', '43.7699']
+2026-09-10 08:58:51,170 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-last.pth
+2026-09-10 08:58:51,638 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 9/30][Batch 1/874] BatchTime = 0.467 (s) DataTime = 0.188 (s) Losses = ['5.2797', '44.3110'] lr = 0.000096
+2026-09-10 08:59:18,143 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 9/30][Batch 101/874] BatchTime = 0.267 (s) DataTime = 0.002 (s) Losses = ['5.1382', '38.1062'] lr = 0.000096
+2026-09-10 08:59:44,603 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 9/30][Batch 201/874] BatchTime = 0.262 (s) DataTime = 0.002 (s) Losses = ['5.3084', '48.8266'] lr = 0.000096
+2026-09-10 09:00:11,081 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 9/30][Batch 301/874] BatchTime = 0.269 (s) DataTime = 0.002 (s) Losses = ['5.3786', '40.4302'] lr = 0.000096
+2026-09-10 09:00:37,576 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 9/30][Batch 401/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.0644', '41.0644'] lr = 0.000096
+2026-09-10 09:01:03,999 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 9/30][Batch 501/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['5.2427', '46.3039'] lr = 0.000096
+2026-09-10 09:01:30,451 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 9/30][Batch 601/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.1424', '41.7836'] lr = 0.000096
+2026-09-10 09:01:56,892 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 9/30][Batch 701/874] BatchTime = 0.267 (s) DataTime = 0.002 (s) Losses = ['5.6705', '42.5288'] lr = 0.000096
+2026-09-10 09:02:23,360 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 9/30][Batch 801/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.2164', '39.9697'] lr = 0.000096
+2026-09-10 09:02:42,712 - AdaPoinTr_DiffCond_v2b - INFO - [Training] EPOCH: 9 EpochTime = 231.540 (s) Losses = ['5.3340', '43.7432']
+2026-09-10 09:02:43,492 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-last.pth
+2026-09-10 09:02:43,947 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 10/30][Batch 1/874] BatchTime = 0.453 (s) DataTime = 0.175 (s) Losses = ['5.1467', '43.8177'] lr = 0.000095
+2026-09-10 09:03:10,416 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 10/30][Batch 101/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.3196', '40.7766'] lr = 0.000095
+2026-09-10 09:03:36,807 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 10/30][Batch 201/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['5.2646', '44.7410'] lr = 0.000095
+2026-09-10 09:04:03,222 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 10/30][Batch 301/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['5.7926', '43.1757'] lr = 0.000095
+2026-09-10 09:04:29,790 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 10/30][Batch 401/874] BatchTime = 0.266 (s) DataTime = 0.002 (s) Losses = ['5.3590', '47.1100'] lr = 0.000095
+2026-09-10 09:04:56,475 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 10/30][Batch 501/874] BatchTime = 0.266 (s) DataTime = 0.002 (s) Losses = ['5.3714', '46.9244'] lr = 0.000095
+2026-09-10 09:05:23,169 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 10/30][Batch 601/874] BatchTime = 0.267 (s) DataTime = 0.002 (s) Losses = ['5.3831', '44.4479'] lr = 0.000095
+2026-09-10 09:05:49,776 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 10/30][Batch 701/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.0090', '41.7089'] lr = 0.000095
+2026-09-10 09:06:16,141 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 10/30][Batch 801/874] BatchTime = 0.263 (s) DataTime = 0.001 (s) Losses = ['5.3933', '42.6571'] lr = 0.000095
+2026-09-10 09:06:35,452 - AdaPoinTr_DiffCond_v2b - INFO - [Training] EPOCH: 10 EpochTime = 231.958 (s) Losses = ['5.3354', '43.9538']
+2026-09-10 09:06:35,452 - AdaPoinTr_DiffCond_v2b - INFO - [VALIDATION] Start validating epoch 10
+2026-09-10 09:07:14,934 - AdaPoinTr_DiffCond_v2b - INFO - Test[1051/10518] Taxonomy = 02691156 Sample = c7749c0a8b61f43bc9b9e28055202e3d Losses = ['24.6869', '2.3843', '14.1512', '1.5359'] Metrics = ['0.5017', '14.1512', '1.5359', '0.0000']
+2026-09-10 09:07:53,637 - AdaPoinTr_DiffCond_v2b - INFO - Test[2102/10518] Taxonomy = 03211117 Sample = ab2f9418c111cc6ddb965514105122a4 Losses = ['26.2005', '2.5528', '8.5115', '0.2304'] Metrics = ['0.5878', '8.5115', '0.2304', '0.0000']
+2026-09-10 09:08:31,879 - AdaPoinTr_DiffCond_v2b - INFO - Test[3153/10518] Taxonomy = 02876657 Sample = c5032e4be091aabb36fe7a88df793982 Losses = ['33.1521', '3.9669', '14.0960', '0.8369'] Metrics = ['0.3468', '14.0960', '0.8369', '0.0000']
+2026-09-10 09:09:10,185 - AdaPoinTr_DiffCond_v2b - INFO - Test[4204/10518] Taxonomy = 03211117 Sample = 722df1da5778d45b1e43523279c7f09f Losses = ['35.0537', '5.1938', '12.7564', '0.6873'] Metrics = ['0.4054', '12.7564', '0.6873', '0.0000']
+2026-09-10 09:09:49,003 - AdaPoinTr_DiffCond_v2b - INFO - Test[5255/10518] Taxonomy = 02828884 Sample = 14b63361a48a9fffe4a048c146e8bd43 Losses = ['31.4871', '3.6181', '10.4855', '0.3640'] Metrics = ['0.4415', '10.4855', '0.3640', '0.0000']
+2026-09-10 09:10:27,524 - AdaPoinTr_DiffCond_v2b - INFO - Test[6306/10518] Taxonomy = 03211117 Sample = d330d50a0255529d19ed6e1a590c9122 Losses = ['30.9260', '4.1873', '12.2391', '0.5420'] Metrics = ['0.4224', '12.2391', '0.5420', '0.0000']
+2026-09-10 09:11:05,593 - AdaPoinTr_DiffCond_v2b - INFO - Test[7357/10518] Taxonomy = 04379243 Sample = b1ca280d9567270ade98d10ab5975b59 Losses = ['34.4467', '4.3243', '14.3306', '0.6194'] Metrics = ['0.2747', '14.3306', '0.6194', '0.0000']
+2026-09-10 09:11:43,678 - AdaPoinTr_DiffCond_v2b - INFO - Test[8408/10518] Taxonomy = 03001627 Sample = 89208a619341d9fdb8c516ed5c4ce32 Losses = ['30.2692', '3.1923', '13.1423', '0.5305'] Metrics = ['0.3002', '13.1423', '0.5305', '0.0000']
+2026-09-10 09:12:21,959 - AdaPoinTr_DiffCond_v2b - INFO - Test[9459/10518] Taxonomy = 03001627 Sample = d0255120e3351121c3bd24f986301745 Losses = ['38.7896', '5.6303', '18.2329', '1.2705'] Metrics = ['0.2241', '18.2329', '1.2705', '0.0000']
+2026-09-10 09:13:00,154 - AdaPoinTr_DiffCond_v2b - INFO - Test[10510/10518] Taxonomy = 03636649 Sample = ea9ec4d9db2e06202471e6dd5ac3ef92 Losses = ['25.2562', '3.1136', '7.3320', '0.2173'] Metrics = ['0.7793', '7.3320', '0.2173', '0.0000']
+2026-09-10 09:13:00,577 - AdaPoinTr_DiffCond_v2b - INFO - [Validation] EPOCH: 10  Metrics = ['0.3675', '14.4088', '0.9741', '0.0000']
+2026-09-10 09:13:00,578 - AdaPoinTr_DiffCond_v2b - INFO - ============================ TEST RESULTS ============================
+2026-09-10 09:13:00,578 - AdaPoinTr_DiffCond_v2b - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2026-09-10 09:13:00,578 - AdaPoinTr_DiffCond_v2b - INFO - 03759954	14	0.574 	13.936 	1.649 	0.000 	microphone	
+2026-09-10 09:13:00,579 - AdaPoinTr_DiffCond_v2b - INFO - 04330267	44	0.293 	15.369 	0.960 	0.000 	stove	
+2026-09-10 09:13:00,579 - AdaPoinTr_DiffCond_v2b - INFO - 03261776	15	0.324 	19.319 	2.015 	0.000 	earphone	
+2026-09-10 09:13:00,579 - AdaPoinTr_DiffCond_v2b - INFO - 03513137	33	0.210 	20.121 	1.894 	0.000 	helmet	
+2026-09-10 09:13:00,579 - AdaPoinTr_DiffCond_v2b - INFO - 04460130	27	0.419 	15.033 	1.358 	0.000 	tower	
+2026-09-10 09:13:00,579 - AdaPoinTr_DiffCond_v2b - INFO - 04468005	78	0.389 	12.752 	0.637 	0.000 	train	
+2026-09-10 09:13:00,579 - AdaPoinTr_DiffCond_v2b - INFO - 03761084	31	0.237 	17.653 	1.381 	0.000 	microwaves	
+2026-09-10 09:13:00,579 - AdaPoinTr_DiffCond_v2b - INFO - 04004475	34	0.269 	17.003 	1.327 	0.000 	printer	
+2026-09-10 09:13:00,579 - AdaPoinTr_DiffCond_v2b - INFO - 03938244	20	0.315 	13.923 	0.713 	0.000 	pillow	
+2026-09-10 09:13:00,579 - AdaPoinTr_DiffCond_v2b - INFO - 02992529	167	0.412 	11.463 	0.461 	0.000 	cellphone	
+2026-09-10 09:13:00,579 - AdaPoinTr_DiffCond_v2b - INFO - 02808440	172	0.291 	15.156 	0.961 	0.000 	bathtub	
+2026-09-10 09:13:00,579 - AdaPoinTr_DiffCond_v2b - INFO - 04530566	388	0.505 	11.265 	0.596 	0.000 	watercraft	
+2026-09-10 09:13:00,579 - AdaPoinTr_DiffCond_v2b - INFO - 02871439	91	0.254 	16.476 	1.181 	0.000 	bookshelf	
+2026-09-10 09:13:00,579 - AdaPoinTr_DiffCond_v2b - INFO - 03593526	120	0.271 	17.166 	1.402 	0.000 	jar	
+2026-09-10 09:13:00,579 - AdaPoinTr_DiffCond_v2b - INFO - 04554684	34	0.226 	17.980 	1.465 	0.000 	washer	
+2026-09-10 09:13:00,579 - AdaPoinTr_DiffCond_v2b - INFO - 03467517	160	0.806 	7.061 	0.234 	0.000 	guitar	
+2026-09-10 09:13:00,579 - AdaPoinTr_DiffCond_v2b - INFO - 04401088	218	0.415 	11.260 	0.431 	0.000 	telephone	
+2026-09-10 09:13:00,579 - AdaPoinTr_DiffCond_v2b - INFO - 02954340	12	0.294 	15.639 	1.051 	0.000 	cap	
+2026-09-10 09:13:00,579 - AdaPoinTr_DiffCond_v2b - INFO - 02933112	315	0.243 	15.230 	0.822 	0.000 	cabinet	
+2026-09-10 09:13:00,579 - AdaPoinTr_DiffCond_v2b - INFO - 03642806	92	0.380 	11.742 	0.480 	0.000 	laptop	
+2026-09-10 09:13:00,579 - AdaPoinTr_DiffCond_v2b - INFO - 02924116	188	0.358 	12.682 	0.573 	0.000 	bus	
+2026-09-10 09:13:00,579 - AdaPoinTr_DiffCond_v2b - INFO - 02946921	22	0.250 	16.157 	1.051 	0.000 	can	
+2026-09-10 09:13:00,579 - AdaPoinTr_DiffCond_v2b - INFO - 02818832	47	0.289 	16.366 	1.234 	0.000 	bed	
+2026-09-10 09:13:00,579 - AdaPoinTr_DiffCond_v2b - INFO - 04256520	635	0.299 	14.332 	0.761 	0.000 	sofa	
+2026-09-10 09:13:00,579 - AdaPoinTr_DiffCond_v2b - INFO - 04379243	1687	0.386 	12.860 	0.786 	0.000 	table	
+2026-09-10 09:13:00,579 - AdaPoinTr_DiffCond_v2b - INFO - 02747177	69	0.198 	17.441 	1.127 	0.000 	trash bin	
+2026-09-10 09:13:00,579 - AdaPoinTr_DiffCond_v2b - INFO - 03046257	131	0.313 	14.877 	0.929 	0.000 	clock	
+2026-09-10 09:13:00,580 - AdaPoinTr_DiffCond_v2b - INFO - 04225987	31	0.553 	9.530 	0.327 	0.000 	skateboard	
+2026-09-10 09:13:00,580 - AdaPoinTr_DiffCond_v2b - INFO - 03797390	43	0.192 	18.518 	1.245 	0.000 	mug	
+2026-09-10 09:13:00,580 - AdaPoinTr_DiffCond_v2b - INFO - 03001627	1356	0.370 	13.783 	0.853 	0.000 	chair	
+2026-09-10 09:13:00,580 - AdaPoinTr_DiffCond_v2b - INFO - 03691459	320	0.256 	17.258 	1.299 	0.000 	loudspeaker	
+2026-09-10 09:13:00,580 - AdaPoinTr_DiffCond_v2b - INFO - 02942699	23	0.238 	19.523 	1.782 	0.000 	camera	
+2026-09-10 09:13:00,580 - AdaPoinTr_DiffCond_v2b - INFO - 03636649	464	0.518 	14.058 	1.376 	0.000 	lamp	
+2026-09-10 09:13:00,580 - AdaPoinTr_DiffCond_v2b - INFO - 02691156	809	0.583 	9.534 	0.390 	0.000 	airplane	
+2026-09-10 09:13:00,580 - AdaPoinTr_DiffCond_v2b - INFO - 02773838	17	0.349 	13.818 	0.827 	0.000 	bag	
+2026-09-10 09:13:00,580 - AdaPoinTr_DiffCond_v2b - INFO - 02958343	703	0.220 	16.432 	0.936 	0.000 	car	
+2026-09-10 09:13:00,580 - AdaPoinTr_DiffCond_v2b - INFO - 02880940	38	0.228 	16.295 	0.969 	0.000 	bowl	
+2026-09-10 09:13:00,580 - AdaPoinTr_DiffCond_v2b - INFO - 04099429	17	0.718 	9.236 	0.499 	0.000 	rocket	
+2026-09-10 09:13:00,580 - AdaPoinTr_DiffCond_v2b - INFO - 02828884	363	0.442 	11.205 	0.547 	0.000 	bench	
+2026-09-10 09:13:00,580 - AdaPoinTr_DiffCond_v2b - INFO - 04090263	475	0.696 	8.619 	0.399 	0.000 	rifle	
+2026-09-10 09:13:00,580 - AdaPoinTr_DiffCond_v2b - INFO - 03211117	219	0.345 	13.687 	0.809 	0.000 	display	
+2026-09-10 09:13:00,580 - AdaPoinTr_DiffCond_v2b - INFO - 02876657	100	0.422 	12.550 	0.750 	0.000 	bottle	
+2026-09-10 09:13:00,580 - AdaPoinTr_DiffCond_v2b - INFO - 03710193	19	0.514 	12.671 	0.874 	0.000 	mailbox	
+2026-09-10 09:13:00,580 - AdaPoinTr_DiffCond_v2b - INFO - 03790512	68	0.261 	16.439 	1.037 	0.000 	motorbike	
+2026-09-10 09:13:00,580 - AdaPoinTr_DiffCond_v2b - INFO - 03325088	149	0.449 	15.866 	1.685 	0.000 	faucet	
+2026-09-10 09:13:00,580 - AdaPoinTr_DiffCond_v2b - INFO - 02801938	23	0.232 	16.972 	1.462 	0.000 	basket	
+2026-09-10 09:13:00,580 - AdaPoinTr_DiffCond_v2b - INFO - 03337140	60	0.241 	16.511 	1.106 	0.000 	file cabinet	
+2026-09-10 09:13:00,580 - AdaPoinTr_DiffCond_v2b - INFO - 02843684	15	0.235 	19.378 	1.750 	0.000 	birdhouse	
+2026-09-10 09:13:00,580 - AdaPoinTr_DiffCond_v2b - INFO - 03624134	85	0.781 	7.443 	0.269 	0.000 	knife	
+2026-09-10 09:13:00,580 - AdaPoinTr_DiffCond_v2b - INFO - 03991062	121	0.240 	18.334 	1.395 	0.000 	flowerpot	
+2026-09-10 09:13:00,580 - AdaPoinTr_DiffCond_v2b - INFO - 03948459	62	0.467 	12.349 	0.770 	0.000 	pistol	
+2026-09-10 09:13:00,580 - AdaPoinTr_DiffCond_v2b - INFO - 03928116	48	0.291 	15.799 	1.089 	0.000 	piano	
+2026-09-10 09:13:00,580 - AdaPoinTr_DiffCond_v2b - INFO - 03207941	19	0.242 	15.709 	0.898 	0.000 	dishwasher	
+2026-09-10 09:13:00,580 - AdaPoinTr_DiffCond_v2b - INFO - 04074963	14	0.458 	10.767 	0.410 	0.000 	remote	
+2026-09-10 09:13:00,580 - AdaPoinTr_DiffCond_v2b - INFO - 03085013	13	0.454 	9.938 	0.346 	0.000 	keyboard	
+2026-09-10 09:13:00,581 - AdaPoinTr_DiffCond_v2b - INFO - Overall		0.367 	14.409 	0.974 	0.000 	
+2026-09-10 09:13:01,369 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-last.pth
+2026-09-10 09:13:01,815 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 11/30][Batch 1/874] BatchTime = 0.445 (s) DataTime = 0.176 (s) Losses = ['5.4191', '40.4398'] lr = 0.000095
+2026-09-10 09:13:28,003 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 11/30][Batch 101/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.3046', '46.3116'] lr = 0.000095
+2026-09-10 09:13:54,339 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 11/30][Batch 201/874] BatchTime = 0.264 (s) DataTime = 0.001 (s) Losses = ['5.5061', '43.4046'] lr = 0.000095
+2026-09-10 09:14:20,651 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 11/30][Batch 301/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['5.3418', '41.7946'] lr = 0.000095
+2026-09-10 09:14:46,993 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 11/30][Batch 401/874] BatchTime = 0.262 (s) DataTime = 0.002 (s) Losses = ['5.4776', '46.5345'] lr = 0.000095
+2026-09-10 09:15:13,297 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 11/30][Batch 501/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['5.3408', '43.9155'] lr = 0.000095
+2026-09-10 09:15:39,638 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 11/30][Batch 601/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.1091', '39.5531'] lr = 0.000095
+2026-09-10 09:16:05,984 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 11/30][Batch 701/874] BatchTime = 0.261 (s) DataTime = 0.001 (s) Losses = ['5.6545', '47.3218'] lr = 0.000095
+2026-09-10 09:16:32,341 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 11/30][Batch 801/874] BatchTime = 0.262 (s) DataTime = 0.002 (s) Losses = ['5.0698', '48.1487'] lr = 0.000095
+2026-09-10 09:16:51,686 - AdaPoinTr_DiffCond_v2b - INFO - [Training] EPOCH: 11 EpochTime = 230.316 (s) Losses = ['5.3035', '43.5348']
+2026-09-10 09:16:52,482 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-last.pth
+2026-09-10 09:16:52,946 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 12/30][Batch 1/874] BatchTime = 0.462 (s) DataTime = 0.185 (s) Losses = ['5.1192', '42.4705'] lr = 0.000094
+2026-09-10 09:17:19,264 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 12/30][Batch 101/874] BatchTime = 0.262 (s) DataTime = 0.002 (s) Losses = ['4.9535', '39.6135'] lr = 0.000094
+2026-09-10 09:17:45,587 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 12/30][Batch 201/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['5.4288', '46.2511'] lr = 0.000094
+2026-09-10 09:18:11,918 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 12/30][Batch 301/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.3683', '40.4317'] lr = 0.000094
+2026-09-10 09:18:38,275 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 12/30][Batch 401/874] BatchTime = 0.263 (s) DataTime = 0.001 (s) Losses = ['5.8664', '48.2639'] lr = 0.000094
+2026-09-10 09:19:04,629 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 12/30][Batch 501/874] BatchTime = 0.262 (s) DataTime = 0.002 (s) Losses = ['5.3012', '44.7643'] lr = 0.000094
+2026-09-10 09:19:30,996 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 12/30][Batch 601/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['5.0437', '41.2812'] lr = 0.000094
+2026-09-10 09:19:57,467 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 12/30][Batch 701/874] BatchTime = 0.262 (s) DataTime = 0.002 (s) Losses = ['5.2666', '48.9332'] lr = 0.000094
+2026-09-10 09:20:23,994 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 12/30][Batch 801/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.4898', '45.7901'] lr = 0.000094
+2026-09-10 09:20:43,478 - AdaPoinTr_DiffCond_v2b - INFO - [Training] EPOCH: 12 EpochTime = 230.994 (s) Losses = ['5.3566', '44.7798']
+2026-09-10 09:20:44,265 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-last.pth
+2026-09-10 09:20:44,736 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 13/30][Batch 1/874] BatchTime = 0.469 (s) DataTime = 0.204 (s) Losses = ['4.9117', '40.2593'] lr = 0.000094
+2026-09-10 09:21:11,067 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 13/30][Batch 101/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.5264', '44.5662'] lr = 0.000094
+2026-09-10 09:21:37,425 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 13/30][Batch 201/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.4987', '43.1041'] lr = 0.000094
+2026-09-10 09:22:03,961 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 13/30][Batch 301/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['5.2456', '41.5590'] lr = 0.000094
+2026-09-10 09:22:30,474 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 13/30][Batch 401/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['5.2091', '45.3926'] lr = 0.000094
+2026-09-10 09:22:56,826 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 13/30][Batch 501/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.1513', '38.8808'] lr = 0.000094
+2026-09-10 09:23:23,204 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 13/30][Batch 601/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['5.2872', '42.7114'] lr = 0.000094
+2026-09-10 09:23:49,574 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 13/30][Batch 701/874] BatchTime = 0.263 (s) DataTime = 0.001 (s) Losses = ['5.8320', '42.9669'] lr = 0.000094
+2026-09-10 09:24:15,928 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 13/30][Batch 801/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.1089', '41.9315'] lr = 0.000094
+2026-09-10 09:24:35,333 - AdaPoinTr_DiffCond_v2b - INFO - [Training] EPOCH: 13 EpochTime = 231.067 (s) Losses = ['5.2860', '43.1740']
+2026-09-10 09:24:36,034 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-last.pth
+2026-09-10 09:24:36,510 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 14/30][Batch 1/874] BatchTime = 0.475 (s) DataTime = 0.206 (s) Losses = ['4.8440', '39.8866'] lr = 0.000093
+2026-09-10 09:25:02,956 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 14/30][Batch 101/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['4.7149', '39.8593'] lr = 0.000093
+2026-09-10 09:25:29,457 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 14/30][Batch 201/874] BatchTime = 0.266 (s) DataTime = 0.002 (s) Losses = ['4.9538', '36.3779'] lr = 0.000093
+2026-09-10 09:25:56,029 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 14/30][Batch 301/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.1153', '43.7579'] lr = 0.000093
+2026-09-10 09:26:22,666 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 14/30][Batch 401/874] BatchTime = 0.268 (s) DataTime = 0.002 (s) Losses = ['5.4029', '41.3399'] lr = 0.000093
+2026-09-10 09:26:49,124 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 14/30][Batch 501/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.2232', '41.8054'] lr = 0.000093
+2026-09-10 09:27:15,571 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 14/30][Batch 601/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['4.9276', '39.5021'] lr = 0.000093
+2026-09-10 09:27:41,963 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 14/30][Batch 701/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.4661', '44.3115'] lr = 0.000093
+2026-09-10 09:28:08,379 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 14/30][Batch 801/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['4.8946', '45.5632'] lr = 0.000093
+2026-09-10 09:28:27,747 - AdaPoinTr_DiffCond_v2b - INFO - [Training] EPOCH: 14 EpochTime = 231.712 (s) Losses = ['5.2739', '42.9482']
+2026-09-10 09:28:28,506 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-last.pth
+2026-09-10 09:28:28,981 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 15/30][Batch 1/874] BatchTime = 0.474 (s) DataTime = 0.206 (s) Losses = ['4.8968', '38.0517'] lr = 0.000093
+2026-09-10 09:28:55,374 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 15/30][Batch 101/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.4176', '42.5404'] lr = 0.000093
+2026-09-10 09:29:21,754 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 15/30][Batch 201/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['5.0586', '42.3877'] lr = 0.000093
+2026-09-10 09:29:48,159 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 15/30][Batch 301/874] BatchTime = 0.266 (s) DataTime = 0.002 (s) Losses = ['5.4329', '42.0068'] lr = 0.000093
+2026-09-10 09:30:14,529 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 15/30][Batch 401/874] BatchTime = 0.263 (s) DataTime = 0.001 (s) Losses = ['5.5028', '43.9666'] lr = 0.000093
+2026-09-10 09:30:40,924 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 15/30][Batch 501/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['5.1918', '45.2215'] lr = 0.000093
+2026-09-10 09:31:07,253 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 15/30][Batch 601/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['4.8308', '39.5195'] lr = 0.000093
+2026-09-10 09:31:33,589 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 15/30][Batch 701/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.0675', '40.3732'] lr = 0.000093
+2026-09-10 09:31:59,889 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 15/30][Batch 801/874] BatchTime = 0.263 (s) DataTime = 0.001 (s) Losses = ['5.4655', '42.0183'] lr = 0.000093
+2026-09-10 09:32:19,242 - AdaPoinTr_DiffCond_v2b - INFO - [Training] EPOCH: 15 EpochTime = 230.735 (s) Losses = ['5.2679', '42.9335']
+2026-09-10 09:32:20,017 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-last.pth
+2026-09-10 09:32:20,490 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 16/30][Batch 1/874] BatchTime = 0.471 (s) DataTime = 0.201 (s) Losses = ['5.6153', '42.4273'] lr = 0.000092
+2026-09-10 09:32:46,871 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 16/30][Batch 101/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.3756', '45.1331'] lr = 0.000092
+2026-09-10 09:33:13,244 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 16/30][Batch 201/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.2930', '39.8236'] lr = 0.000092
+2026-09-10 09:33:39,667 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 16/30][Batch 301/874] BatchTime = 0.262 (s) DataTime = 0.002 (s) Losses = ['5.2703', '49.8780'] lr = 0.000092
+2026-09-10 09:34:06,190 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 16/30][Batch 401/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['4.9311', '38.1692'] lr = 0.000092
+2026-09-10 09:34:32,642 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 16/30][Batch 501/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.5188', '45.7370'] lr = 0.000092
+2026-09-10 09:34:59,117 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 16/30][Batch 601/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.1652', '42.7206'] lr = 0.000092
+2026-09-10 09:35:25,531 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 16/30][Batch 701/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.4207', '43.7115'] lr = 0.000092
+2026-09-10 09:35:51,958 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 16/30][Batch 801/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.4437', '41.5585'] lr = 0.000092
+2026-09-10 09:36:11,353 - AdaPoinTr_DiffCond_v2b - INFO - [Training] EPOCH: 16 EpochTime = 231.334 (s) Losses = ['5.3033', '43.4036']
+2026-09-10 09:36:12,086 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-last.pth
+2026-09-10 09:36:12,562 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 17/30][Batch 1/874] BatchTime = 0.474 (s) DataTime = 0.203 (s) Losses = ['4.8531', '38.2853'] lr = 0.000092
+2026-09-10 09:36:39,032 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 17/30][Batch 101/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.5920', '45.9954'] lr = 0.000092
+2026-09-10 09:37:05,484 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 17/30][Batch 201/874] BatchTime = 0.264 (s) DataTime = 0.001 (s) Losses = ['5.4890', '43.1754'] lr = 0.000092
+2026-09-10 09:37:31,927 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 17/30][Batch 301/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.0398', '45.0524'] lr = 0.000092
+2026-09-10 09:37:58,364 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 17/30][Batch 401/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['5.0569', '44.6158'] lr = 0.000092
+2026-09-10 09:38:24,798 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 17/30][Batch 501/874] BatchTime = 0.265 (s) DataTime = 0.003 (s) Losses = ['5.1558', '48.8242'] lr = 0.000092
+2026-09-10 09:38:51,204 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 17/30][Batch 601/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.4141', '40.5815'] lr = 0.000092
+2026-09-10 09:39:17,617 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 17/30][Batch 701/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['5.1327', '42.4647'] lr = 0.000092
+2026-09-10 09:39:43,998 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 17/30][Batch 801/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.4402', '43.6768'] lr = 0.000092
+2026-09-10 09:40:03,364 - AdaPoinTr_DiffCond_v2b - INFO - [Training] EPOCH: 17 EpochTime = 231.276 (s) Losses = ['5.2577', '43.1377']
+2026-09-10 09:40:04,134 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-last.pth
+2026-09-10 09:40:04,607 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 18/30][Batch 1/874] BatchTime = 0.471 (s) DataTime = 0.198 (s) Losses = ['5.3909', '43.6393'] lr = 0.000091
+2026-09-10 09:40:30,934 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 18/30][Batch 101/874] BatchTime = 0.266 (s) DataTime = 0.002 (s) Losses = ['5.2929', '39.5323'] lr = 0.000091
+2026-09-10 09:40:57,329 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 18/30][Batch 201/874] BatchTime = 0.262 (s) DataTime = 0.002 (s) Losses = ['5.0756', '42.8234'] lr = 0.000091
+2026-09-10 09:41:23,668 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 18/30][Batch 301/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.0206', '39.3953'] lr = 0.000091
+2026-09-10 09:41:50,013 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 18/30][Batch 401/874] BatchTime = 0.262 (s) DataTime = 0.002 (s) Losses = ['5.4137', '50.6363'] lr = 0.000091
+2026-09-10 09:42:16,348 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 18/30][Batch 501/874] BatchTime = 0.264 (s) DataTime = 0.001 (s) Losses = ['5.3041', '40.9772'] lr = 0.000091
+2026-09-10 09:42:42,675 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 18/30][Batch 601/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.2697', '39.7346'] lr = 0.000091
+2026-09-10 09:43:08,969 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 18/30][Batch 701/874] BatchTime = 0.261 (s) DataTime = 0.001 (s) Losses = ['5.0304', '42.6260'] lr = 0.000091
+2026-09-10 09:43:35,255 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 18/30][Batch 801/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['4.9254', '36.5442'] lr = 0.000091
+2026-09-10 09:43:54,531 - AdaPoinTr_DiffCond_v2b - INFO - [Training] EPOCH: 18 EpochTime = 230.396 (s) Losses = ['5.2721', '43.0794']
+2026-09-10 09:43:55,292 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-last.pth
+2026-09-10 09:43:55,761 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 19/30][Batch 1/874] BatchTime = 0.467 (s) DataTime = 0.198 (s) Losses = ['5.4807', '41.5765'] lr = 0.000091
+2026-09-10 09:44:22,123 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 19/30][Batch 101/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.2771', '39.8802'] lr = 0.000091
+2026-09-10 09:44:48,497 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 19/30][Batch 201/874] BatchTime = 0.262 (s) DataTime = 0.002 (s) Losses = ['4.7536', '46.3551'] lr = 0.000091
+2026-09-10 09:45:14,851 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 19/30][Batch 301/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['5.3087', '41.2954'] lr = 0.000091
+2026-09-10 09:45:41,208 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 19/30][Batch 401/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.1270', '39.2931'] lr = 0.000091
+2026-09-10 09:46:07,573 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 19/30][Batch 501/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.6439', '44.5378'] lr = 0.000091
+2026-09-10 09:46:33,937 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 19/30][Batch 601/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['5.1202', '42.7979'] lr = 0.000091
+2026-09-10 09:47:00,387 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 19/30][Batch 701/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.9314', '44.5737'] lr = 0.000091
+2026-09-10 09:47:26,865 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 19/30][Batch 801/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.1434', '39.0498'] lr = 0.000091
+2026-09-10 09:47:46,290 - AdaPoinTr_DiffCond_v2b - INFO - [Training] EPOCH: 19 EpochTime = 230.996 (s) Losses = ['5.3178', '43.4302']
+2026-09-10 09:47:47,068 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-last.pth
+2026-09-10 09:47:47,524 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 20/30][Batch 1/874] BatchTime = 0.455 (s) DataTime = 0.189 (s) Losses = ['5.0788', '40.5027'] lr = 0.000090
+2026-09-10 09:48:13,830 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 20/30][Batch 101/874] BatchTime = 0.262 (s) DataTime = 0.002 (s) Losses = ['5.2278', '44.2916'] lr = 0.000090
+2026-09-10 09:48:40,189 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 20/30][Batch 201/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.2698', '41.2689'] lr = 0.000090
+2026-09-10 09:49:06,600 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 20/30][Batch 301/874] BatchTime = 0.262 (s) DataTime = 0.002 (s) Losses = ['5.2030', '45.5248'] lr = 0.000090
+2026-09-10 09:49:32,975 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 20/30][Batch 401/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['5.1290', '45.0328'] lr = 0.000090
+2026-09-10 09:49:59,360 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 20/30][Batch 501/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['4.4765', '38.7298'] lr = 0.000090
+2026-09-10 09:50:25,738 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 20/30][Batch 601/874] BatchTime = 0.263 (s) DataTime = 0.001 (s) Losses = ['5.5505', '46.7275'] lr = 0.000090
+2026-09-10 09:50:52,133 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 20/30][Batch 701/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.3679', '43.9785'] lr = 0.000090
+2026-09-10 09:51:18,553 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 20/30][Batch 801/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.6352', '41.9930'] lr = 0.000090
+2026-09-10 09:51:37,966 - AdaPoinTr_DiffCond_v2b - INFO - [Training] EPOCH: 20 EpochTime = 230.896 (s) Losses = ['5.3029', '43.4948']
+2026-09-10 09:51:37,967 - AdaPoinTr_DiffCond_v2b - INFO - [VALIDATION] Start validating epoch 20
+2026-09-10 09:52:16,824 - AdaPoinTr_DiffCond_v2b - INFO - Test[1051/10518] Taxonomy = 02691156 Sample = c7749c0a8b61f43bc9b9e28055202e3d Losses = ['22.8106', '2.0274', '9.5696', '0.3010'] Metrics = ['0.5261', '9.5696', '0.3010', '0.0000']
+2026-09-10 09:52:55,463 - AdaPoinTr_DiffCond_v2b - INFO - Test[2102/10518] Taxonomy = 03211117 Sample = ab2f9418c111cc6ddb965514105122a4 Losses = ['26.5212', '2.7851', '9.1155', '0.2562'] Metrics = ['0.5822', '9.1155', '0.2562', '0.0000']
+2026-09-10 09:53:34,203 - AdaPoinTr_DiffCond_v2b - INFO - Test[3153/10518] Taxonomy = 02876657 Sample = c5032e4be091aabb36fe7a88df793982 Losses = ['54.8675', '12.2733', '21.5170', '2.1836'] Metrics = ['0.2546', '21.5170', '2.1836', '0.0000']
+2026-09-10 09:54:13,004 - AdaPoinTr_DiffCond_v2b - INFO - Test[4204/10518] Taxonomy = 03211117 Sample = 722df1da5778d45b1e43523279c7f09f Losses = ['42.0265', '6.4870', '20.5181', '2.1181'] Metrics = ['0.3141', '20.5181', '2.1181', '0.0000']
+2026-09-10 09:54:51,979 - AdaPoinTr_DiffCond_v2b - INFO - Test[5255/10518] Taxonomy = 02828884 Sample = 14b63361a48a9fffe4a048c146e8bd43 Losses = ['34.7485', '4.4522', '18.1136', '1.5608'] Metrics = ['0.3520', '18.1136', '1.5608', '0.0000']
+2026-09-10 09:55:30,714 - AdaPoinTr_DiffCond_v2b - INFO - Test[6306/10518] Taxonomy = 03211117 Sample = d330d50a0255529d19ed6e1a590c9122 Losses = ['30.4714', '3.7851', '12.3657', '0.4524'] Metrics = ['0.4026', '12.3657', '0.4524', '0.0000']
+2026-09-10 09:56:09,251 - AdaPoinTr_DiffCond_v2b - INFO - Test[7357/10518] Taxonomy = 04379243 Sample = b1ca280d9567270ade98d10ab5975b59 Losses = ['37.9655', '5.2550', '15.1782', '0.6626'] Metrics = ['0.2317', '15.1782', '0.6626', '0.0000']
+2026-09-10 09:56:47,929 - AdaPoinTr_DiffCond_v2b - INFO - Test[8408/10518] Taxonomy = 03001627 Sample = 89208a619341d9fdb8c516ed5c4ce32 Losses = ['38.4301', '5.4986', '17.6633', '1.2127'] Metrics = ['0.2450', '17.6633', '1.2127', '0.0000']
+2026-09-10 09:57:27,339 - AdaPoinTr_DiffCond_v2b - INFO - Test[9459/10518] Taxonomy = 03001627 Sample = d0255120e3351121c3bd24f986301745 Losses = ['41.4416', '7.1220', '22.3208', '2.6986'] Metrics = ['0.2042', '22.3209', '2.6986', '0.0000']
+2026-09-10 09:58:05,507 - AdaPoinTr_DiffCond_v2b - INFO - Test[10510/10518] Taxonomy = 03636649 Sample = ea9ec4d9db2e06202471e6dd5ac3ef92 Losses = ['28.8684', '3.7160', '8.9883', '0.2896'] Metrics = ['0.6446', '8.9883', '0.2896', '0.0000']
+2026-09-10 09:58:05,884 - AdaPoinTr_DiffCond_v2b - INFO - [Validation] EPOCH: 20  Metrics = ['0.3313', '16.1415', '1.2530', '0.0000']
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - ============================ TEST RESULTS ============================
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 03759954	14	0.526 	14.488 	1.465 	0.000 	microphone	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 04330267	44	0.254 	16.924 	1.092 	0.000 	stove	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 03261776	15	0.274 	21.707 	2.997 	0.000 	earphone	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 03513137	33	0.186 	23.515 	2.900 	0.000 	helmet	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 04460130	27	0.385 	15.516 	1.111 	0.000 	tower	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 04468005	78	0.354 	14.056 	0.855 	0.000 	train	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 03761084	31	0.209 	19.336 	1.576 	0.000 	microwaves	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 04004475	34	0.235 	19.742 	1.994 	0.000 	printer	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 03938244	20	0.257 	16.891 	1.100 	0.000 	pillow	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 02992529	167	0.382 	12.408 	0.552 	0.000 	cellphone	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 02808440	172	0.255 	17.312 	1.364 	0.000 	bathtub	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 04530566	388	0.455 	12.554 	0.751 	0.000 	watercraft	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 02871439	91	0.217 	18.811 	1.474 	0.000 	bookshelf	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 03593526	120	0.238 	19.457 	1.700 	0.000 	jar	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 04554684	34	0.203 	19.175 	1.556 	0.000 	washer	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 03467517	160	0.764 	7.796 	0.306 	0.000 	guitar	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 04401088	218	0.387 	12.239 	0.533 	0.000 	telephone	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 02954340	12	0.262 	17.223 	1.232 	0.000 	cap	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 02933112	315	0.222 	16.867 	1.020 	0.000 	cabinet	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 03642806	92	0.333 	13.023 	0.617 	0.000 	laptop	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 02924116	188	0.330 	13.867 	0.718 	0.000 	bus	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 02946921	22	0.219 	19.079 	1.862 	0.000 	can	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 02818832	47	0.253 	18.266 	1.517 	0.000 	bed	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 04256520	635	0.259 	16.410 	1.036 	0.000 	sofa	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 04379243	1687	0.340 	14.615 	1.041 	0.000 	table	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 02747177	69	0.171 	20.108 	1.510 	0.000 	trash bin	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 03046257	131	0.286 	16.236 	1.045 	0.000 	clock	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 04225987	31	0.503 	10.845 	0.511 	0.000 	skateboard	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 03797390	43	0.163 	20.591 	1.562 	0.000 	mug	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 03001627	1356	0.325 	15.527 	1.061 	0.000 	chair	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 03691459	320	0.226 	19.383 	1.661 	0.000 	loudspeaker	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 02942699	23	0.213 	25.385 	3.988 	0.000 	camera	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 03636649	464	0.483 	15.265 	1.633 	0.000 	lamp	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 02691156	809	0.533 	10.537 	0.484 	0.000 	airplane	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 02773838	17	0.321 	15.413 	1.018 	0.000 	bag	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 02958343	703	0.203 	17.652 	1.070 	0.000 	car	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 02880940	38	0.194 	17.551 	1.020 	0.000 	bowl	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 04099429	17	0.681 	9.476 	0.519 	0.000 	rocket	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 02828884	363	0.387 	13.079 	0.773 	0.000 	bench	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 04090263	475	0.649 	9.558 	0.509 	0.000 	rifle	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 03211117	219	0.309 	15.217 	0.935 	0.000 	display	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 02876657	100	0.392 	13.661 	0.842 	0.000 	bottle	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 03710193	19	0.465 	14.330 	1.198 	0.000 	mailbox	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 03790512	68	0.234 	18.265 	1.320 	0.000 	motorbike	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 03325088	149	0.407 	17.752 	2.081 	0.000 	faucet	
+2026-09-10 09:58:05,885 - AdaPoinTr_DiffCond_v2b - INFO - 02801938	23	0.200 	18.002 	1.165 	0.000 	basket	
+2026-09-10 09:58:05,886 - AdaPoinTr_DiffCond_v2b - INFO - 03337140	60	0.217 	18.201 	1.342 	0.000 	file cabinet	
+2026-09-10 09:58:05,886 - AdaPoinTr_DiffCond_v2b - INFO - 02843684	15	0.202 	22.337 	2.309 	0.000 	birdhouse	
+2026-09-10 09:58:05,886 - AdaPoinTr_DiffCond_v2b - INFO - 03624134	85	0.719 	8.484 	0.369 	0.000 	knife	
+2026-09-10 09:58:05,886 - AdaPoinTr_DiffCond_v2b - INFO - 03991062	121	0.211 	21.084 	1.954 	0.000 	flowerpot	
+2026-09-10 09:58:05,886 - AdaPoinTr_DiffCond_v2b - INFO - 03948459	62	0.434 	13.202 	0.811 	0.000 	pistol	
+2026-09-10 09:58:05,886 - AdaPoinTr_DiffCond_v2b - INFO - 03928116	48	0.253 	18.415 	1.592 	0.000 	piano	
+2026-09-10 09:58:05,886 - AdaPoinTr_DiffCond_v2b - INFO - 03207941	19	0.219 	17.549 	1.259 	0.000 	dishwasher	
+2026-09-10 09:58:05,886 - AdaPoinTr_DiffCond_v2b - INFO - 04074963	14	0.420 	11.837 	0.505 	0.000 	remote	
+2026-09-10 09:58:05,886 - AdaPoinTr_DiffCond_v2b - INFO - 03085013	13	0.404 	11.562 	0.498 	0.000 	keyboard	
+2026-09-10 09:58:05,886 - AdaPoinTr_DiffCond_v2b - INFO - Overall		0.331 	16.141 	1.253 	0.000 	
+2026-09-10 09:58:06,622 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-last.pth
+2026-09-10 09:58:07,098 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 21/30][Batch 1/874] BatchTime = 0.475 (s) DataTime = 0.206 (s) Losses = ['5.7399', '43.9924'] lr = 0.000090
+2026-09-10 09:58:33,265 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 21/30][Batch 101/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['5.1589', '38.6765'] lr = 0.000090
+2026-09-10 09:58:59,579 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 21/30][Batch 201/874] BatchTime = 0.262 (s) DataTime = 0.002 (s) Losses = ['4.9345', '43.1269'] lr = 0.000090
+2026-09-10 09:59:25,928 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 21/30][Batch 301/874] BatchTime = 0.267 (s) DataTime = 0.002 (s) Losses = ['5.4640', '39.5719'] lr = 0.000090
+2026-09-10 09:59:52,295 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 21/30][Batch 401/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.3477', '41.2005'] lr = 0.000090
+2026-09-10 10:00:18,733 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 21/30][Batch 501/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.2984', '44.8959'] lr = 0.000090
+2026-09-10 10:00:45,167 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 21/30][Batch 601/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.8423', '45.6109'] lr = 0.000090
+2026-09-10 10:01:11,626 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 21/30][Batch 701/874] BatchTime = 0.266 (s) DataTime = 0.002 (s) Losses = ['5.2473', '40.3528'] lr = 0.000090
+2026-09-10 10:01:38,054 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 21/30][Batch 801/874] BatchTime = 0.266 (s) DataTime = 0.002 (s) Losses = ['4.9941', '36.7013'] lr = 0.000090
+2026-09-10 10:01:57,442 - AdaPoinTr_DiffCond_v2b - INFO - [Training] EPOCH: 21 EpochTime = 230.819 (s) Losses = ['5.3209', '43.7015']
+2026-09-10 10:01:58,242 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-last.pth
+2026-09-10 10:01:58,736 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 22/30][Batch 1/874] BatchTime = 0.493 (s) DataTime = 0.212 (s) Losses = ['5.3024', '39.9443'] lr = 0.000090
+2026-09-10 10:02:25,252 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 22/30][Batch 101/874] BatchTime = 0.267 (s) DataTime = 0.002 (s) Losses = ['5.1206', '41.4048'] lr = 0.000090
+2026-09-10 10:02:51,828 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 22/30][Batch 201/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.1972', '43.0838'] lr = 0.000090
+2026-09-10 10:03:18,385 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 22/30][Batch 301/874] BatchTime = 0.266 (s) DataTime = 0.002 (s) Losses = ['5.1034', '45.1486'] lr = 0.000090
+2026-09-10 10:03:44,865 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 22/30][Batch 401/874] BatchTime = 0.263 (s) DataTime = 0.002 (s) Losses = ['4.8806', '43.6923'] lr = 0.000090
+2026-09-10 10:04:11,338 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 22/30][Batch 501/874] BatchTime = 0.262 (s) DataTime = 0.002 (s) Losses = ['5.3249', '44.8879'] lr = 0.000090
+2026-09-10 10:04:37,897 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 22/30][Batch 601/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.5022', '42.7203'] lr = 0.000090
+2026-09-10 10:05:04,398 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 22/30][Batch 701/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.3699', '40.2690'] lr = 0.000090
+2026-09-10 10:05:30,979 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 22/30][Batch 801/874] BatchTime = 0.266 (s) DataTime = 0.002 (s) Losses = ['5.5418', '43.3166'] lr = 0.000090
+2026-09-10 10:05:50,406 - AdaPoinTr_DiffCond_v2b - INFO - [Training] EPOCH: 22 EpochTime = 232.162 (s) Losses = ['5.2890', '43.2575']
+2026-09-10 10:05:51,112 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-last.pth
+2026-09-10 10:05:51,615 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 23/30][Batch 1/874] BatchTime = 0.501 (s) DataTime = 0.233 (s) Losses = ['5.2483', '39.6162'] lr = 0.000089
+2026-09-10 10:06:18,129 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 23/30][Batch 101/874] BatchTime = 0.271 (s) DataTime = 0.002 (s) Losses = ['4.6224', '40.6448'] lr = 0.000089
+2026-09-10 10:06:44,707 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 23/30][Batch 201/874] BatchTime = 0.267 (s) DataTime = 0.002 (s) Losses = ['5.3744', '39.4302'] lr = 0.000089
+2026-09-10 10:07:11,297 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 23/30][Batch 301/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['5.1123', '51.2405'] lr = 0.000089
+2026-09-10 10:07:37,801 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 23/30][Batch 401/874] BatchTime = 0.266 (s) DataTime = 0.002 (s) Losses = ['5.2955', '40.1992'] lr = 0.000089
+2026-09-10 10:08:04,330 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 23/30][Batch 501/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.5907', '43.7728'] lr = 0.000089
+2026-09-10 10:08:30,880 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 23/30][Batch 601/874] BatchTime = 0.264 (s) DataTime = 0.001 (s) Losses = ['5.1643', '46.6678'] lr = 0.000089
+2026-09-10 10:08:57,423 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 23/30][Batch 701/874] BatchTime = 0.266 (s) DataTime = 0.002 (s) Losses = ['5.3055', '42.7396'] lr = 0.000089
+2026-09-10 10:09:23,987 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 23/30][Batch 801/874] BatchTime = 0.267 (s) DataTime = 0.002 (s) Losses = ['5.2614', '40.5781'] lr = 0.000089
+2026-09-10 10:09:43,542 - AdaPoinTr_DiffCond_v2b - INFO - [Training] EPOCH: 23 EpochTime = 232.428 (s) Losses = ['5.3113', '43.5649']
+2026-09-10 10:09:44,268 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-last.pth
+2026-09-10 10:09:44,782 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 24/30][Batch 1/874] BatchTime = 0.512 (s) DataTime = 0.243 (s) Losses = ['5.1052', '37.8334'] lr = 0.000089
+2026-09-10 10:10:11,258 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 24/30][Batch 101/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.2266', '39.4155'] lr = 0.000089
+2026-09-10 10:10:37,882 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 24/30][Batch 201/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.0188', '40.3507'] lr = 0.000089
+2026-09-10 10:11:04,489 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 24/30][Batch 301/874] BatchTime = 0.267 (s) DataTime = 0.002 (s) Losses = ['5.2913', '43.2839'] lr = 0.000089
+2026-09-10 10:11:31,148 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 24/30][Batch 401/874] BatchTime = 0.267 (s) DataTime = 0.002 (s) Losses = ['5.0946', '39.9952'] lr = 0.000089
+2026-09-10 10:11:57,810 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 24/30][Batch 501/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.2208', '45.1805'] lr = 0.000089
+2026-09-10 10:12:24,407 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 24/30][Batch 601/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.1373', '42.8108'] lr = 0.000089
+2026-09-10 10:12:51,025 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 24/30][Batch 701/874] BatchTime = 0.268 (s) DataTime = 0.002 (s) Losses = ['5.7720', '46.9257'] lr = 0.000089
+2026-09-10 10:13:17,630 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 24/30][Batch 801/874] BatchTime = 0.267 (s) DataTime = 0.002 (s) Losses = ['5.1504', '40.3152'] lr = 0.000089
+2026-09-10 10:13:37,160 - AdaPoinTr_DiffCond_v2b - INFO - [Training] EPOCH: 24 EpochTime = 232.890 (s) Losses = ['5.2799', '43.1589']
+2026-09-10 10:13:37,980 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-last.pth
+2026-09-10 10:13:38,498 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 25/30][Batch 1/874] BatchTime = 0.516 (s) DataTime = 0.242 (s) Losses = ['5.4209', '49.0402'] lr = 0.000088
+2026-09-10 10:14:05,099 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 25/30][Batch 101/874] BatchTime = 0.267 (s) DataTime = 0.002 (s) Losses = ['5.2600', '40.7342'] lr = 0.000088
+2026-09-10 10:14:31,807 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 25/30][Batch 201/874] BatchTime = 0.266 (s) DataTime = 0.002 (s) Losses = ['5.4178', '41.2522'] lr = 0.000088
+2026-09-10 10:14:58,339 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 25/30][Batch 301/874] BatchTime = 0.267 (s) DataTime = 0.002 (s) Losses = ['5.3513', '41.4617'] lr = 0.000088
+2026-09-10 10:15:24,824 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 25/30][Batch 401/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.3111', '43.6382'] lr = 0.000088
+2026-09-10 10:15:51,286 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 25/30][Batch 501/874] BatchTime = 0.265 (s) DataTime = 0.001 (s) Losses = ['5.6106', '43.6983'] lr = 0.000088
+2026-09-10 10:16:17,853 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 25/30][Batch 601/874] BatchTime = 0.266 (s) DataTime = 0.002 (s) Losses = ['5.5929', '44.7897'] lr = 0.000088
+2026-09-10 10:16:44,491 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 25/30][Batch 701/874] BatchTime = 0.269 (s) DataTime = 0.002 (s) Losses = ['5.5097', '40.6700'] lr = 0.000088
+2026-09-10 10:17:11,127 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 25/30][Batch 801/874] BatchTime = 0.267 (s) DataTime = 0.002 (s) Losses = ['5.2511', '39.7475'] lr = 0.000088
+2026-09-10 10:17:30,702 - AdaPoinTr_DiffCond_v2b - INFO - [Training] EPOCH: 25 EpochTime = 232.720 (s) Losses = ['5.2683', '43.0654']
+2026-09-10 10:17:31,155 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-last.pth
+2026-09-10 10:17:31,677 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 26/30][Batch 1/874] BatchTime = 0.520 (s) DataTime = 0.244 (s) Losses = ['5.3874', '42.4600'] lr = 0.000088
+2026-09-10 10:17:58,298 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 26/30][Batch 101/874] BatchTime = 0.268 (s) DataTime = 0.002 (s) Losses = ['5.1858', '40.1912'] lr = 0.000088
+2026-09-10 10:18:24,919 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 26/30][Batch 201/874] BatchTime = 0.268 (s) DataTime = 0.002 (s) Losses = ['5.5379', '41.1520'] lr = 0.000088
+2026-09-10 10:18:51,573 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 26/30][Batch 301/874] BatchTime = 0.267 (s) DataTime = 0.002 (s) Losses = ['5.6210', '48.2811'] lr = 0.000088
+2026-09-10 10:19:18,210 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 26/30][Batch 401/874] BatchTime = 0.266 (s) DataTime = 0.002 (s) Losses = ['5.3343', '45.3584'] lr = 0.000088
+2026-09-10 10:19:44,861 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 26/30][Batch 501/874] BatchTime = 0.268 (s) DataTime = 0.002 (s) Losses = ['5.2761', '41.2382'] lr = 0.000088
+2026-09-10 10:20:11,526 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 26/30][Batch 601/874] BatchTime = 0.266 (s) DataTime = 0.002 (s) Losses = ['5.0645', '44.6796'] lr = 0.000088
+2026-09-10 10:20:38,150 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 26/30][Batch 701/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['4.9124', '44.1261'] lr = 0.000088
+2026-09-10 10:21:04,777 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 26/30][Batch 801/874] BatchTime = 0.270 (s) DataTime = 0.002 (s) Losses = ['5.1030', '38.1324'] lr = 0.000088
+2026-09-10 10:21:24,360 - AdaPoinTr_DiffCond_v2b - INFO - [Training] EPOCH: 26 EpochTime = 233.203 (s) Losses = ['5.3021', '43.4892']
+2026-09-10 10:21:25,104 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-last.pth
+2026-09-10 10:21:25,592 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 27/30][Batch 1/874] BatchTime = 0.486 (s) DataTime = 0.213 (s) Losses = ['5.2383', '45.2195'] lr = 0.000087
+2026-09-10 10:21:52,196 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 27/30][Batch 101/874] BatchTime = 0.267 (s) DataTime = 0.002 (s) Losses = ['5.0545', '39.3306'] lr = 0.000087
+2026-09-10 10:22:18,927 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 27/30][Batch 201/874] BatchTime = 0.268 (s) DataTime = 0.002 (s) Losses = ['5.7909', '46.3391'] lr = 0.000087
+2026-09-10 10:22:45,596 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 27/30][Batch 301/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['4.8739', '44.7930'] lr = 0.000087
+2026-09-10 10:23:12,303 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 27/30][Batch 401/874] BatchTime = 0.269 (s) DataTime = 0.002 (s) Losses = ['5.4338', '39.9171'] lr = 0.000087
+2026-09-10 10:23:38,964 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 27/30][Batch 501/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.4082', '45.5442'] lr = 0.000087
+2026-09-10 10:24:05,645 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 27/30][Batch 601/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.4387', '46.5459'] lr = 0.000087
+2026-09-10 10:24:32,328 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 27/30][Batch 701/874] BatchTime = 0.266 (s) DataTime = 0.002 (s) Losses = ['5.0096', '42.3765'] lr = 0.000087
+2026-09-10 10:24:58,990 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 27/30][Batch 801/874] BatchTime = 0.267 (s) DataTime = 0.002 (s) Losses = ['4.9657', '41.3414'] lr = 0.000087
+2026-09-10 10:25:18,563 - AdaPoinTr_DiffCond_v2b - INFO - [Training] EPOCH: 27 EpochTime = 233.456 (s) Losses = ['5.2441', '42.8255']
+2026-09-10 10:25:19,336 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-last.pth
+2026-09-10 10:25:19,885 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 28/30][Batch 1/874] BatchTime = 0.547 (s) DataTime = 0.236 (s) Losses = ['5.5143', '41.6543'] lr = 0.000087
+2026-09-10 10:25:46,955 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 28/30][Batch 101/874] BatchTime = 0.282 (s) DataTime = 0.002 (s) Losses = ['5.3913', '43.9530'] lr = 0.000087
+2026-09-10 10:26:13,758 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 28/30][Batch 201/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.1156', '41.9330'] lr = 0.000087
+2026-09-10 10:26:40,447 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 28/30][Batch 301/874] BatchTime = 0.267 (s) DataTime = 0.002 (s) Losses = ['5.0545', '48.3405'] lr = 0.000087
+2026-09-10 10:27:07,112 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 28/30][Batch 401/874] BatchTime = 0.267 (s) DataTime = 0.002 (s) Losses = ['5.2211', '40.3441'] lr = 0.000087
+2026-09-10 10:27:33,766 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 28/30][Batch 501/874] BatchTime = 0.267 (s) DataTime = 0.002 (s) Losses = ['5.1997', '40.2095'] lr = 0.000087
+2026-09-10 10:28:00,419 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 28/30][Batch 601/874] BatchTime = 0.266 (s) DataTime = 0.002 (s) Losses = ['5.6205', '44.3537'] lr = 0.000087
+2026-09-10 10:28:27,081 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 28/30][Batch 701/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['4.9905', '45.8158'] lr = 0.000087
+2026-09-10 10:28:53,745 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 28/30][Batch 801/874] BatchTime = 0.268 (s) DataTime = 0.002 (s) Losses = ['5.3950', '41.0765'] lr = 0.000087
+2026-09-10 10:29:13,333 - AdaPoinTr_DiffCond_v2b - INFO - [Training] EPOCH: 28 EpochTime = 233.995 (s) Losses = ['5.2693', '42.6753']
+2026-09-10 10:29:14,092 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-last.pth
+2026-09-10 10:29:14,613 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 29/30][Batch 1/874] BatchTime = 0.520 (s) DataTime = 0.241 (s) Losses = ['4.8715', '44.1862'] lr = 0.000086
+2026-09-10 10:29:41,254 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 29/30][Batch 101/874] BatchTime = 0.267 (s) DataTime = 0.002 (s) Losses = ['5.5231', '42.2038'] lr = 0.000086
+2026-09-10 10:30:07,921 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 29/30][Batch 201/874] BatchTime = 0.266 (s) DataTime = 0.002 (s) Losses = ['5.1605', '41.9721'] lr = 0.000086
+2026-09-10 10:30:34,576 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 29/30][Batch 301/874] BatchTime = 0.267 (s) DataTime = 0.002 (s) Losses = ['5.4887', '43.3606'] lr = 0.000086
+2026-09-10 10:31:01,204 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 29/30][Batch 401/874] BatchTime = 0.267 (s) DataTime = 0.002 (s) Losses = ['4.9917', '41.6730'] lr = 0.000086
+2026-09-10 10:31:27,833 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 29/30][Batch 501/874] BatchTime = 0.267 (s) DataTime = 0.002 (s) Losses = ['5.5668', '45.8621'] lr = 0.000086
+2026-09-10 10:31:54,470 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 29/30][Batch 601/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.0576', '46.3411'] lr = 0.000086
+2026-09-10 10:32:21,125 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 29/30][Batch 701/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.3013', '49.4819'] lr = 0.000086
+2026-09-10 10:32:47,751 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 29/30][Batch 801/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['4.9499', '44.8351'] lr = 0.000086
+2026-09-10 10:33:07,276 - AdaPoinTr_DiffCond_v2b - INFO - [Training] EPOCH: 29 EpochTime = 233.182 (s) Losses = ['5.2461', '42.5301']
+2026-09-10 10:33:08,063 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-last.pth
+2026-09-10 10:33:08,426 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-epoch-029.pth
+2026-09-10 10:33:08,932 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 30/30][Batch 1/874] BatchTime = 0.505 (s) DataTime = 0.234 (s) Losses = ['5.1918', '37.9682'] lr = 0.000086
+2026-09-10 10:33:35,533 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 30/30][Batch 101/874] BatchTime = 0.264 (s) DataTime = 0.002 (s) Losses = ['4.7282', '43.2855'] lr = 0.000086
+2026-09-10 10:34:02,159 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 30/30][Batch 201/874] BatchTime = 0.266 (s) DataTime = 0.002 (s) Losses = ['5.1735', '40.0174'] lr = 0.000086
+2026-09-10 10:34:28,877 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 30/30][Batch 301/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.1052', '46.3849'] lr = 0.000086
+2026-09-10 10:34:55,503 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 30/30][Batch 401/874] BatchTime = 0.268 (s) DataTime = 0.002 (s) Losses = ['5.6355', '43.2388'] lr = 0.000086
+2026-09-10 10:35:22,224 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 30/30][Batch 501/874] BatchTime = 0.273 (s) DataTime = 0.002 (s) Losses = ['5.1449', '39.1708'] lr = 0.000086
+2026-09-10 10:35:48,900 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 30/30][Batch 601/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.3730', '49.1090'] lr = 0.000086
+2026-09-10 10:36:15,562 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 30/30][Batch 701/874] BatchTime = 0.266 (s) DataTime = 0.002 (s) Losses = ['5.5731', '47.2127'] lr = 0.000086
+2026-09-10 10:36:42,268 - AdaPoinTr_DiffCond_v2b - INFO - [Epoch 30/30][Batch 801/874] BatchTime = 0.265 (s) DataTime = 0.002 (s) Losses = ['5.4684', '58.6212'] lr = 0.000086
+2026-09-10 10:37:01,877 - AdaPoinTr_DiffCond_v2b - INFO - [Training] EPOCH: 30 EpochTime = 233.449 (s) Losses = ['5.2656', '42.9187']
+2026-09-10 10:37:01,877 - AdaPoinTr_DiffCond_v2b - INFO - [VALIDATION] Start validating epoch 30
+2026-09-10 10:37:42,284 - AdaPoinTr_DiffCond_v2b - INFO - Test[1051/10518] Taxonomy = 02691156 Sample = c7749c0a8b61f43bc9b9e28055202e3d Losses = ['25.8686', '3.4479', '11.2245', '0.6035'] Metrics = ['0.5486', '11.2245', '0.6035', '0.0000']
+2026-09-10 10:38:22,029 - AdaPoinTr_DiffCond_v2b - INFO - Test[2102/10518] Taxonomy = 03211117 Sample = ab2f9418c111cc6ddb965514105122a4 Losses = ['21.8335', '1.7592', '8.0086', '0.2238'] Metrics = ['0.6328', '8.0086', '0.2238', '0.0000']
+2026-09-10 10:39:01,830 - AdaPoinTr_DiffCond_v2b - INFO - Test[3153/10518] Taxonomy = 02876657 Sample = c5032e4be091aabb36fe7a88df793982 Losses = ['40.5931', '6.1434', '17.7292', '1.7128'] Metrics = ['0.3004', '17.7292', '1.7128', '0.0000']
+2026-09-10 10:39:42,053 - AdaPoinTr_DiffCond_v2b - INFO - Test[4204/10518] Taxonomy = 03211117 Sample = 722df1da5778d45b1e43523279c7f09f Losses = ['33.7883', '4.5909', '14.6156', '0.9052'] Metrics = ['0.4035', '14.6156', '0.9052', '0.0000']
+2026-09-10 10:40:21,681 - AdaPoinTr_DiffCond_v2b - INFO - Test[5255/10518] Taxonomy = 02828884 Sample = 14b63361a48a9fffe4a048c146e8bd43 Losses = ['34.9683', '4.9618', '20.0419', '2.3773'] Metrics = ['0.3896', '20.0419', '2.3773', '0.0000']
+2026-09-10 10:41:01,527 - AdaPoinTr_DiffCond_v2b - INFO - Test[6306/10518] Taxonomy = 03211117 Sample = d330d50a0255529d19ed6e1a590c9122 Losses = ['26.4485', '2.7157', '10.5252', '0.3805'] Metrics = ['0.4698', '10.5252', '0.3805', '0.0000']
+2026-09-10 10:41:41,228 - AdaPoinTr_DiffCond_v2b - INFO - Test[7357/10518] Taxonomy = 04379243 Sample = b1ca280d9567270ade98d10ab5975b59 Losses = ['32.6026', '4.3601', '13.8862', '0.5757'] Metrics = ['0.2844', '13.8862', '0.5757', '0.0000']
+2026-09-10 10:42:20,958 - AdaPoinTr_DiffCond_v2b - INFO - Test[8408/10518] Taxonomy = 03001627 Sample = 89208a619341d9fdb8c516ed5c4ce32 Losses = ['35.8234', '5.1285', '15.0705', '0.8075'] Metrics = ['0.2710', '15.0705', '0.8075', '0.0000']
+2026-09-10 10:43:00,761 - AdaPoinTr_DiffCond_v2b - INFO - Test[9459/10518] Taxonomy = 03001627 Sample = d0255120e3351121c3bd24f986301745 Losses = ['37.1498', '4.8881', '15.7124', '0.7948'] Metrics = ['0.2287', '15.7124', '0.7948', '0.0000']
+2026-09-10 10:43:39,903 - AdaPoinTr_DiffCond_v2b - INFO - Test[10510/10518] Taxonomy = 03636649 Sample = ea9ec4d9db2e06202471e6dd5ac3ef92 Losses = ['37.8881', '5.2930', '14.5168', '1.0660'] Metrics = ['0.6229', '14.5168', '1.0660', '0.0000']
+2026-09-10 10:43:40,307 - AdaPoinTr_DiffCond_v2b - INFO - [Validation] EPOCH: 30  Metrics = ['0.3725', '14.1517', '0.9522', '0.0000']
+2026-09-10 10:43:40,308 - AdaPoinTr_DiffCond_v2b - INFO - ============================ TEST RESULTS ============================
+2026-09-10 10:43:40,308 - AdaPoinTr_DiffCond_v2b - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2026-09-10 10:43:40,308 - AdaPoinTr_DiffCond_v2b - INFO - 03759954	14	0.541 	15.933 	2.693 	0.000 	microphone	
+2026-09-10 10:43:40,308 - AdaPoinTr_DiffCond_v2b - INFO - 04330267	44	0.298 	14.993 	0.910 	0.000 	stove	
+2026-09-10 10:43:40,308 - AdaPoinTr_DiffCond_v2b - INFO - 03261776	15	0.314 	17.984 	1.657 	0.000 	earphone	
+2026-09-10 10:43:40,308 - AdaPoinTr_DiffCond_v2b - INFO - 03513137	33	0.220 	19.596 	1.833 	0.000 	helmet	
+2026-09-10 10:43:40,308 - AdaPoinTr_DiffCond_v2b - INFO - 04460130	27	0.431 	13.987 	0.877 	0.000 	tower	
+2026-09-10 10:43:40,308 - AdaPoinTr_DiffCond_v2b - INFO - 04468005	78	0.394 	12.959 	0.725 	0.000 	train	
+2026-09-10 10:43:40,308 - AdaPoinTr_DiffCond_v2b - INFO - 03761084	31	0.244 	16.592 	1.073 	0.000 	microwaves	
+2026-09-10 10:43:40,308 - AdaPoinTr_DiffCond_v2b - INFO - 04004475	34	0.280 	15.765 	1.129 	0.000 	printer	
+2026-09-10 10:43:40,308 - AdaPoinTr_DiffCond_v2b - INFO - 03938244	20	0.316 	13.802 	0.741 	0.000 	pillow	
+2026-09-10 10:43:40,308 - AdaPoinTr_DiffCond_v2b - INFO - 02992529	167	0.422 	11.140 	0.447 	0.000 	cellphone	
+2026-09-10 10:43:40,308 - AdaPoinTr_DiffCond_v2b - INFO - 02808440	172	0.297 	15.042 	1.017 	0.000 	bathtub	
+2026-09-10 10:43:40,308 - AdaPoinTr_DiffCond_v2b - INFO - 04530566	388	0.506 	11.263 	0.584 	0.000 	watercraft	
+2026-09-10 10:43:40,308 - AdaPoinTr_DiffCond_v2b - INFO - 02871439	91	0.260 	15.990 	1.060 	0.000 	bookshelf	
+2026-09-10 10:43:40,308 - AdaPoinTr_DiffCond_v2b - INFO - 03593526	120	0.272 	17.419 	1.415 	0.000 	jar	
+2026-09-10 10:43:40,308 - AdaPoinTr_DiffCond_v2b - INFO - 04554684	34	0.232 	17.069 	1.253 	0.000 	washer	
+2026-09-10 10:43:40,308 - AdaPoinTr_DiffCond_v2b - INFO - 03467517	160	0.812 	6.883 	0.219 	0.000 	guitar	
+2026-09-10 10:43:40,308 - AdaPoinTr_DiffCond_v2b - INFO - 04401088	218	0.423 	11.173 	0.460 	0.000 	telephone	
+2026-09-10 10:43:40,308 - AdaPoinTr_DiffCond_v2b - INFO - 02954340	12	0.308 	14.039 	0.757 	0.000 	cap	
+2026-09-10 10:43:40,308 - AdaPoinTr_DiffCond_v2b - INFO - 02933112	315	0.245 	15.113 	0.802 	0.000 	cabinet	
+2026-09-10 10:43:40,308 - AdaPoinTr_DiffCond_v2b - INFO - 03642806	92	0.390 	11.191 	0.413 	0.000 	laptop	
+2026-09-10 10:43:40,308 - AdaPoinTr_DiffCond_v2b - INFO - 02924116	188	0.365 	12.576 	0.576 	0.000 	bus	
+2026-09-10 10:43:40,308 - AdaPoinTr_DiffCond_v2b - INFO - 02946921	22	0.252 	17.923 	1.984 	0.000 	can	
+2026-09-10 10:43:40,308 - AdaPoinTr_DiffCond_v2b - INFO - 02818832	47	0.292 	16.226 	1.218 	0.000 	bed	
+2026-09-10 10:43:40,308 - AdaPoinTr_DiffCond_v2b - INFO - 04256520	635	0.303 	14.094 	0.740 	0.000 	sofa	
+2026-09-10 10:43:40,309 - AdaPoinTr_DiffCond_v2b - INFO - 04379243	1687	0.388 	12.739 	0.759 	0.000 	table	
+2026-09-10 10:43:40,309 - AdaPoinTr_DiffCond_v2b - INFO - 02747177	69	0.198 	17.882 	1.254 	0.000 	trash bin	
+2026-09-10 10:43:40,309 - AdaPoinTr_DiffCond_v2b - INFO - 03046257	131	0.320 	14.554 	0.856 	0.000 	clock	
+2026-09-10 10:43:40,309 - AdaPoinTr_DiffCond_v2b - INFO - 04225987	31	0.567 	9.601 	0.375 	0.000 	skateboard	
+2026-09-10 10:43:40,309 - AdaPoinTr_DiffCond_v2b - INFO - 03797390	43	0.198 	18.710 	1.458 	0.000 	mug	
+2026-09-10 10:43:40,309 - AdaPoinTr_DiffCond_v2b - INFO - 03001627	1356	0.372 	13.798 	0.878 	0.000 	chair	
+2026-09-10 10:43:40,309 - AdaPoinTr_DiffCond_v2b - INFO - 03691459	320	0.260 	16.918 	1.271 	0.000 	loudspeaker	
+2026-09-10 10:43:40,309 - AdaPoinTr_DiffCond_v2b - INFO - 02942699	23	0.247 	18.690 	1.603 	0.000 	camera	
+2026-09-10 10:43:40,309 - AdaPoinTr_DiffCond_v2b - INFO - 03636649	464	0.532 	13.904 	1.548 	0.000 	lamp	
+2026-09-10 10:43:40,309 - AdaPoinTr_DiffCond_v2b - INFO - 02691156	809	0.584 	9.459 	0.379 	0.000 	airplane	
+2026-09-10 10:43:40,309 - AdaPoinTr_DiffCond_v2b - INFO - 02773838	17	0.366 	12.801 	0.679 	0.000 	bag	
+2026-09-10 10:43:40,309 - AdaPoinTr_DiffCond_v2b - INFO - 02958343	703	0.227 	16.242 	0.924 	0.000 	car	
+2026-09-10 10:43:40,309 - AdaPoinTr_DiffCond_v2b - INFO - 02880940	38	0.230 	15.987 	0.858 	0.000 	bowl	
+2026-09-10 10:43:40,309 - AdaPoinTr_DiffCond_v2b - INFO - 04099429	17	0.714 	8.696 	0.400 	0.000 	rocket	
+2026-09-10 10:43:40,309 - AdaPoinTr_DiffCond_v2b - INFO - 02828884	363	0.445 	11.058 	0.527 	0.000 	bench	
+2026-09-10 10:43:40,309 - AdaPoinTr_DiffCond_v2b - INFO - 04090263	475	0.698 	8.736 	0.417 	0.000 	rifle	
+2026-09-10 10:43:40,309 - AdaPoinTr_DiffCond_v2b - INFO - 03211117	219	0.354 	13.448 	0.789 	0.000 	display	
+2026-09-10 10:43:40,309 - AdaPoinTr_DiffCond_v2b - INFO - 02876657	100	0.434 	12.045 	0.633 	0.000 	bottle	
+2026-09-10 10:43:40,309 - AdaPoinTr_DiffCond_v2b - INFO - 03710193	19	0.514 	12.935 	0.952 	0.000 	mailbox	
+2026-09-10 10:43:40,309 - AdaPoinTr_DiffCond_v2b - INFO - 03790512	68	0.266 	16.345 	1.020 	0.000 	motorbike	
+2026-09-10 10:43:40,309 - AdaPoinTr_DiffCond_v2b - INFO - 03325088	149	0.454 	15.338 	1.508 	0.000 	faucet	
+2026-09-10 10:43:40,309 - AdaPoinTr_DiffCond_v2b - INFO - 02801938	23	0.236 	16.413 	1.104 	0.000 	basket	
+2026-09-10 10:43:40,309 - AdaPoinTr_DiffCond_v2b - INFO - 03337140	60	0.244 	16.379 	1.056 	0.000 	file cabinet	
+2026-09-10 10:43:40,309 - AdaPoinTr_DiffCond_v2b - INFO - 02843684	15	0.248 	17.031 	1.129 	0.000 	birdhouse	
+2026-09-10 10:43:40,309 - AdaPoinTr_DiffCond_v2b - INFO - 03624134	85	0.789 	7.236 	0.254 	0.000 	knife	
+2026-09-10 10:43:40,309 - AdaPoinTr_DiffCond_v2b - INFO - 03991062	121	0.248 	18.653 	1.519 	0.000 	flowerpot	
+2026-09-10 10:43:40,309 - AdaPoinTr_DiffCond_v2b - INFO - 03948459	62	0.475 	12.029 	0.660 	0.000 	pistol	
+2026-09-10 10:43:40,309 - AdaPoinTr_DiffCond_v2b - INFO - 03928116	48	0.291 	15.784 	1.173 	0.000 	piano	
+2026-09-10 10:43:40,309 - AdaPoinTr_DiffCond_v2b - INFO - 03207941	19	0.245 	15.718 	1.034 	0.000 	dishwasher	
+2026-09-10 10:43:40,309 - AdaPoinTr_DiffCond_v2b - INFO - 04074963	14	0.477 	10.165 	0.337 	0.000 	remote	
+2026-09-10 10:43:40,309 - AdaPoinTr_DiffCond_v2b - INFO - 03085013	13	0.449 	10.301 	0.434 	0.000 	keyboard	
+2026-09-10 10:43:40,309 - AdaPoinTr_DiffCond_v2b - INFO - Overall		0.373 	14.152 	0.952 	0.000 	
+2026-09-10 10:43:41,115 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-last.pth
+2026-09-10 10:43:41,482 - AdaPoinTr_DiffCond_v2b - INFO - Save checkpoint at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-epoch-030.pth

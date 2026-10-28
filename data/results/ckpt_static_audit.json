@@ -1,0 +1,130 @@
+{
+  "diffcond_static": {
+    "diff_delta_keys": [
+      "base_model.diff_cond_query_ranking.diff_delta.0.bias",
+      "base_model.diff_cond_query_ranking.diff_delta.0.weight",
+      "base_model.diff_cond_query_ranking.diff_delta.2.bias",
+      "base_model.diff_cond_query_ranking.diff_delta.2.weight"
+    ],
+    "diff_delta_last_weight_norm": 0.0,
+    "diff_delta_last_weight_abs_max": 0.0,
+    "diff_delta_last_weight_is_zero": true,
+    "diff_delta_last_weight_shape": [
+      1,
+      128
+    ],
+    "diff_delta_last_weight_key": "base_model.diff_cond_query_ranking.diff_delta.2.weight",
+    "diff_delta_last_bias_norm": 0.0,
+    "diff_delta_last_bias_is_zero": true,
+    "diff_cond_proj_weight_norm": 4.610231876373291,
+    "diff_cond_proj_weight_abs_max": 0.06493634730577469,
+    "diff_cond_proj_weight_is_zero": false,
+    "diff_cond_proj_bias_norm": 0.1393103152513504,
+    "diff_cond_proj_bias_is_zero": false,
+    "diff_cond_gate_weight_norm": 11.813705444335938,
+    "diff_cond_gate_weight_std": 0.02175050415098667,
+    "diff_cond_gate_bias_norm": 0.4051802456378937,
+    "diff_cond_gate_bias_mean": -0.005639602895826101,
+    "diff_cond_embedding_shape": [
+      3,
+      384
+    ],
+    "diff_cond_embedding_rowwise_norms": [
+      0.6669317483901978,
+      0.2085709124803543,
+      0.9793620109558105
+    ],
+    "diff_cond_embedding_pairwise_cosine": {
+      "0-1": 0.5714173461519761,
+      "0-2": -0.9538796494030786,
+      "1-2": -0.7415833654907339
+    },
+    "diff_predictor_weight_keys": [
+      "base_model.diff_predictor.0.weight",
+      "base_model.diff_predictor.2.weight"
+    ],
+    "diff_predictor_last_weight_norm": 1.10128653049469
+  },
+  "diffcond_shared_drift_vs_baseline": {
+    "total_delta_norm": 27094.436885359224,
+    "total_ref_norm": 254334.54523531377,
+    "relative_drift": 0.10653069900626784,
+    "total_params_compared": 32472082,
+    "per_module": {
+      "base_model": {
+        "delta_norm": 52.62218357328436,
+        "ref_norm": 221.0106671454591,
+        "relative": 0.23809793551118782,
+        "n_params": 30063585
+      },
+      "decode_head": {
+        "delta_norm": 2.253539223017324,
+        "ref_norm": 12.501522005523599,
+        "relative": 0.18026118915932424,
+        "n_params": 418352
+      },
+      "increase_dim": {
+        "delta_norm": 27094.38539350819,
+        "ref_norm": 254334.44874273113,
+        "relative": 0.1065305369659742,
+        "n_params": 1447937
+      },
+      "reduce_map": {
+        "delta_norm": 4.013741565653885,
+        "ref_norm": 8.98787549117185,
+        "relative": 0.4465728936271815,
+        "n_params": 542208
+      }
+    },
+    "skipped_examples": [
+      "base_model.diff_cond_embedding.embed.weight",
+      "base_model.diff_cond_query_ranking.base_scorer.0.weight",
+      "base_model.diff_cond_query_ranking.base_scorer.0.bias",
+      "base_model.diff_cond_query_ranking.base_scorer.2.weight",
+      "base_model.diff_cond_query_ranking.base_scorer.2.bias",
+      "base_model.diff_cond_query_ranking.base_scorer.4.weight",
+      "base_model.diff_cond_query_ranking.base_scorer.4.bias",
+      "base_model.diff_cond_query_ranking.diff_delta.0.weight",
+      "base_model.diff_cond_query_ranking.diff_delta.0.bias",
+      "base_model.diff_cond_query_ranking.diff_delta.2.weight"
+    ]
+  },
+  "vanilla_ft_shared_drift_vs_baseline": {
+    "total_delta_norm": 27094.283090722885,
+    "total_ref_norm": 254334.54523531377,
+    "relative_drift": 0.10653009431202076,
+    "total_params_compared": 32472082,
+    "per_module": {
+      "base_model": {
+        "delta_norm": 47.68208098429028,
+        "ref_norm": 221.0106671454591,
+        "relative": 0.21574560902487075,
+        "n_params": 30063585
+      },
+      "decode_head": {
+        "delta_norm": 2.2392622177810604,
+        "ref_norm": 12.501522005523599,
+        "relative": 0.17911916779344939,
+        "n_params": 418352
+      },
+      "increase_dim": {
+        "delta_norm": 27094.240758714022,
+        "ref_norm": 254334.44874273113,
+        "relative": 0.10652996828644659,
+        "n_params": 1447937
+      },
+      "reduce_map": {
+        "delta_norm": 3.913301639797445,
+        "ref_norm": 8.98787549117185,
+        "relative": 0.4353978472043551,
+        "n_params": 542208
+      }
+    },
+    "skipped_examples": []
+  },
+  "sd_key_counts": {
+    "baseline": 335,
+    "diffcond_oracle": 354,
+    "vanilla_ft": 335
+  }
+}

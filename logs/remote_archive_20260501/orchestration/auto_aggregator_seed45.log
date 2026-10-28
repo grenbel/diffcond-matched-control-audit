@@ -1,0 +1,29 @@
+[2026-04-29 00:35:10] === auto_aggregator_seed45 START ===
+[2026-04-29 00:35:10] Polling for run_b1_seed45.sh termination...
+[2026-04-29 17:25:13] run_b1_seed45.sh has terminated after 1010 min. Verifying outputs...
+[2026-04-29 17:25:13] All seed45 outputs present (2 ckpts + 6 SMH summaries).
+[2026-04-29 17:25:13] Running aggregate_b1_results.py --seeds 42,43,44,45 ...
+=== Collecting B1 SN55 vanilla ===
+  got 4 seeds: ['seed_42', 'seed_43', 'seed_44', 'seed_45']
+=== Collecting B1 SN55 DiffCond ===
+  got 4 seeds: ['seed_42', 'seed_43', 'seed_44', 'seed_45']
+
+=== B1 SN55 Results: DiffCond vs Vanilla-FT (paper-ready) ===
+
+Mode     Metric        Vanilla (mean+/-std)     DiffCond (mean+/-std)       AbsΔ       Δ%
+------------------------------------------------------------------------------------------
+easy     F-Score            0.4510+/-0.0058           0.4505+/-0.0060    -0.0005   -0.11%
+easy     CDL1              11.4635+/-0.0246          11.5270+/-0.1254    +0.0635   -0.55%
+easy     CDL2               0.4998+/-0.0099           0.4988+/-0.0092    -0.0010   +0.20%
+median   F-Score            0.4403+/-0.0021           0.4397+/-0.0045    -0.0005   -0.11%
+median   CDL1              13.0415+/-0.0431          13.0875+/-0.1099    +0.0460   -0.35%
+median   CDL2               0.7328+/-0.0061           0.7302+/-0.0082    -0.0025   +0.34%
+hard     F-Score            0.3870+/-0.0040           0.3865+/-0.0031    -0.0005   -0.13%
+hard     CDL1              16.8100+/-0.3676          16.7912+/-0.2606    -0.0188   +0.11%
+hard     CDL2               1.4937+/-0.0692           1.4660+/-0.0462    -0.0277   +1.86%
+
+Saved: data/B1/b1_sn55_results.json
+Saved: data/B1/b1_sn55_results.tsv
+[2026-04-29 17:25:13] Running paired_stats.py ...
+python: can't open file '/root/PoinTr/tools/paired_stats.py': [Errno 2] No such file or directory
+[2026-04-29 17:25:13] ERROR: paired_stats failed

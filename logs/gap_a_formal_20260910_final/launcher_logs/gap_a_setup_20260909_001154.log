@@ -1,0 +1,9 @@
+[00:11:54] python Python 3.12.3 | torch 2.8.0+cu128 cuda 12.8
+[00:11:59] nvcc: Build cuda_12.8.r12.8/compiler.35583870_0
+[00:11:59] 1/6 python deps (pins relaxed per requirements.txt comments)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+  torch unchanged: 2.8.0+cu128 12.8
+[00:12:09] 2/6 dataset: ShapeNet-55 (PoinTr/Point-BERT format) from the HF mirror sayakpaul/ShapeNet-55 onto the data disk
+tools/gap_a_env_setup.sh: line 35: [: 0
+0: integer expression expected
+ls: cannot access '/root/autodl-tmp/ShapeNet55-34/shapenet_pc': No such file or directory

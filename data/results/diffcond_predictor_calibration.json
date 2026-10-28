@@ -1,0 +1,84 @@
+{
+  "_note": "ece uses 10 equal-width confidence bins (tools/eval_predictor_calibration.py, n_bins=10).",
+  "n_total": 12000,
+  "accuracy": 0.99875,
+  "pearson": 0.9990627401168729,
+  "spearman": NaN,
+  "brier": 0.002146417973563075,
+  "ece": 0.0050515370468298595,
+  "per_class": {
+    "0": {
+      "precision": 0.99925,
+      "recall": 0.99925,
+      "f1": 0.99925,
+      "support": 4000
+    },
+    "1": {
+      "precision": 0.9984988741556167,
+      "recall": 0.99775,
+      "f1": 0.9981242966112291,
+      "support": 4000
+    },
+    "2": {
+      "precision": 0.9985011241568823,
+      "recall": 0.99925,
+      "f1": 0.9988754217168562,
+      "support": 4000
+    }
+  },
+  "per_oracle": {
+    "0": {
+      "n": 4000,
+      "accuracy": 0.99925,
+      "pred_distribution": {
+        "0": 3997,
+        "1": 3,
+        "2": 0
+      },
+      "mean_prob_easy": 0.9973001480102539,
+      "mean_prob_median": 0.002431398257613182,
+      "mean_prob_hard": 0.00026845032698474824
+    },
+    "1": {
+      "n": 4000,
+      "accuracy": 0.99775,
+      "pred_distribution": {
+        "0": 3,
+        "1": 3991,
+        "2": 6
+      },
+      "mean_prob_easy": 0.005075185559689999,
+      "mean_prob_median": 0.99186772108078,
+      "mean_prob_hard": 0.003057075198739767
+    },
+    "2": {
+      "n": 4000,
+      "accuracy": 0.99925,
+      "pred_distribution": {
+        "0": 0,
+        "1": 3,
+        "2": 3997
+      },
+      "mean_prob_easy": 0.00015274468751158565,
+      "mean_prob_median": 0.008141248486936092,
+      "mean_prob_hard": 0.9917060732841492
+    }
+  },
+  "confusion_matrix": [
+    [
+      3997,
+      3,
+      0
+    ],
+    [
+      3,
+      3991,
+      6
+    ],
+    [
+      0,
+      3,
+      3997
+    ]
+  ]
+}

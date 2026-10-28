@@ -1,0 +1,37 @@
+{
+  "_meta": {
+    "description": "PCN cross-backbone sanity check, per-seed Overall metrics on the official PCN test split (1,200 samples across 8 categories; proxy difficulty bins computed once from the training distribution).",
+    "metrics": {
+      "F-Score": "F-Score@1% (higher is better, scale 0-1)",
+      "CD-L1": "Chamfer L1 distance, scaled by 1e3 (lower is better)",
+      "CD-L2": "Chamfer L2 distance, scaled by 1e3 (lower is better)"
+    },
+    "backbone": "UpTrans (upsampling-transformer decoder)",
+    "n_seeds": 2,
+    "seeds": [42, 43],
+    "training": "30-epoch fine-tune from a shared UpTrans pretrained checkpoint; same crop pipeline and optimiser across vanilla and DiffCond",
+    "delta_convention": "DiffCond minus Vanilla-FT (sign-aware: positive = DiffCond improvement; CD lower is better, F-Score higher is better)",
+    "source_paper_table": "supplementary.tex Table 11 (tab:supp_pcn_sanity)",
+    "purpose": "Bounded second-benchmark sanity check of the UpTrans-native DiffCond (main paper Sec. 5.5); PCN has no native S/M/H bins so we use the proxy difficulty in data/PCN/difficulty_proxy.json."
+  },
+  "per_seed": {
+    "vanilla_ft": {
+      "42": {"F-Score": 0.828, "CD-L1": 6.645, "CD-L2": 0.214},
+      "43": {"F-Score": 0.826, "CD-L1": 6.622, "CD-L2": 0.208}
+    },
+    "diffcond_oracle": {
+      "42": {"F-Score": 0.827, "CD-L1": 6.605, "CD-L2": 0.201},
+      "43": {"F-Score": 0.828, "CD-L1": 6.624, "CD-L2": 0.216}
+    }
+  },
+  "mean": {
+    "vanilla_ft": {"F-Score": 0.827, "CD-L1": 6.634, "CD-L2": 0.211},
+    "diffcond_oracle": {"F-Score": 0.828, "CD-L1": 6.615, "CD-L2": 0.209}
+  },
+  "delta_pct": {
+    "F-Score": 0.06,
+    "CD-L1": 0.3,
+    "CD-L2": 1.1,
+    "_note": "Computed from full-precision per-seed values; back-computation from the rounded mean entries above will differ slightly (cf. main paper Table 2 and supplementary Table 11 captions). All three deltas are well below the +3% method-bar."
+  }
+}

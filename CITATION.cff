@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this code, these logs or these results, please cite the paper. The parts of this repository carry different licences (code MIT; our logs and results CC BY 4.0; dataset-derived content under the dataset's terms); see LICENSES.md."
+title: "Naïve Difficulty Conditioning Fails on ShapeNet-55: A Matched-Control Audit (code, logs and results)"
+type: software
+authors:
+  - family-names: Gong
+    given-names: Wenbo
+repository-code: "https://github.com/grenbel/diffcond-matched-control-audit"
+url: "https://openreview.net/forum?id=cpe5PHAgoQ"
+preferred-citation:
+  type: article
+  title: "Naïve Difficulty Conditioning Fails on ShapeNet-55: A Matched-Control Audit"
+  authors:
+    - family-names: Gong
+      given-names: Wenbo
+  journal: "Transactions on Machine Learning Research"
+  year: 2026
+  url: "https://openreview.net/forum?id=cpe5PHAgoQ"

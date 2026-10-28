@@ -1,0 +1,1433 @@
+/root/miniconda3/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+2026-04-26 19:55:31,449 - UpTrans_DiffCond - INFO - Copy the Config file from cfgs/ShapeNet55_models/UpTrans_DiffCond.yaml to ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/config.yaml
+2026-04-26 19:55:31,449 - UpTrans_DiffCond - INFO - args.config : cfgs/ShapeNet55_models/UpTrans_DiffCond.yaml
+2026-04-26 19:55:31,449 - UpTrans_DiffCond - INFO - args.launcher : none
+2026-04-26 19:55:31,449 - UpTrans_DiffCond - INFO - args.local_rank : 0
+2026-04-26 19:55:31,449 - UpTrans_DiffCond - INFO - args.num_workers : 4
+2026-04-26 19:55:31,449 - UpTrans_DiffCond - INFO - args.seed : 44
+2026-04-26 19:55:31,449 - UpTrans_DiffCond - INFO - args.deterministic : False
+2026-04-26 19:55:31,449 - UpTrans_DiffCond - INFO - args.sync_bn : False
+2026-04-26 19:55:31,449 - UpTrans_DiffCond - INFO - args.exp_name : b1_diffcond_seed44
+2026-04-26 19:55:31,449 - UpTrans_DiffCond - INFO - args.start_ckpts : experiments/UpTrans/ShapeNet55_models/pretrained_400ep/ckpt-best.pth
+2026-04-26 19:55:31,449 - UpTrans_DiffCond - INFO - args.ckpts : None
+2026-04-26 19:55:31,449 - UpTrans_DiffCond - INFO - args.val_freq : 5
+2026-04-26 19:55:31,449 - UpTrans_DiffCond - INFO - args.resume : False
+2026-04-26 19:55:31,449 - UpTrans_DiffCond - INFO - args.test : False
+2026-04-26 19:55:31,449 - UpTrans_DiffCond - INFO - args.mode : None
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - args.difficulty_source : oracle
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - args.experiment_path : ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - args.tfboard_path : ./experiments/UpTrans_DiffCond/ShapeNet55_models/TFBoard/b1_diffcond_seed44
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - args.log_name : UpTrans_DiffCond
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - args.use_gpu : True
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - args.distributed : False
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.optimizer = edict()
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.optimizer.type : AdamW
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.optimizer.kwargs = edict()
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.optimizer.kwargs.lr : 0.0001
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.optimizer.kwargs.weight_decay : 0.0005
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.scheduler = edict()
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.scheduler.type : LambdaLR
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.scheduler.kwargs = edict()
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.scheduler.kwargs.decay_step : 21
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.scheduler.kwargs.lr_decay : 0.9
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.scheduler.kwargs.lowest_decay : 0.02
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.bnmscheduler = edict()
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.bnmscheduler.type : Lambda
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.bnmscheduler.kwargs = edict()
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.bnmscheduler.kwargs.decay_step : 21
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.bnmscheduler.kwargs.bn_decay : 0.5
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.bnmscheduler.kwargs.bn_momentum : 0.9
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.bnmscheduler.kwargs.lowest_decay : 0.01
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.dataset = edict()
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.dataset.train = edict()
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.dataset.train._base_ = edict()
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.dataset.train._base_.NAME : ShapeNet
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.dataset.train._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.dataset.train._base_.N_POINTS : 8192
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.dataset.train._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.dataset.train.others = edict()
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.dataset.train.others.subset : train
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.dataset.train.others.bs : 32
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.dataset.val = edict()
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.dataset.val._base_ = edict()
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.dataset.val._base_.NAME : ShapeNet
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.dataset.val._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.dataset.val._base_.N_POINTS : 8192
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.dataset.val._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.dataset.val.others = edict()
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.dataset.val.others.subset : test
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.dataset.test = edict()
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.dataset.test._base_ = edict()
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.dataset.test._base_.NAME : ShapeNet
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.dataset.test._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.dataset.test._base_.N_POINTS : 8192
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.dataset.test._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.dataset.test.others = edict()
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.dataset.test.others.subset : test
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.model = edict()
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.model.NAME : UpTrans_DiffCond
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.model.num_pred : 8192
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.model.num_seeds : 1024
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.model.seed_fea : 128
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.model.dim_feat : 512
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.model.num_dicts : 512
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.model.upscales : [1, 2, 4]
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.model.l2_loss : 1
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.model.diff_embed_dim : 256
+2026-04-26 19:55:31,450 - UpTrans_DiffCond - INFO - config.model.lambda_ce : 0.1
+2026-04-26 19:55:31,451 - UpTrans_DiffCond - INFO - config.loss = edict()
+2026-04-26 19:55:31,451 - UpTrans_DiffCond - INFO - config.loss.sparse_loss_weight : 1.0
+2026-04-26 19:55:31,451 - UpTrans_DiffCond - INFO - config.loss.dense_loss_weight : 1.0
+2026-04-26 19:55:31,451 - UpTrans_DiffCond - INFO - config.loss.dz_weight : 1.0
+2026-04-26 19:55:31,451 - UpTrans_DiffCond - INFO - config.loss.orth_weight : 1.0
+2026-04-26 19:55:31,451 - UpTrans_DiffCond - INFO - config.total_bs : 32
+2026-04-26 19:55:31,451 - UpTrans_DiffCond - INFO - config.step_per_update : 1
+2026-04-26 19:55:31,451 - UpTrans_DiffCond - INFO - config.max_epoch : 30
+2026-04-26 19:55:31,451 - UpTrans_DiffCond - INFO - config.consider_metric : CDL2
+2026-04-26 19:55:31,451 - UpTrans_DiffCond - INFO - config.training_crop_mode : diffcond
+2026-04-26 19:55:31,451 - UpTrans_DiffCond - INFO - Distributed training: False
+2026-04-26 19:55:31,451 - UpTrans_DiffCond - INFO - Set random seed to 44, deterministic: False
+[DATASET] Open file data/ShapeNet55-34/ShapeNet-55/train.txt
+[DATASET] 41952 instances were loaded
+[DATASET] Open file data/ShapeNet55-34/ShapeNet-55/test.txt
+[DATASET] 10518 instances were loaded
+2026-04-26 19:55:31,863 - UpTrans_DiffCond - INFO - Loading weights from experiments/UpTrans/ShapeNet55_models/pretrained_400ep/ckpt-best.pth...
+2026-04-26 19:55:32,070 - UpTrans_DiffCond - INFO - UpTrans_DiffCond load: missing=21, unexpected=0
+2026-04-26 19:55:32,071 - UpTrans_DiffCond - INFO - ckpts @ 290 epoch( performance = {'F-Score': tensor(0.4461), 'CDL1': tensor(13.0321), 'CDL2': tensor(0.7718)})
+2026-04-26 19:55:32,078 - UpTrans_DiffCond - INFO - Trainable_parameters:
+2026-04-26 19:55:32,078 - UpTrans_DiffCond - INFO - =========================
+2026-04-26 19:55:32,078 - UpTrans_DiffCond - INFO - feat_extractor.sa_module_1.mlp_conv.0.conv.weight
+2026-04-26 19:55:32,078 - UpTrans_DiffCond - INFO - feat_extractor.sa_module_1.mlp_conv.0.conv.bias
+2026-04-26 19:55:32,078 - UpTrans_DiffCond - INFO - feat_extractor.sa_module_1.mlp_conv.0.bn.weight
+2026-04-26 19:55:32,078 - UpTrans_DiffCond - INFO - feat_extractor.sa_module_1.mlp_conv.0.bn.bias
+2026-04-26 19:55:32,078 - UpTrans_DiffCond - INFO - feat_extractor.sa_module_1.mlp_conv.1.conv.weight
+2026-04-26 19:55:32,078 - UpTrans_DiffCond - INFO - feat_extractor.sa_module_1.mlp_conv.1.conv.bias
+2026-04-26 19:55:32,078 - UpTrans_DiffCond - INFO - feat_extractor.sa_module_1.mlp_conv.1.bn.weight
+2026-04-26 19:55:32,078 - UpTrans_DiffCond - INFO - feat_extractor.sa_module_1.mlp_conv.1.bn.bias
+2026-04-26 19:55:32,078 - UpTrans_DiffCond - INFO - feat_extractor.transformer_1.conv_key.weight
+2026-04-26 19:55:32,078 - UpTrans_DiffCond - INFO - feat_extractor.transformer_1.conv_key.bias
+2026-04-26 19:55:32,078 - UpTrans_DiffCond - INFO - feat_extractor.transformer_1.conv_query.weight
+2026-04-26 19:55:32,078 - UpTrans_DiffCond - INFO - feat_extractor.transformer_1.conv_query.bias
+2026-04-26 19:55:32,078 - UpTrans_DiffCond - INFO - feat_extractor.transformer_1.conv_value.weight
+2026-04-26 19:55:32,078 - UpTrans_DiffCond - INFO - feat_extractor.transformer_1.conv_value.bias
+2026-04-26 19:55:32,078 - UpTrans_DiffCond - INFO - feat_extractor.transformer_1.pos_mlp.0.weight
+2026-04-26 19:55:32,078 - UpTrans_DiffCond - INFO - feat_extractor.transformer_1.pos_mlp.0.bias
+2026-04-26 19:55:32,078 - UpTrans_DiffCond - INFO - feat_extractor.transformer_1.pos_mlp.1.weight
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_1.pos_mlp.1.bias
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_1.pos_mlp.3.weight
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_1.pos_mlp.3.bias
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_1.attn_mlp.0.weight
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_1.attn_mlp.0.bias
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_1.attn_mlp.1.weight
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_1.attn_mlp.1.bias
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_1.attn_mlp.3.weight
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_1.attn_mlp.3.bias
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_1.linear_start.weight
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_1.linear_start.bias
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_1.linear_end.weight
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_1.linear_end.bias
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.sa_module_2.mlp_conv.0.conv.weight
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.sa_module_2.mlp_conv.0.conv.bias
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.sa_module_2.mlp_conv.0.bn.weight
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.sa_module_2.mlp_conv.0.bn.bias
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.sa_module_2.mlp_conv.1.conv.weight
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.sa_module_2.mlp_conv.1.conv.bias
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.sa_module_2.mlp_conv.1.bn.weight
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.sa_module_2.mlp_conv.1.bn.bias
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_2.conv_key.weight
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_2.conv_key.bias
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_2.conv_query.weight
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_2.conv_query.bias
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_2.conv_value.weight
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_2.conv_value.bias
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_2.pos_mlp.0.weight
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_2.pos_mlp.0.bias
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_2.pos_mlp.1.weight
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_2.pos_mlp.1.bias
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_2.pos_mlp.3.weight
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_2.pos_mlp.3.bias
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_2.attn_mlp.0.weight
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_2.attn_mlp.0.bias
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_2.attn_mlp.1.weight
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_2.attn_mlp.1.bias
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_2.attn_mlp.3.weight
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_2.attn_mlp.3.bias
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_2.linear_start.weight
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_2.linear_start.bias
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_2.linear_end.weight
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.transformer_2.linear_end.bias
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.sa_module_4.mlp_conv.0.conv.weight
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.sa_module_4.mlp_conv.0.conv.bias
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.sa_module_4.mlp_conv.0.bn.weight
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.sa_module_4.mlp_conv.0.bn.bias
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.sa_module_4.mlp_conv.1.conv.weight
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.sa_module_4.mlp_conv.1.conv.bias
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.sa_module_4.mlp_conv.1.bn.weight
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.sa_module_4.mlp_conv.1.bn.bias
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.ps_0.weight
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.ps_0.bias
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.mlp_1.conv_1.weight
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.mlp_1.conv_1.bias
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.mlp_1.conv_2.weight
+2026-04-26 19:55:32,079 - UpTrans_DiffCond - INFO - feat_extractor.mlp_1.conv_2.bias
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.mlp_1.conv_shortcut.weight
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.mlp_1.conv_shortcut.bias
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.ps_1.weight
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.ps_1.bias
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.ps_2.weight
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.ps_2.bias
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.refine_1.dict_embed.weight
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.refine_1.query.weight
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.refine_1.query.bias
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.refine_1.key.weight
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.refine_1.key.bias
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.refine_1.diff_key_delta.0.weight
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.refine_1.diff_key_delta.0.bias
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.refine_1.diff_key_delta.2.weight
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.refine_1.diff_key_delta.2.bias
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.refine_2.dict_embed.weight
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.refine_2.query.weight
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.refine_2.query.bias
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.refine_2.key.weight
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.refine_2.key.bias
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.refine_2.diff_key_delta.0.weight
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.refine_2.diff_key_delta.0.bias
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.refine_2.diff_key_delta.2.weight
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.refine_2.diff_key_delta.2.bias
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.mlp_3.conv_1.weight
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.mlp_3.conv_1.bias
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.mlp_3.conv_2.weight
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.mlp_3.conv_2.bias
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.mlp_3.conv_shortcut.weight
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.mlp_3.conv_shortcut.bias
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.film_gamma.0.weight
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.film_gamma.0.bias
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.film_gamma.2.weight
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.film_gamma.2.bias
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.film_beta.0.weight
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.film_beta.0.bias
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.film_beta.2.weight
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - feat_extractor.film_beta.2.bias
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - decoder.up_layers.0.mlp_1.mlp.0.weight
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - decoder.up_layers.0.mlp_1.mlp.0.bias
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - decoder.up_layers.0.mlp_1.mlp.2.weight
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - decoder.up_layers.0.mlp_1.mlp.2.bias
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - decoder.up_layers.0.mlp_2.mlp.0.weight
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - decoder.up_layers.0.mlp_2.mlp.0.bias
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - decoder.up_layers.0.mlp_2.mlp.2.weight
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - decoder.up_layers.0.mlp_2.mlp.2.bias
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans1.mlp_v.conv_1.weight
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans1.mlp_v.conv_1.bias
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans1.mlp_v.conv_2.weight
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans1.mlp_v.conv_2.bias
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans1.mlp_v.conv_shortcut.weight
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans1.mlp_v.conv_shortcut.bias
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans1.conv_key.weight
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans1.conv_key.bias
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans1.conv_query.weight
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans1.conv_query.bias
+2026-04-26 19:55:32,080 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans1.conv_value.weight
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans1.conv_value.bias
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans1.conv_upfeat.weight
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans1.conv_upfeat.bias
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans1.pos_mlp.0.weight
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans1.pos_mlp.0.bias
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans1.pos_mlp.1.weight
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans1.pos_mlp.1.bias
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans1.pos_mlp.3.weight
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans1.pos_mlp.3.bias
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans1.attn_mlp.0.weight
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans1.attn_mlp.0.bias
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans1.attn_mlp.1.weight
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans1.attn_mlp.1.bias
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans1.attn_mlp.3.weight
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans1.attn_mlp.3.bias
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans1.conv_end.weight
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans1.conv_end.bias
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans2.mlp_v.conv_1.weight
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans2.mlp_v.conv_1.bias
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans2.mlp_v.conv_2.weight
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans2.mlp_v.conv_2.bias
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans2.mlp_v.conv_shortcut.weight
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans2.mlp_v.conv_shortcut.bias
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans2.conv_key.weight
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans2.conv_key.bias
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans2.conv_query.weight
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans2.conv_query.bias
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans2.conv_value.weight
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans2.conv_value.bias
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans2.conv_upfeat.weight
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans2.conv_upfeat.bias
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans2.pos_mlp.0.weight
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans2.pos_mlp.0.bias
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans2.pos_mlp.1.weight
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans2.pos_mlp.1.bias
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans2.pos_mlp.3.weight
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans2.pos_mlp.3.bias
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans2.attn_mlp.0.weight
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans2.attn_mlp.0.bias
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans2.attn_mlp.1.weight
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans2.attn_mlp.1.bias
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans2.attn_mlp.3.weight
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans2.attn_mlp.3.bias
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans2.conv_end.weight
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.uptrans2.conv_end.bias
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.mlp_delta_feature.conv_1.weight
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.mlp_delta_feature.conv_1.bias
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.mlp_delta_feature.conv_2.weight
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.mlp_delta_feature.conv_2.bias
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.mlp_delta_feature.conv_shortcut.weight
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.mlp_delta_feature.conv_shortcut.bias
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.mlp_delta.mlp.0.weight
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.mlp_delta.mlp.0.bias
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.mlp_delta.mlp.2.weight
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.0.mlp_delta.mlp.2.bias
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.1.mlp_1.mlp.0.weight
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.1.mlp_1.mlp.0.bias
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.1.mlp_1.mlp.2.weight
+2026-04-26 19:55:32,081 - UpTrans_DiffCond - INFO - decoder.up_layers.1.mlp_1.mlp.2.bias
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.mlp_2.mlp.0.weight
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.mlp_2.mlp.0.bias
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.mlp_2.mlp.2.weight
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.mlp_2.mlp.2.bias
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans1.mlp_v.conv_1.weight
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans1.mlp_v.conv_1.bias
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans1.mlp_v.conv_2.weight
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans1.mlp_v.conv_2.bias
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans1.mlp_v.conv_shortcut.weight
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans1.mlp_v.conv_shortcut.bias
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans1.conv_key.weight
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans1.conv_key.bias
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans1.conv_query.weight
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans1.conv_query.bias
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans1.conv_value.weight
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans1.conv_value.bias
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans1.conv_upfeat.weight
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans1.conv_upfeat.bias
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans1.pos_mlp.0.weight
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans1.pos_mlp.0.bias
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans1.pos_mlp.1.weight
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans1.pos_mlp.1.bias
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans1.pos_mlp.3.weight
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans1.pos_mlp.3.bias
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans1.attn_mlp.0.weight
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans1.attn_mlp.0.bias
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans1.attn_mlp.1.weight
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans1.attn_mlp.1.bias
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans1.attn_mlp.3.weight
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans1.attn_mlp.3.bias
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans1.conv_end.weight
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans1.conv_end.bias
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans2.mlp_v.conv_1.weight
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans2.mlp_v.conv_1.bias
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans2.mlp_v.conv_2.weight
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans2.mlp_v.conv_2.bias
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans2.mlp_v.conv_shortcut.weight
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans2.mlp_v.conv_shortcut.bias
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans2.conv_key.weight
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans2.conv_key.bias
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans2.conv_query.weight
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans2.conv_query.bias
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans2.conv_value.weight
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans2.conv_value.bias
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans2.conv_upfeat.weight
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans2.conv_upfeat.bias
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans2.pos_mlp.0.weight
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans2.pos_mlp.0.bias
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans2.pos_mlp.1.weight
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans2.pos_mlp.1.bias
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans2.pos_mlp.3.weight
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans2.pos_mlp.3.bias
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans2.attn_mlp.0.weight
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans2.attn_mlp.0.bias
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans2.attn_mlp.1.weight
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans2.attn_mlp.1.bias
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans2.attn_mlp.3.weight
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans2.attn_mlp.3.bias
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans2.conv_end.weight
+2026-04-26 19:55:32,082 - UpTrans_DiffCond - INFO - decoder.up_layers.1.uptrans2.conv_end.bias
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.1.mlp_delta_feature.conv_1.weight
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.1.mlp_delta_feature.conv_1.bias
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.1.mlp_delta_feature.conv_2.weight
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.1.mlp_delta_feature.conv_2.bias
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.1.mlp_delta_feature.conv_shortcut.weight
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.1.mlp_delta_feature.conv_shortcut.bias
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.1.mlp_delta.mlp.0.weight
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.1.mlp_delta.mlp.0.bias
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.1.mlp_delta.mlp.2.weight
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.1.mlp_delta.mlp.2.bias
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.mlp_1.mlp.0.weight
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.mlp_1.mlp.0.bias
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.mlp_1.mlp.2.weight
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.mlp_1.mlp.2.bias
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.mlp_2.mlp.0.weight
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.mlp_2.mlp.0.bias
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.mlp_2.mlp.2.weight
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.mlp_2.mlp.2.bias
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans1.mlp_v.conv_1.weight
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans1.mlp_v.conv_1.bias
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans1.mlp_v.conv_2.weight
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans1.mlp_v.conv_2.bias
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans1.mlp_v.conv_shortcut.weight
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans1.mlp_v.conv_shortcut.bias
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans1.conv_key.weight
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans1.conv_key.bias
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans1.conv_query.weight
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans1.conv_query.bias
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans1.conv_value.weight
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans1.conv_value.bias
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans1.conv_upfeat.weight
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans1.conv_upfeat.bias
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans1.pos_mlp.0.weight
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans1.pos_mlp.0.bias
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans1.pos_mlp.1.weight
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans1.pos_mlp.1.bias
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans1.pos_mlp.3.weight
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans1.pos_mlp.3.bias
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans1.attn_mlp.0.weight
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans1.attn_mlp.0.bias
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans1.attn_mlp.1.weight
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans1.attn_mlp.1.bias
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans1.attn_mlp.3.weight
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans1.attn_mlp.3.bias
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans1.conv_end.weight
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans1.conv_end.bias
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans2.mlp_v.conv_1.weight
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans2.mlp_v.conv_1.bias
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans2.mlp_v.conv_2.weight
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans2.mlp_v.conv_2.bias
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans2.mlp_v.conv_shortcut.weight
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans2.mlp_v.conv_shortcut.bias
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans2.conv_key.weight
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans2.conv_key.bias
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans2.conv_query.weight
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans2.conv_query.bias
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans2.conv_value.weight
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans2.conv_value.bias
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans2.conv_upfeat.weight
+2026-04-26 19:55:32,083 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans2.conv_upfeat.bias
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans2.pos_mlp.0.weight
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans2.pos_mlp.0.bias
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans2.pos_mlp.1.weight
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans2.pos_mlp.1.bias
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans2.pos_mlp.3.weight
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans2.pos_mlp.3.bias
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans2.attn_mlp.0.weight
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans2.attn_mlp.0.bias
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans2.attn_mlp.1.weight
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans2.attn_mlp.1.bias
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans2.attn_mlp.3.weight
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans2.attn_mlp.3.bias
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans2.conv_end.weight
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - decoder.up_layers.2.uptrans2.conv_end.bias
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - decoder.up_layers.2.mlp_delta_feature.conv_1.weight
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - decoder.up_layers.2.mlp_delta_feature.conv_1.bias
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - decoder.up_layers.2.mlp_delta_feature.conv_2.weight
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - decoder.up_layers.2.mlp_delta_feature.conv_2.bias
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - decoder.up_layers.2.mlp_delta_feature.conv_shortcut.weight
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - decoder.up_layers.2.mlp_delta_feature.conv_shortcut.bias
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - decoder.up_layers.2.mlp_delta.mlp.0.weight
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - decoder.up_layers.2.mlp_delta.mlp.0.bias
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - decoder.up_layers.2.mlp_delta.mlp.2.weight
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - decoder.up_layers.2.mlp_delta.mlp.2.bias
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - difficulty_embedding.embed.weight
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - difficulty_predictor.0.weight
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - difficulty_predictor.0.bias
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - difficulty_predictor.2.weight
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - difficulty_predictor.2.bias
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - =========================
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - Untrainable_parameters:
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - =========================
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - =========================
+2026-04-26 19:55:32,084 - UpTrans_DiffCond - INFO - Using Data parallel ...
+2026-04-26 19:55:37,410 - UpTrans_DiffCond - INFO - [Epoch 0/30][Batch 1/1311] BatchTime = 5.320 (s) DataTime = 0.092 (s) Losses = ['1.9460', '0.5416'] lr = 0.000100
+2026-04-26 19:56:27,193 - UpTrans_DiffCond - INFO - [Epoch 0/30][Batch 101/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['1.5118', '0.3997'] lr = 0.000100
+2026-04-26 19:57:17,493 - UpTrans_DiffCond - INFO - [Epoch 0/30][Batch 201/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.0958', '0.5441'] lr = 0.000100
+2026-04-26 19:58:07,493 - UpTrans_DiffCond - INFO - [Epoch 0/30][Batch 301/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.7967', '0.4737'] lr = 0.000100
+2026-04-26 19:58:57,499 - UpTrans_DiffCond - INFO - [Epoch 0/30][Batch 401/1311] BatchTime = 0.505 (s) DataTime = 0.002 (s) Losses = ['2.0720', '0.4559'] lr = 0.000100
+2026-04-26 19:59:47,593 - UpTrans_DiffCond - INFO - [Epoch 0/30][Batch 501/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['1.7678', '0.4379'] lr = 0.000100
+2026-04-26 20:00:37,693 - UpTrans_DiffCond - INFO - [Epoch 0/30][Batch 601/1311] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['1.7623', '0.4399'] lr = 0.000100
+2026-04-26 20:01:27,793 - UpTrans_DiffCond - INFO - [Epoch 0/30][Batch 701/1311] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['1.9042', '0.6394'] lr = 0.000100
+2026-04-26 20:02:17,993 - UpTrans_DiffCond - INFO - [Epoch 0/30][Batch 801/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['4.2588', '1.3433'] lr = 0.000100
+2026-04-26 20:03:07,993 - UpTrans_DiffCond - INFO - [Epoch 0/30][Batch 901/1311] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['2.6508', '0.9680'] lr = 0.000100
+2026-04-26 20:03:57,894 - UpTrans_DiffCond - INFO - [Epoch 0/30][Batch 1001/1311] BatchTime = 0.500 (s) DataTime = 0.005 (s) Losses = ['2.0721', '0.5869'] lr = 0.000100
+2026-04-26 20:04:47,806 - UpTrans_DiffCond - INFO - [Epoch 0/30][Batch 1101/1311] BatchTime = 0.511 (s) DataTime = 0.002 (s) Losses = ['1.7280', '0.4572'] lr = 0.000100
+2026-04-26 20:05:37,893 - UpTrans_DiffCond - INFO - [Epoch 0/30][Batch 1201/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.4495', '0.7133'] lr = 0.000100
+2026-04-26 20:06:27,793 - UpTrans_DiffCond - INFO - [Epoch 0/30][Batch 1301/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.5884', '0.8334'] lr = 0.000100
+2026-04-26 20:06:32,950 - UpTrans_DiffCond - INFO - [Training] EPOCH: 0 EpochTime = 660.860 (s) Losses = ['2.2508', '0.6441']
+2026-04-26 20:06:32,951 - UpTrans_DiffCond - INFO - [VALIDATION] Start validating epoch 0
+2026-04-26 20:07:11,756 - UpTrans_DiffCond - INFO - Test[1051/10518] Taxonomy = 02691156 Sample = c7749c0a8b61f43bc9b9e28055202e3d Losses = ['20.2802', '2.1576', '11.9976', '0.8223'] Metrics = ['0.5965', '11.9976', '0.8223', '0.0000']
+2026-04-26 20:07:49,610 - UpTrans_DiffCond - INFO - Test[2102/10518] Taxonomy = 03211117 Sample = ab2f9418c111cc6ddb965514105122a4 Losses = ['15.2593', '0.8660', '7.6994', '0.2002'] Metrics = ['0.7174', '7.6994', '0.2002', '0.0000']
+2026-04-26 20:08:27,523 - UpTrans_DiffCond - INFO - Test[3153/10518] Taxonomy = 02876657 Sample = c5032e4be091aabb36fe7a88df793982 Losses = ['29.0764', '3.4909', '12.1676', '0.5399'] Metrics = ['0.4272', '12.1676', '0.5399', '0.0000']
+2026-04-26 20:09:05,593 - UpTrans_DiffCond - INFO - Test[4204/10518] Taxonomy = 03211117 Sample = 722df1da5778d45b1e43523279c7f09f Losses = ['20.9905', '1.8351', '9.9831', '0.3855'] Metrics = ['0.5335', '9.9831', '0.3855', '0.0000']
+2026-04-26 20:09:43,491 - UpTrans_DiffCond - INFO - Test[5255/10518] Taxonomy = 02828884 Sample = 14b63361a48a9fffe4a048c146e8bd43 Losses = ['28.0736', '3.4104', '16.1792', '1.3866'] Metrics = ['0.4956', '16.1792', '1.3866', '0.0000']
+2026-04-26 20:10:21,438 - UpTrans_DiffCond - INFO - Test[6306/10518] Taxonomy = 03211117 Sample = d330d50a0255529d19ed6e1a590c9122 Losses = ['17.8206', '1.1086', '9.6084', '0.2673'] Metrics = ['0.5474', '9.6084', '0.2673', '0.0000']
+2026-04-26 20:10:59,500 - UpTrans_DiffCond - INFO - Test[7357/10518] Taxonomy = 04379243 Sample = b1ca280d9567270ade98d10ab5975b59 Losses = ['24.0226', '2.1448', '13.4412', '0.5047'] Metrics = ['0.3317', '13.4412', '0.5047', '0.0000']
+2026-04-26 20:11:37,469 - UpTrans_DiffCond - INFO - Test[8408/10518] Taxonomy = 03001627 Sample = 89208a619341d9fdb8c516ed5c4ce32 Losses = ['23.5342', '2.0161', '12.4586', '0.4425'] Metrics = ['0.3745', '12.4586', '0.4425', '0.0000']
+2026-04-26 20:12:15,454 - UpTrans_DiffCond - INFO - Test[9459/10518] Taxonomy = 03001627 Sample = d0255120e3351121c3bd24f986301745 Losses = ['33.4637', '4.3042', '20.8455', '1.7069'] Metrics = ['0.2577', '20.8455', '1.7069', '0.0000']
+2026-04-26 20:12:53,453 - UpTrans_DiffCond - INFO - Test[10510/10518] Taxonomy = 03636649 Sample = ea9ec4d9db2e06202471e6dd5ac3ef92 Losses = ['15.4612', '0.9644', '5.6577', '0.1142'] Metrics = ['0.8247', '5.6577', '0.1142', '0.0000']
+2026-04-26 20:12:53,826 - UpTrans_DiffCond - INFO - [Validation] EPOCH: 0  Metrics = ['0.4361', '13.5078', '0.8240', '0.0000']
+2026-04-26 20:12:53,828 - UpTrans_DiffCond - INFO - ============================ TEST RESULTS ============================
+2026-04-26 20:12:53,828 - UpTrans_DiffCond - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2026-04-26 20:12:53,828 - UpTrans_DiffCond - INFO - 03759954	14	0.644 	11.391 	0.898 	0.000 	microphone	
+2026-04-26 20:12:53,828 - UpTrans_DiffCond - INFO - 04330267	44	0.358 	15.250 	1.039 	0.000 	stove	
+2026-04-26 20:12:53,828 - UpTrans_DiffCond - INFO - 03261776	15	0.416 	15.564 	1.218 	0.000 	earphone	
+2026-04-26 20:12:53,828 - UpTrans_DiffCond - INFO - 03513137	33	0.291 	18.394 	1.539 	0.000 	helmet	
+2026-04-26 20:12:53,828 - UpTrans_DiffCond - INFO - 04460130	27	0.476 	14.013 	0.999 	0.000 	tower	
+2026-04-26 20:12:53,828 - UpTrans_DiffCond - INFO - 04468005	78	0.461 	12.516 	0.670 	0.000 	train	
+2026-04-26 20:12:53,828 - UpTrans_DiffCond - INFO - 03761084	31	0.308 	15.653 	0.889 	0.000 	microwaves	
+2026-04-26 20:12:53,828 - UpTrans_DiffCond - INFO - 04004475	34	0.352 	15.163 	0.966 	0.000 	printer	
+2026-04-26 20:12:53,828 - UpTrans_DiffCond - INFO - 03938244	20	0.387 	13.470 	0.636 	0.000 	pillow	
+2026-04-26 20:12:53,829 - UpTrans_DiffCond - INFO - 02992529	167	0.495 	10.517 	0.355 	0.000 	cellphone	
+2026-04-26 20:12:53,829 - UpTrans_DiffCond - INFO - 02808440	172	0.368 	14.400 	0.874 	0.000 	bathtub	
+2026-04-26 20:12:53,829 - UpTrans_DiffCond - INFO - 04530566	388	0.568 	10.744 	0.519 	0.000 	watercraft	
+2026-04-26 20:12:53,829 - UpTrans_DiffCond - INFO - 02871439	91	0.325 	15.009 	0.862 	0.000 	bookshelf	
+2026-04-26 20:12:53,829 - UpTrans_DiffCond - INFO - 03593526	120	0.336 	16.382 	1.185 	0.000 	jar	
+2026-04-26 20:12:53,829 - UpTrans_DiffCond - INFO - 04554684	34	0.295 	18.436 	1.831 	0.000 	washer	
+2026-04-26 20:12:53,829 - UpTrans_DiffCond - INFO - 03467517	160	0.850 	6.147 	0.174 	0.000 	guitar	
+2026-04-26 20:12:53,829 - UpTrans_DiffCond - INFO - 04401088	218	0.499 	10.479 	0.365 	0.000 	telephone	
+2026-04-26 20:12:53,829 - UpTrans_DiffCond - INFO - 02954340	12	0.381 	15.767 	1.351 	0.000 	cap	
+2026-04-26 20:12:53,829 - UpTrans_DiffCond - INFO - 02933112	315	0.307 	14.732 	0.709 	0.000 	cabinet	
+2026-04-26 20:12:53,829 - UpTrans_DiffCond - INFO - 03642806	92	0.449 	11.104 	0.400 	0.000 	laptop	
+2026-04-26 20:12:53,829 - UpTrans_DiffCond - INFO - 02924116	188	0.432 	12.143 	0.511 	0.000 	bus	
+2026-04-26 20:12:53,829 - UpTrans_DiffCond - INFO - 02946921	22	0.318 	16.104 	1.276 	0.000 	can	
+2026-04-26 20:12:53,829 - UpTrans_DiffCond - INFO - 02818832	47	0.354 	15.504 	1.059 	0.000 	bed	
+2026-04-26 20:12:53,830 - UpTrans_DiffCond - INFO - 04256520	635	0.372 	13.579 	0.630 	0.000 	sofa	
+2026-04-26 20:12:53,830 - UpTrans_DiffCond - INFO - 04379243	1687	0.452 	12.218 	0.638 	0.000 	table	
+2026-04-26 20:12:53,830 - UpTrans_DiffCond - INFO - 02747177	69	0.257 	17.231 	1.041 	0.000 	trash bin	
+2026-04-26 20:12:53,830 - UpTrans_DiffCond - INFO - 03046257	131	0.380 	13.832 	0.736 	0.000 	clock	
+2026-04-26 20:12:53,830 - UpTrans_DiffCond - INFO - 04225987	31	0.616 	9.524 	0.360 	0.000 	skateboard	
+2026-04-26 20:12:53,830 - UpTrans_DiffCond - INFO - 03797390	43	0.255 	17.578 	1.085 	0.000 	mug	
+2026-04-26 20:12:53,830 - UpTrans_DiffCond - INFO - 03001627	1356	0.444 	12.970 	0.738 	0.000 	chair	
+2026-04-26 20:12:53,830 - UpTrans_DiffCond - INFO - 03691459	320	0.327 	16.271 	1.114 	0.000 	loudspeaker	
+2026-04-26 20:12:53,830 - UpTrans_DiffCond - INFO - 02942699	23	0.320 	18.167 	1.587 	0.000 	camera	
+2026-04-26 20:12:53,830 - UpTrans_DiffCond - INFO - 03636649	464	0.592 	12.319 	1.135 	0.000 	lamp	
+2026-04-26 20:12:53,830 - UpTrans_DiffCond - INFO - 02691156	809	0.629 	9.218 	0.364 	0.000 	airplane	
+2026-04-26 20:12:53,830 - UpTrans_DiffCond - INFO - 02773838	17	0.432 	12.943 	0.707 	0.000 	bag	
+2026-04-26 20:12:53,830 - UpTrans_DiffCond - INFO - 02958343	703	0.283 	15.761 	0.826 	0.000 	car	
+2026-04-26 20:12:53,830 - UpTrans_DiffCond - INFO - 02880940	38	0.292 	15.381 	0.738 	0.000 	bowl	
+2026-04-26 20:12:53,831 - UpTrans_DiffCond - INFO - 04099429	17	0.742 	8.384 	0.390 	0.000 	rocket	
+2026-04-26 20:12:53,831 - UpTrans_DiffCond - INFO - 02828884	363	0.504 	10.781 	0.465 	0.000 	bench	
+2026-04-26 20:12:53,831 - UpTrans_DiffCond - INFO - 04090263	475	0.742 	8.046 	0.357 	0.000 	rifle	
+2026-04-26 20:12:53,831 - UpTrans_DiffCond - INFO - 03211117	219	0.425 	12.369 	0.577 	0.000 	display	
+2026-04-26 20:12:53,831 - UpTrans_DiffCond - INFO - 02876657	100	0.494 	11.762 	0.628 	0.000 	bottle	
+2026-04-26 20:12:53,831 - UpTrans_DiffCond - INFO - 03710193	19	0.603 	10.787 	0.592 	0.000 	mailbox	
+2026-04-26 20:12:53,831 - UpTrans_DiffCond - INFO - 03790512	68	0.328 	15.205 	0.992 	0.000 	motorbike	
+2026-04-26 20:12:53,831 - UpTrans_DiffCond - INFO - 03325088	149	0.556 	12.901 	1.121 	0.000 	faucet	
+2026-04-26 20:12:53,831 - UpTrans_DiffCond - INFO - 02801938	23	0.295 	16.092 	0.971 	0.000 	basket	
+2026-04-26 20:12:53,831 - UpTrans_DiffCond - INFO - 03337140	60	0.305 	15.685 	0.912 	0.000 	file cabinet	
+2026-04-26 20:12:53,831 - UpTrans_DiffCond - INFO - 02843684	15	0.304 	18.525 	1.477 	0.000 	birdhouse	
+2026-04-26 20:12:53,831 - UpTrans_DiffCond - INFO - 03624134	85	0.801 	6.875 	0.260 	0.000 	knife	
+2026-04-26 20:12:53,831 - UpTrans_DiffCond - INFO - 03991062	121	0.308 	17.432 	1.235 	0.000 	flowerpot	
+2026-04-26 20:12:53,831 - UpTrans_DiffCond - INFO - 03948459	62	0.547 	10.965 	0.560 	0.000 	pistol	
+2026-04-26 20:12:53,831 - UpTrans_DiffCond - INFO - 03928116	48	0.360 	15.045 	0.984 	0.000 	piano	
+2026-04-26 20:12:53,832 - UpTrans_DiffCond - INFO - 03207941	19	0.315 	15.675 	1.029 	0.000 	dishwasher	
+2026-04-26 20:12:53,832 - UpTrans_DiffCond - INFO - 04074963	14	0.523 	10.713 	0.456 	0.000 	remote	
+2026-04-26 20:12:53,832 - UpTrans_DiffCond - INFO - 03085013	13	0.515 	9.811 	0.292 	0.000 	keyboard	
+2026-04-26 20:12:53,832 - UpTrans_DiffCond - INFO - Overall		0.436 	13.508 	0.824 	0.000 	
+2026-04-26 20:12:54,183 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-best.pth
+2026-04-26 20:12:54,455 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-last.pth
+2026-04-26 20:12:55,203 - UpTrans_DiffCond - INFO - [Epoch 1/30][Batch 1/1311] BatchTime = 0.746 (s) DataTime = 0.154 (s) Losses = ['2.6636', '0.7577'] lr = 0.000099
+2026-04-26 20:13:45,495 - UpTrans_DiffCond - INFO - [Epoch 1/30][Batch 101/1311] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['2.1925', '0.5241'] lr = 0.000099
+2026-04-26 20:14:35,397 - UpTrans_DiffCond - INFO - [Epoch 1/30][Batch 201/1311] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['2.3215', '0.6654'] lr = 0.000099
+2026-04-26 20:15:25,294 - UpTrans_DiffCond - INFO - [Epoch 1/30][Batch 301/1311] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['2.3059', '0.7347'] lr = 0.000099
+2026-04-26 20:16:15,193 - UpTrans_DiffCond - INFO - [Epoch 1/30][Batch 401/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.8589', '0.5616'] lr = 0.000099
+2026-04-26 20:17:05,193 - UpTrans_DiffCond - INFO - [Epoch 1/30][Batch 501/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.6542', '0.4665'] lr = 0.000099
+2026-04-26 20:17:55,129 - UpTrans_DiffCond - INFO - [Epoch 1/30][Batch 601/1311] BatchTime = 0.536 (s) DataTime = 0.002 (s) Losses = ['2.3130', '0.6908'] lr = 0.000099
+2026-04-26 20:18:44,993 - UpTrans_DiffCond - INFO - [Epoch 1/30][Batch 701/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.4438', '0.8059'] lr = 0.000099
+2026-04-26 20:19:34,993 - UpTrans_DiffCond - INFO - [Epoch 1/30][Batch 801/1311] BatchTime = 0.494 (s) DataTime = 0.002 (s) Losses = ['2.7306', '0.9121'] lr = 0.000099
+2026-04-26 20:20:25,094 - UpTrans_DiffCond - INFO - [Epoch 1/30][Batch 901/1311] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['2.1263', '0.4800'] lr = 0.000099
+2026-04-26 20:21:15,093 - UpTrans_DiffCond - INFO - [Epoch 1/30][Batch 1001/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['1.7616', '0.5336'] lr = 0.000099
+2026-04-26 20:22:05,293 - UpTrans_DiffCond - INFO - [Epoch 1/30][Batch 1101/1311] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['2.0745', '0.6315'] lr = 0.000099
+2026-04-26 20:22:55,293 - UpTrans_DiffCond - INFO - [Epoch 1/30][Batch 1201/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.4900', '0.7552'] lr = 0.000099
+2026-04-26 20:23:45,296 - UpTrans_DiffCond - INFO - [Epoch 1/30][Batch 1301/1311] BatchTime = 0.502 (s) DataTime = 0.001 (s) Losses = ['2.6268', '0.8009'] lr = 0.000099
+2026-04-26 20:23:50,483 - UpTrans_DiffCond - INFO - [Training] EPOCH: 1 EpochTime = 656.027 (s) Losses = ['2.2683', '0.6447']
+2026-04-26 20:23:51,067 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-last.pth
+2026-04-26 20:23:51,833 - UpTrans_DiffCond - INFO - [Epoch 2/30][Batch 1/1311] BatchTime = 0.763 (s) DataTime = 0.181 (s) Losses = ['2.0791', '0.4469'] lr = 0.000099
+2026-04-26 20:24:41,793 - UpTrans_DiffCond - INFO - [Epoch 2/30][Batch 101/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.1547', '0.5501'] lr = 0.000099
+2026-04-26 20:25:31,994 - UpTrans_DiffCond - INFO - [Epoch 2/30][Batch 201/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.7206', '0.4134'] lr = 0.000099
+2026-04-26 20:26:21,993 - UpTrans_DiffCond - INFO - [Epoch 2/30][Batch 301/1311] BatchTime = 0.489 (s) DataTime = 0.002 (s) Losses = ['1.9809', '0.5387'] lr = 0.000099
+2026-04-26 20:27:12,093 - UpTrans_DiffCond - INFO - [Epoch 2/30][Batch 401/1311] BatchTime = 0.488 (s) DataTime = 0.002 (s) Losses = ['2.3008', '0.7627'] lr = 0.000099
+2026-04-26 20:28:02,193 - UpTrans_DiffCond - INFO - [Epoch 2/30][Batch 501/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['1.9089', '0.5727'] lr = 0.000099
+2026-04-26 20:28:52,194 - UpTrans_DiffCond - INFO - [Epoch 2/30][Batch 601/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.9768', '0.5172'] lr = 0.000099
+2026-04-26 20:29:42,194 - UpTrans_DiffCond - INFO - [Epoch 2/30][Batch 701/1311] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['2.2929', '0.6576'] lr = 0.000099
+2026-04-26 20:30:32,093 - UpTrans_DiffCond - INFO - [Epoch 2/30][Batch 801/1311] BatchTime = 0.498 (s) DataTime = 0.002 (s) Losses = ['2.3436', '0.7594'] lr = 0.000099
+2026-04-26 20:31:21,993 - UpTrans_DiffCond - INFO - [Epoch 2/30][Batch 901/1311] BatchTime = 0.499 (s) DataTime = 0.001 (s) Losses = ['2.0912', '0.6750'] lr = 0.000099
+2026-04-26 20:32:12,193 - UpTrans_DiffCond - INFO - [Epoch 2/30][Batch 1001/1311] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['1.7231', '0.4222'] lr = 0.000099
+2026-04-26 20:33:02,293 - UpTrans_DiffCond - INFO - [Epoch 2/30][Batch 1101/1311] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['1.9547', '0.5232'] lr = 0.000099
+2026-04-26 20:33:52,593 - UpTrans_DiffCond - INFO - [Epoch 2/30][Batch 1201/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.9046', '0.4388'] lr = 0.000099
+2026-04-26 20:34:42,593 - UpTrans_DiffCond - INFO - [Epoch 2/30][Batch 1301/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.4371', '0.7456'] lr = 0.000099
+2026-04-26 20:34:47,781 - UpTrans_DiffCond - INFO - [Training] EPOCH: 2 EpochTime = 656.711 (s) Losses = ['2.2908', '0.6531']
+2026-04-26 20:34:48,311 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-last.pth
+2026-04-26 20:34:49,097 - UpTrans_DiffCond - INFO - [Epoch 3/30][Batch 1/1311] BatchTime = 0.783 (s) DataTime = 0.190 (s) Losses = ['1.5190', '0.3420'] lr = 0.000099
+2026-04-26 20:35:38,894 - UpTrans_DiffCond - INFO - [Epoch 3/30][Batch 101/1311] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['1.7372', '0.4268'] lr = 0.000099
+2026-04-26 20:36:28,893 - UpTrans_DiffCond - INFO - [Epoch 3/30][Batch 201/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['1.8555', '0.5008'] lr = 0.000099
+2026-04-26 20:37:18,793 - UpTrans_DiffCond - INFO - [Epoch 3/30][Batch 301/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.8936', '0.6021'] lr = 0.000099
+2026-04-26 20:38:08,705 - UpTrans_DiffCond - INFO - [Epoch 3/30][Batch 401/1311] BatchTime = 0.412 (s) DataTime = 0.002 (s) Losses = ['2.6826', '0.8123'] lr = 0.000099
+2026-04-26 20:38:58,493 - UpTrans_DiffCond - INFO - [Epoch 3/30][Batch 501/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.0109', '0.4702'] lr = 0.000099
+2026-04-26 20:39:48,804 - UpTrans_DiffCond - INFO - [Epoch 3/30][Batch 601/1311] BatchTime = 0.511 (s) DataTime = 0.002 (s) Losses = ['2.0792', '0.4946'] lr = 0.000099
+2026-04-26 20:40:38,693 - UpTrans_DiffCond - INFO - [Epoch 3/30][Batch 701/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.9443', '0.5180'] lr = 0.000099
+2026-04-26 20:41:28,793 - UpTrans_DiffCond - INFO - [Epoch 3/30][Batch 801/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.2722', '0.5730'] lr = 0.000099
+2026-04-26 20:42:18,793 - UpTrans_DiffCond - INFO - [Epoch 3/30][Batch 901/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.0224', '0.5086'] lr = 0.000099
+2026-04-26 20:43:08,893 - UpTrans_DiffCond - INFO - [Epoch 3/30][Batch 1001/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.8421', '0.8747'] lr = 0.000099
+2026-04-26 20:43:58,893 - UpTrans_DiffCond - INFO - [Epoch 3/30][Batch 1101/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.7090', '0.4596'] lr = 0.000099
+2026-04-26 20:44:49,093 - UpTrans_DiffCond - INFO - [Epoch 3/30][Batch 1201/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.3019', '0.6202'] lr = 0.000099
+2026-04-26 20:45:39,193 - UpTrans_DiffCond - INFO - [Epoch 3/30][Batch 1301/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.9453', '0.9357'] lr = 0.000099
+2026-04-26 20:45:44,365 - UpTrans_DiffCond - INFO - [Training] EPOCH: 3 EpochTime = 656.052 (s) Losses = ['2.2957', '0.6560']
+2026-04-26 20:45:44,916 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-last.pth
+2026-04-26 20:45:45,596 - UpTrans_DiffCond - INFO - [Epoch 4/30][Batch 1/1311] BatchTime = 0.678 (s) DataTime = 0.179 (s) Losses = ['2.8821', '0.9244'] lr = 0.000098
+2026-04-26 20:46:35,493 - UpTrans_DiffCond - INFO - [Epoch 4/30][Batch 101/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.8784', '0.4967'] lr = 0.000098
+2026-04-26 20:47:25,393 - UpTrans_DiffCond - INFO - [Epoch 4/30][Batch 201/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.7145', '0.7985'] lr = 0.000098
+2026-04-26 20:48:15,594 - UpTrans_DiffCond - INFO - [Epoch 4/30][Batch 301/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.8369', '0.9125'] lr = 0.000098
+2026-04-26 20:49:05,693 - UpTrans_DiffCond - INFO - [Epoch 4/30][Batch 401/1311] BatchTime = 0.499 (s) DataTime = 0.001 (s) Losses = ['2.1541', '0.6012'] lr = 0.000098
+2026-04-26 20:49:55,793 - UpTrans_DiffCond - INFO - [Epoch 4/30][Batch 501/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['1.5743', '0.4491'] lr = 0.000098
+2026-04-26 20:50:45,693 - UpTrans_DiffCond - INFO - [Epoch 4/30][Batch 601/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.4186', '0.7558'] lr = 0.000098
+2026-04-26 20:51:35,899 - UpTrans_DiffCond - INFO - [Epoch 4/30][Batch 701/1311] BatchTime = 0.505 (s) DataTime = 0.001 (s) Losses = ['3.1191', '0.9916'] lr = 0.000098
+2026-04-26 20:52:25,994 - UpTrans_DiffCond - INFO - [Epoch 4/30][Batch 801/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.3965', '0.6357'] lr = 0.000098
+2026-04-26 20:53:16,193 - UpTrans_DiffCond - INFO - [Epoch 4/30][Batch 901/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.3634', '0.7768'] lr = 0.000098
+2026-04-26 20:54:06,493 - UpTrans_DiffCond - INFO - [Epoch 4/30][Batch 1001/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.6212', '0.8035'] lr = 0.000098
+2026-04-26 20:54:56,593 - UpTrans_DiffCond - INFO - [Epoch 4/30][Batch 1101/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.0079', '0.5108'] lr = 0.000098
+2026-04-26 20:55:46,793 - UpTrans_DiffCond - INFO - [Epoch 4/30][Batch 1201/1311] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['1.6764', '0.4263'] lr = 0.000098
+2026-04-26 20:56:36,893 - UpTrans_DiffCond - INFO - [Epoch 4/30][Batch 1301/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.4293', '0.5339'] lr = 0.000098
+2026-04-26 20:56:42,094 - UpTrans_DiffCond - INFO - [Training] EPOCH: 4 EpochTime = 657.176 (s) Losses = ['2.2604', '0.6418']
+2026-04-26 20:56:42,642 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-last.pth
+2026-04-26 20:56:43,397 - UpTrans_DiffCond - INFO - [Epoch 5/30][Batch 1/1311] BatchTime = 0.752 (s) DataTime = 0.177 (s) Losses = ['2.8044', '0.7740'] lr = 0.000098
+2026-04-26 20:57:33,293 - UpTrans_DiffCond - INFO - [Epoch 5/30][Batch 101/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['3.2567', '0.9431'] lr = 0.000098
+2026-04-26 20:58:23,293 - UpTrans_DiffCond - INFO - [Epoch 5/30][Batch 201/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.3783', '0.6990'] lr = 0.000098
+2026-04-26 20:59:13,293 - UpTrans_DiffCond - INFO - [Epoch 5/30][Batch 301/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['1.7198', '0.4191'] lr = 0.000098
+2026-04-26 21:00:03,493 - UpTrans_DiffCond - INFO - [Epoch 5/30][Batch 401/1311] BatchTime = 0.598 (s) DataTime = 0.002 (s) Losses = ['1.8056', '0.4111'] lr = 0.000098
+2026-04-26 21:00:53,594 - UpTrans_DiffCond - INFO - [Epoch 5/30][Batch 501/1311] BatchTime = 0.495 (s) DataTime = 0.002 (s) Losses = ['3.0667', '1.0666'] lr = 0.000098
+2026-04-26 21:01:43,893 - UpTrans_DiffCond - INFO - [Epoch 5/30][Batch 601/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.5274', '0.7478'] lr = 0.000098
+2026-04-26 21:02:33,993 - UpTrans_DiffCond - INFO - [Epoch 5/30][Batch 701/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.7315', '1.0128'] lr = 0.000098
+2026-04-26 21:03:23,995 - UpTrans_DiffCond - INFO - [Epoch 5/30][Batch 801/1311] BatchTime = 0.502 (s) DataTime = 0.002 (s) Losses = ['1.7248', '0.3680'] lr = 0.000098
+2026-04-26 21:04:14,001 - UpTrans_DiffCond - INFO - [Epoch 5/30][Batch 901/1311] BatchTime = 0.505 (s) DataTime = 0.002 (s) Losses = ['1.9861', '0.5648'] lr = 0.000098
+2026-04-26 21:05:04,093 - UpTrans_DiffCond - INFO - [Epoch 5/30][Batch 1001/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['1.7907', '0.4506'] lr = 0.000098
+2026-04-26 21:05:53,994 - UpTrans_DiffCond - INFO - [Epoch 5/30][Batch 1101/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['1.8972', '0.5206'] lr = 0.000098
+2026-04-26 21:06:44,106 - UpTrans_DiffCond - INFO - [Epoch 5/30][Batch 1201/1311] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['1.8177', '0.5479'] lr = 0.000098
+2026-04-26 21:07:34,193 - UpTrans_DiffCond - INFO - [Epoch 5/30][Batch 1301/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.0683', '0.6465'] lr = 0.000098
+2026-04-26 21:07:39,474 - UpTrans_DiffCond - INFO - [Training] EPOCH: 5 EpochTime = 656.829 (s) Losses = ['2.2778', '0.6488']
+2026-04-26 21:07:39,475 - UpTrans_DiffCond - INFO - [VALIDATION] Start validating epoch 5
+2026-04-26 21:08:17,460 - UpTrans_DiffCond - INFO - Test[1051/10518] Taxonomy = 02691156 Sample = c7749c0a8b61f43bc9b9e28055202e3d Losses = ['21.9287', '2.7865', '14.0906', '1.4757'] Metrics = ['0.5793', '14.0906', '1.4757', '0.0000']
+2026-04-26 21:08:55,252 - UpTrans_DiffCond - INFO - Test[2102/10518] Taxonomy = 03211117 Sample = ab2f9418c111cc6ddb965514105122a4 Losses = ['15.7039', '0.8324', '7.3418', '0.1624'] Metrics = ['0.7306', '7.3418', '0.1624', '0.0000']
+2026-04-26 21:09:33,104 - UpTrans_DiffCond - INFO - Test[3153/10518] Taxonomy = 02876657 Sample = c5032e4be091aabb36fe7a88df793982 Losses = ['32.0638', '4.4236', '18.8182', '1.7952'] Metrics = ['0.3828', '18.8182', '1.7952', '0.0000']
+2026-04-26 21:10:10,963 - UpTrans_DiffCond - INFO - Test[4204/10518] Taxonomy = 03211117 Sample = 722df1da5778d45b1e43523279c7f09f Losses = ['23.1978', '2.4871', '12.3236', '0.9522'] Metrics = ['0.5482', '12.3236', '0.9522', '0.0000']
+2026-04-26 21:10:48,778 - UpTrans_DiffCond - INFO - Test[5255/10518] Taxonomy = 02828884 Sample = 14b63361a48a9fffe4a048c146e8bd43 Losses = ['25.3102', '2.9731', '10.2881', '0.4582'] Metrics = ['0.5372', '10.2881', '0.4582', '0.0000']
+2026-04-26 21:11:26,706 - UpTrans_DiffCond - INFO - Test[6306/10518] Taxonomy = 03211117 Sample = d330d50a0255529d19ed6e1a590c9122 Losses = ['24.1402', '2.7114', '13.1881', '0.7757'] Metrics = ['0.5003', '13.1881', '0.7757', '0.0000']
+2026-04-26 21:12:04,647 - UpTrans_DiffCond - INFO - Test[7357/10518] Taxonomy = 04379243 Sample = b1ca280d9567270ade98d10ab5975b59 Losses = ['24.8499', '2.4688', '13.8302', '0.5842'] Metrics = ['0.3387', '13.8302', '0.5842', '0.0000']
+2026-04-26 21:12:42,472 - UpTrans_DiffCond - INFO - Test[8408/10518] Taxonomy = 03001627 Sample = 89208a619341d9fdb8c516ed5c4ce32 Losses = ['26.3028', '2.6602', '12.9507', '0.5254'] Metrics = ['0.3708', '12.9507', '0.5254', '0.0000']
+2026-04-26 21:13:20,440 - UpTrans_DiffCond - INFO - Test[9459/10518] Taxonomy = 03001627 Sample = d0255120e3351121c3bd24f986301745 Losses = ['28.2451', '3.0149', '16.1789', '0.9395'] Metrics = ['0.2969', '16.1789', '0.9395', '0.0000']
+2026-04-26 21:13:58,291 - UpTrans_DiffCond - INFO - Test[10510/10518] Taxonomy = 03636649 Sample = ea9ec4d9db2e06202471e6dd5ac3ef92 Losses = ['13.1348', '0.7250', '5.0713', '0.0928'] Metrics = ['0.8717', '5.0713', '0.0928', '0.0000']
+2026-04-26 21:13:58,685 - UpTrans_DiffCond - INFO - [Validation] EPOCH: 5  Metrics = ['0.4338', '13.5173', '0.8146', '0.0000']
+2026-04-26 21:13:58,687 - UpTrans_DiffCond - INFO - ============================ TEST RESULTS ============================
+2026-04-26 21:13:58,687 - UpTrans_DiffCond - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2026-04-26 21:13:58,687 - UpTrans_DiffCond - INFO - 03759954	14	0.620 	11.765 	1.156 	0.000 	microphone	
+2026-04-26 21:13:58,687 - UpTrans_DiffCond - INFO - 04330267	44	0.357 	15.597 	1.094 	0.000 	stove	
+2026-04-26 21:13:58,687 - UpTrans_DiffCond - INFO - 03261776	15	0.408 	15.779 	1.251 	0.000 	earphone	
+2026-04-26 21:13:58,687 - UpTrans_DiffCond - INFO - 03513137	33	0.291 	19.144 	1.771 	0.000 	helmet	
+2026-04-26 21:13:58,687 - UpTrans_DiffCond - INFO - 04460130	27	0.481 	12.995 	0.718 	0.000 	tower	
+2026-04-26 21:13:58,687 - UpTrans_DiffCond - INFO - 04468005	78	0.450 	12.477 	0.663 	0.000 	train	
+2026-04-26 21:13:58,687 - UpTrans_DiffCond - INFO - 03761084	31	0.311 	15.946 	0.939 	0.000 	microwaves	
+2026-04-26 21:13:58,688 - UpTrans_DiffCond - INFO - 04004475	34	0.342 	15.920 	1.063 	0.000 	printer	
+2026-04-26 21:13:58,688 - UpTrans_DiffCond - INFO - 03938244	20	0.385 	14.337 	0.842 	0.000 	pillow	
+2026-04-26 21:13:58,688 - UpTrans_DiffCond - INFO - 02992529	167	0.479 	10.834 	0.379 	0.000 	cellphone	
+2026-04-26 21:13:58,688 - UpTrans_DiffCond - INFO - 02808440	172	0.364 	14.602 	0.867 	0.000 	bathtub	
+2026-04-26 21:13:58,688 - UpTrans_DiffCond - INFO - 04530566	388	0.564 	10.867 	0.559 	0.000 	watercraft	
+2026-04-26 21:13:58,688 - UpTrans_DiffCond - INFO - 02871439	91	0.327 	14.615 	0.789 	0.000 	bookshelf	
+2026-04-26 21:13:58,688 - UpTrans_DiffCond - INFO - 03593526	120	0.331 	16.490 	1.138 	0.000 	jar	
+2026-04-26 21:13:58,688 - UpTrans_DiffCond - INFO - 04554684	34	0.295 	17.333 	1.374 	0.000 	washer	
+2026-04-26 21:13:58,688 - UpTrans_DiffCond - INFO - 03467517	160	0.837 	6.397 	0.190 	0.000 	guitar	
+2026-04-26 21:13:58,688 - UpTrans_DiffCond - INFO - 04401088	218	0.479 	10.754 	0.377 	0.000 	telephone	
+2026-04-26 21:13:58,688 - UpTrans_DiffCond - INFO - 02954340	12	0.376 	13.821 	0.762 	0.000 	cap	
+2026-04-26 21:13:58,688 - UpTrans_DiffCond - INFO - 02933112	315	0.307 	14.684 	0.709 	0.000 	cabinet	
+2026-04-26 21:13:58,688 - UpTrans_DiffCond - INFO - 03642806	92	0.449 	10.891 	0.367 	0.000 	laptop	
+2026-04-26 21:13:58,689 - UpTrans_DiffCond - INFO - 02924116	188	0.434 	12.045 	0.512 	0.000 	bus	
+2026-04-26 21:13:58,689 - UpTrans_DiffCond - INFO - 02946921	22	0.315 	15.295 	0.897 	0.000 	can	
+2026-04-26 21:13:58,689 - UpTrans_DiffCond - INFO - 02818832	47	0.357 	15.808 	1.122 	0.000 	bed	
+2026-04-26 21:13:58,689 - UpTrans_DiffCond - INFO - 04256520	635	0.371 	13.598 	0.640 	0.000 	sofa	
+2026-04-26 21:13:58,689 - UpTrans_DiffCond - INFO - 04379243	1687	0.454 	12.262 	0.664 	0.000 	table	
+2026-04-26 21:13:58,689 - UpTrans_DiffCond - INFO - 02747177	69	0.258 	17.599 	1.143 	0.000 	trash bin	
+2026-04-26 21:13:58,689 - UpTrans_DiffCond - INFO - 03046257	131	0.374 	14.434 	0.848 	0.000 	clock	
+2026-04-26 21:13:58,689 - UpTrans_DiffCond - INFO - 04225987	31	0.600 	9.700 	0.394 	0.000 	skateboard	
+2026-04-26 21:13:58,689 - UpTrans_DiffCond - INFO - 03797390	43	0.255 	17.624 	1.086 	0.000 	mug	
+2026-04-26 21:13:58,689 - UpTrans_DiffCond - INFO - 03001627	1356	0.447 	12.870 	0.724 	0.000 	chair	
+2026-04-26 21:13:58,689 - UpTrans_DiffCond - INFO - 03691459	320	0.327 	16.107 	1.069 	0.000 	loudspeaker	
+2026-04-26 21:13:58,689 - UpTrans_DiffCond - INFO - 02942699	23	0.325 	17.493 	1.379 	0.000 	camera	
+2026-04-26 21:13:58,689 - UpTrans_DiffCond - INFO - 03636649	464	0.593 	12.448 	1.249 	0.000 	lamp	
+2026-04-26 21:13:58,689 - UpTrans_DiffCond - INFO - 02691156	809	0.634 	9.182 	0.373 	0.000 	airplane	
+2026-04-26 21:13:58,689 - UpTrans_DiffCond - INFO - 02773838	17	0.423 	13.131 	0.732 	0.000 	bag	
+2026-04-26 21:13:58,690 - UpTrans_DiffCond - INFO - 02958343	703	0.286 	15.609 	0.820 	0.000 	car	
+2026-04-26 21:13:58,690 - UpTrans_DiffCond - INFO - 02880940	38	0.294 	15.714 	0.806 	0.000 	bowl	
+2026-04-26 21:13:58,690 - UpTrans_DiffCond - INFO - 04099429	17	0.732 	8.636 	0.466 	0.000 	rocket	
+2026-04-26 21:13:58,690 - UpTrans_DiffCond - INFO - 02828884	363	0.509 	10.765 	0.468 	0.000 	bench	
+2026-04-26 21:13:58,690 - UpTrans_DiffCond - INFO - 04090263	475	0.738 	7.991 	0.359 	0.000 	rifle	
+2026-04-26 21:13:58,690 - UpTrans_DiffCond - INFO - 03211117	219	0.417 	12.867 	0.679 	0.000 	display	
+2026-04-26 21:13:58,690 - UpTrans_DiffCond - INFO - 02876657	100	0.477 	12.082 	0.642 	0.000 	bottle	
+2026-04-26 21:13:58,690 - UpTrans_DiffCond - INFO - 03710193	19	0.588 	11.205 	0.672 	0.000 	mailbox	
+2026-04-26 21:13:58,690 - UpTrans_DiffCond - INFO - 03790512	68	0.335 	14.811 	0.915 	0.000 	motorbike	
+2026-04-26 21:13:58,690 - UpTrans_DiffCond - INFO - 03325088	149	0.558 	13.353 	1.292 	0.000 	faucet	
+2026-04-26 21:13:58,690 - UpTrans_DiffCond - INFO - 02801938	23	0.298 	16.129 	0.966 	0.000 	basket	
+2026-04-26 21:13:58,690 - UpTrans_DiffCond - INFO - 03337140	60	0.306 	15.455 	0.864 	0.000 	file cabinet	
+2026-04-26 21:13:58,690 - UpTrans_DiffCond - INFO - 02843684	15	0.305 	18.407 	1.443 	0.000 	birdhouse	
+2026-04-26 21:13:58,690 - UpTrans_DiffCond - INFO - 03624134	85	0.813 	6.651 	0.237 	0.000 	knife	
+2026-04-26 21:13:58,691 - UpTrans_DiffCond - INFO - 03991062	121	0.305 	18.193 	1.445 	0.000 	flowerpot	
+2026-04-26 21:13:58,691 - UpTrans_DiffCond - INFO - 03948459	62	0.563 	10.278 	0.465 	0.000 	pistol	
+2026-04-26 21:13:58,691 - UpTrans_DiffCond - INFO - 03928116	48	0.363 	14.689 	0.901 	0.000 	piano	
+2026-04-26 21:13:58,691 - UpTrans_DiffCond - INFO - 03207941	19	0.314 	14.982 	0.740 	0.000 	dishwasher	
+2026-04-26 21:13:58,691 - UpTrans_DiffCond - INFO - 04074963	14	0.518 	10.968 	0.481 	0.000 	remote	
+2026-04-26 21:13:58,691 - UpTrans_DiffCond - INFO - 03085013	13	0.517 	9.822 	0.303 	0.000 	keyboard	
+2026-04-26 21:13:58,691 - UpTrans_DiffCond - INFO - Overall		0.434 	13.517 	0.815 	0.000 	
+2026-04-26 21:13:59,260 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-best.pth
+2026-04-26 21:13:59,799 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-last.pth
+2026-04-26 21:14:00,533 - UpTrans_DiffCond - INFO - [Epoch 6/30][Batch 1/1311] BatchTime = 0.732 (s) DataTime = 0.187 (s) Losses = ['1.9691', '0.4968'] lr = 0.000097
+2026-04-26 21:14:50,593 - UpTrans_DiffCond - INFO - [Epoch 6/30][Batch 101/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.2785', '0.7958'] lr = 0.000097
+2026-04-26 21:15:40,698 - UpTrans_DiffCond - INFO - [Epoch 6/30][Batch 201/1311] BatchTime = 0.504 (s) DataTime = 0.002 (s) Losses = ['2.3220', '0.6032'] lr = 0.000097
+2026-04-26 21:16:30,793 - UpTrans_DiffCond - INFO - [Epoch 6/30][Batch 301/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.8945', '0.5567'] lr = 0.000097
+2026-04-26 21:17:20,893 - UpTrans_DiffCond - INFO - [Epoch 6/30][Batch 401/1311] BatchTime = 0.489 (s) DataTime = 0.001 (s) Losses = ['3.2145', '0.8989'] lr = 0.000097
+2026-04-26 21:18:11,194 - UpTrans_DiffCond - INFO - [Epoch 6/30][Batch 501/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.3854', '0.3701'] lr = 0.000097
+2026-04-26 21:19:01,493 - UpTrans_DiffCond - INFO - [Epoch 6/30][Batch 601/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.2731', '0.5603'] lr = 0.000097
+2026-04-26 21:19:51,593 - UpTrans_DiffCond - INFO - [Epoch 6/30][Batch 701/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['1.6212', '0.4293'] lr = 0.000097
+2026-04-26 21:20:41,694 - UpTrans_DiffCond - INFO - [Epoch 6/30][Batch 801/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.8131', '0.4489'] lr = 0.000097
+2026-04-26 21:21:32,093 - UpTrans_DiffCond - INFO - [Epoch 6/30][Batch 901/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['4.1328', '1.4986'] lr = 0.000097
+2026-04-26 21:22:22,193 - UpTrans_DiffCond - INFO - [Epoch 6/30][Batch 1001/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.4805', '0.8157'] lr = 0.000097
+2026-04-26 21:23:12,203 - UpTrans_DiffCond - INFO - [Epoch 6/30][Batch 1101/1311] BatchTime = 0.510 (s) DataTime = 0.002 (s) Losses = ['2.0553', '0.6022'] lr = 0.000097
+2026-04-26 21:24:02,293 - UpTrans_DiffCond - INFO - [Epoch 6/30][Batch 1201/1311] BatchTime = 0.499 (s) DataTime = 0.001 (s) Losses = ['2.0530', '0.5451'] lr = 0.000097
+2026-04-26 21:24:52,493 - UpTrans_DiffCond - INFO - [Epoch 6/30][Batch 1301/1311] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['2.0295', '0.5167'] lr = 0.000097
+2026-04-26 21:24:57,681 - UpTrans_DiffCond - INFO - [Training] EPOCH: 6 EpochTime = 657.879 (s) Losses = ['2.2909', '0.6514']
+2026-04-26 21:24:58,230 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-last.pth
+2026-04-26 21:24:58,995 - UpTrans_DiffCond - INFO - [Epoch 7/30][Batch 1/1311] BatchTime = 0.763 (s) DataTime = 0.198 (s) Losses = ['2.2150', '0.6924'] lr = 0.000097
+2026-04-26 21:25:48,993 - UpTrans_DiffCond - INFO - [Epoch 7/30][Batch 101/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.9549', '0.4679'] lr = 0.000097
+2026-04-26 21:26:39,103 - UpTrans_DiffCond - INFO - [Epoch 7/30][Batch 201/1311] BatchTime = 0.470 (s) DataTime = 0.001 (s) Losses = ['1.7505', '0.4381'] lr = 0.000097
+2026-04-26 21:27:28,993 - UpTrans_DiffCond - INFO - [Epoch 7/30][Batch 301/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.3343', '0.6854'] lr = 0.000097
+2026-04-26 21:28:18,793 - UpTrans_DiffCond - INFO - [Epoch 7/30][Batch 401/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.5138', '0.7358'] lr = 0.000097
+2026-04-26 21:29:08,993 - UpTrans_DiffCond - INFO - [Epoch 7/30][Batch 501/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.5225', '0.3867'] lr = 0.000097
+2026-04-26 21:29:58,993 - UpTrans_DiffCond - INFO - [Epoch 7/30][Batch 601/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.7570', '0.4180'] lr = 0.000097
+2026-04-26 21:30:48,993 - UpTrans_DiffCond - INFO - [Epoch 7/30][Batch 701/1311] BatchTime = 0.497 (s) DataTime = 0.001 (s) Losses = ['1.8141', '0.5344'] lr = 0.000097
+2026-04-26 21:31:38,993 - UpTrans_DiffCond - INFO - [Epoch 7/30][Batch 801/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.1380', '0.5656'] lr = 0.000097
+2026-04-26 21:32:28,895 - UpTrans_DiffCond - INFO - [Epoch 7/30][Batch 901/1311] BatchTime = 0.488 (s) DataTime = 0.002 (s) Losses = ['1.7818', '0.4323'] lr = 0.000097
+2026-04-26 21:33:18,995 - UpTrans_DiffCond - INFO - [Epoch 7/30][Batch 1001/1311] BatchTime = 0.502 (s) DataTime = 0.002 (s) Losses = ['2.2057', '0.5387'] lr = 0.000097
+2026-04-26 21:34:09,093 - UpTrans_DiffCond - INFO - [Epoch 7/30][Batch 1101/1311] BatchTime = 0.499 (s) DataTime = 0.001 (s) Losses = ['2.1031', '0.6377'] lr = 0.000097
+2026-04-26 21:34:59,293 - UpTrans_DiffCond - INFO - [Epoch 7/30][Batch 1201/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.4597', '0.7747'] lr = 0.000097
+2026-04-26 21:35:49,393 - UpTrans_DiffCond - INFO - [Epoch 7/30][Batch 1301/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.1384', '0.5935'] lr = 0.000097
+2026-04-26 21:35:54,663 - UpTrans_DiffCond - INFO - [Training] EPOCH: 7 EpochTime = 656.430 (s) Losses = ['2.3205', '0.6667']
+2026-04-26 21:35:55,265 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-last.pth
+2026-04-26 21:35:56,004 - UpTrans_DiffCond - INFO - [Epoch 8/30][Batch 1/1311] BatchTime = 0.737 (s) DataTime = 0.163 (s) Losses = ['2.4787', '0.7054'] lr = 0.000096
+2026-04-26 21:36:45,893 - UpTrans_DiffCond - INFO - [Epoch 8/30][Batch 101/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.8643', '0.4355'] lr = 0.000096
+2026-04-26 21:37:35,893 - UpTrans_DiffCond - INFO - [Epoch 8/30][Batch 201/1311] BatchTime = 0.488 (s) DataTime = 0.002 (s) Losses = ['2.6128', '0.8201'] lr = 0.000096
+2026-04-26 21:38:25,893 - UpTrans_DiffCond - INFO - [Epoch 8/30][Batch 301/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.9821', '0.5918'] lr = 0.000096
+2026-04-26 21:39:15,795 - UpTrans_DiffCond - INFO - [Epoch 8/30][Batch 401/1311] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['2.1026', '0.5330'] lr = 0.000096
+2026-04-26 21:40:05,993 - UpTrans_DiffCond - INFO - [Epoch 8/30][Batch 501/1311] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['2.2185', '0.4564'] lr = 0.000096
+2026-04-26 21:40:56,294 - UpTrans_DiffCond - INFO - [Epoch 8/30][Batch 601/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.8791', '0.5027'] lr = 0.000096
+2026-04-26 21:41:46,393 - UpTrans_DiffCond - INFO - [Epoch 8/30][Batch 701/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.8841', '0.5290'] lr = 0.000096
+2026-04-26 21:42:36,493 - UpTrans_DiffCond - INFO - [Epoch 8/30][Batch 801/1311] BatchTime = 0.487 (s) DataTime = 0.002 (s) Losses = ['1.7304', '0.5001'] lr = 0.000096
+2026-04-26 21:43:26,594 - UpTrans_DiffCond - INFO - [Epoch 8/30][Batch 901/1311] BatchTime = 0.499 (s) DataTime = 0.001 (s) Losses = ['3.1784', '1.0254'] lr = 0.000096
+2026-04-26 21:44:16,593 - UpTrans_DiffCond - INFO - [Epoch 8/30][Batch 1001/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['1.9541', '0.5676'] lr = 0.000096
+2026-04-26 21:45:06,193 - UpTrans_DiffCond - INFO - [Epoch 8/30][Batch 1101/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['1.7795', '0.4252'] lr = 0.000096
+2026-04-26 21:45:56,293 - UpTrans_DiffCond - INFO - [Epoch 8/30][Batch 1201/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.0841', '0.6216'] lr = 0.000096
+2026-04-26 21:46:46,505 - UpTrans_DiffCond - INFO - [Epoch 8/30][Batch 1301/1311] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['1.5290', '0.4003'] lr = 0.000096
+2026-04-26 21:46:51,582 - UpTrans_DiffCond - INFO - [Training] EPOCH: 8 EpochTime = 656.314 (s) Losses = ['2.2788', '0.6491']
+2026-04-26 21:46:52,122 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-last.pth
+2026-04-26 21:46:52,833 - UpTrans_DiffCond - INFO - [Epoch 9/30][Batch 1/1311] BatchTime = 0.708 (s) DataTime = 0.161 (s) Losses = ['1.9818', '0.4671'] lr = 0.000096
+2026-04-26 21:47:42,794 - UpTrans_DiffCond - INFO - [Epoch 9/30][Batch 101/1311] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['2.1078', '0.5836'] lr = 0.000096
+2026-04-26 21:48:32,295 - UpTrans_DiffCond - INFO - [Epoch 9/30][Batch 201/1311] BatchTime = 0.502 (s) DataTime = 0.001 (s) Losses = ['2.2679', '0.7075'] lr = 0.000096
+2026-04-26 21:49:22,293 - UpTrans_DiffCond - INFO - [Epoch 9/30][Batch 301/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.4107', '0.7877'] lr = 0.000096
+2026-04-26 21:50:12,393 - UpTrans_DiffCond - INFO - [Epoch 9/30][Batch 401/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['1.9804', '0.5474'] lr = 0.000096
+2026-04-26 21:51:02,993 - UpTrans_DiffCond - INFO - [Epoch 9/30][Batch 501/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.6155', '0.4056'] lr = 0.000096
+2026-04-26 21:51:52,993 - UpTrans_DiffCond - INFO - [Epoch 9/30][Batch 601/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.9988', '0.9723'] lr = 0.000096
+2026-04-26 21:52:43,093 - UpTrans_DiffCond - INFO - [Epoch 9/30][Batch 701/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.8479', '0.4256'] lr = 0.000096
+2026-04-26 21:53:33,293 - UpTrans_DiffCond - INFO - [Epoch 9/30][Batch 801/1311] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['1.7046', '0.4345'] lr = 0.000096
+2026-04-26 21:54:23,193 - UpTrans_DiffCond - INFO - [Epoch 9/30][Batch 901/1311] BatchTime = 0.494 (s) DataTime = 0.002 (s) Losses = ['1.7642', '0.4690'] lr = 0.000096
+2026-04-26 21:55:13,193 - UpTrans_DiffCond - INFO - [Epoch 9/30][Batch 1001/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.6532', '0.4477'] lr = 0.000096
+2026-04-26 21:56:03,194 - UpTrans_DiffCond - INFO - [Epoch 9/30][Batch 1101/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.5774', '0.7436'] lr = 0.000096
+2026-04-26 21:56:53,293 - UpTrans_DiffCond - INFO - [Epoch 9/30][Batch 1201/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.3075', '0.6962'] lr = 0.000096
+2026-04-26 21:57:43,393 - UpTrans_DiffCond - INFO - [Epoch 9/30][Batch 1301/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.2747', '0.6150'] lr = 0.000096
+2026-04-26 21:57:48,482 - UpTrans_DiffCond - INFO - [Training] EPOCH: 9 EpochTime = 656.357 (s) Losses = ['2.2667', '0.6434']
+2026-04-26 21:57:49,057 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-last.pth
+2026-04-26 21:57:49,795 - UpTrans_DiffCond - INFO - [Epoch 10/30][Batch 1/1311] BatchTime = 0.736 (s) DataTime = 0.166 (s) Losses = ['2.8327', '0.9464'] lr = 0.000095
+2026-04-26 21:58:39,793 - UpTrans_DiffCond - INFO - [Epoch 10/30][Batch 101/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.6414', '0.7468'] lr = 0.000095
+2026-04-26 21:59:29,793 - UpTrans_DiffCond - INFO - [Epoch 10/30][Batch 201/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['1.5624', '0.4546'] lr = 0.000095
+2026-04-26 22:00:19,893 - UpTrans_DiffCond - INFO - [Epoch 10/30][Batch 301/1311] BatchTime = 0.485 (s) DataTime = 0.002 (s) Losses = ['2.1196', '0.6223'] lr = 0.000095
+2026-04-26 22:01:09,994 - UpTrans_DiffCond - INFO - [Epoch 10/30][Batch 401/1311] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['2.0336', '0.5496'] lr = 0.000095
+2026-04-26 22:02:00,393 - UpTrans_DiffCond - INFO - [Epoch 10/30][Batch 501/1311] BatchTime = 0.487 (s) DataTime = 0.002 (s) Losses = ['1.8110', '0.4784'] lr = 0.000095
+2026-04-26 22:02:50,193 - UpTrans_DiffCond - INFO - [Epoch 10/30][Batch 601/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.0835', '0.5420'] lr = 0.000095
+2026-04-26 22:03:40,093 - UpTrans_DiffCond - INFO - [Epoch 10/30][Batch 701/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.4883', '0.3759'] lr = 0.000095
+2026-04-26 22:04:30,406 - UpTrans_DiffCond - INFO - [Epoch 10/30][Batch 801/1311] BatchTime = 0.512 (s) DataTime = 0.003 (s) Losses = ['1.6412', '0.4398'] lr = 0.000095
+2026-04-26 22:05:20,904 - UpTrans_DiffCond - INFO - [Epoch 10/30][Batch 901/1311] BatchTime = 0.492 (s) DataTime = 0.002 (s) Losses = ['1.7168', '0.3856'] lr = 0.000095
+2026-04-26 22:06:11,094 - UpTrans_DiffCond - INFO - [Epoch 10/30][Batch 1001/1311] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['2.2957', '0.7420'] lr = 0.000095
+2026-04-26 22:07:00,497 - UpTrans_DiffCond - INFO - [Epoch 10/30][Batch 1101/1311] BatchTime = 0.502 (s) DataTime = 0.003 (s) Losses = ['2.5766', '0.7587'] lr = 0.000095
+2026-04-26 22:07:50,393 - UpTrans_DiffCond - INFO - [Epoch 10/30][Batch 1201/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.6557', '0.8419'] lr = 0.000095
+2026-04-26 22:08:40,494 - UpTrans_DiffCond - INFO - [Epoch 10/30][Batch 1301/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.1705', '0.6212'] lr = 0.000095
+2026-04-26 22:08:45,676 - UpTrans_DiffCond - INFO - [Training] EPOCH: 10 EpochTime = 656.616 (s) Losses = ['2.2682', '0.6462']
+2026-04-26 22:08:45,677 - UpTrans_DiffCond - INFO - [VALIDATION] Start validating epoch 10
+2026-04-26 22:09:23,843 - UpTrans_DiffCond - INFO - Test[1051/10518] Taxonomy = 02691156 Sample = c7749c0a8b61f43bc9b9e28055202e3d Losses = ['14.7136', '0.8053', '8.2232', '0.2234'] Metrics = ['0.6522', '8.2232', '0.2234', '0.0000']
+2026-04-26 22:10:01,659 - UpTrans_DiffCond - INFO - Test[2102/10518] Taxonomy = 03211117 Sample = ab2f9418c111cc6ddb965514105122a4 Losses = ['15.8204', '1.1124', '8.9209', '0.4078'] Metrics = ['0.7300', '8.9209', '0.4078', '0.0000']
+2026-04-26 22:10:39,500 - UpTrans_DiffCond - INFO - Test[3153/10518] Taxonomy = 02876657 Sample = c5032e4be091aabb36fe7a88df793982 Losses = ['37.5910', '5.9950', '23.3361', '3.0025'] Metrics = ['0.3913', '23.3361', '3.0025', '0.0000']
+2026-04-26 22:11:17,575 - UpTrans_DiffCond - INFO - Test[4204/10518] Taxonomy = 03211117 Sample = 722df1da5778d45b1e43523279c7f09f Losses = ['24.0867', '2.5715', '13.3161', '0.7627'] Metrics = ['0.4886', '13.3161', '0.7627', '0.0000']
+2026-04-26 22:11:55,365 - UpTrans_DiffCond - INFO - Test[5255/10518] Taxonomy = 02828884 Sample = 14b63361a48a9fffe4a048c146e8bd43 Losses = ['22.3805', '1.9950', '11.8568', '0.6205'] Metrics = ['0.5392', '11.8568', '0.6205', '0.0000']
+2026-04-26 22:12:33,138 - UpTrans_DiffCond - INFO - Test[6306/10518] Taxonomy = 03211117 Sample = d330d50a0255529d19ed6e1a590c9122 Losses = ['18.8683', '1.2844', '10.0732', '0.2942'] Metrics = ['0.5300', '10.0732', '0.2942', '0.0000']
+2026-04-26 22:13:11,183 - UpTrans_DiffCond - INFO - Test[7357/10518] Taxonomy = 04379243 Sample = b1ca280d9567270ade98d10ab5975b59 Losses = ['25.6332', '2.6404', '15.0820', '0.7701'] Metrics = ['0.3211', '15.0820', '0.7701', '0.0000']
+2026-04-26 22:13:49,028 - UpTrans_DiffCond - INFO - Test[8408/10518] Taxonomy = 03001627 Sample = 89208a619341d9fdb8c516ed5c4ce32 Losses = ['27.0389', '2.7742', '13.7141', '0.6258'] Metrics = ['0.3484', '13.7141', '0.6258', '0.0000']
+2026-04-26 22:14:26,862 - UpTrans_DiffCond - INFO - Test[9459/10518] Taxonomy = 03001627 Sample = d0255120e3351121c3bd24f986301745 Losses = ['36.1262', '5.5097', '20.7241', '1.8247'] Metrics = ['0.2843', '20.7241', '1.8247', '0.0000']
+2026-04-26 22:15:04,933 - UpTrans_DiffCond - INFO - Test[10510/10518] Taxonomy = 03636649 Sample = ea9ec4d9db2e06202471e6dd5ac3ef92 Losses = ['15.9345', '1.2867', '8.9622', '0.4219'] Metrics = ['0.7138', '8.9622', '0.4219', '0.0000']
+2026-04-26 22:15:05,324 - UpTrans_DiffCond - INFO - [Validation] EPOCH: 10  Metrics = ['0.4406', '13.5204', '0.8301', '0.0000']
+2026-04-26 22:15:05,325 - UpTrans_DiffCond - INFO - ============================ TEST RESULTS ============================
+2026-04-26 22:15:05,325 - UpTrans_DiffCond - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2026-04-26 22:15:05,325 - UpTrans_DiffCond - INFO - 03759954	14	0.608 	13.048 	1.386 	0.000 	microphone	
+2026-04-26 22:15:05,325 - UpTrans_DiffCond - INFO - 04330267	44	0.366 	15.034 	0.926 	0.000 	stove	
+2026-04-26 22:15:05,325 - UpTrans_DiffCond - INFO - 03261776	15	0.418 	16.187 	1.447 	0.000 	earphone	
+2026-04-26 22:15:05,326 - UpTrans_DiffCond - INFO - 03513137	33	0.296 	20.243 	2.023 	0.000 	helmet	
+2026-04-26 22:15:05,326 - UpTrans_DiffCond - INFO - 04460130	27	0.506 	13.095 	0.786 	0.000 	tower	
+2026-04-26 22:15:05,326 - UpTrans_DiffCond - INFO - 04468005	78	0.466 	12.454 	0.761 	0.000 	train	
+2026-04-26 22:15:05,326 - UpTrans_DiffCond - INFO - 03761084	31	0.313 	15.429 	0.855 	0.000 	microwaves	
+2026-04-26 22:15:05,326 - UpTrans_DiffCond - INFO - 04004475	34	0.355 	15.212 	1.002 	0.000 	printer	
+2026-04-26 22:15:05,326 - UpTrans_DiffCond - INFO - 03938244	20	0.384 	15.153 	1.007 	0.000 	pillow	
+2026-04-26 22:15:05,326 - UpTrans_DiffCond - INFO - 02992529	167	0.488 	10.818 	0.390 	0.000 	cellphone	
+2026-04-26 22:15:05,326 - UpTrans_DiffCond - INFO - 02808440	172	0.376 	14.218 	0.793 	0.000 	bathtub	
+2026-04-26 22:15:05,326 - UpTrans_DiffCond - INFO - 04530566	388	0.573 	10.904 	0.577 	0.000 	watercraft	
+2026-04-26 22:15:05,326 - UpTrans_DiffCond - INFO - 02871439	91	0.327 	15.283 	0.926 	0.000 	bookshelf	
+2026-04-26 22:15:05,326 - UpTrans_DiffCond - INFO - 03593526	120	0.337 	16.813 	1.267 	0.000 	jar	
+2026-04-26 22:15:05,326 - UpTrans_DiffCond - INFO - 04554684	34	0.298 	17.596 	1.392 	0.000 	washer	
+2026-04-26 22:15:05,326 - UpTrans_DiffCond - INFO - 03467517	160	0.835 	6.489 	0.190 	0.000 	guitar	
+2026-04-26 22:15:05,326 - UpTrans_DiffCond - INFO - 04401088	218	0.495 	10.574 	0.358 	0.000 	telephone	
+2026-04-26 22:15:05,327 - UpTrans_DiffCond - INFO - 02954340	12	0.396 	14.378 	0.950 	0.000 	cap	
+2026-04-26 22:15:05,327 - UpTrans_DiffCond - INFO - 02933112	315	0.309 	14.842 	0.740 	0.000 	cabinet	
+2026-04-26 22:15:05,327 - UpTrans_DiffCond - INFO - 03642806	92	0.453 	11.162 	0.423 	0.000 	laptop	
+2026-04-26 22:15:05,327 - UpTrans_DiffCond - INFO - 02924116	188	0.433 	12.236 	0.534 	0.000 	bus	
+2026-04-26 22:15:05,327 - UpTrans_DiffCond - INFO - 02946921	22	0.329 	14.977 	0.847 	0.000 	can	
+2026-04-26 22:15:05,327 - UpTrans_DiffCond - INFO - 02818832	47	0.359 	14.960 	0.936 	0.000 	bed	
+2026-04-26 22:15:05,327 - UpTrans_DiffCond - INFO - 04256520	635	0.371 	13.714 	0.645 	0.000 	sofa	
+2026-04-26 22:15:05,327 - UpTrans_DiffCond - INFO - 04379243	1687	0.461 	12.335 	0.674 	0.000 	table	
+2026-04-26 22:15:05,327 - UpTrans_DiffCond - INFO - 02747177	69	0.259 	17.986 	1.400 	0.000 	trash bin	
+2026-04-26 22:15:05,327 - UpTrans_DiffCond - INFO - 03046257	131	0.386 	14.113 	0.835 	0.000 	clock	
+2026-04-26 22:15:05,327 - UpTrans_DiffCond - INFO - 04225987	31	0.636 	9.108 	0.308 	0.000 	skateboard	
+2026-04-26 22:15:05,327 - UpTrans_DiffCond - INFO - 03797390	43	0.264 	17.455 	1.159 	0.000 	mug	
+2026-04-26 22:15:05,327 - UpTrans_DiffCond - INFO - 03001627	1356	0.450 	13.044 	0.756 	0.000 	chair	
+2026-04-26 22:15:05,327 - UpTrans_DiffCond - INFO - 03691459	320	0.329 	16.361 	1.158 	0.000 	loudspeaker	
+2026-04-26 22:15:05,328 - UpTrans_DiffCond - INFO - 02942699	23	0.324 	18.675 	1.710 	0.000 	camera	
+2026-04-26 22:15:05,328 - UpTrans_DiffCond - INFO - 03636649	464	0.598 	12.497 	1.200 	0.000 	lamp	
+2026-04-26 22:15:05,328 - UpTrans_DiffCond - INFO - 02691156	809	0.643 	9.183 	0.357 	0.000 	airplane	
+2026-04-26 22:15:05,328 - UpTrans_DiffCond - INFO - 02773838	17	0.420 	12.940 	0.671 	0.000 	bag	
+2026-04-26 22:15:05,328 - UpTrans_DiffCond - INFO - 02958343	703	0.289 	15.809 	0.854 	0.000 	car	
+2026-04-26 22:15:05,328 - UpTrans_DiffCond - INFO - 02880940	38	0.305 	15.277 	0.750 	0.000 	bowl	
+2026-04-26 22:15:05,328 - UpTrans_DiffCond - INFO - 04099429	17	0.736 	8.182 	0.326 	0.000 	rocket	
+2026-04-26 22:15:05,328 - UpTrans_DiffCond - INFO - 02828884	363	0.517 	10.856 	0.499 	0.000 	bench	
+2026-04-26 22:15:05,328 - UpTrans_DiffCond - INFO - 04090263	475	0.745 	8.114 	0.382 	0.000 	rifle	
+2026-04-26 22:15:05,328 - UpTrans_DiffCond - INFO - 03211117	219	0.427 	12.757 	0.660 	0.000 	display	
+2026-04-26 22:15:05,328 - UpTrans_DiffCond - INFO - 02876657	100	0.504 	11.574 	0.562 	0.000 	bottle	
+2026-04-26 22:15:05,328 - UpTrans_DiffCond - INFO - 03710193	19	0.594 	11.025 	0.584 	0.000 	mailbox	
+2026-04-26 22:15:05,328 - UpTrans_DiffCond - INFO - 03790512	68	0.342 	14.709 	0.859 	0.000 	motorbike	
+2026-04-26 22:15:05,328 - UpTrans_DiffCond - INFO - 03325088	149	0.559 	13.321 	1.206 	0.000 	faucet	
+2026-04-26 22:15:05,329 - UpTrans_DiffCond - INFO - 02801938	23	0.302 	16.624 	1.166 	0.000 	basket	
+2026-04-26 22:15:05,329 - UpTrans_DiffCond - INFO - 03337140	60	0.313 	15.104 	0.775 	0.000 	file cabinet	
+2026-04-26 22:15:05,329 - UpTrans_DiffCond - INFO - 02843684	15	0.310 	16.482 	1.001 	0.000 	birdhouse	
+2026-04-26 22:15:05,329 - UpTrans_DiffCond - INFO - 03624134	85	0.805 	6.771 	0.239 	0.000 	knife	
+2026-04-26 22:15:05,329 - UpTrans_DiffCond - INFO - 03991062	121	0.311 	17.543 	1.347 	0.000 	flowerpot	
+2026-04-26 22:15:05,329 - UpTrans_DiffCond - INFO - 03948459	62	0.549 	11.055 	0.542 	0.000 	pistol	
+2026-04-26 22:15:05,329 - UpTrans_DiffCond - INFO - 03928116	48	0.363 	15.297 	1.117 	0.000 	piano	
+2026-04-26 22:15:05,329 - UpTrans_DiffCond - INFO - 03207941	19	0.318 	14.929 	0.773 	0.000 	dishwasher	
+2026-04-26 22:15:05,329 - UpTrans_DiffCond - INFO - 04074963	14	0.552 	10.009 	0.343 	0.000 	remote	
+2026-04-26 22:15:05,329 - UpTrans_DiffCond - INFO - 03085013	13	0.533 	9.669 	0.281 	0.000 	keyboard	
+2026-04-26 22:15:05,329 - UpTrans_DiffCond - INFO - Overall		0.441 	13.520 	0.830 	0.000 	
+2026-04-26 22:15:05,868 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-last.pth
+2026-04-26 22:15:06,598 - UpTrans_DiffCond - INFO - [Epoch 11/30][Batch 1/1311] BatchTime = 0.727 (s) DataTime = 0.181 (s) Losses = ['1.5850', '0.4075'] lr = 0.000095
+2026-04-26 22:15:56,501 - UpTrans_DiffCond - INFO - [Epoch 11/30][Batch 101/1311] BatchTime = 0.504 (s) DataTime = 0.002 (s) Losses = ['2.2041', '0.4605'] lr = 0.000095
+2026-04-26 22:16:45,493 - UpTrans_DiffCond - INFO - [Epoch 11/30][Batch 201/1311] BatchTime = 0.496 (s) DataTime = 0.002 (s) Losses = ['1.9070', '0.3953'] lr = 0.000095
+2026-04-26 22:17:35,604 - UpTrans_DiffCond - INFO - [Epoch 11/30][Batch 301/1311] BatchTime = 0.509 (s) DataTime = 0.001 (s) Losses = ['2.3363', '0.6684'] lr = 0.000095
+2026-04-26 22:18:25,793 - UpTrans_DiffCond - INFO - [Epoch 11/30][Batch 401/1311] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['2.5640', '0.8215'] lr = 0.000095
+2026-04-26 22:19:15,693 - UpTrans_DiffCond - INFO - [Epoch 11/30][Batch 501/1311] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['1.4667', '0.4132'] lr = 0.000095
+2026-04-26 22:20:05,793 - UpTrans_DiffCond - INFO - [Epoch 11/30][Batch 601/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.0744', '0.5233'] lr = 0.000095
+2026-04-26 22:20:56,093 - UpTrans_DiffCond - INFO - [Epoch 11/30][Batch 701/1311] BatchTime = 0.600 (s) DataTime = 0.002 (s) Losses = ['1.8727', '0.5956'] lr = 0.000095
+2026-04-26 22:21:46,103 - UpTrans_DiffCond - INFO - [Epoch 11/30][Batch 801/1311] BatchTime = 0.510 (s) DataTime = 0.002 (s) Losses = ['3.0344', '1.0032'] lr = 0.000095
+2026-04-26 22:22:35,893 - UpTrans_DiffCond - INFO - [Epoch 11/30][Batch 901/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.6496', '0.7506'] lr = 0.000095
+2026-04-26 22:23:25,993 - UpTrans_DiffCond - INFO - [Epoch 11/30][Batch 1001/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.6208', '0.4319'] lr = 0.000095
+2026-04-26 22:24:16,093 - UpTrans_DiffCond - INFO - [Epoch 11/30][Batch 1101/1311] BatchTime = 0.494 (s) DataTime = 0.002 (s) Losses = ['1.9718', '0.5912'] lr = 0.000095
+2026-04-26 22:25:05,993 - UpTrans_DiffCond - INFO - [Epoch 11/30][Batch 1201/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.8011', '0.4755'] lr = 0.000095
+2026-04-26 22:25:56,233 - UpTrans_DiffCond - INFO - [Epoch 11/30][Batch 1301/1311] BatchTime = 0.540 (s) DataTime = 0.002 (s) Losses = ['2.1062', '0.5225'] lr = 0.000095
+2026-04-26 22:26:01,365 - UpTrans_DiffCond - INFO - [Training] EPOCH: 11 EpochTime = 655.494 (s) Losses = ['2.2719', '0.6478']
+2026-04-26 22:26:01,944 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-last.pth
+2026-04-26 22:26:02,695 - UpTrans_DiffCond - INFO - [Epoch 12/30][Batch 1/1311] BatchTime = 0.749 (s) DataTime = 0.166 (s) Losses = ['2.1106', '0.5339'] lr = 0.000094
+2026-04-26 22:26:52,893 - UpTrans_DiffCond - INFO - [Epoch 12/30][Batch 101/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.9390', '0.4364'] lr = 0.000094
+2026-04-26 22:27:43,094 - UpTrans_DiffCond - INFO - [Epoch 12/30][Batch 201/1311] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['1.9053', '0.5140'] lr = 0.000094
+2026-04-26 22:28:32,893 - UpTrans_DiffCond - INFO - [Epoch 12/30][Batch 301/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.8078', '0.5937'] lr = 0.000094
+2026-04-26 22:29:22,893 - UpTrans_DiffCond - INFO - [Epoch 12/30][Batch 401/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.8551', '0.5877'] lr = 0.000094
+2026-04-26 22:30:12,893 - UpTrans_DiffCond - INFO - [Epoch 12/30][Batch 501/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.6364', '0.4063'] lr = 0.000094
+2026-04-26 22:31:02,993 - UpTrans_DiffCond - INFO - [Epoch 12/30][Batch 601/1311] BatchTime = 0.490 (s) DataTime = 0.001 (s) Losses = ['1.7719', '0.4874'] lr = 0.000094
+2026-04-26 22:31:53,393 - UpTrans_DiffCond - INFO - [Epoch 12/30][Batch 701/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.0346', '0.6218'] lr = 0.000094
+2026-04-26 22:32:43,393 - UpTrans_DiffCond - INFO - [Epoch 12/30][Batch 801/1311] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['2.6854', '0.7441'] lr = 0.000094
+2026-04-26 22:33:33,593 - UpTrans_DiffCond - INFO - [Epoch 12/30][Batch 901/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['1.8620', '0.4876'] lr = 0.000094
+2026-04-26 22:34:23,593 - UpTrans_DiffCond - INFO - [Epoch 12/30][Batch 1001/1311] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['2.5293', '0.8334'] lr = 0.000094
+2026-04-26 22:35:13,294 - UpTrans_DiffCond - INFO - [Epoch 12/30][Batch 1101/1311] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['3.1405', '1.0737'] lr = 0.000094
+2026-04-26 22:36:03,393 - UpTrans_DiffCond - INFO - [Epoch 12/30][Batch 1201/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.6057', '0.7448'] lr = 0.000094
+2026-04-26 22:36:53,494 - UpTrans_DiffCond - INFO - [Epoch 12/30][Batch 1301/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.1516', '0.6380'] lr = 0.000094
+2026-04-26 22:36:58,769 - UpTrans_DiffCond - INFO - [Training] EPOCH: 12 EpochTime = 656.823 (s) Losses = ['2.2501', '0.6379']
+2026-04-26 22:36:59,330 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-last.pth
+2026-04-26 22:37:00,099 - UpTrans_DiffCond - INFO - [Epoch 13/30][Batch 1/1311] BatchTime = 0.767 (s) DataTime = 0.163 (s) Losses = ['2.4265', '0.6957'] lr = 0.000094
+2026-04-26 22:37:50,294 - UpTrans_DiffCond - INFO - [Epoch 13/30][Batch 101/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.8602', '0.5103'] lr = 0.000094
+2026-04-26 22:38:38,893 - UpTrans_DiffCond - INFO - [Epoch 13/30][Batch 201/1311] BatchTime = 0.488 (s) DataTime = 0.002 (s) Losses = ['1.6934', '0.4252'] lr = 0.000094
+2026-04-26 22:39:27,793 - UpTrans_DiffCond - INFO - [Epoch 13/30][Batch 301/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.8077', '0.4598'] lr = 0.000094
+2026-04-26 22:40:17,794 - UpTrans_DiffCond - INFO - [Epoch 13/30][Batch 401/1311] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['2.2477', '0.5095'] lr = 0.000094
+2026-04-26 22:41:08,011 - UpTrans_DiffCond - INFO - [Epoch 13/30][Batch 501/1311] BatchTime = 0.415 (s) DataTime = 0.002 (s) Losses = ['2.7493', '0.8291'] lr = 0.000094
+2026-04-26 22:41:57,495 - UpTrans_DiffCond - INFO - [Epoch 13/30][Batch 601/1311] BatchTime = 0.502 (s) DataTime = 0.002 (s) Losses = ['2.1110', '0.6848'] lr = 0.000094
+2026-04-26 22:42:47,693 - UpTrans_DiffCond - INFO - [Epoch 13/30][Batch 701/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['3.1589', '0.9662'] lr = 0.000094
+2026-04-26 22:43:37,697 - UpTrans_DiffCond - INFO - [Epoch 13/30][Batch 801/1311] BatchTime = 0.504 (s) DataTime = 0.001 (s) Losses = ['1.9343', '0.5273'] lr = 0.000094
+2026-04-26 22:44:27,394 - UpTrans_DiffCond - INFO - [Epoch 13/30][Batch 901/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.8012', '0.4502'] lr = 0.000094
+2026-04-26 22:45:17,493 - UpTrans_DiffCond - INFO - [Epoch 13/30][Batch 1001/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.0930', '0.5571'] lr = 0.000094
+2026-04-26 22:46:07,494 - UpTrans_DiffCond - INFO - [Epoch 13/30][Batch 1101/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.9104', '0.4778'] lr = 0.000094
+2026-04-26 22:46:57,493 - UpTrans_DiffCond - INFO - [Epoch 13/30][Batch 1201/1311] BatchTime = 0.499 (s) DataTime = 0.001 (s) Losses = ['1.8371', '0.3976'] lr = 0.000094
+2026-04-26 22:47:47,296 - UpTrans_DiffCond - INFO - [Epoch 13/30][Batch 1301/1311] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['3.6279', '1.2821'] lr = 0.000094
+2026-04-26 22:47:52,488 - UpTrans_DiffCond - INFO - [Training] EPOCH: 13 EpochTime = 653.156 (s) Losses = ['2.2700', '0.6444']
+2026-04-26 22:47:53,023 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-last.pth
+2026-04-26 22:47:53,801 - UpTrans_DiffCond - INFO - [Epoch 14/30][Batch 1/1311] BatchTime = 0.776 (s) DataTime = 0.169 (s) Losses = ['1.8415', '0.5036'] lr = 0.000093
+2026-04-26 22:48:43,695 - UpTrans_DiffCond - INFO - [Epoch 14/30][Batch 101/1311] BatchTime = 0.502 (s) DataTime = 0.002 (s) Losses = ['1.5007', '0.4044'] lr = 0.000093
+2026-04-26 22:49:33,794 - UpTrans_DiffCond - INFO - [Epoch 14/30][Batch 201/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.3162', '0.6593'] lr = 0.000093
+2026-04-26 22:50:24,194 - UpTrans_DiffCond - INFO - [Epoch 14/30][Batch 301/1311] BatchTime = 0.490 (s) DataTime = 0.002 (s) Losses = ['2.0885', '0.6011'] lr = 0.000093
+2026-04-26 22:51:14,094 - UpTrans_DiffCond - INFO - [Epoch 14/30][Batch 401/1311] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['2.5494', '0.6860'] lr = 0.000093
+2026-04-26 22:52:04,193 - UpTrans_DiffCond - INFO - [Epoch 14/30][Batch 501/1311] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['1.7871', '0.4104'] lr = 0.000093
+2026-04-26 22:52:54,193 - UpTrans_DiffCond - INFO - [Epoch 14/30][Batch 601/1311] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['1.9975', '0.4865'] lr = 0.000093
+2026-04-26 22:53:44,199 - UpTrans_DiffCond - INFO - [Epoch 14/30][Batch 701/1311] BatchTime = 0.409 (s) DataTime = 0.002 (s) Losses = ['2.2624', '0.8088'] lr = 0.000093
+2026-04-26 22:54:33,793 - UpTrans_DiffCond - INFO - [Epoch 14/30][Batch 801/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['3.6006', '1.1048'] lr = 0.000093
+2026-04-26 22:55:23,993 - UpTrans_DiffCond - INFO - [Epoch 14/30][Batch 901/1311] BatchTime = 0.499 (s) DataTime = 0.001 (s) Losses = ['1.6387', '0.4580'] lr = 0.000093
+2026-04-26 22:56:14,299 - UpTrans_DiffCond - INFO - [Epoch 14/30][Batch 1001/1311] BatchTime = 0.506 (s) DataTime = 0.001 (s) Losses = ['2.4534', '0.8663'] lr = 0.000093
+2026-04-26 22:57:04,593 - UpTrans_DiffCond - INFO - [Epoch 14/30][Batch 1101/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['4.1706', '1.3581'] lr = 0.000093
+2026-04-26 22:57:54,996 - UpTrans_DiffCond - INFO - [Epoch 14/30][Batch 1201/1311] BatchTime = 0.503 (s) DataTime = 0.001 (s) Losses = ['2.5759', '0.7544'] lr = 0.000093
+2026-04-26 22:58:45,093 - UpTrans_DiffCond - INFO - [Epoch 14/30][Batch 1301/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.6673', '0.6687'] lr = 0.000093
+2026-04-26 22:58:50,291 - UpTrans_DiffCond - INFO - [Training] EPOCH: 14 EpochTime = 657.265 (s) Losses = ['2.2819', '0.6493']
+2026-04-26 22:58:50,880 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-last.pth
+2026-04-26 22:58:51,698 - UpTrans_DiffCond - INFO - [Epoch 15/30][Batch 1/1311] BatchTime = 0.815 (s) DataTime = 0.161 (s) Losses = ['1.5485', '0.3782'] lr = 0.000093
+2026-04-26 22:59:41,694 - UpTrans_DiffCond - INFO - [Epoch 15/30][Batch 101/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.7079', '0.4323'] lr = 0.000093
+2026-04-26 23:00:31,694 - UpTrans_DiffCond - INFO - [Epoch 15/30][Batch 201/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.6430', '0.4002'] lr = 0.000093
+2026-04-26 23:01:21,994 - UpTrans_DiffCond - INFO - [Epoch 15/30][Batch 301/1311] BatchTime = 0.487 (s) DataTime = 0.002 (s) Losses = ['1.5956', '0.4811'] lr = 0.000093
+2026-04-26 23:02:11,994 - UpTrans_DiffCond - INFO - [Epoch 15/30][Batch 401/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.4034', '0.7307'] lr = 0.000093
+2026-04-26 23:03:02,333 - UpTrans_DiffCond - INFO - [Epoch 15/30][Batch 501/1311] BatchTime = 0.538 (s) DataTime = 0.002 (s) Losses = ['1.7844', '0.5657'] lr = 0.000093
+2026-04-26 23:03:52,293 - UpTrans_DiffCond - INFO - [Epoch 15/30][Batch 601/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.3308', '0.6727'] lr = 0.000093
+2026-04-26 23:04:42,493 - UpTrans_DiffCond - INFO - [Epoch 15/30][Batch 701/1311] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['4.1268', '1.4742'] lr = 0.000093
+2026-04-26 23:05:32,493 - UpTrans_DiffCond - INFO - [Epoch 15/30][Batch 801/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.2155', '0.6544'] lr = 0.000093
+2026-04-26 23:06:22,697 - UpTrans_DiffCond - INFO - [Epoch 15/30][Batch 901/1311] BatchTime = 0.463 (s) DataTime = 0.002 (s) Losses = ['1.7087', '0.4519'] lr = 0.000093
+2026-04-26 23:07:12,593 - UpTrans_DiffCond - INFO - [Epoch 15/30][Batch 1001/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.9244', '0.8781'] lr = 0.000093
+2026-04-26 23:08:02,705 - UpTrans_DiffCond - INFO - [Epoch 15/30][Batch 1101/1311] BatchTime = 0.512 (s) DataTime = 0.002 (s) Losses = ['1.8760', '0.4749'] lr = 0.000093
+2026-04-26 23:08:52,893 - UpTrans_DiffCond - INFO - [Epoch 15/30][Batch 1201/1311] BatchTime = 0.600 (s) DataTime = 0.002 (s) Losses = ['2.7579', '0.5879'] lr = 0.000093
+2026-04-26 23:09:42,693 - UpTrans_DiffCond - INFO - [Epoch 15/30][Batch 1301/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.4497', '0.7379'] lr = 0.000093
+2026-04-26 23:09:47,878 - UpTrans_DiffCond - INFO - [Training] EPOCH: 15 EpochTime = 656.996 (s) Losses = ['2.2607', '0.6410']
+2026-04-26 23:09:47,879 - UpTrans_DiffCond - INFO - [VALIDATION] Start validating epoch 15
+2026-04-26 23:10:25,889 - UpTrans_DiffCond - INFO - Test[1051/10518] Taxonomy = 02691156 Sample = c7749c0a8b61f43bc9b9e28055202e3d Losses = ['14.4880', '0.7846', '7.7158', '0.1828'] Metrics = ['0.6667', '7.7158', '0.1828', '0.0000']
+2026-04-26 23:11:03,746 - UpTrans_DiffCond - INFO - Test[2102/10518] Taxonomy = 03211117 Sample = ab2f9418c111cc6ddb965514105122a4 Losses = ['18.4033', '1.4890', '9.6178', '0.5650'] Metrics = ['0.6772', '9.6178', '0.5650', '0.0000']
+2026-04-26 23:11:41,771 - UpTrans_DiffCond - INFO - Test[3153/10518] Taxonomy = 02876657 Sample = c5032e4be091aabb36fe7a88df793982 Losses = ['34.2037', '5.2410', '18.0449', '1.7377'] Metrics = ['0.4003', '18.0449', '1.7377', '0.0000']
+2026-04-26 23:12:19,820 - UpTrans_DiffCond - INFO - Test[4204/10518] Taxonomy = 03211117 Sample = 722df1da5778d45b1e43523279c7f09f Losses = ['21.9243', '1.9665', '14.3125', '0.8307'] Metrics = ['0.5040', '14.3125', '0.8307', '0.0000']
+2026-04-26 23:12:57,668 - UpTrans_DiffCond - INFO - Test[5255/10518] Taxonomy = 02828884 Sample = 14b63361a48a9fffe4a048c146e8bd43 Losses = ['25.7894', '2.8451', '11.1107', '0.4786'] Metrics = ['0.5556', '11.1107', '0.4786', '0.0000']
+2026-04-26 23:13:35,689 - UpTrans_DiffCond - INFO - Test[6306/10518] Taxonomy = 03211117 Sample = d330d50a0255529d19ed6e1a590c9122 Losses = ['18.4485', '1.2242', '9.8977', '0.3158'] Metrics = ['0.5527', '9.8977', '0.3158', '0.0000']
+2026-04-26 23:14:13,706 - UpTrans_DiffCond - INFO - Test[7357/10518] Taxonomy = 04379243 Sample = b1ca280d9567270ade98d10ab5975b59 Losses = ['28.4281', '3.6506', '16.7457', '1.0413'] Metrics = ['0.3163', '16.7457', '1.0413', '0.0000']
+2026-04-26 23:14:51,591 - UpTrans_DiffCond - INFO - Test[8408/10518] Taxonomy = 03001627 Sample = 89208a619341d9fdb8c516ed5c4ce32 Losses = ['21.6643', '1.6964', '13.0811', '0.4984'] Metrics = ['0.3613', '13.0811', '0.4984', '0.0000']
+2026-04-26 23:15:29,644 - UpTrans_DiffCond - INFO - Test[9459/10518] Taxonomy = 03001627 Sample = d0255120e3351121c3bd24f986301745 Losses = ['29.7056', '3.5231', '19.0445', '1.3803'] Metrics = ['0.2840', '19.0445', '1.3803', '0.0000']
+2026-04-26 23:16:07,559 - UpTrans_DiffCond - INFO - Test[10510/10518] Taxonomy = 03636649 Sample = ea9ec4d9db2e06202471e6dd5ac3ef92 Losses = ['14.3884', '0.9475', '6.9494', '0.2108'] Metrics = ['0.7771', '6.9494', '0.2108', '0.0000']
+2026-04-26 23:16:07,956 - UpTrans_DiffCond - INFO - [Validation] EPOCH: 15  Metrics = ['0.4431', '13.4719', '0.8254', '0.0000']
+2026-04-26 23:16:07,957 - UpTrans_DiffCond - INFO - ============================ TEST RESULTS ============================
+2026-04-26 23:16:07,957 - UpTrans_DiffCond - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2026-04-26 23:16:07,957 - UpTrans_DiffCond - INFO - 03759954	14	0.641 	11.454 	1.066 	0.000 	microphone	
+2026-04-26 23:16:07,957 - UpTrans_DiffCond - INFO - 04330267	44	0.367 	14.951 	0.881 	0.000 	stove	
+2026-04-26 23:16:07,957 - UpTrans_DiffCond - INFO - 03261776	15	0.411 	17.060 	1.559 	0.000 	earphone	
+2026-04-26 23:16:07,957 - UpTrans_DiffCond - INFO - 03513137	33	0.299 	18.069 	1.494 	0.000 	helmet	
+2026-04-26 23:16:07,957 - UpTrans_DiffCond - INFO - 04460130	27	0.491 	13.002 	0.750 	0.000 	tower	
+2026-04-26 23:16:07,957 - UpTrans_DiffCond - INFO - 04468005	78	0.466 	12.633 	0.711 	0.000 	train	
+2026-04-26 23:16:07,957 - UpTrans_DiffCond - INFO - 03761084	31	0.316 	15.984 	1.065 	0.000 	microwaves	
+2026-04-26 23:16:07,957 - UpTrans_DiffCond - INFO - 04004475	34	0.350 	15.753 	1.122 	0.000 	printer	
+2026-04-26 23:16:07,957 - UpTrans_DiffCond - INFO - 03938244	20	0.387 	14.613 	0.866 	0.000 	pillow	
+2026-04-26 23:16:07,957 - UpTrans_DiffCond - INFO - 02992529	167	0.499 	10.575 	0.350 	0.000 	cellphone	
+2026-04-26 23:16:07,957 - UpTrans_DiffCond - INFO - 02808440	172	0.376 	14.458 	0.868 	0.000 	bathtub	
+2026-04-26 23:16:07,957 - UpTrans_DiffCond - INFO - 04530566	388	0.575 	10.762 	0.509 	0.000 	watercraft	
+2026-04-26 23:16:07,957 - UpTrans_DiffCond - INFO - 02871439	91	0.327 	15.546 	0.968 	0.000 	bookshelf	
+2026-04-26 23:16:07,957 - UpTrans_DiffCond - INFO - 03593526	120	0.338 	16.644 	1.221 	0.000 	jar	
+2026-04-26 23:16:07,957 - UpTrans_DiffCond - INFO - 04554684	34	0.302 	17.133 	1.339 	0.000 	washer	
+2026-04-26 23:16:07,957 - UpTrans_DiffCond - INFO - 03467517	160	0.833 	6.629 	0.223 	0.000 	guitar	
+2026-04-26 23:16:07,957 - UpTrans_DiffCond - INFO - 04401088	218	0.501 	10.632 	0.369 	0.000 	telephone	
+2026-04-26 23:16:07,957 - UpTrans_DiffCond - INFO - 02954340	12	0.389 	13.329 	0.633 	0.000 	cap	
+2026-04-26 23:16:07,957 - UpTrans_DiffCond - INFO - 02933112	315	0.310 	14.735 	0.714 	0.000 	cabinet	
+2026-04-26 23:16:07,957 - UpTrans_DiffCond - INFO - 03642806	92	0.459 	11.184 	0.428 	0.000 	laptop	
+2026-04-26 23:16:07,957 - UpTrans_DiffCond - INFO - 02924116	188	0.438 	12.165 	0.514 	0.000 	bus	
+2026-04-26 23:16:07,957 - UpTrans_DiffCond - INFO - 02946921	22	0.331 	14.713 	0.865 	0.000 	can	
+2026-04-26 23:16:07,957 - UpTrans_DiffCond - INFO - 02818832	47	0.366 	14.608 	0.870 	0.000 	bed	
+2026-04-26 23:16:07,957 - UpTrans_DiffCond - INFO - 04256520	635	0.376 	13.626 	0.637 	0.000 	sofa	
+2026-04-26 23:16:07,957 - UpTrans_DiffCond - INFO - 04379243	1687	0.458 	12.182 	0.635 	0.000 	table	
+2026-04-26 23:16:07,957 - UpTrans_DiffCond - INFO - 02747177	69	0.261 	17.612 	1.152 	0.000 	trash bin	
+2026-04-26 23:16:07,957 - UpTrans_DiffCond - INFO - 03046257	131	0.389 	13.874 	0.793 	0.000 	clock	
+2026-04-26 23:16:07,958 - UpTrans_DiffCond - INFO - 04225987	31	0.632 	9.417 	0.347 	0.000 	skateboard	
+2026-04-26 23:16:07,958 - UpTrans_DiffCond - INFO - 03797390	43	0.262 	18.008 	1.317 	0.000 	mug	
+2026-04-26 23:16:07,958 - UpTrans_DiffCond - INFO - 03001627	1356	0.452 	12.927 	0.731 	0.000 	chair	
+2026-04-26 23:16:07,958 - UpTrans_DiffCond - INFO - 03691459	320	0.332 	16.250 	1.120 	0.000 	loudspeaker	
+2026-04-26 23:16:07,958 - UpTrans_DiffCond - INFO - 02942699	23	0.331 	17.395 	1.502 	0.000 	camera	
+2026-04-26 23:16:07,958 - UpTrans_DiffCond - INFO - 03636649	464	0.599 	12.364 	1.113 	0.000 	lamp	
+2026-04-26 23:16:07,958 - UpTrans_DiffCond - INFO - 02691156	809	0.645 	9.208 	0.373 	0.000 	airplane	
+2026-04-26 23:16:07,958 - UpTrans_DiffCond - INFO - 02773838	17	0.426 	14.150 	0.922 	0.000 	bag	
+2026-04-26 23:16:07,958 - UpTrans_DiffCond - INFO - 02958343	703	0.290 	15.664 	0.818 	0.000 	car	
+2026-04-26 23:16:07,958 - UpTrans_DiffCond - INFO - 02880940	38	0.309 	14.952 	0.727 	0.000 	bowl	
+2026-04-26 23:16:07,958 - UpTrans_DiffCond - INFO - 04099429	17	0.743 	8.282 	0.404 	0.000 	rocket	
+2026-04-26 23:16:07,958 - UpTrans_DiffCond - INFO - 02828884	363	0.516 	10.833 	0.479 	0.000 	bench	
+2026-04-26 23:16:07,958 - UpTrans_DiffCond - INFO - 04090263	475	0.745 	8.165 	0.386 	0.000 	rifle	
+2026-04-26 23:16:07,958 - UpTrans_DiffCond - INFO - 03211117	219	0.425 	12.811 	0.637 	0.000 	display	
+2026-04-26 23:16:07,958 - UpTrans_DiffCond - INFO - 02876657	100	0.507 	11.412 	0.539 	0.000 	bottle	
+2026-04-26 23:16:07,958 - UpTrans_DiffCond - INFO - 03710193	19	0.619 	9.852 	0.435 	0.000 	mailbox	
+2026-04-26 23:16:07,958 - UpTrans_DiffCond - INFO - 03790512	68	0.341 	15.135 	0.954 	0.000 	motorbike	
+2026-04-26 23:16:07,958 - UpTrans_DiffCond - INFO - 03325088	149	0.561 	13.827 	1.562 	0.000 	faucet	
+2026-04-26 23:16:07,958 - UpTrans_DiffCond - INFO - 02801938	23	0.304 	15.576 	0.911 	0.000 	basket	
+2026-04-26 23:16:07,958 - UpTrans_DiffCond - INFO - 03337140	60	0.314 	15.639 	0.914 	0.000 	file cabinet	
+2026-04-26 23:16:07,958 - UpTrans_DiffCond - INFO - 02843684	15	0.309 	18.386 	1.475 	0.000 	birdhouse	
+2026-04-26 23:16:07,958 - UpTrans_DiffCond - INFO - 03624134	85	0.815 	6.784 	0.234 	0.000 	knife	
+2026-04-26 23:16:07,958 - UpTrans_DiffCond - INFO - 03991062	121	0.316 	17.902 	1.531 	0.000 	flowerpot	
+2026-04-26 23:16:07,958 - UpTrans_DiffCond - INFO - 03948459	62	0.567 	10.646 	0.517 	0.000 	pistol	
+2026-04-26 23:16:07,958 - UpTrans_DiffCond - INFO - 03928116	48	0.362 	15.803 	1.245 	0.000 	piano	
+2026-04-26 23:16:07,958 - UpTrans_DiffCond - INFO - 03207941	19	0.321 	14.684 	0.756 	0.000 	dishwasher	
+2026-04-26 23:16:07,958 - UpTrans_DiffCond - INFO - 04074963	14	0.547 	10.549 	0.451 	0.000 	remote	
+2026-04-26 23:16:07,958 - UpTrans_DiffCond - INFO - 03085013	13	0.526 	10.410 	0.392 	0.000 	keyboard	
+2026-04-26 23:16:07,958 - UpTrans_DiffCond - INFO - Overall		0.443 	13.472 	0.825 	0.000 	
+2026-04-26 23:16:08,445 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-last.pth
+2026-04-26 23:16:09,099 - UpTrans_DiffCond - INFO - [Epoch 16/30][Batch 1/1311] BatchTime = 0.652 (s) DataTime = 0.157 (s) Losses = ['1.8759', '0.4962'] lr = 0.000092
+2026-04-26 23:16:59,093 - UpTrans_DiffCond - INFO - [Epoch 16/30][Batch 101/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.1067', '0.6119'] lr = 0.000092
+2026-04-26 23:17:49,093 - UpTrans_DiffCond - INFO - [Epoch 16/30][Batch 201/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.8257', '0.4791'] lr = 0.000092
+2026-04-26 23:18:39,193 - UpTrans_DiffCond - INFO - [Epoch 16/30][Batch 301/1311] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['2.4992', '0.6857'] lr = 0.000092
+2026-04-26 23:19:29,403 - UpTrans_DiffCond - INFO - [Epoch 16/30][Batch 401/1311] BatchTime = 0.510 (s) DataTime = 0.001 (s) Losses = ['2.4613', '0.7587'] lr = 0.000092
+2026-04-26 23:20:19,394 - UpTrans_DiffCond - INFO - [Epoch 16/30][Batch 501/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.6397', '0.7265'] lr = 0.000092
+2026-04-26 23:21:09,693 - UpTrans_DiffCond - INFO - [Epoch 16/30][Batch 601/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.6074', '0.3862'] lr = 0.000092
+2026-04-26 23:21:59,729 - UpTrans_DiffCond - INFO - [Epoch 16/30][Batch 701/1311] BatchTime = 0.536 (s) DataTime = 0.002 (s) Losses = ['1.7099', '0.4025'] lr = 0.000092
+2026-04-26 23:22:49,594 - UpTrans_DiffCond - INFO - [Epoch 16/30][Batch 801/1311] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['2.1973', '0.6233'] lr = 0.000092
+2026-04-26 23:23:39,594 - UpTrans_DiffCond - INFO - [Epoch 16/30][Batch 901/1311] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['1.7135', '0.4785'] lr = 0.000092
+2026-04-26 23:24:29,793 - UpTrans_DiffCond - INFO - [Epoch 16/30][Batch 1001/1311] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['2.0175', '0.5541'] lr = 0.000092
+2026-04-26 23:25:19,993 - UpTrans_DiffCond - INFO - [Epoch 16/30][Batch 1101/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.2318', '0.5631'] lr = 0.000092
+2026-04-26 23:26:09,993 - UpTrans_DiffCond - INFO - [Epoch 16/30][Batch 1201/1311] BatchTime = 0.499 (s) DataTime = 0.001 (s) Losses = ['2.0484', '0.6049'] lr = 0.000092
+2026-04-26 23:26:59,993 - UpTrans_DiffCond - INFO - [Epoch 16/30][Batch 1301/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.5944', '0.4334'] lr = 0.000092
+2026-04-26 23:27:05,105 - UpTrans_DiffCond - INFO - [Training] EPOCH: 16 EpochTime = 656.658 (s) Losses = ['2.2508', '0.6375']
+2026-04-26 23:27:05,652 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-last.pth
+2026-04-26 23:27:06,331 - UpTrans_DiffCond - INFO - [Epoch 17/30][Batch 1/1311] BatchTime = 0.676 (s) DataTime = 0.158 (s) Losses = ['1.7301', '0.5111'] lr = 0.000092
+2026-04-26 23:27:56,593 - UpTrans_DiffCond - INFO - [Epoch 17/30][Batch 101/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['1.4877', '0.3928'] lr = 0.000092
+2026-04-26 23:28:46,593 - UpTrans_DiffCond - INFO - [Epoch 17/30][Batch 201/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.5310', '0.4084'] lr = 0.000092
+2026-04-26 23:29:36,793 - UpTrans_DiffCond - INFO - [Epoch 17/30][Batch 301/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.7805', '0.4959'] lr = 0.000092
+2026-04-26 23:30:26,893 - UpTrans_DiffCond - INFO - [Epoch 17/30][Batch 401/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.5405', '0.7067'] lr = 0.000092
+2026-04-26 23:31:16,893 - UpTrans_DiffCond - INFO - [Epoch 17/30][Batch 501/1311] BatchTime = 0.490 (s) DataTime = 0.002 (s) Losses = ['2.8569', '0.7632'] lr = 0.000092
+2026-04-26 23:32:07,103 - UpTrans_DiffCond - INFO - [Epoch 17/30][Batch 601/1311] BatchTime = 0.501 (s) DataTime = 0.007 (s) Losses = ['3.0012', '0.9876'] lr = 0.000092
+2026-04-26 23:32:57,093 - UpTrans_DiffCond - INFO - [Epoch 17/30][Batch 701/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.8555', '0.4761'] lr = 0.000092
+2026-04-26 23:33:47,296 - UpTrans_DiffCond - INFO - [Epoch 17/30][Batch 801/1311] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['2.2371', '0.7008'] lr = 0.000092
+2026-04-26 23:34:37,100 - UpTrans_DiffCond - INFO - [Epoch 17/30][Batch 901/1311] BatchTime = 0.506 (s) DataTime = 0.002 (s) Losses = ['2.0100', '0.5405'] lr = 0.000092
+2026-04-26 23:35:26,993 - UpTrans_DiffCond - INFO - [Epoch 17/30][Batch 1001/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.8810', '0.8956'] lr = 0.000092
+2026-04-26 23:36:16,993 - UpTrans_DiffCond - INFO - [Epoch 17/30][Batch 1101/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['3.1594', '1.1491'] lr = 0.000092
+2026-04-26 23:37:07,093 - UpTrans_DiffCond - INFO - [Epoch 17/30][Batch 1201/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['4.2281', '1.2227'] lr = 0.000092
+2026-04-26 23:37:56,994 - UpTrans_DiffCond - INFO - [Epoch 17/30][Batch 1301/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.4297', '0.3265'] lr = 0.000092
+2026-04-26 23:38:02,182 - UpTrans_DiffCond - INFO - [Training] EPOCH: 17 EpochTime = 656.527 (s) Losses = ['2.2632', '0.6425']
+2026-04-26 23:38:02,731 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-last.pth
+2026-04-26 23:38:03,485 - UpTrans_DiffCond - INFO - [Epoch 18/30][Batch 1/1311] BatchTime = 0.752 (s) DataTime = 0.171 (s) Losses = ['2.1122', '0.5263'] lr = 0.000091
+2026-04-26 23:38:53,594 - UpTrans_DiffCond - INFO - [Epoch 18/30][Batch 101/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.6934', '0.8137'] lr = 0.000091
+2026-04-26 23:39:43,593 - UpTrans_DiffCond - INFO - [Epoch 18/30][Batch 201/1311] BatchTime = 0.494 (s) DataTime = 0.002 (s) Losses = ['1.9803', '0.6116'] lr = 0.000091
+2026-04-26 23:40:33,893 - UpTrans_DiffCond - INFO - [Epoch 18/30][Batch 301/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.4643', '0.8437'] lr = 0.000091
+2026-04-26 23:41:23,493 - UpTrans_DiffCond - INFO - [Epoch 18/30][Batch 401/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.2716', '0.7486'] lr = 0.000091
+2026-04-26 23:42:13,493 - UpTrans_DiffCond - INFO - [Epoch 18/30][Batch 501/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.7273', '0.9218'] lr = 0.000091
+2026-04-26 23:43:03,493 - UpTrans_DiffCond - INFO - [Epoch 18/30][Batch 601/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.7509', '0.4809'] lr = 0.000091
+2026-04-26 23:43:53,494 - UpTrans_DiffCond - INFO - [Epoch 18/30][Batch 701/1311] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['2.6266', '0.7394'] lr = 0.000091
+2026-04-26 23:44:42,893 - UpTrans_DiffCond - INFO - [Epoch 18/30][Batch 801/1311] BatchTime = 0.597 (s) DataTime = 0.002 (s) Losses = ['3.0014', '0.9147'] lr = 0.000091
+2026-04-26 23:45:33,294 - UpTrans_DiffCond - INFO - [Epoch 18/30][Batch 901/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.9592', '0.5150'] lr = 0.000091
+2026-04-26 23:46:23,399 - UpTrans_DiffCond - INFO - [Epoch 18/30][Batch 1001/1311] BatchTime = 0.506 (s) DataTime = 0.002 (s) Losses = ['1.8958', '0.6446'] lr = 0.000091
+2026-04-26 23:47:13,199 - UpTrans_DiffCond - INFO - [Epoch 18/30][Batch 1101/1311] BatchTime = 0.506 (s) DataTime = 0.002 (s) Losses = ['2.3036', '0.5558'] lr = 0.000091
+2026-04-26 23:48:03,193 - UpTrans_DiffCond - INFO - [Epoch 18/30][Batch 1201/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['3.0098', '0.9238'] lr = 0.000091
+2026-04-26 23:48:53,393 - UpTrans_DiffCond - INFO - [Epoch 18/30][Batch 1301/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.2879', '0.6872'] lr = 0.000091
+2026-04-26 23:48:58,581 - UpTrans_DiffCond - INFO - [Training] EPOCH: 18 EpochTime = 655.848 (s) Losses = ['2.2661', '0.6464']
+2026-04-26 23:48:59,134 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-last.pth
+2026-04-26 23:48:59,835 - UpTrans_DiffCond - INFO - [Epoch 19/30][Batch 1/1311] BatchTime = 0.700 (s) DataTime = 0.150 (s) Losses = ['1.8353', '0.5000'] lr = 0.000091
+2026-04-26 23:49:49,893 - UpTrans_DiffCond - INFO - [Epoch 19/30][Batch 101/1311] BatchTime = 0.499 (s) DataTime = 0.001 (s) Losses = ['1.6519', '0.4463'] lr = 0.000091
+2026-04-26 23:50:39,893 - UpTrans_DiffCond - INFO - [Epoch 19/30][Batch 201/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.2347', '0.5770'] lr = 0.000091
+2026-04-26 23:51:29,993 - UpTrans_DiffCond - INFO - [Epoch 19/30][Batch 301/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.2134', '0.6335'] lr = 0.000091
+2026-04-26 23:52:20,106 - UpTrans_DiffCond - INFO - [Epoch 19/30][Batch 401/1311] BatchTime = 0.512 (s) DataTime = 0.001 (s) Losses = ['1.6663', '0.3830'] lr = 0.000091
+2026-04-26 23:53:10,293 - UpTrans_DiffCond - INFO - [Epoch 19/30][Batch 501/1311] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['1.8986', '0.4774'] lr = 0.000091
+2026-04-26 23:54:00,293 - UpTrans_DiffCond - INFO - [Epoch 19/30][Batch 601/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.9091', '0.5429'] lr = 0.000091
+2026-04-26 23:54:50,493 - UpTrans_DiffCond - INFO - [Epoch 19/30][Batch 701/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['3.1322', '0.9235'] lr = 0.000091
+2026-04-26 23:55:40,493 - UpTrans_DiffCond - INFO - [Epoch 19/30][Batch 801/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.5733', '0.8194'] lr = 0.000091
+2026-04-26 23:56:30,293 - UpTrans_DiffCond - INFO - [Epoch 19/30][Batch 901/1311] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['2.1167', '0.5525'] lr = 0.000091
+2026-04-26 23:57:20,493 - UpTrans_DiffCond - INFO - [Epoch 19/30][Batch 1001/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.6890', '0.4326'] lr = 0.000091
+2026-04-26 23:58:10,495 - UpTrans_DiffCond - INFO - [Epoch 19/30][Batch 1101/1311] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['1.7533', '0.4246'] lr = 0.000091
+2026-04-26 23:59:00,093 - UpTrans_DiffCond - INFO - [Epoch 19/30][Batch 1201/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.2616', '0.6289'] lr = 0.000091
+2026-04-26 23:59:50,093 - UpTrans_DiffCond - INFO - [Epoch 19/30][Batch 1301/1311] BatchTime = 0.497 (s) DataTime = 0.001 (s) Losses = ['1.9263', '0.5129'] lr = 0.000091
+2026-04-26 23:59:55,281 - UpTrans_DiffCond - INFO - [Training] EPOCH: 19 EpochTime = 656.145 (s) Losses = ['2.2416', '0.6377']
+2026-04-26 23:59:55,853 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-last.pth
+2026-04-26 23:59:56,596 - UpTrans_DiffCond - INFO - [Epoch 20/30][Batch 1/1311] BatchTime = 0.741 (s) DataTime = 0.157 (s) Losses = ['1.9153', '0.5145'] lr = 0.000090
+2026-04-27 00:00:46,393 - UpTrans_DiffCond - INFO - [Epoch 20/30][Batch 101/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.1960', '0.5899'] lr = 0.000090
+2026-04-27 00:01:36,597 - UpTrans_DiffCond - INFO - [Epoch 20/30][Batch 201/1311] BatchTime = 0.504 (s) DataTime = 0.002 (s) Losses = ['2.4195', '0.7417'] lr = 0.000090
+2026-04-27 00:02:26,694 - UpTrans_DiffCond - INFO - [Epoch 20/30][Batch 301/1311] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['1.8445', '0.4861'] lr = 0.000090
+2026-04-27 00:03:16,793 - UpTrans_DiffCond - INFO - [Epoch 20/30][Batch 401/1311] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['1.8279', '0.4665'] lr = 0.000090
+2026-04-27 00:04:06,794 - UpTrans_DiffCond - INFO - [Epoch 20/30][Batch 501/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.4149', '0.7026'] lr = 0.000090
+2026-04-27 00:04:56,793 - UpTrans_DiffCond - INFO - [Epoch 20/30][Batch 601/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.3369', '0.7197'] lr = 0.000090
+2026-04-27 00:05:46,193 - UpTrans_DiffCond - INFO - [Epoch 20/30][Batch 701/1311] BatchTime = 0.487 (s) DataTime = 0.002 (s) Losses = ['2.3396', '0.7716'] lr = 0.000090
+2026-04-27 00:06:36,294 - UpTrans_DiffCond - INFO - [Epoch 20/30][Batch 801/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.5068', '0.7005'] lr = 0.000090
+2026-04-27 00:07:26,396 - UpTrans_DiffCond - INFO - [Epoch 20/30][Batch 901/1311] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['2.0924', '0.5551'] lr = 0.000090
+2026-04-27 00:08:16,404 - UpTrans_DiffCond - INFO - [Epoch 20/30][Batch 1001/1311] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['2.4311', '0.7104'] lr = 0.000090
+2026-04-27 00:09:06,593 - UpTrans_DiffCond - INFO - [Epoch 20/30][Batch 1101/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.5941', '0.4440'] lr = 0.000090
+2026-04-27 00:09:56,593 - UpTrans_DiffCond - INFO - [Epoch 20/30][Batch 1201/1311] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['2.1428', '0.5557'] lr = 0.000090
+2026-04-27 00:10:46,793 - UpTrans_DiffCond - INFO - [Epoch 20/30][Batch 1301/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.4302', '0.8316'] lr = 0.000090
+2026-04-27 00:10:51,974 - UpTrans_DiffCond - INFO - [Training] EPOCH: 20 EpochTime = 656.118 (s) Losses = ['2.2365', '0.6344']
+2026-04-27 00:10:51,974 - UpTrans_DiffCond - INFO - [VALIDATION] Start validating epoch 20
+2026-04-27 00:11:29,914 - UpTrans_DiffCond - INFO - Test[1051/10518] Taxonomy = 02691156 Sample = c7749c0a8b61f43bc9b9e28055202e3d Losses = ['17.9655', '1.4646', '12.8826', '0.8606'] Metrics = ['0.5287', '12.8826', '0.8606', '0.0000']
+2026-04-27 00:12:07,784 - UpTrans_DiffCond - INFO - Test[2102/10518] Taxonomy = 03211117 Sample = ab2f9418c111cc6ddb965514105122a4 Losses = ['15.4229', '0.8725', '7.3116', '0.1519'] Metrics = ['0.7421', '7.3116', '0.1519', '0.0000']
+2026-04-27 00:12:45,870 - UpTrans_DiffCond - INFO - Test[3153/10518] Taxonomy = 02876657 Sample = c5032e4be091aabb36fe7a88df793982 Losses = ['43.1863', '7.8530', '24.4672', '2.8886'] Metrics = ['0.3320', '24.4672', '2.8886', '0.0000']
+2026-04-27 00:13:23,722 - UpTrans_DiffCond - INFO - Test[4204/10518] Taxonomy = 03211117 Sample = 722df1da5778d45b1e43523279c7f09f Losses = ['21.3154', '1.8880', '11.8348', '0.5495'] Metrics = ['0.5033', '11.8348', '0.5495', '0.0000']
+2026-04-27 00:14:01,619 - UpTrans_DiffCond - INFO - Test[5255/10518] Taxonomy = 02828884 Sample = 14b63361a48a9fffe4a048c146e8bd43 Losses = ['28.6211', '3.3044', '14.4871', '0.8830'] Metrics = ['0.4787', '14.4871', '0.8830', '0.0000']
+2026-04-27 00:14:39,820 - UpTrans_DiffCond - INFO - Test[6306/10518] Taxonomy = 03211117 Sample = d330d50a0255529d19ed6e1a590c9122 Losses = ['21.0306', '1.7838', '11.5695', '0.5353'] Metrics = ['0.5376', '11.5695', '0.5353', '0.0000']
+2026-04-27 00:15:17,726 - UpTrans_DiffCond - INFO - Test[7357/10518] Taxonomy = 04379243 Sample = b1ca280d9567270ade98d10ab5975b59 Losses = ['31.6987', '5.4955', '21.3451', '2.6690'] Metrics = ['0.3174', '21.3451', '2.6690', '0.0000']
+2026-04-27 00:15:55,587 - UpTrans_DiffCond - INFO - Test[8408/10518] Taxonomy = 03001627 Sample = 89208a619341d9fdb8c516ed5c4ce32 Losses = ['22.4540', '1.7754', '12.3153', '0.4064'] Metrics = ['0.3615', '12.3153', '0.4064', '0.0000']
+2026-04-27 00:16:33,744 - UpTrans_DiffCond - INFO - Test[9459/10518] Taxonomy = 03001627 Sample = d0255120e3351121c3bd24f986301745 Losses = ['28.0799', '3.0218', '16.6318', '0.9770'] Metrics = ['0.2937', '16.6318', '0.9770', '0.0000']
+2026-04-27 00:17:11,607 - UpTrans_DiffCond - INFO - Test[10510/10518] Taxonomy = 03636649 Sample = ea9ec4d9db2e06202471e6dd5ac3ef92 Losses = ['18.6268', '1.7288', '11.8288', '0.8332'] Metrics = ['0.6263', '11.8288', '0.8332', '0.0000']
+2026-04-27 00:17:11,973 - UpTrans_DiffCond - INFO - [Validation] EPOCH: 20  Metrics = ['0.4396', '13.5351', '0.8409', '0.0000']
+2026-04-27 00:17:11,973 - UpTrans_DiffCond - INFO - ============================ TEST RESULTS ============================
+2026-04-27 00:17:11,973 - UpTrans_DiffCond - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2026-04-27 00:17:11,973 - UpTrans_DiffCond - INFO - 03759954	14	0.645 	11.109 	1.066 	0.000 	microphone	
+2026-04-27 00:17:11,973 - UpTrans_DiffCond - INFO - 04330267	44	0.363 	14.868 	0.909 	0.000 	stove	
+2026-04-27 00:17:11,973 - UpTrans_DiffCond - INFO - 03261776	15	0.426 	16.754 	2.310 	0.000 	earphone	
+2026-04-27 00:17:11,973 - UpTrans_DiffCond - INFO - 03513137	33	0.288 	19.307 	1.615 	0.000 	helmet	
+2026-04-27 00:17:11,973 - UpTrans_DiffCond - INFO - 04460130	27	0.497 	12.954 	0.738 	0.000 	tower	
+2026-04-27 00:17:11,973 - UpTrans_DiffCond - INFO - 04468005	78	0.460 	12.581 	0.650 	0.000 	train	
+2026-04-27 00:17:11,973 - UpTrans_DiffCond - INFO - 03761084	31	0.304 	16.374 	1.034 	0.000 	microwaves	
+2026-04-27 00:17:11,973 - UpTrans_DiffCond - INFO - 04004475	34	0.347 	15.766 	1.126 	0.000 	printer	
+2026-04-27 00:17:11,973 - UpTrans_DiffCond - INFO - 03938244	20	0.381 	14.935 	0.935 	0.000 	pillow	
+2026-04-27 00:17:11,973 - UpTrans_DiffCond - INFO - 02992529	167	0.490 	10.705 	0.394 	0.000 	cellphone	
+2026-04-27 00:17:11,973 - UpTrans_DiffCond - INFO - 02808440	172	0.373 	14.552 	0.907 	0.000 	bathtub	
+2026-04-27 00:17:11,973 - UpTrans_DiffCond - INFO - 04530566	388	0.570 	10.803 	0.516 	0.000 	watercraft	
+2026-04-27 00:17:11,973 - UpTrans_DiffCond - INFO - 02871439	91	0.326 	15.218 	0.926 	0.000 	bookshelf	
+2026-04-27 00:17:11,973 - UpTrans_DiffCond - INFO - 03593526	120	0.340 	16.183 	1.178 	0.000 	jar	
+2026-04-27 00:17:11,973 - UpTrans_DiffCond - INFO - 04554684	34	0.297 	17.278 	1.315 	0.000 	washer	
+2026-04-27 00:17:11,973 - UpTrans_DiffCond - INFO - 03467517	160	0.845 	6.344 	0.191 	0.000 	guitar	
+2026-04-27 00:17:11,973 - UpTrans_DiffCond - INFO - 04401088	218	0.494 	10.678 	0.398 	0.000 	telephone	
+2026-04-27 00:17:11,973 - UpTrans_DiffCond - INFO - 02954340	12	0.401 	12.999 	0.646 	0.000 	cap	
+2026-04-27 00:17:11,973 - UpTrans_DiffCond - INFO - 02933112	315	0.309 	14.832 	0.758 	0.000 	cabinet	
+2026-04-27 00:17:11,973 - UpTrans_DiffCond - INFO - 03642806	92	0.453 	11.353 	0.463 	0.000 	laptop	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 02924116	188	0.436 	12.272 	0.541 	0.000 	bus	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 02946921	22	0.316 	14.999 	0.853 	0.000 	can	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 02818832	47	0.356 	16.057 	1.168 	0.000 	bed	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 04256520	635	0.373 	13.618 	0.633 	0.000 	sofa	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 04379243	1687	0.454 	12.254 	0.634 	0.000 	table	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 02747177	69	0.261 	17.363 	1.161 	0.000 	trash bin	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 03046257	131	0.381 	13.902 	0.741 	0.000 	clock	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 04225987	31	0.629 	9.246 	0.317 	0.000 	skateboard	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 03797390	43	0.256 	17.941 	1.328 	0.000 	mug	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 03001627	1356	0.449 	13.003 	0.753 	0.000 	chair	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 03691459	320	0.328 	16.525 	1.152 	0.000 	loudspeaker	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 02942699	23	0.323 	18.827 	1.723 	0.000 	camera	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 03636649	464	0.607 	12.078 	1.115 	0.000 	lamp	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 02691156	809	0.639 	9.223 	0.358 	0.000 	airplane	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 02773838	17	0.437 	12.528 	0.655 	0.000 	bag	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 02958343	703	0.290 	15.604 	0.820 	0.000 	car	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 02880940	38	0.296 	15.724 	0.820 	0.000 	bowl	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 04099429	17	0.720 	8.875 	0.527 	0.000 	rocket	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 02828884	363	0.513 	10.777 	0.470 	0.000 	bench	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 04090263	475	0.735 	8.200 	0.365 	0.000 	rifle	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 03211117	219	0.426 	12.720 	0.656 	0.000 	display	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 02876657	100	0.495 	11.745 	0.583 	0.000 	bottle	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 03710193	19	0.607 	11.777 	0.826 	0.000 	mailbox	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 03790512	68	0.338 	15.257 	0.983 	0.000 	motorbike	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 03325088	149	0.557 	13.234 	1.148 	0.000 	faucet	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 02801938	23	0.299 	16.292 	0.991 	0.000 	basket	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 03337140	60	0.312 	15.301 	0.843 	0.000 	file cabinet	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 02843684	15	0.313 	17.672 	1.310 	0.000 	birdhouse	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 03624134	85	0.826 	6.414 	0.202 	0.000 	knife	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 03991062	121	0.311 	17.635 	1.349 	0.000 	flowerpot	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 03948459	62	0.551 	10.932 	0.527 	0.000 	pistol	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 03928116	48	0.371 	14.088 	0.779 	0.000 	piano	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 03207941	19	0.315 	15.836 	1.061 	0.000 	dishwasher	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 04074963	14	0.519 	10.816 	0.437 	0.000 	remote	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - 03085013	13	0.531 	10.105 	0.345 	0.000 	keyboard	
+2026-04-27 00:17:11,974 - UpTrans_DiffCond - INFO - Overall		0.440 	13.535 	0.841 	0.000 	
+2026-04-27 00:17:12,473 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-last.pth
+2026-04-27 00:17:13,199 - UpTrans_DiffCond - INFO - [Epoch 21/30][Batch 1/1311] BatchTime = 0.724 (s) DataTime = 0.167 (s) Losses = ['1.8420', '0.4167'] lr = 0.000090
+2026-04-27 00:18:03,293 - UpTrans_DiffCond - INFO - [Epoch 21/30][Batch 101/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.1003', '0.6280'] lr = 0.000090
+2026-04-27 00:18:53,094 - UpTrans_DiffCond - INFO - [Epoch 21/30][Batch 201/1311] BatchTime = 0.501 (s) DataTime = 0.001 (s) Losses = ['2.6610', '0.7897'] lr = 0.000090
+2026-04-27 00:19:43,193 - UpTrans_DiffCond - INFO - [Epoch 21/30][Batch 301/1311] BatchTime = 0.489 (s) DataTime = 0.002 (s) Losses = ['1.6345', '0.4035'] lr = 0.000090
+2026-04-27 00:20:33,193 - UpTrans_DiffCond - INFO - [Epoch 21/30][Batch 401/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.6329', '0.7355'] lr = 0.000090
+2026-04-27 00:21:22,793 - UpTrans_DiffCond - INFO - [Epoch 21/30][Batch 501/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.6366', '0.4368'] lr = 0.000090
+2026-04-27 00:22:12,993 - UpTrans_DiffCond - INFO - [Epoch 21/30][Batch 601/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.1089', '0.5818'] lr = 0.000090
+2026-04-27 00:23:03,493 - UpTrans_DiffCond - INFO - [Epoch 21/30][Batch 701/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['3.2759', '0.8481'] lr = 0.000090
+2026-04-27 00:23:54,093 - UpTrans_DiffCond - INFO - [Epoch 21/30][Batch 801/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.9160', '0.4530'] lr = 0.000090
+2026-04-27 00:24:44,193 - UpTrans_DiffCond - INFO - [Epoch 21/30][Batch 901/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.3503', '0.6795'] lr = 0.000090
+2026-04-27 00:25:34,195 - UpTrans_DiffCond - INFO - [Epoch 21/30][Batch 1001/1311] BatchTime = 0.489 (s) DataTime = 0.001 (s) Losses = ['2.0642', '0.4969'] lr = 0.000090
+2026-04-27 00:26:24,693 - UpTrans_DiffCond - INFO - [Epoch 21/30][Batch 1101/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.0187', '0.6513'] lr = 0.000090
+2026-04-27 00:27:14,798 - UpTrans_DiffCond - INFO - [Epoch 21/30][Batch 1201/1311] BatchTime = 0.505 (s) DataTime = 0.002 (s) Losses = ['1.4934', '0.4171'] lr = 0.000090
+2026-04-27 00:28:04,893 - UpTrans_DiffCond - INFO - [Epoch 21/30][Batch 1301/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.9657', '0.9276'] lr = 0.000090
+2026-04-27 00:28:10,075 - UpTrans_DiffCond - INFO - [Training] EPOCH: 21 EpochTime = 657.601 (s) Losses = ['2.2386', '0.6378']
+2026-04-27 00:28:10,611 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-last.pth
+2026-04-27 00:28:11,331 - UpTrans_DiffCond - INFO - [Epoch 22/30][Batch 1/1311] BatchTime = 0.718 (s) DataTime = 0.156 (s) Losses = ['2.1987', '0.6573'] lr = 0.000090
+2026-04-27 00:29:01,793 - UpTrans_DiffCond - INFO - [Epoch 22/30][Batch 101/1311] BatchTime = 0.488 (s) DataTime = 0.002 (s) Losses = ['2.3671', '0.7046'] lr = 0.000090
+2026-04-27 00:29:52,393 - UpTrans_DiffCond - INFO - [Epoch 22/30][Batch 201/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.8206', '0.5655'] lr = 0.000090
+2026-04-27 00:30:43,193 - UpTrans_DiffCond - INFO - [Epoch 22/30][Batch 301/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.7095', '0.5711'] lr = 0.000090
+2026-04-27 00:31:33,294 - UpTrans_DiffCond - INFO - [Epoch 22/30][Batch 401/1311] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['1.7134', '0.3721'] lr = 0.000090
+2026-04-27 00:32:23,493 - UpTrans_DiffCond - INFO - [Epoch 22/30][Batch 501/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['1.5701', '0.4045'] lr = 0.000090
+2026-04-27 00:33:13,694 - UpTrans_DiffCond - INFO - [Epoch 22/30][Batch 601/1311] BatchTime = 0.490 (s) DataTime = 0.002 (s) Losses = ['3.8215', '1.1309'] lr = 0.000090
+2026-04-27 00:34:03,593 - UpTrans_DiffCond - INFO - [Epoch 22/30][Batch 701/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.9167', '0.8732'] lr = 0.000090
+2026-04-27 00:34:53,793 - UpTrans_DiffCond - INFO - [Epoch 22/30][Batch 801/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.5224', '0.7504'] lr = 0.000090
+2026-04-27 00:35:44,293 - UpTrans_DiffCond - INFO - [Epoch 22/30][Batch 901/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['1.8410', '0.4211'] lr = 0.000090
+2026-04-27 00:36:34,704 - UpTrans_DiffCond - INFO - [Epoch 22/30][Batch 1001/1311] BatchTime = 0.511 (s) DataTime = 0.002 (s) Losses = ['2.7682', '0.6938'] lr = 0.000090
+2026-04-27 00:37:24,393 - UpTrans_DiffCond - INFO - [Epoch 22/30][Batch 1101/1311] BatchTime = 0.490 (s) DataTime = 0.001 (s) Losses = ['1.3016', '0.3545'] lr = 0.000090
+2026-04-27 00:38:14,902 - UpTrans_DiffCond - INFO - [Epoch 22/30][Batch 1201/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.8814', '0.8807'] lr = 0.000090
+2026-04-27 00:39:05,494 - UpTrans_DiffCond - INFO - [Epoch 22/30][Batch 1301/1311] BatchTime = 0.501 (s) DataTime = 0.001 (s) Losses = ['1.9380', '0.4801'] lr = 0.000090
+2026-04-27 00:39:10,873 - UpTrans_DiffCond - INFO - [Training] EPOCH: 22 EpochTime = 660.259 (s) Losses = ['2.2550', '0.6430']
+2026-04-27 00:39:11,441 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-last.pth
+2026-04-27 00:39:12,200 - UpTrans_DiffCond - INFO - [Epoch 23/30][Batch 1/1311] BatchTime = 0.756 (s) DataTime = 0.155 (s) Losses = ['2.1619', '0.6584'] lr = 0.000089
+2026-04-27 00:40:02,294 - UpTrans_DiffCond - INFO - [Epoch 23/30][Batch 101/1311] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['2.0946', '0.6053'] lr = 0.000089
+2026-04-27 00:40:52,304 - UpTrans_DiffCond - INFO - [Epoch 23/30][Batch 201/1311] BatchTime = 0.511 (s) DataTime = 0.001 (s) Losses = ['1.7838', '0.4131'] lr = 0.000089
+2026-04-27 00:41:42,405 - UpTrans_DiffCond - INFO - [Epoch 23/30][Batch 301/1311] BatchTime = 0.501 (s) DataTime = 0.001 (s) Losses = ['1.8458', '0.5140'] lr = 0.000089
+2026-04-27 00:42:32,693 - UpTrans_DiffCond - INFO - [Epoch 23/30][Batch 401/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['3.1876', '0.9525'] lr = 0.000089
+2026-04-27 00:43:22,893 - UpTrans_DiffCond - INFO - [Epoch 23/30][Batch 501/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.2826', '0.6073'] lr = 0.000089
+2026-04-27 00:44:13,093 - UpTrans_DiffCond - INFO - [Epoch 23/30][Batch 601/1311] BatchTime = 0.600 (s) DataTime = 0.001 (s) Losses = ['1.8398', '0.4433'] lr = 0.000089
+2026-04-27 00:45:03,195 - UpTrans_DiffCond - INFO - [Epoch 23/30][Batch 701/1311] BatchTime = 0.502 (s) DataTime = 0.001 (s) Losses = ['2.0665', '0.5129'] lr = 0.000089
+2026-04-27 00:45:54,102 - UpTrans_DiffCond - INFO - [Epoch 23/30][Batch 801/1311] BatchTime = 0.499 (s) DataTime = 0.001 (s) Losses = ['2.8226', '0.9089'] lr = 0.000089
+2026-04-27 00:46:44,693 - UpTrans_DiffCond - INFO - [Epoch 23/30][Batch 901/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.7754', '0.8431'] lr = 0.000089
+2026-04-27 00:47:35,093 - UpTrans_DiffCond - INFO - [Epoch 23/30][Batch 1001/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.8118', '0.5351'] lr = 0.000089
+2026-04-27 00:48:25,103 - UpTrans_DiffCond - INFO - [Epoch 23/30][Batch 1101/1311] BatchTime = 0.510 (s) DataTime = 0.002 (s) Losses = ['1.8619', '0.4268'] lr = 0.000089
+2026-04-27 00:49:15,693 - UpTrans_DiffCond - INFO - [Epoch 23/30][Batch 1201/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.9608', '0.4568'] lr = 0.000089
+2026-04-27 00:50:05,704 - UpTrans_DiffCond - INFO - [Epoch 23/30][Batch 1301/1311] BatchTime = 0.511 (s) DataTime = 0.001 (s) Losses = ['1.8297', '0.4849'] lr = 0.000089
+2026-04-27 00:50:10,873 - UpTrans_DiffCond - INFO - [Training] EPOCH: 23 EpochTime = 659.430 (s) Losses = ['2.2422', '0.6385']
+2026-04-27 00:50:11,413 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-last.pth
+2026-04-27 00:50:12,130 - UpTrans_DiffCond - INFO - [Epoch 24/30][Batch 1/1311] BatchTime = 0.716 (s) DataTime = 0.149 (s) Losses = ['1.9404', '0.5313'] lr = 0.000089
+2026-04-27 00:51:02,693 - UpTrans_DiffCond - INFO - [Epoch 24/30][Batch 101/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['1.9052', '0.4706'] lr = 0.000089
+2026-04-27 00:51:53,104 - UpTrans_DiffCond - INFO - [Epoch 24/30][Batch 201/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.2263', '0.7550'] lr = 0.000089
+2026-04-27 00:52:44,093 - UpTrans_DiffCond - INFO - [Epoch 24/30][Batch 301/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.1188', '0.5873'] lr = 0.000089
+2026-04-27 00:53:34,493 - UpTrans_DiffCond - INFO - [Epoch 24/30][Batch 401/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.1387', '0.6436'] lr = 0.000089
+2026-04-27 00:54:24,806 - UpTrans_DiffCond - INFO - [Epoch 24/30][Batch 501/1311] BatchTime = 0.512 (s) DataTime = 0.002 (s) Losses = ['1.8959', '0.4504'] lr = 0.000089
+2026-04-27 00:55:15,296 - UpTrans_DiffCond - INFO - [Epoch 24/30][Batch 601/1311] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['2.6711', '0.8234'] lr = 0.000089
+2026-04-27 00:56:05,404 - UpTrans_DiffCond - INFO - [Epoch 24/30][Batch 701/1311] BatchTime = 0.501 (s) DataTime = 0.001 (s) Losses = ['1.6989', '0.4143'] lr = 0.000089
+2026-04-27 00:56:55,896 - UpTrans_DiffCond - INFO - [Epoch 24/30][Batch 801/1311] BatchTime = 0.489 (s) DataTime = 0.002 (s) Losses = ['1.9256', '0.5257'] lr = 0.000089
+2026-04-27 00:57:46,293 - UpTrans_DiffCond - INFO - [Epoch 24/30][Batch 901/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.4176', '0.5589'] lr = 0.000089
+2026-04-27 00:58:36,293 - UpTrans_DiffCond - INFO - [Epoch 24/30][Batch 1001/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.7925', '0.8122'] lr = 0.000089
+2026-04-27 00:59:26,293 - UpTrans_DiffCond - INFO - [Epoch 24/30][Batch 1101/1311] BatchTime = 0.499 (s) DataTime = 0.001 (s) Losses = ['1.6584', '0.4070'] lr = 0.000089
+2026-04-27 01:00:17,093 - UpTrans_DiffCond - INFO - [Epoch 24/30][Batch 1201/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.6801', '0.7079'] lr = 0.000089
+2026-04-27 01:01:07,093 - UpTrans_DiffCond - INFO - [Epoch 24/30][Batch 1301/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.2549', '0.7420'] lr = 0.000089
+2026-04-27 01:01:12,281 - UpTrans_DiffCond - INFO - [Training] EPOCH: 24 EpochTime = 660.867 (s) Losses = ['2.2419', '0.6357']
+2026-04-27 01:01:12,867 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-last.pth
+2026-04-27 01:01:13,631 - UpTrans_DiffCond - INFO - [Epoch 25/30][Batch 1/1311] BatchTime = 0.762 (s) DataTime = 0.221 (s) Losses = ['1.8526', '0.5419'] lr = 0.000088
+2026-04-27 01:02:03,894 - UpTrans_DiffCond - INFO - [Epoch 25/30][Batch 101/1311] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['2.1702', '0.5934'] lr = 0.000088
+2026-04-27 01:02:53,993 - UpTrans_DiffCond - INFO - [Epoch 25/30][Batch 201/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.5824', '0.9150'] lr = 0.000088
+2026-04-27 01:03:44,504 - UpTrans_DiffCond - INFO - [Epoch 25/30][Batch 301/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['1.5360', '0.3986'] lr = 0.000088
+2026-04-27 01:04:35,194 - UpTrans_DiffCond - INFO - [Epoch 25/30][Batch 401/1311] BatchTime = 0.593 (s) DataTime = 0.002 (s) Losses = ['2.7440', '0.7751'] lr = 0.000088
+2026-04-27 01:05:25,198 - UpTrans_DiffCond - INFO - [Epoch 25/30][Batch 501/1311] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['1.6803', '0.4770'] lr = 0.000088
+2026-04-27 01:06:15,094 - UpTrans_DiffCond - INFO - [Epoch 25/30][Batch 601/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.1974', '0.6510'] lr = 0.000088
+2026-04-27 01:07:05,093 - UpTrans_DiffCond - INFO - [Epoch 25/30][Batch 701/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.5061', '0.4352'] lr = 0.000088
+2026-04-27 01:07:55,193 - UpTrans_DiffCond - INFO - [Epoch 25/30][Batch 801/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['1.8517', '0.5334'] lr = 0.000088
+2026-04-27 01:08:45,394 - UpTrans_DiffCond - INFO - [Epoch 25/30][Batch 901/1311] BatchTime = 0.598 (s) DataTime = 0.002 (s) Losses = ['1.5497', '0.4061'] lr = 0.000088
+2026-04-27 01:09:35,394 - UpTrans_DiffCond - INFO - [Epoch 25/30][Batch 1001/1311] BatchTime = 0.496 (s) DataTime = 0.002 (s) Losses = ['1.3768', '0.3348'] lr = 0.000088
+2026-04-27 01:10:25,393 - UpTrans_DiffCond - INFO - [Epoch 25/30][Batch 1101/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.5270', '0.6607'] lr = 0.000088
+2026-04-27 01:11:15,294 - UpTrans_DiffCond - INFO - [Epoch 25/30][Batch 1201/1311] BatchTime = 0.501 (s) DataTime = 0.001 (s) Losses = ['3.0867', '0.9015'] lr = 0.000088
+2026-04-27 01:12:05,193 - UpTrans_DiffCond - INFO - [Epoch 25/30][Batch 1301/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.9460', '0.5135'] lr = 0.000088
+2026-04-27 01:12:10,389 - UpTrans_DiffCond - INFO - [Training] EPOCH: 25 EpochTime = 657.520 (s) Losses = ['2.2197', '0.6314']
+2026-04-27 01:12:10,390 - UpTrans_DiffCond - INFO - [VALIDATION] Start validating epoch 25
+2026-04-27 01:12:48,707 - UpTrans_DiffCond - INFO - Test[1051/10518] Taxonomy = 02691156 Sample = c7749c0a8b61f43bc9b9e28055202e3d Losses = ['15.6792', '0.9182', '9.5875', '0.3249'] Metrics = ['0.5887', '9.5875', '0.3249', '0.0000']
+2026-04-27 01:13:26,619 - UpTrans_DiffCond - INFO - Test[2102/10518] Taxonomy = 03211117 Sample = ab2f9418c111cc6ddb965514105122a4 Losses = ['15.4633', '1.0292', '7.8783', '0.2447'] Metrics = ['0.7465', '7.8783', '0.2447', '0.0000']
+2026-04-27 01:14:04,621 - UpTrans_DiffCond - INFO - Test[3153/10518] Taxonomy = 02876657 Sample = c5032e4be091aabb36fe7a88df793982 Losses = ['33.6921', '4.8449', '20.2740', '1.8952'] Metrics = ['0.3745', '20.2740', '1.8952', '0.0000']
+2026-04-27 01:14:42,564 - UpTrans_DiffCond - INFO - Test[4204/10518] Taxonomy = 03211117 Sample = 722df1da5778d45b1e43523279c7f09f Losses = ['20.7802', '1.8004', '11.5271', '0.4875'] Metrics = ['0.4902', '11.5271', '0.4875', '0.0000']
+2026-04-27 01:15:20,501 - UpTrans_DiffCond - INFO - Test[5255/10518] Taxonomy = 02828884 Sample = 14b63361a48a9fffe4a048c146e8bd43 Losses = ['21.8428', '1.9387', '9.5549', '0.3250'] Metrics = ['0.5487', '9.5549', '0.3250', '0.0000']
+2026-04-27 01:15:58,484 - UpTrans_DiffCond - INFO - Test[6306/10518] Taxonomy = 03211117 Sample = d330d50a0255529d19ed6e1a590c9122 Losses = ['18.9436', '1.3632', '10.1925', '0.3490'] Metrics = ['0.5517', '10.1925', '0.3490', '0.0000']
+2026-04-27 01:16:36,424 - UpTrans_DiffCond - INFO - Test[7357/10518] Taxonomy = 04379243 Sample = b1ca280d9567270ade98d10ab5975b59 Losses = ['30.7368', '5.1373', '19.0068', '1.7841'] Metrics = ['0.3176', '19.0068', '1.7841', '0.0000']
+2026-04-27 01:17:14,383 - UpTrans_DiffCond - INFO - Test[8408/10518] Taxonomy = 03001627 Sample = 89208a619341d9fdb8c516ed5c4ce32 Losses = ['22.7999', '1.8327', '12.2615', '0.4268'] Metrics = ['0.3555', '12.2615', '0.4268', '0.0000']
+2026-04-27 01:17:52,317 - UpTrans_DiffCond - INFO - Test[9459/10518] Taxonomy = 03001627 Sample = d0255120e3351121c3bd24f986301745 Losses = ['32.0317', '4.2961', '18.9084', '1.5592'] Metrics = ['0.2914', '18.9084', '1.5592', '0.0000']
+2026-04-27 01:18:30,241 - UpTrans_DiffCond - INFO - Test[10510/10518] Taxonomy = 03636649 Sample = ea9ec4d9db2e06202471e6dd5ac3ef92 Losses = ['20.8315', '2.3699', '13.8431', '1.1396'] Metrics = ['0.5344', '13.8431', '1.1396', '0.0000']
+2026-04-27 01:18:30,599 - UpTrans_DiffCond - INFO - [Validation] EPOCH: 25  Metrics = ['0.4428', '13.5475', '0.8840', '0.0000']
+2026-04-27 01:18:30,600 - UpTrans_DiffCond - INFO - ============================ TEST RESULTS ============================
+2026-04-27 01:18:30,600 - UpTrans_DiffCond - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2026-04-27 01:18:30,600 - UpTrans_DiffCond - INFO - 03759954	14	0.603 	13.769 	1.824 	0.000 	microphone	
+2026-04-27 01:18:30,600 - UpTrans_DiffCond - INFO - 04330267	44	0.367 	15.355 	1.109 	0.000 	stove	
+2026-04-27 01:18:30,600 - UpTrans_DiffCond - INFO - 03261776	15	0.417 	16.995 	2.359 	0.000 	earphone	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 03513137	33	0.301 	19.383 	2.430 	0.000 	helmet	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 04460130	27	0.495 	13.640 	0.908 	0.000 	tower	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 04468005	78	0.462 	12.625 	0.751 	0.000 	train	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 03761084	31	0.319 	15.918 	0.964 	0.000 	microwaves	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 04004475	34	0.361 	15.378 	1.000 	0.000 	printer	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 03938244	20	0.393 	13.980 	0.761 	0.000 	pillow	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 02992529	167	0.499 	10.769 	0.386 	0.000 	cellphone	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 02808440	172	0.375 	14.297 	0.815 	0.000 	bathtub	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 04530566	388	0.572 	10.789 	0.566 	0.000 	watercraft	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 02871439	91	0.328 	15.362 	0.958 	0.000 	bookshelf	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 03593526	120	0.338 	16.791 	1.226 	0.000 	jar	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 04554684	34	0.303 	16.883 	1.244 	0.000 	washer	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 03467517	160	0.855 	6.092 	0.168 	0.000 	guitar	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 04401088	218	0.504 	10.506 	0.364 	0.000 	telephone	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 02954340	12	0.398 	13.406 	0.745 	0.000 	cap	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 02933112	315	0.311 	14.882 	0.763 	0.000 	cabinet	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 03642806	92	0.457 	11.130 	0.417 	0.000 	laptop	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 02924116	188	0.436 	12.089 	0.520 	0.000 	bus	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 02946921	22	0.327 	14.231 	0.647 	0.000 	can	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 02818832	47	0.365 	15.022 	0.974 	0.000 	bed	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 04256520	635	0.377 	13.656 	0.657 	0.000 	sofa	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 04379243	1687	0.461 	12.144 	0.653 	0.000 	table	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 02747177	69	0.259 	17.924 	1.256 	0.000 	trash bin	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 03046257	131	0.390 	14.157 	0.868 	0.000 	clock	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 04225987	31	0.634 	9.470 	0.410 	0.000 	skateboard	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 03797390	43	0.262 	18.110 	1.351 	0.000 	mug	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 03001627	1356	0.453 	13.004 	0.765 	0.000 	chair	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 03691459	320	0.329 	16.618 	1.164 	0.000 	loudspeaker	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 02942699	23	0.332 	17.899 	1.694 	0.000 	camera	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 03636649	464	0.599 	12.209 	1.101 	0.000 	lamp	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 02691156	809	0.641 	8.957 	0.348 	0.000 	airplane	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 02773838	17	0.436 	12.635 	0.632 	0.000 	bag	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 02958343	703	0.293 	15.617 	0.832 	0.000 	car	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 02880940	38	0.299 	16.338 	1.024 	0.000 	bowl	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 04099429	17	0.740 	8.227 	0.358 	0.000 	rocket	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 02828884	363	0.518 	10.737 	0.501 	0.000 	bench	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 04090263	475	0.739 	8.079 	0.376 	0.000 	rifle	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 03211117	219	0.430 	12.561 	0.610 	0.000 	display	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 02876657	100	0.502 	11.816 	0.630 	0.000 	bottle	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 03710193	19	0.588 	11.968 	0.878 	0.000 	mailbox	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 03790512	68	0.341 	14.611 	0.838 	0.000 	motorbike	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 03325088	149	0.563 	13.080 	1.335 	0.000 	faucet	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 02801938	23	0.298 	17.254 	1.278 	0.000 	basket	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 03337140	60	0.316 	15.517 	0.893 	0.000 	file cabinet	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 02843684	15	0.323 	18.310 	1.619 	0.000 	birdhouse	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 03624134	85	0.815 	6.570 	0.223 	0.000 	knife	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 03991062	121	0.315 	17.689 	1.406 	0.000 	flowerpot	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 03948459	62	0.548 	11.011 	0.608 	0.000 	pistol	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 03928116	48	0.366 	14.617 	0.882 	0.000 	piano	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 03207941	19	0.324 	14.798 	0.771 	0.000 	dishwasher	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 04074963	14	0.546 	10.578 	0.472 	0.000 	remote	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - 03085013	13	0.533 	9.656 	0.283 	0.000 	keyboard	
+2026-04-27 01:18:30,601 - UpTrans_DiffCond - INFO - Overall		0.443 	13.547 	0.884 	0.000 	
+2026-04-27 01:18:31,097 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-last.pth
+2026-04-27 01:18:31,833 - UpTrans_DiffCond - INFO - [Epoch 26/30][Batch 1/1311] BatchTime = 0.733 (s) DataTime = 0.214 (s) Losses = ['2.7917', '0.8070'] lr = 0.000088
+2026-04-27 01:19:21,894 - UpTrans_DiffCond - INFO - [Epoch 26/30][Batch 101/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.5071', '0.7897'] lr = 0.000088
+2026-04-27 01:20:11,494 - UpTrans_DiffCond - INFO - [Epoch 26/30][Batch 201/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.7281', '0.4151'] lr = 0.000088
+2026-04-27 01:21:01,395 - UpTrans_DiffCond - INFO - [Epoch 26/30][Batch 301/1311] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['2.3808', '0.7638'] lr = 0.000088
+2026-04-27 01:21:51,792 - UpTrans_DiffCond - INFO - [Epoch 26/30][Batch 401/1311] BatchTime = 0.598 (s) DataTime = 0.002 (s) Losses = ['1.4998', '0.3992'] lr = 0.000088
+2026-04-27 01:22:41,895 - UpTrans_DiffCond - INFO - [Epoch 26/30][Batch 501/1311] BatchTime = 0.502 (s) DataTime = 0.002 (s) Losses = ['2.8041', '0.8768'] lr = 0.000088
+2026-04-27 01:23:31,393 - UpTrans_DiffCond - INFO - [Epoch 26/30][Batch 601/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.7085', '0.5082'] lr = 0.000088
+2026-04-27 01:24:21,493 - UpTrans_DiffCond - INFO - [Epoch 26/30][Batch 701/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.5974', '0.4030'] lr = 0.000088
+2026-04-27 01:25:11,530 - UpTrans_DiffCond - INFO - [Epoch 26/30][Batch 801/1311] BatchTime = 0.536 (s) DataTime = 0.002 (s) Losses = ['1.9762', '0.6727'] lr = 0.000088
+2026-04-27 01:26:01,694 - UpTrans_DiffCond - INFO - [Epoch 26/30][Batch 901/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.7360', '0.4123'] lr = 0.000088
+2026-04-27 01:26:51,693 - UpTrans_DiffCond - INFO - [Epoch 26/30][Batch 1001/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.6376', '0.4025'] lr = 0.000088
+2026-04-27 01:27:41,893 - UpTrans_DiffCond - INFO - [Epoch 26/30][Batch 1101/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.7688', '0.4825'] lr = 0.000088
+2026-04-27 01:28:31,893 - UpTrans_DiffCond - INFO - [Epoch 26/30][Batch 1201/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.7430', '0.4280'] lr = 0.000088
+2026-04-27 01:29:21,893 - UpTrans_DiffCond - INFO - [Epoch 26/30][Batch 1301/1311] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['3.2760', '0.9252'] lr = 0.000088
+2026-04-27 01:29:27,105 - UpTrans_DiffCond - INFO - [Training] EPOCH: 26 EpochTime = 656.006 (s) Losses = ['2.2315', '0.6352']
+2026-04-27 01:29:27,640 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-last.pth
+2026-04-27 01:29:28,397 - UpTrans_DiffCond - INFO - [Epoch 27/30][Batch 1/1311] BatchTime = 0.755 (s) DataTime = 0.194 (s) Losses = ['2.2774', '0.6934'] lr = 0.000087
+2026-04-27 01:30:18,395 - UpTrans_DiffCond - INFO - [Epoch 27/30][Batch 101/1311] BatchTime = 0.466 (s) DataTime = 0.002 (s) Losses = ['2.3421', '0.7104'] lr = 0.000087
+2026-04-27 01:31:08,393 - UpTrans_DiffCond - INFO - [Epoch 27/30][Batch 201/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.0096', '0.6125'] lr = 0.000087
+2026-04-27 01:31:58,394 - UpTrans_DiffCond - INFO - [Epoch 27/30][Batch 301/1311] BatchTime = 0.495 (s) DataTime = 0.002 (s) Losses = ['2.3646', '0.7904'] lr = 0.000087
+2026-04-27 01:32:48,194 - UpTrans_DiffCond - INFO - [Epoch 27/30][Batch 401/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.8462', '0.4947'] lr = 0.000087
+2026-04-27 01:33:38,195 - UpTrans_DiffCond - INFO - [Epoch 27/30][Batch 501/1311] BatchTime = 0.502 (s) DataTime = 0.002 (s) Losses = ['1.7468', '0.4860'] lr = 0.000087
+2026-04-27 01:34:28,193 - UpTrans_DiffCond - INFO - [Epoch 27/30][Batch 601/1311] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['2.2341', '0.6083'] lr = 0.000087
+2026-04-27 01:35:18,093 - UpTrans_DiffCond - INFO - [Epoch 27/30][Batch 701/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.9014', '0.8700'] lr = 0.000087
+2026-04-27 01:36:08,093 - UpTrans_DiffCond - INFO - [Epoch 27/30][Batch 801/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.0686', '0.5587'] lr = 0.000087
+2026-04-27 01:36:58,206 - UpTrans_DiffCond - INFO - [Epoch 27/30][Batch 901/1311] BatchTime = 0.512 (s) DataTime = 0.002 (s) Losses = ['1.7284', '0.3925'] lr = 0.000087
+2026-04-27 01:37:48,293 - UpTrans_DiffCond - INFO - [Epoch 27/30][Batch 1001/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.0059', '0.5009'] lr = 0.000087
+2026-04-27 01:38:38,293 - UpTrans_DiffCond - INFO - [Epoch 27/30][Batch 1101/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.6178', '0.7034'] lr = 0.000087
+2026-04-27 01:39:28,393 - UpTrans_DiffCond - INFO - [Epoch 27/30][Batch 1201/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.6738', '0.3871'] lr = 0.000087
+2026-04-27 01:40:18,393 - UpTrans_DiffCond - INFO - [Epoch 27/30][Batch 1301/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.0433', '0.5815'] lr = 0.000087
+2026-04-27 01:40:23,592 - UpTrans_DiffCond - INFO - [Training] EPOCH: 27 EpochTime = 655.949 (s) Losses = ['2.2467', '0.6396']
+2026-04-27 01:40:24,125 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-last.pth
+2026-04-27 01:40:24,897 - UpTrans_DiffCond - INFO - [Epoch 28/30][Batch 1/1311] BatchTime = 0.770 (s) DataTime = 0.188 (s) Losses = ['1.8022', '0.4005'] lr = 0.000087
+2026-04-27 01:41:14,795 - UpTrans_DiffCond - INFO - [Epoch 28/30][Batch 101/1311] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['1.5461', '0.4337'] lr = 0.000087
+2026-04-27 01:42:04,594 - UpTrans_DiffCond - INFO - [Epoch 28/30][Batch 201/1311] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['1.6892', '0.4777'] lr = 0.000087
+2026-04-27 01:42:54,593 - UpTrans_DiffCond - INFO - [Epoch 28/30][Batch 301/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.0954', '0.6390'] lr = 0.000087
+2026-04-27 01:43:45,029 - UpTrans_DiffCond - INFO - [Epoch 28/30][Batch 401/1311] BatchTime = 0.536 (s) DataTime = 0.002 (s) Losses = ['2.0461', '0.5765'] lr = 0.000087
+2026-04-27 01:44:34,994 - UpTrans_DiffCond - INFO - [Epoch 28/30][Batch 501/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.4028', '0.6798'] lr = 0.000087
+2026-04-27 01:45:24,993 - UpTrans_DiffCond - INFO - [Epoch 28/30][Batch 601/1311] BatchTime = 0.498 (s) DataTime = 0.002 (s) Losses = ['3.0459', '0.9825'] lr = 0.000087
+2026-04-27 01:46:15,533 - UpTrans_DiffCond - INFO - [Epoch 28/30][Batch 701/1311] BatchTime = 0.428 (s) DataTime = 0.002 (s) Losses = ['2.2841', '0.5081'] lr = 0.000087
+2026-04-27 01:47:05,494 - UpTrans_DiffCond - INFO - [Epoch 28/30][Batch 801/1311] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['2.6502', '0.6962'] lr = 0.000087
+2026-04-27 01:47:55,205 - UpTrans_DiffCond - INFO - [Epoch 28/30][Batch 901/1311] BatchTime = 0.412 (s) DataTime = 0.002 (s) Losses = ['2.1164', '0.4796'] lr = 0.000087
+2026-04-27 01:48:45,094 - UpTrans_DiffCond - INFO - [Epoch 28/30][Batch 1001/1311] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['2.0410', '0.6597'] lr = 0.000087
+2026-04-27 01:49:35,097 - UpTrans_DiffCond - INFO - [Epoch 28/30][Batch 1101/1311] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['2.0205', '0.5318'] lr = 0.000087
+2026-04-27 01:50:25,094 - UpTrans_DiffCond - INFO - [Epoch 28/30][Batch 1201/1311] BatchTime = 0.461 (s) DataTime = 0.002 (s) Losses = ['1.8429', '0.5067'] lr = 0.000087
+2026-04-27 01:51:15,293 - UpTrans_DiffCond - INFO - [Epoch 28/30][Batch 1301/1311] BatchTime = 0.487 (s) DataTime = 0.002 (s) Losses = ['2.3295', '0.6697'] lr = 0.000087
+2026-04-27 01:51:20,487 - UpTrans_DiffCond - INFO - [Training] EPOCH: 28 EpochTime = 656.360 (s) Losses = ['2.2181', '0.6268']
+2026-04-27 01:51:21,052 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-last.pth
+2026-04-27 01:51:21,836 - UpTrans_DiffCond - INFO - [Epoch 29/30][Batch 1/1311] BatchTime = 0.781 (s) DataTime = 0.221 (s) Losses = ['1.3748', '0.3449'] lr = 0.000086
+2026-04-27 01:52:11,793 - UpTrans_DiffCond - INFO - [Epoch 29/30][Batch 101/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.7259', '0.4694'] lr = 0.000086
+2026-04-27 01:53:01,793 - UpTrans_DiffCond - INFO - [Epoch 29/30][Batch 201/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.4349', '0.7501'] lr = 0.000086
+2026-04-27 01:53:51,893 - UpTrans_DiffCond - INFO - [Epoch 29/30][Batch 301/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.3588', '0.6277'] lr = 0.000086
+2026-04-27 01:54:41,993 - UpTrans_DiffCond - INFO - [Epoch 29/30][Batch 401/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['1.9731', '0.5534'] lr = 0.000086
+2026-04-27 01:55:32,093 - UpTrans_DiffCond - INFO - [Epoch 29/30][Batch 501/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.5687', '0.7426'] lr = 0.000086
+2026-04-27 01:56:22,204 - UpTrans_DiffCond - INFO - [Epoch 29/30][Batch 601/1311] BatchTime = 0.510 (s) DataTime = 0.002 (s) Losses = ['1.7957', '0.3928'] lr = 0.000086
+2026-04-27 01:57:11,993 - UpTrans_DiffCond - INFO - [Epoch 29/30][Batch 701/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.2107', '0.7228'] lr = 0.000086
+2026-04-27 01:58:01,993 - UpTrans_DiffCond - INFO - [Epoch 29/30][Batch 801/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.4846', '0.8007'] lr = 0.000086
+2026-04-27 01:58:52,093 - UpTrans_DiffCond - INFO - [Epoch 29/30][Batch 901/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['3.0515', '0.9012'] lr = 0.000086
+2026-04-27 01:59:42,194 - UpTrans_DiffCond - INFO - [Epoch 29/30][Batch 1001/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.1982', '0.5520'] lr = 0.000086
+2026-04-27 02:00:32,093 - UpTrans_DiffCond - INFO - [Epoch 29/30][Batch 1101/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.8719', '0.5042'] lr = 0.000086
+2026-04-27 02:01:22,101 - UpTrans_DiffCond - INFO - [Epoch 29/30][Batch 1201/1311] BatchTime = 0.466 (s) DataTime = 0.002 (s) Losses = ['2.7832', '0.8368'] lr = 0.000086
+2026-04-27 02:02:12,093 - UpTrans_DiffCond - INFO - [Epoch 29/30][Batch 1301/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.8561', '0.4626'] lr = 0.000086
+2026-04-27 02:02:17,286 - UpTrans_DiffCond - INFO - [Training] EPOCH: 29 EpochTime = 656.231 (s) Losses = ['2.2607', '0.6453']
+2026-04-27 02:02:17,832 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-last.pth
+2026-04-27 02:02:18,144 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-epoch-029.pth
+2026-04-27 02:02:18,897 - UpTrans_DiffCond - INFO - [Epoch 30/30][Batch 1/1311] BatchTime = 0.752 (s) DataTime = 0.209 (s) Losses = ['4.0116', '1.3408'] lr = 0.000086
+2026-04-27 02:03:08,993 - UpTrans_DiffCond - INFO - [Epoch 30/30][Batch 101/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.8589', '0.4476'] lr = 0.000086
+2026-04-27 02:03:59,093 - UpTrans_DiffCond - INFO - [Epoch 30/30][Batch 201/1311] BatchTime = 0.494 (s) DataTime = 0.002 (s) Losses = ['2.2277', '0.7132'] lr = 0.000086
+2026-04-27 02:04:49,093 - UpTrans_DiffCond - INFO - [Epoch 30/30][Batch 301/1311] BatchTime = 0.494 (s) DataTime = 0.003 (s) Losses = ['2.8877', '0.7322'] lr = 0.000086
+2026-04-27 02:05:39,093 - UpTrans_DiffCond - INFO - [Epoch 30/30][Batch 401/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.2810', '0.5720'] lr = 0.000086
+2026-04-27 02:06:29,194 - UpTrans_DiffCond - INFO - [Epoch 30/30][Batch 501/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.1319', '0.5081'] lr = 0.000086
+2026-04-27 02:07:19,193 - UpTrans_DiffCond - INFO - [Epoch 30/30][Batch 601/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.4460', '0.3901'] lr = 0.000086
+2026-04-27 02:08:09,295 - UpTrans_DiffCond - INFO - [Epoch 30/30][Batch 701/1311] BatchTime = 0.488 (s) DataTime = 0.002 (s) Losses = ['2.4919', '0.7818'] lr = 0.000086
+2026-04-27 02:08:59,293 - UpTrans_DiffCond - INFO - [Epoch 30/30][Batch 801/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.1153', '0.6193'] lr = 0.000086
+2026-04-27 02:09:49,293 - UpTrans_DiffCond - INFO - [Epoch 30/30][Batch 901/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.7376', '0.9114'] lr = 0.000086
+2026-04-27 02:10:39,393 - UpTrans_DiffCond - INFO - [Epoch 30/30][Batch 1001/1311] BatchTime = 0.488 (s) DataTime = 0.002 (s) Losses = ['1.8815', '0.3891'] lr = 0.000086
+2026-04-27 02:11:29,393 - UpTrans_DiffCond - INFO - [Epoch 30/30][Batch 1101/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.9187', '0.7771'] lr = 0.000086
+2026-04-27 02:12:19,499 - UpTrans_DiffCond - INFO - [Epoch 30/30][Batch 1201/1311] BatchTime = 0.505 (s) DataTime = 0.002 (s) Losses = ['2.2827', '0.6774'] lr = 0.000086
+2026-04-27 02:13:09,493 - UpTrans_DiffCond - INFO - [Epoch 30/30][Batch 1301/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.6286', '0.8141'] lr = 0.000086
+2026-04-27 02:13:14,709 - UpTrans_DiffCond - INFO - [Training] EPOCH: 30 EpochTime = 656.564 (s) Losses = ['2.2470', '0.6429']
+2026-04-27 02:13:14,709 - UpTrans_DiffCond - INFO - [VALIDATION] Start validating epoch 30
+2026-04-27 02:13:53,143 - UpTrans_DiffCond - INFO - Test[1051/10518] Taxonomy = 02691156 Sample = c7749c0a8b61f43bc9b9e28055202e3d Losses = ['16.9752', '1.2755', '9.8565', '0.4504'] Metrics = ['0.6312', '9.8565', '0.4504', '0.0000']
+2026-04-27 02:14:31,119 - UpTrans_DiffCond - INFO - Test[2102/10518] Taxonomy = 03211117 Sample = ab2f9418c111cc6ddb965514105122a4 Losses = ['14.8465', '0.8120', '7.6015', '0.1913'] Metrics = ['0.7081', '7.6015', '0.1913', '0.0000']
+2026-04-27 02:15:09,008 - UpTrans_DiffCond - INFO - Test[3153/10518] Taxonomy = 02876657 Sample = c5032e4be091aabb36fe7a88df793982 Losses = ['34.2129', '4.9325', '20.9584', '2.0523'] Metrics = ['0.3608', '20.9584', '2.0523', '0.0000']
+2026-04-27 02:15:47,143 - UpTrans_DiffCond - INFO - Test[4204/10518] Taxonomy = 03211117 Sample = 722df1da5778d45b1e43523279c7f09f Losses = ['23.4730', '2.5206', '14.9239', '1.2289'] Metrics = ['0.4825', '14.9239', '1.2289', '0.0000']
+2026-04-27 02:16:24,901 - UpTrans_DiffCond - INFO - Test[5255/10518] Taxonomy = 02828884 Sample = 14b63361a48a9fffe4a048c146e8bd43 Losses = ['22.3156', '2.0045', '9.6856', '0.3561'] Metrics = ['0.5601', '9.6856', '0.3561', '0.0000']
+2026-04-27 02:17:02,714 - UpTrans_DiffCond - INFO - Test[6306/10518] Taxonomy = 03211117 Sample = d330d50a0255529d19ed6e1a590c9122 Losses = ['17.8293', '1.1137', '8.9875', '0.2390'] Metrics = ['0.5560', '8.9875', '0.2390', '0.0000']
+2026-04-27 02:17:40,739 - UpTrans_DiffCond - INFO - Test[7357/10518] Taxonomy = 04379243 Sample = b1ca280d9567270ade98d10ab5975b59 Losses = ['26.4506', '2.9813', '15.9452', '0.9426'] Metrics = ['0.3058', '15.9452', '0.9426', '0.0000']
+2026-04-27 02:18:18,528 - UpTrans_DiffCond - INFO - Test[8408/10518] Taxonomy = 03001627 Sample = 89208a619341d9fdb8c516ed5c4ce32 Losses = ['24.1645', '2.1689', '13.1494', '0.5750'] Metrics = ['0.3726', '13.1494', '0.5750', '0.0000']
+2026-04-27 02:18:56,369 - UpTrans_DiffCond - INFO - Test[9459/10518] Taxonomy = 03001627 Sample = d0255120e3351121c3bd24f986301745 Losses = ['28.6487', '3.0978', '15.3146', '0.8034'] Metrics = ['0.3053', '15.3146', '0.8034', '0.0000']
+2026-04-27 02:19:34,294 - UpTrans_DiffCond - INFO - Test[10510/10518] Taxonomy = 03636649 Sample = ea9ec4d9db2e06202471e6dd5ac3ef92 Losses = ['12.9591', '0.7796', '5.0448', '0.0978'] Metrics = ['0.8794', '5.0448', '0.0978', '0.0000']
+2026-04-27 02:19:34,740 - UpTrans_DiffCond - INFO - [Validation] EPOCH: 30  Metrics = ['0.4342', '13.3368', '0.8252', '0.0000']
+2026-04-27 02:19:34,740 - UpTrans_DiffCond - INFO - ============================ TEST RESULTS ============================
+2026-04-27 02:19:34,740 - UpTrans_DiffCond - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2026-04-27 02:19:34,740 - UpTrans_DiffCond - INFO - 03759954	14	0.571 	14.157 	1.648 	0.000 	microphone	
+2026-04-27 02:19:34,740 - UpTrans_DiffCond - INFO - 04330267	44	0.363 	14.463 	0.828 	0.000 	stove	
+2026-04-27 02:19:34,740 - UpTrans_DiffCond - INFO - 03261776	15	0.392 	17.134 	1.763 	0.000 	earphone	
+2026-04-27 02:19:34,740 - UpTrans_DiffCond - INFO - 03513137	33	0.290 	18.194 	1.537 	0.000 	helmet	
+2026-04-27 02:19:34,740 - UpTrans_DiffCond - INFO - 04460130	27	0.476 	12.660 	0.717 	0.000 	tower	
+2026-04-27 02:19:34,740 - UpTrans_DiffCond - INFO - 04468005	78	0.449 	12.528 	0.673 	0.000 	train	
+2026-04-27 02:19:34,740 - UpTrans_DiffCond - INFO - 03761084	31	0.318 	15.406 	1.002 	0.000 	microwaves	
+2026-04-27 02:19:34,740 - UpTrans_DiffCond - INFO - 04004475	34	0.348 	15.378 	0.983 	0.000 	printer	
+2026-04-27 02:19:34,740 - UpTrans_DiffCond - INFO - 03938244	20	0.391 	13.858 	0.751 	0.000 	pillow	
+2026-04-27 02:19:34,740 - UpTrans_DiffCond - INFO - 02992529	167	0.490 	10.506 	0.373 	0.000 	cellphone	
+2026-04-27 02:19:34,740 - UpTrans_DiffCond - INFO - 02808440	172	0.370 	14.036 	0.811 	0.000 	bathtub	
+2026-04-27 02:19:34,740 - UpTrans_DiffCond - INFO - 04530566	388	0.559 	10.629 	0.509 	0.000 	watercraft	
+2026-04-27 02:19:34,740 - UpTrans_DiffCond - INFO - 02871439	91	0.318 	15.127 	0.939 	0.000 	bookshelf	
+2026-04-27 02:19:34,740 - UpTrans_DiffCond - INFO - 03593526	120	0.334 	16.293 	1.151 	0.000 	jar	
+2026-04-27 02:19:34,740 - UpTrans_DiffCond - INFO - 04554684	34	0.295 	16.242 	0.981 	0.000 	washer	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 03467517	160	0.839 	6.322 	0.199 	0.000 	guitar	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 04401088	218	0.486 	10.500 	0.363 	0.000 	telephone	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 02954340	12	0.390 	12.825 	0.597 	0.000 	cap	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 02933112	315	0.307 	14.531 	0.712 	0.000 	cabinet	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 03642806	92	0.457 	10.575 	0.358 	0.000 	laptop	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 02924116	188	0.427 	12.086 	0.516 	0.000 	bus	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 02946921	22	0.327 	14.807 	0.872 	0.000 	can	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 02818832	47	0.360 	15.008 	1.003 	0.000 	bed	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 04256520	635	0.370 	13.603 	0.672 	0.000 	sofa	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 04379243	1687	0.452 	12.089 	0.648 	0.000 	table	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 02747177	69	0.254 	17.291 	1.166 	0.000 	trash bin	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 03046257	131	0.383 	13.896 	0.811 	0.000 	clock	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 04225987	31	0.606 	9.315 	0.362 	0.000 	skateboard	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 03797390	43	0.257 	17.221 	1.100 	0.000 	mug	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 03001627	1356	0.442 	12.822 	0.742 	0.000 	chair	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 03691459	320	0.323 	16.212 	1.106 	0.000 	loudspeaker	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 02942699	23	0.321 	18.878 	1.764 	0.000 	camera	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 03636649	464	0.598 	12.155 	1.191 	0.000 	lamp	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 02691156	809	0.627 	9.070 	0.367 	0.000 	airplane	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 02773838	17	0.409 	13.061 	0.682 	0.000 	bag	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 02958343	703	0.284 	15.470 	0.813 	0.000 	car	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 02880940	38	0.293 	15.543 	0.794 	0.000 	bowl	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 04099429	17	0.737 	8.576 	0.443 	0.000 	rocket	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 02828884	363	0.510 	10.524 	0.451 	0.000 	bench	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 04090263	475	0.728 	8.023 	0.365 	0.000 	rifle	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 03211117	219	0.422 	12.372 	0.603 	0.000 	display	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 02876657	100	0.499 	11.709 	0.676 	0.000 	bottle	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 03710193	19	0.616 	10.426 	0.626 	0.000 	mailbox	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 03790512	68	0.329 	14.650 	0.874 	0.000 	motorbike	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 03325088	149	0.554 	12.789 	1.314 	0.000 	faucet	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 02801938	23	0.303 	15.559 	0.933 	0.000 	basket	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 03337140	60	0.307 	15.338 	0.872 	0.000 	file cabinet	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 02843684	15	0.308 	18.006 	1.478 	0.000 	birdhouse	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 03624134	85	0.809 	6.538 	0.215 	0.000 	knife	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 03991062	121	0.310 	17.971 	1.557 	0.000 	flowerpot	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 03948459	62	0.538 	10.666 	0.517 	0.000 	pistol	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 03928116	48	0.363 	14.418 	0.897 	0.000 	piano	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 03207941	19	0.315 	16.430 	1.386 	0.000 	dishwasher	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 04074963	14	0.535 	9.978 	0.345 	0.000 	remote	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - 03085013	13	0.523 	9.656 	0.331 	0.000 	keyboard	
+2026-04-27 02:19:34,741 - UpTrans_DiffCond - INFO - Overall		0.434 	13.337 	0.825 	0.000 	
+2026-04-27 02:19:35,327 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-last.pth
+2026-04-27 02:19:35,637 - UpTrans_DiffCond - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-epoch-030.pth

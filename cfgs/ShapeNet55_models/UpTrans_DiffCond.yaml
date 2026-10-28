@@ -1,0 +1,82 @@
+optimizer : {
+  type: AdamW,
+  kwargs: {
+  lr : 0.0001,
+  weight_decay : 0.0005
+}}
+
+scheduler: {
+  type: LambdaLR,
+  kwargs: {
+  decay_step: 21,
+  lr_decay: 0.9,
+  lowest_decay: 0.02
+}}
+
+bnmscheduler: {
+  type: Lambda,
+  kwargs: {
+  decay_step: 21,
+  bn_decay: 0.5,
+  bn_momentum: 0.9,
+  lowest_decay: 0.01
+}}
+
+dataset : {
+  train : { _base_: cfgs/dataset_configs/ShapeNet-55.yaml,
+            others: {subset: 'train'}},
+  val : { _base_: cfgs/dataset_configs/ShapeNet-55.yaml,
+            others: {subset: 'test'}},
+  test : { _base_: cfgs/dataset_configs/ShapeNet-55.yaml,
+            others: {subset: 'test'}}}
+
+model : {
+  NAME: UpTrans_DiffCond,
+  num_pred: 8192,
+  num_seeds: 1024,
+  seed_fea: 128,
+  dim_feat: 512,
+  num_dicts: 512,
+  upscales: [1, 2, 4],
+  l2_loss: 1,
+  diff_embed_dim: 256,
+  lambda_ce: 0.1
+}
+
+loss : {
+  sparse_loss_weight: 1.0,
+  dense_loss_weight: 1.0,
+  dz_weight: 1.0,
+  orth_weight: 1.0
+}
+
+total_bs : 32
+step_per_update : 1
+max_epoch : 30
+
+# CDL2 consider_metric: intentional override of ODGNet upstream default (CDL1)
+# to match the main paper's ShapeNet-55 convention (AdaPoinTr + Sec 5 baselines
+# all use CDL2). Keeps matched-control comparison on a single headline metric.
+consider_metric: CDL2
+
+# Cross-backbone DiffCond variant. Same hyperparameters as the vanilla
+# UpTrans.yaml config above except:
+#   - model.NAME = UpTrans_DiffCond (routes through DiffCond architecture)
+#   - diff_embed_dim = 256 (UpTrans port width)
+#   - lambda_ce = 0.1 (matches AdaPoinTr_DiffCond.py:373 literal form)
+# Warm-start and crop path identical to vanilla (matched-control protocol).
+training_crop_mode: diffcond
+
+# Launch (seeds 42 / 43 / 44 in the initial phase, seed 45 in the follow-up; the reported analysis uses all four):
+#   nohup python -u main.py --config cfgs/ShapeNet55_models/UpTrans_DiffCond.yaml \
+#       --exp_name uptrans_diffcond_warmstart30_seed42 --seed 42 --val_freq 10 \
+#       --start_ckpts <path-to-pretrained-ShapeNet55-checkpoint> \
+#       > train_uptrans_diffcond_seed42.log 2>&1 &
+#
+# Warm-start load: builder.load_model detects the vanilla UpTrans ckpt and:
+#   - loads base submodules (feat_extractor.{sa_module_*, transformer_*, ps_*, mlp_*,
+#     refine_{1,2}.{dict_embed,query,key}}, decoder.*) bit-exactly
+#   - zero-inits the 6 DiffCond output-affecting layers (film_{gamma,beta}[-1] weight+bias,
+#     refine_{1,2}.diff_key_delta[-1] weight+bias)
+#   - leaves difficulty_embedding + difficulty_predictor at random-init (intentional)
+# Effect: reconstruction forward is bit-exact vanilla at t=0; CE aux term non-zero.

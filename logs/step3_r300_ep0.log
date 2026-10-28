@@ -1,0 +1,36 @@
+================================================================================
+  R300 ep-0 Diagnostic (Decision Point 1D from 2026-04-16 audit)
+  Testing whether DiffCond warm-start init is bit-exact equivalent to vanilla
+  Expected if equivalent: CDL2 ~= R100 baseline (0.520/0.734/1.352)
+================================================================================
+  [oracle] --mode easy ...
+  [oracle] easy F-Score=0.417 CDL1=11.718 CDL2=0.519 EMD=0.0000
+  [oracle] --mode median ...
+  [oracle] median F-Score=0.401 CDL1=12.827 CDL2=0.734 EMD=0.0000
+  [oracle] --mode hard ...
+  [oracle] hard F-Score=0.361 CDL1=15.649 CDL2=1.352 EMD=0.0000
+  [predict] --mode easy ...
+  [predict] easy F-Score=0.417 CDL1=11.718 CDL2=0.519 EMD=0.0000
+  [predict] --mode median ...
+  [predict] median F-Score=0.401 CDL1=12.827 CDL2=0.734 EMD=0.0000
+  [predict] --mode hard ...
+  [predict] hard F-Score=0.361 CDL1=15.649 CDL2=1.352 EMD=0.0000
+
+================================================================================
+  R300 ep-0 Results vs R100 Baseline (CDL2, lower better)
+================================================================================
+  Mode      R100 baseline   R300ep0 oracle   R300ep0 predict  Δ oracle %  Δ predict %
+  ----------------------------------------------------------------------------------
+  easy              0.520            0.519             0.519       -0.19%        -0.19%
+  median            0.734            0.734             0.734       +0.00%        +0.00%
+  hard              1.352            1.352             1.352       +0.00%        +0.00%
+================================================================================
+
+Oracle max deviation from R100 baseline: 0.19%
+Predict max deviation from R100 baseline: 0.19%
+
+--- Interpretation ---
+[EQUIVALENT] R300 ep-0 oracle ~= R100 baseline (max dev < 0.5%).
+  DiffCond init is functionally bit-exact equivalent to vanilla.
+  The -5.89% Phase 2.6 verdict is purely a TRAINING effect, not an INIT effect.
+  Plan D narrative confirmed: CE + gated injection over 30ep degrade reconstruction.

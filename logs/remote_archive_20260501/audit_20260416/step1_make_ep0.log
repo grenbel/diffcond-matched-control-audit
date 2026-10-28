@@ -1,0 +1,14 @@
+/root/miniconda3/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+[Load] R100 ckpt from experiments/AdaPoinTr/ShapeNet55_models/baseline_sn55/ckpt-best.pth
+  R100 keys: 335
+[Build] AdaPoinTr_DiffCond from cfgs/ShapeNet55_models/AdaPoinTr_DiffCond_smoke30.yaml
+using group version 2
+  Model class: AdaPoinTr_DiffCond
+  Remapped 6 query_ranking -> base_scorer keys
+  strict=False load OK: missing=13 (all expected diff_cond_*/diff_predictor*), unexpected=0=0
+  Zero-initialized diff_cond_proj / diff_cond_gate[0].bias / diff_delta last layer
+[Save] ep-0 ckpt to experiments/AdaPoinTr_DiffCond_smoke30/ShapeNet55_models/diffcond_r300/ckpt-epoch-000.pth
+  Total keys saved: 354
+
+Done. Next: run eval with main.py --test --ckpts <out> --mode easy/median/hard, --difficulty_source oracle/predict (6 runs total).

@@ -1,0 +1,103 @@
+[2026-04-16 03:14:07] === Audit Step 3+4 only START ===
+NVIDIA GeForce RTX 5090, 32110 MiB
+
+[2026-04-16 03:14:07] === Step 3/4: R300 ep-0 diagnostic (6 evals) ===
+================================================================================
+  R300 ep-0 Diagnostic (Decision Point 1D from 2026-04-16 audit)
+  Testing whether DiffCond warm-start init is bit-exact equivalent to vanilla
+  Expected if equivalent: CDL2 ~= R100 baseline (0.520/0.734/1.352)
+================================================================================
+  [oracle] --mode easy ...
+  [oracle] easy F-Score=0.417 CDL1=11.718 CDL2=0.519 EMD=0.0000
+  [oracle] --mode median ...
+  [oracle] median F-Score=0.401 CDL1=12.827 CDL2=0.734 EMD=0.0000
+  [oracle] --mode hard ...
+  [oracle] hard F-Score=0.361 CDL1=15.649 CDL2=1.352 EMD=0.0000
+  [predict] --mode easy ...
+  [predict] easy F-Score=0.417 CDL1=11.718 CDL2=0.519 EMD=0.0000
+  [predict] --mode median ...
+  [predict] median F-Score=0.401 CDL1=12.827 CDL2=0.734 EMD=0.0000
+  [predict] --mode hard ...
+  [predict] hard F-Score=0.361 CDL1=15.649 CDL2=1.352 EMD=0.0000
+
+================================================================================
+  R300 ep-0 Results vs R100 Baseline (CDL2, lower better)
+================================================================================
+  Mode      R100 baseline   R300ep0 oracle   R300ep0 predict  Δ oracle %  Δ predict %
+  ----------------------------------------------------------------------------------
+  easy              0.520            0.519             0.519       -0.19%        -0.19%
+  median            0.734            0.734             0.734       +0.00%        +0.00%
+  hard              1.352            1.352             1.352       +0.00%        +0.00%
+================================================================================
+
+Oracle max deviation from R100 baseline: 0.19%
+Predict max deviation from R100 baseline: 0.19%
+
+--- Interpretation ---
+[EQUIVALENT] R300 ep-0 oracle ~= R100 baseline (max dev < 0.5%).
+  DiffCond init is functionally bit-exact equivalent to vanilla.
+  The -5.89% Phase 2.6 verdict is purely a TRAINING effect, not an INIT effect.
+  Plan D narrative confirmed: CE + gated injection over 30ep degrade reconstruction.
+[2026-04-16 05:50:52] Step 3 done.
+
+[2026-04-16 05:50:52] === Step 4/4: DTR hard-only sanity (100 samples x 2 viewpoints) ===
+/root/miniconda3/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Config:        cfgs/ShapeNet55_models/AdaPoinTr_DiffCond_smoke30.yaml
+Ckpt:          experiments/AdaPoinTr_DiffCond_smoke30/ShapeNet55_models/diffcond_r300/ckpt-epoch-030.pth
+Modes:         ['hard']
+Viewpoints:    first 2 of 8
+N samples:     100
+Output:        /tmp/dtr_results.json
+
+Loading DiffCond model...
+using group version 2
+Loading weights from experiments/AdaPoinTr_DiffCond_smoke30/ShapeNet55_models/diffcond_r300/ckpt-epoch-030.pth...
+ckpts @ 30 epoch( performance = {'F-Score': 0.370617775409284, 'CDL1': 14.237126000908528, 'CDL2': 0.9487464151572106, 'EMDistance': 0.0})
+  Sanity: predictor[0].weight L2=11.2623 (must be > 0 for trained ckpt)
+  Sanity: diff_cond_proj.weight L2=4.6102 (must be > 0 for trained DiffCond ckpt)
+  Single-GPU mode (CUDA_VISIBLE_DEVICES=all)
+Building test dataloader...
+[DATASET] Open file data/ShapeNet55-34/ShapeNet-55/test.txt
+[DATASET] 10518 instances were loaded
+
+[Mode=hard] num_crop=6144 viewpoints=2 require_emd=True
+  [hard] processed 1 samples (1 categories so far)
+  [hard] processed 21 samples (4 categories so far)
+  [hard] processed 41 samples (11 categories so far)
+  [hard] processed 61 samples (14 categories so far)
+  [hard] processed 81 samples (16 categories so far)
+
+================================================================================================
+  DTR Strategy Comparison (CDL2 lower=better, F-Score higher=better)
+================================================================================================
+
+  -- Mode: hard (n_categories=18, n_samples=100) --
+  Strategy             F-Score     CDL1     CDL2      EMD
+  ------------------ --------- -------- -------- --------
+  cond_easy             0.3051   18.072    1.696  36.9035
+  cond_median           0.3074   17.851    1.667  35.9562
+  cond_hard             0.3090   17.649    1.673  34.2302
+  predict               0.3089   17.651    1.673  34.3113
+  mean                  0.3075   17.843    1.662  35.7719
+  weighted              0.3089   17.655    1.672  34.4911
+  oracle_best_cdl2      0.3083   17.515    1.571  34.9678
+  Best non-oracle: mean (CDL2 1.662)
+  oracle_best_cdl2 (CDL2-only upper bound): 1.571 (gap from best non-oracle: +0.091, +5.50%)
+
+================================================================================================
+
+Wrote JSON results to /tmp/dtr_results.json
+[2026-04-16 05:58:09] Step 4 done.
+
+[2026-04-16 05:58:09] === ALL STEPS DONE ===
+total 40
+drwxr-xr-x  2 root root 4096 Apr 16 05:50 .
+drwxr-xr-x 19 root root 4096 Apr 16 02:36 ..
+-rw-r--r--  1 root root 2140 Apr 16 02:36 batch.log
+-rw-r--r--  1 root root  563 Apr 16 03:00 batch_step34.log
+-rw-r--r--  1 root root 5079 Apr 16 05:58 batch_step34_v2.log
+-rw-r--r--  1 root root 1021 Apr 16 02:36 step1_make_ep0.log
+-rw-r--r--  1 root root  658 Apr 16 02:36 step2_phase2_6_emd.log
+-rw-r--r--  1 root root 2087 Apr 16 05:50 step3_r300_ep0.log
+-rw-r--r--  1 root root 2622 Apr 16 05:58 step4_dtr_sanity.log

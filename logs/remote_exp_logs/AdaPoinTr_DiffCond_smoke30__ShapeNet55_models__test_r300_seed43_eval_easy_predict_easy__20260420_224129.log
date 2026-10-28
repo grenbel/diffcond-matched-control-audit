@@ -1,0 +1,105 @@
+2026-04-20 22:41:29,729 - AdaPoinTr_DiffCond_smoke30 - INFO - Copy the Config file from cfgs/ShapeNet55_models/AdaPoinTr_DiffCond_smoke30.yaml to ./experiments/AdaPoinTr_DiffCond_smoke30/ShapeNet55_models/test_r300_seed43_eval_easy_predict_easy/config.yaml
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - args.config : cfgs/ShapeNet55_models/AdaPoinTr_DiffCond_smoke30.yaml
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - args.launcher : none
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - args.local_rank : 0
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - args.num_workers : 4
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - args.seed : 0
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - args.deterministic : True
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - args.sync_bn : False
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - args.exp_name : test_r300_seed43_eval_easy_predict_easy
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - args.start_ckpts : None
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - args.ckpts : experiments/AdaPoinTr_DiffCond_smoke30/ShapeNet55_models/r300_seed43/ckpt-epoch-030.pth
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - args.val_freq : 1
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - args.resume : False
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - args.test : True
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - args.mode : easy
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - args.difficulty_source : predict
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - args.experiment_path : ./experiments/AdaPoinTr_DiffCond_smoke30/ShapeNet55_models/test_r300_seed43_eval_easy_predict_easy
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - args.tfboard_path : ./experiments/AdaPoinTr_DiffCond_smoke30/ShapeNet55_models/TFBoard/test_r300_seed43_eval_easy_predict_easy
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - args.log_name : AdaPoinTr_DiffCond_smoke30
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - args.use_gpu : True
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - args.distributed : False
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.optimizer = edict()
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.optimizer.type : AdamW
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.optimizer.kwargs = edict()
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.optimizer.kwargs.lr : 0.0001
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.optimizer.kwargs.weight_decay : 0.0005
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.scheduler = edict()
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.scheduler.type : LambdaLR
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.scheduler.kwargs = edict()
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.scheduler.kwargs.decay_step : 21
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.scheduler.kwargs.lr_decay : 0.9
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.scheduler.kwargs.lowest_decay : 0.02
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.bnmscheduler = edict()
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.bnmscheduler.type : Lambda
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.bnmscheduler.kwargs = edict()
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.bnmscheduler.kwargs.decay_step : 21
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.bnmscheduler.kwargs.bn_decay : 0.5
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.bnmscheduler.kwargs.bn_momentum : 0.9
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.bnmscheduler.kwargs.lowest_decay : 0.01
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.dataset = edict()
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.dataset.train = edict()
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.dataset.train._base_ = edict()
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.dataset.train._base_.NAME : ShapeNet
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.dataset.train._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.dataset.train._base_.N_POINTS : 8192
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.dataset.train._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.dataset.train.others = edict()
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.dataset.train.others.subset : train
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.dataset.train.others.bs : 48
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.dataset.val = edict()
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.dataset.val._base_ = edict()
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.dataset.val._base_.NAME : ShapeNet
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.dataset.val._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.dataset.val._base_.N_POINTS : 8192
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.dataset.val._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.dataset.val.others = edict()
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.dataset.val.others.subset : test
+2026-04-20 22:41:29,730 - AdaPoinTr_DiffCond_smoke30 - INFO - config.dataset.test = edict()
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.dataset.test._base_ = edict()
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.dataset.test._base_.NAME : ShapeNet
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.dataset.test._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.dataset.test._base_.N_POINTS : 8192
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.dataset.test._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.dataset.test.others = edict()
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.dataset.test.others.subset : test
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.model = edict()
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.model.NAME : AdaPoinTr_DiffCond
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.model.num_query : 512
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.model.num_points : 8192
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.model.center_num : [512, 256]
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.model.global_feature_dim : 1024
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.model.encoder_type : graph
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.model.decoder_type : fc
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.model.encoder_config = edict()
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.model.encoder_config.embed_dim : 384
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.model.encoder_config.depth : 6
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.model.encoder_config.num_heads : 6
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.model.encoder_config.k : 8
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.model.encoder_config.n_group : 2
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.model.encoder_config.mlp_ratio : 2.0
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.model.encoder_config.block_style_list : ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn']
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.model.encoder_config.combine_style : concat
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.model.decoder_config = edict()
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.model.decoder_config.embed_dim : 384
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.model.decoder_config.depth : 8
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.model.decoder_config.num_heads : 6
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.model.decoder_config.k : 8
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.model.decoder_config.n_group : 2
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.model.decoder_config.mlp_ratio : 2.0
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.model.decoder_config.self_attn_block_style_list : ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn']
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.model.decoder_config.self_attn_combine_style : concat
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.model.decoder_config.cross_attn_block_style_list : ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn']
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.model.decoder_config.cross_attn_combine_style : concat
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.total_bs : 48
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.step_per_update : 1
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.max_epoch : 30
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - config.consider_metric : CDL2
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - Distributed training: False
+2026-04-20 22:41:29,731 - AdaPoinTr_DiffCond_smoke30 - INFO - Set random seed to 0, deterministic: True
+2026-04-20 22:41:29,732 - AdaPoinTr_DiffCond_smoke30 - INFO - Tester start ... 
+2026-04-20 22:41:31,204 - AdaPoinTr_DiffCond_smoke30 - INFO - Loading weights from experiments/AdaPoinTr_DiffCond_smoke30/ShapeNet55_models/r300_seed43/ckpt-epoch-030.pth...
+2026-04-20 22:41:31,514 - AdaPoinTr_DiffCond_smoke30 - INFO - DiffCond load: missing=0, unexpected=0
+2026-04-20 22:41:31,514 - AdaPoinTr_DiffCond_smoke30 - INFO - ckpts @ 30 epoch( performance = {'F-Score': 0.3716597681924817, 'CDL1': 14.338544951143207, 'CDL2': 0.9681195519191769, 'EMDistance': 0.0})
+2026-04-20 22:42:06,959 - AdaPoinTr_DiffCond_smoke30 - INFO - Test[200/10518] Taxonomy = 04530566 Sample = 3bb6a5deec68ef77fee64ca302793912 Losses = ['20.4287', '1.5895', '10.2425', '0.3553'] Metrics = ['0.4567', '10.2425', '0.3553', '0.0000']
+2026-04-20 22:43:01,670 - AdaPoinTr_DiffCond_smoke30 - INFO - Test[400/10518] Taxonomy = 03636649 Sample = 90651b3febfc3afe15226aa76eb7c3e Losses = ['31.4080', '3.8051', '12.4775', '0.5039'] Metrics = ['0.3785', '12.4775', '0.5039', '0.0000']

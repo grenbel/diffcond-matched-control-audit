@@ -1,0 +1,1259 @@
+/root/miniconda3/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+2026-04-27 15:08:37,947 - UpTrans - INFO - Copy the Config file from cfgs/PCN_models/UpTrans.yaml to ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/config.yaml
+2026-04-27 15:08:37,947 - UpTrans - INFO - args.config : cfgs/PCN_models/UpTrans.yaml
+2026-04-27 15:08:37,947 - UpTrans - INFO - args.launcher : none
+2026-04-27 15:08:37,947 - UpTrans - INFO - args.local_rank : 0
+2026-04-27 15:08:37,947 - UpTrans - INFO - args.num_workers : 4
+2026-04-27 15:08:37,947 - UpTrans - INFO - args.seed : 42
+2026-04-27 15:08:37,947 - UpTrans - INFO - args.deterministic : False
+2026-04-27 15:08:37,947 - UpTrans - INFO - args.sync_bn : False
+2026-04-27 15:08:37,947 - UpTrans - INFO - args.exp_name : b1_vanilla_pcn_seed42
+2026-04-27 15:08:37,947 - UpTrans - INFO - args.start_ckpts : experiments/UpTrans/PCN_models/pretrained_400ep/ckpt-best.pth
+2026-04-27 15:08:37,947 - UpTrans - INFO - args.ckpts : None
+2026-04-27 15:08:37,947 - UpTrans - INFO - args.val_freq : 5
+2026-04-27 15:08:37,947 - UpTrans - INFO - args.resume : False
+2026-04-27 15:08:37,947 - UpTrans - INFO - args.test : False
+2026-04-27 15:08:37,947 - UpTrans - INFO - args.mode : None
+2026-04-27 15:08:37,947 - UpTrans - INFO - args.difficulty_source : oracle
+2026-04-27 15:08:37,947 - UpTrans - INFO - args.experiment_path : ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42
+2026-04-27 15:08:37,947 - UpTrans - INFO - args.tfboard_path : ./experiments/UpTrans/PCN_models/TFBoard/b1_vanilla_pcn_seed42
+2026-04-27 15:08:37,947 - UpTrans - INFO - args.log_name : UpTrans
+2026-04-27 15:08:37,947 - UpTrans - INFO - args.use_gpu : True
+2026-04-27 15:08:37,947 - UpTrans - INFO - args.distributed : False
+2026-04-27 15:08:37,947 - UpTrans - INFO - config.optimizer = edict()
+2026-04-27 15:08:37,947 - UpTrans - INFO - config.optimizer.type : AdamW
+2026-04-27 15:08:37,947 - UpTrans - INFO - config.optimizer.kwargs = edict()
+2026-04-27 15:08:37,947 - UpTrans - INFO - config.optimizer.kwargs.lr : 0.0001
+2026-04-27 15:08:37,947 - UpTrans - INFO - config.optimizer.kwargs.weight_decay : 0.0005
+2026-04-27 15:08:37,947 - UpTrans - INFO - config.scheduler = edict()
+2026-04-27 15:08:37,947 - UpTrans - INFO - config.scheduler.type : LambdaLR
+2026-04-27 15:08:37,947 - UpTrans - INFO - config.scheduler.kwargs = edict()
+2026-04-27 15:08:37,947 - UpTrans - INFO - config.scheduler.kwargs.decay_step : 21
+2026-04-27 15:08:37,947 - UpTrans - INFO - config.scheduler.kwargs.lr_decay : 0.9
+2026-04-27 15:08:37,947 - UpTrans - INFO - config.scheduler.kwargs.lowest_decay : 0.02
+2026-04-27 15:08:37,947 - UpTrans - INFO - config.bnmscheduler = edict()
+2026-04-27 15:08:37,947 - UpTrans - INFO - config.bnmscheduler.type : Lambda
+2026-04-27 15:08:37,947 - UpTrans - INFO - config.bnmscheduler.kwargs = edict()
+2026-04-27 15:08:37,947 - UpTrans - INFO - config.bnmscheduler.kwargs.decay_step : 21
+2026-04-27 15:08:37,947 - UpTrans - INFO - config.bnmscheduler.kwargs.bn_decay : 0.5
+2026-04-27 15:08:37,947 - UpTrans - INFO - config.bnmscheduler.kwargs.bn_momentum : 0.9
+2026-04-27 15:08:37,947 - UpTrans - INFO - config.bnmscheduler.kwargs.lowest_decay : 0.01
+2026-04-27 15:08:37,947 - UpTrans - INFO - config.dataset = edict()
+2026-04-27 15:08:37,947 - UpTrans - INFO - config.dataset.train = edict()
+2026-04-27 15:08:37,947 - UpTrans - INFO - config.dataset.train._base_ = edict()
+2026-04-27 15:08:37,947 - UpTrans - INFO - config.dataset.train._base_.NAME : PCN
+2026-04-27 15:08:37,947 - UpTrans - INFO - config.dataset.train._base_.CATEGORY_FILE_PATH : data/PCN/PCN.json
+2026-04-27 15:08:37,947 - UpTrans - INFO - config.dataset.train._base_.N_POINTS : 16384
+2026-04-27 15:08:37,947 - UpTrans - INFO - config.dataset.train._base_.N_RENDERINGS : 8
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.dataset.train._base_.PARTIAL_POINTS_PATH : data/PCN/%s/partial/%s/%s/%02d.npy
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.dataset.train._base_.COMPLETE_POINTS_PATH : data/PCN/%s/complete/%s/%s.npy
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.dataset.train._base_.CARS : False
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.dataset.train.others = edict()
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.dataset.train.others.subset : train
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.dataset.train.others.bs : 16
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.dataset.val = edict()
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.dataset.val._base_ = edict()
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.dataset.val._base_.NAME : PCN
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.dataset.val._base_.CATEGORY_FILE_PATH : data/PCN/PCN.json
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.dataset.val._base_.N_POINTS : 16384
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.dataset.val._base_.N_RENDERINGS : 8
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.dataset.val._base_.PARTIAL_POINTS_PATH : data/PCN/%s/partial/%s/%s/%02d.npy
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.dataset.val._base_.COMPLETE_POINTS_PATH : data/PCN/%s/complete/%s/%s.npy
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.dataset.val._base_.CARS : False
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.dataset.val.others = edict()
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.dataset.val.others.subset : test
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.dataset.test = edict()
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.dataset.test._base_ = edict()
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.dataset.test._base_.NAME : PCN
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.dataset.test._base_.CATEGORY_FILE_PATH : data/PCN/PCN.json
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.dataset.test._base_.N_POINTS : 16384
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.dataset.test._base_.N_RENDERINGS : 8
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.dataset.test._base_.PARTIAL_POINTS_PATH : data/PCN/%s/partial/%s/%s/%02d.npy
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.dataset.test._base_.COMPLETE_POINTS_PATH : data/PCN/%s/complete/%s/%s.npy
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.dataset.test._base_.CARS : False
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.dataset.test.others = edict()
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.dataset.test.others.subset : test
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.model = edict()
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.model.NAME : UpTrans
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.model.num_pred : 16384
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.model.num_seeds : 1024
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.model.seed_fea : 128
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.model.dim_feat : 512
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.model.num_dicts : 256
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.model.upscales : [1, 4, 4]
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.model.l2_loss : 0
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.loss = edict()
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.loss.sparse_loss_weight : 1.0
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.loss.dense_loss_weight : 1.0
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.loss.dz_weight : 1.0
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.loss.orth_weight : 1.0
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.total_bs : 16
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.step_per_update : 1
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.max_epoch : 30
+2026-04-27 15:08:37,948 - UpTrans - INFO - config.consider_metric : CDL1
+2026-04-27 15:08:37,948 - UpTrans - INFO - Distributed training: False
+2026-04-27 15:08:37,948 - UpTrans - INFO - Set random seed to 42, deterministic: False
+2026-04-27 15:08:37,954 - PCNDATASET - INFO - Collecting files of Taxonomy [ID=02691156, Name=airplane]
+2026-04-27 15:08:37,967 - PCNDATASET - INFO - Collecting files of Taxonomy [ID=02933112, Name=cabinet]
+2026-04-27 15:08:37,971 - PCNDATASET - INFO - Collecting files of Taxonomy [ID=02958343, Name=car]
+2026-04-27 15:08:37,989 - PCNDATASET - INFO - Collecting files of Taxonomy [ID=03001627, Name=chair]
+2026-04-27 15:08:38,117 - PCNDATASET - INFO - Collecting files of Taxonomy [ID=03636649, Name=lamp]
+2026-04-27 15:08:38,124 - PCNDATASET - INFO - Collecting files of Taxonomy [ID=04256520, Name=sofa]
+2026-04-27 15:08:38,133 - PCNDATASET - INFO - Collecting files of Taxonomy [ID=04379243, Name=table]
+2026-04-27 15:08:38,152 - PCNDATASET - INFO - Collecting files of Taxonomy [ID=04530566, Name=watercraft]
+2026-04-27 15:08:38,157 - PCNDATASET - INFO - Complete collecting files of the dataset. Total files: 28974
+2026-04-27 15:08:38,411 - PCNDATASET - INFO - PCN proxy difficulty loaded (231792 entries for subset=train) from data/PCN/difficulty_proxy.json
+2026-04-27 15:08:38,416 - PCNDATASET - INFO - Collecting files of Taxonomy [ID=02691156, Name=airplane]
+2026-04-27 15:08:38,417 - PCNDATASET - INFO - Collecting files of Taxonomy [ID=02933112, Name=cabinet]
+2026-04-27 15:08:38,417 - PCNDATASET - INFO - Collecting files of Taxonomy [ID=02958343, Name=car]
+2026-04-27 15:08:38,417 - PCNDATASET - INFO - Collecting files of Taxonomy [ID=03001627, Name=chair]
+2026-04-27 15:08:38,417 - PCNDATASET - INFO - Collecting files of Taxonomy [ID=03636649, Name=lamp]
+2026-04-27 15:08:38,417 - PCNDATASET - INFO - Collecting files of Taxonomy [ID=04256520, Name=sofa]
+2026-04-27 15:08:38,417 - PCNDATASET - INFO - Collecting files of Taxonomy [ID=04379243, Name=table]
+2026-04-27 15:08:38,417 - PCNDATASET - INFO - Collecting files of Taxonomy [ID=04530566, Name=watercraft]
+2026-04-27 15:08:38,418 - PCNDATASET - INFO - Complete collecting files of the dataset. Total files: 1200
+2026-04-27 15:08:38,638 - PCNDATASET - INFO - PCN proxy difficulty loaded (1200 entries for subset=test) from data/PCN/difficulty_proxy.json
+2026-04-27 15:08:38,897 - UpTrans - INFO - Loading weights from experiments/UpTrans/PCN_models/pretrained_400ep/ckpt-best.pth...
+2026-04-27 15:08:39,087 - UpTrans - INFO - ckpts @ 360 epoch( performance = {'F-Score': 0.8353664511681786, 'CDL1': 6.439092019378828, 'CDL2': 0.18555477841194562})
+2026-04-27 15:08:39,090 - UpTrans - INFO - Trainable_parameters:
+2026-04-27 15:08:39,090 - UpTrans - INFO - =========================
+2026-04-27 15:08:39,090 - UpTrans - INFO - feat_extractor.sa_module_1.mlp_conv.0.conv.weight
+2026-04-27 15:08:39,090 - UpTrans - INFO - feat_extractor.sa_module_1.mlp_conv.0.conv.bias
+2026-04-27 15:08:39,090 - UpTrans - INFO - feat_extractor.sa_module_1.mlp_conv.0.bn.weight
+2026-04-27 15:08:39,090 - UpTrans - INFO - feat_extractor.sa_module_1.mlp_conv.0.bn.bias
+2026-04-27 15:08:39,090 - UpTrans - INFO - feat_extractor.sa_module_1.mlp_conv.1.conv.weight
+2026-04-27 15:08:39,090 - UpTrans - INFO - feat_extractor.sa_module_1.mlp_conv.1.conv.bias
+2026-04-27 15:08:39,090 - UpTrans - INFO - feat_extractor.sa_module_1.mlp_conv.1.bn.weight
+2026-04-27 15:08:39,090 - UpTrans - INFO - feat_extractor.sa_module_1.mlp_conv.1.bn.bias
+2026-04-27 15:08:39,090 - UpTrans - INFO - feat_extractor.transformer_1.conv_key.weight
+2026-04-27 15:08:39,090 - UpTrans - INFO - feat_extractor.transformer_1.conv_key.bias
+2026-04-27 15:08:39,090 - UpTrans - INFO - feat_extractor.transformer_1.conv_query.weight
+2026-04-27 15:08:39,090 - UpTrans - INFO - feat_extractor.transformer_1.conv_query.bias
+2026-04-27 15:08:39,090 - UpTrans - INFO - feat_extractor.transformer_1.conv_value.weight
+2026-04-27 15:08:39,090 - UpTrans - INFO - feat_extractor.transformer_1.conv_value.bias
+2026-04-27 15:08:39,090 - UpTrans - INFO - feat_extractor.transformer_1.pos_mlp.0.weight
+2026-04-27 15:08:39,090 - UpTrans - INFO - feat_extractor.transformer_1.pos_mlp.0.bias
+2026-04-27 15:08:39,090 - UpTrans - INFO - feat_extractor.transformer_1.pos_mlp.1.weight
+2026-04-27 15:08:39,090 - UpTrans - INFO - feat_extractor.transformer_1.pos_mlp.1.bias
+2026-04-27 15:08:39,090 - UpTrans - INFO - feat_extractor.transformer_1.pos_mlp.3.weight
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.transformer_1.pos_mlp.3.bias
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.transformer_1.attn_mlp.0.weight
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.transformer_1.attn_mlp.0.bias
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.transformer_1.attn_mlp.1.weight
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.transformer_1.attn_mlp.1.bias
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.transformer_1.attn_mlp.3.weight
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.transformer_1.attn_mlp.3.bias
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.transformer_1.linear_start.weight
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.transformer_1.linear_start.bias
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.transformer_1.linear_end.weight
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.transformer_1.linear_end.bias
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.sa_module_2.mlp_conv.0.conv.weight
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.sa_module_2.mlp_conv.0.conv.bias
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.sa_module_2.mlp_conv.0.bn.weight
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.sa_module_2.mlp_conv.0.bn.bias
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.sa_module_2.mlp_conv.1.conv.weight
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.sa_module_2.mlp_conv.1.conv.bias
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.sa_module_2.mlp_conv.1.bn.weight
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.sa_module_2.mlp_conv.1.bn.bias
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.transformer_2.conv_key.weight
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.transformer_2.conv_key.bias
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.transformer_2.conv_query.weight
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.transformer_2.conv_query.bias
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.transformer_2.conv_value.weight
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.transformer_2.conv_value.bias
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.transformer_2.pos_mlp.0.weight
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.transformer_2.pos_mlp.0.bias
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.transformer_2.pos_mlp.1.weight
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.transformer_2.pos_mlp.1.bias
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.transformer_2.pos_mlp.3.weight
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.transformer_2.pos_mlp.3.bias
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.transformer_2.attn_mlp.0.weight
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.transformer_2.attn_mlp.0.bias
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.transformer_2.attn_mlp.1.weight
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.transformer_2.attn_mlp.1.bias
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.transformer_2.attn_mlp.3.weight
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.transformer_2.attn_mlp.3.bias
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.transformer_2.linear_start.weight
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.transformer_2.linear_start.bias
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.transformer_2.linear_end.weight
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.transformer_2.linear_end.bias
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.sa_module_4.mlp_conv.0.conv.weight
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.sa_module_4.mlp_conv.0.conv.bias
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.sa_module_4.mlp_conv.0.bn.weight
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.sa_module_4.mlp_conv.0.bn.bias
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.sa_module_4.mlp_conv.1.conv.weight
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.sa_module_4.mlp_conv.1.conv.bias
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.sa_module_4.mlp_conv.1.bn.weight
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.sa_module_4.mlp_conv.1.bn.bias
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.ps_0.weight
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.ps_0.bias
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.mlp_1.conv_1.weight
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.mlp_1.conv_1.bias
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.mlp_1.conv_2.weight
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.mlp_1.conv_2.bias
+2026-04-27 15:08:39,091 - UpTrans - INFO - feat_extractor.mlp_1.conv_shortcut.weight
+2026-04-27 15:08:39,092 - UpTrans - INFO - feat_extractor.mlp_1.conv_shortcut.bias
+2026-04-27 15:08:39,092 - UpTrans - INFO - feat_extractor.ps_1.weight
+2026-04-27 15:08:39,092 - UpTrans - INFO - feat_extractor.ps_1.bias
+2026-04-27 15:08:39,092 - UpTrans - INFO - feat_extractor.ps_2.weight
+2026-04-27 15:08:39,092 - UpTrans - INFO - feat_extractor.ps_2.bias
+2026-04-27 15:08:39,092 - UpTrans - INFO - feat_extractor.refine_1.dict_embed.weight
+2026-04-27 15:08:39,092 - UpTrans - INFO - feat_extractor.refine_1.query.weight
+2026-04-27 15:08:39,092 - UpTrans - INFO - feat_extractor.refine_1.query.bias
+2026-04-27 15:08:39,092 - UpTrans - INFO - feat_extractor.refine_1.key.weight
+2026-04-27 15:08:39,092 - UpTrans - INFO - feat_extractor.refine_1.key.bias
+2026-04-27 15:08:39,092 - UpTrans - INFO - feat_extractor.refine_2.dict_embed.weight
+2026-04-27 15:08:39,092 - UpTrans - INFO - feat_extractor.refine_2.query.weight
+2026-04-27 15:08:39,092 - UpTrans - INFO - feat_extractor.refine_2.query.bias
+2026-04-27 15:08:39,092 - UpTrans - INFO - feat_extractor.refine_2.key.weight
+2026-04-27 15:08:39,092 - UpTrans - INFO - feat_extractor.refine_2.key.bias
+2026-04-27 15:08:39,092 - UpTrans - INFO - feat_extractor.mlp_3.conv_1.weight
+2026-04-27 15:08:39,092 - UpTrans - INFO - feat_extractor.mlp_3.conv_1.bias
+2026-04-27 15:08:39,092 - UpTrans - INFO - feat_extractor.mlp_3.conv_2.weight
+2026-04-27 15:08:39,092 - UpTrans - INFO - feat_extractor.mlp_3.conv_2.bias
+2026-04-27 15:08:39,092 - UpTrans - INFO - feat_extractor.mlp_3.conv_shortcut.weight
+2026-04-27 15:08:39,092 - UpTrans - INFO - feat_extractor.mlp_3.conv_shortcut.bias
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.mlp_1.mlp.0.weight
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.mlp_1.mlp.0.bias
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.mlp_1.mlp.2.weight
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.mlp_1.mlp.2.bias
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.mlp_2.mlp.0.weight
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.mlp_2.mlp.0.bias
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.mlp_2.mlp.2.weight
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.mlp_2.mlp.2.bias
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.uptrans1.mlp_v.conv_1.weight
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.uptrans1.mlp_v.conv_1.bias
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.uptrans1.mlp_v.conv_2.weight
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.uptrans1.mlp_v.conv_2.bias
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.uptrans1.mlp_v.conv_shortcut.weight
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.uptrans1.mlp_v.conv_shortcut.bias
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.uptrans1.conv_key.weight
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.uptrans1.conv_key.bias
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.uptrans1.conv_query.weight
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.uptrans1.conv_query.bias
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.uptrans1.conv_value.weight
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.uptrans1.conv_value.bias
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.uptrans1.conv_upfeat.weight
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.uptrans1.conv_upfeat.bias
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.uptrans1.pos_mlp.0.weight
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.uptrans1.pos_mlp.0.bias
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.uptrans1.pos_mlp.1.weight
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.uptrans1.pos_mlp.1.bias
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.uptrans1.pos_mlp.3.weight
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.uptrans1.pos_mlp.3.bias
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.uptrans1.attn_mlp.0.weight
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.uptrans1.attn_mlp.0.bias
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.uptrans1.attn_mlp.1.weight
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.uptrans1.attn_mlp.1.bias
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.uptrans1.attn_mlp.3.weight
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.uptrans1.attn_mlp.3.bias
+2026-04-27 15:08:39,092 - UpTrans - INFO - decoder.up_layers.0.uptrans1.conv_end.weight
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.uptrans1.conv_end.bias
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.uptrans2.mlp_v.conv_1.weight
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.uptrans2.mlp_v.conv_1.bias
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.uptrans2.mlp_v.conv_2.weight
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.uptrans2.mlp_v.conv_2.bias
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.uptrans2.mlp_v.conv_shortcut.weight
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.uptrans2.mlp_v.conv_shortcut.bias
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.uptrans2.conv_key.weight
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.uptrans2.conv_key.bias
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.uptrans2.conv_query.weight
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.uptrans2.conv_query.bias
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.uptrans2.conv_value.weight
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.uptrans2.conv_value.bias
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.uptrans2.conv_upfeat.weight
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.uptrans2.conv_upfeat.bias
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.uptrans2.pos_mlp.0.weight
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.uptrans2.pos_mlp.0.bias
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.uptrans2.pos_mlp.1.weight
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.uptrans2.pos_mlp.1.bias
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.uptrans2.pos_mlp.3.weight
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.uptrans2.pos_mlp.3.bias
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.uptrans2.attn_mlp.0.weight
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.uptrans2.attn_mlp.0.bias
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.uptrans2.attn_mlp.1.weight
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.uptrans2.attn_mlp.1.bias
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.uptrans2.attn_mlp.3.weight
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.uptrans2.attn_mlp.3.bias
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.uptrans2.conv_end.weight
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.uptrans2.conv_end.bias
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.mlp_delta_feature.conv_1.weight
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.mlp_delta_feature.conv_1.bias
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.mlp_delta_feature.conv_2.weight
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.mlp_delta_feature.conv_2.bias
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.mlp_delta_feature.conv_shortcut.weight
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.mlp_delta_feature.conv_shortcut.bias
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.mlp_delta.mlp.0.weight
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.mlp_delta.mlp.0.bias
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.mlp_delta.mlp.2.weight
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.0.mlp_delta.mlp.2.bias
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.1.mlp_1.mlp.0.weight
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.1.mlp_1.mlp.0.bias
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.1.mlp_1.mlp.2.weight
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.1.mlp_1.mlp.2.bias
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.1.mlp_2.mlp.0.weight
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.1.mlp_2.mlp.0.bias
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.1.mlp_2.mlp.2.weight
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.1.mlp_2.mlp.2.bias
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.1.uptrans1.mlp_v.conv_1.weight
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.1.uptrans1.mlp_v.conv_1.bias
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.1.uptrans1.mlp_v.conv_2.weight
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.1.uptrans1.mlp_v.conv_2.bias
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.1.uptrans1.mlp_v.conv_shortcut.weight
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.1.uptrans1.mlp_v.conv_shortcut.bias
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.1.uptrans1.conv_key.weight
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.1.uptrans1.conv_key.bias
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.1.uptrans1.conv_query.weight
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.1.uptrans1.conv_query.bias
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.1.uptrans1.conv_value.weight
+2026-04-27 15:08:39,093 - UpTrans - INFO - decoder.up_layers.1.uptrans1.conv_value.bias
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans1.conv_upfeat.weight
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans1.conv_upfeat.bias
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans1.pos_mlp.0.weight
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans1.pos_mlp.0.bias
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans1.pos_mlp.1.weight
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans1.pos_mlp.1.bias
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans1.pos_mlp.3.weight
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans1.pos_mlp.3.bias
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans1.attn_mlp.0.weight
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans1.attn_mlp.0.bias
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans1.attn_mlp.1.weight
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans1.attn_mlp.1.bias
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans1.attn_mlp.3.weight
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans1.attn_mlp.3.bias
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans1.conv_end.weight
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans1.conv_end.bias
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans2.mlp_v.conv_1.weight
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans2.mlp_v.conv_1.bias
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans2.mlp_v.conv_2.weight
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans2.mlp_v.conv_2.bias
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans2.mlp_v.conv_shortcut.weight
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans2.mlp_v.conv_shortcut.bias
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans2.conv_key.weight
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans2.conv_key.bias
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans2.conv_query.weight
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans2.conv_query.bias
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans2.conv_value.weight
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans2.conv_value.bias
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans2.conv_upfeat.weight
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans2.conv_upfeat.bias
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans2.pos_mlp.0.weight
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans2.pos_mlp.0.bias
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans2.pos_mlp.1.weight
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans2.pos_mlp.1.bias
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans2.pos_mlp.3.weight
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans2.pos_mlp.3.bias
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans2.attn_mlp.0.weight
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans2.attn_mlp.0.bias
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans2.attn_mlp.1.weight
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans2.attn_mlp.1.bias
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans2.attn_mlp.3.weight
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans2.attn_mlp.3.bias
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans2.conv_end.weight
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.uptrans2.conv_end.bias
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.mlp_delta_feature.conv_1.weight
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.mlp_delta_feature.conv_1.bias
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.mlp_delta_feature.conv_2.weight
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.mlp_delta_feature.conv_2.bias
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.mlp_delta_feature.conv_shortcut.weight
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.mlp_delta_feature.conv_shortcut.bias
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.mlp_delta.mlp.0.weight
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.mlp_delta.mlp.0.bias
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.mlp_delta.mlp.2.weight
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.1.mlp_delta.mlp.2.bias
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.2.mlp_1.mlp.0.weight
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.2.mlp_1.mlp.0.bias
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.2.mlp_1.mlp.2.weight
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.2.mlp_1.mlp.2.bias
+2026-04-27 15:08:39,094 - UpTrans - INFO - decoder.up_layers.2.mlp_2.mlp.0.weight
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.mlp_2.mlp.0.bias
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.mlp_2.mlp.2.weight
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.mlp_2.mlp.2.bias
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans1.mlp_v.conv_1.weight
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans1.mlp_v.conv_1.bias
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans1.mlp_v.conv_2.weight
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans1.mlp_v.conv_2.bias
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans1.mlp_v.conv_shortcut.weight
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans1.mlp_v.conv_shortcut.bias
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans1.conv_key.weight
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans1.conv_key.bias
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans1.conv_query.weight
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans1.conv_query.bias
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans1.conv_value.weight
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans1.conv_value.bias
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans1.conv_upfeat.weight
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans1.conv_upfeat.bias
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans1.pos_mlp.0.weight
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans1.pos_mlp.0.bias
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans1.pos_mlp.1.weight
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans1.pos_mlp.1.bias
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans1.pos_mlp.3.weight
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans1.pos_mlp.3.bias
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans1.attn_mlp.0.weight
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans1.attn_mlp.0.bias
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans1.attn_mlp.1.weight
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans1.attn_mlp.1.bias
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans1.attn_mlp.3.weight
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans1.attn_mlp.3.bias
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans1.conv_end.weight
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans1.conv_end.bias
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans2.mlp_v.conv_1.weight
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans2.mlp_v.conv_1.bias
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans2.mlp_v.conv_2.weight
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans2.mlp_v.conv_2.bias
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans2.mlp_v.conv_shortcut.weight
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans2.mlp_v.conv_shortcut.bias
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans2.conv_key.weight
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans2.conv_key.bias
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans2.conv_query.weight
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans2.conv_query.bias
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans2.conv_value.weight
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans2.conv_value.bias
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans2.conv_upfeat.weight
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans2.conv_upfeat.bias
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans2.pos_mlp.0.weight
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans2.pos_mlp.0.bias
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans2.pos_mlp.1.weight
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans2.pos_mlp.1.bias
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans2.pos_mlp.3.weight
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans2.pos_mlp.3.bias
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans2.attn_mlp.0.weight
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans2.attn_mlp.0.bias
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans2.attn_mlp.1.weight
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans2.attn_mlp.1.bias
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans2.attn_mlp.3.weight
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans2.attn_mlp.3.bias
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans2.conv_end.weight
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.uptrans2.conv_end.bias
+2026-04-27 15:08:39,095 - UpTrans - INFO - decoder.up_layers.2.mlp_delta_feature.conv_1.weight
+2026-04-27 15:08:39,096 - UpTrans - INFO - decoder.up_layers.2.mlp_delta_feature.conv_1.bias
+2026-04-27 15:08:39,096 - UpTrans - INFO - decoder.up_layers.2.mlp_delta_feature.conv_2.weight
+2026-04-27 15:08:39,096 - UpTrans - INFO - decoder.up_layers.2.mlp_delta_feature.conv_2.bias
+2026-04-27 15:08:39,096 - UpTrans - INFO - decoder.up_layers.2.mlp_delta_feature.conv_shortcut.weight
+2026-04-27 15:08:39,096 - UpTrans - INFO - decoder.up_layers.2.mlp_delta_feature.conv_shortcut.bias
+2026-04-27 15:08:39,096 - UpTrans - INFO - decoder.up_layers.2.mlp_delta.mlp.0.weight
+2026-04-27 15:08:39,096 - UpTrans - INFO - decoder.up_layers.2.mlp_delta.mlp.0.bias
+2026-04-27 15:08:39,096 - UpTrans - INFO - decoder.up_layers.2.mlp_delta.mlp.2.weight
+2026-04-27 15:08:39,096 - UpTrans - INFO - decoder.up_layers.2.mlp_delta.mlp.2.bias
+2026-04-27 15:08:39,096 - UpTrans - INFO - =========================
+2026-04-27 15:08:39,096 - UpTrans - INFO - Untrainable_parameters:
+2026-04-27 15:08:39,096 - UpTrans - INFO - =========================
+2026-04-27 15:08:39,096 - UpTrans - INFO - =========================
+2026-04-27 15:08:39,096 - UpTrans - INFO - Using Data parallel ...
+2026-04-27 15:08:45,406 - UpTrans - INFO - [Epoch 0/30][Batch 1/1810] BatchTime = 6.303 (s) DataTime = 0.136 (s) Losses = ['14.2716', '6.8796'] lr = 0.000100
+2026-04-27 15:09:34,193 - UpTrans - INFO - [Epoch 0/30][Batch 101/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['12.5164', '6.1864'] lr = 0.000100
+2026-04-27 15:10:22,092 - UpTrans - INFO - [Epoch 0/30][Batch 201/1810] BatchTime = 0.499 (s) DataTime = 0.003 (s) Losses = ['12.8152', '6.1304'] lr = 0.000100
+2026-04-27 15:11:10,602 - UpTrans - INFO - [Epoch 0/30][Batch 301/1810] BatchTime = 0.507 (s) DataTime = 0.003 (s) Losses = ['13.4058', '5.8090'] lr = 0.000100
+2026-04-27 15:11:58,392 - UpTrans - INFO - [Epoch 0/30][Batch 401/1810] BatchTime = 0.468 (s) DataTime = 0.002 (s) Losses = ['11.5053', '5.2736'] lr = 0.000100
+2026-04-27 15:12:46,891 - UpTrans - INFO - [Epoch 0/30][Batch 501/1810] BatchTime = 0.498 (s) DataTime = 0.002 (s) Losses = ['14.7058', '6.9261'] lr = 0.000100
+2026-04-27 15:13:35,895 - UpTrans - INFO - [Epoch 0/30][Batch 601/1810] BatchTime = 0.502 (s) DataTime = 0.003 (s) Losses = ['13.4293', '6.6101'] lr = 0.000100
+2026-04-27 15:14:24,392 - UpTrans - INFO - [Epoch 0/30][Batch 701/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['13.2807', '6.0060'] lr = 0.000100
+2026-04-27 15:15:12,895 - UpTrans - INFO - [Epoch 0/30][Batch 801/1810] BatchTime = 0.405 (s) DataTime = 0.002 (s) Losses = ['14.1876', '7.0639'] lr = 0.000100
+2026-04-27 15:16:00,391 - UpTrans - INFO - [Epoch 0/30][Batch 901/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['13.1257', '5.7648'] lr = 0.000100
+2026-04-27 15:16:49,407 - UpTrans - INFO - [Epoch 0/30][Batch 1001/1810] BatchTime = 0.405 (s) DataTime = 0.003 (s) Losses = ['13.5575', '6.5108'] lr = 0.000100
+2026-04-27 15:17:37,805 - UpTrans - INFO - [Epoch 0/30][Batch 1101/1810] BatchTime = 0.389 (s) DataTime = 0.004 (s) Losses = ['12.9781', '6.7422'] lr = 0.000100
+2026-04-27 15:18:25,193 - UpTrans - INFO - [Epoch 0/30][Batch 1201/1810] BatchTime = 0.502 (s) DataTime = 0.002 (s) Losses = ['12.9053', '6.4869'] lr = 0.000100
+2026-04-27 15:19:13,993 - UpTrans - INFO - [Epoch 0/30][Batch 1301/1810] BatchTime = 0.504 (s) DataTime = 0.002 (s) Losses = ['12.9162', '6.1939'] lr = 0.000100
+2026-04-27 15:20:01,291 - UpTrans - INFO - [Epoch 0/30][Batch 1401/1810] BatchTime = 0.498 (s) DataTime = 0.003 (s) Losses = ['13.3777', '5.8797'] lr = 0.000100
+2026-04-27 15:20:49,090 - UpTrans - INFO - [Epoch 0/30][Batch 1501/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['13.9834', '6.4427'] lr = 0.000100
+2026-04-27 15:21:37,197 - UpTrans - INFO - [Epoch 0/30][Batch 1601/1810] BatchTime = 0.503 (s) DataTime = 0.004 (s) Losses = ['13.5675', '6.6175'] lr = 0.000100
+2026-04-27 15:22:24,892 - UpTrans - INFO - [Epoch 0/30][Batch 1701/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['14.9772', '6.2765'] lr = 0.000100
+2026-04-27 15:23:13,193 - UpTrans - INFO - [Epoch 0/30][Batch 1801/1810] BatchTime = 0.502 (s) DataTime = 0.002 (s) Losses = ['12.8383', '6.2861'] lr = 0.000100
+2026-04-27 15:23:17,544 - UpTrans - INFO - [Training] EPOCH: 0 EpochTime = 878.442 (s) Losses = ['13.5525', '6.4677']
+2026-04-27 15:23:17,545 - UpTrans - INFO - [VALIDATION] Start validating epoch 0
+2026-04-27 15:23:24,289 - UpTrans - INFO - Test[120/1200] Taxonomy = 02691156 Sample = d18f2aeae4146464bd46d022fd7d80aa Losses = ['5.9457', '0.1191', '2.7350', '0.0209'] Metrics = ['0.9933', '2.7350', '0.0209', '0.0000']
+2026-04-27 15:23:30,171 - UpTrans - INFO - Test[240/1200] Taxonomy = 02933112 Sample = 8f55954a0b07a4b2bf64ff63662d244b Losses = ['15.4568', '0.9264', '6.8501', '0.2668'] Metrics = ['0.8610', '6.8501', '0.2668', '0.0000']
+2026-04-27 15:23:36,143 - UpTrans - INFO - Test[360/1200] Taxonomy = 02958343 Sample = 5f148a8b824ed7e72a9eb0f146e94477 Losses = ['14.9109', '0.7443', '7.9221', '0.2010'] Metrics = ['0.7488', '7.9221', '0.2010', '0.0000']
+2026-04-27 15:23:42,197 - UpTrans - INFO - Test[480/1200] Taxonomy = 03001627 Sample = 4344509d0442364d3f9d6e0ade5188b0 Losses = ['12.1412', '0.5052', '5.7804', '0.1161'] Metrics = ['0.8592', '5.7804', '0.1161', '0.0000']
+2026-04-27 15:23:48,379 - UpTrans - INFO - Test[600/1200] Taxonomy = 03001627 Sample = ff5a945aef7a68ffcf9ff3ee543c2925 Losses = ['19.0886', '1.4657', '9.8387', '0.4654'] Metrics = ['0.6692', '9.8387', '0.4654', '0.0000']
+2026-04-27 15:23:54,278 - UpTrans - INFO - Test[720/1200] Taxonomy = 03636649 Sample = d91cf049fa961ccb59f8e31ca87c470e Losses = ['12.6302', '0.6836', '5.1700', '0.1562'] Metrics = ['0.9027', '5.1700', '0.1562', '0.0000']
+2026-04-27 15:24:00,206 - UpTrans - INFO - Test[840/1200] Taxonomy = 04256520 Sample = 9c0ed8415a0a9e5c49b1e464b71de577 Losses = ['18.1855', '1.1460', '8.6117', '0.2834'] Metrics = ['0.7091', '8.6117', '0.2834', '0.0000']
+2026-04-27 15:24:06,136 - UpTrans - INFO - Test[960/1200] Taxonomy = 04379243 Sample = 668deaeb91295739664b3b9b23ddfcbc Losses = ['11.8755', '0.4574', '4.4386', '0.0537'] Metrics = ['0.9705', '4.4386', '0.0537', '0.0000']
+2026-04-27 15:24:12,037 - UpTrans - INFO - Test[1080/1200] Taxonomy = 04530566 Sample = 370ab590d5f9f6e12998de2923cbf8ed Losses = ['13.1930', '0.5799', '6.1948', '0.1224'] Metrics = ['0.8496', '6.1948', '0.1224', '0.0000']
+2026-04-27 15:24:17,896 - UpTrans - INFO - Test[1200/1200] Taxonomy = 04530566 Sample = fd52c80ae21d19251e0d0f6bac6856eb Losses = ['12.9045', '0.5551', '5.3327', '0.0955'] Metrics = ['0.9228', '5.3327', '0.0955', '0.0000']
+2026-04-27 15:24:17,988 - UpTrans - INFO - [Validation] EPOCH: 0  Metrics = ['0.8278', '6.6378', '0.2123', '0.0000']
+2026-04-27 15:24:17,989 - UpTrans - INFO - ============================ TEST RESULTS ============================
+2026-04-27 15:24:17,989 - UpTrans - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2026-04-27 15:24:17,989 - UpTrans - INFO - 02691156	150	0.952 	3.874 	0.077 	0.000 	airplane	
+2026-04-27 15:24:17,989 - UpTrans - INFO - 02933112	150	0.721 	8.918 	0.313 	0.000 	cabinet	
+2026-04-27 15:24:17,989 - UpTrans - INFO - 02958343	150	0.772 	7.643 	0.194 	0.000 	car	
+2026-04-27 15:24:17,989 - UpTrans - INFO - 03001627	150	0.813 	7.035 	0.230 	0.000 	chair	
+2026-04-27 15:24:17,990 - UpTrans - INFO - 03636649	150	0.888 	5.198 	0.150 	0.000 	lamp	
+2026-04-27 15:24:17,990 - UpTrans - INFO - 04256520	150	0.732 	8.718 	0.425 	0.000 	sofa	
+2026-04-27 15:24:17,990 - UpTrans - INFO - 04379243	150	0.889 	5.940 	0.169 	0.000 	table	
+2026-04-27 15:24:17,990 - UpTrans - INFO - 04530566	150	0.856 	5.777 	0.141 	0.000 	watercraft	
+2026-04-27 15:24:17,990 - UpTrans - INFO - Overall		0.828 	6.638 	0.212 	0.000 	
+2026-04-27 15:24:18,263 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-best.pth
+2026-04-27 15:24:18,507 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-last.pth
+2026-04-27 15:24:19,202 - UpTrans - INFO - [Epoch 1/30][Batch 1/1810] BatchTime = 0.694 (s) DataTime = 0.170 (s) Losses = ['12.4317', '6.1142'] lr = 0.000099
+2026-04-27 15:25:08,295 - UpTrans - INFO - [Epoch 1/30][Batch 101/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['13.1132', '6.2755'] lr = 0.000099
+2026-04-27 15:25:57,183 - UpTrans - INFO - [Epoch 1/30][Batch 201/1810] BatchTime = 0.489 (s) DataTime = 0.003 (s) Losses = ['13.6915', '6.7994'] lr = 0.000099
+2026-04-27 15:26:45,419 - UpTrans - INFO - [Epoch 1/30][Batch 301/1810] BatchTime = 0.426 (s) DataTime = 0.002 (s) Losses = ['14.5318', '6.5270'] lr = 0.000099
+2026-04-27 15:27:34,093 - UpTrans - INFO - [Epoch 1/30][Batch 401/1810] BatchTime = 0.494 (s) DataTime = 0.003 (s) Losses = ['13.4727', '6.0980'] lr = 0.000099
+2026-04-27 15:28:22,492 - UpTrans - INFO - [Epoch 1/30][Batch 501/1810] BatchTime = 0.494 (s) DataTime = 0.002 (s) Losses = ['14.4402', '6.6413'] lr = 0.000099
+2026-04-27 15:29:09,295 - UpTrans - INFO - [Epoch 1/30][Batch 601/1810] BatchTime = 0.483 (s) DataTime = 0.004 (s) Losses = ['14.4852', '6.9033'] lr = 0.000099
+2026-04-27 15:29:57,687 - UpTrans - INFO - [Epoch 1/30][Batch 701/1810] BatchTime = 0.487 (s) DataTime = 0.003 (s) Losses = ['13.4298', '6.5702'] lr = 0.000099
+2026-04-27 15:30:46,092 - UpTrans - INFO - [Epoch 1/30][Batch 801/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['11.7581', '5.3983'] lr = 0.000099
+2026-04-27 15:31:34,493 - UpTrans - INFO - [Epoch 1/30][Batch 901/1810] BatchTime = 0.355 (s) DataTime = 0.002 (s) Losses = ['12.8564', '6.2221'] lr = 0.000099
+2026-04-27 15:32:21,310 - UpTrans - INFO - [Epoch 1/30][Batch 1001/1810] BatchTime = 0.416 (s) DataTime = 0.003 (s) Losses = ['13.0031', '6.1650'] lr = 0.000099
+2026-04-27 15:33:12,906 - UpTrans - INFO - [Epoch 1/30][Batch 1101/1810] BatchTime = 0.490 (s) DataTime = 0.003 (s) Losses = ['12.0779', '5.6985'] lr = 0.000099
+2026-04-27 15:34:01,392 - UpTrans - INFO - [Epoch 1/30][Batch 1201/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['13.3480', '6.2203'] lr = 0.000099
+2026-04-27 15:34:50,496 - UpTrans - INFO - [Epoch 1/30][Batch 1301/1810] BatchTime = 0.504 (s) DataTime = 0.003 (s) Losses = ['13.5534', '6.5796'] lr = 0.000099
+2026-04-27 15:35:39,593 - UpTrans - INFO - [Epoch 1/30][Batch 1401/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['11.1341', '5.3750'] lr = 0.000099
+2026-04-27 15:36:28,892 - UpTrans - INFO - [Epoch 1/30][Batch 1501/1810] BatchTime = 0.499 (s) DataTime = 0.003 (s) Losses = ['15.1300', '6.6459'] lr = 0.000099
+2026-04-27 15:37:18,197 - UpTrans - INFO - [Epoch 1/30][Batch 1601/1810] BatchTime = 0.497 (s) DataTime = 0.003 (s) Losses = ['13.2720', '6.3311'] lr = 0.000099
+2026-04-27 15:38:06,225 - UpTrans - INFO - [Epoch 1/30][Batch 1701/1810] BatchTime = 0.398 (s) DataTime = 0.003 (s) Losses = ['13.5622', '5.9769'] lr = 0.000099
+2026-04-27 15:38:54,709 - UpTrans - INFO - [Epoch 1/30][Batch 1801/1810] BatchTime = 0.413 (s) DataTime = 0.003 (s) Losses = ['14.5960', '6.3853'] lr = 0.000099
+2026-04-27 15:38:59,179 - UpTrans - INFO - [Training] EPOCH: 1 EpochTime = 880.671 (s) Losses = ['13.5883', '6.4674']
+2026-04-27 15:38:59,595 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-last.pth
+2026-04-27 15:39:00,293 - UpTrans - INFO - [Epoch 2/30][Batch 1/1810] BatchTime = 0.696 (s) DataTime = 0.189 (s) Losses = ['14.4156', '6.5577'] lr = 0.000099
+2026-04-27 15:39:47,497 - UpTrans - INFO - [Epoch 2/30][Batch 101/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['14.2938', '6.5675'] lr = 0.000099
+2026-04-27 15:40:36,793 - UpTrans - INFO - [Epoch 2/30][Batch 201/1810] BatchTime = 0.500 (s) DataTime = 0.004 (s) Losses = ['14.1538', '6.9210'] lr = 0.000099
+2026-04-27 15:41:25,593 - UpTrans - INFO - [Epoch 2/30][Batch 301/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['14.3710', '7.1007'] lr = 0.000099
+2026-04-27 15:42:14,392 - UpTrans - INFO - [Epoch 2/30][Batch 401/1810] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['12.1671', '5.0730'] lr = 0.000099
+2026-04-27 15:43:02,693 - UpTrans - INFO - [Epoch 2/30][Batch 501/1810] BatchTime = 0.496 (s) DataTime = 0.003 (s) Losses = ['12.3684', '5.9979'] lr = 0.000099
+2026-04-27 15:43:50,892 - UpTrans - INFO - [Epoch 2/30][Batch 601/1810] BatchTime = 0.486 (s) DataTime = 0.003 (s) Losses = ['11.9300', '5.3658'] lr = 0.000099
+2026-04-27 15:44:38,592 - UpTrans - INFO - [Epoch 2/30][Batch 701/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['12.2687', '5.9224'] lr = 0.000099
+2026-04-27 15:45:26,790 - UpTrans - INFO - [Epoch 2/30][Batch 801/1810] BatchTime = 0.495 (s) DataTime = 0.003 (s) Losses = ['12.0134', '5.8956'] lr = 0.000099
+2026-04-27 15:46:14,991 - UpTrans - INFO - [Epoch 2/30][Batch 901/1810] BatchTime = 0.497 (s) DataTime = 0.003 (s) Losses = ['15.9820', '6.6241'] lr = 0.000099
+2026-04-27 15:47:03,094 - UpTrans - INFO - [Epoch 2/30][Batch 1001/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['13.2223', '6.8717'] lr = 0.000099
+2026-04-27 15:47:51,492 - UpTrans - INFO - [Epoch 2/30][Batch 1101/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['13.2258', '5.8196'] lr = 0.000099
+2026-04-27 15:48:40,693 - UpTrans - INFO - [Epoch 2/30][Batch 1201/1810] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['12.7192', '5.6866'] lr = 0.000099
+2026-04-27 15:49:28,992 - UpTrans - INFO - [Epoch 2/30][Batch 1301/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['13.5320', '7.2702'] lr = 0.000099
+2026-04-27 15:50:17,393 - UpTrans - INFO - [Epoch 2/30][Batch 1401/1810] BatchTime = 0.501 (s) DataTime = 0.003 (s) Losses = ['12.7908', '5.8665'] lr = 0.000099
+2026-04-27 15:51:05,993 - UpTrans - INFO - [Epoch 2/30][Batch 1501/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['15.0966', '7.2612'] lr = 0.000099
+2026-04-27 15:51:55,092 - UpTrans - INFO - [Epoch 2/30][Batch 1601/1810] BatchTime = 0.501 (s) DataTime = 0.003 (s) Losses = ['14.8497', '6.8461'] lr = 0.000099
+2026-04-27 15:52:44,098 - UpTrans - INFO - [Epoch 2/30][Batch 1701/1810] BatchTime = 0.502 (s) DataTime = 0.004 (s) Losses = ['12.2692', '5.9313'] lr = 0.000099
+2026-04-27 15:53:31,997 - UpTrans - INFO - [Epoch 2/30][Batch 1801/1810] BatchTime = 0.405 (s) DataTime = 0.003 (s) Losses = ['13.3373', '6.9947'] lr = 0.000099
+2026-04-27 15:53:36,395 - UpTrans - INFO - [Training] EPOCH: 2 EpochTime = 876.799 (s) Losses = ['13.6214', '6.4739']
+2026-04-27 15:53:36,807 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-last.pth
+2026-04-27 15:53:37,494 - UpTrans - INFO - [Epoch 3/30][Batch 1/1810] BatchTime = 0.683 (s) DataTime = 0.220 (s) Losses = ['14.5585', '7.1216'] lr = 0.000099
+2026-04-27 15:54:25,692 - UpTrans - INFO - [Epoch 3/30][Batch 101/1810] BatchTime = 0.499 (s) DataTime = 0.003 (s) Losses = ['13.3711', '6.2654'] lr = 0.000099
+2026-04-27 15:55:13,696 - UpTrans - INFO - [Epoch 3/30][Batch 201/1810] BatchTime = 0.395 (s) DataTime = 0.003 (s) Losses = ['12.9044', '6.1403'] lr = 0.000099
+2026-04-27 15:56:02,493 - UpTrans - INFO - [Epoch 3/30][Batch 301/1810] BatchTime = 0.499 (s) DataTime = 0.003 (s) Losses = ['12.4314', '5.7328'] lr = 0.000099
+2026-04-27 15:56:50,494 - UpTrans - INFO - [Epoch 3/30][Batch 401/1810] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['16.3419', '7.5586'] lr = 0.000099
+2026-04-27 15:57:38,392 - UpTrans - INFO - [Epoch 3/30][Batch 501/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['14.7952', '6.6315'] lr = 0.000099
+2026-04-27 15:58:25,609 - UpTrans - INFO - [Epoch 3/30][Batch 601/1810] BatchTime = 0.417 (s) DataTime = 0.003 (s) Losses = ['13.7646', '6.7016'] lr = 0.000099
+2026-04-27 15:59:13,999 - UpTrans - INFO - [Epoch 3/30][Batch 701/1810] BatchTime = 0.404 (s) DataTime = 0.004 (s) Losses = ['12.2045', '5.8482'] lr = 0.000099
+2026-04-27 16:00:01,693 - UpTrans - INFO - [Epoch 3/30][Batch 801/1810] BatchTime = 0.496 (s) DataTime = 0.003 (s) Losses = ['14.6591', '6.9769'] lr = 0.000099
+2026-04-27 16:00:48,796 - UpTrans - INFO - [Epoch 3/30][Batch 901/1810] BatchTime = 0.491 (s) DataTime = 0.002 (s) Losses = ['11.9174', '5.9136'] lr = 0.000099
+2026-04-27 16:01:38,292 - UpTrans - INFO - [Epoch 3/30][Batch 1001/1810] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['15.1678', '6.7899'] lr = 0.000099
+2026-04-27 16:02:26,889 - UpTrans - INFO - [Epoch 3/30][Batch 1101/1810] BatchTime = 0.500 (s) DataTime = 0.004 (s) Losses = ['14.3651', '6.4964'] lr = 0.000099
+2026-04-27 16:03:16,093 - UpTrans - INFO - [Epoch 3/30][Batch 1201/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['12.3683', '5.5529'] lr = 0.000099
+2026-04-27 16:04:03,292 - UpTrans - INFO - [Epoch 3/30][Batch 1301/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['14.7988', '7.0999'] lr = 0.000099
+2026-04-27 16:04:51,836 - UpTrans - INFO - [Epoch 3/30][Batch 1401/1810] BatchTime = 0.416 (s) DataTime = 0.002 (s) Losses = ['13.2085', '6.3290'] lr = 0.000099
+2026-04-27 16:05:39,193 - UpTrans - INFO - [Epoch 3/30][Batch 1501/1810] BatchTime = 0.494 (s) DataTime = 0.003 (s) Losses = ['14.2553', '6.7126'] lr = 0.000099
+2026-04-27 16:06:27,798 - UpTrans - INFO - [Epoch 3/30][Batch 1601/1810] BatchTime = 0.505 (s) DataTime = 0.003 (s) Losses = ['13.5327', '6.8145'] lr = 0.000099
+2026-04-27 16:07:15,791 - UpTrans - INFO - [Epoch 3/30][Batch 1701/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['11.1920', '5.4331'] lr = 0.000099
+2026-04-27 16:08:04,591 - UpTrans - INFO - [Epoch 3/30][Batch 1801/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['16.1555', '7.5263'] lr = 0.000099
+2026-04-27 16:08:09,107 - UpTrans - INFO - [Training] EPOCH: 3 EpochTime = 872.297 (s) Losses = ['13.5966', '6.4563']
+2026-04-27 16:08:09,499 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-last.pth
+2026-04-27 16:08:10,093 - UpTrans - INFO - [Epoch 4/30][Batch 1/1810] BatchTime = 0.592 (s) DataTime = 0.152 (s) Losses = ['12.5719', '5.6872'] lr = 0.000098
+2026-04-27 16:08:58,193 - UpTrans - INFO - [Epoch 4/30][Batch 101/1810] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['12.6488', '6.2564'] lr = 0.000098
+2026-04-27 16:09:47,090 - UpTrans - INFO - [Epoch 4/30][Batch 201/1810] BatchTime = 0.498 (s) DataTime = 0.002 (s) Losses = ['14.0448', '6.5733'] lr = 0.000098
+2026-04-27 16:10:36,090 - UpTrans - INFO - [Epoch 4/30][Batch 301/1810] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['13.1499', '6.3799'] lr = 0.000098
+2026-04-27 16:11:23,990 - UpTrans - INFO - [Epoch 4/30][Batch 401/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['13.8628', '6.7719'] lr = 0.000098
+2026-04-27 16:12:12,490 - UpTrans - INFO - [Epoch 4/30][Batch 501/1810] BatchTime = 0.489 (s) DataTime = 0.002 (s) Losses = ['13.1984', '6.5701'] lr = 0.000098
+2026-04-27 16:13:01,605 - UpTrans - INFO - [Epoch 4/30][Batch 601/1810] BatchTime = 0.413 (s) DataTime = 0.003 (s) Losses = ['14.4030', '6.8473'] lr = 0.000098
+2026-04-27 16:13:49,193 - UpTrans - INFO - [Epoch 4/30][Batch 701/1810] BatchTime = 0.488 (s) DataTime = 0.003 (s) Losses = ['14.6373', '6.7835'] lr = 0.000098
+2026-04-27 16:14:37,592 - UpTrans - INFO - [Epoch 4/30][Batch 801/1810] BatchTime = 0.499 (s) DataTime = 0.003 (s) Losses = ['12.8466', '5.6815'] lr = 0.000098
+2026-04-27 16:15:25,306 - UpTrans - INFO - [Epoch 4/30][Batch 901/1810] BatchTime = 0.512 (s) DataTime = 0.003 (s) Losses = ['12.7404', '6.0476'] lr = 0.000098
+2026-04-27 16:16:13,708 - UpTrans - INFO - [Epoch 4/30][Batch 1001/1810] BatchTime = 0.409 (s) DataTime = 0.003 (s) Losses = ['13.2701', '6.0344'] lr = 0.000098
+2026-04-27 16:17:02,093 - UpTrans - INFO - [Epoch 4/30][Batch 1101/1810] BatchTime = 0.488 (s) DataTime = 0.003 (s) Losses = ['15.1527', '6.7623'] lr = 0.000098
+2026-04-27 16:17:49,291 - UpTrans - INFO - [Epoch 4/30][Batch 1201/1810] BatchTime = 0.498 (s) DataTime = 0.002 (s) Losses = ['14.0228', '7.0786'] lr = 0.000098
+2026-04-27 16:18:36,391 - UpTrans - INFO - [Epoch 4/30][Batch 1301/1810] BatchTime = 0.499 (s) DataTime = 0.003 (s) Losses = ['12.7438', '6.3082'] lr = 0.000098
+2026-04-27 16:19:25,393 - UpTrans - INFO - [Epoch 4/30][Batch 1401/1810] BatchTime = 0.466 (s) DataTime = 0.002 (s) Losses = ['14.0952', '6.7367'] lr = 0.000098
+2026-04-27 16:20:13,289 - UpTrans - INFO - [Epoch 4/30][Batch 1501/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['13.5186', '6.6965'] lr = 0.000098
+2026-04-27 16:21:01,391 - UpTrans - INFO - [Epoch 4/30][Batch 1601/1810] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['15.4752', '7.2173'] lr = 0.000098
+2026-04-27 16:21:48,790 - UpTrans - INFO - [Epoch 4/30][Batch 1701/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['12.9285', '6.1541'] lr = 0.000098
+2026-04-27 16:22:35,193 - UpTrans - INFO - [Epoch 4/30][Batch 1801/1810] BatchTime = 0.501 (s) DataTime = 0.003 (s) Losses = ['12.5309', '6.0739'] lr = 0.000098
+2026-04-27 16:22:39,380 - UpTrans - INFO - [Training] EPOCH: 4 EpochTime = 869.880 (s) Losses = ['13.6038', '6.4685']
+2026-04-27 16:22:39,764 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-last.pth
+2026-04-27 16:22:40,414 - UpTrans - INFO - [Epoch 5/30][Batch 1/1810] BatchTime = 0.647 (s) DataTime = 0.207 (s) Losses = ['16.1678', '7.3119'] lr = 0.000098
+2026-04-27 16:23:27,104 - UpTrans - INFO - [Epoch 5/30][Batch 101/1810] BatchTime = 0.404 (s) DataTime = 0.002 (s) Losses = ['13.4411', '6.6453'] lr = 0.000098
+2026-04-27 16:24:13,890 - UpTrans - INFO - [Epoch 5/30][Batch 201/1810] BatchTime = 0.498 (s) DataTime = 0.004 (s) Losses = ['11.9556', '5.7174'] lr = 0.000098
+2026-04-27 16:25:02,093 - UpTrans - INFO - [Epoch 5/30][Batch 301/1810] BatchTime = 0.492 (s) DataTime = 0.003 (s) Losses = ['14.0512', '7.0979'] lr = 0.000098
+2026-04-27 16:25:49,591 - UpTrans - INFO - [Epoch 5/30][Batch 401/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['13.5833', '6.5904'] lr = 0.000098
+2026-04-27 16:26:37,409 - UpTrans - INFO - [Epoch 5/30][Batch 501/1810] BatchTime = 0.410 (s) DataTime = 0.002 (s) Losses = ['13.1099', '6.1611'] lr = 0.000098
+2026-04-27 16:27:26,091 - UpTrans - INFO - [Epoch 5/30][Batch 601/1810] BatchTime = 0.498 (s) DataTime = 0.003 (s) Losses = ['16.3140', '6.8340'] lr = 0.000098
+2026-04-27 16:28:11,794 - UpTrans - INFO - [Epoch 5/30][Batch 701/1810] BatchTime = 0.489 (s) DataTime = 0.002 (s) Losses = ['14.7581', '7.3261'] lr = 0.000098
+2026-04-27 16:28:58,295 - UpTrans - INFO - [Epoch 5/30][Batch 801/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['12.7656', '5.7684'] lr = 0.000098
+2026-04-27 16:29:46,390 - UpTrans - INFO - [Epoch 5/30][Batch 901/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['15.3903', '7.2246'] lr = 0.000098
+2026-04-27 16:30:33,093 - UpTrans - INFO - [Epoch 5/30][Batch 1001/1810] BatchTime = 0.399 (s) DataTime = 0.002 (s) Losses = ['14.2536', '7.0297'] lr = 0.000098
+2026-04-27 16:31:20,490 - UpTrans - INFO - [Epoch 5/30][Batch 1101/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['12.3156', '5.3692'] lr = 0.000098
+2026-04-27 16:32:07,410 - UpTrans - INFO - [Epoch 5/30][Batch 1201/1810] BatchTime = 0.418 (s) DataTime = 0.003 (s) Losses = ['14.6145', '7.2645'] lr = 0.000098
+2026-04-27 16:32:54,693 - UpTrans - INFO - [Epoch 5/30][Batch 1301/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['12.2889', '5.9159'] lr = 0.000098
+2026-04-27 16:33:43,393 - UpTrans - INFO - [Epoch 5/30][Batch 1401/1810] BatchTime = 0.498 (s) DataTime = 0.002 (s) Losses = ['14.4302', '6.8410'] lr = 0.000098
+2026-04-27 16:34:30,590 - UpTrans - INFO - [Epoch 5/30][Batch 1501/1810] BatchTime = 0.498 (s) DataTime = 0.002 (s) Losses = ['14.4572', '7.0402'] lr = 0.000098
+2026-04-27 16:35:17,594 - UpTrans - INFO - [Epoch 5/30][Batch 1601/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['15.1884', '6.7502'] lr = 0.000098
+2026-04-27 16:36:04,791 - UpTrans - INFO - [Epoch 5/30][Batch 1701/1810] BatchTime = 0.498 (s) DataTime = 0.002 (s) Losses = ['12.0939', '5.7907'] lr = 0.000098
+2026-04-27 16:36:53,983 - UpTrans - INFO - [Epoch 5/30][Batch 1801/1810] BatchTime = 0.475 (s) DataTime = 0.002 (s) Losses = ['14.1443', '6.4295'] lr = 0.000098
+2026-04-27 16:36:58,393 - UpTrans - INFO - [Training] EPOCH: 5 EpochTime = 858.626 (s) Losses = ['13.6265', '6.4711']
+2026-04-27 16:36:58,393 - UpTrans - INFO - [VALIDATION] Start validating epoch 5
+2026-04-27 16:37:04,556 - UpTrans - INFO - Test[120/1200] Taxonomy = 02691156 Sample = d18f2aeae4146464bd46d022fd7d80aa Losses = ['5.9117', '0.1128', '2.7769', '0.0216'] Metrics = ['0.9928', '2.7769', '0.0216', '0.0000']
+2026-04-27 16:37:10,428 - UpTrans - INFO - Test[240/1200] Taxonomy = 02933112 Sample = 8f55954a0b07a4b2bf64ff63662d244b Losses = ['15.3317', '0.8347', '6.6615', '0.2367'] Metrics = ['0.8732', '6.6615', '0.2367', '0.0000']
+2026-04-27 16:37:16,293 - UpTrans - INFO - Test[360/1200] Taxonomy = 02958343 Sample = 5f148a8b824ed7e72a9eb0f146e94477 Losses = ['15.1518', '0.7817', '7.9364', '0.2047'] Metrics = ['0.7476', '7.9364', '0.2047', '0.0000']
+2026-04-27 16:37:22,158 - UpTrans - INFO - Test[480/1200] Taxonomy = 03001627 Sample = 4344509d0442364d3f9d6e0ade5188b0 Losses = ['12.9382', '0.6098', '6.0400', '0.1303'] Metrics = ['0.8483', '6.0400', '0.1303', '0.0000']
+2026-04-27 16:37:28,026 - UpTrans - INFO - Test[600/1200] Taxonomy = 03001627 Sample = ff5a945aef7a68ffcf9ff3ee543c2925 Losses = ['19.2667', '1.4595', '9.0199', '0.3446'] Metrics = ['0.6892', '9.0199', '0.3446', '0.0000']
+2026-04-27 16:37:33,918 - UpTrans - INFO - Test[720/1200] Taxonomy = 03636649 Sample = d91cf049fa961ccb59f8e31ca87c470e Losses = ['12.5921', '0.6680', '4.7613', '0.1169'] Metrics = ['0.9115', '4.7613', '0.1169', '0.0000']
+2026-04-27 16:37:39,793 - UpTrans - INFO - Test[840/1200] Taxonomy = 04256520 Sample = 9c0ed8415a0a9e5c49b1e464b71de577 Losses = ['17.3266', '1.0254', '8.2329', '0.2183'] Metrics = ['0.7171', '8.2329', '0.2183', '0.0000']
+2026-04-27 16:37:45,666 - UpTrans - INFO - Test[960/1200] Taxonomy = 04379243 Sample = 668deaeb91295739664b3b9b23ddfcbc Losses = ['12.2560', '0.4940', '5.5888', '0.1240'] Metrics = ['0.8884', '5.5888', '0.1240', '0.0000']
+2026-04-27 16:37:51,533 - UpTrans - INFO - Test[1080/1200] Taxonomy = 04530566 Sample = 370ab590d5f9f6e12998de2923cbf8ed Losses = ['12.7261', '0.5369', '6.1892', '0.1185'] Metrics = ['0.8487', '6.1892', '0.1185', '0.0000']
+2026-04-27 16:37:57,388 - UpTrans - INFO - Test[1200/1200] Taxonomy = 04530566 Sample = fd52c80ae21d19251e0d0f6bac6856eb Losses = ['12.8125', '0.5474', '5.2922', '0.0913'] Metrics = ['0.9325', '5.2922', '0.0913', '0.0000']
+2026-04-27 16:37:57,481 - UpTrans - INFO - [Validation] EPOCH: 5  Metrics = ['0.8214', '6.7305', '0.2115', '0.0000']
+2026-04-27 16:37:57,481 - UpTrans - INFO - ============================ TEST RESULTS ============================
+2026-04-27 16:37:57,481 - UpTrans - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2026-04-27 16:37:57,481 - UpTrans - INFO - 02691156	150	0.949 	3.945 	0.079 	0.000 	airplane	
+2026-04-27 16:37:57,481 - UpTrans - INFO - 02933112	150	0.706 	9.156 	0.338 	0.000 	cabinet	
+2026-04-27 16:37:57,481 - UpTrans - INFO - 02958343	150	0.766 	7.718 	0.197 	0.000 	car	
+2026-04-27 16:37:57,481 - UpTrans - INFO - 03001627	150	0.810 	7.064 	0.222 	0.000 	chair	
+2026-04-27 16:37:57,481 - UpTrans - INFO - 03636649	150	0.883 	5.266 	0.146 	0.000 	lamp	
+2026-04-27 16:37:57,481 - UpTrans - INFO - 04256520	150	0.723 	8.731 	0.403 	0.000 	sofa	
+2026-04-27 16:37:57,481 - UpTrans - INFO - 04379243	150	0.879 	6.175 	0.173 	0.000 	table	
+2026-04-27 16:37:57,481 - UpTrans - INFO - 04530566	150	0.855 	5.788 	0.136 	0.000 	watercraft	
+2026-04-27 16:37:57,481 - UpTrans - INFO - Overall		0.821 	6.731 	0.212 	0.000 	
+2026-04-27 16:37:57,847 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-last.pth
+2026-04-27 16:37:58,491 - UpTrans - INFO - [Epoch 6/30][Batch 1/1810] BatchTime = 0.644 (s) DataTime = 0.202 (s) Losses = ['12.7121', '6.0698'] lr = 0.000097
+2026-04-27 16:38:46,190 - UpTrans - INFO - [Epoch 6/30][Batch 101/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['14.8844', '6.9774'] lr = 0.000097
+2026-04-27 16:39:34,892 - UpTrans - INFO - [Epoch 6/30][Batch 201/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['13.2443', '5.4912'] lr = 0.000097
+2026-04-27 16:40:22,601 - UpTrans - INFO - [Epoch 6/30][Batch 301/1810] BatchTime = 0.407 (s) DataTime = 0.002 (s) Losses = ['16.0785', '7.5428'] lr = 0.000097
+2026-04-27 16:41:10,993 - UpTrans - INFO - [Epoch 6/30][Batch 401/1810] BatchTime = 0.502 (s) DataTime = 0.002 (s) Losses = ['12.9923', '6.3223'] lr = 0.000097
+2026-04-27 16:41:59,305 - UpTrans - INFO - [Epoch 6/30][Batch 501/1810] BatchTime = 0.414 (s) DataTime = 0.002 (s) Losses = ['14.0142', '6.4645'] lr = 0.000097
+2026-04-27 16:42:48,193 - UpTrans - INFO - [Epoch 6/30][Batch 601/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['11.3433', '5.1547'] lr = 0.000097
+2026-04-27 16:43:35,390 - UpTrans - INFO - [Epoch 6/30][Batch 701/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['12.7293', '6.3145'] lr = 0.000097
+2026-04-27 16:44:23,895 - UpTrans - INFO - [Epoch 6/30][Batch 801/1810] BatchTime = 0.504 (s) DataTime = 0.002 (s) Losses = ['14.8817', '6.5267'] lr = 0.000097
+2026-04-27 16:45:11,706 - UpTrans - INFO - [Epoch 6/30][Batch 901/1810] BatchTime = 0.414 (s) DataTime = 0.002 (s) Losses = ['14.1442', '6.8009'] lr = 0.000097
+2026-04-27 16:46:00,191 - UpTrans - INFO - [Epoch 6/30][Batch 1001/1810] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['13.8734', '6.4084'] lr = 0.000097
+2026-04-27 16:46:47,992 - UpTrans - INFO - [Epoch 6/30][Batch 1101/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['14.9217', '6.9826'] lr = 0.000097
+2026-04-27 16:47:36,991 - UpTrans - INFO - [Epoch 6/30][Batch 1201/1810] BatchTime = 0.488 (s) DataTime = 0.002 (s) Losses = ['15.0409', '7.0671'] lr = 0.000097
+2026-04-27 16:48:25,993 - UpTrans - INFO - [Epoch 6/30][Batch 1301/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['15.0009', '7.4547'] lr = 0.000097
+2026-04-27 16:49:14,190 - UpTrans - INFO - [Epoch 6/30][Batch 1401/1810] BatchTime = 0.496 (s) DataTime = 0.002 (s) Losses = ['14.2293', '6.7341'] lr = 0.000097
+2026-04-27 16:50:02,692 - UpTrans - INFO - [Epoch 6/30][Batch 1501/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['13.7888', '6.3075'] lr = 0.000097
+2026-04-27 16:50:51,290 - UpTrans - INFO - [Epoch 6/30][Batch 1601/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['16.8143', '7.0285'] lr = 0.000097
+2026-04-27 16:51:40,293 - UpTrans - INFO - [Epoch 6/30][Batch 1701/1810] BatchTime = 0.502 (s) DataTime = 0.002 (s) Losses = ['14.8287', '7.1823'] lr = 0.000097
+2026-04-27 16:52:29,191 - UpTrans - INFO - [Epoch 6/30][Batch 1801/1810] BatchTime = 0.500 (s) DataTime = 0.004 (s) Losses = ['11.8207', '5.7000'] lr = 0.000097
+2026-04-27 16:52:33,290 - UpTrans - INFO - [Training] EPOCH: 6 EpochTime = 875.442 (s) Losses = ['13.6397', '6.4759']
+2026-04-27 16:52:33,714 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-last.pth
+2026-04-27 16:52:34,394 - UpTrans - INFO - [Epoch 7/30][Batch 1/1810] BatchTime = 0.678 (s) DataTime = 0.198 (s) Losses = ['15.4870', '7.5992'] lr = 0.000097
+2026-04-27 16:53:23,507 - UpTrans - INFO - [Epoch 7/30][Batch 101/1810] BatchTime = 0.411 (s) DataTime = 0.002 (s) Losses = ['13.9253', '6.1352'] lr = 0.000097
+2026-04-27 16:54:11,502 - UpTrans - INFO - [Epoch 7/30][Batch 201/1810] BatchTime = 0.410 (s) DataTime = 0.003 (s) Losses = ['13.5627', '6.0629'] lr = 0.000097
+2026-04-27 16:54:59,794 - UpTrans - INFO - [Epoch 7/30][Batch 301/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['13.6623', '6.4555'] lr = 0.000097
+2026-04-27 16:55:47,193 - UpTrans - INFO - [Epoch 7/30][Batch 401/1810] BatchTime = 0.401 (s) DataTime = 0.002 (s) Losses = ['13.8544', '7.0354'] lr = 0.000097
+2026-04-27 16:56:34,892 - UpTrans - INFO - [Epoch 7/30][Batch 501/1810] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['12.4353', '6.2028'] lr = 0.000097
+2026-04-27 16:57:23,092 - UpTrans - INFO - [Epoch 7/30][Batch 601/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['14.5169', '6.6657'] lr = 0.000097
+2026-04-27 16:58:11,791 - UpTrans - INFO - [Epoch 7/30][Batch 701/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['15.6647', '7.3103'] lr = 0.000097
+2026-04-27 16:59:00,893 - UpTrans - INFO - [Epoch 7/30][Batch 801/1810] BatchTime = 0.502 (s) DataTime = 0.003 (s) Losses = ['14.1367', '6.4780'] lr = 0.000097
+2026-04-27 16:59:49,509 - UpTrans - INFO - [Epoch 7/30][Batch 901/1810] BatchTime = 0.417 (s) DataTime = 0.002 (s) Losses = ['14.1383', '7.2634'] lr = 0.000097
+2026-04-27 17:00:38,496 - UpTrans - INFO - [Epoch 7/30][Batch 1001/1810] BatchTime = 0.504 (s) DataTime = 0.003 (s) Losses = ['12.8102', '5.8505'] lr = 0.000097
+2026-04-27 17:01:27,992 - UpTrans - INFO - [Epoch 7/30][Batch 1101/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['12.9174', '5.7097'] lr = 0.000097
+2026-04-27 17:02:17,594 - UpTrans - INFO - [Epoch 7/30][Batch 1201/1810] BatchTime = 0.499 (s) DataTime = 0.003 (s) Losses = ['14.3852', '7.3725'] lr = 0.000097
+2026-04-27 17:03:05,692 - UpTrans - INFO - [Epoch 7/30][Batch 1301/1810] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['13.0812', '6.3421'] lr = 0.000097
+2026-04-27 17:03:54,588 - UpTrans - INFO - [Epoch 7/30][Batch 1401/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['14.9987', '6.8188'] lr = 0.000097
+2026-04-27 17:04:43,292 - UpTrans - INFO - [Epoch 7/30][Batch 1501/1810] BatchTime = 0.498 (s) DataTime = 0.003 (s) Losses = ['12.2190', '6.0189'] lr = 0.000097
+2026-04-27 17:05:32,094 - UpTrans - INFO - [Epoch 7/30][Batch 1601/1810] BatchTime = 0.499 (s) DataTime = 0.003 (s) Losses = ['14.9788', '7.1900'] lr = 0.000097
+2026-04-27 17:06:21,295 - UpTrans - INFO - [Epoch 7/30][Batch 1701/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['13.6030', '6.5328'] lr = 0.000097
+2026-04-27 17:07:10,692 - UpTrans - INFO - [Epoch 7/30][Batch 1801/1810] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['11.8464', '5.6172'] lr = 0.000097
+2026-04-27 17:07:14,882 - UpTrans - INFO - [Training] EPOCH: 7 EpochTime = 881.166 (s) Losses = ['13.6350', '6.4806']
+2026-04-27 17:07:15,238 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-last.pth
+2026-04-27 17:07:15,892 - UpTrans - INFO - [Epoch 8/30][Batch 1/1810] BatchTime = 0.652 (s) DataTime = 0.189 (s) Losses = ['14.5672', '7.2145'] lr = 0.000096
+2026-04-27 17:08:04,294 - UpTrans - INFO - [Epoch 8/30][Batch 101/1810] BatchTime = 0.502 (s) DataTime = 0.002 (s) Losses = ['15.2821', '7.5702'] lr = 0.000096
+2026-04-27 17:08:52,794 - UpTrans - INFO - [Epoch 8/30][Batch 201/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['10.3477', '5.0815'] lr = 0.000096
+2026-04-27 17:09:39,695 - UpTrans - INFO - [Epoch 8/30][Batch 301/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['14.2416', '6.3225'] lr = 0.000096
+2026-04-27 17:10:26,792 - UpTrans - INFO - [Epoch 8/30][Batch 401/1810] BatchTime = 0.499 (s) DataTime = 0.003 (s) Losses = ['13.6775', '6.6379'] lr = 0.000096
+2026-04-27 17:11:15,594 - UpTrans - INFO - [Epoch 8/30][Batch 501/1810] BatchTime = 0.499 (s) DataTime = 0.003 (s) Losses = ['12.2754', '5.3247'] lr = 0.000096
+2026-04-27 17:12:03,503 - UpTrans - INFO - [Epoch 8/30][Batch 601/1810] BatchTime = 0.412 (s) DataTime = 0.002 (s) Losses = ['14.6023', '6.5186'] lr = 0.000096
+2026-04-27 17:12:52,592 - UpTrans - INFO - [Epoch 8/30][Batch 701/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['14.6583', '6.7008'] lr = 0.000096
+2026-04-27 17:13:41,195 - UpTrans - INFO - [Epoch 8/30][Batch 801/1810] BatchTime = 0.403 (s) DataTime = 0.003 (s) Losses = ['13.4930', '6.2280'] lr = 0.000096
+2026-04-27 17:14:29,892 - UpTrans - INFO - [Epoch 8/30][Batch 901/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['12.8118', '5.9295'] lr = 0.000096
+2026-04-27 17:15:17,494 - UpTrans - INFO - [Epoch 8/30][Batch 1001/1810] BatchTime = 0.496 (s) DataTime = 0.002 (s) Losses = ['12.7234', '6.1325'] lr = 0.000096
+2026-04-27 17:16:05,306 - UpTrans - INFO - [Epoch 8/30][Batch 1101/1810] BatchTime = 0.414 (s) DataTime = 0.003 (s) Losses = ['14.5380', '6.6958'] lr = 0.000096
+2026-04-27 17:16:53,191 - UpTrans - INFO - [Epoch 8/30][Batch 1201/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['13.8018', '6.4432'] lr = 0.000096
+2026-04-27 17:17:41,492 - UpTrans - INFO - [Epoch 8/30][Batch 1301/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['12.5276', '6.0187'] lr = 0.000096
+2026-04-27 17:18:28,794 - UpTrans - INFO - [Epoch 8/30][Batch 1401/1810] BatchTime = 0.501 (s) DataTime = 0.003 (s) Losses = ['12.7223', '5.9029'] lr = 0.000096
+2026-04-27 17:19:16,892 - UpTrans - INFO - [Epoch 8/30][Batch 1501/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['11.4752', '5.5189'] lr = 0.000096
+2026-04-27 17:20:05,094 - UpTrans - INFO - [Epoch 8/30][Batch 1601/1810] BatchTime = 0.405 (s) DataTime = 0.002 (s) Losses = ['14.2123', '6.8780'] lr = 0.000096
+2026-04-27 17:20:53,692 - UpTrans - INFO - [Epoch 8/30][Batch 1701/1810] BatchTime = 0.501 (s) DataTime = 0.003 (s) Losses = ['15.2020', '7.0382'] lr = 0.000096
+2026-04-27 17:21:41,493 - UpTrans - INFO - [Epoch 8/30][Batch 1801/1810] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['13.6147', '6.1228'] lr = 0.000096
+2026-04-27 17:21:45,811 - UpTrans - INFO - [Training] EPOCH: 8 EpochTime = 870.571 (s) Losses = ['13.6167', '6.4651']
+2026-04-27 17:21:46,218 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-last.pth
+2026-04-27 17:21:46,896 - UpTrans - INFO - [Epoch 9/30][Batch 1/1810] BatchTime = 0.677 (s) DataTime = 0.198 (s) Losses = ['14.9399', '7.2355'] lr = 0.000096
+2026-04-27 17:22:35,191 - UpTrans - INFO - [Epoch 9/30][Batch 101/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['13.4191', '6.8248'] lr = 0.000096
+2026-04-27 17:23:23,392 - UpTrans - INFO - [Epoch 9/30][Batch 201/1810] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['12.5904', '5.6613'] lr = 0.000096
+2026-04-27 17:24:12,695 - UpTrans - INFO - [Epoch 9/30][Batch 301/1810] BatchTime = 0.504 (s) DataTime = 0.003 (s) Losses = ['13.3941', '6.0352'] lr = 0.000096
+2026-04-27 17:25:01,494 - UpTrans - INFO - [Epoch 9/30][Batch 401/1810] BatchTime = 0.502 (s) DataTime = 0.002 (s) Losses = ['13.1142', '6.0635'] lr = 0.000096
+2026-04-27 17:25:49,894 - UpTrans - INFO - [Epoch 9/30][Batch 501/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['14.4225', '6.9842'] lr = 0.000096
+2026-04-27 17:26:38,892 - UpTrans - INFO - [Epoch 9/30][Batch 601/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['14.8121', '7.6759'] lr = 0.000096
+2026-04-27 17:27:26,789 - UpTrans - INFO - [Epoch 9/30][Batch 701/1810] BatchTime = 0.495 (s) DataTime = 0.003 (s) Losses = ['13.7566', '5.9764'] lr = 0.000096
+2026-04-27 17:28:14,991 - UpTrans - INFO - [Epoch 9/30][Batch 801/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['13.9076', '6.3793'] lr = 0.000096
+2026-04-27 17:29:03,892 - UpTrans - INFO - [Epoch 9/30][Batch 901/1810] BatchTime = 0.501 (s) DataTime = 0.003 (s) Losses = ['13.7643', '6.4156'] lr = 0.000096
+2026-04-27 17:29:52,492 - UpTrans - INFO - [Epoch 9/30][Batch 1001/1810] BatchTime = 0.496 (s) DataTime = 0.003 (s) Losses = ['11.1036', '5.4018'] lr = 0.000096
+2026-04-27 17:30:41,492 - UpTrans - INFO - [Epoch 9/30][Batch 1101/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['15.6411', '7.4403'] lr = 0.000096
+2026-04-27 17:31:29,692 - UpTrans - INFO - [Epoch 9/30][Batch 1201/1810] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['15.5155', '7.3656'] lr = 0.000096
+2026-04-27 17:32:17,892 - UpTrans - INFO - [Epoch 9/30][Batch 1301/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['12.5407', '6.1303'] lr = 0.000096
+2026-04-27 17:33:06,396 - UpTrans - INFO - [Epoch 9/30][Batch 1401/1810] BatchTime = 0.505 (s) DataTime = 0.002 (s) Losses = ['12.0477', '5.9833'] lr = 0.000096
+2026-04-27 17:33:55,390 - UpTrans - INFO - [Epoch 9/30][Batch 1501/1810] BatchTime = 0.497 (s) DataTime = 0.003 (s) Losses = ['14.9038', '7.2888'] lr = 0.000096
+2026-04-27 17:34:44,204 - UpTrans - INFO - [Epoch 9/30][Batch 1601/1810] BatchTime = 0.511 (s) DataTime = 0.002 (s) Losses = ['14.7468', '6.0533'] lr = 0.000096
+2026-04-27 17:35:31,787 - UpTrans - INFO - [Epoch 9/30][Batch 1701/1810] BatchTime = 0.483 (s) DataTime = 0.002 (s) Losses = ['14.6371', '6.4572'] lr = 0.000096
+2026-04-27 17:36:17,817 - UpTrans - INFO - [Epoch 9/30][Batch 1801/1810] BatchTime = 0.425 (s) DataTime = 0.003 (s) Losses = ['14.0378', '6.9651'] lr = 0.000096
+2026-04-27 17:36:22,185 - UpTrans - INFO - [Training] EPOCH: 9 EpochTime = 875.965 (s) Losses = ['13.6399', '6.4803']
+2026-04-27 17:36:22,575 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-last.pth
+2026-04-27 17:36:23,292 - UpTrans - INFO - [Epoch 10/30][Batch 1/1810] BatchTime = 0.716 (s) DataTime = 0.200 (s) Losses = ['12.6082', '6.0936'] lr = 0.000095
+2026-04-27 17:37:11,492 - UpTrans - INFO - [Epoch 10/30][Batch 101/1810] BatchTime = 0.495 (s) DataTime = 0.002 (s) Losses = ['12.4605', '5.4192'] lr = 0.000095
+2026-04-27 17:38:00,192 - UpTrans - INFO - [Epoch 10/30][Batch 201/1810] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['16.0695', '7.8674'] lr = 0.000095
+2026-04-27 17:38:48,991 - UpTrans - INFO - [Epoch 10/30][Batch 301/1810] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['15.0447', '7.0310'] lr = 0.000095
+2026-04-27 17:39:38,592 - UpTrans - INFO - [Epoch 10/30][Batch 401/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['15.9592', '7.3471'] lr = 0.000095
+2026-04-27 17:40:27,499 - UpTrans - INFO - [Epoch 10/30][Batch 501/1810] BatchTime = 0.508 (s) DataTime = 0.003 (s) Losses = ['11.2860', '5.2352'] lr = 0.000095
+2026-04-27 17:41:15,415 - UpTrans - INFO - [Epoch 10/30][Batch 601/1810] BatchTime = 0.413 (s) DataTime = 0.004 (s) Losses = ['12.2959', '6.1480'] lr = 0.000095
+2026-04-27 17:42:03,494 - UpTrans - INFO - [Epoch 10/30][Batch 701/1810] BatchTime = 0.499 (s) DataTime = 0.003 (s) Losses = ['13.5011', '6.6295'] lr = 0.000095
+2026-04-27 17:42:51,998 - UpTrans - INFO - [Epoch 10/30][Batch 801/1810] BatchTime = 0.508 (s) DataTime = 0.004 (s) Losses = ['12.9127', '6.1013'] lr = 0.000095
+2026-04-27 17:43:39,893 - UpTrans - INFO - [Epoch 10/30][Batch 901/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['14.9196', '7.0501'] lr = 0.000095
+2026-04-27 17:44:28,590 - UpTrans - INFO - [Epoch 10/30][Batch 1001/1810] BatchTime = 0.498 (s) DataTime = 0.002 (s) Losses = ['12.5371', '6.1912'] lr = 0.000095
+2026-04-27 17:45:17,493 - UpTrans - INFO - [Epoch 10/30][Batch 1101/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['12.6082', '5.9573'] lr = 0.000095
+2026-04-27 17:46:05,990 - UpTrans - INFO - [Epoch 10/30][Batch 1201/1810] BatchTime = 0.498 (s) DataTime = 0.003 (s) Losses = ['13.2943', '6.0717'] lr = 0.000095
+2026-04-27 17:46:54,490 - UpTrans - INFO - [Epoch 10/30][Batch 1301/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['13.2153', '6.6381'] lr = 0.000095
+2026-04-27 17:47:43,490 - UpTrans - INFO - [Epoch 10/30][Batch 1401/1810] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['14.2142', '6.4967'] lr = 0.000095
+2026-04-27 17:48:31,992 - UpTrans - INFO - [Epoch 10/30][Batch 1501/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['13.7594', '6.0087'] lr = 0.000095
+2026-04-27 17:49:20,290 - UpTrans - INFO - [Epoch 10/30][Batch 1601/1810] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['15.4249', '6.6806'] lr = 0.000095
+2026-04-27 17:50:09,607 - UpTrans - INFO - [Epoch 10/30][Batch 1701/1810] BatchTime = 0.415 (s) DataTime = 0.002 (s) Losses = ['12.9089', '6.0115'] lr = 0.000095
+2026-04-27 17:50:58,492 - UpTrans - INFO - [Epoch 10/30][Batch 1801/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['12.9225', '6.0866'] lr = 0.000095
+2026-04-27 17:51:03,108 - UpTrans - INFO - [Training] EPOCH: 10 EpochTime = 880.533 (s) Losses = ['13.6519', '6.4788']
+2026-04-27 17:51:03,109 - UpTrans - INFO - [VALIDATION] Start validating epoch 10
+2026-04-27 17:51:09,105 - UpTrans - INFO - Test[120/1200] Taxonomy = 02691156 Sample = d18f2aeae4146464bd46d022fd7d80aa Losses = ['6.0876', '0.1222', '2.6834', '0.0205'] Metrics = ['0.9934', '2.6834', '0.0205', '0.0000']
+2026-04-27 17:51:14,953 - UpTrans - INFO - Test[240/1200] Taxonomy = 02933112 Sample = 8f55954a0b07a4b2bf64ff63662d244b Losses = ['15.0127', '0.8600', '6.7988', '0.2620'] Metrics = ['0.8814', '6.7988', '0.2620', '0.0000']
+2026-04-27 17:51:20,804 - UpTrans - INFO - Test[360/1200] Taxonomy = 02958343 Sample = 5f148a8b824ed7e72a9eb0f146e94477 Losses = ['14.9483', '0.7717', '8.3024', '0.2412'] Metrics = ['0.7420', '8.3024', '0.2412', '0.0000']
+2026-04-27 17:51:26,658 - UpTrans - INFO - Test[480/1200] Taxonomy = 03001627 Sample = 4344509d0442364d3f9d6e0ade5188b0 Losses = ['12.4701', '0.5542', '5.8188', '0.1144'] Metrics = ['0.8686', '5.8188', '0.1144', '0.0000']
+2026-04-27 17:51:32,500 - UpTrans - INFO - Test[600/1200] Taxonomy = 03001627 Sample = ff5a945aef7a68ffcf9ff3ee543c2925 Losses = ['18.2905', '1.3098', '8.6495', '0.3191'] Metrics = ['0.7064', '8.6495', '0.3191', '0.0000']
+2026-04-27 17:51:38,335 - UpTrans - INFO - Test[720/1200] Taxonomy = 03636649 Sample = d91cf049fa961ccb59f8e31ca87c470e Losses = ['13.3971', '0.8271', '5.0419', '0.1446'] Metrics = ['0.9066', '5.0419', '0.1446', '0.0000']
+2026-04-27 17:51:44,187 - UpTrans - INFO - Test[840/1200] Taxonomy = 04256520 Sample = 9c0ed8415a0a9e5c49b1e464b71de577 Losses = ['16.6530', '0.9338', '8.5289', '0.2782'] Metrics = ['0.7164', '8.5289', '0.2782', '0.0000']
+2026-04-27 17:51:50,063 - UpTrans - INFO - Test[960/1200] Taxonomy = 04379243 Sample = 668deaeb91295739664b3b9b23ddfcbc Losses = ['10.0788', '0.3326', '4.3159', '0.0552'] Metrics = ['0.9708', '4.3159', '0.0552', '0.0000']
+2026-04-27 17:51:55,957 - UpTrans - INFO - Test[1080/1200] Taxonomy = 04530566 Sample = 370ab590d5f9f6e12998de2923cbf8ed Losses = ['12.7287', '0.5469', '6.0876', '0.1121'] Metrics = ['0.8453', '6.0876', '0.1121', '0.0000']
+2026-04-27 17:52:01,823 - UpTrans - INFO - Test[1200/1200] Taxonomy = 04530566 Sample = fd52c80ae21d19251e0d0f6bac6856eb Losses = ['12.5317', '0.5200', '5.2254', '0.0906'] Metrics = ['0.9413', '5.2254', '0.0906', '0.0000']
+2026-04-27 17:52:01,934 - UpTrans - INFO - [Validation] EPOCH: 10  Metrics = ['0.8237', '6.6915', '0.2143', '0.0000']
+2026-04-27 17:52:01,934 - UpTrans - INFO - ============================ TEST RESULTS ============================
+2026-04-27 17:52:01,934 - UpTrans - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2026-04-27 17:52:01,934 - UpTrans - INFO - 02691156	150	0.947 	3.960 	0.085 	0.000 	airplane	
+2026-04-27 17:52:01,934 - UpTrans - INFO - 02933112	150	0.713 	9.094 	0.342 	0.000 	cabinet	
+2026-04-27 17:52:01,934 - UpTrans - INFO - 02958343	150	0.768 	7.670 	0.196 	0.000 	car	
+2026-04-27 17:52:01,934 - UpTrans - INFO - 03001627	150	0.811 	7.014 	0.222 	0.000 	chair	
+2026-04-27 17:52:01,934 - UpTrans - INFO - 03636649	150	0.881 	5.339 	0.160 	0.000 	lamp	
+2026-04-27 17:52:01,934 - UpTrans - INFO - 04256520	150	0.728 	8.666 	0.399 	0.000 	sofa	
+2026-04-27 17:52:01,934 - UpTrans - INFO - 04379243	150	0.887 	5.994 	0.168 	0.000 	table	
+2026-04-27 17:52:01,934 - UpTrans - INFO - 04530566	150	0.854 	5.796 	0.141 	0.000 	watercraft	
+2026-04-27 17:52:01,934 - UpTrans - INFO - Overall		0.824 	6.692 	0.214 	0.000 	
+2026-04-27 17:52:02,275 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-last.pth
+2026-04-27 17:52:02,985 - UpTrans - INFO - [Epoch 11/30][Batch 1/1810] BatchTime = 0.708 (s) DataTime = 0.174 (s) Losses = ['14.7019', '6.8959'] lr = 0.000095
+2026-04-27 17:52:52,198 - UpTrans - INFO - [Epoch 11/30][Batch 101/1810] BatchTime = 0.507 (s) DataTime = 0.002 (s) Losses = ['14.7477', '6.2302'] lr = 0.000095
+2026-04-27 17:53:41,090 - UpTrans - INFO - [Epoch 11/30][Batch 201/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['14.4145', '5.8573'] lr = 0.000095
+2026-04-27 17:54:29,990 - UpTrans - INFO - [Epoch 11/30][Batch 301/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['12.6962', '6.2314'] lr = 0.000095
+2026-04-27 17:55:19,191 - UpTrans - INFO - [Epoch 11/30][Batch 401/1810] BatchTime = 0.499 (s) DataTime = 0.003 (s) Losses = ['14.6824', '6.8699'] lr = 0.000095
+2026-04-27 17:56:07,789 - UpTrans - INFO - [Epoch 11/30][Batch 501/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['13.0068', '6.0581'] lr = 0.000095
+2026-04-27 17:56:56,490 - UpTrans - INFO - [Epoch 11/30][Batch 601/1810] BatchTime = 0.497 (s) DataTime = 0.003 (s) Losses = ['11.5925', '5.5857'] lr = 0.000095
+2026-04-27 17:57:45,993 - UpTrans - INFO - [Epoch 11/30][Batch 701/1810] BatchTime = 0.502 (s) DataTime = 0.002 (s) Losses = ['15.8320', '7.2639'] lr = 0.000095
+2026-04-27 17:58:35,098 - UpTrans - INFO - [Epoch 11/30][Batch 801/1810] BatchTime = 0.505 (s) DataTime = 0.002 (s) Losses = ['15.1882', '7.2190'] lr = 0.000095
+2026-04-27 17:59:24,690 - UpTrans - INFO - [Epoch 11/30][Batch 901/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['15.0575', '6.7051'] lr = 0.000095
+2026-04-27 18:00:13,390 - UpTrans - INFO - [Epoch 11/30][Batch 1001/1810] BatchTime = 0.498 (s) DataTime = 0.002 (s) Losses = ['15.3601', '7.5514'] lr = 0.000095
+2026-04-27 18:01:02,690 - UpTrans - INFO - [Epoch 11/30][Batch 1101/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['12.8557', '6.1714'] lr = 0.000095
+2026-04-27 18:01:51,590 - UpTrans - INFO - [Epoch 11/30][Batch 1201/1810] BatchTime = 0.497 (s) DataTime = 0.003 (s) Losses = ['11.0657', '4.8677'] lr = 0.000095
+2026-04-27 18:02:40,690 - UpTrans - INFO - [Epoch 11/30][Batch 1301/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['15.1184', '7.8307'] lr = 0.000095
+2026-04-27 18:03:29,690 - UpTrans - INFO - [Epoch 11/30][Batch 1401/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['16.0605', '7.6000'] lr = 0.000095
+2026-04-27 18:04:19,392 - UpTrans - INFO - [Epoch 11/30][Batch 1501/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['13.9156', '6.6492'] lr = 0.000095
+2026-04-27 18:05:08,592 - UpTrans - INFO - [Epoch 11/30][Batch 1601/1810] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['13.4022', '6.5678'] lr = 0.000095
+2026-04-27 18:05:58,090 - UpTrans - INFO - [Epoch 11/30][Batch 1701/1810] BatchTime = 0.499 (s) DataTime = 0.003 (s) Losses = ['14.7747', '7.3215'] lr = 0.000095
+2026-04-27 18:06:47,390 - UpTrans - INFO - [Epoch 11/30][Batch 1801/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['15.3260', '6.9582'] lr = 0.000095
+2026-04-27 18:06:51,997 - UpTrans - INFO - [Training] EPOCH: 11 EpochTime = 889.721 (s) Losses = ['13.6527', '6.4753']
+2026-04-27 18:06:52,411 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-last.pth
+2026-04-27 18:06:53,101 - UpTrans - INFO - [Epoch 12/30][Batch 1/1810] BatchTime = 0.688 (s) DataTime = 0.176 (s) Losses = ['13.9216', '6.6721'] lr = 0.000094
+2026-04-27 18:07:41,593 - UpTrans - INFO - [Epoch 12/30][Batch 101/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['14.1060', '7.0028'] lr = 0.000094
+2026-04-27 18:08:30,991 - UpTrans - INFO - [Epoch 12/30][Batch 201/1810] BatchTime = 0.498 (s) DataTime = 0.002 (s) Losses = ['14.7470', '7.1536'] lr = 0.000094
+2026-04-27 18:09:20,299 - UpTrans - INFO - [Epoch 12/30][Batch 301/1810] BatchTime = 0.506 (s) DataTime = 0.002 (s) Losses = ['13.1287', '6.2431'] lr = 0.000094
+2026-04-27 18:10:08,916 - UpTrans - INFO - [Epoch 12/30][Batch 401/1810] BatchTime = 0.524 (s) DataTime = 0.002 (s) Losses = ['14.4307', '7.2702'] lr = 0.000094
+2026-04-27 18:10:58,091 - UpTrans - INFO - [Epoch 12/30][Batch 501/1810] BatchTime = 0.499 (s) DataTime = 0.003 (s) Losses = ['14.2224', '6.5653'] lr = 0.000094
+2026-04-27 18:11:47,790 - UpTrans - INFO - [Epoch 12/30][Batch 601/1810] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['12.8236', '6.2501'] lr = 0.000094
+2026-04-27 18:12:37,290 - UpTrans - INFO - [Epoch 12/30][Batch 701/1810] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['13.2330', '6.4702'] lr = 0.000094
+2026-04-27 18:13:26,190 - UpTrans - INFO - [Epoch 12/30][Batch 801/1810] BatchTime = 0.500 (s) DataTime = 0.004 (s) Losses = ['13.1620', '5.7307'] lr = 0.000094
+2026-04-27 18:14:15,992 - UpTrans - INFO - [Epoch 12/30][Batch 901/1810] BatchTime = 0.502 (s) DataTime = 0.002 (s) Losses = ['13.1149', '6.3137'] lr = 0.000094
+2026-04-27 18:15:05,293 - UpTrans - INFO - [Epoch 12/30][Batch 1001/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['12.8200', '6.1049'] lr = 0.000094
+2026-04-27 18:15:54,193 - UpTrans - INFO - [Epoch 12/30][Batch 1101/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['14.0586', '6.4584'] lr = 0.000094
+2026-04-27 18:16:43,893 - UpTrans - INFO - [Epoch 12/30][Batch 1201/1810] BatchTime = 0.502 (s) DataTime = 0.002 (s) Losses = ['13.0592', '6.2006'] lr = 0.000094
+2026-04-27 18:17:33,702 - UpTrans - INFO - [Epoch 12/30][Batch 1301/1810] BatchTime = 0.510 (s) DataTime = 0.002 (s) Losses = ['13.2147', '6.1410'] lr = 0.000094
+2026-04-27 18:18:22,793 - UpTrans - INFO - [Epoch 12/30][Batch 1401/1810] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['13.3990', '6.4586'] lr = 0.000094
+2026-04-27 18:19:11,893 - UpTrans - INFO - [Epoch 12/30][Batch 1501/1810] BatchTime = 0.502 (s) DataTime = 0.003 (s) Losses = ['14.8624', '7.0033'] lr = 0.000094
+2026-04-27 18:20:00,793 - UpTrans - INFO - [Epoch 12/30][Batch 1601/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['13.8953', '6.1160'] lr = 0.000094
+2026-04-27 18:20:50,693 - UpTrans - INFO - [Epoch 12/30][Batch 1701/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['12.2329', '5.5137'] lr = 0.000094
+2026-04-27 18:21:40,093 - UpTrans - INFO - [Epoch 12/30][Batch 1801/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['14.8491', '7.0988'] lr = 0.000094
+2026-04-27 18:21:44,483 - UpTrans - INFO - [Training] EPOCH: 12 EpochTime = 892.069 (s) Losses = ['13.6218', '6.4649']
+2026-04-27 18:21:44,839 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-last.pth
+2026-04-27 18:21:45,409 - UpTrans - INFO - [Epoch 13/30][Batch 1/1810] BatchTime = 0.568 (s) DataTime = 0.160 (s) Losses = ['13.8534', '6.8313'] lr = 0.000094
+2026-04-27 18:22:34,592 - UpTrans - INFO - [Epoch 13/30][Batch 101/1810] BatchTime = 0.489 (s) DataTime = 0.003 (s) Losses = ['13.6329', '6.6187'] lr = 0.000094
+2026-04-27 18:23:23,890 - UpTrans - INFO - [Epoch 13/30][Batch 201/1810] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['11.9370', '5.4144'] lr = 0.000094
+2026-04-27 18:24:13,690 - UpTrans - INFO - [Epoch 13/30][Batch 301/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['13.2312', '6.4215'] lr = 0.000094
+2026-04-27 18:25:02,493 - UpTrans - INFO - [Epoch 13/30][Batch 401/1810] BatchTime = 0.502 (s) DataTime = 0.003 (s) Losses = ['11.6801', '5.5091'] lr = 0.000094
+2026-04-27 18:25:51,890 - UpTrans - INFO - [Epoch 13/30][Batch 501/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['14.7463', '7.0935'] lr = 0.000094
+2026-04-27 18:26:41,390 - UpTrans - INFO - [Epoch 13/30][Batch 601/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['14.1128', '6.4194'] lr = 0.000094
+2026-04-27 18:27:31,190 - UpTrans - INFO - [Epoch 13/30][Batch 701/1810] BatchTime = 0.407 (s) DataTime = 0.002 (s) Losses = ['14.8247', '7.2005'] lr = 0.000094
+2026-04-27 18:28:20,091 - UpTrans - INFO - [Epoch 13/30][Batch 801/1810] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['13.6550', '6.4581'] lr = 0.000094
+2026-04-27 18:29:08,611 - UpTrans - INFO - [Epoch 13/30][Batch 901/1810] BatchTime = 0.395 (s) DataTime = 0.002 (s) Losses = ['12.8001', '6.1676'] lr = 0.000094
+2026-04-27 18:29:57,998 - UpTrans - INFO - [Epoch 13/30][Batch 1001/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['11.9085', '5.7575'] lr = 0.000094
+2026-04-27 18:30:46,604 - UpTrans - INFO - [Epoch 13/30][Batch 1101/1810] BatchTime = 0.411 (s) DataTime = 0.002 (s) Losses = ['14.2648', '6.7332'] lr = 0.000094
+2026-04-27 18:31:36,093 - UpTrans - INFO - [Epoch 13/30][Batch 1201/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['14.8451', '6.4688'] lr = 0.000094
+2026-04-27 18:32:25,293 - UpTrans - INFO - [Epoch 13/30][Batch 1301/1810] BatchTime = 0.505 (s) DataTime = 0.003 (s) Losses = ['16.2679', '6.4963'] lr = 0.000094
+2026-04-27 18:33:14,393 - UpTrans - INFO - [Epoch 13/30][Batch 1401/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['12.8999', '6.3338'] lr = 0.000094
+2026-04-27 18:34:03,991 - UpTrans - INFO - [Epoch 13/30][Batch 1501/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['15.1717', '7.4761'] lr = 0.000094
+2026-04-27 18:34:53,593 - UpTrans - INFO - [Epoch 13/30][Batch 1601/1810] BatchTime = 0.499 (s) DataTime = 0.003 (s) Losses = ['12.1885', '5.8157'] lr = 0.000094
+2026-04-27 18:35:42,693 - UpTrans - INFO - [Epoch 13/30][Batch 1701/1810] BatchTime = 0.499 (s) DataTime = 0.003 (s) Losses = ['12.9092', '6.1261'] lr = 0.000094
+2026-04-27 18:36:31,694 - UpTrans - INFO - [Epoch 13/30][Batch 1801/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['13.1100', '5.9599'] lr = 0.000094
+2026-04-27 18:36:36,178 - UpTrans - INFO - [Training] EPOCH: 13 EpochTime = 891.337 (s) Losses = ['13.6180', '6.4609']
+2026-04-27 18:36:36,420 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-last.pth
+2026-04-27 18:36:37,092 - UpTrans - INFO - [Epoch 14/30][Batch 1/1810] BatchTime = 0.672 (s) DataTime = 0.175 (s) Losses = ['15.0505', '7.1163'] lr = 0.000093
+2026-04-27 18:37:25,792 - UpTrans - INFO - [Epoch 14/30][Batch 101/1810] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['13.7439', '6.3163'] lr = 0.000093
+2026-04-27 18:38:14,193 - UpTrans - INFO - [Epoch 14/30][Batch 201/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['13.0416', '6.6130'] lr = 0.000093
+2026-04-27 18:39:03,403 - UpTrans - INFO - [Epoch 14/30][Batch 301/1810] BatchTime = 0.412 (s) DataTime = 0.002 (s) Losses = ['14.2549', '7.0691'] lr = 0.000093
+2026-04-27 18:39:52,796 - UpTrans - INFO - [Epoch 14/30][Batch 401/1810] BatchTime = 0.503 (s) DataTime = 0.003 (s) Losses = ['13.7057', '6.2765'] lr = 0.000093
+2026-04-27 18:40:42,192 - UpTrans - INFO - [Epoch 14/30][Batch 501/1810] BatchTime = 0.499 (s) DataTime = 0.003 (s) Losses = ['11.7988', '5.8626'] lr = 0.000093
+2026-04-27 18:41:31,391 - UpTrans - INFO - [Epoch 14/30][Batch 601/1810] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['12.4599', '5.7685'] lr = 0.000093
+2026-04-27 18:42:20,390 - UpTrans - INFO - [Epoch 14/30][Batch 701/1810] BatchTime = 0.499 (s) DataTime = 0.010 (s) Losses = ['13.4111', '6.0470'] lr = 0.000093
+2026-04-27 18:43:09,496 - UpTrans - INFO - [Epoch 14/30][Batch 801/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['12.5034', '5.8616'] lr = 0.000093
+2026-04-27 18:43:57,993 - UpTrans - INFO - [Epoch 14/30][Batch 901/1810] BatchTime = 0.503 (s) DataTime = 0.003 (s) Losses = ['12.3326', '5.7269'] lr = 0.000093
+2026-04-27 18:44:47,893 - UpTrans - INFO - [Epoch 14/30][Batch 1001/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['13.7437', '6.2073'] lr = 0.000093
+2026-04-27 18:45:36,393 - UpTrans - INFO - [Epoch 14/30][Batch 1101/1810] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['12.7159', '5.9056'] lr = 0.000093
+2026-04-27 18:46:25,490 - UpTrans - INFO - [Epoch 14/30][Batch 1201/1810] BatchTime = 0.498 (s) DataTime = 0.002 (s) Losses = ['16.1166', '7.8242'] lr = 0.000093
+2026-04-27 18:47:13,490 - UpTrans - INFO - [Epoch 14/30][Batch 1301/1810] BatchTime = 0.498 (s) DataTime = 0.002 (s) Losses = ['12.7220', '6.0061'] lr = 0.000093
+2026-04-27 18:48:02,093 - UpTrans - INFO - [Epoch 14/30][Batch 1401/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['14.9183', '6.6198'] lr = 0.000093
+2026-04-27 18:48:50,391 - UpTrans - INFO - [Epoch 14/30][Batch 1501/1810] BatchTime = 0.486 (s) DataTime = 0.002 (s) Losses = ['13.9945', '6.7208'] lr = 0.000093
+2026-04-27 18:49:39,090 - UpTrans - INFO - [Epoch 14/30][Batch 1601/1810] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['12.0290', '5.8685'] lr = 0.000093
+2026-04-27 18:50:28,990 - UpTrans - INFO - [Epoch 14/30][Batch 1701/1810] BatchTime = 0.498 (s) DataTime = 0.002 (s) Losses = ['13.7921', '6.2823'] lr = 0.000093
+2026-04-27 18:51:18,188 - UpTrans - INFO - [Epoch 14/30][Batch 1801/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['12.2753', '5.9814'] lr = 0.000093
+2026-04-27 18:51:22,586 - UpTrans - INFO - [Training] EPOCH: 14 EpochTime = 886.165 (s) Losses = ['13.6366', '6.4692']
+2026-04-27 18:51:22,971 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-last.pth
+2026-04-27 18:51:23,590 - UpTrans - INFO - [Epoch 15/30][Batch 1/1810] BatchTime = 0.618 (s) DataTime = 0.172 (s) Losses = ['16.1679', '7.2330'] lr = 0.000093
+2026-04-27 18:52:12,393 - UpTrans - INFO - [Epoch 15/30][Batch 101/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['14.6246', '6.8792'] lr = 0.000093
+2026-04-27 18:53:01,893 - UpTrans - INFO - [Epoch 15/30][Batch 201/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['14.8122', '7.2077'] lr = 0.000093
+2026-04-27 18:53:50,591 - UpTrans - INFO - [Epoch 15/30][Batch 301/1810] BatchTime = 0.492 (s) DataTime = 0.002 (s) Losses = ['11.4521', '5.1967'] lr = 0.000093
+2026-04-27 18:54:39,493 - UpTrans - INFO - [Epoch 15/30][Batch 401/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['14.2035', '6.6334'] lr = 0.000093
+2026-04-27 18:55:28,601 - UpTrans - INFO - [Epoch 15/30][Batch 501/1810] BatchTime = 0.411 (s) DataTime = 0.002 (s) Losses = ['13.3723', '6.2193'] lr = 0.000093
+2026-04-27 18:56:17,990 - UpTrans - INFO - [Epoch 15/30][Batch 601/1810] BatchTime = 0.486 (s) DataTime = 0.003 (s) Losses = ['12.6329', '6.0654'] lr = 0.000093
+2026-04-27 18:57:07,590 - UpTrans - INFO - [Epoch 15/30][Batch 701/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['11.9505', '5.7376'] lr = 0.000093
+2026-04-27 18:57:56,801 - UpTrans - INFO - [Epoch 15/30][Batch 801/1810] BatchTime = 0.401 (s) DataTime = 0.004 (s) Losses = ['13.3433', '6.1828'] lr = 0.000093
+2026-04-27 18:58:45,788 - UpTrans - INFO - [Epoch 15/30][Batch 901/1810] BatchTime = 0.498 (s) DataTime = 0.003 (s) Losses = ['14.5840', '6.7701'] lr = 0.000093
+2026-04-27 18:59:34,702 - UpTrans - INFO - [Epoch 15/30][Batch 1001/1810] BatchTime = 0.409 (s) DataTime = 0.002 (s) Losses = ['11.9862', '5.6815'] lr = 0.000093
+2026-04-27 19:00:23,995 - UpTrans - INFO - [Epoch 15/30][Batch 1101/1810] BatchTime = 0.507 (s) DataTime = 0.002 (s) Losses = ['12.3540', '5.6791'] lr = 0.000093
+2026-04-27 19:01:11,791 - UpTrans - INFO - [Epoch 15/30][Batch 1201/1810] BatchTime = 0.498 (s) DataTime = 0.002 (s) Losses = ['12.9485', '6.1083'] lr = 0.000093
+2026-04-27 19:01:59,692 - UpTrans - INFO - [Epoch 15/30][Batch 1301/1810] BatchTime = 0.497 (s) DataTime = 0.003 (s) Losses = ['12.2517', '6.0818'] lr = 0.000093
+2026-04-27 19:02:48,293 - UpTrans - INFO - [Epoch 15/30][Batch 1401/1810] BatchTime = 0.498 (s) DataTime = 0.002 (s) Losses = ['13.1337', '6.4773'] lr = 0.000093
+2026-04-27 19:03:36,409 - UpTrans - INFO - [Epoch 15/30][Batch 1501/1810] BatchTime = 0.408 (s) DataTime = 0.002 (s) Losses = ['15.3685', '7.1486'] lr = 0.000093
+2026-04-27 19:04:24,490 - UpTrans - INFO - [Epoch 15/30][Batch 1601/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['13.9368', '6.9411'] lr = 0.000093
+2026-04-27 19:05:13,793 - UpTrans - INFO - [Epoch 15/30][Batch 1701/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['14.4841', '7.0735'] lr = 0.000093
+2026-04-27 19:06:02,391 - UpTrans - INFO - [Epoch 15/30][Batch 1801/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['12.5569', '5.5673'] lr = 0.000093
+2026-04-27 19:06:06,714 - UpTrans - INFO - [Training] EPOCH: 15 EpochTime = 883.742 (s) Losses = ['13.6411', '6.4695']
+2026-04-27 19:06:06,714 - UpTrans - INFO - [VALIDATION] Start validating epoch 15
+2026-04-27 19:06:12,716 - UpTrans - INFO - Test[120/1200] Taxonomy = 02691156 Sample = d18f2aeae4146464bd46d022fd7d80aa Losses = ['5.7970', '0.1101', '2.7113', '0.0209'] Metrics = ['0.9924', '2.7113', '0.0209', '0.0000']
+2026-04-27 19:06:18,633 - UpTrans - INFO - Test[240/1200] Taxonomy = 02933112 Sample = 8f55954a0b07a4b2bf64ff63662d244b Losses = ['14.7362', '0.8083', '6.5818', '0.2239'] Metrics = ['0.8775', '6.5818', '0.2239', '0.0000']
+2026-04-27 19:06:24,517 - UpTrans - INFO - Test[360/1200] Taxonomy = 02958343 Sample = 5f148a8b824ed7e72a9eb0f146e94477 Losses = ['15.3913', '0.8399', '8.3943', '0.2417'] Metrics = ['0.7381', '8.3943', '0.2417', '0.0000']
+2026-04-27 19:06:30,402 - UpTrans - INFO - Test[480/1200] Taxonomy = 03001627 Sample = 4344509d0442364d3f9d6e0ade5188b0 Losses = ['12.7566', '0.5829', '5.9201', '0.1278'] Metrics = ['0.8667', '5.9201', '0.1278', '0.0000']
+2026-04-27 19:06:36,273 - UpTrans - INFO - Test[600/1200] Taxonomy = 03001627 Sample = ff5a945aef7a68ffcf9ff3ee543c2925 Losses = ['18.2300', '1.2723', '9.2212', '0.3528'] Metrics = ['0.6753', '9.2212', '0.3528', '0.0000']
+2026-04-27 19:06:42,133 - UpTrans - INFO - Test[720/1200] Taxonomy = 03636649 Sample = d91cf049fa961ccb59f8e31ca87c470e Losses = ['12.9712', '0.7875', '4.7748', '0.1292'] Metrics = ['0.9163', '4.7748', '0.1292', '0.0000']
+2026-04-27 19:06:47,982 - UpTrans - INFO - Test[840/1200] Taxonomy = 04256520 Sample = 9c0ed8415a0a9e5c49b1e464b71de577 Losses = ['17.4946', '1.0607', '8.8241', '0.3321'] Metrics = ['0.6978', '8.8241', '0.3321', '0.0000']
+2026-04-27 19:06:53,837 - UpTrans - INFO - Test[960/1200] Taxonomy = 04379243 Sample = 668deaeb91295739664b3b9b23ddfcbc Losses = ['10.6365', '0.3631', '4.6040', '0.1067'] Metrics = ['0.9639', '4.6040', '0.1067', '0.0000']
+2026-04-27 19:06:59,691 - UpTrans - INFO - Test[1080/1200] Taxonomy = 04530566 Sample = 370ab590d5f9f6e12998de2923cbf8ed Losses = ['13.0912', '0.5649', '6.3275', '0.1300'] Metrics = ['0.8368', '6.3275', '0.1300', '0.0000']
+2026-04-27 19:07:05,564 - UpTrans - INFO - Test[1200/1200] Taxonomy = 04530566 Sample = fd52c80ae21d19251e0d0f6bac6856eb Losses = ['12.2648', '0.4991', '4.7666', '0.0724'] Metrics = ['0.9572', '4.7666', '0.0724', '0.0000']
+2026-04-27 19:07:05,670 - UpTrans - INFO - [Validation] EPOCH: 15  Metrics = ['0.8286', '6.5929', '0.2010', '0.0000']
+2026-04-27 19:07:05,671 - UpTrans - INFO - ============================ TEST RESULTS ============================
+2026-04-27 19:07:05,671 - UpTrans - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2026-04-27 19:07:05,671 - UpTrans - INFO - 02691156	150	0.954 	3.859 	0.079 	0.000 	airplane	
+2026-04-27 19:07:05,671 - UpTrans - INFO - 02933112	150	0.724 	8.851 	0.316 	0.000 	cabinet	
+2026-04-27 19:07:05,671 - UpTrans - INFO - 02958343	150	0.768 	7.707 	0.197 	0.000 	car	
+2026-04-27 19:07:05,671 - UpTrans - INFO - 03001627	150	0.817 	6.892 	0.203 	0.000 	chair	
+2026-04-27 19:07:05,671 - UpTrans - INFO - 03636649	150	0.884 	5.275 	0.154 	0.000 	lamp	
+2026-04-27 19:07:05,671 - UpTrans - INFO - 04256520	150	0.735 	8.477 	0.354 	0.000 	sofa	
+2026-04-27 19:07:05,671 - UpTrans - INFO - 04379243	150	0.889 	5.952 	0.168 	0.000 	table	
+2026-04-27 19:07:05,671 - UpTrans - INFO - 04530566	150	0.857 	5.731 	0.137 	0.000 	watercraft	
+2026-04-27 19:07:05,671 - UpTrans - INFO - Overall		0.829 	6.593 	0.201 	0.000 	
+2026-04-27 19:07:06,078 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-best.pth
+2026-04-27 19:07:06,449 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-last.pth
+2026-04-27 19:07:07,097 - UpTrans - INFO - [Epoch 16/30][Batch 1/1810] BatchTime = 0.646 (s) DataTime = 0.181 (s) Losses = ['14.1876', '6.4800'] lr = 0.000092
+2026-04-27 19:07:56,790 - UpTrans - INFO - [Epoch 16/30][Batch 101/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['13.3980', '6.0608'] lr = 0.000092
+2026-04-27 19:08:46,093 - UpTrans - INFO - [Epoch 16/30][Batch 201/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['14.1523', '7.0901'] lr = 0.000092
+2026-04-27 19:09:35,691 - UpTrans - INFO - [Epoch 16/30][Batch 301/1810] BatchTime = 0.497 (s) DataTime = 0.003 (s) Losses = ['13.9409', '6.8455'] lr = 0.000092
+2026-04-27 19:10:25,393 - UpTrans - INFO - [Epoch 16/30][Batch 401/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['10.2990', '4.8412'] lr = 0.000092
+2026-04-27 19:11:14,793 - UpTrans - INFO - [Epoch 16/30][Batch 501/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['14.0873', '6.6568'] lr = 0.000092
+2026-04-27 19:12:03,691 - UpTrans - INFO - [Epoch 16/30][Batch 601/1810] BatchTime = 0.409 (s) DataTime = 0.004 (s) Losses = ['13.0133', '6.0898'] lr = 0.000092
+2026-04-27 19:12:52,293 - UpTrans - INFO - [Epoch 16/30][Batch 701/1810] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['14.4779', '6.5931'] lr = 0.000092
+2026-04-27 19:13:41,492 - UpTrans - INFO - [Epoch 16/30][Batch 801/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['13.7854', '6.5355'] lr = 0.000092
+2026-04-27 19:14:31,090 - UpTrans - INFO - [Epoch 16/30][Batch 901/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['11.9755', '5.7645'] lr = 0.000092
+2026-04-27 19:15:20,693 - UpTrans - INFO - [Epoch 16/30][Batch 1001/1810] BatchTime = 0.502 (s) DataTime = 0.002 (s) Losses = ['12.4487', '6.0900'] lr = 0.000092
+2026-04-27 19:16:10,390 - UpTrans - INFO - [Epoch 16/30][Batch 1101/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['11.5435', '4.8441'] lr = 0.000092
+2026-04-27 19:16:59,987 - UpTrans - INFO - [Epoch 16/30][Batch 1201/1810] BatchTime = 0.498 (s) DataTime = 0.002 (s) Losses = ['14.3010', '6.9211'] lr = 0.000092
+2026-04-27 19:17:49,693 - UpTrans - INFO - [Epoch 16/30][Batch 1301/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['13.7026', '6.6977'] lr = 0.000092
+2026-04-27 19:18:38,793 - UpTrans - INFO - [Epoch 16/30][Batch 1401/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['13.9477', '5.9716'] lr = 0.000092
+2026-04-27 19:19:27,992 - UpTrans - INFO - [Epoch 16/30][Batch 1501/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['12.4758', '5.7239'] lr = 0.000092
+2026-04-27 19:20:17,393 - UpTrans - INFO - [Epoch 16/30][Batch 1601/1810] BatchTime = 0.502 (s) DataTime = 0.002 (s) Losses = ['12.2275', '6.0522'] lr = 0.000092
+2026-04-27 19:21:06,790 - UpTrans - INFO - [Epoch 16/30][Batch 1701/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['14.3562', '6.8108'] lr = 0.000092
+2026-04-27 19:21:55,993 - UpTrans - INFO - [Epoch 16/30][Batch 1801/1810] BatchTime = 0.502 (s) DataTime = 0.003 (s) Losses = ['13.4382', '6.5933'] lr = 0.000092
+2026-04-27 19:22:00,606 - UpTrans - INFO - [Training] EPOCH: 16 EpochTime = 894.155 (s) Losses = ['13.6155', '6.4507']
+2026-04-27 19:22:00,994 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-last.pth
+2026-04-27 19:22:01,692 - UpTrans - INFO - [Epoch 17/30][Batch 1/1810] BatchTime = 0.697 (s) DataTime = 0.167 (s) Losses = ['13.7676', '6.6296'] lr = 0.000092
+2026-04-27 19:22:50,601 - UpTrans - INFO - [Epoch 17/30][Batch 101/1810] BatchTime = 0.409 (s) DataTime = 0.002 (s) Losses = ['14.5436', '6.1307'] lr = 0.000092
+2026-04-27 19:23:39,791 - UpTrans - INFO - [Epoch 17/30][Batch 201/1810] BatchTime = 0.498 (s) DataTime = 0.002 (s) Losses = ['13.8430', '6.3133'] lr = 0.000092
+2026-04-27 19:24:29,790 - UpTrans - INFO - [Epoch 17/30][Batch 301/1810] BatchTime = 0.497 (s) DataTime = 0.003 (s) Losses = ['14.3934', '7.1641'] lr = 0.000092
+2026-04-27 19:25:19,189 - UpTrans - INFO - [Epoch 17/30][Batch 401/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['14.4819', '7.0863'] lr = 0.000092
+2026-04-27 19:26:08,590 - UpTrans - INFO - [Epoch 17/30][Batch 501/1810] BatchTime = 0.501 (s) DataTime = 0.003 (s) Losses = ['12.0781', '5.7597'] lr = 0.000092
+2026-04-27 19:26:58,290 - UpTrans - INFO - [Epoch 17/30][Batch 601/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['14.9511', '6.7777'] lr = 0.000092
+2026-04-27 19:27:48,093 - UpTrans - INFO - [Epoch 17/30][Batch 701/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['14.5640', '6.7503'] lr = 0.000092
+2026-04-27 19:28:37,596 - UpTrans - INFO - [Epoch 17/30][Batch 801/1810] BatchTime = 0.506 (s) DataTime = 0.002 (s) Losses = ['13.5614', '6.5715'] lr = 0.000092
+2026-04-27 19:29:27,191 - UpTrans - INFO - [Epoch 17/30][Batch 901/1810] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['14.1669', '6.8984'] lr = 0.000092
+2026-04-27 19:30:16,990 - UpTrans - INFO - [Epoch 17/30][Batch 1001/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['12.9738', '6.4884'] lr = 0.000092
+2026-04-27 19:31:06,892 - UpTrans - INFO - [Epoch 17/30][Batch 1101/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['14.1114', '6.5827'] lr = 0.000092
+2026-04-27 19:31:56,390 - UpTrans - INFO - [Epoch 17/30][Batch 1201/1810] BatchTime = 0.495 (s) DataTime = 0.002 (s) Losses = ['14.7703', '7.1230'] lr = 0.000092
+2026-04-27 19:32:45,492 - UpTrans - INFO - [Epoch 17/30][Batch 1301/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['13.8641', '6.6082'] lr = 0.000092
+2026-04-27 19:33:34,291 - UpTrans - INFO - [Epoch 17/30][Batch 1401/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['12.5338', '6.1794'] lr = 0.000092
+2026-04-27 19:34:23,194 - UpTrans - INFO - [Epoch 17/30][Batch 1501/1810] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['13.6178', '5.9839'] lr = 0.000092
+2026-04-27 19:35:13,191 - UpTrans - INFO - [Epoch 17/30][Batch 1601/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['15.0212', '7.5725'] lr = 0.000092
+2026-04-27 19:36:02,590 - UpTrans - INFO - [Epoch 17/30][Batch 1701/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['12.9340', '6.3624'] lr = 0.000092
+2026-04-27 19:36:52,492 - UpTrans - INFO - [Epoch 17/30][Batch 1801/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['14.0199', '6.4248'] lr = 0.000092
+2026-04-27 19:36:57,088 - UpTrans - INFO - [Training] EPOCH: 17 EpochTime = 896.093 (s) Losses = ['13.6413', '6.4780']
+2026-04-27 19:36:57,460 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-last.pth
+2026-04-27 19:36:58,093 - UpTrans - INFO - [Epoch 18/30][Batch 1/1810] BatchTime = 0.633 (s) DataTime = 0.151 (s) Losses = ['13.6477', '6.1856'] lr = 0.000091
+2026-04-27 19:37:47,615 - UpTrans - INFO - [Epoch 18/30][Batch 101/1810] BatchTime = 0.425 (s) DataTime = 0.002 (s) Losses = ['13.0610', '6.0654'] lr = 0.000091
+2026-04-27 19:38:36,792 - UpTrans - INFO - [Epoch 18/30][Batch 201/1810] BatchTime = 0.502 (s) DataTime = 0.002 (s) Losses = ['14.0472', '6.6966'] lr = 0.000091
+2026-04-27 19:39:26,490 - UpTrans - INFO - [Epoch 18/30][Batch 301/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['12.4475', '5.8722'] lr = 0.000091
+2026-04-27 19:40:16,289 - UpTrans - INFO - [Epoch 18/30][Batch 401/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['13.7772', '6.7825'] lr = 0.000091
+2026-04-27 19:41:06,289 - UpTrans - INFO - [Epoch 18/30][Batch 501/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['11.2197', '5.1865'] lr = 0.000091
+2026-04-27 19:41:55,690 - UpTrans - INFO - [Epoch 18/30][Batch 601/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['13.6184', '6.0423'] lr = 0.000091
+2026-04-27 19:42:44,890 - UpTrans - INFO - [Epoch 18/30][Batch 701/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['13.3148', '6.7174'] lr = 0.000091
+2026-04-27 19:43:33,094 - UpTrans - INFO - [Epoch 18/30][Batch 801/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['16.3784', '7.6448'] lr = 0.000091
+2026-04-27 19:44:21,293 - UpTrans - INFO - [Epoch 18/30][Batch 901/1810] BatchTime = 0.506 (s) DataTime = 0.003 (s) Losses = ['13.1120', '6.1386'] lr = 0.000091
+2026-04-27 19:45:10,791 - UpTrans - INFO - [Epoch 18/30][Batch 1001/1810] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['12.9774', '6.1249'] lr = 0.000091
+2026-04-27 19:46:00,590 - UpTrans - INFO - [Epoch 18/30][Batch 1101/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['13.0008', '5.5785'] lr = 0.000091
+2026-04-27 19:46:50,490 - UpTrans - INFO - [Epoch 18/30][Batch 1201/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['14.0474', '6.1646'] lr = 0.000091
+2026-04-27 19:47:40,390 - UpTrans - INFO - [Epoch 18/30][Batch 1301/1810] BatchTime = 0.498 (s) DataTime = 0.002 (s) Losses = ['14.6577', '6.0428'] lr = 0.000091
+2026-04-27 19:48:29,790 - UpTrans - INFO - [Epoch 18/30][Batch 1401/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['12.8055', '5.8729'] lr = 0.000091
+2026-04-27 19:49:17,294 - UpTrans - INFO - [Epoch 18/30][Batch 1501/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['12.1239', '5.6267'] lr = 0.000091
+2026-04-27 19:50:06,690 - UpTrans - INFO - [Epoch 18/30][Batch 1601/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['10.7912', '5.3306'] lr = 0.000091
+2026-04-27 19:50:56,292 - UpTrans - INFO - [Epoch 18/30][Batch 1701/1810] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['14.9536', '7.4881'] lr = 0.000091
+2026-04-27 19:51:45,993 - UpTrans - INFO - [Epoch 18/30][Batch 1801/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['15.5578', '7.9713'] lr = 0.000091
+2026-04-27 19:51:50,606 - UpTrans - INFO - [Training] EPOCH: 18 EpochTime = 893.146 (s) Losses = ['13.6291', '6.4633']
+2026-04-27 19:51:50,962 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-last.pth
+2026-04-27 19:51:51,600 - UpTrans - INFO - [Epoch 19/30][Batch 1/1810] BatchTime = 0.636 (s) DataTime = 0.164 (s) Losses = ['13.8509', '5.9690'] lr = 0.000091
+2026-04-27 19:52:41,104 - UpTrans - INFO - [Epoch 19/30][Batch 101/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['13.4621', '6.6598'] lr = 0.000091
+2026-04-27 19:53:28,690 - UpTrans - INFO - [Epoch 19/30][Batch 201/1810] BatchTime = 0.499 (s) DataTime = 0.003 (s) Losses = ['14.2701', '6.8312'] lr = 0.000091
+2026-04-27 19:54:16,990 - UpTrans - INFO - [Epoch 19/30][Batch 301/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['11.6951', '5.6653'] lr = 0.000091
+2026-04-27 19:55:06,590 - UpTrans - INFO - [Epoch 19/30][Batch 401/1810] BatchTime = 0.498 (s) DataTime = 0.002 (s) Losses = ['12.8674', '6.4416'] lr = 0.000091
+2026-04-27 19:55:55,194 - UpTrans - INFO - [Epoch 19/30][Batch 501/1810] BatchTime = 0.396 (s) DataTime = 0.002 (s) Losses = ['12.5300', '5.9203'] lr = 0.000091
+2026-04-27 19:56:41,993 - UpTrans - INFO - [Epoch 19/30][Batch 601/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['14.0579', '6.4976'] lr = 0.000091
+2026-04-27 19:57:30,591 - UpTrans - INFO - [Epoch 19/30][Batch 701/1810] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['13.2446', '6.4107'] lr = 0.000091
+2026-04-27 19:58:20,392 - UpTrans - INFO - [Epoch 19/30][Batch 801/1810] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['12.8086', '5.8307'] lr = 0.000091
+2026-04-27 19:59:09,291 - UpTrans - INFO - [Epoch 19/30][Batch 901/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['14.4209', '7.2055'] lr = 0.000091
+2026-04-27 19:59:55,606 - UpTrans - INFO - [Epoch 19/30][Batch 1001/1810] BatchTime = 0.414 (s) DataTime = 0.002 (s) Losses = ['13.9849', '7.0268'] lr = 0.000091
+2026-04-27 20:00:42,905 - UpTrans - INFO - [Epoch 19/30][Batch 1101/1810] BatchTime = 0.413 (s) DataTime = 0.002 (s) Losses = ['12.5661', '5.8437'] lr = 0.000091
+2026-04-27 20:01:29,390 - UpTrans - INFO - [Epoch 19/30][Batch 1201/1810] BatchTime = 0.480 (s) DataTime = 0.003 (s) Losses = ['12.7744', '6.5658'] lr = 0.000091
+2026-04-27 20:02:16,193 - UpTrans - INFO - [Epoch 19/30][Batch 1301/1810] BatchTime = 0.400 (s) DataTime = 0.003 (s) Losses = ['12.4393', '6.0736'] lr = 0.000091
+2026-04-27 20:03:02,985 - UpTrans - INFO - [Epoch 19/30][Batch 1401/1810] BatchTime = 0.495 (s) DataTime = 0.002 (s) Losses = ['14.1449', '6.2876'] lr = 0.000091
+2026-04-27 20:03:50,291 - UpTrans - INFO - [Epoch 19/30][Batch 1501/1810] BatchTime = 0.498 (s) DataTime = 0.003 (s) Losses = ['13.5104', '6.1731'] lr = 0.000091
+2026-04-27 20:04:38,393 - UpTrans - INFO - [Epoch 19/30][Batch 1601/1810] BatchTime = 0.499 (s) DataTime = 0.003 (s) Losses = ['14.4802', '7.1458'] lr = 0.000091
+2026-04-27 20:05:26,195 - UpTrans - INFO - [Epoch 19/30][Batch 1701/1810] BatchTime = 0.505 (s) DataTime = 0.002 (s) Losses = ['13.5862', '6.3692'] lr = 0.000091
+2026-04-27 20:06:14,392 - UpTrans - INFO - [Epoch 19/30][Batch 1801/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['13.0945', '6.3951'] lr = 0.000091
+2026-04-27 20:06:18,711 - UpTrans - INFO - [Training] EPOCH: 19 EpochTime = 867.748 (s) Losses = ['13.6363', '6.4740']
+2026-04-27 20:06:19,113 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-last.pth
+2026-04-27 20:06:19,793 - UpTrans - INFO - [Epoch 20/30][Batch 1/1810] BatchTime = 0.679 (s) DataTime = 0.197 (s) Losses = ['13.5056', '6.1518'] lr = 0.000090
+2026-04-27 20:07:07,193 - UpTrans - INFO - [Epoch 20/30][Batch 101/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['11.2561', '5.5219'] lr = 0.000090
+2026-04-27 20:07:54,793 - UpTrans - INFO - [Epoch 20/30][Batch 201/1810] BatchTime = 0.398 (s) DataTime = 0.002 (s) Losses = ['12.5408', '6.0894'] lr = 0.000090
+2026-04-27 20:08:41,101 - UpTrans - INFO - [Epoch 20/30][Batch 301/1810] BatchTime = 0.410 (s) DataTime = 0.003 (s) Losses = ['13.4618', '6.2414'] lr = 0.000090
+2026-04-27 20:09:28,193 - UpTrans - INFO - [Epoch 20/30][Batch 401/1810] BatchTime = 0.497 (s) DataTime = 0.003 (s) Losses = ['14.2397', '6.8106'] lr = 0.000090
+2026-04-27 20:10:14,693 - UpTrans - INFO - [Epoch 20/30][Batch 501/1810] BatchTime = 0.502 (s) DataTime = 0.003 (s) Losses = ['13.6843', '6.5473'] lr = 0.000090
+2026-04-27 20:11:03,092 - UpTrans - INFO - [Epoch 20/30][Batch 601/1810] BatchTime = 0.498 (s) DataTime = 0.005 (s) Losses = ['13.4435', '6.3786'] lr = 0.000090
+2026-04-27 20:11:51,291 - UpTrans - INFO - [Epoch 20/30][Batch 701/1810] BatchTime = 0.499 (s) DataTime = 0.003 (s) Losses = ['15.3864', '7.3080'] lr = 0.000090
+2026-04-27 20:12:40,893 - UpTrans - INFO - [Epoch 20/30][Batch 801/1810] BatchTime = 0.502 (s) DataTime = 0.003 (s) Losses = ['14.3024', '6.6271'] lr = 0.000090
+2026-04-27 20:13:30,792 - UpTrans - INFO - [Epoch 20/30][Batch 901/1810] BatchTime = 0.499 (s) DataTime = 0.004 (s) Losses = ['16.2506', '7.6275'] lr = 0.000090
+2026-04-27 20:14:20,394 - UpTrans - INFO - [Epoch 20/30][Batch 1001/1810] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['11.9986', '6.3214'] lr = 0.000090
+2026-04-27 20:15:10,092 - UpTrans - INFO - [Epoch 20/30][Batch 1101/1810] BatchTime = 0.498 (s) DataTime = 0.003 (s) Losses = ['17.1124', '7.9706'] lr = 0.000090
+2026-04-27 20:15:59,691 - UpTrans - INFO - [Epoch 20/30][Batch 1201/1810] BatchTime = 0.498 (s) DataTime = 0.003 (s) Losses = ['14.5004', '7.1680'] lr = 0.000090
+2026-04-27 20:16:49,192 - UpTrans - INFO - [Epoch 20/30][Batch 1301/1810] BatchTime = 0.501 (s) DataTime = 0.003 (s) Losses = ['13.7167', '6.2213'] lr = 0.000090
+2026-04-27 20:17:38,890 - UpTrans - INFO - [Epoch 20/30][Batch 1401/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['13.4174', '6.3248'] lr = 0.000090
+2026-04-27 20:18:28,390 - UpTrans - INFO - [Epoch 20/30][Batch 1501/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['16.4511', '7.6203'] lr = 0.000090
+2026-04-27 20:19:17,991 - UpTrans - INFO - [Epoch 20/30][Batch 1601/1810] BatchTime = 0.499 (s) DataTime = 0.003 (s) Losses = ['12.8043', '6.3116'] lr = 0.000090
+2026-04-27 20:20:07,709 - UpTrans - INFO - [Epoch 20/30][Batch 1701/1810] BatchTime = 0.418 (s) DataTime = 0.002 (s) Losses = ['14.7329', '7.1339'] lr = 0.000090
+2026-04-27 20:20:57,391 - UpTrans - INFO - [Epoch 20/30][Batch 1801/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['14.5311', '7.1309'] lr = 0.000090
+2026-04-27 20:21:02,007 - UpTrans - INFO - [Training] EPOCH: 20 EpochTime = 882.893 (s) Losses = ['13.6204', '6.4502']
+2026-04-27 20:21:02,008 - UpTrans - INFO - [VALIDATION] Start validating epoch 20
+2026-04-27 20:21:08,088 - UpTrans - INFO - Test[120/1200] Taxonomy = 02691156 Sample = d18f2aeae4146464bd46d022fd7d80aa Losses = ['6.0532', '0.1214', '2.7329', '0.0222'] Metrics = ['0.9903', '2.7329', '0.0222', '0.0000']
+2026-04-27 20:21:14,027 - UpTrans - INFO - Test[240/1200] Taxonomy = 02933112 Sample = 8f55954a0b07a4b2bf64ff63662d244b Losses = ['14.8990', '0.8448', '6.9648', '0.2756'] Metrics = ['0.8651', '6.9648', '0.2756', '0.0000']
+2026-04-27 20:21:19,966 - UpTrans - INFO - Test[360/1200] Taxonomy = 02958343 Sample = 5f148a8b824ed7e72a9eb0f146e94477 Losses = ['15.0697', '0.7963', '8.1687', '0.2253'] Metrics = ['0.7427', '8.1687', '0.2253', '0.0000']
+2026-04-27 20:21:25,840 - UpTrans - INFO - Test[480/1200] Taxonomy = 03001627 Sample = 4344509d0442364d3f9d6e0ade5188b0 Losses = ['13.2001', '0.6231', '5.9675', '0.1341'] Metrics = ['0.8604', '5.9675', '0.1341', '0.0000']
+2026-04-27 20:21:31,725 - UpTrans - INFO - Test[600/1200] Taxonomy = 03001627 Sample = ff5a945aef7a68ffcf9ff3ee543c2925 Losses = ['18.4106', '1.3301', '9.3188', '0.3789'] Metrics = ['0.6847', '9.3188', '0.3789', '0.0000']
+2026-04-27 20:21:37,591 - UpTrans - INFO - Test[720/1200] Taxonomy = 03636649 Sample = d91cf049fa961ccb59f8e31ca87c470e Losses = ['12.7409', '0.7488', '4.7910', '0.1282'] Metrics = ['0.9205', '4.7910', '0.1282', '0.0000']
+2026-04-27 20:21:43,492 - UpTrans - INFO - Test[840/1200] Taxonomy = 04256520 Sample = 9c0ed8415a0a9e5c49b1e464b71de577 Losses = ['16.6056', '0.9223', '8.0535', '0.2259'] Metrics = ['0.7359', '8.0535', '0.2259', '0.0000']
+2026-04-27 20:21:49,389 - UpTrans - INFO - Test[960/1200] Taxonomy = 04379243 Sample = 668deaeb91295739664b3b9b23ddfcbc Losses = ['10.3431', '0.3539', '4.6935', '0.1238'] Metrics = ['0.9632', '4.6935', '0.1238', '0.0000']
+2026-04-27 20:21:55,281 - UpTrans - INFO - Test[1080/1200] Taxonomy = 04530566 Sample = 370ab590d5f9f6e12998de2923cbf8ed Losses = ['12.9885', '0.5726', '6.1630', '0.1171'] Metrics = ['0.8442', '6.1630', '0.1171', '0.0000']
+2026-04-27 20:22:01,184 - UpTrans - INFO - Test[1200/1200] Taxonomy = 04530566 Sample = fd52c80ae21d19251e0d0f6bac6856eb Losses = ['12.6392', '0.5353', '5.3415', '0.0966'] Metrics = ['0.9272', '5.3415', '0.0966', '0.0000']
+2026-04-27 20:22:01,271 - UpTrans - INFO - [Validation] EPOCH: 20  Metrics = ['0.8265', '6.5968', '0.1992', '0.0000']
+2026-04-27 20:22:01,272 - UpTrans - INFO - ============================ TEST RESULTS ============================
+2026-04-27 20:22:01,272 - UpTrans - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2026-04-27 20:22:01,272 - UpTrans - INFO - 02691156	150	0.952 	3.829 	0.073 	0.000 	airplane	
+2026-04-27 20:22:01,272 - UpTrans - INFO - 02933112	150	0.722 	8.862 	0.315 	0.000 	cabinet	
+2026-04-27 20:22:01,272 - UpTrans - INFO - 02958343	150	0.768 	7.685 	0.198 	0.000 	car	
+2026-04-27 20:22:01,272 - UpTrans - INFO - 03001627	150	0.813 	6.947 	0.204 	0.000 	chair	
+2026-04-27 20:22:01,272 - UpTrans - INFO - 03636649	150	0.884 	5.264 	0.150 	0.000 	lamp	
+2026-04-27 20:22:01,272 - UpTrans - INFO - 04256520	150	0.734 	8.524 	0.354 	0.000 	sofa	
+2026-04-27 20:22:01,272 - UpTrans - INFO - 04379243	150	0.887 	5.946 	0.165 	0.000 	table	
+2026-04-27 20:22:01,272 - UpTrans - INFO - 04530566	150	0.853 	5.716 	0.134 	0.000 	watercraft	
+2026-04-27 20:22:01,272 - UpTrans - INFO - Overall		0.826 	6.597 	0.199 	0.000 	
+2026-04-27 20:22:01,619 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-last.pth
+2026-04-27 20:22:02,293 - UpTrans - INFO - [Epoch 21/30][Batch 1/1810] BatchTime = 0.673 (s) DataTime = 0.171 (s) Losses = ['12.7667', '6.2045'] lr = 0.000090
+2026-04-27 20:22:51,491 - UpTrans - INFO - [Epoch 21/30][Batch 101/1810] BatchTime = 0.498 (s) DataTime = 0.003 (s) Losses = ['15.7385', '7.0783'] lr = 0.000090
+2026-04-27 20:23:41,390 - UpTrans - INFO - [Epoch 21/30][Batch 201/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['12.4177', '6.0897'] lr = 0.000090
+2026-04-27 20:24:31,295 - UpTrans - INFO - [Epoch 21/30][Batch 301/1810] BatchTime = 0.498 (s) DataTime = 0.002 (s) Losses = ['12.8279', '5.6782'] lr = 0.000090
+2026-04-27 20:25:20,991 - UpTrans - INFO - [Epoch 21/30][Batch 401/1810] BatchTime = 0.493 (s) DataTime = 0.003 (s) Losses = ['13.4891', '6.1442'] lr = 0.000090
+2026-04-27 20:26:10,899 - UpTrans - INFO - [Epoch 21/30][Batch 501/1810] BatchTime = 0.506 (s) DataTime = 0.003 (s) Losses = ['13.6254', '6.5145'] lr = 0.000090
+2026-04-27 20:27:00,392 - UpTrans - INFO - [Epoch 21/30][Batch 601/1810] BatchTime = 0.504 (s) DataTime = 0.003 (s) Losses = ['14.9346', '6.9504'] lr = 0.000090
+2026-04-27 20:27:49,893 - UpTrans - INFO - [Epoch 21/30][Batch 701/1810] BatchTime = 0.497 (s) DataTime = 0.004 (s) Losses = ['13.2996', '6.5948'] lr = 0.000090
+2026-04-27 20:28:39,592 - UpTrans - INFO - [Epoch 21/30][Batch 801/1810] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['13.8224', '6.6181'] lr = 0.000090
+2026-04-27 20:29:29,291 - UpTrans - INFO - [Epoch 21/30][Batch 901/1810] BatchTime = 0.501 (s) DataTime = 0.003 (s) Losses = ['12.6652', '5.4664'] lr = 0.000090
+2026-04-27 20:30:19,190 - UpTrans - INFO - [Epoch 21/30][Batch 1001/1810] BatchTime = 0.499 (s) DataTime = 0.003 (s) Losses = ['13.2369', '6.0246'] lr = 0.000090
+2026-04-27 20:31:08,894 - UpTrans - INFO - [Epoch 21/30][Batch 1101/1810] BatchTime = 0.503 (s) DataTime = 0.003 (s) Losses = ['13.3249', '5.9707'] lr = 0.000090
+2026-04-27 20:31:58,991 - UpTrans - INFO - [Epoch 21/30][Batch 1201/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['13.6568', '6.8993'] lr = 0.000090
+2026-04-27 20:32:48,690 - UpTrans - INFO - [Epoch 21/30][Batch 1301/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['14.0530', '6.6502'] lr = 0.000090
+2026-04-27 20:33:38,491 - UpTrans - INFO - [Epoch 21/30][Batch 1401/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['13.6222', '6.4212'] lr = 0.000090
+2026-04-27 20:34:28,491 - UpTrans - INFO - [Epoch 21/30][Batch 1501/1810] BatchTime = 0.498 (s) DataTime = 0.002 (s) Losses = ['12.0908', '5.5731'] lr = 0.000090
+2026-04-27 20:35:18,191 - UpTrans - INFO - [Epoch 21/30][Batch 1601/1810] BatchTime = 0.501 (s) DataTime = 0.003 (s) Losses = ['13.8363', '6.9031'] lr = 0.000090
+2026-04-27 20:36:07,592 - UpTrans - INFO - [Epoch 21/30][Batch 1701/1810] BatchTime = 0.499 (s) DataTime = 0.003 (s) Losses = ['13.8646', '6.2700'] lr = 0.000090
+2026-04-27 20:36:56,891 - UpTrans - INFO - [Epoch 21/30][Batch 1801/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['15.3026', '6.8687'] lr = 0.000090
+2026-04-27 20:37:01,478 - UpTrans - INFO - [Training] EPOCH: 21 EpochTime = 899.858 (s) Losses = ['13.6327', '6.4680']
+2026-04-27 20:37:01,868 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-last.pth
+2026-04-27 20:37:02,493 - UpTrans - INFO - [Epoch 22/30][Batch 1/1810] BatchTime = 0.624 (s) DataTime = 0.167 (s) Losses = ['14.7270', '7.0070'] lr = 0.000090
+2026-04-27 20:37:52,193 - UpTrans - INFO - [Epoch 22/30][Batch 101/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['15.4712', '7.1717'] lr = 0.000090
+2026-04-27 20:38:41,890 - UpTrans - INFO - [Epoch 22/30][Batch 201/1810] BatchTime = 0.497 (s) DataTime = 0.003 (s) Losses = ['13.1522', '6.4566'] lr = 0.000090
+2026-04-27 20:39:31,191 - UpTrans - INFO - [Epoch 22/30][Batch 301/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['10.7890', '5.1085'] lr = 0.000090
+2026-04-27 20:40:19,993 - UpTrans - INFO - [Epoch 22/30][Batch 401/1810] BatchTime = 0.503 (s) DataTime = 0.003 (s) Losses = ['12.9770', '6.6081'] lr = 0.000090
+2026-04-27 20:41:08,993 - UpTrans - INFO - [Epoch 22/30][Batch 501/1810] BatchTime = 0.499 (s) DataTime = 0.003 (s) Losses = ['16.0331', '7.5743'] lr = 0.000090
+2026-04-27 20:41:57,089 - UpTrans - INFO - [Epoch 22/30][Batch 601/1810] BatchTime = 0.497 (s) DataTime = 0.003 (s) Losses = ['13.2689', '6.1129'] lr = 0.000090
+2026-04-27 20:42:45,593 - UpTrans - INFO - [Epoch 22/30][Batch 701/1810] BatchTime = 0.504 (s) DataTime = 0.002 (s) Losses = ['13.8644', '6.4716'] lr = 0.000090
+2026-04-27 20:43:34,794 - UpTrans - INFO - [Epoch 22/30][Batch 801/1810] BatchTime = 0.502 (s) DataTime = 0.002 (s) Losses = ['14.0204', '6.0519'] lr = 0.000090
+2026-04-27 20:44:24,691 - UpTrans - INFO - [Epoch 22/30][Batch 901/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['13.6717', '6.3712'] lr = 0.000090
+2026-04-27 20:45:14,393 - UpTrans - INFO - [Epoch 22/30][Batch 1001/1810] BatchTime = 0.499 (s) DataTime = 0.004 (s) Losses = ['14.6000', '6.7527'] lr = 0.000090
+2026-04-27 20:46:04,292 - UpTrans - INFO - [Epoch 22/30][Batch 1101/1810] BatchTime = 0.502 (s) DataTime = 0.002 (s) Losses = ['13.6490', '7.0594'] lr = 0.000090
+2026-04-27 20:46:54,293 - UpTrans - INFO - [Epoch 22/30][Batch 1201/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['15.1914', '7.4079'] lr = 0.000090
+2026-04-27 20:47:43,793 - UpTrans - INFO - [Epoch 22/30][Batch 1301/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['12.7411', '5.9899'] lr = 0.000090
+2026-04-27 20:48:33,492 - UpTrans - INFO - [Epoch 22/30][Batch 1401/1810] BatchTime = 0.501 (s) DataTime = 0.003 (s) Losses = ['12.1407', '5.7845'] lr = 0.000090
+2026-04-27 20:49:23,190 - UpTrans - INFO - [Epoch 22/30][Batch 1501/1810] BatchTime = 0.496 (s) DataTime = 0.003 (s) Losses = ['12.4990', '6.1413'] lr = 0.000090
+2026-04-27 20:50:12,691 - UpTrans - INFO - [Epoch 22/30][Batch 1601/1810] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['12.7652', '5.9610'] lr = 0.000090
+2026-04-27 20:51:02,491 - UpTrans - INFO - [Epoch 22/30][Batch 1701/1810] BatchTime = 0.499 (s) DataTime = 0.003 (s) Losses = ['12.6904', '5.2172'] lr = 0.000090
+2026-04-27 20:51:52,494 - UpTrans - INFO - [Epoch 22/30][Batch 1801/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['15.6215', '7.0809'] lr = 0.000090
+2026-04-27 20:51:57,090 - UpTrans - INFO - [Training] EPOCH: 22 EpochTime = 895.221 (s) Losses = ['13.6160', '6.4458']
+2026-04-27 20:51:57,473 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-last.pth
+2026-04-27 20:51:58,193 - UpTrans - INFO - [Epoch 23/30][Batch 1/1810] BatchTime = 0.718 (s) DataTime = 0.166 (s) Losses = ['13.0850', '6.2301'] lr = 0.000089
+2026-04-27 20:52:47,491 - UpTrans - INFO - [Epoch 23/30][Batch 101/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['14.4401', '6.8530'] lr = 0.000089
+2026-04-27 20:53:37,193 - UpTrans - INFO - [Epoch 23/30][Batch 201/1810] BatchTime = 0.502 (s) DataTime = 0.003 (s) Losses = ['14.0055', '6.6018'] lr = 0.000089
+2026-04-27 20:54:26,789 - UpTrans - INFO - [Epoch 23/30][Batch 301/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['13.6952', '6.6163'] lr = 0.000089
+2026-04-27 20:55:15,890 - UpTrans - INFO - [Epoch 23/30][Batch 401/1810] BatchTime = 0.493 (s) DataTime = 0.002 (s) Losses = ['12.8789', '5.9931'] lr = 0.000089
+2026-04-27 20:56:05,290 - UpTrans - INFO - [Epoch 23/30][Batch 501/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['11.9395', '5.6671'] lr = 0.000089
+2026-04-27 20:56:54,992 - UpTrans - INFO - [Epoch 23/30][Batch 601/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['12.8426', '6.3113'] lr = 0.000089
+2026-04-27 20:57:44,890 - UpTrans - INFO - [Epoch 23/30][Batch 701/1810] BatchTime = 0.501 (s) DataTime = 0.003 (s) Losses = ['13.0045', '6.1242'] lr = 0.000089
+2026-04-27 20:58:34,590 - UpTrans - INFO - [Epoch 23/30][Batch 801/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['13.6420', '6.6532'] lr = 0.000089
+2026-04-27 20:59:24,293 - UpTrans - INFO - [Epoch 23/30][Batch 901/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['12.7199', '6.1681'] lr = 0.000089
+2026-04-27 21:00:13,990 - UpTrans - INFO - [Epoch 23/30][Batch 1001/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['14.2881', '6.4246'] lr = 0.000089
+2026-04-27 21:01:03,892 - UpTrans - INFO - [Epoch 23/30][Batch 1101/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['12.7686', '6.2608'] lr = 0.000089
+2026-04-27 21:01:53,690 - UpTrans - INFO - [Epoch 23/30][Batch 1201/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['13.6130', '6.8607'] lr = 0.000089
+2026-04-27 21:02:43,390 - UpTrans - INFO - [Epoch 23/30][Batch 1301/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['11.9805', '5.3465'] lr = 0.000089
+2026-04-27 21:03:32,992 - UpTrans - INFO - [Epoch 23/30][Batch 1401/1810] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['13.2013', '6.9926'] lr = 0.000089
+2026-04-27 21:04:22,992 - UpTrans - INFO - [Epoch 23/30][Batch 1501/1810] BatchTime = 0.502 (s) DataTime = 0.003 (s) Losses = ['14.1678', '6.8065'] lr = 0.000089
+2026-04-27 21:05:11,992 - UpTrans - INFO - [Epoch 23/30][Batch 1601/1810] BatchTime = 0.503 (s) DataTime = 0.003 (s) Losses = ['13.7614', '6.8069'] lr = 0.000089
+2026-04-27 21:06:01,591 - UpTrans - INFO - [Epoch 23/30][Batch 1701/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['12.1157', '5.3736'] lr = 0.000089
+2026-04-27 21:06:51,189 - UpTrans - INFO - [Epoch 23/30][Batch 1801/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['12.5972', '5.7176'] lr = 0.000089
+2026-04-27 21:06:55,789 - UpTrans - INFO - [Training] EPOCH: 23 EpochTime = 898.315 (s) Losses = ['13.6178', '6.4618']
+2026-04-27 21:06:56,253 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-last.pth
+2026-04-27 21:06:56,893 - UpTrans - INFO - [Epoch 24/30][Batch 1/1810] BatchTime = 0.639 (s) DataTime = 0.181 (s) Losses = ['13.8412', '6.9771'] lr = 0.000089
+2026-04-27 21:07:46,391 - UpTrans - INFO - [Epoch 24/30][Batch 101/1810] BatchTime = 0.498 (s) DataTime = 0.002 (s) Losses = ['11.2873', '5.7028'] lr = 0.000089
+2026-04-27 21:08:35,695 - UpTrans - INFO - [Epoch 24/30][Batch 201/1810] BatchTime = 0.503 (s) DataTime = 0.003 (s) Losses = ['14.7712', '7.4795'] lr = 0.000089
+2026-04-27 21:09:24,489 - UpTrans - INFO - [Epoch 24/30][Batch 301/1810] BatchTime = 0.399 (s) DataTime = 0.003 (s) Losses = ['14.1753', '7.0719'] lr = 0.000089
+2026-04-27 21:10:12,992 - UpTrans - INFO - [Epoch 24/30][Batch 401/1810] BatchTime = 0.502 (s) DataTime = 0.002 (s) Losses = ['13.6816', '6.4231'] lr = 0.000089
+2026-04-27 21:11:02,893 - UpTrans - INFO - [Epoch 24/30][Batch 501/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['13.5202', '6.4826'] lr = 0.000089
+2026-04-27 21:11:52,389 - UpTrans - INFO - [Epoch 24/30][Batch 601/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['13.6257', '6.5231'] lr = 0.000089
+2026-04-27 21:12:42,290 - UpTrans - INFO - [Epoch 24/30][Batch 701/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['13.2838', '6.4327'] lr = 0.000089
+2026-04-27 21:13:32,090 - UpTrans - INFO - [Epoch 24/30][Batch 801/1810] BatchTime = 0.498 (s) DataTime = 0.003 (s) Losses = ['13.9641', '6.5550'] lr = 0.000089
+2026-04-27 21:14:21,594 - UpTrans - INFO - [Epoch 24/30][Batch 901/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['14.5986', '7.0437'] lr = 0.000089
+2026-04-27 21:15:11,489 - UpTrans - INFO - [Epoch 24/30][Batch 1001/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['15.0166', '7.3861'] lr = 0.000089
+2026-04-27 21:16:00,997 - UpTrans - INFO - [Epoch 24/30][Batch 1101/1810] BatchTime = 0.406 (s) DataTime = 0.002 (s) Losses = ['14.5645', '6.9517'] lr = 0.000089
+2026-04-27 21:16:50,890 - UpTrans - INFO - [Epoch 24/30][Batch 1201/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['11.7893', '5.5709'] lr = 0.000089
+2026-04-27 21:17:40,790 - UpTrans - INFO - [Epoch 24/30][Batch 1301/1810] BatchTime = 0.488 (s) DataTime = 0.003 (s) Losses = ['14.8979', '7.5451'] lr = 0.000089
+2026-04-27 21:18:30,393 - UpTrans - INFO - [Epoch 24/30][Batch 1401/1810] BatchTime = 0.505 (s) DataTime = 0.002 (s) Losses = ['13.6977', '6.6144'] lr = 0.000089
+2026-04-27 21:19:20,291 - UpTrans - INFO - [Epoch 24/30][Batch 1501/1810] BatchTime = 0.498 (s) DataTime = 0.002 (s) Losses = ['14.2668', '6.8411'] lr = 0.000089
+2026-04-27 21:20:09,690 - UpTrans - INFO - [Epoch 24/30][Batch 1601/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['13.6462', '6.0865'] lr = 0.000089
+2026-04-27 21:20:59,592 - UpTrans - INFO - [Epoch 24/30][Batch 1701/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['13.3762', '6.1254'] lr = 0.000089
+2026-04-27 21:21:48,989 - UpTrans - INFO - [Epoch 24/30][Batch 1801/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['12.5788', '5.5871'] lr = 0.000089
+2026-04-27 21:21:53,597 - UpTrans - INFO - [Training] EPOCH: 24 EpochTime = 897.343 (s) Losses = ['13.6030', '6.4471']
+2026-04-27 21:21:53,981 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-last.pth
+2026-04-27 21:21:54,590 - UpTrans - INFO - [Epoch 25/30][Batch 1/1810] BatchTime = 0.608 (s) DataTime = 0.164 (s) Losses = ['15.1072', '6.8346'] lr = 0.000088
+2026-04-27 21:22:43,792 - UpTrans - INFO - [Epoch 25/30][Batch 101/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['13.0594', '6.2035'] lr = 0.000088
+2026-04-27 21:23:32,890 - UpTrans - INFO - [Epoch 25/30][Batch 201/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['13.7133', '6.6195'] lr = 0.000088
+2026-04-27 21:24:22,593 - UpTrans - INFO - [Epoch 25/30][Batch 301/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['14.1048', '7.1366'] lr = 0.000088
+2026-04-27 21:25:12,393 - UpTrans - INFO - [Epoch 25/30][Batch 401/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['11.8631', '6.0629'] lr = 0.000088
+2026-04-27 21:26:02,393 - UpTrans - INFO - [Epoch 25/30][Batch 501/1810] BatchTime = 0.503 (s) DataTime = 0.003 (s) Losses = ['14.7696', '6.9428'] lr = 0.000088
+2026-04-27 21:26:52,289 - UpTrans - INFO - [Epoch 25/30][Batch 601/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['13.0393', '5.9578'] lr = 0.000088
+2026-04-27 21:27:40,990 - UpTrans - INFO - [Epoch 25/30][Batch 701/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['13.0817', '6.1084'] lr = 0.000088
+2026-04-27 21:28:30,791 - UpTrans - INFO - [Epoch 25/30][Batch 801/1810] BatchTime = 0.498 (s) DataTime = 0.002 (s) Losses = ['13.1787', '6.4796'] lr = 0.000088
+2026-04-27 21:29:20,590 - UpTrans - INFO - [Epoch 25/30][Batch 901/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['15.0056', '7.5396'] lr = 0.000088
+2026-04-27 21:30:10,492 - UpTrans - INFO - [Epoch 25/30][Batch 1001/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['15.8989', '6.8055'] lr = 0.000088
+2026-04-27 21:31:00,393 - UpTrans - INFO - [Epoch 25/30][Batch 1101/1810] BatchTime = 0.504 (s) DataTime = 0.002 (s) Losses = ['14.1759', '6.7324'] lr = 0.000088
+2026-04-27 21:31:49,993 - UpTrans - INFO - [Epoch 25/30][Batch 1201/1810] BatchTime = 0.504 (s) DataTime = 0.003 (s) Losses = ['11.8058', '5.7360'] lr = 0.000088
+2026-04-27 21:32:39,893 - UpTrans - INFO - [Epoch 25/30][Batch 1301/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['12.4781', '6.1238'] lr = 0.000088
+2026-04-27 21:33:29,590 - UpTrans - INFO - [Epoch 25/30][Batch 1401/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['15.5235', '7.3967'] lr = 0.000088
+2026-04-27 21:34:18,901 - UpTrans - INFO - [Epoch 25/30][Batch 1501/1810] BatchTime = 0.409 (s) DataTime = 0.002 (s) Losses = ['14.1803', '6.8903'] lr = 0.000088
+2026-04-27 21:35:08,892 - UpTrans - INFO - [Epoch 25/30][Batch 1601/1810] BatchTime = 0.502 (s) DataTime = 0.002 (s) Losses = ['14.4060', '6.3357'] lr = 0.000088
+2026-04-27 21:35:58,490 - UpTrans - INFO - [Epoch 25/30][Batch 1701/1810] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['12.6547', '6.2712'] lr = 0.000088
+2026-04-27 21:36:48,293 - UpTrans - INFO - [Epoch 25/30][Batch 1801/1810] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['14.6320', '6.4359'] lr = 0.000088
+2026-04-27 21:36:52,709 - UpTrans - INFO - [Training] EPOCH: 25 EpochTime = 898.727 (s) Losses = ['13.5963', '6.4435']
+2026-04-27 21:36:52,710 - UpTrans - INFO - [VALIDATION] Start validating epoch 25
+2026-04-27 21:36:58,715 - UpTrans - INFO - Test[120/1200] Taxonomy = 02691156 Sample = d18f2aeae4146464bd46d022fd7d80aa Losses = ['5.8646', '0.1153', '2.7547', '0.0237'] Metrics = ['0.9906', '2.7547', '0.0237', '0.0000']
+2026-04-27 21:37:04,598 - UpTrans - INFO - Test[240/1200] Taxonomy = 02933112 Sample = 8f55954a0b07a4b2bf64ff63662d244b Losses = ['14.8804', '0.8865', '6.4807', '0.2260'] Metrics = ['0.8959', '6.4807', '0.2260', '0.0000']
+2026-04-27 21:37:10,473 - UpTrans - INFO - Test[360/1200] Taxonomy = 02958343 Sample = 5f148a8b824ed7e72a9eb0f146e94477 Losses = ['15.2051', '0.8086', '8.3806', '0.2410'] Metrics = ['0.7382', '8.3806', '0.2410', '0.0000']
+2026-04-27 21:37:16,343 - UpTrans - INFO - Test[480/1200] Taxonomy = 03001627 Sample = 4344509d0442364d3f9d6e0ade5188b0 Losses = ['13.1124', '0.6216', '5.7456', '0.1242'] Metrics = ['0.8726', '5.7456', '0.1242', '0.0000']
+2026-04-27 21:37:22,207 - UpTrans - INFO - Test[600/1200] Taxonomy = 03001627 Sample = ff5a945aef7a68ffcf9ff3ee543c2925 Losses = ['18.5486', '1.3178', '9.3709', '0.3629'] Metrics = ['0.6750', '9.3709', '0.3629', '0.0000']
+2026-04-27 21:37:28,063 - UpTrans - INFO - Test[720/1200] Taxonomy = 03636649 Sample = d91cf049fa961ccb59f8e31ca87c470e Losses = ['12.9345', '0.7536', '4.8733', '0.1381'] Metrics = ['0.9219', '4.8733', '0.1381', '0.0000']
+2026-04-27 21:37:33,928 - UpTrans - INFO - Test[840/1200] Taxonomy = 04256520 Sample = 9c0ed8415a0a9e5c49b1e464b71de577 Losses = ['16.7836', '0.9440', '8.1696', '0.2174'] Metrics = ['0.7186', '8.1696', '0.2174', '0.0000']
+2026-04-27 21:37:39,779 - UpTrans - INFO - Test[960/1200] Taxonomy = 04379243 Sample = 668deaeb91295739664b3b9b23ddfcbc Losses = ['10.3438', '0.3420', '4.6693', '0.0857'] Metrics = ['0.9668', '4.6693', '0.0857', '0.0000']
+2026-04-27 21:37:45,639 - UpTrans - INFO - Test[1080/1200] Taxonomy = 04530566 Sample = 370ab590d5f9f6e12998de2923cbf8ed Losses = ['13.1354', '0.5800', '6.1259', '0.1117'] Metrics = ['0.8595', '6.1259', '0.1117', '0.0000']
+2026-04-27 21:37:51,497 - UpTrans - INFO - Test[1200/1200] Taxonomy = 04530566 Sample = fd52c80ae21d19251e0d0f6bac6856eb Losses = ['12.7407', '0.5390', '5.2395', '0.0947'] Metrics = ['0.9257', '5.2395', '0.0947', '0.0000']
+2026-04-27 21:37:51,602 - UpTrans - INFO - [Validation] EPOCH: 25  Metrics = ['0.8282', '6.5935', '0.2027', '0.0000']
+2026-04-27 21:37:51,602 - UpTrans - INFO - ============================ TEST RESULTS ============================
+2026-04-27 21:37:51,602 - UpTrans - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2026-04-27 21:37:51,602 - UpTrans - INFO - 02691156	150	0.953 	3.847 	0.078 	0.000 	airplane	
+2026-04-27 21:37:51,603 - UpTrans - INFO - 02933112	150	0.720 	8.917 	0.314 	0.000 	cabinet	
+2026-04-27 21:37:51,603 - UpTrans - INFO - 02958343	150	0.774 	7.629 	0.193 	0.000 	car	
+2026-04-27 21:37:51,603 - UpTrans - INFO - 03001627	150	0.817 	6.931 	0.217 	0.000 	chair	
+2026-04-27 21:37:51,603 - UpTrans - INFO - 03636649	150	0.888 	5.188 	0.150 	0.000 	lamp	
+2026-04-27 21:37:51,603 - UpTrans - INFO - 04256520	150	0.730 	8.549 	0.370 	0.000 	sofa	
+2026-04-27 21:37:51,603 - UpTrans - INFO - 04379243	150	0.887 	5.935 	0.159 	0.000 	table	
+2026-04-27 21:37:51,603 - UpTrans - INFO - 04530566	150	0.857 	5.753 	0.139 	0.000 	watercraft	
+2026-04-27 21:37:51,603 - UpTrans - INFO - Overall		0.828 	6.593 	0.203 	0.000 	
+2026-04-27 21:37:51,944 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-last.pth
+2026-04-27 21:37:52,590 - UpTrans - INFO - [Epoch 26/30][Batch 1/1810] BatchTime = 0.645 (s) DataTime = 0.188 (s) Losses = ['14.6509', '6.7534'] lr = 0.000088
+2026-04-27 21:38:40,492 - UpTrans - INFO - [Epoch 26/30][Batch 101/1810] BatchTime = 0.502 (s) DataTime = 0.002 (s) Losses = ['12.1905', '5.9362'] lr = 0.000088
+2026-04-27 21:39:25,792 - UpTrans - INFO - [Epoch 26/30][Batch 201/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['16.0432', '7.8617'] lr = 0.000088
+2026-04-27 21:40:11,702 - UpTrans - INFO - [Epoch 26/30][Batch 301/1810] BatchTime = 0.499 (s) DataTime = 0.078 (s) Losses = ['14.3352', '7.0393'] lr = 0.000088
+2026-04-27 21:40:59,497 - UpTrans - INFO - [Epoch 26/30][Batch 401/1810] BatchTime = 0.602 (s) DataTime = 0.003 (s) Losses = ['13.3763', '6.4032'] lr = 0.000088
+2026-04-27 21:41:44,393 - UpTrans - INFO - [Epoch 26/30][Batch 501/1810] BatchTime = 0.400 (s) DataTime = 0.003 (s) Losses = ['14.1947', '6.7151'] lr = 0.000088
+2026-04-27 21:42:31,100 - UpTrans - INFO - [Epoch 26/30][Batch 601/1810] BatchTime = 0.395 (s) DataTime = 0.003 (s) Losses = ['11.1715', '5.3544'] lr = 0.000088
+2026-04-27 21:43:17,794 - UpTrans - INFO - [Epoch 26/30][Batch 701/1810] BatchTime = 0.502 (s) DataTime = 0.003 (s) Losses = ['13.4860', '6.4057'] lr = 0.000088
+2026-04-27 21:44:04,097 - UpTrans - INFO - [Epoch 26/30][Batch 801/1810] BatchTime = 0.405 (s) DataTime = 0.003 (s) Losses = ['13.4788', '6.3705'] lr = 0.000088
+2026-04-27 21:44:51,395 - UpTrans - INFO - [Epoch 26/30][Batch 901/1810] BatchTime = 0.502 (s) DataTime = 0.003 (s) Losses = ['13.2256', '6.8836'] lr = 0.000088
+2026-04-27 21:45:37,492 - UpTrans - INFO - [Epoch 26/30][Batch 1001/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['13.0680', '6.7958'] lr = 0.000088
+2026-04-27 21:46:23,804 - UpTrans - INFO - [Epoch 26/30][Batch 1101/1810] BatchTime = 0.412 (s) DataTime = 0.003 (s) Losses = ['12.5466', '5.9352'] lr = 0.000088
+2026-04-27 21:47:10,498 - UpTrans - INFO - [Epoch 26/30][Batch 1201/1810] BatchTime = 0.506 (s) DataTime = 0.004 (s) Losses = ['15.2581', '7.2607'] lr = 0.000088
+2026-04-27 21:47:56,592 - UpTrans - INFO - [Epoch 26/30][Batch 1301/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['12.7842', '6.1883'] lr = 0.000088
+2026-04-27 21:48:43,598 - UpTrans - INFO - [Epoch 26/30][Batch 1401/1810] BatchTime = 0.393 (s) DataTime = 0.002 (s) Losses = ['13.8100', '6.4635'] lr = 0.000088
+2026-04-27 21:49:30,290 - UpTrans - INFO - [Epoch 26/30][Batch 1501/1810] BatchTime = 0.481 (s) DataTime = 0.002 (s) Losses = ['13.3374', '6.4686'] lr = 0.000088
+2026-04-27 21:50:17,494 - UpTrans - INFO - [Epoch 26/30][Batch 1601/1810] BatchTime = 0.402 (s) DataTime = 0.004 (s) Losses = ['14.8243', '7.1708'] lr = 0.000088
+2026-04-27 21:51:06,092 - UpTrans - INFO - [Epoch 26/30][Batch 1701/1810] BatchTime = 0.494 (s) DataTime = 0.003 (s) Losses = ['14.6003', '6.9218'] lr = 0.000088
+2026-04-27 21:51:55,693 - UpTrans - INFO - [Epoch 26/30][Batch 1801/1810] BatchTime = 0.501 (s) DataTime = 0.003 (s) Losses = ['12.7239', '5.9695'] lr = 0.000088
+2026-04-27 21:52:00,297 - UpTrans - INFO - [Training] EPOCH: 26 EpochTime = 848.352 (s) Losses = ['13.5928', '6.4517']
+2026-04-27 21:52:00,689 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-last.pth
+2026-04-27 21:52:01,301 - UpTrans - INFO - [Epoch 27/30][Batch 1/1810] BatchTime = 0.610 (s) DataTime = 0.150 (s) Losses = ['13.4450', '6.8764'] lr = 0.000087
+2026-04-27 21:52:51,090 - UpTrans - INFO - [Epoch 27/30][Batch 101/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['16.8561', '6.9897'] lr = 0.000087
+2026-04-27 21:53:40,792 - UpTrans - INFO - [Epoch 27/30][Batch 201/1810] BatchTime = 0.502 (s) DataTime = 0.002 (s) Losses = ['14.5354', '6.8205'] lr = 0.000087
+2026-04-27 21:54:30,190 - UpTrans - INFO - [Epoch 27/30][Batch 301/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['12.9925', '6.0084'] lr = 0.000087
+2026-04-27 21:55:19,890 - UpTrans - INFO - [Epoch 27/30][Batch 401/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['14.7309', '7.0431'] lr = 0.000087
+2026-04-27 21:56:09,392 - UpTrans - INFO - [Epoch 27/30][Batch 501/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['14.2743', '7.3721'] lr = 0.000087
+2026-04-27 21:56:58,893 - UpTrans - INFO - [Epoch 27/30][Batch 601/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['13.0872', '6.0954'] lr = 0.000087
+2026-04-27 21:57:46,790 - UpTrans - INFO - [Epoch 27/30][Batch 701/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['11.7416', '5.5401'] lr = 0.000087
+2026-04-27 21:58:34,592 - UpTrans - INFO - [Epoch 27/30][Batch 801/1810] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['14.5692', '6.5291'] lr = 0.000087
+2026-04-27 21:59:20,491 - UpTrans - INFO - [Epoch 27/30][Batch 901/1810] BatchTime = 0.409 (s) DataTime = 0.002 (s) Losses = ['12.6987', '6.0430'] lr = 0.000087
+2026-04-27 22:00:06,500 - UpTrans - INFO - [Epoch 27/30][Batch 1001/1810] BatchTime = 0.394 (s) DataTime = 0.002 (s) Losses = ['12.1182', '5.8946'] lr = 0.000087
+2026-04-27 22:00:53,505 - UpTrans - INFO - [Epoch 27/30][Batch 1101/1810] BatchTime = 0.411 (s) DataTime = 0.002 (s) Losses = ['11.8239', '5.5709'] lr = 0.000087
+2026-04-27 22:01:38,996 - UpTrans - INFO - [Epoch 27/30][Batch 1201/1810] BatchTime = 0.491 (s) DataTime = 0.002 (s) Losses = ['14.5200', '7.2006'] lr = 0.000087
+2026-04-27 22:02:26,593 - UpTrans - INFO - [Epoch 27/30][Batch 1301/1810] BatchTime = 0.502 (s) DataTime = 0.003 (s) Losses = ['13.1534', '6.3757'] lr = 0.000087
+2026-04-27 22:03:12,896 - UpTrans - INFO - [Epoch 27/30][Batch 1401/1810] BatchTime = 0.487 (s) DataTime = 0.003 (s) Losses = ['13.0185', '6.1927'] lr = 0.000087
+2026-04-27 22:04:00,208 - UpTrans - INFO - [Epoch 27/30][Batch 1501/1810] BatchTime = 0.417 (s) DataTime = 0.002 (s) Losses = ['14.6460', '7.4328'] lr = 0.000087
+2026-04-27 22:04:46,292 - UpTrans - INFO - [Epoch 27/30][Batch 1601/1810] BatchTime = 0.401 (s) DataTime = 0.002 (s) Losses = ['15.8644', '7.9382'] lr = 0.000087
+2026-04-27 22:05:31,491 - UpTrans - INFO - [Epoch 27/30][Batch 1701/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['14.5189', '6.4226'] lr = 0.000087
+2026-04-27 22:06:16,990 - UpTrans - INFO - [Epoch 27/30][Batch 1801/1810] BatchTime = 0.502 (s) DataTime = 0.002 (s) Losses = ['11.9782', '5.6745'] lr = 0.000087
+2026-04-27 22:06:21,077 - UpTrans - INFO - [Training] EPOCH: 27 EpochTime = 860.386 (s) Losses = ['13.6164', '6.4589']
+2026-04-27 22:06:21,460 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-last.pth
+2026-04-27 22:06:22,093 - UpTrans - INFO - [Epoch 28/30][Batch 1/1810] BatchTime = 0.632 (s) DataTime = 0.187 (s) Losses = ['15.7791', '7.4119'] lr = 0.000087
+2026-04-27 22:07:09,895 - UpTrans - INFO - [Epoch 28/30][Batch 101/1810] BatchTime = 0.504 (s) DataTime = 0.002 (s) Losses = ['15.0430', '7.3799'] lr = 0.000087
+2026-04-27 22:07:57,786 - UpTrans - INFO - [Epoch 28/30][Batch 201/1810] BatchTime = 0.481 (s) DataTime = 0.003 (s) Losses = ['14.5101', '6.8607'] lr = 0.000087
+2026-04-27 22:08:45,692 - UpTrans - INFO - [Epoch 28/30][Batch 301/1810] BatchTime = 0.494 (s) DataTime = 0.002 (s) Losses = ['14.5514', '7.2039'] lr = 0.000087
+2026-04-27 22:09:33,292 - UpTrans - INFO - [Epoch 28/30][Batch 401/1810] BatchTime = 0.402 (s) DataTime = 0.003 (s) Losses = ['12.2769', '5.6116'] lr = 0.000087
+2026-04-27 22:10:21,591 - UpTrans - INFO - [Epoch 28/30][Batch 501/1810] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['13.5688', '6.6037'] lr = 0.000087
+2026-04-27 22:11:11,292 - UpTrans - INFO - [Epoch 28/30][Batch 601/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['13.2064', '6.3093'] lr = 0.000087
+2026-04-27 22:12:00,993 - UpTrans - INFO - [Epoch 28/30][Batch 701/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['14.0531', '6.9967'] lr = 0.000087
+2026-04-27 22:12:50,093 - UpTrans - INFO - [Epoch 28/30][Batch 801/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['13.6668', '6.2151'] lr = 0.000087
+2026-04-27 22:13:38,493 - UpTrans - INFO - [Epoch 28/30][Batch 901/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['14.6684', '7.0539'] lr = 0.000087
+2026-04-27 22:14:27,989 - UpTrans - INFO - [Epoch 28/30][Batch 1001/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['14.1277', '7.0383'] lr = 0.000087
+2026-04-27 22:15:17,790 - UpTrans - INFO - [Epoch 28/30][Batch 1101/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['11.2457', '5.5002'] lr = 0.000087
+2026-04-27 22:16:07,592 - UpTrans - INFO - [Epoch 28/30][Batch 1201/1810] BatchTime = 0.502 (s) DataTime = 0.002 (s) Losses = ['13.2350', '6.6579'] lr = 0.000087
+2026-04-27 22:16:57,290 - UpTrans - INFO - [Epoch 28/30][Batch 1301/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['11.9401', '5.8367'] lr = 0.000087
+2026-04-27 22:17:46,793 - UpTrans - INFO - [Epoch 28/30][Batch 1401/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['14.4725', '6.7120'] lr = 0.000087
+2026-04-27 22:18:36,490 - UpTrans - INFO - [Epoch 28/30][Batch 1501/1810] BatchTime = 0.492 (s) DataTime = 0.002 (s) Losses = ['14.2657', '6.2997'] lr = 0.000087
+2026-04-27 22:19:25,993 - UpTrans - INFO - [Epoch 28/30][Batch 1601/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['14.5370', '6.1584'] lr = 0.000087
+2026-04-27 22:20:15,493 - UpTrans - INFO - [Epoch 28/30][Batch 1701/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['13.4749', '6.1901'] lr = 0.000087
+2026-04-27 22:21:03,685 - UpTrans - INFO - [Epoch 28/30][Batch 1801/1810] BatchTime = 0.493 (s) DataTime = 0.002 (s) Losses = ['15.0089', '6.9894'] lr = 0.000087
+2026-04-27 22:21:08,178 - UpTrans - INFO - [Training] EPOCH: 28 EpochTime = 886.717 (s) Losses = ['13.6022', '6.4418']
+2026-04-27 22:21:08,541 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-last.pth
+2026-04-27 22:21:09,192 - UpTrans - INFO - [Epoch 29/30][Batch 1/1810] BatchTime = 0.650 (s) DataTime = 0.162 (s) Losses = ['12.7700', '5.9977'] lr = 0.000086
+2026-04-27 22:21:58,692 - UpTrans - INFO - [Epoch 29/30][Batch 101/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['14.7607', '6.8777'] lr = 0.000086
+2026-04-27 22:22:48,193 - UpTrans - INFO - [Epoch 29/30][Batch 201/1810] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['13.1912', '6.6234'] lr = 0.000086
+2026-04-27 22:23:37,792 - UpTrans - INFO - [Epoch 29/30][Batch 301/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['12.2562', '5.8839'] lr = 0.000086
+2026-04-27 22:24:26,993 - UpTrans - INFO - [Epoch 29/30][Batch 401/1810] BatchTime = 0.503 (s) DataTime = 0.003 (s) Losses = ['13.0328', '6.2399'] lr = 0.000086
+2026-04-27 22:25:16,590 - UpTrans - INFO - [Epoch 29/30][Batch 501/1810] BatchTime = 0.490 (s) DataTime = 0.002 (s) Losses = ['13.0344', '5.9313'] lr = 0.000086
+2026-04-27 22:26:06,190 - UpTrans - INFO - [Epoch 29/30][Batch 601/1810] BatchTime = 0.498 (s) DataTime = 0.002 (s) Losses = ['12.2693', '6.1149'] lr = 0.000086
+2026-04-27 22:26:55,993 - UpTrans - INFO - [Epoch 29/30][Batch 701/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['12.7567', '6.6361'] lr = 0.000086
+2026-04-27 22:27:45,191 - UpTrans - INFO - [Epoch 29/30][Batch 801/1810] BatchTime = 0.498 (s) DataTime = 0.002 (s) Losses = ['13.7795', '6.4148'] lr = 0.000086
+2026-04-27 22:28:34,793 - UpTrans - INFO - [Epoch 29/30][Batch 901/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['15.4470', '7.3645'] lr = 0.000086
+2026-04-27 22:29:24,593 - UpTrans - INFO - [Epoch 29/30][Batch 1001/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['12.8099', '6.3480'] lr = 0.000086
+2026-04-27 22:30:14,193 - UpTrans - INFO - [Epoch 29/30][Batch 1101/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['11.8312', '5.8138'] lr = 0.000086
+2026-04-27 22:31:03,593 - UpTrans - INFO - [Epoch 29/30][Batch 1201/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['12.3090', '5.7120'] lr = 0.000086
+2026-04-27 22:31:52,592 - UpTrans - INFO - [Epoch 29/30][Batch 1301/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['14.0003', '6.9362'] lr = 0.000086
+2026-04-27 22:32:41,890 - UpTrans - INFO - [Epoch 29/30][Batch 1401/1810] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['14.5765', '7.0032'] lr = 0.000086
+2026-04-27 22:33:31,091 - UpTrans - INFO - [Epoch 29/30][Batch 1501/1810] BatchTime = 0.497 (s) DataTime = 0.006 (s) Losses = ['11.8934', '5.6435'] lr = 0.000086
+2026-04-27 22:34:20,590 - UpTrans - INFO - [Epoch 29/30][Batch 1601/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['15.2897', '7.7027'] lr = 0.000086
+2026-04-27 22:35:10,293 - UpTrans - INFO - [Epoch 29/30][Batch 1701/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['11.9781', '5.4844'] lr = 0.000086
+2026-04-27 22:36:00,093 - UpTrans - INFO - [Epoch 29/30][Batch 1801/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['12.4267', '6.1750'] lr = 0.000086
+2026-04-27 22:36:04,687 - UpTrans - INFO - [Training] EPOCH: 29 EpochTime = 896.145 (s) Losses = ['13.5972', '6.4527']
+2026-04-27 22:36:05,068 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-last.pth
+2026-04-27 22:36:05,260 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-epoch-029.pth
+2026-04-27 22:36:05,893 - UpTrans - INFO - [Epoch 30/30][Batch 1/1810] BatchTime = 0.632 (s) DataTime = 0.172 (s) Losses = ['13.6957', '6.5872'] lr = 0.000086
+2026-04-27 22:36:55,490 - UpTrans - INFO - [Epoch 30/30][Batch 101/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['11.6972', '5.4981'] lr = 0.000086
+2026-04-27 22:37:44,890 - UpTrans - INFO - [Epoch 30/30][Batch 201/1810] BatchTime = 0.495 (s) DataTime = 0.002 (s) Losses = ['14.0372', '6.4263'] lr = 0.000086
+2026-04-27 22:38:34,290 - UpTrans - INFO - [Epoch 30/30][Batch 301/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['11.2441', '5.4024'] lr = 0.000086
+2026-04-27 22:39:23,593 - UpTrans - INFO - [Epoch 30/30][Batch 401/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['12.9445', '6.1495'] lr = 0.000086
+2026-04-27 22:40:13,490 - UpTrans - INFO - [Epoch 30/30][Batch 501/1810] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['16.0901', '8.1495'] lr = 0.000086
+2026-04-27 22:41:03,390 - UpTrans - INFO - [Epoch 30/30][Batch 601/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['12.5815', '6.4797'] lr = 0.000086
+2026-04-27 22:41:52,692 - UpTrans - INFO - [Epoch 30/30][Batch 701/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['14.9962', '7.4996'] lr = 0.000086
+2026-04-27 22:42:41,391 - UpTrans - INFO - [Epoch 30/30][Batch 801/1810] BatchTime = 0.501 (s) DataTime = 0.002 (s) Losses = ['13.3404', '6.6087'] lr = 0.000086
+2026-04-27 22:43:30,690 - UpTrans - INFO - [Epoch 30/30][Batch 901/1810] BatchTime = 0.486 (s) DataTime = 0.003 (s) Losses = ['13.8936', '6.0568'] lr = 0.000086
+2026-04-27 22:44:19,893 - UpTrans - INFO - [Epoch 30/30][Batch 1001/1810] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['11.3638', '5.2388'] lr = 0.000086
+2026-04-27 22:45:09,489 - UpTrans - INFO - [Epoch 30/30][Batch 1101/1810] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['13.4829', '6.3339'] lr = 0.000086
+2026-04-27 22:45:59,190 - UpTrans - INFO - [Epoch 30/30][Batch 1201/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['13.1722', '6.1693'] lr = 0.000086
+2026-04-27 22:46:49,091 - UpTrans - INFO - [Epoch 30/30][Batch 1301/1810] BatchTime = 0.498 (s) DataTime = 0.002 (s) Losses = ['13.2753', '6.1994'] lr = 0.000086
+2026-04-27 22:47:38,890 - UpTrans - INFO - [Epoch 30/30][Batch 1401/1810] BatchTime = 0.497 (s) DataTime = 0.002 (s) Losses = ['14.0649', '6.8060'] lr = 0.000086
+2026-04-27 22:48:27,593 - UpTrans - INFO - [Epoch 30/30][Batch 1501/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['14.8476', '6.4276'] lr = 0.000086
+2026-04-27 22:49:17,190 - UpTrans - INFO - [Epoch 30/30][Batch 1601/1810] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['13.7567', '6.6382'] lr = 0.000086
+2026-04-27 22:50:06,794 - UpTrans - INFO - [Epoch 30/30][Batch 1701/1810] BatchTime = 0.505 (s) DataTime = 0.002 (s) Losses = ['13.5353', '6.1078'] lr = 0.000086
+2026-04-27 22:50:56,193 - UpTrans - INFO - [Epoch 30/30][Batch 1801/1810] BatchTime = 0.503 (s) DataTime = 0.002 (s) Losses = ['13.0889', '6.5328'] lr = 0.000086
+2026-04-27 22:51:00,789 - UpTrans - INFO - [Training] EPOCH: 30 EpochTime = 895.528 (s) Losses = ['13.5758', '6.4414']
+2026-04-27 22:51:00,789 - UpTrans - INFO - [VALIDATION] Start validating epoch 30
+2026-04-27 22:51:06,765 - UpTrans - INFO - Test[120/1200] Taxonomy = 02691156 Sample = d18f2aeae4146464bd46d022fd7d80aa Losses = ['5.7376', '0.1078', '2.6261', '0.0202'] Metrics = ['0.9919', '2.6261', '0.0202', '0.0000']
+2026-04-27 22:51:12,600 - UpTrans - INFO - Test[240/1200] Taxonomy = 02933112 Sample = 8f55954a0b07a4b2bf64ff63662d244b Losses = ['14.3940', '0.8137', '6.8184', '0.2527'] Metrics = ['0.8761', '6.8184', '0.2527', '0.0000']
+2026-04-27 22:51:18,454 - UpTrans - INFO - Test[360/1200] Taxonomy = 02958343 Sample = 5f148a8b824ed7e72a9eb0f146e94477 Losses = ['15.1460', '0.8081', '8.0489', '0.2118'] Metrics = ['0.7473', '8.0489', '0.2118', '0.0000']
+2026-04-27 22:51:24,300 - UpTrans - INFO - Test[480/1200] Taxonomy = 03001627 Sample = 4344509d0442364d3f9d6e0ade5188b0 Losses = ['12.7821', '0.5746', '5.9855', '0.1271'] Metrics = ['0.8522', '5.9855', '0.1271', '0.0000']
+2026-04-27 22:51:30,141 - UpTrans - INFO - Test[600/1200] Taxonomy = 03001627 Sample = ff5a945aef7a68ffcf9ff3ee543c2925 Losses = ['18.4429', '1.3041', '8.9709', '0.3315'] Metrics = ['0.6980', '8.9709', '0.3315', '0.0000']
+2026-04-27 22:51:35,996 - UpTrans - INFO - Test[720/1200] Taxonomy = 03636649 Sample = d91cf049fa961ccb59f8e31ca87c470e Losses = ['13.2209', '0.7743', '4.9571', '0.1383'] Metrics = ['0.9157', '4.9571', '0.1383', '0.0000']
+2026-04-27 22:51:41,846 - UpTrans - INFO - Test[840/1200] Taxonomy = 04256520 Sample = 9c0ed8415a0a9e5c49b1e464b71de577 Losses = ['17.0967', '0.9849', '8.5195', '0.2731'] Metrics = ['0.7078', '8.5195', '0.2731', '0.0000']
+2026-04-27 22:51:47,698 - UpTrans - INFO - Test[960/1200] Taxonomy = 04379243 Sample = 668deaeb91295739664b3b9b23ddfcbc Losses = ['11.0525', '0.4208', '4.5889', '0.0952'] Metrics = ['0.9645', '4.5889', '0.0952', '0.0000']
+2026-04-27 22:51:53,548 - UpTrans - INFO - Test[1080/1200] Taxonomy = 04530566 Sample = 370ab590d5f9f6e12998de2923cbf8ed Losses = ['12.6691', '0.5257', '6.0774', '0.1141'] Metrics = ['0.8546', '6.0774', '0.1141', '0.0000']
+2026-04-27 22:51:59,390 - UpTrans - INFO - Test[1200/1200] Taxonomy = 04530566 Sample = fd52c80ae21d19251e0d0f6bac6856eb Losses = ['12.6334', '0.5228', '5.3083', '0.0968'] Metrics = ['0.9274', '5.3083', '0.0968', '0.0000']
+2026-04-27 22:51:59,500 - UpTrans - INFO - [Validation] EPOCH: 30  Metrics = ['0.8275', '6.6451', '0.2138', '0.0000']
+2026-04-27 22:51:59,501 - UpTrans - INFO - ============================ TEST RESULTS ============================
+2026-04-27 22:51:59,501 - UpTrans - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2026-04-27 22:51:59,501 - UpTrans - INFO - 02691156	150	0.952 	3.857 	0.076 	0.000 	airplane	
+2026-04-27 22:51:59,501 - UpTrans - INFO - 02933112	150	0.718 	8.974 	0.320 	0.000 	cabinet	
+2026-04-27 22:51:59,501 - UpTrans - INFO - 02958343	150	0.771 	7.645 	0.193 	0.000 	car	
+2026-04-27 22:51:59,501 - UpTrans - INFO - 03001627	150	0.814 	7.020 	0.228 	0.000 	chair	
+2026-04-27 22:51:59,501 - UpTrans - INFO - 03636649	150	0.887 	5.200 	0.150 	0.000 	lamp	
+2026-04-27 22:51:59,501 - UpTrans - INFO - 04256520	150	0.732 	8.816 	0.442 	0.000 	sofa	
+2026-04-27 22:51:59,501 - UpTrans - INFO - 04379243	150	0.888 	5.937 	0.165 	0.000 	table	
+2026-04-27 22:51:59,501 - UpTrans - INFO - 04530566	150	0.857 	5.712 	0.137 	0.000 	watercraft	
+2026-04-27 22:51:59,501 - UpTrans - INFO - Overall		0.828 	6.645 	0.214 	0.000 	
+2026-04-27 22:51:59,736 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-last.pth
+2026-04-27 22:51:59,928 - UpTrans - INFO - Save checkpoint at ./experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-epoch-030.pth

@@ -1,0 +1,11 @@
+Using checkpoint: ckpt-epoch-030.pth (found in all runs)
+[R300(DiffCond-oracle)] ckpt: ckpt-epoch-030.pth
+[R300(DiffCond-predict)] ckpt: ckpt-epoch-030.pth
+[R200C(matched-vanilla)] ckpt: ckpt-epoch-030.pth
+
+================================================================================
+  Phase 2.6 MATCHED CONTROL: R200C(vanilla+DiffCond-crop) vs R300(DiffCond)
+  Both warmstarted from R100 ckpt-best, same seed, same crop path, same 30ep
+  Only difference: DiffCond modules (embedding + ranking delta + gated injection + predictor)
+================================================================================
+  [R300(DiffCond-oracle)] --mode easy ...

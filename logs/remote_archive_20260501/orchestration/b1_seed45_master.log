@@ -1,0 +1,28 @@
+[2026-04-29 00:20:52] === B1 +1 seed (seed=45) START ===
+[2026-04-29 00:20:52] Pretrained ckpt: experiments/UpTrans/ShapeNet55_models/pretrained_400ep/ckpt-best.pth
+[2026-04-29 00:20:52] Configs: cfgs/ShapeNet55_models/UpTrans.yaml  cfgs/ShapeNet55_models/UpTrans_DiffCond.yaml
+[2026-04-29 00:20:52] === Phase A: SN55 UpTrans Vanilla seed=45 ===
+[2026-04-29 00:20:52] ===== Vanilla seed 45 START =====
+[2026-04-29 06:44:32] ===== Vanilla seed 45 DONE =====
+[2026-04-29 06:44:32] === Phase B: SN55 UpTrans_DiffCond seed=45 ===
+[2026-04-29 06:44:32] ===== DiffCond seed 45 START =====
+[2026-04-29 13:08:36] ===== DiffCond seed 45 DONE =====
+[2026-04-29 13:08:36] === Phase C: SMH eval seed=45 (6 evals) ===
+[2026-04-29 13:08:36] [eval] vanilla seed=45 mode=easy ...
+[2026-04-29 13:53:52]   OK
+[2026-04-29 13:53:52] [eval] vanilla seed=45 mode=median ...
+[2026-04-29 14:36:36]   OK
+[2026-04-29 14:36:36] [eval] vanilla seed=45 mode=hard ...
+[2026-04-29 15:16:36]   OK
+[2026-04-29 15:16:36] [eval] diffcond seed=45 mode=easy ...
+[2026-04-29 16:02:04]   OK
+[2026-04-29 16:02:04] [eval] diffcond seed=45 mode=median ...
+[2026-04-29 16:44:32]   OK
+[2026-04-29 16:44:32] [eval] diffcond seed=45 mode=hard ...
+[2026-04-29 17:24:46]   OK
+[2026-04-29 17:24:46] === ALL SEED 45 DONE ===
+[2026-04-29 17:24:46] Re-aggregate locally:
+[2026-04-29 17:24:46]   python tools/aggregate_b1_results.py --seeds 42,43,44,45
+[2026-04-29 17:24:46]   python tools/paired_stats.py
+   python tools/aggregate_b1_results.py --seeds 42,43,44,45
+[2026-04-29 17:24:46]   python tools/paired_stats.py

@@ -1,0 +1,22 @@
+[00:14:14] python Python 3.12.3 | torch 2.8.0+cu128 cuda 12.8
+[00:14:18] nvcc: Build cuda_12.8.r12.8/compiler.35583870_0
+[00:14:18] 1/6 python deps (pins relaxed per requirements.txt comments)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+  torch unchanged: 2.8.0+cu128 12.8
+[00:14:28] 2/6 dataset: ShapeNet-55 (PoinTr/Point-BERT format) from the HF mirror sayakpaul/ShapeNet-55 onto the data disk
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+/root/miniconda3/lib/python3.12/site-packages/huggingface_hub/constants.py:299: FutureWarning: The `HF_HUB_ENABLE_HF_TRANSFER` environment variable is deprecated as 'hf_transfer' is not used anymore. Please use `HF_XET_HIGH_PERFORMANCE` instead to enable high performance transfer with Xet. Visit https://huggingface.co/docs/huggingface_hub/package_reference/environment_variables#hfxethighperformance for more details.
+  warnings.warn(
+[33mWarning: `huggingface-cli` is deprecated and no longer works. Use `hf` instead.
+[0m
+[90mHint: `hf` is already installed! Use it directly.
+[0m
+[90mHint: Examples:
+  hf auth login
+  hf download unsloth/gemma-4-31B-it-GGUF
+  hf upload my-cool-model . .
+  hf models ls --search "gemma"
+  hf repos ls --format json
+  hf jobs run python:3.12 python -c 'print("Hello!")'
+  hf --help
+[0m

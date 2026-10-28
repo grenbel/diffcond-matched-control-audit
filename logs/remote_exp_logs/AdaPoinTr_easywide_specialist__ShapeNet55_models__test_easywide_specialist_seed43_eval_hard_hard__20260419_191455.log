@@ -1,0 +1,215 @@
+2026-04-19 19:14:55,768 - AdaPoinTr_easywide_specialist - INFO - Copy the Config file from cfgs/ShapeNet55_models/AdaPoinTr_easywide_specialist.yaml to ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/test_easywide_specialist_seed43_eval_hard_hard/config.yaml
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - args.config : cfgs/ShapeNet55_models/AdaPoinTr_easywide_specialist.yaml
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - args.launcher : none
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - args.local_rank : 0
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - args.num_workers : 4
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - args.seed : 0
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - args.deterministic : True
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - args.sync_bn : False
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - args.exp_name : test_easywide_specialist_seed43_eval_hard_hard
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - args.start_ckpts : None
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - args.ckpts : experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-epoch-030.pth
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - args.val_freq : 1
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - args.resume : False
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - args.test : True
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - args.mode : hard
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - args.difficulty_source : oracle
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - args.experiment_path : ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/test_easywide_specialist_seed43_eval_hard_hard
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - args.tfboard_path : ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/TFBoard/test_easywide_specialist_seed43_eval_hard_hard
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - args.log_name : AdaPoinTr_easywide_specialist
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - args.use_gpu : True
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - args.distributed : False
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - config.optimizer = edict()
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - config.optimizer.type : AdamW
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - config.optimizer.kwargs = edict()
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - config.optimizer.kwargs.lr : 0.0001
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - config.optimizer.kwargs.weight_decay : 0.0005
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - config.scheduler = edict()
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - config.scheduler.type : LambdaLR
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - config.scheduler.kwargs = edict()
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - config.scheduler.kwargs.decay_step : 21
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - config.scheduler.kwargs.lr_decay : 0.9
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - config.scheduler.kwargs.lowest_decay : 0.02
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - config.bnmscheduler = edict()
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - config.bnmscheduler.type : Lambda
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - config.bnmscheduler.kwargs = edict()
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - config.bnmscheduler.kwargs.decay_step : 21
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - config.bnmscheduler.kwargs.bn_decay : 0.5
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - config.bnmscheduler.kwargs.bn_momentum : 0.9
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - config.bnmscheduler.kwargs.lowest_decay : 0.01
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - config.dataset = edict()
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - config.dataset.train = edict()
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - config.dataset.train._base_ = edict()
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - config.dataset.train._base_.NAME : ShapeNet
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - config.dataset.train._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - config.dataset.train._base_.N_POINTS : 8192
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - config.dataset.train._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - config.dataset.train.others = edict()
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - config.dataset.train.others.subset : train
+2026-04-19 19:14:55,769 - AdaPoinTr_easywide_specialist - INFO - config.dataset.train.others.bs : 48
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.dataset.val = edict()
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.dataset.val._base_ = edict()
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.dataset.val._base_.NAME : ShapeNet
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.dataset.val._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.dataset.val._base_.N_POINTS : 8192
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.dataset.val._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.dataset.val.others = edict()
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.dataset.val.others.subset : test
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.dataset.test = edict()
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.dataset.test._base_ = edict()
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.dataset.test._base_.NAME : ShapeNet
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.dataset.test._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.dataset.test._base_.N_POINTS : 8192
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.dataset.test._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.dataset.test.others = edict()
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.dataset.test.others.subset : test
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.model = edict()
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.model.NAME : AdaPoinTr
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.model.num_query : 512
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.model.num_points : 8192
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.model.center_num : [512, 256]
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.model.global_feature_dim : 1024
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.model.encoder_type : graph
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.model.decoder_type : fc
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.model.encoder_config = edict()
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.model.encoder_config.embed_dim : 384
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.model.encoder_config.depth : 6
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.model.encoder_config.num_heads : 6
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.model.encoder_config.k : 8
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.model.encoder_config.n_group : 2
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.model.encoder_config.mlp_ratio : 2.0
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.model.encoder_config.block_style_list : ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn']
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.model.encoder_config.combine_style : concat
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.model.decoder_config = edict()
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.model.decoder_config.embed_dim : 384
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.model.decoder_config.depth : 8
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.model.decoder_config.num_heads : 6
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.model.decoder_config.k : 8
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.model.decoder_config.n_group : 2
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.model.decoder_config.mlp_ratio : 2.0
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.model.decoder_config.self_attn_block_style_list : ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn']
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.model.decoder_config.self_attn_combine_style : concat
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.model.decoder_config.cross_attn_block_style_list : ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn']
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.model.decoder_config.cross_attn_combine_style : concat
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.total_bs : 48
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.step_per_update : 1
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.max_epoch : 30
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.consider_metric : CDL2
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.training_crop_mode : diffcond
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - config.training_crop_range : [0.25, 0.5]
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - Distributed training: False
+2026-04-19 19:14:55,770 - AdaPoinTr_easywide_specialist - INFO - Set random seed to 0, deterministic: True
+2026-04-19 19:14:55,771 - AdaPoinTr_easywide_specialist - INFO - Tester start ... 
+2026-04-19 19:14:57,311 - AdaPoinTr_easywide_specialist - INFO - Loading weights from experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-epoch-030.pth...
+2026-04-19 19:14:57,620 - AdaPoinTr_easywide_specialist - INFO - ckpts @ 30 epoch( performance = {'F-Score': 0.3800704782199251, 'CDL1': 14.344647772767146, 'CDL2': 0.9888675240541343, 'EMDistance': 0.0})
+2026-04-19 19:15:24,147 - AdaPoinTr_easywide_specialist - INFO - Test[200/10518] Taxonomy = 04530566 Sample = 3bb6a5deec68ef77fee64ca302793912 Losses = ['23.3469', '2.0902', '12.9567', '0.8052'] Metrics = ['0.4421', '12.9567', '0.8052', '0.0000']
+2026-04-19 19:15:49,828 - AdaPoinTr_easywide_specialist - INFO - Test[400/10518] Taxonomy = 03636649 Sample = 90651b3febfc3afe15226aa76eb7c3e Losses = ['49.2005', '10.1126', '21.3051', '2.2498'] Metrics = ['0.3314', '21.3051', '2.2498', '0.0000']
+2026-04-19 19:16:15,507 - AdaPoinTr_easywide_specialist - INFO - Test[600/10518] Taxonomy = 03001627 Sample = fae27953e0f0404ca99df2794ec76201 Losses = ['38.8123', '6.1757', '19.6828', '1.7446'] Metrics = ['0.3291', '19.6828', '1.7446', '0.0000']
+2026-04-19 19:16:41,139 - AdaPoinTr_easywide_specialist - INFO - Test[800/10518] Taxonomy = 03593526 Sample = 324c9045843b9470d29670d38a4c9e7e Losses = ['65.2460', '20.0154', '45.6253', '11.4761'] Metrics = ['0.3017', '45.6253', '11.4761', '0.0000']
+2026-04-19 19:17:06,721 - AdaPoinTr_easywide_specialist - INFO - Test[1000/10518] Taxonomy = 02958343 Sample = 39e10c5d24fee4a6311f5d9a1681aa3b Losses = ['31.4520', '3.5875', '14.2131', '0.6461'] Metrics = ['0.2688', '14.2131', '0.6461', '0.0000']
+2026-04-19 19:17:32,407 - AdaPoinTr_easywide_specialist - INFO - Test[1200/10518] Taxonomy = 03001627 Sample = e50f1b2d0835bb392764cfba57a5de73 Losses = ['43.0512', '7.5820', '22.2652', '2.2001'] Metrics = ['0.2486', '22.2652', '2.2001', '0.0000']
+2026-04-19 19:17:58,069 - AdaPoinTr_easywide_specialist - INFO - Test[1400/10518] Taxonomy = 04379243 Sample = 647692d3858790a1f1783a44a88d6274 Losses = ['39.6358', '10.5081', '17.6462', '2.1758'] Metrics = ['0.3653', '17.6462', '2.1758', '0.0000']
+2026-04-19 19:18:23,679 - AdaPoinTr_easywide_specialist - INFO - Test[1600/10518] Taxonomy = 02691156 Sample = d8d9de967255b4c562b600da24e0965 Losses = ['22.9363', '2.4099', '10.2983', '0.4546'] Metrics = ['0.5599', '10.2983', '0.4546', '0.0000']
+2026-04-19 19:18:49,564 - AdaPoinTr_easywide_specialist - INFO - Test[1800/10518] Taxonomy = 03001627 Sample = 24c0e6a8b10abb77df2b21995cbbbc4f Losses = ['47.6589', '8.2089', '22.2907', '1.8914'] Metrics = ['0.1797', '22.2907', '1.8914', '0.0000']
+2026-04-19 19:19:15,188 - AdaPoinTr_easywide_specialist - INFO - Test[2000/10518] Taxonomy = 04379243 Sample = 5d77e8f6ad3741a0c30ab36bf7b0552 Losses = ['29.4056', '3.3965', '11.0886', '0.3734'] Metrics = ['0.3838', '11.0886', '0.3734', '0.0000']
+2026-04-19 19:19:40,810 - AdaPoinTr_easywide_specialist - INFO - Test[2200/10518] Taxonomy = 03636649 Sample = b64e98c991d4103170365ad078f710ff Losses = ['57.5711', '14.3190', '45.0305', '11.0548'] Metrics = ['0.2362', '45.0305', '11.0548', '0.0000']
+2026-04-19 19:20:06,460 - AdaPoinTr_easywide_specialist - INFO - Test[2400/10518] Taxonomy = 03211117 Sample = b4386438057e85988bfba3df1f776207 Losses = ['43.3905', '9.1382', '16.3780', '1.1937'] Metrics = ['0.2842', '16.3780', '1.1937', '0.0000']
+2026-04-19 19:20:32,149 - AdaPoinTr_easywide_specialist - INFO - Test[2600/10518] Taxonomy = 04468005 Sample = 3b8c505fd1127ed88f134472f61cf6bb Losses = ['28.0215', '2.9526', '15.0909', '0.8156'] Metrics = ['0.2997', '15.0909', '0.8156', '0.0000']
+2026-04-19 19:20:57,820 - AdaPoinTr_easywide_specialist - INFO - Test[2800/10518] Taxonomy = 03001627 Sample = e3e76d624f1f855bcc8a9c365968620 Losses = ['37.0301', '5.3508', '27.1306', '3.6474'] Metrics = ['0.2721', '27.1306', '3.6474', '0.0000']
+2026-04-19 19:21:23,453 - AdaPoinTr_easywide_specialist - INFO - Test[3000/10518] Taxonomy = 03001627 Sample = 40020a5e90c75d94a93412f1b60e6fba Losses = ['39.5119', '7.3458', '15.6601', '1.5995'] Metrics = ['0.4731', '15.6601', '1.5995', '0.0000']
+2026-04-19 19:21:49,059 - AdaPoinTr_easywide_specialist - INFO - Test[3200/10518] Taxonomy = 02691156 Sample = a96c1589731b06a1efbd0f357ff7c40a Losses = ['24.7311', '2.6233', '12.0125', '0.6668'] Metrics = ['0.5800', '12.0125', '0.6668', '0.0000']
+2026-04-19 19:22:14,639 - AdaPoinTr_easywide_specialist - INFO - Test[3400/10518] Taxonomy = 03046257 Sample = b2b40e80c9d3f530d5f1db12f95f0fe4 Losses = ['29.7724', '3.4301', '14.8277', '0.7546'] Metrics = ['0.2965', '14.8277', '0.7546', '0.0000']
+2026-04-19 19:22:40,266 - AdaPoinTr_easywide_specialist - INFO - Test[3600/10518] Taxonomy = 02933112 Sample = c18a4772bcfbb98e85bc264270ae0601 Losses = ['43.8580', '7.6661', '22.1853', '1.9840'] Metrics = ['0.1475', '22.1853', '1.9840', '0.0000']
+2026-04-19 19:23:05,889 - AdaPoinTr_easywide_specialist - INFO - Test[3800/10518] Taxonomy = 04530566 Sample = 215861c4bebeb328d9a75de54b023ae1 Losses = ['23.5803', '2.1587', '13.2027', '0.6121'] Metrics = ['0.3550', '13.2027', '0.6121', '0.0000']
+2026-04-19 19:23:31,555 - AdaPoinTr_easywide_specialist - INFO - Test[4000/10518] Taxonomy = 02828884 Sample = 5f9d3dae06acf0e4e93e1127627b834 Losses = ['29.9114', '3.5259', '13.6278', '0.8715'] Metrics = ['0.3309', '13.6278', '0.8715', '0.0000']
+2026-04-19 19:23:57,133 - AdaPoinTr_easywide_specialist - INFO - Test[4200/10518] Taxonomy = 04401088 Sample = a3c1c9fc390b1bbbb099170e6f5a4af9 Losses = ['28.5474', '3.1121', '11.8772', '0.4454'] Metrics = ['0.3626', '11.8772', '0.4454', '0.0000']
+2026-04-19 19:24:22,704 - AdaPoinTr_easywide_specialist - INFO - Test[4400/10518] Taxonomy = 04256520 Sample = 54506969a60017ac8f0a57a8b9390a Losses = ['41.3685', '7.5203', '21.5598', '4.0367'] Metrics = ['0.3858', '21.5598', '4.0367', '0.0000']
+2026-04-19 19:24:48,258 - AdaPoinTr_easywide_specialist - INFO - Test[4600/10518] Taxonomy = 04074963 Sample = d9ca2dcaf1d9d850dc605801df3f66ec Losses = ['32.8486', '3.9063', '14.6227', '0.8379'] Metrics = ['0.3417', '14.6227', '0.8379', '0.0000']
+2026-04-19 19:25:13,959 - AdaPoinTr_easywide_specialist - INFO - Test[4800/10518] Taxonomy = 04379243 Sample = ead93856b735ec90f0aeabfdcb4e1dd9 Losses = ['27.6791', '3.2121', '8.9786', '0.2451'] Metrics = ['0.5366', '8.9786', '0.2451', '0.0000']
+2026-04-19 19:25:39,642 - AdaPoinTr_easywide_specialist - INFO - Test[5000/10518] Taxonomy = 03790512 Sample = 242d8c07fabbdabc78fe949fc1419876 Losses = ['37.8701', '5.7299', '21.0774', '1.6831'] Metrics = ['0.1837', '21.0774', '1.6831', '0.0000']
+2026-04-19 19:26:05,232 - AdaPoinTr_easywide_specialist - INFO - Test[5200/10518] Taxonomy = 02691156 Sample = 7b6f528acc10d3fbcf5b9c6e0c7ce895 Losses = ['24.2859', '2.5184', '12.2189', '0.6089'] Metrics = ['0.4622', '12.2189', '0.6089', '0.0000']
+2026-04-19 19:26:30,892 - AdaPoinTr_easywide_specialist - INFO - Test[5400/10518] Taxonomy = 04379243 Sample = 6765d83445c2338555f46d55537192b6 Losses = ['77.7507', '43.1617', '34.6015', '10.1978'] Metrics = ['0.3478', '34.6015', '10.1978', '0.0000']
+2026-04-19 19:26:56,631 - AdaPoinTr_easywide_specialist - INFO - Test[5600/10518] Taxonomy = 03001627 Sample = 33dc06a8e0933b1efc385a284336f217 Losses = ['33.2034', '4.0576', '16.0331', '0.8496'] Metrics = ['0.2413', '16.0331', '0.8496', '0.0000']
+2026-04-19 19:27:22,412 - AdaPoinTr_easywide_specialist - INFO - Test[5800/10518] Taxonomy = 02992529 Sample = 4a81237a7fc743763992b1138bb05b3c Losses = ['25.9715', '2.4438', '10.2935', '0.3245'] Metrics = ['0.4562', '10.2935', '0.3245', '0.0000']
+2026-04-19 19:27:48,101 - AdaPoinTr_easywide_specialist - INFO - Test[6000/10518] Taxonomy = 02958343 Sample = 37249c6f16b203de2e877e82c90c24d Losses = ['34.9386', '4.3729', '15.2474', '0.7743'] Metrics = ['0.2554', '15.2474', '0.7743', '0.0000']
+2026-04-19 19:28:13,676 - AdaPoinTr_easywide_specialist - INFO - Test[6200/10518] Taxonomy = 02933112 Sample = 956c437be87a2be5f51f77a6d7299806 Losses = ['37.4541', '5.2174', '14.4305', '0.8088'] Metrics = ['0.3316', '14.4305', '0.8088', '0.0000']
+2026-04-19 19:28:39,312 - AdaPoinTr_easywide_specialist - INFO - Test[6400/10518] Taxonomy = 03691459 Sample = 9d62c46fc3fd343d1f9f3ce366e030fb Losses = ['44.4825', '7.8194', '16.3020', '0.8582'] Metrics = ['0.2194', '16.3020', '0.8582', '0.0000']
+2026-04-19 19:29:04,988 - AdaPoinTr_easywide_specialist - INFO - Test[6600/10518] Taxonomy = 04379243 Sample = 7a8399fc51d83969a8b1d0fdee586dc9 Losses = ['30.4612', '6.7492', '9.2209', '0.3738'] Metrics = ['0.6299', '9.2209', '0.3738', '0.0000']
+2026-04-19 19:29:30,705 - AdaPoinTr_easywide_specialist - INFO - Test[6800/10518] Taxonomy = 03001627 Sample = 78abbfe9ab73729f56d13e757b0dc374 Losses = ['61.7747', '17.0599', '28.7321', '5.1128'] Metrics = ['0.3806', '28.7321', '5.1128', '0.0000']
+2026-04-19 19:29:56,332 - AdaPoinTr_easywide_specialist - INFO - Test[7000/10518] Taxonomy = 04379243 Sample = 264a075e293394a843638dabe1eb5336 Losses = ['32.7022', '5.4415', '17.3314', '2.5781'] Metrics = ['0.3118', '17.3314', '2.5781', '0.0000']
+2026-04-19 19:30:21,968 - AdaPoinTr_easywide_specialist - INFO - Test[7200/10518] Taxonomy = 03211117 Sample = 96f01698d0446641ea6e0950aa8ac31b Losses = ['41.8660', '7.9615', '17.5019', '1.2608'] Metrics = ['0.3076', '17.5019', '1.2608', '0.0000']
+2026-04-19 19:30:47,622 - AdaPoinTr_easywide_specialist - INFO - Test[7400/10518] Taxonomy = 03001627 Sample = b2239339005b14c8d675cc466d0d6fbc Losses = ['36.6194', '5.2249', '20.9921', '2.0714'] Metrics = ['0.2750', '20.9921', '2.0714', '0.0000']
+2026-04-19 19:31:13,342 - AdaPoinTr_easywide_specialist - INFO - Test[7600/10518] Taxonomy = 04074963 Sample = 57759e351ec76d86d3c1501c166e6b2a Losses = ['27.6464', '2.7292', '13.6779', '0.6838'] Metrics = ['0.3688', '13.6779', '0.6838', '0.0000']
+2026-04-19 19:31:38,954 - AdaPoinTr_easywide_specialist - INFO - Test[7800/10518] Taxonomy = 04090263 Sample = 41a9912bfe0dc96239169e4b52d9f093 Losses = ['30.5729', '7.6797', '19.1569', '3.9083'] Metrics = ['0.5734', '19.1569', '3.9083', '0.0000']
+2026-04-19 19:32:04,618 - AdaPoinTr_easywide_specialist - INFO - Test[8000/10518] Taxonomy = 04379243 Sample = bcbc5e30e12a58f07ea323bc74055b8 Losses = ['26.2379', '3.1604', '11.8285', '0.6255'] Metrics = ['0.4250', '11.8285', '0.6255', '0.0000']
+2026-04-19 19:32:30,256 - AdaPoinTr_easywide_specialist - INFO - Test[8200/10518] Taxonomy = 04379243 Sample = aabcb5d610e76ff19ca02c396af0c503 Losses = ['73.3154', '31.3059', '32.5963', '7.6494'] Metrics = ['0.3306', '32.5963', '7.6494', '0.0000']
+2026-04-19 19:32:55,848 - AdaPoinTr_easywide_specialist - INFO - Test[8400/10518] Taxonomy = 04379243 Sample = dd2c3ff28a34556a47839bae1bc65257 Losses = ['32.4086', '8.0187', '13.7258', '1.1523'] Metrics = ['0.5310', '13.7258', '1.1523', '0.0000']
+2026-04-19 19:33:21,526 - AdaPoinTr_easywide_specialist - INFO - Test[8600/10518] Taxonomy = 03337140 Sample = 149a105979cad722c1467c54b9e09ce5 Losses = ['54.6975', '12.3230', '24.2964', '3.4461'] Metrics = ['0.2040', '24.2964', '3.4461', '0.0000']
+2026-04-19 19:33:47,172 - AdaPoinTr_easywide_specialist - INFO - Test[8800/10518] Taxonomy = 02691156 Sample = 4044d5954ef85af8279326882e8430cb Losses = ['32.6085', '5.5195', '12.2362', '0.8607'] Metrics = ['0.5409', '12.2362', '0.8607', '0.0000']
+2026-04-19 19:34:12,705 - AdaPoinTr_easywide_specialist - INFO - Test[9000/10518] Taxonomy = 02828884 Sample = 4e512ab638542762d4d8765e3910f617 Losses = ['24.9259', '2.3413', '10.0210', '0.3337'] Metrics = ['0.5015', '10.0210', '0.3337', '0.0000']
+2026-04-19 19:34:38,342 - AdaPoinTr_easywide_specialist - INFO - Test[9200/10518] Taxonomy = 04379243 Sample = 5247e4e978399f1b486040c0d9e85846 Losses = ['43.7664', '11.9511', '18.4360', '2.3915'] Metrics = ['0.4839', '18.4360', '2.3915', '0.0000']
+2026-04-19 19:35:04,024 - AdaPoinTr_easywide_specialist - INFO - Test[9400/10518] Taxonomy = 03636649 Sample = 7ec821d5d8bd9f17d4aea4231844b26b Losses = ['13.9653', '0.7626', '6.2780', '0.1252'] Metrics = ['0.8214', '6.2780', '0.1252', '0.0000']
+2026-04-19 19:35:29,661 - AdaPoinTr_easywide_specialist - INFO - Test[9600/10518] Taxonomy = 04090263 Sample = 3cb82befc3290e36b58435942a1b4dac Losses = ['12.2967', '0.6051', '6.5764', '0.1609'] Metrics = ['0.7900', '6.5764', '0.1609', '0.0000']
+2026-04-19 19:35:55,243 - AdaPoinTr_easywide_specialist - INFO - Test[9800/10518] Taxonomy = 04379243 Sample = 6358336cbeedb9232d9fe390e23fd20f Losses = ['25.5665', '2.5602', '9.0893', '0.2495'] Metrics = ['0.5557', '9.0893', '0.2495', '0.0000']
+2026-04-19 19:36:20,857 - AdaPoinTr_easywide_specialist - INFO - Test[10000/10518] Taxonomy = 04401088 Sample = f73493b7c8a78000b594bbf2c494ab81 Losses = ['36.9297', '6.5759', '20.0532', '2.3009'] Metrics = ['0.3358', '20.0532', '2.3009', '0.0000']
+2026-04-19 19:36:46,497 - AdaPoinTr_easywide_specialist - INFO - Test[10200/10518] Taxonomy = 03001627 Sample = 3ffd794e5100258483bc207d8a5912e3 Losses = ['35.1202', '4.6307', '15.2906', '1.0434'] Metrics = ['0.3916', '15.2906', '1.0434', '0.0000']
+2026-04-19 19:37:12,217 - AdaPoinTr_easywide_specialist - INFO - Test[10400/10518] Taxonomy = 04090263 Sample = 26744766d59c28fb6b2c8bb96250e4a0 Losses = ['15.9639', '1.1168', '9.2751', '0.4523'] Metrics = ['0.6560', '9.2751', '0.4523', '0.0000']
+2026-04-19 19:37:27,380 - AdaPoinTr_easywide_specialist - INFO - [TEST] Metrics = ['0.3294', '18.8255', '2.1354', '0.0000']
+2026-04-19 19:37:27,381 - AdaPoinTr_easywide_specialist - INFO - ============================ TEST RESULTS ============================
+2026-04-19 19:37:27,381 - AdaPoinTr_easywide_specialist - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2026-04-19 19:37:27,381 - AdaPoinTr_easywide_specialist - INFO - 03759954	112	0.422 	27.326 	7.332 	0.000 	microphone	
+2026-04-19 19:37:27,381 - AdaPoinTr_easywide_specialist - INFO - 04330267	352	0.266 	19.376 	1.955 	0.000 	stove	
+2026-04-19 19:37:27,381 - AdaPoinTr_easywide_specialist - INFO - 03261776	120	0.278 	24.241 	3.211 	0.000 	earphone	
+2026-04-19 19:37:27,381 - AdaPoinTr_easywide_specialist - INFO - 03513137	264	0.194 	27.105 	4.246 	0.000 	helmet	
+2026-04-19 19:37:27,381 - AdaPoinTr_easywide_specialist - INFO - 04460130	216	0.349 	20.838 	2.796 	0.000 	tower	
+2026-04-19 19:37:27,381 - AdaPoinTr_easywide_specialist - INFO - 04468005	624	0.373 	15.092 	1.163 	0.000 	train	
+2026-04-19 19:37:27,381 - AdaPoinTr_easywide_specialist - INFO - 03761084	248	0.230 	19.149 	1.648 	0.000 	microwaves	
+2026-04-19 19:37:27,381 - AdaPoinTr_easywide_specialist - INFO - 04004475	272	0.251 	21.720 	2.618 	0.000 	printer	
+2026-04-19 19:37:27,381 - AdaPoinTr_easywide_specialist - INFO - 03938244	160	0.274 	19.074 	1.699 	0.000 	pillow	
+2026-04-19 19:37:27,381 - AdaPoinTr_easywide_specialist - INFO - 02992529	1336	0.397 	13.126 	0.764 	0.000 	cellphone	
+2026-04-19 19:37:27,382 - AdaPoinTr_easywide_specialist - INFO - 02808440	1376	0.271 	18.570 	1.704 	0.000 	bathtub	
+2026-04-19 19:37:27,382 - AdaPoinTr_easywide_specialist - INFO - 04530566	3104	0.450 	14.615 	1.293 	0.000 	watercraft	
+2026-04-19 19:37:27,382 - AdaPoinTr_easywide_specialist - INFO - 02871439	728	0.240 	20.583 	2.036 	0.000 	bookshelf	
+2026-04-19 19:37:27,382 - AdaPoinTr_easywide_specialist - INFO - 03593526	960	0.233 	24.240 	3.174 	0.000 	jar	
+2026-04-19 19:37:27,382 - AdaPoinTr_easywide_specialist - INFO - 04554684	272	0.216 	22.500 	2.918 	0.000 	washer	
+2026-04-19 19:37:27,382 - AdaPoinTr_easywide_specialist - INFO - 03467517	1280	0.652 	14.432 	2.240 	0.000 	guitar	
+2026-04-19 19:37:27,382 - AdaPoinTr_easywide_specialist - INFO - 04401088	1744	0.400 	12.744 	0.687 	0.000 	telephone	
+2026-04-19 19:37:27,382 - AdaPoinTr_easywide_specialist - INFO - 02954340	96	0.271 	18.555 	1.597 	0.000 	cap	
+2026-04-19 19:37:27,382 - AdaPoinTr_easywide_specialist - INFO - 02933112	2520	0.233 	17.641 	1.268 	0.000 	cabinet	
+2026-04-19 19:37:27,382 - AdaPoinTr_easywide_specialist - INFO - 03642806	736	0.364 	13.913 	0.911 	0.000 	laptop	
+2026-04-19 19:37:27,382 - AdaPoinTr_easywide_specialist - INFO - 02924116	1504	0.350 	14.352 	0.856 	0.000 	bus	
+2026-04-19 19:37:27,382 - AdaPoinTr_easywide_specialist - INFO - 02946921	176	0.221 	20.827 	2.205 	0.000 	can	
+2026-04-19 19:37:27,382 - AdaPoinTr_easywide_specialist - INFO - 02818832	376	0.266 	21.168 	2.542 	0.000 	bed	
+2026-04-19 19:37:27,383 - AdaPoinTr_easywide_specialist - INFO - 04256520	5080	0.291 	16.962 	1.405 	0.000 	sofa	
+2026-04-19 19:37:27,383 - AdaPoinTr_easywide_specialist - INFO - 04379243	13496	0.377 	15.586 	1.574 	0.000 	table	
+2026-04-19 19:37:27,383 - AdaPoinTr_easywide_specialist - INFO - 02747177	552	0.180 	22.378 	2.313 	0.000 	trash bin	
+2026-04-19 19:37:27,383 - AdaPoinTr_easywide_specialist - INFO - 03046257	1048	0.290 	18.532 	1.773 	0.000 	clock	
+2026-04-19 19:37:27,383 - AdaPoinTr_easywide_specialist - INFO - 04225987	248	0.517 	11.615 	0.733 	0.000 	skateboard	
+2026-04-19 19:37:27,383 - AdaPoinTr_easywide_specialist - INFO - 03797390	344	0.176 	23.733 	2.919 	0.000 	mug	
+2026-04-19 19:37:27,383 - AdaPoinTr_easywide_specialist - INFO - 03001627	10848	0.333 	18.170 	1.799 	0.000 	chair	
+2026-04-19 19:37:27,383 - AdaPoinTr_easywide_specialist - INFO - 03691459	2560	0.239 	21.125 	2.246 	0.000 	loudspeaker	
+2026-04-19 19:37:27,383 - AdaPoinTr_easywide_specialist - INFO - 02942699	184	0.223 	27.925 	4.528 	0.000 	camera	
+2026-04-19 19:37:27,383 - AdaPoinTr_easywide_specialist - INFO - 03636649	3712	0.437 	23.327 	4.841 	0.000 	lamp	
+2026-04-19 19:37:27,383 - AdaPoinTr_easywide_specialist - INFO - 02691156	6472	0.512 	12.568 	0.910 	0.000 	airplane	
+2026-04-19 19:37:27,383 - AdaPoinTr_easywide_specialist - INFO - 02773838	136	0.319 	17.383 	1.564 	0.000 	bag	
+2026-04-19 19:37:27,383 - AdaPoinTr_easywide_specialist - INFO - 02958343	5624	0.217 	18.998 	1.447 	0.000 	car	
+2026-04-19 19:37:27,383 - AdaPoinTr_easywide_specialist - INFO - 02880940	304	0.207 	19.355 	1.505 	0.000 	bowl	
+2026-04-19 19:37:27,384 - AdaPoinTr_easywide_specialist - INFO - 04099429	136	0.606 	12.804 	1.114 	0.000 	rocket	
+2026-04-19 19:37:27,384 - AdaPoinTr_easywide_specialist - INFO - 02828884	2904	0.426 	13.459 	1.040 	0.000 	bench	
+2026-04-19 19:37:27,384 - AdaPoinTr_easywide_specialist - INFO - 04090263	3800	0.602 	11.989 	1.002 	0.000 	rifle	
+2026-04-19 19:37:27,384 - AdaPoinTr_easywide_specialist - INFO - 03211117	1752	0.333 	16.714 	1.498 	0.000 	display	
+2026-04-19 19:37:27,384 - AdaPoinTr_easywide_specialist - INFO - 02876657	800	0.353 	18.726 	2.022 	0.000 	bottle	
+2026-04-19 19:37:27,384 - AdaPoinTr_easywide_specialist - INFO - 03710193	152	0.419 	22.593 	4.151 	0.000 	mailbox	
+2026-04-19 19:37:27,384 - AdaPoinTr_easywide_specialist - INFO - 03790512	544	0.242 	20.809 	2.020 	0.000 	motorbike	
+2026-04-19 19:37:27,384 - AdaPoinTr_easywide_specialist - INFO - 03325088	1192	0.368 	26.632 	5.416 	0.000 	faucet	
+2026-04-19 19:37:27,384 - AdaPoinTr_easywide_specialist - INFO - 02801938	184	0.210 	20.515 	1.943 	0.000 	basket	
+2026-04-19 19:37:27,384 - AdaPoinTr_easywide_specialist - INFO - 03337140	480	0.229 	19.701 	1.864 	0.000 	file cabinet	
+2026-04-19 19:37:27,384 - AdaPoinTr_easywide_specialist - INFO - 02843684	120	0.214 	25.239 	3.436 	0.000 	birdhouse	
+2026-04-19 19:37:27,384 - AdaPoinTr_easywide_specialist - INFO - 03624134	680	0.610 	12.441 	1.254 	0.000 	knife	
+2026-04-19 19:37:27,384 - AdaPoinTr_easywide_specialist - INFO - 03991062	968	0.218 	24.304 	3.075 	0.000 	flowerpot	
+2026-04-19 19:37:27,385 - AdaPoinTr_easywide_specialist - INFO - 03948459	496	0.408 	17.616 	2.059 	0.000 	pistol	
+2026-04-19 19:37:27,385 - AdaPoinTr_easywide_specialist - INFO - 03928116	384	0.280 	20.008 	2.379 	0.000 	piano	
+2026-04-19 19:37:27,385 - AdaPoinTr_easywide_specialist - INFO - 03207941	152	0.228 	18.336 	1.440 	0.000 	dishwasher	
+2026-04-19 19:37:27,385 - AdaPoinTr_easywide_specialist - INFO - 04074963	112	0.410 	13.421 	0.778 	0.000 	remote	
+2026-04-19 19:37:27,385 - AdaPoinTr_easywide_specialist - INFO - 03085013	104	0.441 	11.250 	0.537 	0.000 	keyboard	
+2026-04-19 19:37:27,385 - AdaPoinTr_easywide_specialist - INFO - Overall 		0.329 	18.825 	2.135 	0.000 	

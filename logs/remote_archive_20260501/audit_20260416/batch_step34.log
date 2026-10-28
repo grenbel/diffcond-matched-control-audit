@@ -1,0 +1,10 @@
+[2026-04-16 03:00:45] === Audit Step 3+4 only START ===
+NVIDIA GeForce RTX 5090, 32110 MiB
+
+[2026-04-16 03:00:45] === Step 3/4: R300 ep-0 diagnostic (6 evals) ===
+================================================================================
+  R300 ep-0 Diagnostic (Decision Point 1D from 2026-04-16 audit)
+  Testing whether DiffCond warm-start init is bit-exact equivalent to vanilla
+  Expected if equivalent: CDL2 ~= R100 baseline (0.520/0.734/1.352)
+================================================================================
+  [oracle] --mode easy ...

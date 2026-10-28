@@ -1,0 +1,73 @@
+optimizer : {
+  type: AdamW,
+  kwargs: {
+  lr : 0.0001,
+  weight_decay : 0.0005
+}}
+
+scheduler: {
+  type: LambdaLR,
+  kwargs: {
+  decay_step: 21,
+  lr_decay: 0.9,
+  lowest_decay: 0.02
+}}
+
+bnmscheduler: {
+  type: Lambda,
+  kwargs: {
+  decay_step: 21,
+  bn_decay: 0.5,
+  bn_momentum: 0.9,
+  lowest_decay: 0.01
+}}
+
+dataset : {
+  train : { _base_: cfgs/dataset_configs/ShapeNet-55.yaml,
+            others: {subset: 'train'}},
+  val : { _base_: cfgs/dataset_configs/ShapeNet-55.yaml,
+            others: {subset: 'test'}},
+  test : { _base_: cfgs/dataset_configs/ShapeNet-55.yaml,
+            others: {subset: 'test'}}}
+
+model : {
+  NAME: UpTrans,
+  num_pred: 8192,
+  num_seeds: 1024,
+  seed_fea: 128,
+  dim_feat: 512,
+  num_dicts: 512,
+  upscales: [1, 2, 4],
+  l2_loss: 1
+}
+
+loss : {
+  sparse_loss_weight: 1.0,
+  dense_loss_weight: 1.0,
+  dz_weight: 1.0,
+  orth_weight: 1.0
+}
+
+total_bs : 32
+step_per_update : 1
+max_epoch : 30
+
+# CDL2 consider_metric: intentional override of ODGNet upstream default (CDL1)
+# to match the main paper's ShapeNet-55 convention (AdaPoinTr + Sec 5 baselines
+# all use CDL2). This keeps the matched-control comparison on the same metric.
+consider_metric: CDL2
+
+# Cross-backbone vanilla baseline. Matched-control protocol:
+#   - warm-start from the pretrained ODGNet ShapeNet-55 checkpoint (400-epoch)
+#   - 30 ep fine-tune (matched-control with the DiffCond candidate)
+#   - optimizer + LambdaLR + bnmscheduler reuse AdaPoinTr_baseline_smoke30 values
+#     (lr 1e-4 override vs ODGNet 4e-4 default, i.e. the AdaPoinTr fine-tuning optimiser, main paper Sec. 4.2)
+#   - shared crop path with DiffCond (DiffCond-style batch int-crop)
+#   - CDL2 as consider_metric (matches main paper convention)
+training_crop_mode: diffcond
+
+# Launch:
+#   nohup python -u main.py --config cfgs/ShapeNet55_models/UpTrans.yaml \
+#       --exp_name uptrans_vanilla_warmstart30_seed42 --seed 42 --val_freq 10 \
+#       --start_ckpts <path-to-pretrained-ShapeNet55-checkpoint> \
+#       > train_uptrans_vanilla_seed42.log 2>&1 &

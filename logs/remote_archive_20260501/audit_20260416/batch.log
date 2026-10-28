@@ -1,0 +1,36 @@
+[2026-04-16 02:36:48] === Audit 2026-04-16 GPU batch START ===
+[2026-04-16 02:36:48] Prereq check: runner.py EMD fix...
+7
+[2026-04-16 02:36:48] OK: runner.py has 7 require_emd=True calls (expected 4)
+[2026-04-16 02:36:48] Prereq check: GPU...
+NVIDIA GeForce RTX 5090, 32110 MiB
+
+[2026-04-16 02:36:48] === Step 1/4: Construct R300 ep-0 ckpt ===
+/root/miniconda3/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+[Load] R100 ckpt from experiments/AdaPoinTr/ShapeNet55_models/baseline_sn55/ckpt-best.pth
+  R100 keys: 335
+[Build] AdaPoinTr_DiffCond from cfgs/ShapeNet55_models/AdaPoinTr_DiffCond_smoke30.yaml
+using group version 2
+  Model class: AdaPoinTr_DiffCond
+  Remapped 6 query_ranking -> base_scorer keys
+  strict=False load OK: missing=13 (all expected diff_cond_*/diff_predictor*), unexpected=0=0
+  Zero-initialized diff_cond_proj / diff_cond_gate[0].bias / diff_delta last layer
+[Save] ep-0 ckpt to experiments/AdaPoinTr_DiffCond_smoke30/ShapeNet55_models/diffcond_r300/ckpt-epoch-000.pth
+  Total keys saved: 354
+
+Done. Next: run eval with main.py --test --ckpts <out> --mode easy/median/hard, --difficulty_source oracle/predict (6 runs total).
+[2026-04-16 02:36:53] Step 1 done.
+
+[2026-04-16 02:36:53] === Step 2/4: Phase 2.6 re-eval with EMD fix (9 evals) ===
+Using checkpoint: ckpt-epoch-030.pth (found in all runs)
+[R300(DiffCond-oracle)] ckpt: ckpt-epoch-030.pth
+[R300(DiffCond-predict)] ckpt: ckpt-epoch-030.pth
+[R200C(matched-vanilla)] ckpt: ckpt-epoch-030.pth
+
+================================================================================
+  Phase 2.6 MATCHED CONTROL: R200C(vanilla+DiffCond-crop) vs R300(DiffCond)
+  Both warmstarted from R100 ckpt-best, same seed, same crop path, same 30ep
+  Only difference: DiffCond modules (embedding + ranking delta + gated injection + predictor)
+================================================================================
+  [R300(DiffCond-oracle)] --mode easy ...

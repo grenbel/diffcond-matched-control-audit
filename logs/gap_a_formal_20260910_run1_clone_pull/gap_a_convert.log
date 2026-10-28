@@ -1,0 +1,54 @@
+pass 1: shard 1/25 rows=2099
+pass 1: shard 2/25 rows=2099
+pass 1: shard 3/25 rows=2099
+pass 1: shard 4/25 rows=2099
+pass 1: shard 5/25 rows=2099
+pass 1: shard 6/25 rows=2099
+pass 1: shard 7/25 rows=2099
+pass 1: shard 8/25 rows=2099
+pass 1: shard 9/25 rows=2099
+pass 1: shard 10/25 rows=2099
+pass 1: shard 11/25 rows=2099
+pass 1: shard 12/25 rows=2099
+pass 1: shard 13/25 rows=2099
+pass 1: shard 14/25 rows=2099
+pass 1: shard 15/25 rows=2099
+pass 1: shard 16/25 rows=2099
+pass 1: shard 17/25 rows=2099
+pass 1: shard 18/25 rows=2099
+pass 1: shard 19/25 rows=2099
+pass 1: shard 20/25 rows=2099
+pass 1: shard 21/25 rows=2098
+pass 1: shard 22/25 rows=2098
+pass 1: shard 23/25 rows=2098
+pass 1: shard 24/25 rows=2098
+pass 1: shard 25/25 rows=2098
+{
+  "n_train": 41952,
+  "n_test": 10518,
+  "n_shards": 25,
+  "n_rows": 52470,
+  "n_unique_labels": 1,
+  "references_total": 17,
+  "references_located": 0,
+  "references": {
+    "02808440-2b9228db2c77130d44221bef0fa3c36b.npy": null,
+    "02992529-298ca71453baf6ee2a9eb0f146e94477.npy": null,
+    "02992529-5f600251394fabe6808ca88aece2e3dc.npy": null,
+    "02992529-baafe1add38af23a5f0b5b54dbc4f35c.npy": null,
+    "02992529-d2f3eb92a31649647c17b7a9bb17a24.npy": null,
+    "02992529-e33e1483c4c22b1ae71852a7b0e4fcb6.npy": null,
+    "03467517-2331b83b682e6dcd1082f2ea630bf69e.npy": null,
+    "03593526-276bff32316ddd3eec0dc003f0209134.npy": null,
+    "03761084-6942c30f25bbcde7ced224a469840964.npy": null,
+    "04330267-65eb72bf33da5b1511ff208156ce047.npy": null,
+    "04330267-aa0f6ff9f592b327eadb8f8b5bc7d9a5.npy": null,
+    "04401088-fc1675526d043e81a2811061ff7e0824.npy": null,
+    "04468005-3aafecb126c5e46d49906937a72a14ff.npy": null,
+    "04468005-84a3fd24d2cefcfcd781754d41e2576e.npy": null,
+    "04530566-2a86437a50f1b51727ac692756be9e24.npy": null,
+    "04530566-2c8725b9a09b6d0a44ebbc705ad8c07.npy": null,
+    "04530566-d188b20659011142c8067f9682b92f0e.npy": null
+  },
+  "verdict": "FAIL only 0 reference clouds found in the table (need 10)"
+}

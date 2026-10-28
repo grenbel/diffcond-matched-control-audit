@@ -1,0 +1,456 @@
+{
+  "provenance": {
+    "script": "tools/crop_path_quantification.py",
+    "sampler_sources": [
+      "tools/runner.py:217 + utils/misc.py:165-167,195-197 (Path A)",
+      "tools/runner.py:186-196 + utils/misc.py:168-169,198-200 (Path B)"
+    ],
+    "bin_boundary_source": "tools/runner.py:201-206 (ratio 0.375 / 0.625)",
+    "npoints": 8192,
+    "batch_size": 48,
+    "iters": 50000,
+    "seed": 2026,
+    "blocks": 50,
+    "note": "Both paths share the identical geometric crop routine and an FPS-to-2048 step (Path A inside seprate_point_cloud, Path B outside); differences quantified here stem from the num_crop sampling law and its batch granularity. 'analytic' values are exact under the ideal continuous-uniform model and are the ones to quote; 'simulated' values are Monte Carlo realisations. Bin statistics for Path A are post-hoc binning by the S/M/H thresholds (the vanilla path produces no difficulty label)."
+  },
+  "analytic": {
+    "A_mean": 4096.0,
+    "A_std": 1182.701991204885,
+    "B_mean": 4095.5,
+    "B_std": 1182.413316061689,
+    "A_within_batch_var_expected": 1369642.6666666665,
+    "A_within_batch_std_rms": 1170.3173358823096,
+    "B_within_batch_std": 0.0,
+    "A_bin_probs_S_M_H": [
+      0.2499389797412741,
+      0.4998779594825482,
+      0.2501830607761777
+    ],
+    "B_bin_probs_S_M_H": [
+      0.25,
+      0.5,
+      0.25
+    ],
+    "A_homogeneous_batch_prob": 3.511328332913516e-15,
+    "A_homogeneous_batch_prob_exact_rational": 3.5113283329135155e-15,
+    "A_two_bin_batch_prob": 2.005799381778915e-06,
+    "A_three_bin_batch_prob": 0.9999979942006147,
+    "B_homogeneous_batch_prob": 1.0,
+    "A_support": [
+      2048,
+      6144
+    ],
+    "B_support_almost_sure": [
+      2048,
+      6143
+    ],
+    "ks_marginal_exact": 0.00024408103490702882,
+    "ks_marginal_closed_form": 0.000244081034903588
+  },
+  "simulated": {
+    "path_A_list_crop": {
+      "marginal_mean": 4095.180139166667,
+      "marginal_std": 1182.629330298191,
+      "observed_min": 2048,
+      "observed_max": 6144,
+      "quantiles_p5_p25_p50_p75_p95": [
+        2252.0,
+        3071.0,
+        4095.0,
+        5119.0,
+        5940.0
+      ],
+      "within_batch_std_mean": 1167.7174601829925,
+      "within_batch_std_rms": 1170.2750733730059,
+      "within_batch_var_mean": 1369543.7473581943,
+      "homogeneous_batch_frac": 0.0,
+      "two_bin_batch_frac": 0.0,
+      "three_bin_batch_frac": 1.0,
+      "homogeneous_batch_count": 0,
+      "bin_occupancy_S_M_H": [
+        0.250255,
+        0.4997975,
+        0.2499475
+      ],
+      "_block_se": {
+        "marginal_mean": 0.6931820526077423,
+        "marginal_std": 0.34405117661498247,
+        "within_batch_var_mean": 831.8598896456855
+      }
+    },
+    "path_B_int_crop": {
+      "marginal_mean": 4097.80496,
+      "marginal_std": 1179.1039341802734,
+      "observed_min": 2048,
+      "observed_max": 6143,
+      "quantiles_p5_p25_p50_p75_p95": [
+        2251.0,
+        3082.0,
+        4100.0,
+        5118.0,
+        5934.049999999814
+      ],
+      "within_batch_std_mean": 0.0,
+      "within_batch_std_rms": 0.0,
+      "within_batch_var_mean": 0.0,
+      "homogeneous_batch_frac": 1.0,
+      "two_bin_batch_frac": 0.0,
+      "three_bin_batch_frac": 0.0,
+      "homogeneous_batch_count": 50000,
+      "bin_occupancy_S_M_H": [
+        0.24744,
+        0.50308,
+        0.24948
+      ],
+      "_block_se": {
+        "marginal_mean": 5.820506888225945,
+        "marginal_std": 2.365731179084674,
+        "within_batch_var_mean": 0.0
+      }
+    },
+    "ks_marginal_observed": 0.0041379166666666856,
+    "ks_note": "Observed two-sample KS between the simulated marginals is dominated by Monte Carlo noise (Path B has only 50000 independent draws, so the noise scale is ~1/sqrt(iters) = 0.0045); the exact KS distance between the two laws is 1/4097 = 0.000244."
+  },
+  "self_check": {
+    "passed": true,
+    "statistical_checks": [
+      {
+        "check": "A marginal mean",
+        "simulated": 4095.180139166667,
+        "analytic": 4096.0,
+        "tolerance": 2.7727282104309694,
+        "pass": true
+      },
+      {
+        "check": "A marginal std",
+        "simulated": 1182.629330298191,
+        "analytic": 1182.701991204885,
+        "tolerance": 1.3762047064599299,
+        "pass": true
+      },
+      {
+        "check": "B marginal mean",
+        "simulated": 4097.80496,
+        "analytic": 4095.5,
+        "tolerance": 23.28202755290378,
+        "pass": true
+      },
+      {
+        "check": "B marginal std",
+        "simulated": 1179.1039341802734,
+        "analytic": 1182.413316061689,
+        "tolerance": 9.462924716338696,
+        "pass": true
+      },
+      {
+        "check": "A within-batch var (mean over batches)",
+        "simulated": 1369543.7473581943,
+        "analytic": 1369642.6666666665,
+        "tolerance": 3327.439558582742,
+        "pass": true
+      },
+      {
+        "check": "B within-batch std vs analytic field",
+        "simulated": 0.0,
+        "analytic": 0.0,
+        "tolerance": 0.0,
+        "pass": true
+      },
+      {
+        "check": "A bin occupancy S",
+        "simulated": 0.250255,
+        "analytic": 0.2499389797412741,
+        "tolerance": 0.0011179430103160151,
+        "pass": true
+      },
+      {
+        "check": "B bin occupancy S",
+        "simulated": 0.24744,
+        "analytic": 0.25,
+        "tolerance": 0.007745966692414834,
+        "pass": true
+      },
+      {
+        "check": "A bin occupancy M",
+        "simulated": 0.4997975,
+        "analytic": 0.4998779594825482,
+        "tolerance": 0.001290994410279952,
+        "pass": true
+      },
+      {
+        "check": "B bin occupancy M",
+        "simulated": 0.50308,
+        "analytic": 0.5,
+        "tolerance": 0.00894427190999916,
+        "pass": true
+      },
+      {
+        "check": "A bin occupancy H",
+        "simulated": 0.2499475,
+        "analytic": 0.2501830607761777,
+        "tolerance": 0.0011183067464604424,
+        "pass": true
+      },
+      {
+        "check": "B bin occupancy H",
+        "simulated": 0.24948,
+        "analytic": 0.25,
+        "tolerance": 0.007745966692414834,
+        "pass": true
+      },
+      {
+        "check": "A homogeneous batch count (expected ~0, allow <=1)",
+        "simulated": 0,
+        "analytic": 0,
+        "tolerance": 1,
+        "pass": true
+      },
+      {
+        "check": "A three-bin batch frac",
+        "simulated": 1.0,
+        "analytic": 0.9999979942006147,
+        "tolerance": 2.5334847855209277e-05,
+        "pass": true
+      },
+      {
+        "check": "B homogeneous batch frac (exact 1)",
+        "simulated": 1.0,
+        "analytic": 1.0,
+        "tolerance": 0.0,
+        "pass": true
+      },
+      {
+        "check": "B three-bin batch frac (exact 0)",
+        "simulated": 0.0,
+        "analytic": 0.0,
+        "tolerance": 0.0,
+        "pass": true
+      },
+      {
+        "check": "small-batch validation bs=2: A_homogeneous_batch_prob",
+        "simulated": 0.37675,
+        "analytic": 0.37493903186988176,
+        "tolerance": 0.013692618573533918,
+        "pass": true
+      },
+      {
+        "check": "small-batch validation bs=2: A_two_bin_batch_prob",
+        "simulated": 0.62325,
+        "analytic": 0.6250609681301182,
+        "tolerance": 0.013692618573533918,
+        "pass": true
+      },
+      {
+        "check": "small-batch validation bs=3: A_homogeneous_batch_prob",
+        "simulated": 0.15585,
+        "analytic": 0.15618140247989476,
+        "tolerance": 0.010267960732270372,
+        "pass": true
+      },
+      {
+        "check": "small-batch validation bs=3: A_two_bin_batch_prob",
+        "simulated": 0.65765,
+        "analytic": 0.656272888169961,
+        "tolerance": 0.013433652799533532,
+        "pass": true
+      },
+      {
+        "check": "small-batch validation bs=3: A_three_bin_batch_prob",
+        "simulated": 0.1865,
+        "analytic": 0.18754570935014425,
+        "tolerance": 0.011040736071639261,
+        "pass": true
+      }
+    ],
+    "deterministic_checks": [
+      {
+        "check": "A_within_batch_std_rms^2 equals A_within_batch_var_expected",
+        "pass": true,
+        "detail": "1170.317336^2 vs 1369642.666667",
+        "repro": false
+      },
+      {
+        "check": "A homogeneous prob: float formula equals exact-rational recomputation",
+        "pass": true,
+        "detail": "3.511328e-15 vs 3.511328e-15",
+        "repro": false
+      },
+      {
+        "check": "A observed support within [lo, hi]",
+        "pass": true,
+        "detail": "observed [2048, 6144] vs [2048, 6144]",
+        "repro": false
+      },
+      {
+        "check": "A attains both endpoints (miss prob ~exp(-iters*bs/n_a))",
+        "pass": true,
+        "detail": "observed [2048, 6144]",
+        "repro": true
+      },
+      {
+        "check": "B observed support within [lo, hi] (hi only via endpoint rounding)",
+        "pass": true,
+        "detail": "observed [2048, 6143]",
+        "repro": false
+      },
+      {
+        "check": "B observed max == hi-1 (reproducibility check of the default run; the law allows hi with probability ~2^-53)",
+        "pass": true,
+        "detail": "observed max 6143 vs 6143",
+        "repro": true
+      },
+      {
+        "check": "exact KS from pmfs equals closed form 1/n_a",
+        "pass": true,
+        "detail": "0.000244081 vs 0.000244081",
+        "repro": false
+      },
+      {
+        "check": "bin probabilities sum to 1 (A and B)",
+        "pass": true,
+        "detail": "1.0, 1.0",
+        "repro": false
+      },
+      {
+        "check": "A batch-composition probabilities sum to 1 (low-level invariant only: the three closed forms satisfy this identity algebraically, so it is not an independent check)",
+        "pass": true,
+        "detail": "sum_k p^bs + pairwise inclusion-exclusion + all-three inclusion-exclusion",
+        "repro": false
+      },
+      {
+        "check": "oracle: A_mean",
+        "pass": true,
+        "detail": "analytic 4096.0 vs oracle 4096.0",
+        "repro": false
+      },
+      {
+        "check": "oracle: B_mean",
+        "pass": true,
+        "detail": "analytic 4095.5 vs oracle 4095.5",
+        "repro": false
+      },
+      {
+        "check": "oracle: A_std",
+        "pass": true,
+        "detail": "analytic 1182.701991204885 vs oracle 1182.701991204885",
+        "repro": false
+      },
+      {
+        "check": "oracle: B_std",
+        "pass": true,
+        "detail": "analytic 1182.413316061689 vs oracle 1182.413316061689",
+        "repro": false
+      },
+      {
+        "check": "oracle: A_within_batch_var_expected",
+        "pass": true,
+        "detail": "analytic 1369642.6666666665 vs oracle 1369642.6666666667",
+        "repro": false
+      },
+      {
+        "check": "oracle: A_within_batch_std_rms",
+        "pass": true,
+        "detail": "analytic 1170.3173358823096 vs oracle 1170.3173358823096",
+        "repro": false
+      },
+      {
+        "check": "oracle: A_homogeneous_batch_prob",
+        "pass": true,
+        "detail": "analytic 3.511328332913516e-15 vs oracle 3.5113283329135155e-15",
+        "repro": false
+      },
+      {
+        "check": "oracle: A_homogeneous_batch_prob_exact_rational",
+        "pass": true,
+        "detail": "analytic 3.5113283329135155e-15 vs oracle 3.5113283329135155e-15",
+        "repro": false
+      },
+      {
+        "check": "oracle: A_two_bin_batch_prob",
+        "pass": true,
+        "detail": "analytic 2.005799381778915e-06 vs oracle 2.0057993817789147e-06",
+        "repro": false
+      },
+      {
+        "check": "oracle: A_three_bin_batch_prob",
+        "pass": true,
+        "detail": "analytic 0.9999979942006147 vs oracle 0.9999979942006147",
+        "repro": false
+      },
+      {
+        "check": "oracle: ks_marginal_exact",
+        "pass": true,
+        "detail": "analytic 0.00024408103490702882 vs oracle 0.000244081034903588",
+        "repro": false
+      },
+      {
+        "check": "oracle: ks_marginal_closed_form",
+        "pass": true,
+        "detail": "analytic 0.000244081034903588 vs oracle 0.000244081034903588",
+        "repro": false
+      },
+      {
+        "check": "oracle: B_homogeneous_batch_prob",
+        "pass": true,
+        "detail": "analytic 1.0 vs oracle 1.0",
+        "repro": false
+      },
+      {
+        "check": "oracle: B_within_batch_std",
+        "pass": true,
+        "detail": "analytic 0.0 vs oracle 0.0",
+        "repro": false
+      },
+      {
+        "check": "oracle: A_bin_probs_S_M_H[S]",
+        "pass": true,
+        "detail": "analytic 0.2499389797412741 vs oracle 0.2499389797412741",
+        "repro": false
+      },
+      {
+        "check": "oracle: B_bin_probs_S_M_H[S]",
+        "pass": true,
+        "detail": "analytic 0.25 vs oracle 0.25",
+        "repro": false
+      },
+      {
+        "check": "oracle: A_bin_probs_S_M_H[M]",
+        "pass": true,
+        "detail": "analytic 0.4998779594825482 vs oracle 0.4998779594825482",
+        "repro": false
+      },
+      {
+        "check": "oracle: B_bin_probs_S_M_H[M]",
+        "pass": true,
+        "detail": "analytic 0.5 vs oracle 0.5",
+        "repro": false
+      },
+      {
+        "check": "oracle: A_bin_probs_S_M_H[H]",
+        "pass": true,
+        "detail": "analytic 0.2501830607761777 vs oracle 0.2501830607761777",
+        "repro": false
+      },
+      {
+        "check": "oracle: B_bin_probs_S_M_H[H]",
+        "pass": true,
+        "detail": "analytic 0.25 vs oracle 0.25",
+        "repro": false
+      },
+      {
+        "check": "oracle: A_support and B_support_almost_sure",
+        "pass": true,
+        "detail": "analytic [2048, 6144] / [2048, 6143] vs oracle [2048, 6144] / [2048, 6143]",
+        "repro": false
+      },
+      {
+        "check": "oracle: A support size and literal bin counts",
+        "pass": true,
+        "detail": "counts from analytic probs vs literal [1024, 2048, 1025]",
+        "repro": false
+      }
+    ],
+    "failures": [],
+    "reproducibility_checks_enforced": true
+  }
+}

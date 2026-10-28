@@ -1,0 +1,6 @@
+[2026-09-10 02:02:45] chain: waiting for the M0 launcher (pid 7424) to exit; root=/root/PoinTr
+[2026-09-10 03:23:16] chain: M0_PASS.json present
+[2026-09-10 03:23:16] chain: M1 launched: pid 13874 log /root/PoinTr/gap_a_formal_m1_20260910_032316.log
+[2026-09-10 13:10:00] chain: M1 launcher exited rc=3
+[2026-09-10 13:10:30] chain: M1 FAILED: launcher exited rc=3 without /root/PoinTr/gap_a_logs/M2_PASS.json (see /root/PoinTr/gap_a_formal_m1_20260910_032316.log)
+[2026-09-10 13:10:30] chain: shutdown in 180 min unless a GAP-A launcher/main.py is running by then (cmd: /usr/bin/shutdown)

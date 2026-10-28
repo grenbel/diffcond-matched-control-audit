@@ -1,0 +1,413 @@
+{
+  "_note": "n_total_samples counts test samples (the 100 listed in consumed_samples); each sample is evaluated at the first 2 of the 8 official viewpoints (run log: viewpoints=2), i.e. 200 completions, category-balanced as in tools/eval_vanilla_subset.py.",
+  "hard": {
+    "fscore": 0.3131531763041379,
+    "cdl1": 17.057686420823114,
+    "cdl2": 1.4301852573710139,
+    "emd": 35.12600502890124,
+    "n_categories": 18,
+    "n_total_samples": 100,
+    "consumed_samples": [
+      {
+        "taxonomy_id": "03759954",
+        "model_id": "109f1779a6993782f6426d6e3b63c5ce"
+      },
+      {
+        "taxonomy_id": "03759954",
+        "model_id": "b726f3df205d3b5911daf38720b2dbe4"
+      },
+      {
+        "taxonomy_id": "04330267",
+        "model_id": "aa0f6ff9f592b327eadb8f8b5bc7d9a5"
+      },
+      {
+        "taxonomy_id": "04330267",
+        "model_id": "966ea3afa71e3a574bba687d3dbe6227"
+      },
+      {
+        "taxonomy_id": "03759954",
+        "model_id": "baca1996923c25f943a6722dac94523b"
+      },
+      {
+        "taxonomy_id": "04330267",
+        "model_id": "bc2daa0406ad3324d724d9ce5af6d8e"
+      },
+      {
+        "taxonomy_id": "04330267",
+        "model_id": "f56ea6d924207b5515c4fa96a52ac4ff"
+      },
+      {
+        "taxonomy_id": "03261776",
+        "model_id": "64ab866236bd012a43ccf9e3e30b934d"
+      },
+      {
+        "taxonomy_id": "04330267",
+        "model_id": "f5c26b7b35991739281d68269dab9234"
+      },
+      {
+        "taxonomy_id": "04330267",
+        "model_id": "a95a8fc9fa81aadf40332412c5d013fb"
+      },
+      {
+        "taxonomy_id": "03261776",
+        "model_id": "5bb7c6bcd79bd45e16262e5b395acc86"
+      },
+      {
+        "taxonomy_id": "04330267",
+        "model_id": "821634b0caa5cdb57f0571f06b666f9f"
+      },
+      {
+        "taxonomy_id": "03513137",
+        "model_id": "ba62b73074d51637b61d7759f8544b8a"
+      },
+      {
+        "taxonomy_id": "03759954",
+        "model_id": "e491db83f21a5a6c4fdb7f619836e43d"
+      },
+      {
+        "taxonomy_id": "03513137",
+        "model_id": "89815c92980efb27226eabe1cca3e850"
+      },
+      {
+        "taxonomy_id": "04330267",
+        "model_id": "65eb72bf33da5b1511ff208156ce047"
+      },
+      {
+        "taxonomy_id": "04330267",
+        "model_id": "d6bbaeb047b53c43e6b2f975f419eaae"
+      },
+      {
+        "taxonomy_id": "03261776",
+        "model_id": "97940f715478c1c4ce76da9b42b3ec76"
+      },
+      {
+        "taxonomy_id": "04330267",
+        "model_id": "24dfeb26cc47a046e6fbf2f5ae574e36"
+      },
+      {
+        "taxonomy_id": "03513137",
+        "model_id": "45d6e3b0b91073af7359b134afde902"
+      },
+      {
+        "taxonomy_id": "03759954",
+        "model_id": "ae85334cc3752412374e74ec21028517"
+      },
+      {
+        "taxonomy_id": "03261776",
+        "model_id": "e17597ea42e1e18f3f1da4d22f591d97"
+      },
+      {
+        "taxonomy_id": "04460130",
+        "model_id": "44e8212fe3d44b1ec8b200f28f6c5853"
+      },
+      {
+        "taxonomy_id": "04468005",
+        "model_id": "c6486d5bb854e5758e966271baaa42c9"
+      },
+      {
+        "taxonomy_id": "03513137",
+        "model_id": "a612b83619ce985f3de9dfa8d65133cb"
+      },
+      {
+        "taxonomy_id": "04468005",
+        "model_id": "bc1c21333b5e22bf8145a50db7d52d60"
+      },
+      {
+        "taxonomy_id": "04468005",
+        "model_id": "8e5519f10f0748695a7f2ba88db92d63"
+      },
+      {
+        "taxonomy_id": "04468005",
+        "model_id": "3aafecb126c5e46d49906937a72a14ff"
+      },
+      {
+        "taxonomy_id": "04468005",
+        "model_id": "565d7f01c9f8b6b53ae1361afc45ac52"
+      },
+      {
+        "taxonomy_id": "04330267",
+        "model_id": "8c2491e5245804d1ffc6e457221b9271"
+      },
+      {
+        "taxonomy_id": "03513137",
+        "model_id": "f778971235a67bba754cd8e5dd1ab945"
+      },
+      {
+        "taxonomy_id": "03761084",
+        "model_id": "71221c380da96cbebe67d9b32c3ddf8"
+      },
+      {
+        "taxonomy_id": "03761084",
+        "model_id": "b95c595576a3846aad0ab2bac067d6b1"
+      },
+      {
+        "taxonomy_id": "04468005",
+        "model_id": "b7306885432f3bd5299a59bfd8e7d284"
+      },
+      {
+        "taxonomy_id": "04330267",
+        "model_id": "1d5eb167825bacba688d3cf9b52f4662"
+      },
+      {
+        "taxonomy_id": "04004475",
+        "model_id": "30a39487e93a01dc8eeae74a05480d07"
+      },
+      {
+        "taxonomy_id": "03938244",
+        "model_id": "57992207eebe4009eb332cd2d2a300"
+      },
+      {
+        "taxonomy_id": "02992529",
+        "model_id": "d5fd6679ddfc8ddc59f56ab706e2f74c"
+      },
+      {
+        "taxonomy_id": "04004475",
+        "model_id": "266014617a73853f9a8c3855109c1ee0"
+      },
+      {
+        "taxonomy_id": "02808440",
+        "model_id": "7e5857a4abbcbe9098dcd47b5c6dc2e5"
+      },
+      {
+        "taxonomy_id": "04468005",
+        "model_id": "1f4f874957d140cbc834d88a99ade94d"
+      },
+      {
+        "taxonomy_id": "04468005",
+        "model_id": "13aac1cbf34edd552470de2774d6099"
+      },
+      {
+        "taxonomy_id": "03759954",
+        "model_id": "4bd87bb547f266f3133483af4507508a"
+      },
+      {
+        "taxonomy_id": "04460130",
+        "model_id": "8cf718ed6a5fefd8fcaad7f5ff5ee65c"
+      },
+      {
+        "taxonomy_id": "03938244",
+        "model_id": "e8a13e84cc6db127616f4ad120b6332a"
+      },
+      {
+        "taxonomy_id": "02992529",
+        "model_id": "2eae0713342e1103397d790c3d0a8fb5"
+      },
+      {
+        "taxonomy_id": "03513137",
+        "model_id": "2c9086096c0fe9889215d30ce83ed4dd"
+      },
+      {
+        "taxonomy_id": "04468005",
+        "model_id": "84a3fd24d2cefcfcd781754d41e2576e"
+      },
+      {
+        "taxonomy_id": "02808440",
+        "model_id": "25370f9a01166beaa13edbe825cc0113"
+      },
+      {
+        "taxonomy_id": "04460130",
+        "model_id": "7696d47199f9055a79ea17c9c8a4feb0"
+      },
+      {
+        "taxonomy_id": "04530566",
+        "model_id": "2c8725b9a09b6d0a44ebbc705ad8c07"
+      },
+      {
+        "taxonomy_id": "02871439",
+        "model_id": "a27245122e4c284d67aad4e7f685c416"
+      },
+      {
+        "taxonomy_id": "04530566",
+        "model_id": "f2e303d85466a0fd88d5590328ce0ddf"
+      },
+      {
+        "taxonomy_id": "02871439",
+        "model_id": "ca56637ae250ff1259adebe36b392f27"
+      },
+      {
+        "taxonomy_id": "03593526",
+        "model_id": "276bff32316ddd3eec0dc003f0209134"
+      },
+      {
+        "taxonomy_id": "02871439",
+        "model_id": "a45d9c141a0ae4a627afb81497348633"
+      },
+      {
+        "taxonomy_id": "04530566",
+        "model_id": "ad8c4e406743c29a5b84e0ded5ffcc87"
+      },
+      {
+        "taxonomy_id": "04530566",
+        "model_id": "2a86437a50f1b51727ac692756be9e24"
+      },
+      {
+        "taxonomy_id": "04530566",
+        "model_id": "d188b20659011142c8067f9682b92f0e"
+      },
+      {
+        "taxonomy_id": "04530566",
+        "model_id": "12900e06f0f4ec9e49f471d054f6b528"
+      },
+      {
+        "taxonomy_id": "04530566",
+        "model_id": "de7c3942e8a460ffa9bd9d33180e7ac0"
+      },
+      {
+        "taxonomy_id": "04530566",
+        "model_id": "957ac9708448e111f0ef63bb932093ce"
+      },
+      {
+        "taxonomy_id": "04554684",
+        "model_id": "b91045b62241ebd158c88d30f502a452"
+      },
+      {
+        "taxonomy_id": "03761084",
+        "model_id": "6942c30f25bbcde7ced224a469840964"
+      },
+      {
+        "taxonomy_id": "04530566",
+        "model_id": "d1e59a48852965fb036cb639ea80765"
+      },
+      {
+        "taxonomy_id": "03938244",
+        "model_id": "efd9fffc04d235dab55fde51a411949f"
+      },
+      {
+        "taxonomy_id": "03467517",
+        "model_id": "8402cf0cbb6dfc92b5b477b4ad381f9"
+      },
+      {
+        "taxonomy_id": "02992529",
+        "model_id": "298ca71453baf6ee2a9eb0f146e94477"
+      },
+      {
+        "taxonomy_id": "02871439",
+        "model_id": "6f65749bdf82cca8d810b14a81e12eca"
+      },
+      {
+        "taxonomy_id": "04530566",
+        "model_id": "d703643f4a4f76a16c63b8b48495261a"
+      },
+      {
+        "taxonomy_id": "04530566",
+        "model_id": "296f0b6a15012e33d87f29c9afcc633e"
+      },
+      {
+        "taxonomy_id": "02992529",
+        "model_id": "89f17a3563941ba9f2fdbae39bae1eff"
+      },
+      {
+        "taxonomy_id": "03467517",
+        "model_id": "f86c277a6e1f444293f0194265a9746c"
+      },
+      {
+        "taxonomy_id": "02992529",
+        "model_id": "d2f3eb92a31649647c17b7a9bb17a24"
+      },
+      {
+        "taxonomy_id": "02992529",
+        "model_id": "657fbd67af945c39d9e3837723c05057"
+      },
+      {
+        "taxonomy_id": "02871439",
+        "model_id": "704e5237bfe45aed809222e4341a7d65"
+      },
+      {
+        "taxonomy_id": "04530566",
+        "model_id": "f26d39cd431135cbc92e1912af872cc"
+      },
+      {
+        "taxonomy_id": "03467517",
+        "model_id": "a19b20b4ec66e57d6ee1932063f20d95"
+      },
+      {
+        "taxonomy_id": "02871439",
+        "model_id": "dbcee69eecd13b3b5196bf7c8aa10ef1"
+      },
+      {
+        "taxonomy_id": "02992529",
+        "model_id": "1e52452aeb4bacbd83156841b8188cc7"
+      },
+      {
+        "taxonomy_id": "04330267",
+        "model_id": "f4f9375024901a8e41965be83b7745a"
+      },
+      {
+        "taxonomy_id": "03467517",
+        "model_id": "2331b83b682e6dcd1082f2ea630bf69e"
+      },
+      {
+        "taxonomy_id": "02808440",
+        "model_id": "2b9228db2c77130d44221bef0fa3c36b"
+      },
+      {
+        "taxonomy_id": "02992529",
+        "model_id": "e33e1483c4c22b1ae71852a7b0e4fcb6"
+      },
+      {
+        "taxonomy_id": "02808440",
+        "model_id": "caccc22a1266150d3321831d2245cf06"
+      },
+      {
+        "taxonomy_id": "02992529",
+        "model_id": "ac0967f9fe8f63f46b2ba76eab0d2b1c"
+      },
+      {
+        "taxonomy_id": "02992529",
+        "model_id": "515b5a63ebb56aad7aeb5bbdd191fd4d"
+      },
+      {
+        "taxonomy_id": "02808440",
+        "model_id": "8932abdd856b615756e28fa5d4761d89"
+      },
+      {
+        "taxonomy_id": "03467517",
+        "model_id": "dad399bf54b6186a40c20797381ee39f"
+      },
+      {
+        "taxonomy_id": "02992529",
+        "model_id": "5f600251394fabe6808ca88aece2e3dc"
+      },
+      {
+        "taxonomy_id": "02992529",
+        "model_id": "6e18484e72c79bf6943bfa124ea09a0b"
+      },
+      {
+        "taxonomy_id": "04401088",
+        "model_id": "bf7daa3ade10ee75bad093be69512dcd"
+      },
+      {
+        "taxonomy_id": "04530566",
+        "model_id": "2a3e2ecc6c6d3be83b2c1416b6e149a5"
+      },
+      {
+        "taxonomy_id": "02992529",
+        "model_id": "baafe1add38af23a5f0b5b54dbc4f35c"
+      },
+      {
+        "taxonomy_id": "04530566",
+        "model_id": "c359eef375afa3b6dd42314e00caace4"
+      },
+      {
+        "taxonomy_id": "02954340",
+        "model_id": "188702a3bb44f40c284432ce2f42f498"
+      },
+      {
+        "taxonomy_id": "03467517",
+        "model_id": "bdc8060a937278f25b6b4dd555e889f9"
+      },
+      {
+        "taxonomy_id": "02871439",
+        "model_id": "ffdc8c4c72d7ca59ccbf1ee2df182caa"
+      },
+      {
+        "taxonomy_id": "04530566",
+        "model_id": "b3090ee38204289cb90142192ec795d"
+      },
+      {
+        "taxonomy_id": "04530566",
+        "model_id": "d0e9f4c4bb582c3cfa0636f27a8b2a9c"
+      }
+    ]
+  }
+}

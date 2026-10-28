@@ -1,0 +1,62 @@
+/root/miniconda3/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Config: cfgs/ShapeNet55_models/AdaPoinTr_DiffCond_smoke30.yaml
+Ckpt:   experiments/AdaPoinTr_DiffCond_smoke30/ShapeNet55_models/diffcond_r300/ckpt-epoch-030.pth
+Output: /root/PoinTr/R300_predictor_calibration.json
+Limiting to first 500 samples (sanity mode)
+
+Loading DiffCond model + checkpoint...
+using group version 2
+Loading weights from experiments/AdaPoinTr_DiffCond_smoke30/ShapeNet55_models/diffcond_r300/ckpt-epoch-030.pth...
+ckpts @ 30 epoch( performance = {'F-Score': 0.370617775409284, 'CDL1': 14.237126000908528, 'CDL2': 0.9487464151572106, 'EMDistance': 0.0})
+  Sanity: predictor[0].weight L2=11.2623 (must be > 0 for trained ckpt)
+  Single-GPU mode (CUDA_VISIBLE_DEVICES=all)
+Model loaded.
+
+Collecting predictions over test set (3 difficulties x 8 viewpoints x N samples)...
+[DATASET] Open file data/ShapeNet55-34/ShapeNet-55/test.txt
+[DATASET] 10518 instances were loaded
+  Processed 1 samples (1 batches)
+  Processed 51 samples (51 batches)
+  Processed 101 samples (101 batches)
+  Processed 151 samples (151 batches)
+  Processed 201 samples (201 batches)
+  Processed 251 samples (251 batches)
+  Processed 301 samples (301 batches)
+  Processed 351 samples (351 batches)
+  Processed 401 samples (401 batches)
+  Processed 451 samples (451 batches)
+
+==============================================================================
+  Difficulty Predictor Calibration Report
+==============================================================================
+  Total predictions: 12000
+  Per-oracle counts: easy=4000 median=4000 hard=4000
+
+  Top-1 Accuracy: 99.88%
+
+  Confusion Matrix (rows=oracle, cols=predicted):
+               easy   median     hard
+    easy      3997        3        0
+  median         3     3991        6
+    hard         0        3     3997
+
+  Per-class metrics:
+               prec   recall       f1   support
+    easy     0.999    0.999    0.999      4000
+  median     0.998    0.998    0.998      4000
+    hard     0.999    0.999    0.999      4000
+
+  Pearson correlation:  +0.9991
+  Spearman correlation: +nan
+
+  Brier score (lower better): 0.0021
+  ECE 10-bin   (lower better): 0.0051
+
+  Per-oracle-difficulty breakdown:
+  oracle=easy: n=4000, acc=99.92%, mean_probs (easy/med/hard) = (0.997, 0.002, 0.000)
+  oracle=median: n=4000, acc=99.78%, mean_probs (easy/med/hard) = (0.005, 0.992, 0.003)
+  oracle=hard: n=4000, acc=99.92%, mean_probs (easy/med/hard) = (0.000, 0.008, 0.992)
+==============================================================================
+
+  Wrote JSON results to /root/PoinTr/R300_predictor_calibration.json

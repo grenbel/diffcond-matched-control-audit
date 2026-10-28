@@ -1,0 +1,10 @@
+设置成功!
+注意：
+1. 仅限学术用途和加速访问github/huggingface，不承诺稳定性
+2. 开启加速后对访问其他资源如pip源等会*更慢*
+[23:31:14] network_turbo on
+[23:31:14] python Python 3.12.3 | torch 2.8.0+cu128 cuda 12.8
+[23:31:20] nvcc: Build cuda_12.8.r12.8/compiler.35583870_0
+[23:31:20] 1/6 python deps (pins relaxed per requirements.txt comments)
+ERROR: Could not find a version that satisfies the requirement easydict (from versions: none)
+ERROR: No matching distribution found for easydict

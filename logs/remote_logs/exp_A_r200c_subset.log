@@ -1,0 +1,34 @@
+/root/miniconda3/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+2026-04-17 17:15:07,587 - MODEL - INFO - Transformer with config {'NAME': 'AdaPoinTr', 'num_query': 512, 'num_points': 8192, 'center_num': [512, 256], 'global_feature_dim': 1024, 'encoder_type': 'graph', 'decoder_type': 'fc', 'encoder_config': {'embed_dim': 384, 'depth': 6, 'num_heads': 6, 'k': 8, 'n_group': 2, 'mlp_ratio': 2.0, 'block_style_list': ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn'], 'combine_style': 'concat'}, 'decoder_config': {'embed_dim': 384, 'depth': 8, 'num_heads': 6, 'k': 8, 'n_group': 2, 'mlp_ratio': 2.0, 'self_attn_block_style_list': ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn'], 'self_attn_combine_style': 'concat', 'cross_attn_block_style_list': ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn'], 'cross_attn_combine_style': 'concat'}}
+Config: cfgs/ShapeNet55_models/AdaPoinTr_baseline_smoke30_diffcrop.yaml
+Ckpt:   experiments/AdaPoinTr_baseline_smoke30_diffcrop/ShapeNet55_models/r200c_warmstart30_diffcrop/ckpt-best.pth
+Modes:  ['hard']
+Viewpoints: first 2 of 8
+N samples:  100
+Output: /root/PoinTr/R200C_subset_hard_100x2.json
+
+Loading vanilla AdaPoinTr model...
+using group version 2
+Loading weights from experiments/AdaPoinTr_baseline_smoke30_diffcrop/ShapeNet55_models/r200c_warmstart30_diffcrop/ckpt-best.pth...
+ckpts @ 20 epoch( performance = {'F-Score': 0.37335822015377257, 'CDL1': 14.062205412981, 'CDL2': 0.9028191175376343, 'EMDistance': 0.0})
+  Model has diff_cond_* modules: False (expected False for vanilla R200C)
+Building test dataloader...
+[DATASET] Open file data/ShapeNet55-34/ShapeNet-55/test.txt
+[DATASET] 10518 instances were loaded
+
+[Mode=hard] num_crop=6144 viewpoints=2 n_samples_max=100 require_emd=True
+  [hard] processed 1 samples (1 categories)
+  [hard] processed 21 samples (4 categories)
+  [hard] processed 41 samples (11 categories)
+  [hard] processed 61 samples (14 categories)
+  [hard] processed 81 samples (16 categories)
+
+========================================================================
+  Vanilla AdaPoinTr Subset Eval (category-balanced)
+========================================================================
+  Mode       F-Score     CDL1     CDL2      EMD  n_cat n_samp
+  -------- --------- -------- -------- --------  ----- ------
+  hard        0.3118   17.302    1.529  34.4499     18    100
+
+Saved JSON to /root/PoinTr/R200C_subset_hard_100x2.json

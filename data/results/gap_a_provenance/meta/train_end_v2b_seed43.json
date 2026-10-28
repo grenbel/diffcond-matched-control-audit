@@ -1,0 +1,13 @@
+{
+  "cell": "v2b",
+  "seed": 43,
+  "ckpt": "experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b_seed43/ckpt-epoch-030.pth",
+  "ckpt_sha256": "8af6dc2c56f1a0599d8a4b3cb53fa54ce6e3d164636309fda58a0a319605dd28",
+  "ckpt_bytes": 395871791,
+  "r100": "experiments/AdaPoinTr/ShapeNet55_models/baseline_sn55/ckpt-best.pth",
+  "r100_sha256_at_end": "f1acb03baa1f80c5c4eeb361d9b23a0193e9891d31df1a0de0b4de37bee534b3",
+  "config": "cfgs/ShapeNet55_models/AdaPoinTr_DiffCond_v2b.yaml",
+  "config_sha256": "6e4ac340b7ca9a8c8ee73cde299db912ebe2bb7a8e8b5fa03513e65dc935ec4b",
+  "m0_sentinel_sha256": "413ffcdac7780d287cfb5170e9f02184d51641de3e753862b617660e0fe00d07",
+  "ended_at": "2026-09-10T10:43:43+0800"
+}

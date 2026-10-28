@@ -1,0 +1,25 @@
+[16:05:54] python Python 3.12.3 | torch 2.8.0+cu128 cuda 12.8
+[16:06:00] nvcc: Build cuda_12.8.r12.8/compiler.35583870_0
+[16:06:00] 1/6 python deps (versions pinned by tools/gap_a_constraints.txt = the instance verified 2026-09-09)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+  torch unchanged: 2.8.0+cu128 12.8
+[16:06:13] 2/6 dataset: the accepted OFFICIAL archive only (no mirror fallback)
+  accepted dataset re-verified (fast mode): 52470 clouds, /root/PoinTr/data/ShapeNet55-34/shapenet_pc -> /root/autodl-tmp/ShapeNet55-34/shapenet_pc
+[16:06:21] 3/6 experiments/ on the data disk (checkpoints must not fill the 30 GB system disk)
+[16:06:21] 4/6 pointnet2_ops pinned to erikwijmans/Pointnet2_PyTorch@b5ceb6d9ca0467ea34beb81023f96ee82228f626 (clone via the academic proxy; build without it, no build isolation)
+  already installed from b5ceb6d9ca0467ea34beb81023f96ee82228f626
+[16:06:25] 5/6 CUDA extensions: chamfer_dist + emd (AdaPoinTr path) + gridding/gridding_loss/cubic_feature_sampling (pulled in by models/__init__)
+  chamfer_dist importable
+  emd importable
+  gridding importable
+  gridding_loss importable
+  cubic_feature_sampling importable
+[16:06:40] 6/6 import + data sanity + environment manifest
+/root/miniconda3/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+  models + chamfer + pointnet2_ops import OK
+  npy sample (first test.txt entry) 03759954-109f1779a6993782f6426d6e3b63c5ce.npy (8192, 3) float64
+  environment manifest: gap_a_env_manifest.json (2.8.0+cu128 pointnet2 b5ceb6d9ca04 202 packages)
+/dev/md0         50G   27G   24G  54% /root/autodl-tmp
+overlay          30G  2.9G   28G  10% /
+[16:06:54] SETUP DONE — next: python tools/gap_a_remote.py push --with-r100 --with-v2b-ckpt; then launch --stage m0 on a GPU

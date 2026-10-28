@@ -1,0 +1,17 @@
+--- a/models/UpTrans.py
++++ b/models/UpTrans.py
+@@ -10 +10 @@
+-from models.pointnet import PointNet_SA_Module_KNN, MLP_Res, UpLayer, fps_subsample, Transformer
++from .pointnet import PointNet_SA_Module_KNN, MLP_Res, UpLayer, fps_subsample, Transformer as UpTransTransformer  # noqa: F401 (fps_subsample kept for API parity with ODGNet)
+@@ -23 +23 @@
+-        self.transformer_1 = Transformer(seed_fea, dim=64)
++        self.transformer_1 = UpTransTransformer(seed_fea, dim=64)
+@@ -25 +25 @@
+-        self.transformer_2 = Transformer(256, dim=64)
++        self.transformer_2 = UpTransTransformer(256, dim=64)
+@@ -27 +27 @@
+-        #self.transformer_3 = Transformer(384, dim=64)
++        #self.transformer_3 = UpTransTransformer(384, dim=64)
+@@ -71 +71 @@
+-        u0_fea = self.ps_0(l4_fea)  # (b, 256, 128)
++        u0_fea = self.ps_0(l4_fea)  # (b, 256, num_seeds//16); e.g. num_seeds=1024 -> (b, 256, 64)

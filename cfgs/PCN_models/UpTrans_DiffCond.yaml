@@ -1,0 +1,80 @@
+optimizer : {
+  type: AdamW,
+  kwargs: {
+  lr : 0.0001,
+  weight_decay : 0.0005
+}}
+
+scheduler: {
+  type: LambdaLR,
+  kwargs: {
+  decay_step: 21,
+  lr_decay: 0.9,
+  lowest_decay: 0.02
+}}
+
+bnmscheduler: {
+  type: Lambda,
+  kwargs: {
+  decay_step: 21,
+  bn_decay: 0.5,
+  bn_momentum: 0.9,
+  lowest_decay: 0.01
+}}
+
+# The reported PCN runs read the float32 .npy copy written by tools/cache_pcn_to_npy.py,
+# so the dataset entries use cfgs/dataset_configs/PCN_npy.yaml. To read the official .pcd
+# files instead, use cfgs/dataset_configs/PCN.yaml (the same point clouds up to float32 rounding).
+dataset : {
+  train : { _base_: cfgs/dataset_configs/PCN_npy.yaml,
+            others: {subset: 'train'}},
+  val : { _base_: cfgs/dataset_configs/PCN_npy.yaml,
+            others: {subset: 'test'}},
+  test : { _base_: cfgs/dataset_configs/PCN_npy.yaml,
+            others: {subset: 'test'}}}
+
+model : {
+  NAME: UpTrans_DiffCond,
+  num_pred: 16384,
+  num_seeds: 1024,
+  seed_fea: 128,
+  dim_feat: 512,
+  num_dicts: 256,
+  upscales: [1, 4, 4],
+  l2_loss: 0,
+  diff_embed_dim: 256,
+  lambda_ce: 0.1
+}
+
+loss : {
+  sparse_loss_weight: 1.0,
+  dense_loss_weight: 1.0,
+  dz_weight: 1.0,
+  orth_weight: 1.0
+}
+
+total_bs : 16
+step_per_update : 1
+max_epoch : 30
+
+consider_metric: CDL1
+
+# [NOTE] PCN DiffCond scope caveat:
+# PCN has no native per-sample crop ratio, so no oracle difficulty label exists.
+# The reported PCN runs use a nearest-neighbour geometry proxy instead: the 95th
+# percentile of the nearest-neighbour distance from the complete to the partial
+# cloud, binned into tertiles with thresholds from the training set. It is
+# computed once by tools/compute_pcn_proxy_difficulty.py, stored in
+# data/PCN/difficulty_proxy.json and read by datasets/PCNDataset.py (main paper
+# Sec. 5.5, PCN sanity check; supplementary PCN sanity-check section).
+# runner.py refuses DiffCond training or evaluation on PCN without a valid proxy
+# unless `allow_pcn_median_fallback: true` is set; that median-constant regime
+# gives DiffCond no per-sample difficulty signal and was not used.
+#
+# The main ShapeNet-55 cross-backbone result is unaffected.
+#
+# Launch (seeds 42 / 43 for the 2-seed sanity check):
+#   nohup python -u main.py --config cfgs/PCN_models/UpTrans_DiffCond.yaml \
+#       --exp_name uptrans_diffcond_pcn_warmstart30_seed42 --seed 42 --val_freq 10 \
+#       --start_ckpts <path-to-pretrained-PCN-checkpoint> \
+#       > train_uptrans_diffcond_pcn_seed42.log 2>&1 &

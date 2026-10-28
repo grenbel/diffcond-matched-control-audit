@@ -1,0 +1,122 @@
+[12:59:23] === M0 SANITY START ===
+[12:59:23] M0a: reproduce retained seed-42 v2b hard-bin eval (expected CDL2 1.550, F-Score 0.340, CDL1 16.835)
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+
+libgomp: Invalid value for environment variable OMP_NUM_THREADS
+/root/miniconda3/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+2026-09-09 12:59:28,197 - AdaPoinTr_DiffCond_v2b - INFO - Copy the Config file from cfgs/ShapeNet55_models/AdaPoinTr_DiffCond_v2b.yaml to ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/test_diffcond_v2b_seed42_repro_eval_hard_hard/config.yaml
+2026-09-09 12:59:28,197 - AdaPoinTr_DiffCond_v2b - INFO - args.config : cfgs/ShapeNet55_models/AdaPoinTr_DiffCond_v2b.yaml
+2026-09-09 12:59:28,197 - AdaPoinTr_DiffCond_v2b - INFO - args.launcher : none
+2026-09-09 12:59:28,197 - AdaPoinTr_DiffCond_v2b - INFO - args.local_rank : 0
+2026-09-09 12:59:28,197 - AdaPoinTr_DiffCond_v2b - INFO - args.num_workers : 4
+2026-09-09 12:59:28,197 - AdaPoinTr_DiffCond_v2b - INFO - args.seed : 0
+2026-09-09 12:59:28,197 - AdaPoinTr_DiffCond_v2b - INFO - args.deterministic : True
+2026-09-09 12:59:28,197 - AdaPoinTr_DiffCond_v2b - INFO - args.sync_bn : False
+2026-09-09 12:59:28,197 - AdaPoinTr_DiffCond_v2b - INFO - args.exp_name : test_diffcond_v2b_seed42_repro_eval_hard_hard
+2026-09-09 12:59:28,197 - AdaPoinTr_DiffCond_v2b - INFO - args.start_ckpts : None
+2026-09-09 12:59:28,197 - AdaPoinTr_DiffCond_v2b - INFO - args.ckpts : experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b/ckpt-epoch-030.pth
+2026-09-09 12:59:28,197 - AdaPoinTr_DiffCond_v2b - INFO - args.val_freq : 1
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - args.resume : False
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - args.test : True
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - args.mode : hard
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - args.difficulty_source : oracle
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - args.experiment_path : ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/test_diffcond_v2b_seed42_repro_eval_hard_hard
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - args.tfboard_path : ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/TFBoard/test_diffcond_v2b_seed42_repro_eval_hard_hard
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - args.log_name : AdaPoinTr_DiffCond_v2b
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - args.use_gpu : True
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - args.distributed : False
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.optimizer = edict()
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.optimizer.type : AdamW
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.optimizer.kwargs = edict()
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.optimizer.kwargs.lr : 0.0001
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.optimizer.kwargs.weight_decay : 0.0005
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.scheduler = edict()
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.scheduler.type : LambdaLR
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.scheduler.kwargs = edict()
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.scheduler.kwargs.decay_step : 21
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.scheduler.kwargs.lr_decay : 0.9
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.scheduler.kwargs.lowest_decay : 0.02
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.bnmscheduler = edict()
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.bnmscheduler.type : Lambda
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.bnmscheduler.kwargs = edict()
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.bnmscheduler.kwargs.decay_step : 21
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.bnmscheduler.kwargs.bn_decay : 0.5
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.bnmscheduler.kwargs.bn_momentum : 0.9
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.bnmscheduler.kwargs.lowest_decay : 0.01
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset = edict()
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.train = edict()
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.train._base_ = edict()
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.train._base_.NAME : ShapeNet
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.train._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.train._base_.N_POINTS : 8192
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.train._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.train.others = edict()
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.train.others.subset : train
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.train.others.bs : 48
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.val = edict()
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.val._base_ = edict()
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.val._base_.NAME : ShapeNet
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.val._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.val._base_.N_POINTS : 8192
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.val._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.val.others = edict()
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.val.others.subset : test
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.test = edict()
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.test._base_ = edict()
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.test._base_.NAME : ShapeNet
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.test._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.test._base_.N_POINTS : 8192
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.test._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.test.others = edict()
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.dataset.test.others.subset : test
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.model = edict()
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.model.NAME : AdaPoinTr_DiffCond
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.model.num_query : 512
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.model.num_points : 8192
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.model.center_num : [512, 256]
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.model.global_feature_dim : 1024
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.model.encoder_type : graph
+2026-09-09 12:59:28,198 - AdaPoinTr_DiffCond_v2b - INFO - config.model.decoder_type : fc
+2026-09-09 12:59:28,199 - AdaPoinTr_DiffCond_v2b - INFO - config.model.use_vanilla_ranking : True
+2026-09-09 12:59:28,199 - AdaPoinTr_DiffCond_v2b - INFO - config.model.ce_lambda : 0
+2026-09-09 12:59:28,199 - AdaPoinTr_DiffCond_v2b - INFO - config.model.encoder_config = edict()
+2026-09-09 12:59:28,199 - AdaPoinTr_DiffCond_v2b - INFO - config.model.encoder_config.embed_dim : 384
+2026-09-09 12:59:28,199 - AdaPoinTr_DiffCond_v2b - INFO - config.model.encoder_config.depth : 6
+2026-09-09 12:59:28,199 - AdaPoinTr_DiffCond_v2b - INFO - config.model.encoder_config.num_heads : 6
+2026-09-09 12:59:28,199 - AdaPoinTr_DiffCond_v2b - INFO - config.model.encoder_config.k : 8
+2026-09-09 12:59:28,199 - AdaPoinTr_DiffCond_v2b - INFO - config.model.encoder_config.n_group : 2
+2026-09-09 12:59:28,199 - AdaPoinTr_DiffCond_v2b - INFO - config.model.encoder_config.mlp_ratio : 2.0
+2026-09-09 12:59:28,199 - AdaPoinTr_DiffCond_v2b - INFO - config.model.encoder_config.block_style_list : ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn']
+2026-09-09 12:59:28,199 - AdaPoinTr_DiffCond_v2b - INFO - config.model.encoder_config.combine_style : concat
+2026-09-09 12:59:28,199 - AdaPoinTr_DiffCond_v2b - INFO - config.model.decoder_config = edict()
+2026-09-09 12:59:28,199 - AdaPoinTr_DiffCond_v2b - INFO - config.model.decoder_config.embed_dim : 384
+2026-09-09 12:59:28,199 - AdaPoinTr_DiffCond_v2b - INFO - config.model.decoder_config.depth : 8
+2026-09-09 12:59:28,199 - AdaPoinTr_DiffCond_v2b - INFO - config.model.decoder_config.num_heads : 6
+2026-09-09 12:59:28,199 - AdaPoinTr_DiffCond_v2b - INFO - config.model.decoder_config.k : 8
+2026-09-09 12:59:28,199 - AdaPoinTr_DiffCond_v2b - INFO - config.model.decoder_config.n_group : 2
+2026-09-09 12:59:28,199 - AdaPoinTr_DiffCond_v2b - INFO - config.model.decoder_config.mlp_ratio : 2.0
+2026-09-09 12:59:28,199 - AdaPoinTr_DiffCond_v2b - INFO - config.model.decoder_config.self_attn_block_style_list : ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn']
+2026-09-09 12:59:28,199 - AdaPoinTr_DiffCond_v2b - INFO - config.model.decoder_config.self_attn_combine_style : concat
+2026-09-09 12:59:28,199 - AdaPoinTr_DiffCond_v2b - INFO - config.model.decoder_config.cross_attn_block_style_list : ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn']
+2026-09-09 12:59:28,199 - AdaPoinTr_DiffCond_v2b - INFO - config.model.decoder_config.cross_attn_combine_style : concat
+2026-09-09 12:59:28,199 - AdaPoinTr_DiffCond_v2b - INFO - config.total_bs : 48
+2026-09-09 12:59:28,199 - AdaPoinTr_DiffCond_v2b - INFO - config.step_per_update : 1
+2026-09-09 12:59:28,199 - AdaPoinTr_DiffCond_v2b - INFO - config.max_epoch : 30
+2026-09-09 12:59:28,199 - AdaPoinTr_DiffCond_v2b - INFO - config.consider_metric : CDL2
+2026-09-09 12:59:28,199 - AdaPoinTr_DiffCond_v2b - INFO - Distributed training: False
+2026-09-09 12:59:28,199 - AdaPoinTr_DiffCond_v2b - INFO - Set random seed to 0, deterministic: True
+2026-09-09 12:59:28,200 - AdaPoinTr_DiffCond_v2b - INFO - Tester start ... 
+2026-09-09 12:59:29,837 - AdaPoinTr_DiffCond_v2b - INFO - Loading weights from experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/diffcond_v2b/ckpt-epoch-030.pth...
+2026-09-09 12:59:30,143 - AdaPoinTr_DiffCond_v2b - INFO - DiffCond load: missing=0, unexpected=0
+2026-09-09 12:59:30,143 - AdaPoinTr_DiffCond_v2b - INFO - ckpts @ 30 epoch( performance = {'F-Score': 0.3764597885014959, 'CDL1': 14.047940709816771, 'CDL2': 0.9256243125782395, 'EMDistance': 0.0})
+Create experiment path successfully at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/test_diffcond_v2b_seed42_repro_eval_hard_hard
+Create TFBoard path successfully at ./experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/TFBoard/test_diffcond_v2b_seed42_repro_eval_hard_hard
+[DATASET] Open file data/ShapeNet55-34/ShapeNet-55/test.txt
+[DATASET] 10518 instances were loaded
+using group version 2
+2026-09-09 13:01:22,072 - AdaPoinTr_DiffCond_v2b - INFO - Test[200/10518] Taxonomy = 04530566 Sample = 3bb6a5deec68ef77fee64ca302793912 Losses = ['22.5054', '2.0637', '11.8245', '0.5547'] Metrics = ['0.4456', '11.8245', '0.5547', '0.0000']
+2026-09-09 13:03:15,846 - AdaPoinTr_DiffCond_v2b - INFO - Test[400/10518] Taxonomy = 03636649 Sample = 90651b3febfc3afe15226aa76eb7c3e Losses = ['42.4348', '7.4501', '18.5102', '1.4824'] Metrics = ['0.2933', '18.5102', '1.4824', '0.0000']
+2026-09-09 13:05:12,446 - AdaPoinTr_DiffCond_v2b - INFO - Test[600/10518] Taxonomy = 03001627 Sample = fae27953e0f0404ca99df2794ec76201 Losses = ['33.4517', '4.7103', '20.2200', '2.0372'] Metrics = ['0.3282', '20.2200', '2.0372', '0.0000']
+2026-09-09 13:07:23,461 - AdaPoinTr_DiffCond_v2b - INFO - Test[800/10518] Taxonomy = 03593526 Sample = 324c9045843b9470d29670d38a4c9e7e Losses = ['38.7870', '6.2035', '20.4443', '1.8482'] Metrics = ['0.2890', '20.4443', '1.8482', '0.0000']

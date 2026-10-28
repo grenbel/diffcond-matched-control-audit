@@ -1,0 +1,10 @@
+{
+  "cell": "v2b",
+  "seed": 43,
+  "r100": "experiments/AdaPoinTr/ShapeNet55_models/baseline_sn55/ckpt-best.pth",
+  "r100_sha256_at_launch": "f1acb03baa1f80c5c4eeb361d9b23a0193e9891d31df1a0de0b4de37bee534b3",
+  "config": "cfgs/ShapeNet55_models/AdaPoinTr_DiffCond_v2b.yaml",
+  "config_sha256": "6e4ac340b7ca9a8c8ee73cde299db912ebe2bb7a8e8b5fa03513e65dc935ec4b",
+  "m0_sentinel_sha256": "413ffcdac7780d287cfb5170e9f02184d51641de3e753862b617660e0fe00d07",
+  "started_at": "2026-09-10T08:17:26+0800"
+}

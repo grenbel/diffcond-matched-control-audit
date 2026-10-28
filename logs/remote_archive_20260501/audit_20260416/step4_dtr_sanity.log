@@ -1,0 +1,47 @@
+/root/miniconda3/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Config:        cfgs/ShapeNet55_models/AdaPoinTr_DiffCond_smoke30.yaml
+Ckpt:          experiments/AdaPoinTr_DiffCond_smoke30/ShapeNet55_models/diffcond_r300/ckpt-epoch-030.pth
+Modes:         ['hard']
+Viewpoints:    first 2 of 8
+N samples:     100
+Output:        /tmp/dtr_results.json
+
+Loading DiffCond model...
+using group version 2
+Loading weights from experiments/AdaPoinTr_DiffCond_smoke30/ShapeNet55_models/diffcond_r300/ckpt-epoch-030.pth...
+ckpts @ 30 epoch( performance = {'F-Score': 0.370617775409284, 'CDL1': 14.237126000908528, 'CDL2': 0.9487464151572106, 'EMDistance': 0.0})
+  Sanity: predictor[0].weight L2=11.2623 (must be > 0 for trained ckpt)
+  Sanity: diff_cond_proj.weight L2=4.6102 (must be > 0 for trained DiffCond ckpt)
+  Single-GPU mode (CUDA_VISIBLE_DEVICES=all)
+Building test dataloader...
+[DATASET] Open file data/ShapeNet55-34/ShapeNet-55/test.txt
+[DATASET] 10518 instances were loaded
+
+[Mode=hard] num_crop=6144 viewpoints=2 require_emd=True
+  [hard] processed 1 samples (1 categories so far)
+  [hard] processed 21 samples (4 categories so far)
+  [hard] processed 41 samples (11 categories so far)
+  [hard] processed 61 samples (14 categories so far)
+  [hard] processed 81 samples (16 categories so far)
+
+================================================================================================
+  DTR Strategy Comparison (CDL2 lower=better, F-Score higher=better)
+================================================================================================
+
+  -- Mode: hard (n_categories=18, n_samples=100) --
+  Strategy             F-Score     CDL1     CDL2      EMD
+  ------------------ --------- -------- -------- --------
+  cond_easy             0.3051   18.072    1.696  36.9035
+  cond_median           0.3074   17.851    1.667  35.9562
+  cond_hard             0.3090   17.649    1.673  34.2302
+  predict               0.3089   17.651    1.673  34.3113
+  mean                  0.3075   17.843    1.662  35.7719
+  weighted              0.3089   17.655    1.672  34.4911
+  oracle_best_cdl2      0.3083   17.515    1.571  34.9678
+  Best non-oracle: mean (CDL2 1.662)
+  oracle_best_cdl2 (CDL2-only upper bound): 1.571 (gap from best non-oracle: +0.091, +5.50%)
+
+================================================================================================
+
+Wrote JSON results to /tmp/dtr_results.json

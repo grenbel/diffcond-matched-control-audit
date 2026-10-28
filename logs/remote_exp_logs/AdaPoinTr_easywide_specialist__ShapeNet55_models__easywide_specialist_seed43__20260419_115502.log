@@ -1,0 +1,1066 @@
+2026-04-19 11:55:02,193 - AdaPoinTr_easywide_specialist - INFO - Copy the Config file from cfgs/ShapeNet55_models/AdaPoinTr_easywide_specialist.yaml to ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/config.yaml
+2026-04-19 11:55:02,193 - AdaPoinTr_easywide_specialist - INFO - args.config : cfgs/ShapeNet55_models/AdaPoinTr_easywide_specialist.yaml
+2026-04-19 11:55:02,193 - AdaPoinTr_easywide_specialist - INFO - args.launcher : none
+2026-04-19 11:55:02,193 - AdaPoinTr_easywide_specialist - INFO - args.local_rank : 0
+2026-04-19 11:55:02,193 - AdaPoinTr_easywide_specialist - INFO - args.num_workers : 4
+2026-04-19 11:55:02,193 - AdaPoinTr_easywide_specialist - INFO - args.seed : 43
+2026-04-19 11:55:02,193 - AdaPoinTr_easywide_specialist - INFO - args.deterministic : False
+2026-04-19 11:55:02,193 - AdaPoinTr_easywide_specialist - INFO - args.sync_bn : False
+2026-04-19 11:55:02,193 - AdaPoinTr_easywide_specialist - INFO - args.exp_name : easywide_specialist_seed43
+2026-04-19 11:55:02,193 - AdaPoinTr_easywide_specialist - INFO - args.start_ckpts : experiments/AdaPoinTr/ShapeNet55_models/baseline_sn55/ckpt-best.pth
+2026-04-19 11:55:02,193 - AdaPoinTr_easywide_specialist - INFO - args.ckpts : None
+2026-04-19 11:55:02,193 - AdaPoinTr_easywide_specialist - INFO - args.val_freq : 10
+2026-04-19 11:55:02,193 - AdaPoinTr_easywide_specialist - INFO - args.resume : False
+2026-04-19 11:55:02,193 - AdaPoinTr_easywide_specialist - INFO - args.test : False
+2026-04-19 11:55:02,193 - AdaPoinTr_easywide_specialist - INFO - args.mode : None
+2026-04-19 11:55:02,193 - AdaPoinTr_easywide_specialist - INFO - args.difficulty_source : oracle
+2026-04-19 11:55:02,193 - AdaPoinTr_easywide_specialist - INFO - args.experiment_path : ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43
+2026-04-19 11:55:02,193 - AdaPoinTr_easywide_specialist - INFO - args.tfboard_path : ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/TFBoard/easywide_specialist_seed43
+2026-04-19 11:55:02,193 - AdaPoinTr_easywide_specialist - INFO - args.log_name : AdaPoinTr_easywide_specialist
+2026-04-19 11:55:02,193 - AdaPoinTr_easywide_specialist - INFO - args.use_gpu : True
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - args.distributed : False
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.optimizer = edict()
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.optimizer.type : AdamW
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.optimizer.kwargs = edict()
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.optimizer.kwargs.lr : 0.0001
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.optimizer.kwargs.weight_decay : 0.0005
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.scheduler = edict()
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.scheduler.type : LambdaLR
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.scheduler.kwargs = edict()
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.scheduler.kwargs.decay_step : 21
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.scheduler.kwargs.lr_decay : 0.9
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.scheduler.kwargs.lowest_decay : 0.02
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.bnmscheduler = edict()
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.bnmscheduler.type : Lambda
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.bnmscheduler.kwargs = edict()
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.bnmscheduler.kwargs.decay_step : 21
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.bnmscheduler.kwargs.bn_decay : 0.5
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.bnmscheduler.kwargs.bn_momentum : 0.9
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.bnmscheduler.kwargs.lowest_decay : 0.01
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.dataset = edict()
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.dataset.train = edict()
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.dataset.train._base_ = edict()
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.dataset.train._base_.NAME : ShapeNet
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.dataset.train._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.dataset.train._base_.N_POINTS : 8192
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.dataset.train._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.dataset.train.others = edict()
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.dataset.train.others.subset : train
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.dataset.train.others.bs : 48
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.dataset.val = edict()
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.dataset.val._base_ = edict()
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.dataset.val._base_.NAME : ShapeNet
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.dataset.val._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.dataset.val._base_.N_POINTS : 8192
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.dataset.val._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.dataset.val.others = edict()
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.dataset.val.others.subset : test
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.dataset.test = edict()
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.dataset.test._base_ = edict()
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.dataset.test._base_.NAME : ShapeNet
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.dataset.test._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.dataset.test._base_.N_POINTS : 8192
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.dataset.test._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.dataset.test.others = edict()
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.dataset.test.others.subset : test
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.model = edict()
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.model.NAME : AdaPoinTr
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.model.num_query : 512
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.model.num_points : 8192
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.model.center_num : [512, 256]
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.model.global_feature_dim : 1024
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.model.encoder_type : graph
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.model.decoder_type : fc
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.model.encoder_config = edict()
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.model.encoder_config.embed_dim : 384
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.model.encoder_config.depth : 6
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.model.encoder_config.num_heads : 6
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.model.encoder_config.k : 8
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.model.encoder_config.n_group : 2
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.model.encoder_config.mlp_ratio : 2.0
+2026-04-19 11:55:02,194 - AdaPoinTr_easywide_specialist - INFO - config.model.encoder_config.block_style_list : ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn']
+2026-04-19 11:55:02,195 - AdaPoinTr_easywide_specialist - INFO - config.model.encoder_config.combine_style : concat
+2026-04-19 11:55:02,195 - AdaPoinTr_easywide_specialist - INFO - config.model.decoder_config = edict()
+2026-04-19 11:55:02,195 - AdaPoinTr_easywide_specialist - INFO - config.model.decoder_config.embed_dim : 384
+2026-04-19 11:55:02,195 - AdaPoinTr_easywide_specialist - INFO - config.model.decoder_config.depth : 8
+2026-04-19 11:55:02,195 - AdaPoinTr_easywide_specialist - INFO - config.model.decoder_config.num_heads : 6
+2026-04-19 11:55:02,195 - AdaPoinTr_easywide_specialist - INFO - config.model.decoder_config.k : 8
+2026-04-19 11:55:02,195 - AdaPoinTr_easywide_specialist - INFO - config.model.decoder_config.n_group : 2
+2026-04-19 11:55:02,195 - AdaPoinTr_easywide_specialist - INFO - config.model.decoder_config.mlp_ratio : 2.0
+2026-04-19 11:55:02,195 - AdaPoinTr_easywide_specialist - INFO - config.model.decoder_config.self_attn_block_style_list : ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn']
+2026-04-19 11:55:02,195 - AdaPoinTr_easywide_specialist - INFO - config.model.decoder_config.self_attn_combine_style : concat
+2026-04-19 11:55:02,195 - AdaPoinTr_easywide_specialist - INFO - config.model.decoder_config.cross_attn_block_style_list : ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn']
+2026-04-19 11:55:02,195 - AdaPoinTr_easywide_specialist - INFO - config.model.decoder_config.cross_attn_combine_style : concat
+2026-04-19 11:55:02,195 - AdaPoinTr_easywide_specialist - INFO - config.total_bs : 48
+2026-04-19 11:55:02,195 - AdaPoinTr_easywide_specialist - INFO - config.step_per_update : 1
+2026-04-19 11:55:02,195 - AdaPoinTr_easywide_specialist - INFO - config.max_epoch : 30
+2026-04-19 11:55:02,195 - AdaPoinTr_easywide_specialist - INFO - config.consider_metric : CDL2
+2026-04-19 11:55:02,195 - AdaPoinTr_easywide_specialist - INFO - config.training_crop_mode : diffcond
+2026-04-19 11:55:02,195 - AdaPoinTr_easywide_specialist - INFO - config.training_crop_range : [0.25, 0.5]
+2026-04-19 11:55:02,195 - AdaPoinTr_easywide_specialist - INFO - Distributed training: False
+2026-04-19 11:55:02,195 - AdaPoinTr_easywide_specialist - INFO - Set random seed to 43, deterministic: False
+2026-04-19 11:55:03,916 - AdaPoinTr_easywide_specialist - INFO - Loading weights from experiments/AdaPoinTr/ShapeNet55_models/baseline_sn55/ckpt-best.pth...
+2026-04-19 11:55:04,218 - AdaPoinTr_easywide_specialist - INFO - ckpts @ 290 epoch( performance = {'F-Score': 0.39654017948523784, 'CDL1': 13.109447510155132, 'CDL2': 0.7939230617268641, 'EMDistance': 0.0})
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - Trainable_parameters:
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - =========================
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.grouper.input_trans.weight
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.grouper.input_trans.bias
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.grouper.layer1.0.weight
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.grouper.layer1.1.weight
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.grouper.layer1.1.bias
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.grouper.layer2.0.weight
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.grouper.layer2.1.weight
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.grouper.layer2.1.bias
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.grouper.layer3.0.weight
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.grouper.layer3.1.weight
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.grouper.layer3.1.bias
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.grouper.layer4.0.weight
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.grouper.layer4.1.weight
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.grouper.layer4.1.bias
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.pos_embed.0.weight
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.pos_embed.0.bias
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.pos_embed.2.weight
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.pos_embed.2.bias
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.input_proj.0.weight
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.input_proj.0.bias
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.input_proj.2.weight
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.input_proj.2.bias
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.0.norm1.weight
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.0.norm1.bias
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.0.norm2.weight
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.0.norm2.bias
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.0.mlp.fc1.weight
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.0.mlp.fc1.bias
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.0.mlp.fc2.weight
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.0.mlp.fc2.bias
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.0.attn.qkv.weight
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.0.attn.qkv.bias
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.0.attn.proj.weight
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.0.attn.proj.bias
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.0.local_attn.knn_map.0.weight
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.0.local_attn.knn_map.0.bias
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.0.merge_map.weight
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.0.merge_map.bias
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.1.norm1.weight
+2026-04-19 11:55:04,219 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.1.norm1.bias
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.1.norm2.weight
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.1.norm2.bias
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.1.mlp.fc1.weight
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.1.mlp.fc1.bias
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.1.mlp.fc2.weight
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.1.mlp.fc2.bias
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.1.attn.qkv.weight
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.1.attn.qkv.bias
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.1.attn.proj.weight
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.1.attn.proj.bias
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.2.norm1.weight
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.2.norm1.bias
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.2.norm2.weight
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.2.norm2.bias
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.2.mlp.fc1.weight
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.2.mlp.fc1.bias
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.2.mlp.fc2.weight
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.2.mlp.fc2.bias
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.2.attn.qkv.weight
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.2.attn.qkv.bias
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.2.attn.proj.weight
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.2.attn.proj.bias
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.3.norm1.weight
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.3.norm1.bias
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.3.norm2.weight
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.3.norm2.bias
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.3.mlp.fc1.weight
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.3.mlp.fc1.bias
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.3.mlp.fc2.weight
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.3.mlp.fc2.bias
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.3.attn.qkv.weight
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.3.attn.qkv.bias
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.3.attn.proj.weight
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.3.attn.proj.bias
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.4.norm1.weight
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.4.norm1.bias
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.4.norm2.weight
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.4.norm2.bias
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.4.mlp.fc1.weight
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.4.mlp.fc1.bias
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.4.mlp.fc2.weight
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.4.mlp.fc2.bias
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.4.attn.qkv.weight
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.4.attn.qkv.bias
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.4.attn.proj.weight
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.4.attn.proj.bias
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.5.norm1.weight
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.5.norm1.bias
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.5.norm2.weight
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.5.norm2.bias
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.5.mlp.fc1.weight
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.5.mlp.fc1.bias
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.5.mlp.fc2.weight
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.5.mlp.fc2.bias
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.5.attn.qkv.weight
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.5.attn.qkv.bias
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.5.attn.proj.weight
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.blocks.blocks.5.attn.proj.bias
+2026-04-19 11:55:04,220 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.norm.weight
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.encoder.norm.bias
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.increase_dim.0.weight
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.increase_dim.0.bias
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.increase_dim.2.weight
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.increase_dim.2.bias
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.coarse_pred.0.weight
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.coarse_pred.0.bias
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.coarse_pred.2.weight
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.coarse_pred.2.bias
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.mlp_query.0.weight
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.mlp_query.0.bias
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.mlp_query.2.weight
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.mlp_query.2.bias
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.mlp_query.4.weight
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.mlp_query.4.bias
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.0.norm2.weight
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.0.norm2.bias
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.0.mlp.fc1.weight
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.0.mlp.fc1.bias
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.0.mlp.fc2.weight
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.0.mlp.fc2.bias
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.0.norm1.weight
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.0.norm1.bias
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.0.self_attn.qkv.weight
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.0.self_attn.qkv.bias
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.0.self_attn.proj.weight
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.0.self_attn.proj.bias
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.0.local_self_attn.knn_map.0.weight
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.0.local_self_attn.knn_map.0.bias
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.0.self_attn_merge_map.weight
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.0.self_attn_merge_map.bias
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.0.norm_q.weight
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.0.norm_q.bias
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.0.norm_v.weight
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.0.norm_v.bias
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.0.cross_attn.q_map.weight
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.0.cross_attn.q_map.bias
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.0.cross_attn.k_map.weight
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.0.cross_attn.k_map.bias
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.0.cross_attn.v_map.weight
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.0.cross_attn.v_map.bias
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.0.cross_attn.proj.weight
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.0.cross_attn.proj.bias
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.0.local_cross_attn.knn_map.0.weight
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.0.local_cross_attn.knn_map.0.bias
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.0.cross_attn_merge_map.weight
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.0.cross_attn_merge_map.bias
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.1.norm2.weight
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.1.norm2.bias
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.1.mlp.fc1.weight
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.1.mlp.fc1.bias
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.1.mlp.fc2.weight
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.1.mlp.fc2.bias
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.1.norm1.weight
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.1.norm1.bias
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.1.self_attn.qkv.weight
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.1.self_attn.qkv.bias
+2026-04-19 11:55:04,221 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.1.self_attn.proj.weight
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.1.self_attn.proj.bias
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.1.norm_q.weight
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.1.norm_q.bias
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.1.norm_v.weight
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.1.norm_v.bias
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.1.cross_attn.q_map.weight
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.1.cross_attn.q_map.bias
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.1.cross_attn.k_map.weight
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.1.cross_attn.k_map.bias
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.1.cross_attn.v_map.weight
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.1.cross_attn.v_map.bias
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.1.cross_attn.proj.weight
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.1.cross_attn.proj.bias
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.2.norm2.weight
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.2.norm2.bias
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.2.mlp.fc1.weight
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.2.mlp.fc1.bias
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.2.mlp.fc2.weight
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.2.mlp.fc2.bias
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.2.norm1.weight
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.2.norm1.bias
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.2.self_attn.qkv.weight
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.2.self_attn.qkv.bias
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.2.self_attn.proj.weight
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.2.self_attn.proj.bias
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.2.norm_q.weight
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.2.norm_q.bias
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.2.norm_v.weight
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.2.norm_v.bias
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.2.cross_attn.q_map.weight
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.2.cross_attn.q_map.bias
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.2.cross_attn.k_map.weight
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.2.cross_attn.k_map.bias
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.2.cross_attn.v_map.weight
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.2.cross_attn.v_map.bias
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.2.cross_attn.proj.weight
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.2.cross_attn.proj.bias
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.3.norm2.weight
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.3.norm2.bias
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.3.mlp.fc1.weight
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.3.mlp.fc1.bias
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.3.mlp.fc2.weight
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.3.mlp.fc2.bias
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.3.norm1.weight
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.3.norm1.bias
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.3.self_attn.qkv.weight
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.3.self_attn.qkv.bias
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.3.self_attn.proj.weight
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.3.self_attn.proj.bias
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.3.norm_q.weight
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.3.norm_q.bias
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.3.norm_v.weight
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.3.norm_v.bias
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.3.cross_attn.q_map.weight
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.3.cross_attn.q_map.bias
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.3.cross_attn.k_map.weight
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.3.cross_attn.k_map.bias
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.3.cross_attn.v_map.weight
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.3.cross_attn.v_map.bias
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.3.cross_attn.proj.weight
+2026-04-19 11:55:04,222 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.3.cross_attn.proj.bias
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.4.norm2.weight
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.4.norm2.bias
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.4.mlp.fc1.weight
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.4.mlp.fc1.bias
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.4.mlp.fc2.weight
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.4.mlp.fc2.bias
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.4.norm1.weight
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.4.norm1.bias
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.4.self_attn.qkv.weight
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.4.self_attn.qkv.bias
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.4.self_attn.proj.weight
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.4.self_attn.proj.bias
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.4.norm_q.weight
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.4.norm_q.bias
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.4.norm_v.weight
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.4.norm_v.bias
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.4.cross_attn.q_map.weight
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.4.cross_attn.q_map.bias
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.4.cross_attn.k_map.weight
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.4.cross_attn.k_map.bias
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.4.cross_attn.v_map.weight
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.4.cross_attn.v_map.bias
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.4.cross_attn.proj.weight
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.4.cross_attn.proj.bias
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.5.norm2.weight
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.5.norm2.bias
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.5.mlp.fc1.weight
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.5.mlp.fc1.bias
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.5.mlp.fc2.weight
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.5.mlp.fc2.bias
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.5.norm1.weight
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.5.norm1.bias
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.5.self_attn.qkv.weight
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.5.self_attn.qkv.bias
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.5.self_attn.proj.weight
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.5.self_attn.proj.bias
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.5.norm_q.weight
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.5.norm_q.bias
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.5.norm_v.weight
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.5.norm_v.bias
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.5.cross_attn.q_map.weight
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.5.cross_attn.q_map.bias
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.5.cross_attn.k_map.weight
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.5.cross_attn.k_map.bias
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.5.cross_attn.v_map.weight
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.5.cross_attn.v_map.bias
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.5.cross_attn.proj.weight
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.5.cross_attn.proj.bias
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.6.norm2.weight
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.6.norm2.bias
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.6.mlp.fc1.weight
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.6.mlp.fc1.bias
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.6.mlp.fc2.weight
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.6.mlp.fc2.bias
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.6.norm1.weight
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.6.norm1.bias
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.6.self_attn.qkv.weight
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.6.self_attn.qkv.bias
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.6.self_attn.proj.weight
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.6.self_attn.proj.bias
+2026-04-19 11:55:04,223 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.6.norm_q.weight
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.6.norm_q.bias
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.6.norm_v.weight
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.6.norm_v.bias
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.6.cross_attn.q_map.weight
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.6.cross_attn.q_map.bias
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.6.cross_attn.k_map.weight
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.6.cross_attn.k_map.bias
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.6.cross_attn.v_map.weight
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.6.cross_attn.v_map.bias
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.6.cross_attn.proj.weight
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.6.cross_attn.proj.bias
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.7.norm2.weight
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.7.norm2.bias
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.7.mlp.fc1.weight
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.7.mlp.fc1.bias
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.7.mlp.fc2.weight
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.7.mlp.fc2.bias
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.7.norm1.weight
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.7.norm1.bias
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.7.self_attn.qkv.weight
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.7.self_attn.qkv.bias
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.7.self_attn.proj.weight
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.7.self_attn.proj.bias
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.7.norm_q.weight
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.7.norm_q.bias
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.7.norm_v.weight
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.7.norm_v.bias
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.7.cross_attn.q_map.weight
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.7.cross_attn.q_map.bias
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.7.cross_attn.k_map.weight
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.7.cross_attn.k_map.bias
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.7.cross_attn.v_map.weight
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.7.cross_attn.v_map.bias
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.7.cross_attn.proj.weight
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.decoder.blocks.blocks.7.cross_attn.proj.bias
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.query_ranking.0.weight
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.query_ranking.0.bias
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.query_ranking.2.weight
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.query_ranking.2.bias
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.query_ranking.4.weight
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - base_model.query_ranking.4.bias
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - decode_head.layer.fc1.weight
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - decode_head.layer.fc1.bias
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - decode_head.layer.fc2.weight
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - decode_head.layer.fc2.bias
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - increase_dim.0.weight
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - increase_dim.0.bias
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - increase_dim.1.weight
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - increase_dim.1.bias
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - increase_dim.3.weight
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - increase_dim.3.bias
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - reduce_map.weight
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - reduce_map.bias
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - =========================
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - Untrainable_parameters:
+2026-04-19 11:55:04,224 - AdaPoinTr_easywide_specialist - INFO - =========================
+2026-04-19 11:55:04,225 - AdaPoinTr_easywide_specialist - INFO - =========================
+2026-04-19 11:55:04,225 - AdaPoinTr_easywide_specialist - INFO - Using Data parallel ...
+2026-04-19 11:55:06,346 - AdaPoinTr_easywide_specialist - INFO - [Epoch 0/30][Batch 1/874] BatchTime = 2.115 (s) DataTime = 0.103 (s) Losses = ['5.3985', '38.6524'] lr = 0.000100
+2026-04-19 11:55:45,018 - AdaPoinTr_easywide_specialist - INFO - [Epoch 0/30][Batch 101/874] BatchTime = 0.386 (s) DataTime = 0.002 (s) Losses = ['5.2932', '38.2668'] lr = 0.000100
+2026-04-19 11:56:23,534 - AdaPoinTr_easywide_specialist - INFO - [Epoch 0/30][Batch 201/874] BatchTime = 0.400 (s) DataTime = 0.001 (s) Losses = ['5.2416', '39.4595'] lr = 0.000100
+2026-04-19 11:57:01,661 - AdaPoinTr_easywide_specialist - INFO - [Epoch 0/30][Batch 301/874] BatchTime = 0.323 (s) DataTime = 0.001 (s) Losses = ['5.4065', '40.5460'] lr = 0.000100
+2026-04-19 11:57:39,861 - AdaPoinTr_easywide_specialist - INFO - [Epoch 0/30][Batch 401/874] BatchTime = 0.328 (s) DataTime = 0.002 (s) Losses = ['5.3628', '39.2474'] lr = 0.000100
+2026-04-19 11:58:17,934 - AdaPoinTr_easywide_specialist - INFO - [Epoch 0/30][Batch 501/874] BatchTime = 0.389 (s) DataTime = 0.001 (s) Losses = ['5.0163', '39.5325'] lr = 0.000100
+2026-04-19 11:58:55,845 - AdaPoinTr_easywide_specialist - INFO - [Epoch 0/30][Batch 601/874] BatchTime = 0.399 (s) DataTime = 0.002 (s) Losses = ['5.6467', '43.7093'] lr = 0.000100
+2026-04-19 11:59:34,255 - AdaPoinTr_easywide_specialist - INFO - [Epoch 0/30][Batch 701/874] BatchTime = 0.394 (s) DataTime = 0.002 (s) Losses = ['5.5841', '42.2755'] lr = 0.000100
+2026-04-19 12:00:12,661 - AdaPoinTr_easywide_specialist - INFO - [Epoch 0/30][Batch 801/874] BatchTime = 0.335 (s) DataTime = 0.002 (s) Losses = ['5.2821', '41.6968'] lr = 0.000100
+2026-04-19 12:00:40,519 - AdaPoinTr_easywide_specialist - INFO - [Training] EPOCH: 0 EpochTime = 336.288 (s) Losses = ['5.3296', '40.2596']
+2026-04-19 12:00:40,519 - AdaPoinTr_easywide_specialist - INFO - [VALIDATION] Start validating epoch 0
+2026-04-19 12:01:05,266 - AdaPoinTr_easywide_specialist - INFO - Test[1051/10518] Taxonomy = 02691156 Sample = c7749c0a8b61f43bc9b9e28055202e3d Losses = ['24.2063', '2.2448', '8.8977', '0.2435'] Metrics = ['0.5685', '8.8977', '0.2435', '0.0000']
+2026-04-19 12:01:29,714 - AdaPoinTr_easywide_specialist - INFO - Test[2102/10518] Taxonomy = 03211117 Sample = ab2f9418c111cc6ddb965514105122a4 Losses = ['22.0065', '1.6907', '8.1134', '0.1940'] Metrics = ['0.6268', '8.1134', '0.1940', '0.0000']
+2026-04-19 12:01:54,092 - AdaPoinTr_easywide_specialist - INFO - Test[3153/10518] Taxonomy = 02876657 Sample = c5032e4be091aabb36fe7a88df793982 Losses = ['31.8843', '3.6910', '12.7549', '0.5482'] Metrics = ['0.3428', '12.7549', '0.5482', '0.0000']
+2026-04-19 12:02:18,539 - AdaPoinTr_easywide_specialist - INFO - Test[4204/10518] Taxonomy = 03211117 Sample = 722df1da5778d45b1e43523279c7f09f Losses = ['38.4426', '7.3764', '16.0989', '1.3650'] Metrics = ['0.3852', '16.0989', '1.3650', '0.0000']
+2026-04-19 12:02:42,993 - AdaPoinTr_easywide_specialist - INFO - Test[5255/10518] Taxonomy = 02828884 Sample = 14b63361a48a9fffe4a048c146e8bd43 Losses = ['38.2715', '5.6413', '22.5786', '2.6515'] Metrics = ['0.3671', '22.5786', '2.6515', '0.0000']
+2026-04-19 12:03:07,332 - AdaPoinTr_easywide_specialist - INFO - Test[6306/10518] Taxonomy = 03211117 Sample = d330d50a0255529d19ed6e1a590c9122 Losses = ['28.7833', '3.3325', '11.1105', '0.4201'] Metrics = ['0.4312', '11.1105', '0.4201', '0.0000']
+2026-04-19 12:03:31,702 - AdaPoinTr_easywide_specialist - INFO - Test[7357/10518] Taxonomy = 04379243 Sample = b1ca280d9567270ade98d10ab5975b59 Losses = ['32.6272', '3.8306', '14.2959', '0.6122'] Metrics = ['0.2722', '14.2959', '0.6122', '0.0000']
+2026-04-19 12:03:56,144 - AdaPoinTr_easywide_specialist - INFO - Test[8408/10518] Taxonomy = 03001627 Sample = 89208a619341d9fdb8c516ed5c4ce32 Losses = ['30.8410', '3.3737', '12.5587', '0.4685'] Metrics = ['0.3135', '12.5587', '0.4685', '0.0000']
+2026-04-19 12:04:20,623 - AdaPoinTr_easywide_specialist - INFO - Test[9459/10518] Taxonomy = 03001627 Sample = d0255120e3351121c3bd24f986301745 Losses = ['33.3084', '3.8445', '14.2802', '0.6179'] Metrics = ['0.2515', '14.2802', '0.6179', '0.0000']
+2026-04-19 12:04:45,004 - AdaPoinTr_easywide_specialist - INFO - Test[10510/10518] Taxonomy = 03636649 Sample = ea9ec4d9db2e06202471e6dd5ac3ef92 Losses = ['30.9988', '4.1026', '8.3213', '0.2904'] Metrics = ['0.7369', '8.3213', '0.2904', '0.0000']
+2026-04-19 12:04:45,268 - AdaPoinTr_easywide_specialist - INFO - [Validation] EPOCH: 0  Metrics = ['0.3734', '14.2358', '0.9403', '0.0000']
+2026-04-19 12:04:45,269 - AdaPoinTr_easywide_specialist - INFO - ============================ TEST RESULTS ============================
+2026-04-19 12:04:45,269 - AdaPoinTr_easywide_specialist - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2026-04-19 12:04:45,269 - AdaPoinTr_easywide_specialist - INFO - 03759954	14	0.564 	13.962 	1.636 	0.000 	microphone	
+2026-04-19 12:04:45,269 - AdaPoinTr_easywide_specialist - INFO - 04330267	44	0.301 	15.293 	0.948 	0.000 	stove	
+2026-04-19 12:04:45,269 - AdaPoinTr_easywide_specialist - INFO - 03261776	15	0.348 	16.056 	1.233 	0.000 	earphone	
+2026-04-19 12:04:45,270 - AdaPoinTr_easywide_specialist - INFO - 03513137	33	0.214 	19.431 	1.738 	0.000 	helmet	
+2026-04-19 12:04:45,270 - AdaPoinTr_easywide_specialist - INFO - 04460130	27	0.450 	14.244 	1.013 	0.000 	tower	
+2026-04-19 12:04:45,270 - AdaPoinTr_easywide_specialist - INFO - 04468005	78	0.398 	12.903 	0.722 	0.000 	train	
+2026-04-19 12:04:45,270 - AdaPoinTr_easywide_specialist - INFO - 03761084	31	0.236 	16.901 	1.145 	0.000 	microwaves	
+2026-04-19 12:04:45,270 - AdaPoinTr_easywide_specialist - INFO - 04004475	34	0.273 	16.818 	1.307 	0.000 	printer	
+2026-04-19 12:04:45,270 - AdaPoinTr_easywide_specialist - INFO - 03938244	20	0.314 	14.262 	0.745 	0.000 	pillow	
+2026-04-19 12:04:45,270 - AdaPoinTr_easywide_specialist - INFO - 02992529	167	0.415 	11.186 	0.402 	0.000 	cellphone	
+2026-04-19 12:04:45,270 - AdaPoinTr_easywide_specialist - INFO - 02808440	172	0.295 	15.071 	0.950 	0.000 	bathtub	
+2026-04-19 12:04:45,270 - AdaPoinTr_easywide_specialist - INFO - 04530566	388	0.514 	11.421 	0.624 	0.000 	watercraft	
+2026-04-19 12:04:45,270 - AdaPoinTr_easywide_specialist - INFO - 02871439	91	0.259 	16.381 	1.090 	0.000 	bookshelf	
+2026-04-19 12:04:45,270 - AdaPoinTr_easywide_specialist - INFO - 03593526	120	0.272 	17.128 	1.381 	0.000 	jar	
+2026-04-19 12:04:45,270 - AdaPoinTr_easywide_specialist - INFO - 04554684	34	0.229 	17.628 	1.282 	0.000 	washer	
+2026-04-19 12:04:45,270 - AdaPoinTr_easywide_specialist - INFO - 03467517	160	0.823 	6.859 	0.213 	0.000 	guitar	
+2026-04-19 12:04:45,271 - AdaPoinTr_easywide_specialist - INFO - 04401088	218	0.419 	11.281 	0.452 	0.000 	telephone	
+2026-04-19 12:04:45,271 - AdaPoinTr_easywide_specialist - INFO - 02954340	12	0.304 	14.160 	0.760 	0.000 	cap	
+2026-04-19 12:04:45,271 - AdaPoinTr_easywide_specialist - INFO - 02933112	315	0.245 	15.276 	0.817 	0.000 	cabinet	
+2026-04-19 12:04:45,271 - AdaPoinTr_easywide_specialist - INFO - 03642806	92	0.389 	11.679 	0.479 	0.000 	laptop	
+2026-04-19 12:04:45,271 - AdaPoinTr_easywide_specialist - INFO - 02924116	188	0.366 	12.704 	0.593 	0.000 	bus	
+2026-04-19 12:04:45,271 - AdaPoinTr_easywide_specialist - INFO - 02946921	22	0.249 	16.257 	1.115 	0.000 	can	
+2026-04-19 12:04:45,271 - AdaPoinTr_easywide_specialist - INFO - 02818832	47	0.298 	15.872 	1.107 	0.000 	bed	
+2026-04-19 12:04:45,271 - AdaPoinTr_easywide_specialist - INFO - 04256520	635	0.304 	14.191 	0.725 	0.000 	sofa	
+2026-04-19 12:04:45,271 - AdaPoinTr_easywide_specialist - INFO - 04379243	1687	0.387 	12.882 	0.744 	0.000 	table	
+2026-04-19 12:04:45,271 - AdaPoinTr_easywide_specialist - INFO - 02747177	69	0.198 	17.614 	1.222 	0.000 	trash bin	
+2026-04-19 12:04:45,271 - AdaPoinTr_easywide_specialist - INFO - 03046257	131	0.314 	14.988 	0.965 	0.000 	clock	
+2026-04-19 12:04:45,271 - AdaPoinTr_easywide_specialist - INFO - 04225987	31	0.558 	10.074 	0.429 	0.000 	skateboard	
+2026-04-19 12:04:45,271 - AdaPoinTr_easywide_specialist - INFO - 03797390	43	0.195 	18.019 	1.244 	0.000 	mug	
+2026-04-19 12:04:45,271 - AdaPoinTr_easywide_specialist - INFO - 03001627	1356	0.380 	13.673 	0.839 	0.000 	chair	
+2026-04-19 12:04:45,272 - AdaPoinTr_easywide_specialist - INFO - 03691459	320	0.259 	17.298 	1.388 	0.000 	loudspeaker	
+2026-04-19 12:04:45,272 - AdaPoinTr_easywide_specialist - INFO - 02942699	23	0.249 	20.317 	2.127 	0.000 	camera	
+2026-04-19 12:04:45,272 - AdaPoinTr_easywide_specialist - INFO - 03636649	464	0.544 	13.419 	1.337 	0.000 	lamp	
+2026-04-19 12:04:45,272 - AdaPoinTr_easywide_specialist - INFO - 02691156	809	0.587 	9.698 	0.415 	0.000 	airplane	
+2026-04-19 12:04:45,272 - AdaPoinTr_easywide_specialist - INFO - 02773838	17	0.358 	12.934 	0.642 	0.000 	bag	
+2026-04-19 12:04:45,272 - AdaPoinTr_easywide_specialist - INFO - 02958343	703	0.227 	16.137 	0.905 	0.000 	car	
+2026-04-19 12:04:45,272 - AdaPoinTr_easywide_specialist - INFO - 02880940	38	0.225 	15.642 	0.814 	0.000 	bowl	
+2026-04-19 12:04:45,272 - AdaPoinTr_easywide_specialist - INFO - 04099429	17	0.705 	9.431 	0.552 	0.000 	rocket	
+2026-04-19 12:04:45,272 - AdaPoinTr_easywide_specialist - INFO - 02828884	363	0.446 	11.329 	0.557 	0.000 	bench	
+2026-04-19 12:04:45,272 - AdaPoinTr_easywide_specialist - INFO - 04090263	475	0.703 	8.608 	0.395 	0.000 	rifle	
+2026-04-19 12:04:45,272 - AdaPoinTr_easywide_specialist - INFO - 03211117	219	0.349 	13.526 	0.767 	0.000 	display	
+2026-04-19 12:04:45,272 - AdaPoinTr_easywide_specialist - INFO - 02876657	100	0.430 	12.344 	0.734 	0.000 	bottle	
+2026-04-19 12:04:45,272 - AdaPoinTr_easywide_specialist - INFO - 03710193	19	0.518 	13.238 	1.193 	0.000 	mailbox	
+2026-04-19 12:04:45,273 - AdaPoinTr_easywide_specialist - INFO - 03790512	68	0.265 	16.549 	1.089 	0.000 	motorbike	
+2026-04-19 12:04:45,273 - AdaPoinTr_easywide_specialist - INFO - 03325088	149	0.478 	14.776 	1.588 	0.000 	faucet	
+2026-04-19 12:04:45,273 - AdaPoinTr_easywide_specialist - INFO - 02801938	23	0.235 	16.166 	0.973 	0.000 	basket	
+2026-04-19 12:04:45,273 - AdaPoinTr_easywide_specialist - INFO - 03337140	60	0.245 	16.522 	1.130 	0.000 	file cabinet	
+2026-04-19 12:04:45,273 - AdaPoinTr_easywide_specialist - INFO - 02843684	15	0.238 	18.754 	1.522 	0.000 	birdhouse	
+2026-04-19 12:04:45,273 - AdaPoinTr_easywide_specialist - INFO - 03624134	85	0.780 	7.763 	0.346 	0.000 	knife	
+2026-04-19 12:04:45,273 - AdaPoinTr_easywide_specialist - INFO - 03991062	121	0.246 	19.052 	1.663 	0.000 	flowerpot	
+2026-04-19 12:04:45,273 - AdaPoinTr_easywide_specialist - INFO - 03948459	62	0.483 	11.924 	0.654 	0.000 	pistol	
+2026-04-19 12:04:45,273 - AdaPoinTr_easywide_specialist - INFO - 03928116	48	0.297 	15.202 	0.995 	0.000 	piano	
+2026-04-19 12:04:45,273 - AdaPoinTr_easywide_specialist - INFO - 03207941	19	0.235 	16.905 	1.197 	0.000 	dishwasher	
+2026-04-19 12:04:45,273 - AdaPoinTr_easywide_specialist - INFO - 04074963	14	0.462 	10.896 	0.431 	0.000 	remote	
+2026-04-19 12:04:45,273 - AdaPoinTr_easywide_specialist - INFO - 03085013	13	0.456 	10.327 	0.378 	0.000 	keyboard	
+2026-04-19 12:04:45,273 - AdaPoinTr_easywide_specialist - INFO - Overall		0.373 	14.236 	0.940 	0.000 	
+2026-04-19 12:04:45,716 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-best.pth
+2026-04-19 12:04:46,119 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-last.pth
+2026-04-19 12:04:46,756 - AdaPoinTr_easywide_specialist - INFO - [Epoch 1/30][Batch 1/874] BatchTime = 0.636 (s) DataTime = 0.187 (s) Losses = ['5.4896', '41.7259'] lr = 0.000099
+2026-04-19 12:05:25,245 - AdaPoinTr_easywide_specialist - INFO - [Epoch 1/30][Batch 101/874] BatchTime = 0.412 (s) DataTime = 0.001 (s) Losses = ['5.3765', '43.0856'] lr = 0.000099
+2026-04-19 12:06:03,746 - AdaPoinTr_easywide_specialist - INFO - [Epoch 1/30][Batch 201/874] BatchTime = 0.401 (s) DataTime = 0.002 (s) Losses = ['5.4502', '41.0058'] lr = 0.000099
+2026-04-19 12:06:42,055 - AdaPoinTr_easywide_specialist - INFO - [Epoch 1/30][Batch 301/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.1812', '41.3420'] lr = 0.000099
+2026-04-19 12:07:20,334 - AdaPoinTr_easywide_specialist - INFO - [Epoch 1/30][Batch 401/874] BatchTime = 0.389 (s) DataTime = 0.001 (s) Losses = ['5.2007', '39.3917'] lr = 0.000099
+2026-04-19 12:07:58,245 - AdaPoinTr_easywide_specialist - INFO - [Epoch 1/30][Batch 501/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.0535', '39.4294'] lr = 0.000099
+2026-04-19 12:08:36,445 - AdaPoinTr_easywide_specialist - INFO - [Epoch 1/30][Batch 601/874] BatchTime = 0.391 (s) DataTime = 0.002 (s) Losses = ['5.5744', '45.1683'] lr = 0.000099
+2026-04-19 12:09:14,339 - AdaPoinTr_easywide_specialist - INFO - [Epoch 1/30][Batch 701/874] BatchTime = 0.394 (s) DataTime = 0.002 (s) Losses = ['5.5980', '44.2455'] lr = 0.000099
+2026-04-19 12:09:52,644 - AdaPoinTr_easywide_specialist - INFO - [Epoch 1/30][Batch 801/874] BatchTime = 0.391 (s) DataTime = 0.002 (s) Losses = ['5.4231', '40.2111'] lr = 0.000099
+2026-04-19 12:10:20,318 - AdaPoinTr_easywide_specialist - INFO - [Training] EPOCH: 1 EpochTime = 334.197 (s) Losses = ['5.3498', '41.1283']
+2026-04-19 12:10:20,708 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-last.pth
+2026-04-19 12:10:21,398 - AdaPoinTr_easywide_specialist - INFO - [Epoch 2/30][Batch 1/874] BatchTime = 0.689 (s) DataTime = 0.155 (s) Losses = ['5.5949', '44.8349'] lr = 0.000099
+2026-04-19 12:11:00,139 - AdaPoinTr_easywide_specialist - INFO - [Epoch 2/30][Batch 101/874] BatchTime = 0.394 (s) DataTime = 0.002 (s) Losses = ['5.5951', '44.7111'] lr = 0.000099
+2026-04-19 12:11:37,862 - AdaPoinTr_easywide_specialist - INFO - [Epoch 2/30][Batch 201/874] BatchTime = 0.330 (s) DataTime = 0.001 (s) Losses = ['5.6570', '44.2384'] lr = 0.000099
+2026-04-19 12:12:16,145 - AdaPoinTr_easywide_specialist - INFO - [Epoch 2/30][Batch 301/874] BatchTime = 0.400 (s) DataTime = 0.001 (s) Losses = ['5.4852', '41.1672'] lr = 0.000099
+2026-04-19 12:12:54,261 - AdaPoinTr_easywide_specialist - INFO - [Epoch 2/30][Batch 401/874] BatchTime = 0.329 (s) DataTime = 0.001 (s) Losses = ['5.3198', '40.3547'] lr = 0.000099
+2026-04-19 12:13:32,461 - AdaPoinTr_easywide_specialist - INFO - [Epoch 2/30][Batch 501/874] BatchTime = 0.323 (s) DataTime = 0.002 (s) Losses = ['5.4629', '46.1695'] lr = 0.000099
+2026-04-19 12:14:10,261 - AdaPoinTr_easywide_specialist - INFO - [Epoch 2/30][Batch 601/874] BatchTime = 0.330 (s) DataTime = 0.002 (s) Losses = ['5.3324', '44.7538'] lr = 0.000099
+2026-04-19 12:14:48,734 - AdaPoinTr_easywide_specialist - INFO - [Epoch 2/30][Batch 701/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.6109', '41.1668'] lr = 0.000099
+2026-04-19 12:15:27,534 - AdaPoinTr_easywide_specialist - INFO - [Epoch 2/30][Batch 801/874] BatchTime = 0.397 (s) DataTime = 0.001 (s) Losses = ['5.8770', '42.5265'] lr = 0.000099
+2026-04-19 12:15:55,312 - AdaPoinTr_easywide_specialist - INFO - [Training] EPOCH: 2 EpochTime = 334.603 (s) Losses = ['5.4274', '42.3408']
+2026-04-19 12:15:55,768 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-last.pth
+2026-04-19 12:15:56,264 - AdaPoinTr_easywide_specialist - INFO - [Epoch 3/30][Batch 1/874] BatchTime = 0.495 (s) DataTime = 0.147 (s) Losses = ['5.3621', '40.3714'] lr = 0.000099
+2026-04-19 12:16:34,361 - AdaPoinTr_easywide_specialist - INFO - [Epoch 3/30][Batch 101/874] BatchTime = 0.327 (s) DataTime = 0.002 (s) Losses = ['5.3630', '39.3951'] lr = 0.000099
+2026-04-19 12:17:12,945 - AdaPoinTr_easywide_specialist - INFO - [Epoch 3/30][Batch 201/874] BatchTime = 0.391 (s) DataTime = 0.002 (s) Losses = ['5.4016', '40.0140'] lr = 0.000099
+2026-04-19 12:17:51,934 - AdaPoinTr_easywide_specialist - INFO - [Epoch 3/30][Batch 301/874] BatchTime = 0.396 (s) DataTime = 0.001 (s) Losses = ['5.7111', '44.5845'] lr = 0.000099
+2026-04-19 12:18:30,854 - AdaPoinTr_easywide_specialist - INFO - [Epoch 3/30][Batch 401/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.4777', '48.5327'] lr = 0.000099
+2026-04-19 12:19:08,934 - AdaPoinTr_easywide_specialist - INFO - [Epoch 3/30][Batch 501/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.5677', '43.6821'] lr = 0.000099
+2026-04-19 12:19:47,033 - AdaPoinTr_easywide_specialist - INFO - [Epoch 3/30][Batch 601/874] BatchTime = 0.389 (s) DataTime = 0.001 (s) Losses = ['5.5679', '41.8580'] lr = 0.000099
+2026-04-19 12:20:25,935 - AdaPoinTr_easywide_specialist - INFO - [Epoch 3/30][Batch 701/874] BatchTime = 0.395 (s) DataTime = 0.002 (s) Losses = ['5.6457', '48.1841'] lr = 0.000099
+2026-04-19 12:21:04,645 - AdaPoinTr_easywide_specialist - INFO - [Epoch 3/30][Batch 801/874] BatchTime = 0.399 (s) DataTime = 0.002 (s) Losses = ['5.3567', '40.1346'] lr = 0.000099
+2026-04-19 12:21:33,137 - AdaPoinTr_easywide_specialist - INFO - [Training] EPOCH: 3 EpochTime = 337.367 (s) Losses = ['5.3720', '41.9092']
+2026-04-19 12:21:33,559 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-last.pth
+2026-04-19 12:21:34,160 - AdaPoinTr_easywide_specialist - INFO - [Epoch 4/30][Batch 1/874] BatchTime = 0.600 (s) DataTime = 0.162 (s) Losses = ['5.3812', '42.9854'] lr = 0.000098
+2026-04-19 12:22:13,133 - AdaPoinTr_easywide_specialist - INFO - [Epoch 4/30][Batch 101/874] BatchTime = 0.392 (s) DataTime = 0.001 (s) Losses = ['5.1009', '39.0863'] lr = 0.000098
+2026-04-19 12:22:52,455 - AdaPoinTr_easywide_specialist - INFO - [Epoch 4/30][Batch 201/874] BatchTime = 0.399 (s) DataTime = 0.002 (s) Losses = ['5.2104', '40.3011'] lr = 0.000098
+2026-04-19 12:23:31,034 - AdaPoinTr_easywide_specialist - INFO - [Epoch 4/30][Batch 301/874] BatchTime = 0.401 (s) DataTime = 0.002 (s) Losses = ['5.2335', '39.8678'] lr = 0.000098
+2026-04-19 12:24:09,655 - AdaPoinTr_easywide_specialist - INFO - [Epoch 4/30][Batch 401/874] BatchTime = 0.400 (s) DataTime = 0.001 (s) Losses = ['5.9209', '43.1395'] lr = 0.000098
+2026-04-19 12:24:48,165 - AdaPoinTr_easywide_specialist - INFO - [Epoch 4/30][Batch 501/874] BatchTime = 0.330 (s) DataTime = 0.002 (s) Losses = ['4.9877', '37.4618'] lr = 0.000098
+2026-04-19 12:25:27,254 - AdaPoinTr_easywide_specialist - INFO - [Epoch 4/30][Batch 601/874] BatchTime = 0.399 (s) DataTime = 0.002 (s) Losses = ['5.4526', '42.4344'] lr = 0.000098
+2026-04-19 12:26:05,745 - AdaPoinTr_easywide_specialist - INFO - [Epoch 4/30][Batch 701/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.2242', '37.8869'] lr = 0.000098
+2026-04-19 12:26:43,845 - AdaPoinTr_easywide_specialist - INFO - [Epoch 4/30][Batch 801/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.4893', '40.6383'] lr = 0.000098
+2026-04-19 12:27:12,025 - AdaPoinTr_easywide_specialist - INFO - [Training] EPOCH: 4 EpochTime = 338.465 (s) Losses = ['5.3092', '40.8339']
+2026-04-19 12:27:12,445 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-last.pth
+2026-04-19 12:27:13,101 - AdaPoinTr_easywide_specialist - INFO - [Epoch 5/30][Batch 1/874] BatchTime = 0.655 (s) DataTime = 0.140 (s) Losses = ['5.1571', '39.0832'] lr = 0.000098
+2026-04-19 12:27:51,734 - AdaPoinTr_easywide_specialist - INFO - [Epoch 5/30][Batch 101/874] BatchTime = 0.393 (s) DataTime = 0.002 (s) Losses = ['5.6484', '40.8756'] lr = 0.000098
+2026-04-19 12:28:29,745 - AdaPoinTr_easywide_specialist - INFO - [Epoch 5/30][Batch 201/874] BatchTime = 0.384 (s) DataTime = 0.002 (s) Losses = ['5.0116', '37.8535'] lr = 0.000098
+2026-04-19 12:29:08,264 - AdaPoinTr_easywide_specialist - INFO - [Epoch 5/30][Batch 301/874] BatchTime = 0.329 (s) DataTime = 0.002 (s) Losses = ['5.5666', '41.5287'] lr = 0.000098
+2026-04-19 12:29:46,655 - AdaPoinTr_easywide_specialist - INFO - [Epoch 5/30][Batch 401/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.2231', '40.1274'] lr = 0.000098
+2026-04-19 12:30:25,045 - AdaPoinTr_easywide_specialist - INFO - [Epoch 5/30][Batch 501/874] BatchTime = 0.390 (s) DataTime = 0.002 (s) Losses = ['5.6709', '43.9201'] lr = 0.000098
+2026-04-19 12:31:03,455 - AdaPoinTr_easywide_specialist - INFO - [Epoch 5/30][Batch 601/874] BatchTime = 0.393 (s) DataTime = 0.002 (s) Losses = ['5.3426', '40.5460'] lr = 0.000098
+2026-04-19 12:31:41,867 - AdaPoinTr_easywide_specialist - INFO - [Epoch 5/30][Batch 701/874] BatchTime = 0.333 (s) DataTime = 0.002 (s) Losses = ['5.3084', '41.1008'] lr = 0.000098
+2026-04-19 12:32:20,535 - AdaPoinTr_easywide_specialist - INFO - [Epoch 5/30][Batch 801/874] BatchTime = 0.389 (s) DataTime = 0.002 (s) Losses = ['5.3431', '43.2899'] lr = 0.000098
+2026-04-19 12:32:48,428 - AdaPoinTr_easywide_specialist - INFO - [Training] EPOCH: 5 EpochTime = 335.982 (s) Losses = ['5.3688', '41.7489']
+2026-04-19 12:32:48,878 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-last.pth
+2026-04-19 12:32:49,436 - AdaPoinTr_easywide_specialist - INFO - [Epoch 6/30][Batch 1/874] BatchTime = 0.557 (s) DataTime = 0.152 (s) Losses = ['5.1038', '39.8079'] lr = 0.000097
+2026-04-19 12:33:28,655 - AdaPoinTr_easywide_specialist - INFO - [Epoch 6/30][Batch 101/874] BatchTime = 0.399 (s) DataTime = 0.001 (s) Losses = ['5.1826', '41.6457'] lr = 0.000097
+2026-04-19 12:34:07,455 - AdaPoinTr_easywide_specialist - INFO - [Epoch 6/30][Batch 201/874] BatchTime = 0.388 (s) DataTime = 0.002 (s) Losses = ['5.4196', '40.4389'] lr = 0.000097
+2026-04-19 12:34:46,336 - AdaPoinTr_easywide_specialist - INFO - [Epoch 6/30][Batch 301/874] BatchTime = 0.391 (s) DataTime = 0.001 (s) Losses = ['5.1595', '41.5487'] lr = 0.000097
+2026-04-19 12:35:24,854 - AdaPoinTr_easywide_specialist - INFO - [Epoch 6/30][Batch 401/874] BatchTime = 0.387 (s) DataTime = 0.001 (s) Losses = ['5.3532', '42.6881'] lr = 0.000097
+2026-04-19 12:36:03,945 - AdaPoinTr_easywide_specialist - INFO - [Epoch 6/30][Batch 501/874] BatchTime = 0.399 (s) DataTime = 0.002 (s) Losses = ['5.5854', '40.6932'] lr = 0.000097
+2026-04-19 12:36:42,745 - AdaPoinTr_easywide_specialist - INFO - [Epoch 6/30][Batch 601/874] BatchTime = 0.383 (s) DataTime = 0.002 (s) Losses = ['5.1244', '38.8744'] lr = 0.000097
+2026-04-19 12:37:21,755 - AdaPoinTr_easywide_specialist - INFO - [Epoch 6/30][Batch 701/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.2109', '38.9722'] lr = 0.000097
+2026-04-19 12:38:01,134 - AdaPoinTr_easywide_specialist - INFO - [Epoch 6/30][Batch 801/874] BatchTime = 0.389 (s) DataTime = 0.002 (s) Losses = ['5.0162', '37.9247'] lr = 0.000097
+2026-04-19 12:38:29,333 - AdaPoinTr_easywide_specialist - INFO - [Training] EPOCH: 6 EpochTime = 340.454 (s) Losses = ['5.3978', '42.2528']
+2026-04-19 12:38:29,729 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-last.pth
+2026-04-19 12:38:30,451 - AdaPoinTr_easywide_specialist - INFO - [Epoch 7/30][Batch 1/874] BatchTime = 0.721 (s) DataTime = 0.158 (s) Losses = ['4.8832', '38.8438'] lr = 0.000097
+2026-04-19 12:39:08,625 - AdaPoinTr_easywide_specialist - INFO - [Epoch 7/30][Batch 101/874] BatchTime = 0.380 (s) DataTime = 0.002 (s) Losses = ['5.0235', '36.8299'] lr = 0.000097
+2026-04-19 12:39:47,833 - AdaPoinTr_easywide_specialist - INFO - [Epoch 7/30][Batch 201/874] BatchTime = 0.401 (s) DataTime = 0.001 (s) Losses = ['5.7802', '44.6779'] lr = 0.000097
+2026-04-19 12:40:26,555 - AdaPoinTr_easywide_specialist - INFO - [Epoch 7/30][Batch 301/874] BatchTime = 0.394 (s) DataTime = 0.002 (s) Losses = ['5.5754', '40.4690'] lr = 0.000097
+2026-04-19 12:41:04,955 - AdaPoinTr_easywide_specialist - INFO - [Epoch 7/30][Batch 401/874] BatchTime = 0.388 (s) DataTime = 0.002 (s) Losses = ['5.3641', '42.7530'] lr = 0.000097
+2026-04-19 12:41:43,255 - AdaPoinTr_easywide_specialist - INFO - [Epoch 7/30][Batch 501/874] BatchTime = 0.394 (s) DataTime = 0.001 (s) Losses = ['6.0347', '46.2933'] lr = 0.000097
+2026-04-19 12:42:22,054 - AdaPoinTr_easywide_specialist - INFO - [Epoch 7/30][Batch 601/874] BatchTime = 0.400 (s) DataTime = 0.001 (s) Losses = ['5.5597', '42.0567'] lr = 0.000097
+2026-04-19 12:43:00,645 - AdaPoinTr_easywide_specialist - INFO - [Epoch 7/30][Batch 701/874] BatchTime = 0.390 (s) DataTime = 0.001 (s) Losses = ['5.3787', '44.0785'] lr = 0.000097
+2026-04-19 12:43:39,445 - AdaPoinTr_easywide_specialist - INFO - [Epoch 7/30][Batch 801/874] BatchTime = 0.409 (s) DataTime = 0.002 (s) Losses = ['5.4028', '42.5370'] lr = 0.000097
+2026-04-19 12:44:08,245 - AdaPoinTr_easywide_specialist - INFO - [Training] EPOCH: 7 EpochTime = 338.516 (s) Losses = ['5.3656', '41.8116']
+2026-04-19 12:44:08,622 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-last.pth
+2026-04-19 12:44:09,342 - AdaPoinTr_easywide_specialist - INFO - [Epoch 8/30][Batch 1/874] BatchTime = 0.719 (s) DataTime = 0.140 (s) Losses = ['5.1319', '42.2493'] lr = 0.000096
+2026-04-19 12:44:48,145 - AdaPoinTr_easywide_specialist - INFO - [Epoch 8/30][Batch 101/874] BatchTime = 0.400 (s) DataTime = 0.001 (s) Losses = ['5.2955', '43.7405'] lr = 0.000096
+2026-04-19 12:45:27,254 - AdaPoinTr_easywide_specialist - INFO - [Epoch 8/30][Batch 201/874] BatchTime = 0.394 (s) DataTime = 0.002 (s) Losses = ['5.7705', '42.5406'] lr = 0.000096
+2026-04-19 12:46:05,856 - AdaPoinTr_easywide_specialist - INFO - [Epoch 8/30][Batch 301/874] BatchTime = 0.401 (s) DataTime = 0.002 (s) Losses = ['5.3574', '42.6127'] lr = 0.000096
+2026-04-19 12:46:44,255 - AdaPoinTr_easywide_specialist - INFO - [Epoch 8/30][Batch 401/874] BatchTime = 0.335 (s) DataTime = 0.002 (s) Losses = ['5.4892', '43.6117'] lr = 0.000096
+2026-04-19 12:47:22,755 - AdaPoinTr_easywide_specialist - INFO - [Epoch 8/30][Batch 501/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.2248', '42.2288'] lr = 0.000096
+2026-04-19 12:48:01,631 - AdaPoinTr_easywide_specialist - INFO - [Epoch 8/30][Batch 601/874] BatchTime = 0.385 (s) DataTime = 0.002 (s) Losses = ['5.3658', '42.2118'] lr = 0.000096
+2026-04-19 12:48:40,155 - AdaPoinTr_easywide_specialist - INFO - [Epoch 8/30][Batch 701/874] BatchTime = 0.388 (s) DataTime = 0.002 (s) Losses = ['5.4016', '44.0271'] lr = 0.000096
+2026-04-19 12:49:18,947 - AdaPoinTr_easywide_specialist - INFO - [Epoch 8/30][Batch 801/874] BatchTime = 0.399 (s) DataTime = 0.002 (s) Losses = ['5.3240', '41.0279'] lr = 0.000096
+2026-04-19 12:49:47,823 - AdaPoinTr_easywide_specialist - INFO - [Training] EPOCH: 8 EpochTime = 339.200 (s) Losses = ['5.3260', '41.3997']
+2026-04-19 12:49:48,251 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-last.pth
+2026-04-19 12:49:48,914 - AdaPoinTr_easywide_specialist - INFO - [Epoch 9/30][Batch 1/874] BatchTime = 0.662 (s) DataTime = 0.167 (s) Losses = ['4.9496', '38.7437'] lr = 0.000096
+2026-04-19 12:50:28,155 - AdaPoinTr_easywide_specialist - INFO - [Epoch 9/30][Batch 101/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.2668', '39.1712'] lr = 0.000096
+2026-04-19 12:51:06,855 - AdaPoinTr_easywide_specialist - INFO - [Epoch 9/30][Batch 201/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['4.9893', '39.5404'] lr = 0.000096
+2026-04-19 12:51:45,247 - AdaPoinTr_easywide_specialist - INFO - [Epoch 9/30][Batch 301/874] BatchTime = 0.401 (s) DataTime = 0.002 (s) Losses = ['5.2785', '40.4048'] lr = 0.000096
+2026-04-19 12:52:24,262 - AdaPoinTr_easywide_specialist - INFO - [Epoch 9/30][Batch 401/874] BatchTime = 0.323 (s) DataTime = 0.002 (s) Losses = ['4.9575', '38.1131'] lr = 0.000096
+2026-04-19 12:53:03,441 - AdaPoinTr_easywide_specialist - INFO - [Epoch 9/30][Batch 501/874] BatchTime = 0.395 (s) DataTime = 0.002 (s) Losses = ['5.4156', '41.8778'] lr = 0.000096
+2026-04-19 12:53:42,407 - AdaPoinTr_easywide_specialist - INFO - [Epoch 9/30][Batch 601/874] BatchTime = 0.365 (s) DataTime = 0.002 (s) Losses = ['5.4959', '43.6677'] lr = 0.000096
+2026-04-19 12:54:21,247 - AdaPoinTr_easywide_specialist - INFO - [Epoch 9/30][Batch 701/874] BatchTime = 0.401 (s) DataTime = 0.002 (s) Losses = ['5.5704', '42.4016'] lr = 0.000096
+2026-04-19 12:54:59,546 - AdaPoinTr_easywide_specialist - INFO - [Epoch 9/30][Batch 801/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.5082', '42.3243'] lr = 0.000096
+2026-04-19 12:55:28,038 - AdaPoinTr_easywide_specialist - INFO - [Training] EPOCH: 9 EpochTime = 339.786 (s) Losses = ['5.3744', '42.0615']
+2026-04-19 12:55:28,459 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-last.pth
+2026-04-19 12:55:29,058 - AdaPoinTr_easywide_specialist - INFO - [Epoch 10/30][Batch 1/874] BatchTime = 0.598 (s) DataTime = 0.160 (s) Losses = ['5.0659', '38.9579'] lr = 0.000095
+2026-04-19 12:56:08,443 - AdaPoinTr_easywide_specialist - INFO - [Epoch 10/30][Batch 101/874] BatchTime = 0.397 (s) DataTime = 0.002 (s) Losses = ['5.6052', '46.2329'] lr = 0.000095
+2026-04-19 12:56:47,426 - AdaPoinTr_easywide_specialist - INFO - [Epoch 10/30][Batch 201/874] BatchTime = 0.380 (s) DataTime = 0.002 (s) Losses = ['5.3122', '42.2438'] lr = 0.000095
+2026-04-19 12:57:26,555 - AdaPoinTr_easywide_specialist - INFO - [Epoch 10/30][Batch 301/874] BatchTime = 0.394 (s) DataTime = 0.002 (s) Losses = ['5.1689', '40.5579'] lr = 0.000095
+2026-04-19 12:58:05,045 - AdaPoinTr_easywide_specialist - INFO - [Epoch 10/30][Batch 401/874] BatchTime = 0.399 (s) DataTime = 0.002 (s) Losses = ['5.5961', '44.3966'] lr = 0.000095
+2026-04-19 12:58:44,068 - AdaPoinTr_easywide_specialist - INFO - [Epoch 10/30][Batch 501/874] BatchTime = 0.332 (s) DataTime = 0.002 (s) Losses = ['5.2942', '43.5596'] lr = 0.000095
+2026-04-19 12:59:23,436 - AdaPoinTr_easywide_specialist - INFO - [Epoch 10/30][Batch 601/874] BatchTime = 0.381 (s) DataTime = 0.002 (s) Losses = ['5.0296', '43.5995'] lr = 0.000095
+2026-04-19 13:00:02,255 - AdaPoinTr_easywide_specialist - INFO - [Epoch 10/30][Batch 701/874] BatchTime = 0.394 (s) DataTime = 0.002 (s) Losses = ['5.3095', '40.2403'] lr = 0.000095
+2026-04-19 13:00:40,845 - AdaPoinTr_easywide_specialist - INFO - [Epoch 10/30][Batch 801/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['4.9138', '38.6615'] lr = 0.000095
+2026-04-19 13:01:09,118 - AdaPoinTr_easywide_specialist - INFO - [Training] EPOCH: 10 EpochTime = 340.658 (s) Losses = ['5.3464', '41.9055']
+2026-04-19 13:01:09,119 - AdaPoinTr_easywide_specialist - INFO - [VALIDATION] Start validating epoch 10
+2026-04-19 13:01:33,688 - AdaPoinTr_easywide_specialist - INFO - Test[1051/10518] Taxonomy = 02691156 Sample = c7749c0a8b61f43bc9b9e28055202e3d Losses = ['26.7982', '2.9255', '11.6310', '0.6039'] Metrics = ['0.5217', '11.6310', '0.6039', '0.0000']
+2026-04-19 13:01:58,155 - AdaPoinTr_easywide_specialist - INFO - Test[2102/10518] Taxonomy = 03211117 Sample = ab2f9418c111cc6ddb965514105122a4 Losses = ['25.1254', '2.5473', '8.1981', '0.2188'] Metrics = ['0.6298', '8.1981', '0.2188', '0.0000']
+2026-04-19 13:02:22,617 - AdaPoinTr_easywide_specialist - INFO - Test[3153/10518] Taxonomy = 02876657 Sample = c5032e4be091aabb36fe7a88df793982 Losses = ['30.0869', '3.1389', '12.5905', '0.5788'] Metrics = ['0.3770', '12.5905', '0.5788', '0.0000']
+2026-04-19 13:02:47,056 - AdaPoinTr_easywide_specialist - INFO - Test[4204/10518] Taxonomy = 03211117 Sample = 722df1da5778d45b1e43523279c7f09f Losses = ['28.9302', '2.9652', '13.0241', '0.7070'] Metrics = ['0.4086', '13.0241', '0.7070', '0.0000']
+2026-04-19 13:03:11,484 - AdaPoinTr_easywide_specialist - INFO - Test[5255/10518] Taxonomy = 02828884 Sample = 14b63361a48a9fffe4a048c146e8bd43 Losses = ['29.6400', '3.1213', '11.0820', '0.4739'] Metrics = ['0.4616', '11.0820', '0.4739', '0.0000']
+2026-04-19 13:03:35,878 - AdaPoinTr_easywide_specialist - INFO - Test[6306/10518] Taxonomy = 03211117 Sample = d330d50a0255529d19ed6e1a590c9122 Losses = ['30.7703', '3.7888', '11.5132', '0.4903'] Metrics = ['0.4517', '11.5132', '0.4903', '0.0000']
+2026-04-19 13:04:00,314 - AdaPoinTr_easywide_specialist - INFO - Test[7357/10518] Taxonomy = 04379243 Sample = b1ca280d9567270ade98d10ab5975b59 Losses = ['37.8567', '6.1142', '15.9770', '0.9531'] Metrics = ['0.2736', '15.9770', '0.9531', '0.0000']
+2026-04-19 13:04:24,770 - AdaPoinTr_easywide_specialist - INFO - Test[8408/10518] Taxonomy = 03001627 Sample = 89208a619341d9fdb8c516ed5c4ce32 Losses = ['29.7076', '3.0405', '13.3699', '0.6274'] Metrics = ['0.3150', '13.3699', '0.6274', '0.0000']
+2026-04-19 13:04:49,223 - AdaPoinTr_easywide_specialist - INFO - Test[9459/10518] Taxonomy = 03001627 Sample = d0255120e3351121c3bd24f986301745 Losses = ['36.1162', '4.6507', '16.0478', '0.9198'] Metrics = ['0.2348', '16.0478', '0.9198', '0.0000']
+2026-04-19 13:05:13,694 - AdaPoinTr_easywide_specialist - INFO - Test[10510/10518] Taxonomy = 03636649 Sample = ea9ec4d9db2e06202471e6dd5ac3ef92 Losses = ['36.1554', '5.3100', '12.6376', '0.9450'] Metrics = ['0.6577', '12.6376', '0.9450', '0.0000']
+2026-04-19 13:05:13,956 - AdaPoinTr_easywide_specialist - INFO - [Validation] EPOCH: 10  Metrics = ['0.3754', '14.5538', '1.0372', '0.0000']
+2026-04-19 13:05:13,956 - AdaPoinTr_easywide_specialist - INFO - ============================ TEST RESULTS ============================
+2026-04-19 13:05:13,956 - AdaPoinTr_easywide_specialist - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2026-04-19 13:05:13,956 - AdaPoinTr_easywide_specialist - INFO - 03759954	14	0.580 	12.908 	1.188 	0.000 	microphone	
+2026-04-19 13:05:13,956 - AdaPoinTr_easywide_specialist - INFO - 04330267	44	0.296 	16.596 	1.267 	0.000 	stove	
+2026-04-19 13:05:13,956 - AdaPoinTr_easywide_specialist - INFO - 03261776	15	0.344 	17.720 	1.642 	0.000 	earphone	
+2026-04-19 13:05:13,956 - AdaPoinTr_easywide_specialist - INFO - 03513137	33	0.217 	21.580 	2.393 	0.000 	helmet	
+2026-04-19 13:05:13,956 - AdaPoinTr_easywide_specialist - INFO - 04460130	27	0.424 	15.872 	1.856 	0.000 	tower	
+2026-04-19 13:05:13,956 - AdaPoinTr_easywide_specialist - INFO - 04468005	78	0.400 	12.662 	0.648 	0.000 	train	
+2026-04-19 13:05:13,956 - AdaPoinTr_easywide_specialist - INFO - 03761084	31	0.243 	17.706 	1.403 	0.000 	microwaves	
+2026-04-19 13:05:13,956 - AdaPoinTr_easywide_specialist - INFO - 04004475	34	0.279 	16.885 	1.265 	0.000 	printer	
+2026-04-19 13:05:13,956 - AdaPoinTr_easywide_specialist - INFO - 03938244	20	0.320 	14.840 	0.944 	0.000 	pillow	
+2026-04-19 13:05:13,956 - AdaPoinTr_easywide_specialist - INFO - 02992529	167	0.423 	11.260 	0.431 	0.000 	cellphone	
+2026-04-19 13:05:13,956 - AdaPoinTr_easywide_specialist - INFO - 02808440	172	0.301 	15.302 	1.031 	0.000 	bathtub	
+2026-04-19 13:05:13,956 - AdaPoinTr_easywide_specialist - INFO - 04530566	388	0.511 	11.505 	0.662 	0.000 	watercraft	
+2026-04-19 13:05:13,956 - AdaPoinTr_easywide_specialist - INFO - 02871439	91	0.260 	17.211 	1.371 	0.000 	bookshelf	
+2026-04-19 13:05:13,956 - AdaPoinTr_easywide_specialist - INFO - 03593526	120	0.280 	16.713 	1.199 	0.000 	jar	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 04554684	34	0.238 	18.341 	1.712 	0.000 	washer	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 03467517	160	0.790 	7.762 	0.410 	0.000 	guitar	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 04401088	218	0.429 	11.126 	0.429 	0.000 	telephone	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 02954340	12	0.318 	15.090 	1.039 	0.000 	cap	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 02933112	315	0.248 	15.397 	0.858 	0.000 	cabinet	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 03642806	92	0.401 	11.479 	0.442 	0.000 	laptop	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 02924116	188	0.366 	12.843 	0.627 	0.000 	bus	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 02946921	22	0.258 	15.316 	0.834 	0.000 	can	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 02818832	47	0.295 	16.277 	1.184 	0.000 	bed	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 04256520	635	0.305 	14.559 	0.849 	0.000 	sofa	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 04379243	1687	0.393 	13.028 	0.840 	0.000 	table	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 02747177	69	0.200 	18.700 	1.465 	0.000 	trash bin	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 03046257	131	0.326 	14.789 	0.943 	0.000 	clock	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 04225987	31	0.560 	9.615 	0.338 	0.000 	skateboard	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 03797390	43	0.200 	18.385 	1.292 	0.000 	mug	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 03001627	1356	0.386 	14.091 	0.961 	0.000 	chair	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 03691459	320	0.260 	17.535 	1.385 	0.000 	loudspeaker	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 02942699	23	0.248 	19.778 	1.820 	0.000 	camera	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 03636649	464	0.539 	14.440 	1.927 	0.000 	lamp	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 02691156	809	0.588 	9.579 	0.410 	0.000 	airplane	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 02773838	17	0.358 	13.510 	0.739 	0.000 	bag	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 02958343	703	0.226 	16.670 	1.016 	0.000 	car	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 02880940	38	0.238 	15.758 	0.830 	0.000 	bowl	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 04099429	17	0.707 	9.122 	0.460 	0.000 	rocket	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 02828884	363	0.453 	11.137 	0.526 	0.000 	bench	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 04090263	475	0.696 	8.906 	0.473 	0.000 	rifle	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 03211117	219	0.357 	13.636 	0.794 	0.000 	display	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 02876657	100	0.430 	13.412 	0.905 	0.000 	bottle	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 03710193	19	0.541 	12.112 	0.830 	0.000 	mailbox	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 03790512	68	0.269 	16.454 	1.067 	0.000 	motorbike	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 03325088	149	0.478 	15.807 	1.900 	0.000 	faucet	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 02801938	23	0.243 	17.268 	1.457 	0.000 	basket	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 03337140	60	0.249 	16.425 	1.060 	0.000 	file cabinet	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 02843684	15	0.242 	19.393 	1.760 	0.000 	birdhouse	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 03624134	85	0.758 	8.048 	0.367 	0.000 	knife	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 03991062	121	0.248 	19.490 	1.916 	0.000 	flowerpot	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 03948459	62	0.470 	12.844 	0.820 	0.000 	pistol	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 03928116	48	0.297 	15.814 	1.138 	0.000 	piano	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 03207941	19	0.251 	15.403 	0.853 	0.000 	dishwasher	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 04074963	14	0.462 	12.034 	0.685 	0.000 	remote	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - 03085013	13	0.450 	10.322 	0.386 	0.000 	keyboard	
+2026-04-19 13:05:13,957 - AdaPoinTr_easywide_specialist - INFO - Overall		0.375 	14.554 	1.037 	0.000 	
+2026-04-19 13:05:14,342 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-last.pth
+2026-04-19 13:05:14,958 - AdaPoinTr_easywide_specialist - INFO - [Epoch 11/30][Batch 1/874] BatchTime = 0.615 (s) DataTime = 0.180 (s) Losses = ['5.2670', '40.7879'] lr = 0.000095
+2026-04-19 13:05:53,846 - AdaPoinTr_easywide_specialist - INFO - [Epoch 11/30][Batch 101/874] BatchTime = 0.391 (s) DataTime = 0.002 (s) Losses = ['5.1714', '40.4311'] lr = 0.000095
+2026-04-19 13:06:32,746 - AdaPoinTr_easywide_specialist - INFO - [Epoch 11/30][Batch 201/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.1809', '40.6244'] lr = 0.000095
+2026-04-19 13:07:11,846 - AdaPoinTr_easywide_specialist - INFO - [Epoch 11/30][Batch 301/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.0376', '39.1410'] lr = 0.000095
+2026-04-19 13:07:50,768 - AdaPoinTr_easywide_specialist - INFO - [Epoch 11/30][Batch 401/874] BatchTime = 0.322 (s) DataTime = 0.002 (s) Losses = ['5.7609', '45.4686'] lr = 0.000095
+2026-04-19 13:08:29,756 - AdaPoinTr_easywide_specialist - INFO - [Epoch 11/30][Batch 501/874] BatchTime = 0.401 (s) DataTime = 0.002 (s) Losses = ['5.3931', '41.5157'] lr = 0.000095
+2026-04-19 13:09:09,040 - AdaPoinTr_easywide_specialist - INFO - [Epoch 11/30][Batch 601/874] BatchTime = 0.394 (s) DataTime = 0.002 (s) Losses = ['5.6044', '42.8896'] lr = 0.000095
+2026-04-19 13:09:48,245 - AdaPoinTr_easywide_specialist - INFO - [Epoch 11/30][Batch 701/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.1498', '41.2033'] lr = 0.000095
+2026-04-19 13:10:27,934 - AdaPoinTr_easywide_specialist - INFO - [Epoch 11/30][Batch 801/874] BatchTime = 0.389 (s) DataTime = 0.002 (s) Losses = ['5.6167', '45.5551'] lr = 0.000095
+2026-04-19 13:10:56,424 - AdaPoinTr_easywide_specialist - INFO - [Training] EPOCH: 11 EpochTime = 342.081 (s) Losses = ['5.3372', '41.4787']
+2026-04-19 13:10:56,841 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-last.pth
+2026-04-19 13:10:57,460 - AdaPoinTr_easywide_specialist - INFO - [Epoch 12/30][Batch 1/874] BatchTime = 0.618 (s) DataTime = 0.153 (s) Losses = ['5.2239', '41.7148'] lr = 0.000094
+2026-04-19 13:11:36,161 - AdaPoinTr_easywide_specialist - INFO - [Epoch 12/30][Batch 101/874] BatchTime = 0.326 (s) DataTime = 0.002 (s) Losses = ['5.2604', '45.5730'] lr = 0.000094
+2026-04-19 13:12:14,655 - AdaPoinTr_easywide_specialist - INFO - [Epoch 12/30][Batch 201/874] BatchTime = 0.399 (s) DataTime = 0.002 (s) Losses = ['5.7816', '44.2144'] lr = 0.000094
+2026-04-19 13:12:53,955 - AdaPoinTr_easywide_specialist - INFO - [Epoch 12/30][Batch 301/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['4.9832', '38.7372'] lr = 0.000094
+2026-04-19 13:13:33,346 - AdaPoinTr_easywide_specialist - INFO - [Epoch 12/30][Batch 401/874] BatchTime = 0.391 (s) DataTime = 0.002 (s) Losses = ['5.2293', '38.7774'] lr = 0.000094
+2026-04-19 13:14:12,156 - AdaPoinTr_easywide_specialist - INFO - [Epoch 12/30][Batch 501/874] BatchTime = 0.401 (s) DataTime = 0.002 (s) Losses = ['5.5279', '42.2298'] lr = 0.000094
+2026-04-19 13:14:50,841 - AdaPoinTr_easywide_specialist - INFO - [Epoch 12/30][Batch 601/874] BatchTime = 0.394 (s) DataTime = 0.002 (s) Losses = ['5.5153', '40.8414'] lr = 0.000094
+2026-04-19 13:15:29,555 - AdaPoinTr_easywide_specialist - INFO - [Epoch 12/30][Batch 701/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.3782', '44.0477'] lr = 0.000094
+2026-04-19 13:16:08,437 - AdaPoinTr_easywide_specialist - INFO - [Epoch 12/30][Batch 801/874] BatchTime = 0.391 (s) DataTime = 0.002 (s) Losses = ['5.1701', '42.2982'] lr = 0.000094
+2026-04-19 13:16:36,945 - AdaPoinTr_easywide_specialist - INFO - [Training] EPOCH: 12 EpochTime = 340.103 (s) Losses = ['5.3331', '41.5059']
+2026-04-19 13:16:37,452 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-last.pth
+2026-04-19 13:16:37,964 - AdaPoinTr_easywide_specialist - INFO - [Epoch 13/30][Batch 1/874] BatchTime = 0.510 (s) DataTime = 0.171 (s) Losses = ['5.4414', '44.2733'] lr = 0.000094
+2026-04-19 13:17:17,356 - AdaPoinTr_easywide_specialist - INFO - [Epoch 13/30][Batch 101/874] BatchTime = 0.395 (s) DataTime = 0.002 (s) Losses = ['5.2777', '39.6929'] lr = 0.000094
+2026-04-19 13:17:56,436 - AdaPoinTr_easywide_specialist - INFO - [Epoch 13/30][Batch 201/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['4.8616', '38.3205'] lr = 0.000094
+2026-04-19 13:18:35,454 - AdaPoinTr_easywide_specialist - INFO - [Epoch 13/30][Batch 301/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.0048', '38.1812'] lr = 0.000094
+2026-04-19 13:19:15,040 - AdaPoinTr_easywide_specialist - INFO - [Epoch 13/30][Batch 401/874] BatchTime = 0.393 (s) DataTime = 0.002 (s) Losses = ['5.2536', '43.6923'] lr = 0.000094
+2026-04-19 13:19:54,155 - AdaPoinTr_easywide_specialist - INFO - [Epoch 13/30][Batch 501/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.7972', '42.5061'] lr = 0.000094
+2026-04-19 13:20:33,455 - AdaPoinTr_easywide_specialist - INFO - [Epoch 13/30][Batch 601/874] BatchTime = 0.387 (s) DataTime = 0.002 (s) Losses = ['5.1366', '41.2150'] lr = 0.000094
+2026-04-19 13:21:13,055 - AdaPoinTr_easywide_specialist - INFO - [Epoch 13/30][Batch 701/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.0748', '37.9075'] lr = 0.000094
+2026-04-19 13:21:52,240 - AdaPoinTr_easywide_specialist - INFO - [Epoch 13/30][Batch 801/874] BatchTime = 0.395 (s) DataTime = 0.002 (s) Losses = ['5.2023', '40.4158'] lr = 0.000094
+2026-04-19 13:22:20,826 - AdaPoinTr_easywide_specialist - INFO - [Training] EPOCH: 13 EpochTime = 343.372 (s) Losses = ['5.3060', '41.0449']
+2026-04-19 13:22:21,243 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-last.pth
+2026-04-19 13:22:21,860 - AdaPoinTr_easywide_specialist - INFO - [Epoch 14/30][Batch 1/874] BatchTime = 0.616 (s) DataTime = 0.153 (s) Losses = ['5.3825', '41.1344'] lr = 0.000093
+2026-04-19 13:23:01,355 - AdaPoinTr_easywide_specialist - INFO - [Epoch 14/30][Batch 101/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.4911', '40.1078'] lr = 0.000093
+2026-04-19 13:23:41,146 - AdaPoinTr_easywide_specialist - INFO - [Epoch 14/30][Batch 201/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.4974', '40.8415'] lr = 0.000093
+2026-04-19 13:24:20,354 - AdaPoinTr_easywide_specialist - INFO - [Epoch 14/30][Batch 301/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.2264', '38.7301'] lr = 0.000093
+2026-04-19 13:24:59,761 - AdaPoinTr_easywide_specialist - INFO - [Epoch 14/30][Batch 401/874] BatchTime = 0.327 (s) DataTime = 0.002 (s) Losses = ['4.7616', '38.1399'] lr = 0.000093
+2026-04-19 13:25:39,255 - AdaPoinTr_easywide_specialist - INFO - [Epoch 14/30][Batch 501/874] BatchTime = 0.401 (s) DataTime = 0.002 (s) Losses = ['5.7230', '42.3290'] lr = 0.000093
+2026-04-19 13:26:18,855 - AdaPoinTr_easywide_specialist - INFO - [Epoch 14/30][Batch 601/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.1348', '42.0961'] lr = 0.000093
+2026-04-19 13:26:57,655 - AdaPoinTr_easywide_specialist - INFO - [Epoch 14/30][Batch 701/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.1201', '36.8893'] lr = 0.000093
+2026-04-19 13:27:36,955 - AdaPoinTr_easywide_specialist - INFO - [Epoch 14/30][Batch 801/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.2839', '41.5386'] lr = 0.000093
+2026-04-19 13:28:06,039 - AdaPoinTr_easywide_specialist - INFO - [Training] EPOCH: 14 EpochTime = 344.795 (s) Losses = ['5.3497', '41.9129']
+2026-04-19 13:28:06,513 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-last.pth
+2026-04-19 13:28:07,137 - AdaPoinTr_easywide_specialist - INFO - [Epoch 15/30][Batch 1/874] BatchTime = 0.623 (s) DataTime = 0.145 (s) Losses = ['5.5916', '40.2996'] lr = 0.000093
+2026-04-19 13:28:46,554 - AdaPoinTr_easywide_specialist - INFO - [Epoch 15/30][Batch 101/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.2800', '42.4280'] lr = 0.000093
+2026-04-19 13:29:26,356 - AdaPoinTr_easywide_specialist - INFO - [Epoch 15/30][Batch 201/874] BatchTime = 0.401 (s) DataTime = 0.002 (s) Losses = ['5.0540', '39.4914'] lr = 0.000093
+2026-04-19 13:30:05,954 - AdaPoinTr_easywide_specialist - INFO - [Epoch 15/30][Batch 301/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['4.7790', '36.5631'] lr = 0.000093
+2026-04-19 13:30:45,654 - AdaPoinTr_easywide_specialist - INFO - [Epoch 15/30][Batch 401/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.3710', '41.9901'] lr = 0.000093
+2026-04-19 13:31:25,434 - AdaPoinTr_easywide_specialist - INFO - [Epoch 15/30][Batch 501/874] BatchTime = 0.401 (s) DataTime = 0.002 (s) Losses = ['5.2120', '42.3582'] lr = 0.000093
+2026-04-19 13:32:04,945 - AdaPoinTr_easywide_specialist - INFO - [Epoch 15/30][Batch 601/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['4.8169', '39.7262'] lr = 0.000093
+2026-04-19 13:32:44,364 - AdaPoinTr_easywide_specialist - INFO - [Epoch 15/30][Batch 701/874] BatchTime = 0.402 (s) DataTime = 0.002 (s) Losses = ['5.3610', '39.1119'] lr = 0.000093
+2026-04-19 13:33:23,597 - AdaPoinTr_easywide_specialist - INFO - [Epoch 15/30][Batch 801/874] BatchTime = 0.343 (s) DataTime = 0.002 (s) Losses = ['5.5488', '42.0859'] lr = 0.000093
+2026-04-19 13:33:51,842 - AdaPoinTr_easywide_specialist - INFO - [Training] EPOCH: 15 EpochTime = 345.328 (s) Losses = ['5.3361', '41.5031']
+2026-04-19 13:33:52,246 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-last.pth
+2026-04-19 13:33:52,860 - AdaPoinTr_easywide_specialist - INFO - [Epoch 16/30][Batch 1/874] BatchTime = 0.613 (s) DataTime = 0.154 (s) Losses = ['4.8637', '37.4384'] lr = 0.000092
+2026-04-19 13:34:32,355 - AdaPoinTr_easywide_specialist - INFO - [Epoch 16/30][Batch 101/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.2807', '41.7233'] lr = 0.000092
+2026-04-19 13:35:11,355 - AdaPoinTr_easywide_specialist - INFO - [Epoch 16/30][Batch 201/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.4916', '40.5283'] lr = 0.000092
+2026-04-19 13:35:50,936 - AdaPoinTr_easywide_specialist - INFO - [Epoch 16/30][Batch 301/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.2232', '40.2399'] lr = 0.000092
+2026-04-19 13:36:30,261 - AdaPoinTr_easywide_specialist - INFO - [Epoch 16/30][Batch 401/874] BatchTime = 0.405 (s) DataTime = 0.002 (s) Losses = ['5.7911', '44.8233'] lr = 0.000092
+2026-04-19 13:37:09,555 - AdaPoinTr_easywide_specialist - INFO - [Epoch 16/30][Batch 501/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.3466', '41.1016'] lr = 0.000092
+2026-04-19 13:37:49,045 - AdaPoinTr_easywide_specialist - INFO - [Epoch 16/30][Batch 601/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.3721', '40.1406'] lr = 0.000092
+2026-04-19 13:38:27,855 - AdaPoinTr_easywide_specialist - INFO - [Epoch 16/30][Batch 701/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.2006', '39.8496'] lr = 0.000092
+2026-04-19 13:39:07,245 - AdaPoinTr_easywide_specialist - INFO - [Epoch 16/30][Batch 801/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.4577', '40.1446'] lr = 0.000092
+2026-04-19 13:39:36,122 - AdaPoinTr_easywide_specialist - INFO - [Training] EPOCH: 16 EpochTime = 343.875 (s) Losses = ['5.3217', '41.3588']
+2026-04-19 13:39:36,547 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-last.pth
+2026-04-19 13:39:37,161 - AdaPoinTr_easywide_specialist - INFO - [Epoch 17/30][Batch 1/874] BatchTime = 0.613 (s) DataTime = 0.153 (s) Losses = ['5.3459', '39.2159'] lr = 0.000092
+2026-04-19 13:40:16,061 - AdaPoinTr_easywide_specialist - INFO - [Epoch 17/30][Batch 101/874] BatchTime = 0.325 (s) DataTime = 0.002 (s) Losses = ['5.2571', '42.6237'] lr = 0.000092
+2026-04-19 13:40:55,344 - AdaPoinTr_easywide_specialist - INFO - [Epoch 17/30][Batch 201/874] BatchTime = 0.399 (s) DataTime = 0.002 (s) Losses = ['5.3672', '42.0440'] lr = 0.000092
+2026-04-19 13:41:34,655 - AdaPoinTr_easywide_specialist - INFO - [Epoch 17/30][Batch 301/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['4.9991', '41.0028'] lr = 0.000092
+2026-04-19 13:42:14,156 - AdaPoinTr_easywide_specialist - INFO - [Epoch 17/30][Batch 401/874] BatchTime = 0.401 (s) DataTime = 0.002 (s) Losses = ['5.3035', '42.5039'] lr = 0.000092
+2026-04-19 13:42:53,667 - AdaPoinTr_easywide_specialist - INFO - [Epoch 17/30][Batch 501/874] BatchTime = 0.322 (s) DataTime = 0.002 (s) Losses = ['5.2877', '43.8922'] lr = 0.000092
+2026-04-19 13:43:32,656 - AdaPoinTr_easywide_specialist - INFO - [Epoch 17/30][Batch 601/874] BatchTime = 0.401 (s) DataTime = 0.002 (s) Losses = ['5.2036', '37.4674'] lr = 0.000092
+2026-04-19 13:44:12,246 - AdaPoinTr_easywide_specialist - INFO - [Epoch 17/30][Batch 701/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.5770', '42.4591'] lr = 0.000092
+2026-04-19 13:44:51,957 - AdaPoinTr_easywide_specialist - INFO - [Epoch 17/30][Batch 801/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.1942', '39.1720'] lr = 0.000092
+2026-04-19 13:45:20,837 - AdaPoinTr_easywide_specialist - INFO - [Training] EPOCH: 17 EpochTime = 344.288 (s) Losses = ['5.3028', '41.0064']
+2026-04-19 13:45:21,260 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-last.pth
+2026-04-19 13:45:21,862 - AdaPoinTr_easywide_specialist - INFO - [Epoch 18/30][Batch 1/874] BatchTime = 0.601 (s) DataTime = 0.134 (s) Losses = ['5.2647', '40.9322'] lr = 0.000091
+2026-04-19 13:46:00,354 - AdaPoinTr_easywide_specialist - INFO - [Epoch 18/30][Batch 101/874] BatchTime = 0.400 (s) DataTime = 0.001 (s) Losses = ['5.6428', '43.2445'] lr = 0.000091
+2026-04-19 13:46:39,335 - AdaPoinTr_easywide_specialist - INFO - [Epoch 18/30][Batch 201/874] BatchTime = 0.401 (s) DataTime = 0.001 (s) Losses = ['5.0320', '40.2544'] lr = 0.000091
+2026-04-19 13:47:17,961 - AdaPoinTr_easywide_specialist - INFO - [Epoch 18/30][Batch 301/874] BatchTime = 0.327 (s) DataTime = 0.001 (s) Losses = ['5.4221', '41.1120'] lr = 0.000091
+2026-04-19 13:47:55,854 - AdaPoinTr_easywide_specialist - INFO - [Epoch 18/30][Batch 401/874] BatchTime = 0.330 (s) DataTime = 0.002 (s) Losses = ['5.4125', '45.3585'] lr = 0.000091
+2026-04-19 13:48:34,461 - AdaPoinTr_easywide_specialist - INFO - [Epoch 18/30][Batch 501/874] BatchTime = 0.399 (s) DataTime = 0.001 (s) Losses = ['5.1863', '39.5623'] lr = 0.000091
+2026-04-19 13:49:13,145 - AdaPoinTr_easywide_specialist - INFO - [Epoch 18/30][Batch 601/874] BatchTime = 0.401 (s) DataTime = 0.002 (s) Losses = ['5.1322', '39.3873'] lr = 0.000091
+2026-04-19 13:49:51,056 - AdaPoinTr_easywide_specialist - INFO - [Epoch 18/30][Batch 701/874] BatchTime = 0.401 (s) DataTime = 0.002 (s) Losses = ['5.3940', '42.8915'] lr = 0.000091
+2026-04-19 13:50:29,555 - AdaPoinTr_easywide_specialist - INFO - [Epoch 18/30][Batch 801/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['4.9581', '39.4231'] lr = 0.000091
+2026-04-19 13:50:58,433 - AdaPoinTr_easywide_specialist - INFO - [Training] EPOCH: 18 EpochTime = 337.172 (s) Losses = ['5.3215', '41.4684']
+2026-04-19 13:50:58,854 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-last.pth
+2026-04-19 13:50:59,542 - AdaPoinTr_easywide_specialist - INFO - [Epoch 19/30][Batch 1/874] BatchTime = 0.687 (s) DataTime = 0.156 (s) Losses = ['5.0557', '36.7164'] lr = 0.000091
+2026-04-19 13:51:38,255 - AdaPoinTr_easywide_specialist - INFO - [Epoch 19/30][Batch 101/874] BatchTime = 0.400 (s) DataTime = 0.001 (s) Losses = ['5.1673', '42.3466'] lr = 0.000091
+2026-04-19 13:52:16,741 - AdaPoinTr_easywide_specialist - INFO - [Epoch 19/30][Batch 201/874] BatchTime = 0.385 (s) DataTime = 0.001 (s) Losses = ['5.2757', '42.3748'] lr = 0.000091
+2026-04-19 13:52:55,461 - AdaPoinTr_easywide_specialist - INFO - [Epoch 19/30][Batch 301/874] BatchTime = 0.326 (s) DataTime = 0.002 (s) Losses = ['5.2813', '39.9763'] lr = 0.000091
+2026-04-19 13:53:34,034 - AdaPoinTr_easywide_specialist - INFO - [Epoch 19/30][Batch 401/874] BatchTime = 0.394 (s) DataTime = 0.001 (s) Losses = ['5.2517', '38.9443'] lr = 0.000091
+2026-04-19 13:54:12,445 - AdaPoinTr_easywide_specialist - INFO - [Epoch 19/30][Batch 501/874] BatchTime = 0.390 (s) DataTime = 0.002 (s) Losses = ['5.1108', '38.7407'] lr = 0.000091
+2026-04-19 13:54:51,134 - AdaPoinTr_easywide_specialist - INFO - [Epoch 19/30][Batch 601/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.4906', '46.3456'] lr = 0.000091
+2026-04-19 13:55:29,345 - AdaPoinTr_easywide_specialist - INFO - [Epoch 19/30][Batch 701/874] BatchTime = 0.410 (s) DataTime = 0.001 (s) Losses = ['5.4478', '42.2437'] lr = 0.000091
+2026-04-19 13:56:08,145 - AdaPoinTr_easywide_specialist - INFO - [Epoch 19/30][Batch 801/874] BatchTime = 0.411 (s) DataTime = 0.002 (s) Losses = ['5.6851', '41.1334'] lr = 0.000091
+2026-04-19 13:56:36,616 - AdaPoinTr_easywide_specialist - INFO - [Training] EPOCH: 19 EpochTime = 337.760 (s) Losses = ['5.3792', '42.2113']
+2026-04-19 13:56:37,069 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-last.pth
+2026-04-19 13:56:37,564 - AdaPoinTr_easywide_specialist - INFO - [Epoch 20/30][Batch 1/874] BatchTime = 0.494 (s) DataTime = 0.164 (s) Losses = ['5.4757', '44.1000'] lr = 0.000090
+2026-04-19 13:57:16,055 - AdaPoinTr_easywide_specialist - INFO - [Epoch 20/30][Batch 101/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.0505', '43.5866'] lr = 0.000090
+2026-04-19 13:57:55,045 - AdaPoinTr_easywide_specialist - INFO - [Epoch 20/30][Batch 201/874] BatchTime = 0.391 (s) DataTime = 0.002 (s) Losses = ['4.5586', '35.7410'] lr = 0.000090
+2026-04-19 13:58:33,734 - AdaPoinTr_easywide_specialist - INFO - [Epoch 20/30][Batch 301/874] BatchTime = 0.401 (s) DataTime = 0.001 (s) Losses = ['5.0477', '41.2767'] lr = 0.000090
+2026-04-19 13:59:11,921 - AdaPoinTr_easywide_specialist - INFO - [Epoch 20/30][Batch 401/874] BatchTime = 0.375 (s) DataTime = 0.002 (s) Losses = ['5.0306', '41.3300'] lr = 0.000090
+2026-04-19 13:59:50,345 - AdaPoinTr_easywide_specialist - INFO - [Epoch 20/30][Batch 501/874] BatchTime = 0.390 (s) DataTime = 0.001 (s) Losses = ['5.4068', '39.6686'] lr = 0.000090
+2026-04-19 14:00:28,934 - AdaPoinTr_easywide_specialist - INFO - [Epoch 20/30][Batch 601/874] BatchTime = 0.399 (s) DataTime = 0.001 (s) Losses = ['5.1184', '39.0248'] lr = 0.000090
+2026-04-19 14:01:07,032 - AdaPoinTr_easywide_specialist - INFO - [Epoch 20/30][Batch 701/874] BatchTime = 0.399 (s) DataTime = 0.001 (s) Losses = ['5.3547', '42.6705'] lr = 0.000090
+2026-04-19 14:01:45,332 - AdaPoinTr_easywide_specialist - INFO - [Epoch 20/30][Batch 801/874] BatchTime = 0.400 (s) DataTime = 0.001 (s) Losses = ['5.8844', '53.6849'] lr = 0.000090
+2026-04-19 14:02:13,525 - AdaPoinTr_easywide_specialist - INFO - [Training] EPOCH: 20 EpochTime = 336.454 (s) Losses = ['5.3946', '41.9714']
+2026-04-19 14:02:13,525 - AdaPoinTr_easywide_specialist - INFO - [VALIDATION] Start validating epoch 20
+2026-04-19 14:02:38,086 - AdaPoinTr_easywide_specialist - INFO - Test[1051/10518] Taxonomy = 02691156 Sample = c7749c0a8b61f43bc9b9e28055202e3d Losses = ['24.6100', '2.7504', '8.9552', '0.2590'] Metrics = ['0.5914', '8.9552', '0.2590', '0.0000']
+2026-04-19 14:03:02,564 - AdaPoinTr_easywide_specialist - INFO - Test[2102/10518] Taxonomy = 03211117 Sample = ab2f9418c111cc6ddb965514105122a4 Losses = ['27.3286', '2.8346', '9.4961', '0.3121'] Metrics = ['0.5706', '9.4961', '0.3121', '0.0000']
+2026-04-19 14:03:27,008 - AdaPoinTr_easywide_specialist - INFO - Test[3153/10518] Taxonomy = 02876657 Sample = c5032e4be091aabb36fe7a88df793982 Losses = ['74.7264', '23.3249', '31.2038', '5.0079'] Metrics = ['0.2460', '31.2038', '5.0079', '0.0000']
+2026-04-19 14:03:51,424 - AdaPoinTr_easywide_specialist - INFO - Test[4204/10518] Taxonomy = 03211117 Sample = 722df1da5778d45b1e43523279c7f09f Losses = ['36.8186', '5.2331', '17.4706', '1.9247'] Metrics = ['0.3895', '17.4706', '1.9247', '0.0000']
+2026-04-19 14:04:15,809 - AdaPoinTr_easywide_specialist - INFO - Test[5255/10518] Taxonomy = 02828884 Sample = 14b63361a48a9fffe4a048c146e8bd43 Losses = ['32.0232', '3.8297', '14.7793', '1.0241'] Metrics = ['0.4204', '14.7793', '1.0241', '0.0000']
+2026-04-19 14:04:40,216 - AdaPoinTr_easywide_specialist - INFO - Test[6306/10518] Taxonomy = 03211117 Sample = d330d50a0255529d19ed6e1a590c9122 Losses = ['28.0861', '3.3620', '11.6086', '0.4154'] Metrics = ['0.4228', '11.6086', '0.4154', '0.0000']
+2026-04-19 14:05:04,583 - AdaPoinTr_easywide_specialist - INFO - Test[7357/10518] Taxonomy = 04379243 Sample = b1ca280d9567270ade98d10ab5975b59 Losses = ['35.4395', '5.0146', '14.9959', '0.7235'] Metrics = ['0.2688', '14.9959', '0.7235', '0.0000']
+2026-04-19 14:05:28,971 - AdaPoinTr_easywide_specialist - INFO - Test[8408/10518] Taxonomy = 03001627 Sample = 89208a619341d9fdb8c516ed5c4ce32 Losses = ['31.8897', '3.6738', '14.7551', '0.7667'] Metrics = ['0.2774', '14.7551', '0.7667', '0.0000']
+2026-04-19 14:05:53,333 - AdaPoinTr_easywide_specialist - INFO - Test[9459/10518] Taxonomy = 03001627 Sample = d0255120e3351121c3bd24f986301745 Losses = ['37.9086', '5.5003', '15.0114', '0.6986'] Metrics = ['0.2446', '15.0114', '0.6986', '0.0000']
+2026-04-19 14:06:17,784 - AdaPoinTr_easywide_specialist - INFO - Test[10510/10518] Taxonomy = 03636649 Sample = ea9ec4d9db2e06202471e6dd5ac3ef92 Losses = ['35.7506', '4.8626', '11.9455', '0.6847'] Metrics = ['0.6090', '11.9455', '0.6847', '0.0000']
+2026-04-19 14:06:18,059 - AdaPoinTr_easywide_specialist - INFO - [Validation] EPOCH: 20  Metrics = ['0.3628', '15.0270', '1.1169', '0.0000']
+2026-04-19 14:06:18,060 - AdaPoinTr_easywide_specialist - INFO - ============================ TEST RESULTS ============================
+2026-04-19 14:06:18,060 - AdaPoinTr_easywide_specialist - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2026-04-19 14:06:18,060 - AdaPoinTr_easywide_specialist - INFO - 03759954	14	0.541 	15.253 	2.256 	0.000 	microphone	
+2026-04-19 14:06:18,060 - AdaPoinTr_easywide_specialist - INFO - 04330267	44	0.283 	16.604 	1.317 	0.000 	stove	
+2026-04-19 14:06:18,060 - AdaPoinTr_easywide_specialist - INFO - 03261776	15	0.313 	19.680 	2.742 	0.000 	earphone	
+2026-04-19 14:06:18,060 - AdaPoinTr_easywide_specialist - INFO - 03513137	33	0.212 	21.240 	2.127 	0.000 	helmet	
+2026-04-19 14:06:18,060 - AdaPoinTr_easywide_specialist - INFO - 04460130	27	0.411 	13.684 	0.738 	0.000 	tower	
+2026-04-19 14:06:18,060 - AdaPoinTr_easywide_specialist - INFO - 04468005	78	0.399 	12.819 	0.680 	0.000 	train	
+2026-04-19 14:06:18,060 - AdaPoinTr_easywide_specialist - INFO - 03761084	31	0.237 	16.976 	1.109 	0.000 	microwaves	
+2026-04-19 14:06:18,060 - AdaPoinTr_easywide_specialist - INFO - 04004475	34	0.269 	17.560 	1.480 	0.000 	printer	
+2026-04-19 14:06:18,060 - AdaPoinTr_easywide_specialist - INFO - 03938244	20	0.306 	14.372 	0.743 	0.000 	pillow	
+2026-04-19 14:06:18,060 - AdaPoinTr_easywide_specialist - INFO - 02992529	167	0.397 	12.221 	0.574 	0.000 	cellphone	
+2026-04-19 14:06:18,060 - AdaPoinTr_easywide_specialist - INFO - 02808440	172	0.289 	15.990 	1.146 	0.000 	bathtub	
+2026-04-19 14:06:18,060 - AdaPoinTr_easywide_specialist - INFO - 04530566	388	0.504 	11.684 	0.647 	0.000 	watercraft	
+2026-04-19 14:06:18,060 - AdaPoinTr_easywide_specialist - INFO - 02871439	91	0.249 	17.096 	1.200 	0.000 	bookshelf	
+2026-04-19 14:06:18,060 - AdaPoinTr_easywide_specialist - INFO - 03593526	120	0.264 	18.024 	1.505 	0.000 	jar	
+2026-04-19 14:06:18,060 - AdaPoinTr_easywide_specialist - INFO - 04554684	34	0.228 	18.173 	1.545 	0.000 	washer	
+2026-04-19 14:06:18,060 - AdaPoinTr_easywide_specialist - INFO - 03467517	160	0.779 	7.615 	0.303 	0.000 	guitar	
+2026-04-19 14:06:18,060 - AdaPoinTr_easywide_specialist - INFO - 04401088	218	0.403 	11.947 	0.505 	0.000 	telephone	
+2026-04-19 14:06:18,060 - AdaPoinTr_easywide_specialist - INFO - 02954340	12	0.295 	15.922 	1.046 	0.000 	cap	
+2026-04-19 14:06:18,060 - AdaPoinTr_easywide_specialist - INFO - 02933112	315	0.241 	15.737 	0.868 	0.000 	cabinet	
+2026-04-19 14:06:18,060 - AdaPoinTr_easywide_specialist - INFO - 03642806	92	0.372 	12.612 	0.594 	0.000 	laptop	
+2026-04-19 14:06:18,060 - AdaPoinTr_easywide_specialist - INFO - 02924116	188	0.362 	12.950 	0.620 	0.000 	bus	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 02946921	22	0.235 	17.790 	1.358 	0.000 	can	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 02818832	47	0.285 	16.642 	1.266 	0.000 	bed	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 04256520	635	0.294 	15.022 	0.883 	0.000 	sofa	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 04379243	1687	0.386 	13.386 	0.873 	0.000 	table	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 02747177	69	0.191 	18.625 	1.339 	0.000 	trash bin	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 03046257	131	0.303 	15.402 	0.928 	0.000 	clock	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 04225987	31	0.564 	10.195 	0.482 	0.000 	skateboard	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 03797390	43	0.189 	20.046 	1.705 	0.000 	mug	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 03001627	1356	0.367 	14.596 	1.058 	0.000 	chair	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 03691459	320	0.252 	17.979 	1.480 	0.000 	loudspeaker	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 02942699	23	0.231 	24.258 	3.787 	0.000 	camera	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 03636649	464	0.515 	14.583 	1.588 	0.000 	lamp	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 02691156	809	0.581 	9.944 	0.464 	0.000 	airplane	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 02773838	17	0.345 	14.075 	0.852 	0.000 	bag	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 02958343	703	0.225 	16.656 	0.992 	0.000 	car	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 02880940	38	0.229 	16.630 	0.989 	0.000 	bowl	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 04099429	17	0.727 	8.680 	0.427 	0.000 	rocket	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 02828884	363	0.438 	11.924 	0.685 	0.000 	bench	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 04090263	475	0.692 	8.956 	0.452 	0.000 	rifle	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 03211117	219	0.332 	14.787 	1.106 	0.000 	display	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 02876657	100	0.415 	12.824 	0.759 	0.000 	bottle	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 03710193	19	0.492 	13.904 	1.179 	0.000 	mailbox	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 03790512	68	0.263 	16.775 	1.085 	0.000 	motorbike	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 03325088	149	0.460 	15.487 	1.542 	0.000 	faucet	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 02801938	23	0.234 	16.375 	0.957 	0.000 	basket	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 03337140	60	0.238 	16.711 	1.087 	0.000 	file cabinet	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 02843684	15	0.230 	21.201 	2.220 	0.000 	birdhouse	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 03624134	85	0.752 	7.941 	0.310 	0.000 	knife	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 03991062	121	0.235 	19.992 	1.873 	0.000 	flowerpot	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 03948459	62	0.482 	12.317 	0.751 	0.000 	pistol	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 03928116	48	0.288 	16.774 	1.483 	0.000 	piano	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 03207941	19	0.247 	15.328 	0.789 	0.000 	dishwasher	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 04074963	14	0.445 	11.555 	0.499 	0.000 	remote	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - 03085013	13	0.439 	10.964 	0.435 	0.000 	keyboard	
+2026-04-19 14:06:18,061 - AdaPoinTr_easywide_specialist - INFO - Overall		0.363 	15.027 	1.117 	0.000 	
+2026-04-19 14:06:18,530 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-last.pth
+2026-04-19 14:06:19,119 - AdaPoinTr_easywide_specialist - INFO - [Epoch 21/30][Batch 1/874] BatchTime = 0.588 (s) DataTime = 0.185 (s) Losses = ['5.2959', '40.2246'] lr = 0.000090
+2026-04-19 14:06:57,640 - AdaPoinTr_easywide_specialist - INFO - [Epoch 21/30][Batch 101/874] BatchTime = 0.407 (s) DataTime = 0.001 (s) Losses = ['5.0797', '44.6119'] lr = 0.000090
+2026-04-19 14:07:36,346 - AdaPoinTr_easywide_specialist - INFO - [Epoch 21/30][Batch 201/874] BatchTime = 0.391 (s) DataTime = 0.001 (s) Losses = ['5.5547', '44.5922'] lr = 0.000090
+2026-04-19 14:08:15,261 - AdaPoinTr_easywide_specialist - INFO - [Epoch 21/30][Batch 301/874] BatchTime = 0.327 (s) DataTime = 0.002 (s) Losses = ['5.6523', '41.3153'] lr = 0.000090
+2026-04-19 14:08:54,245 - AdaPoinTr_easywide_specialist - INFO - [Epoch 21/30][Batch 401/874] BatchTime = 0.410 (s) DataTime = 0.002 (s) Losses = ['5.3553', '42.9756'] lr = 0.000090
+2026-04-19 14:09:32,861 - AdaPoinTr_easywide_specialist - INFO - [Epoch 21/30][Batch 501/874] BatchTime = 0.326 (s) DataTime = 0.001 (s) Losses = ['5.6419', '42.5105'] lr = 0.000090
+2026-04-19 14:10:12,155 - AdaPoinTr_easywide_specialist - INFO - [Epoch 21/30][Batch 601/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.3185', '39.3710'] lr = 0.000090
+2026-04-19 14:10:51,445 - AdaPoinTr_easywide_specialist - INFO - [Epoch 21/30][Batch 701/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.3719', '40.8675'] lr = 0.000090
+2026-04-19 14:11:30,056 - AdaPoinTr_easywide_specialist - INFO - [Epoch 21/30][Batch 801/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['4.8921', '38.3082'] lr = 0.000090
+2026-04-19 14:11:59,035 - AdaPoinTr_easywide_specialist - INFO - [Training] EPOCH: 21 EpochTime = 340.503 (s) Losses = ['5.3485', '42.2032']
+2026-04-19 14:11:59,440 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-last.pth
+2026-04-19 14:12:00,067 - AdaPoinTr_easywide_specialist - INFO - [Epoch 22/30][Batch 1/874] BatchTime = 0.626 (s) DataTime = 0.171 (s) Losses = ['5.5243', '42.7941'] lr = 0.000090
+2026-04-19 14:12:39,536 - AdaPoinTr_easywide_specialist - INFO - [Epoch 22/30][Batch 101/874] BatchTime = 0.396 (s) DataTime = 0.002 (s) Losses = ['5.3927', '41.6374'] lr = 0.000090
+2026-04-19 14:13:18,746 - AdaPoinTr_easywide_specialist - INFO - [Epoch 22/30][Batch 201/874] BatchTime = 0.401 (s) DataTime = 0.002 (s) Losses = ['5.1884', '41.2329'] lr = 0.000090
+2026-04-19 14:13:58,055 - AdaPoinTr_easywide_specialist - INFO - [Epoch 22/30][Batch 301/874] BatchTime = 0.399 (s) DataTime = 0.002 (s) Losses = ['5.4210', '42.6861'] lr = 0.000090
+2026-04-19 14:14:37,434 - AdaPoinTr_easywide_specialist - INFO - [Epoch 22/30][Batch 401/874] BatchTime = 0.394 (s) DataTime = 0.002 (s) Losses = ['5.3065', '43.8027'] lr = 0.000090
+2026-04-19 14:15:16,955 - AdaPoinTr_easywide_specialist - INFO - [Epoch 22/30][Batch 501/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.2737', '40.1259'] lr = 0.000090
+2026-04-19 14:15:56,241 - AdaPoinTr_easywide_specialist - INFO - [Epoch 22/30][Batch 601/874] BatchTime = 0.407 (s) DataTime = 0.002 (s) Losses = ['5.3645', '40.0762'] lr = 0.000090
+2026-04-19 14:16:35,555 - AdaPoinTr_easywide_specialist - INFO - [Epoch 22/30][Batch 701/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.3350', '39.3654'] lr = 0.000090
+2026-04-19 14:17:15,156 - AdaPoinTr_easywide_specialist - INFO - [Epoch 22/30][Batch 801/874] BatchTime = 0.401 (s) DataTime = 0.002 (s) Losses = ['5.1999', '38.7460'] lr = 0.000090
+2026-04-19 14:17:43,930 - AdaPoinTr_easywide_specialist - INFO - [Training] EPOCH: 22 EpochTime = 344.489 (s) Losses = ['5.2923', '40.9466']
+2026-04-19 14:17:44,347 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-last.pth
+2026-04-19 14:17:44,940 - AdaPoinTr_easywide_specialist - INFO - [Epoch 23/30][Batch 1/874] BatchTime = 0.592 (s) DataTime = 0.134 (s) Losses = ['5.3095', '41.0598'] lr = 0.000089
+2026-04-19 14:18:23,955 - AdaPoinTr_easywide_specialist - INFO - [Epoch 23/30][Batch 101/874] BatchTime = 0.400 (s) DataTime = 0.001 (s) Losses = ['5.8293', '44.4361'] lr = 0.000089
+2026-04-19 14:19:03,445 - AdaPoinTr_easywide_specialist - INFO - [Epoch 23/30][Batch 201/874] BatchTime = 0.389 (s) DataTime = 0.002 (s) Losses = ['5.6352', '41.3721'] lr = 0.000089
+2026-04-19 14:19:41,967 - AdaPoinTr_easywide_specialist - INFO - [Epoch 23/30][Batch 301/874] BatchTime = 0.333 (s) DataTime = 0.002 (s) Losses = ['5.1531', '40.6889'] lr = 0.000089
+2026-04-19 14:20:21,154 - AdaPoinTr_easywide_specialist - INFO - [Epoch 23/30][Batch 401/874] BatchTime = 0.394 (s) DataTime = 0.002 (s) Losses = ['4.9623', '37.5516'] lr = 0.000089
+2026-04-19 14:21:00,435 - AdaPoinTr_easywide_specialist - INFO - [Epoch 23/30][Batch 501/874] BatchTime = 0.402 (s) DataTime = 0.002 (s) Losses = ['5.8205', '43.4007'] lr = 0.000089
+2026-04-19 14:21:39,567 - AdaPoinTr_easywide_specialist - INFO - [Epoch 23/30][Batch 601/874] BatchTime = 0.322 (s) DataTime = 0.002 (s) Losses = ['5.3126', '43.1914'] lr = 0.000089
+2026-04-19 14:22:18,445 - AdaPoinTr_easywide_specialist - INFO - [Epoch 23/30][Batch 701/874] BatchTime = 0.410 (s) DataTime = 0.001 (s) Losses = ['5.0372', '39.5058'] lr = 0.000089
+2026-04-19 14:22:57,555 - AdaPoinTr_easywide_specialist - INFO - [Epoch 23/30][Batch 801/874] BatchTime = 0.400 (s) DataTime = 0.001 (s) Losses = ['5.2011', '39.9573'] lr = 0.000089
+2026-04-19 14:23:26,238 - AdaPoinTr_easywide_specialist - INFO - [Training] EPOCH: 23 EpochTime = 341.890 (s) Losses = ['5.2953', '40.8883']
+2026-04-19 14:23:26,638 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-last.pth
+2026-04-19 14:23:27,317 - AdaPoinTr_easywide_specialist - INFO - [Epoch 24/30][Batch 1/874] BatchTime = 0.677 (s) DataTime = 0.134 (s) Losses = ['5.8143', '41.4638'] lr = 0.000089
+2026-04-19 14:24:06,245 - AdaPoinTr_easywide_specialist - INFO - [Epoch 24/30][Batch 101/874] BatchTime = 0.407 (s) DataTime = 0.002 (s) Losses = ['5.5767', '42.1374'] lr = 0.000089
+2026-04-19 14:24:45,561 - AdaPoinTr_easywide_specialist - INFO - [Epoch 24/30][Batch 201/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.4226', '42.4746'] lr = 0.000089
+2026-04-19 14:25:24,855 - AdaPoinTr_easywide_specialist - INFO - [Epoch 24/30][Batch 301/874] BatchTime = 0.400 (s) DataTime = 0.001 (s) Losses = ['5.4657', '40.6927'] lr = 0.000089
+2026-04-19 14:26:04,145 - AdaPoinTr_easywide_specialist - INFO - [Epoch 24/30][Batch 401/874] BatchTime = 0.401 (s) DataTime = 0.001 (s) Losses = ['5.2763', '40.1109'] lr = 0.000089
+2026-04-19 14:26:43,236 - AdaPoinTr_easywide_specialist - INFO - [Epoch 24/30][Batch 501/874] BatchTime = 0.390 (s) DataTime = 0.002 (s) Losses = ['5.6655', '43.9253'] lr = 0.000089
+2026-04-19 14:27:22,055 - AdaPoinTr_easywide_specialist - INFO - [Epoch 24/30][Batch 601/874] BatchTime = 0.394 (s) DataTime = 0.002 (s) Losses = ['5.5105', '42.2853'] lr = 0.000089
+2026-04-19 14:28:01,255 - AdaPoinTr_easywide_specialist - INFO - [Epoch 24/30][Batch 701/874] BatchTime = 0.399 (s) DataTime = 0.001 (s) Losses = ['5.3110', '38.2033'] lr = 0.000089
+2026-04-19 14:28:40,155 - AdaPoinTr_easywide_specialist - INFO - [Epoch 24/30][Batch 801/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.4945', '41.4913'] lr = 0.000089
+2026-04-19 14:29:08,931 - AdaPoinTr_easywide_specialist - INFO - [Training] EPOCH: 24 EpochTime = 342.291 (s) Losses = ['5.3082', '40.9445']
+2026-04-19 14:29:09,333 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-last.pth
+2026-04-19 14:29:09,957 - AdaPoinTr_easywide_specialist - INFO - [Epoch 25/30][Batch 1/874] BatchTime = 0.622 (s) DataTime = 0.162 (s) Losses = ['5.2062', '40.4920'] lr = 0.000088
+2026-04-19 14:29:49,355 - AdaPoinTr_easywide_specialist - INFO - [Epoch 25/30][Batch 101/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.2099', '38.5023'] lr = 0.000088
+2026-04-19 14:30:28,755 - AdaPoinTr_easywide_specialist - INFO - [Epoch 25/30][Batch 201/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.2910', '40.3602'] lr = 0.000088
+2026-04-19 14:31:08,155 - AdaPoinTr_easywide_specialist - INFO - [Epoch 25/30][Batch 301/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.2692', '41.2083'] lr = 0.000088
+2026-04-19 14:31:47,808 - AdaPoinTr_easywide_specialist - INFO - [Epoch 25/30][Batch 401/874] BatchTime = 0.362 (s) DataTime = 0.002 (s) Losses = ['5.2341', '42.8060'] lr = 0.000088
+2026-04-19 14:32:26,655 - AdaPoinTr_easywide_specialist - INFO - [Epoch 25/30][Batch 501/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.1932', '40.2684'] lr = 0.000088
+2026-04-19 14:33:06,255 - AdaPoinTr_easywide_specialist - INFO - [Epoch 25/30][Batch 601/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.5762', '41.8353'] lr = 0.000088
+2026-04-19 14:33:45,146 - AdaPoinTr_easywide_specialist - INFO - [Epoch 25/30][Batch 701/874] BatchTime = 0.399 (s) DataTime = 0.002 (s) Losses = ['5.3863', '40.7285'] lr = 0.000088
+2026-04-19 14:34:24,555 - AdaPoinTr_easywide_specialist - INFO - [Epoch 25/30][Batch 801/874] BatchTime = 0.394 (s) DataTime = 0.002 (s) Losses = ['5.3483', '40.8056'] lr = 0.000088
+2026-04-19 14:34:53,309 - AdaPoinTr_easywide_specialist - INFO - [Training] EPOCH: 25 EpochTime = 343.975 (s) Losses = ['5.3147', '41.1836']
+2026-04-19 14:34:53,763 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-last.pth
+2026-04-19 14:34:54,363 - AdaPoinTr_easywide_specialist - INFO - [Epoch 26/30][Batch 1/874] BatchTime = 0.599 (s) DataTime = 0.197 (s) Losses = ['5.5085', '41.2535'] lr = 0.000088
+2026-04-19 14:35:33,555 - AdaPoinTr_easywide_specialist - INFO - [Epoch 26/30][Batch 101/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.4911', '41.1837'] lr = 0.000088
+2026-04-19 14:36:12,755 - AdaPoinTr_easywide_specialist - INFO - [Epoch 26/30][Batch 201/874] BatchTime = 0.400 (s) DataTime = 0.003 (s) Losses = ['5.0424', '36.9718'] lr = 0.000088
+2026-04-19 14:36:51,955 - AdaPoinTr_easywide_specialist - INFO - [Epoch 26/30][Batch 301/874] BatchTime = 0.401 (s) DataTime = 0.002 (s) Losses = ['4.8468', '37.9573'] lr = 0.000088
+2026-04-19 14:37:30,746 - AdaPoinTr_easywide_specialist - INFO - [Epoch 26/30][Batch 401/874] BatchTime = 0.399 (s) DataTime = 0.002 (s) Losses = ['5.4835', '42.1267'] lr = 0.000088
+2026-04-19 14:38:09,655 - AdaPoinTr_easywide_specialist - INFO - [Epoch 26/30][Batch 501/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.4990', '40.0991'] lr = 0.000088
+2026-04-19 14:38:48,955 - AdaPoinTr_easywide_specialist - INFO - [Epoch 26/30][Batch 601/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.5779', '42.2753'] lr = 0.000088
+2026-04-19 14:39:28,855 - AdaPoinTr_easywide_specialist - INFO - [Epoch 26/30][Batch 701/874] BatchTime = 0.388 (s) DataTime = 0.002 (s) Losses = ['5.4366', '44.2260'] lr = 0.000088
+2026-04-19 14:40:07,646 - AdaPoinTr_easywide_specialist - INFO - [Epoch 26/30][Batch 801/874] BatchTime = 0.398 (s) DataTime = 0.002 (s) Losses = ['5.2079', '38.5094'] lr = 0.000088
+2026-04-19 14:40:36,326 - AdaPoinTr_easywide_specialist - INFO - [Training] EPOCH: 26 EpochTime = 342.562 (s) Losses = ['5.2638', '40.2545']
+2026-04-19 14:40:36,733 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-last.pth
+2026-04-19 14:40:37,360 - AdaPoinTr_easywide_specialist - INFO - [Epoch 27/30][Batch 1/874] BatchTime = 0.625 (s) DataTime = 0.159 (s) Losses = ['5.2994', '41.7732'] lr = 0.000087
+2026-04-19 14:41:16,355 - AdaPoinTr_easywide_specialist - INFO - [Epoch 27/30][Batch 101/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.5272', '40.4403'] lr = 0.000087
+2026-04-19 14:41:56,047 - AdaPoinTr_easywide_specialist - INFO - [Epoch 27/30][Batch 201/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.1860', '38.9956'] lr = 0.000087
+2026-04-19 14:42:35,455 - AdaPoinTr_easywide_specialist - INFO - [Epoch 27/30][Batch 301/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.1174', '39.5719'] lr = 0.000087
+2026-04-19 14:43:15,056 - AdaPoinTr_easywide_specialist - INFO - [Epoch 27/30][Batch 401/874] BatchTime = 0.401 (s) DataTime = 0.002 (s) Losses = ['5.1419', '38.5669'] lr = 0.000087
+2026-04-19 14:43:54,135 - AdaPoinTr_easywide_specialist - INFO - [Epoch 27/30][Batch 501/874] BatchTime = 0.398 (s) DataTime = 0.002 (s) Losses = ['4.9021', '40.5149'] lr = 0.000087
+2026-04-19 14:44:33,255 - AdaPoinTr_easywide_specialist - INFO - [Epoch 27/30][Batch 601/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.3132', '39.9445'] lr = 0.000087
+2026-04-19 14:45:12,846 - AdaPoinTr_easywide_specialist - INFO - [Epoch 27/30][Batch 701/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.2325', '39.9581'] lr = 0.000087
+2026-04-19 14:45:52,055 - AdaPoinTr_easywide_specialist - INFO - [Epoch 27/30][Batch 801/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.3045', '42.3275'] lr = 0.000087
+2026-04-19 14:46:20,829 - AdaPoinTr_easywide_specialist - INFO - [Training] EPOCH: 27 EpochTime = 344.094 (s) Losses = ['5.2790', '40.4723']
+2026-04-19 14:46:21,229 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-last.pth
+2026-04-19 14:46:21,940 - AdaPoinTr_easywide_specialist - INFO - [Epoch 28/30][Batch 1/874] BatchTime = 0.709 (s) DataTime = 0.159 (s) Losses = ['5.3324', '39.9776'] lr = 0.000087
+2026-04-19 14:47:01,431 - AdaPoinTr_easywide_specialist - INFO - [Epoch 28/30][Batch 101/874] BatchTime = 0.384 (s) DataTime = 0.002 (s) Losses = ['5.2984', '40.3709'] lr = 0.000087
+2026-04-19 14:47:40,956 - AdaPoinTr_easywide_specialist - INFO - [Epoch 28/30][Batch 201/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.3596', '41.4493'] lr = 0.000087
+2026-04-19 14:48:20,045 - AdaPoinTr_easywide_specialist - INFO - [Epoch 28/30][Batch 301/874] BatchTime = 0.389 (s) DataTime = 0.002 (s) Losses = ['5.1115', '40.9941'] lr = 0.000087
+2026-04-19 14:48:58,955 - AdaPoinTr_easywide_specialist - INFO - [Epoch 28/30][Batch 401/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.2242', '39.7200'] lr = 0.000087
+2026-04-19 14:49:38,455 - AdaPoinTr_easywide_specialist - INFO - [Epoch 28/30][Batch 501/874] BatchTime = 0.328 (s) DataTime = 0.002 (s) Losses = ['5.0520', '37.7828'] lr = 0.000087
+2026-04-19 14:50:17,855 - AdaPoinTr_easywide_specialist - INFO - [Epoch 28/30][Batch 601/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.4091', '40.2864'] lr = 0.000087
+2026-04-19 14:50:57,146 - AdaPoinTr_easywide_specialist - INFO - [Epoch 28/30][Batch 701/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.3105', '42.0244'] lr = 0.000087
+2026-04-19 14:51:36,739 - AdaPoinTr_easywide_specialist - INFO - [Epoch 28/30][Batch 801/874] BatchTime = 0.402 (s) DataTime = 0.002 (s) Losses = ['5.1491', '38.9636'] lr = 0.000087
+2026-04-19 14:52:05,498 - AdaPoinTr_easywide_specialist - INFO - [Training] EPOCH: 28 EpochTime = 344.268 (s) Losses = ['5.2797', '40.6658']
+2026-04-19 14:52:05,958 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-last.pth
+2026-04-19 14:52:06,559 - AdaPoinTr_easywide_specialist - INFO - [Epoch 29/30][Batch 1/874] BatchTime = 0.600 (s) DataTime = 0.197 (s) Losses = ['5.5640', '44.0346'] lr = 0.000086
+2026-04-19 14:52:46,355 - AdaPoinTr_easywide_specialist - INFO - [Epoch 29/30][Batch 101/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.2027', '39.8673'] lr = 0.000086
+2026-04-19 14:53:26,046 - AdaPoinTr_easywide_specialist - INFO - [Epoch 29/30][Batch 201/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.2719', '39.6552'] lr = 0.000086
+2026-04-19 14:54:05,455 - AdaPoinTr_easywide_specialist - INFO - [Epoch 29/30][Batch 301/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.2997', '38.9108'] lr = 0.000086
+2026-04-19 14:54:45,055 - AdaPoinTr_easywide_specialist - INFO - [Epoch 29/30][Batch 401/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.7665', '45.2190'] lr = 0.000086
+2026-04-19 14:55:24,655 - AdaPoinTr_easywide_specialist - INFO - [Epoch 29/30][Batch 501/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.7533', '42.8517'] lr = 0.000086
+2026-04-19 14:56:04,556 - AdaPoinTr_easywide_specialist - INFO - [Epoch 29/30][Batch 601/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.2038', '42.8614'] lr = 0.000086
+2026-04-19 14:56:44,046 - AdaPoinTr_easywide_specialist - INFO - [Epoch 29/30][Batch 701/874] BatchTime = 0.391 (s) DataTime = 0.002 (s) Losses = ['5.8019', '46.0227'] lr = 0.000086
+2026-04-19 14:57:23,454 - AdaPoinTr_easywide_specialist - INFO - [Epoch 29/30][Batch 801/874] BatchTime = 0.399 (s) DataTime = 0.002 (s) Losses = ['5.5066', '43.1013'] lr = 0.000086
+2026-04-19 14:57:52,534 - AdaPoinTr_easywide_specialist - INFO - [Training] EPOCH: 29 EpochTime = 346.574 (s) Losses = ['5.2658', '40.4325']
+2026-04-19 14:57:52,938 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-last.pth
+2026-04-19 14:57:53,272 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-epoch-029.pth
+2026-04-19 14:57:53,863 - AdaPoinTr_easywide_specialist - INFO - [Epoch 30/30][Batch 1/874] BatchTime = 0.591 (s) DataTime = 0.156 (s) Losses = ['5.1597', '39.1282'] lr = 0.000086
+2026-04-19 14:58:33,346 - AdaPoinTr_easywide_specialist - INFO - [Epoch 30/30][Batch 101/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.2305', '42.2446'] lr = 0.000086
+2026-04-19 14:59:12,161 - AdaPoinTr_easywide_specialist - INFO - [Epoch 30/30][Batch 201/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.3164', '43.1887'] lr = 0.000086
+2026-04-19 14:59:51,045 - AdaPoinTr_easywide_specialist - INFO - [Epoch 30/30][Batch 301/874] BatchTime = 0.407 (s) DataTime = 0.002 (s) Losses = ['5.3754', '45.9388'] lr = 0.000086
+2026-04-19 15:00:29,547 - AdaPoinTr_easywide_specialist - INFO - [Epoch 30/30][Batch 401/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.3603', '40.9559'] lr = 0.000086
+2026-04-19 15:01:08,755 - AdaPoinTr_easywide_specialist - INFO - [Epoch 30/30][Batch 501/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.2277', '39.5651'] lr = 0.000086
+2026-04-19 15:01:47,846 - AdaPoinTr_easywide_specialist - INFO - [Epoch 30/30][Batch 601/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.1288', '40.7408'] lr = 0.000086
+2026-04-19 15:02:26,362 - AdaPoinTr_easywide_specialist - INFO - [Epoch 30/30][Batch 701/874] BatchTime = 0.316 (s) DataTime = 0.002 (s) Losses = ['5.2809', '39.9994'] lr = 0.000086
+2026-04-19 15:03:05,467 - AdaPoinTr_easywide_specialist - INFO - [Epoch 30/30][Batch 801/874] BatchTime = 0.321 (s) DataTime = 0.002 (s) Losses = ['5.2868', '40.3663'] lr = 0.000086
+2026-04-19 15:03:33,637 - AdaPoinTr_easywide_specialist - INFO - [Training] EPOCH: 30 EpochTime = 340.364 (s) Losses = ['5.2851', '40.8716']
+2026-04-19 15:03:33,638 - AdaPoinTr_easywide_specialist - INFO - [VALIDATION] Start validating epoch 30
+2026-04-19 15:03:58,293 - AdaPoinTr_easywide_specialist - INFO - Test[1051/10518] Taxonomy = 02691156 Sample = c7749c0a8b61f43bc9b9e28055202e3d Losses = ['27.8077', '3.7433', '9.8769', '0.3622'] Metrics = ['0.5553', '9.8769', '0.3622', '0.0000']
+2026-04-19 15:04:22,849 - AdaPoinTr_easywide_specialist - INFO - Test[2102/10518] Taxonomy = 03211117 Sample = ab2f9418c111cc6ddb965514105122a4 Losses = ['24.0319', '2.2491', '8.0409', '0.2159'] Metrics = ['0.6660', '8.0409', '0.2159', '0.0000']
+2026-04-19 15:04:47,342 - AdaPoinTr_easywide_specialist - INFO - Test[3153/10518] Taxonomy = 02876657 Sample = c5032e4be091aabb36fe7a88df793982 Losses = ['40.2024', '7.3108', '16.3289', '1.2965'] Metrics = ['0.3370', '16.3289', '1.2965', '0.0000']
+2026-04-19 15:05:11,769 - AdaPoinTr_easywide_specialist - INFO - Test[4204/10518] Taxonomy = 03211117 Sample = 722df1da5778d45b1e43523279c7f09f Losses = ['36.3043', '5.8815', '16.9898', '2.0311'] Metrics = ['0.4121', '16.9898', '2.0311', '0.0000']
+2026-04-19 15:05:36,141 - AdaPoinTr_easywide_specialist - INFO - Test[5255/10518] Taxonomy = 02828884 Sample = 14b63361a48a9fffe4a048c146e8bd43 Losses = ['31.4516', '3.7033', '14.2018', '0.9291'] Metrics = ['0.4330', '14.2018', '0.9291', '0.0000']
+2026-04-19 15:06:00,620 - AdaPoinTr_easywide_specialist - INFO - Test[6306/10518] Taxonomy = 03211117 Sample = d330d50a0255529d19ed6e1a590c9122 Losses = ['28.6077', '3.3101', '10.4191', '0.3344'] Metrics = ['0.4951', '10.4191', '0.3344', '0.0000']
+2026-04-19 15:06:25,217 - AdaPoinTr_easywide_specialist - INFO - Test[7357/10518] Taxonomy = 04379243 Sample = b1ca280d9567270ade98d10ab5975b59 Losses = ['30.5298', '3.2316', '13.6984', '0.5612'] Metrics = ['0.2909', '13.6984', '0.5612', '0.0000']
+2026-04-19 15:06:49,754 - AdaPoinTr_easywide_specialist - INFO - Test[8408/10518] Taxonomy = 03001627 Sample = 89208a619341d9fdb8c516ed5c4ce32 Losses = ['31.9097', '3.5695', '14.1300', '0.6717'] Metrics = ['0.3038', '14.1300', '0.6717', '0.0000']
+2026-04-19 15:07:14,213 - AdaPoinTr_easywide_specialist - INFO - Test[9459/10518] Taxonomy = 03001627 Sample = d0255120e3351121c3bd24f986301745 Losses = ['36.3450', '4.8154', '14.4547', '0.6391'] Metrics = ['0.2510', '14.4547', '0.6391', '0.0000']
+2026-04-19 15:07:38,671 - AdaPoinTr_easywide_specialist - INFO - Test[10510/10518] Taxonomy = 03636649 Sample = ea9ec4d9db2e06202471e6dd5ac3ef92 Losses = ['30.5263', '3.5056', '8.7646', '0.3033'] Metrics = ['0.6812', '8.7646', '0.3033', '0.0000']
+2026-04-19 15:07:38,948 - AdaPoinTr_easywide_specialist - INFO - [Validation] EPOCH: 30  Metrics = ['0.3801', '14.3446', '0.9889', '0.0000']
+2026-04-19 15:07:38,949 - AdaPoinTr_easywide_specialist - INFO - ============================ TEST RESULTS ============================
+2026-04-19 15:07:38,949 - AdaPoinTr_easywide_specialist - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2026-04-19 15:07:38,949 - AdaPoinTr_easywide_specialist - INFO - 03759954	14	0.577 	12.610 	1.094 	0.000 	microphone	
+2026-04-19 15:07:38,949 - AdaPoinTr_easywide_specialist - INFO - 04330267	44	0.309 	15.048 	0.928 	0.000 	stove	
+2026-04-19 15:07:38,949 - AdaPoinTr_easywide_specialist - INFO - 03261776	15	0.334 	17.487 	1.491 	0.000 	earphone	
+2026-04-19 15:07:38,949 - AdaPoinTr_easywide_specialist - INFO - 03513137	33	0.224 	19.308 	1.837 	0.000 	helmet	
+2026-04-19 15:07:38,949 - AdaPoinTr_easywide_specialist - INFO - 04460130	27	0.415 	14.612 	1.106 	0.000 	tower	
+2026-04-19 15:07:38,949 - AdaPoinTr_easywide_specialist - INFO - 04468005	78	0.407 	12.721 	0.705 	0.000 	train	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 03761084	31	0.247 	17.326 	1.239 	0.000 	microwaves	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 04004475	34	0.287 	15.802 	1.063 	0.000 	printer	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 03938244	20	0.328 	14.596 	0.892 	0.000 	pillow	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 02992529	167	0.432 	11.446 	0.495 	0.000 	cellphone	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 02808440	172	0.309 	15.228 	1.048 	0.000 	bathtub	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 04530566	388	0.516 	11.614 	0.698 	0.000 	watercraft	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 02871439	91	0.268 	16.171 	1.044 	0.000 	bookshelf	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 03593526	120	0.279 	16.986 	1.248 	0.000 	jar	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 04554684	34	0.240 	18.496 	1.914 	0.000 	washer	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 03467517	160	0.810 	7.682 	0.425 	0.000 	guitar	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 04401088	218	0.435 	11.294 	0.466 	0.000 	telephone	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 02954340	12	0.314 	14.143 	0.737 	0.000 	cap	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 02933112	315	0.250 	15.666 	0.912 	0.000 	cabinet	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 03642806	92	0.395 	11.605 	0.497 	0.000 	laptop	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 02924116	188	0.372 	12.700 	0.610 	0.000 	bus	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 02946921	22	0.252 	15.965 	0.947 	0.000 	can	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 02818832	47	0.297 	16.408 	1.263 	0.000 	bed	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 04256520	635	0.313 	14.296 	0.770 	0.000 	sofa	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 04379243	1687	0.399 	12.927 	0.826 	0.000 	table	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 02747177	69	0.200 	17.338 	1.059 	0.000 	trash bin	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 03046257	131	0.326 	15.127 	1.114 	0.000 	clock	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 04225987	31	0.566 	9.642 	0.362 	0.000 	skateboard	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 03797390	43	0.203 	18.517 	1.368 	0.000 	mug	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 03001627	1356	0.380 	14.024 	0.926 	0.000 	chair	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 03691459	320	0.269 	17.624 	1.532 	0.000 	loudspeaker	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 02942699	23	0.255 	19.747 	2.088 	0.000 	camera	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 03636649	464	0.546 	13.850 	1.563 	0.000 	lamp	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 02691156	809	0.587 	9.757 	0.441 	0.000 	airplane	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 02773838	17	0.379 	13.444 	0.780 	0.000 	bag	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 02958343	703	0.231 	16.334 	0.968 	0.000 	car	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 02880940	38	0.238 	15.819 	0.826 	0.000 	bowl	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 04099429	17	0.712 	9.471 	0.543 	0.000 	rocket	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 02828884	363	0.456 	11.194 	0.547 	0.000 	bench	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 04090263	475	0.707 	8.749 	0.467 	0.000 	rifle	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 03211117	219	0.365 	13.671 	0.836 	0.000 	display	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 02876657	100	0.443 	12.496 	0.767 	0.000 	bottle	
+2026-04-19 15:07:38,950 - AdaPoinTr_easywide_specialist - INFO - 03710193	19	0.520 	13.078 	1.004 	0.000 	mailbox	
+2026-04-19 15:07:38,951 - AdaPoinTr_easywide_specialist - INFO - 03790512	68	0.274 	16.656 	1.145 	0.000 	motorbike	
+2026-04-19 15:07:38,951 - AdaPoinTr_easywide_specialist - INFO - 03325088	149	0.487 	14.965 	1.574 	0.000 	faucet	
+2026-04-19 15:07:38,951 - AdaPoinTr_easywide_specialist - INFO - 02801938	23	0.242 	17.307 	1.391 	0.000 	basket	
+2026-04-19 15:07:38,951 - AdaPoinTr_easywide_specialist - INFO - 03337140	60	0.252 	16.523 	1.135 	0.000 	file cabinet	
+2026-04-19 15:07:38,951 - AdaPoinTr_easywide_specialist - INFO - 02843684	15	0.250 	18.338 	1.471 	0.000 	birdhouse	
+2026-04-19 15:07:38,951 - AdaPoinTr_easywide_specialist - INFO - 03624134	85	0.770 	8.077 	0.407 	0.000 	knife	
+2026-04-19 15:07:38,951 - AdaPoinTr_easywide_specialist - INFO - 03991062	121	0.252 	19.343 	1.766 	0.000 	flowerpot	
+2026-04-19 15:07:38,951 - AdaPoinTr_easywide_specialist - INFO - 03948459	62	0.492 	12.007 	0.683 	0.000 	pistol	
+2026-04-19 15:07:38,951 - AdaPoinTr_easywide_specialist - INFO - 03928116	48	0.299 	16.731 	1.403 	0.000 	piano	
+2026-04-19 15:07:38,951 - AdaPoinTr_easywide_specialist - INFO - 03207941	19	0.251 	16.160 	1.219 	0.000 	dishwasher	
+2026-04-19 15:07:38,951 - AdaPoinTr_easywide_specialist - INFO - 04074963	14	0.479 	10.679 	0.398 	0.000 	remote	
+2026-04-19 15:07:38,951 - AdaPoinTr_easywide_specialist - INFO - 03085013	13	0.463 	10.153 	0.351 	0.000 	keyboard	
+2026-04-19 15:07:38,951 - AdaPoinTr_easywide_specialist - INFO - Overall		0.380 	14.345 	0.989 	0.000 	
+2026-04-19 15:07:39,368 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-last.pth
+2026-04-19 15:07:39,702 - AdaPoinTr_easywide_specialist - INFO - Save checkpoint at ./experiments/AdaPoinTr_easywide_specialist/ShapeNet55_models/easywide_specialist_seed43/ckpt-epoch-030.pth

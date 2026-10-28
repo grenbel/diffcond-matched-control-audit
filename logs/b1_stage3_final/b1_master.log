@@ -1,0 +1,131 @@
+[2026-04-25 11:53:56] ==============================================
+[2026-04-25 11:53:56] === B1 MASTER LAUNCHER START ===
+[2026-04-25 11:53:56] ==============================================
+[2026-04-25 11:53:56] 
+[2026-04-25 11:53:56] === Phase 1/5: SN55 Vanilla UpTrans ===
+[2026-04-25 11:53:56] === B1 SN55 Vanilla UpTrans: 3 seeds sequential ===
+  config : cfgs/ShapeNet55_models/UpTrans.yaml
+  ckpt   : experiments/UpTrans/ShapeNet55_models/pretrained_400ep/ckpt-best.pth
+
+[2026-04-25 11:53:56] ===== seed 42 START =====
+[2026-04-25 18:18:43] ===== seed 42 DONE =====
+
+[2026-04-25 18:18:43] ===== seed 43 START =====
+[2026-04-26 00:42:31] ===== seed 43 DONE =====
+
+[2026-04-26 00:42:31] ===== seed 44 START =====
+[2026-04-26 07:06:37] ===== seed 44 DONE =====
+
+[2026-04-26 07:06:37] === B1 SN55 Vanilla: ALL 3 SEEDS DONE ===
+
+Checkpoints:
+-rw-r--r-- 1 root root 138385401 Apr 25 13:12 experiments/UpTrans/ShapeNet55_models/b1_vanilla_seed42/ckpt-best.pth
+-rw-r--r-- 1 root root 138391941 Apr 25 18:01 experiments/UpTrans/ShapeNet55_models/b1_vanilla_seed42/ckpt-epoch-029.pth
+-rw-r--r-- 1 root root 138391941 Apr 25 18:18 experiments/UpTrans/ShapeNet55_models/b1_vanilla_seed42/ckpt-epoch-030.pth
+-rw-r--r-- 1 root root 138385401 Apr 25 18:18 experiments/UpTrans/ShapeNet55_models/b1_vanilla_seed42/ckpt-last.pth
+-rw-r--r-- 1 root root 138385401 Apr 25 20:38 experiments/UpTrans/ShapeNet55_models/b1_vanilla_seed43/ckpt-best.pth
+-rw-r--r-- 1 root root 138391941 Apr 26 00:25 experiments/UpTrans/ShapeNet55_models/b1_vanilla_seed43/ckpt-epoch-029.pth
+-rw-r--r-- 1 root root 138391941 Apr 26 00:42 experiments/UpTrans/ShapeNet55_models/b1_vanilla_seed43/ckpt-epoch-030.pth
+-rw-r--r-- 1 root root 138385401 Apr 26 00:42 experiments/UpTrans/ShapeNet55_models/b1_vanilla_seed43/ckpt-last.pth
+-rw-r--r-- 1 root root 138385401 Apr 26 07:06 experiments/UpTrans/ShapeNet55_models/b1_vanilla_seed44/ckpt-best.pth
+-rw-r--r-- 1 root root 138391941 Apr 26 06:49 experiments/UpTrans/ShapeNet55_models/b1_vanilla_seed44/ckpt-epoch-029.pth
+-rw-r--r-- 1 root root 138391941 Apr 26 07:06 experiments/UpTrans/ShapeNet55_models/b1_vanilla_seed44/ckpt-epoch-030.pth
+-rw-r--r-- 1 root root 138385401 Apr 26 07:06 experiments/UpTrans/ShapeNet55_models/b1_vanilla_seed44/ckpt-last.pth
+[2026-04-26 07:06:37] 
+[2026-04-26 07:06:37] === Phase 2/5: SN55 UpTrans_DiffCond ===
+[2026-04-26 07:06:37] === B1 SN55 UpTrans_DiffCond: 3 seeds sequential ===
+  config : cfgs/ShapeNet55_models/UpTrans_DiffCond.yaml
+  ckpt   : experiments/UpTrans/ShapeNet55_models/pretrained_400ep/ckpt-best.pth (warm-start; builder's DiffCond branch zero-inits 6 output layers)
+
+[2026-04-26 07:06:37] ===== seed 42 START =====
+[2026-04-26 13:31:02] ===== seed 42 DONE =====
+
+[2026-04-26 13:31:02] ===== seed 43 START =====
+[2026-04-26 19:55:28] ===== seed 43 DONE =====
+
+[2026-04-26 19:55:28] ===== seed 44 START =====
+[2026-04-27 02:19:36] ===== seed 44 DONE =====
+
+[2026-04-27 02:19:36] === B1 SN55 DiffCond: ALL 3 SEEDS DONE ===
+[2026-04-27 02:19:36] 
+[2026-04-27 02:19:36] === Phase 3/5: SN55 S/M/H eval (6 ckpts x 3 modes) ===
+[2026-04-27 02:19:36] === B1 SN55 S/M/H eval: 6 ckpts x 3 modes ===
+
+--- Vanilla UpTrans S/M/H ---
+  [02:19:36] vanilla seed=42 mode=easy ...
+  OK
+  [03:04:46] vanilla seed=42 mode=median ...
+  OK
+  [03:47:10] vanilla seed=42 mode=hard ...
+  OK
+  [04:27:11] vanilla seed=43 mode=easy ...
+  OK
+  [05:12:25] vanilla seed=43 mode=median ...
+  OK
+  [05:54:50] vanilla seed=43 mode=hard ...
+  OK
+  [06:34:47] vanilla seed=44 mode=easy ...
+  OK
+  [07:19:55] vanilla seed=44 mode=median ...
+  OK
+  [08:02:23] vanilla seed=44 mode=hard ...
+  OK
+
+--- UpTrans_DiffCond S/M/H (oracle) ---
+  [08:42:42] diffcond seed=42 mode=easy ...
+  OK
+  [09:28:12] diffcond seed=42 mode=median ...
+  OK
+  [10:10:38] diffcond seed=42 mode=hard ...
+  OK
+  [10:51:04] diffcond seed=43 mode=easy ...
+  OK
+  [11:36:34] diffcond seed=43 mode=median ...
+  OK
+  [12:19:20] diffcond seed=43 mode=hard ...
+  OK
+  [12:59:53] diffcond seed=44 mode=easy ...
+  OK
+  [13:45:22] diffcond seed=44 mode=median ...
+  OK
+  [14:28:09] diffcond seed=44 mode=hard ...
+  OK
+
+[2026-04-27 15:08:34] === B1 SN55 S/M/H EVAL DONE ===
+Summary files:
+[2026-04-27 15:08:34] 
+[2026-04-27 15:08:34] === Phase 4/5: PCN Vanilla UpTrans (lite, 2 seeds) ===
+[2026-04-27 15:08:34] === B1 PCN Vanilla UpTrans: 2 seeds ===
+[2026-04-27 15:08:34] ===== seed 42 START =====
+[2026-04-27 22:52:01] ===== seed 42 DONE =====
+[2026-04-27 22:52:01] ===== seed 43 START =====
+[2026-04-28 06:28:14] ===== seed 43 DONE =====
+[2026-04-28 06:28:14] === B1 PCN Vanilla: ALL 2 SEEDS DONE ===
+[2026-04-28 06:28:14] 
+[2026-04-28 06:28:14] === Phase 5/5: PCN UpTrans_DiffCond (lite, 2 seeds, proxy difficulty) ===
+[2026-04-28 06:28:15] proxy JSON OK: 232992 entries
+
+[2026-04-28 06:28:15] === B1 PCN UpTrans_DiffCond: 2 seeds (proxy difficulty) ===
+[2026-04-28 06:28:15] ===== seed 42 START =====
+[2026-04-28 13:59:58] ===== seed 42 DONE =====
+[2026-04-28 13:59:58] ===== seed 43 START =====
+[2026-04-28 21:46:40] ===== seed 43 DONE =====
+[2026-04-28 21:46:40] === B1 PCN DiffCond: ALL 2 SEEDS DONE ===
+[2026-04-28 21:46:40] 
+[2026-04-28 21:46:40] ==============================================
+[2026-04-28 21:46:40] === B1 MASTER LAUNCHER: ALL 5 PHASES DONE ===
+[2026-04-28 21:46:40] ==============================================
+[2026-04-28 21:46:40] 
+[2026-04-28 21:46:40] Checkpoints produced:
+-rw-r--r-- 1 root root 138391941 Apr 25 18:18 experiments/UpTrans/ShapeNet55_models/b1_vanilla_seed42/ckpt-epoch-030.pth
+-rw-r--r-- 1 root root 138391941 Apr 26 00:42 experiments/UpTrans/ShapeNet55_models/b1_vanilla_seed43/ckpt-epoch-030.pth
+-rw-r--r-- 1 root root 138391941 Apr 26 07:06 experiments/UpTrans/ShapeNet55_models/b1_vanilla_seed44/ckpt-epoch-030.pth
+-rw-r--r-- 1 root root 219255357 Apr 26 13:31 experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed42/ckpt-epoch-030.pth
+-rw-r--r-- 1 root root 219255357 Apr 26 19:55 experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed43/ckpt-epoch-030.pth
+-rw-r--r-- 1 root root 219255357 Apr 27 02:19 experiments/UpTrans_DiffCond/ShapeNet55_models/b1_diffcond_seed44/ckpt-epoch-030.pth
+-rw-r--r-- 1 root root 137802117 Apr 27 22:51 experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed42/ckpt-epoch-030.pth
+-rw-r--r-- 1 root root 137802117 Apr 28 06:28 experiments/UpTrans/PCN_models/b1_vanilla_pcn_seed43/ckpt-epoch-030.pth
+-rw-r--r-- 1 root root 180621885 Apr 28 13:59 experiments/UpTrans_DiffCond/PCN_models/b1_diffcond_pcn_seed42/ckpt-epoch-030.pth
+-rw-r--r-- 1 root root 180621885 Apr 28 21:46 experiments/UpTrans_DiffCond/PCN_models/b1_diffcond_pcn_seed43/ckpt-epoch-030.pth
+[2026-04-28 21:46:40] 
+[2026-04-28 21:46:40] S/M/H summaries:

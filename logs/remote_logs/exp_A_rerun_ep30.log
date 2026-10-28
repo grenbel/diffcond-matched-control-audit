@@ -1,0 +1,40 @@
+/root/miniconda3/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+2026-04-18 14:59:15,141 - MODEL - INFO - Transformer with config {'NAME': 'AdaPoinTr', 'num_query': 512, 'num_points': 8192, 'center_num': [512, 256], 'global_feature_dim': 1024, 'encoder_type': 'graph', 'decoder_type': 'fc', 'encoder_config': {'embed_dim': 384, 'depth': 6, 'num_heads': 6, 'k': 8, 'n_group': 2, 'mlp_ratio': 2.0, 'block_style_list': ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn'], 'combine_style': 'concat'}, 'decoder_config': {'embed_dim': 384, 'depth': 8, 'num_heads': 6, 'k': 8, 'n_group': 2, 'mlp_ratio': 2.0, 'self_attn_block_style_list': ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn'], 'self_attn_combine_style': 'concat', 'cross_attn_block_style_list': ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn'], 'cross_attn_combine_style': 'concat'}}
+Config: cfgs/ShapeNet55_models/AdaPoinTr_baseline_smoke30_diffcrop.yaml
+Ckpt:   experiments/AdaPoinTr_baseline_smoke30_diffcrop/ShapeNet55_models/r200c_warmstart30_diffcrop/ckpt-epoch-030.pth
+Modes:  ['hard']
+Viewpoints: first 2 of 8
+N samples:  100
+Output: /root/PoinTr/R200C_ep30_subset_hard_100x2.json
+
+Loading vanilla AdaPoinTr model...
+using group version 2
+Loading weights from experiments/AdaPoinTr_baseline_smoke30_diffcrop/ShapeNet55_models/r200c_warmstart30_diffcrop/ckpt-epoch-030.pth...
+ckpts @ 30 epoch( performance = {'F-Score': 0.37583517740539923, 'CDL1': 13.998663856075119, 'CDL2': 0.9065029979286042, 'EMDistance': 0.0})
+  Sanity: no diff_cond_* modules present (vanilla ckpt confirmed).
+Building test dataloader...
+[DATASET] Open file data/ShapeNet55-34/ShapeNet-55/test.txt
+[DATASET] 10518 instances were loaded
+
+[Mode=hard] num_crop=6144 viewpoints=2 n_samples_max=100 require_emd=True
+  [hard] processed 1 samples (1 categories)
+  [hard] processed 21 samples (4 categories)
+  [hard] processed 41 samples (11 categories)
+  [hard] processed 61 samples (14 categories)
+  [hard] processed 81 samples (16 categories)
+  [hard] first 5 samples consumed:
+    1. 03759954 / 109f1779a6993782f6426d6e3b63c5ce
+    2. 03759954 / b726f3df205d3b5911daf38720b2dbe4
+    3. 04330267 / aa0f6ff9f592b327eadb8f8b5bc7d9a5
+    4. 04330267 / 966ea3afa71e3a574bba687d3dbe6227
+    5. 03759954 / baca1996923c25f943a6722dac94523b
+
+========================================================================
+  Vanilla AdaPoinTr Subset Eval (category-balanced)
+========================================================================
+  Mode       F-Score     CDL1     CDL2      EMD  n_cat n_samp
+  -------- --------- -------- -------- --------  ----- ------
+  hard        0.3132   17.058    1.430  35.1260     18    100
+
+Saved JSON to /root/PoinTr/R200C_ep30_subset_hard_100x2.json

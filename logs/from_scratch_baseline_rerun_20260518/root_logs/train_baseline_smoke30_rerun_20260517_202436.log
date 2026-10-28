@@ -1,0 +1,1075 @@
+/root/miniconda3/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Create experiment path successfully at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42
+Create TFBoard path successfully at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/TFBoard/baseline_smoke30_rerun_seed42
+2026-05-17 20:24:39,347 - AdaPoinTr_baseline_smoke30 - INFO - Copy the Config file from cfgs/ShapeNet55_models/AdaPoinTr_baseline_smoke30.yaml to ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/config.yaml
+2026-05-17 20:24:39,347 - AdaPoinTr_baseline_smoke30 - INFO - args.config : cfgs/ShapeNet55_models/AdaPoinTr_baseline_smoke30.yaml
+2026-05-17 20:24:39,347 - AdaPoinTr_baseline_smoke30 - INFO - args.launcher : none
+2026-05-17 20:24:39,347 - AdaPoinTr_baseline_smoke30 - INFO - args.local_rank : 0
+2026-05-17 20:24:39,347 - AdaPoinTr_baseline_smoke30 - INFO - args.num_workers : 4
+2026-05-17 20:24:39,347 - AdaPoinTr_baseline_smoke30 - INFO - args.seed : 42
+2026-05-17 20:24:39,347 - AdaPoinTr_baseline_smoke30 - INFO - args.deterministic : False
+2026-05-17 20:24:39,347 - AdaPoinTr_baseline_smoke30 - INFO - args.sync_bn : False
+2026-05-17 20:24:39,347 - AdaPoinTr_baseline_smoke30 - INFO - args.exp_name : baseline_smoke30_rerun_seed42
+2026-05-17 20:24:39,347 - AdaPoinTr_baseline_smoke30 - INFO - args.start_ckpts : None
+2026-05-17 20:24:39,347 - AdaPoinTr_baseline_smoke30 - INFO - args.ckpts : None
+2026-05-17 20:24:39,347 - AdaPoinTr_baseline_smoke30 - INFO - args.val_freq : 10
+2026-05-17 20:24:39,347 - AdaPoinTr_baseline_smoke30 - INFO - args.resume : False
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - args.test : False
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - args.mode : None
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - args.difficulty_source : oracle
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - args.experiment_path : ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - args.tfboard_path : ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/TFBoard/baseline_smoke30_rerun_seed42
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - args.log_name : AdaPoinTr_baseline_smoke30
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - args.use_gpu : True
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - args.distributed : False
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.optimizer = edict()
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.optimizer.type : AdamW
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.optimizer.kwargs = edict()
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.optimizer.kwargs.lr : 0.0001
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.optimizer.kwargs.weight_decay : 0.0005
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.scheduler = edict()
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.scheduler.type : LambdaLR
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.scheduler.kwargs = edict()
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.scheduler.kwargs.decay_step : 21
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.scheduler.kwargs.lr_decay : 0.9
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.scheduler.kwargs.lowest_decay : 0.02
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.bnmscheduler = edict()
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.bnmscheduler.type : Lambda
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.bnmscheduler.kwargs = edict()
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.bnmscheduler.kwargs.decay_step : 21
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.bnmscheduler.kwargs.bn_decay : 0.5
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.bnmscheduler.kwargs.bn_momentum : 0.9
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.bnmscheduler.kwargs.lowest_decay : 0.01
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.dataset = edict()
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.dataset.train = edict()
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.dataset.train._base_ = edict()
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.dataset.train._base_.NAME : ShapeNet
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.dataset.train._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.dataset.train._base_.N_POINTS : 8192
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.dataset.train._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.dataset.train.others = edict()
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.dataset.train.others.subset : train
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.dataset.train.others.bs : 48
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.dataset.val = edict()
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.dataset.val._base_ = edict()
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.dataset.val._base_.NAME : ShapeNet
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.dataset.val._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.dataset.val._base_.N_POINTS : 8192
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.dataset.val._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.dataset.val.others = edict()
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.dataset.val.others.subset : test
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.dataset.test = edict()
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.dataset.test._base_ = edict()
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.dataset.test._base_.NAME : ShapeNet
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.dataset.test._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.dataset.test._base_.N_POINTS : 8192
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.dataset.test._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.dataset.test.others = edict()
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.dataset.test.others.subset : test
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.model = edict()
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.model.NAME : AdaPoinTr
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.model.num_query : 512
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.model.num_points : 8192
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.model.center_num : [512, 256]
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.model.global_feature_dim : 1024
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.model.encoder_type : graph
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.model.decoder_type : fc
+2026-05-17 20:24:39,348 - AdaPoinTr_baseline_smoke30 - INFO - config.model.encoder_config = edict()
+2026-05-17 20:24:39,349 - AdaPoinTr_baseline_smoke30 - INFO - config.model.encoder_config.embed_dim : 384
+2026-05-17 20:24:39,349 - AdaPoinTr_baseline_smoke30 - INFO - config.model.encoder_config.depth : 6
+2026-05-17 20:24:39,349 - AdaPoinTr_baseline_smoke30 - INFO - config.model.encoder_config.num_heads : 6
+2026-05-17 20:24:39,349 - AdaPoinTr_baseline_smoke30 - INFO - config.model.encoder_config.k : 8
+2026-05-17 20:24:39,349 - AdaPoinTr_baseline_smoke30 - INFO - config.model.encoder_config.n_group : 2
+2026-05-17 20:24:39,349 - AdaPoinTr_baseline_smoke30 - INFO - config.model.encoder_config.mlp_ratio : 2.0
+2026-05-17 20:24:39,349 - AdaPoinTr_baseline_smoke30 - INFO - config.model.encoder_config.block_style_list : ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn']
+2026-05-17 20:24:39,349 - AdaPoinTr_baseline_smoke30 - INFO - config.model.encoder_config.combine_style : concat
+2026-05-17 20:24:39,349 - AdaPoinTr_baseline_smoke30 - INFO - config.model.decoder_config = edict()
+2026-05-17 20:24:39,349 - AdaPoinTr_baseline_smoke30 - INFO - config.model.decoder_config.embed_dim : 384
+2026-05-17 20:24:39,349 - AdaPoinTr_baseline_smoke30 - INFO - config.model.decoder_config.depth : 8
+2026-05-17 20:24:39,349 - AdaPoinTr_baseline_smoke30 - INFO - config.model.decoder_config.num_heads : 6
+2026-05-17 20:24:39,349 - AdaPoinTr_baseline_smoke30 - INFO - config.model.decoder_config.k : 8
+2026-05-17 20:24:39,349 - AdaPoinTr_baseline_smoke30 - INFO - config.model.decoder_config.n_group : 2
+2026-05-17 20:24:39,349 - AdaPoinTr_baseline_smoke30 - INFO - config.model.decoder_config.mlp_ratio : 2.0
+2026-05-17 20:24:39,349 - AdaPoinTr_baseline_smoke30 - INFO - config.model.decoder_config.self_attn_block_style_list : ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn']
+2026-05-17 20:24:39,349 - AdaPoinTr_baseline_smoke30 - INFO - config.model.decoder_config.self_attn_combine_style : concat
+2026-05-17 20:24:39,349 - AdaPoinTr_baseline_smoke30 - INFO - config.model.decoder_config.cross_attn_block_style_list : ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn']
+2026-05-17 20:24:39,349 - AdaPoinTr_baseline_smoke30 - INFO - config.model.decoder_config.cross_attn_combine_style : concat
+2026-05-17 20:24:39,349 - AdaPoinTr_baseline_smoke30 - INFO - config.total_bs : 48
+2026-05-17 20:24:39,349 - AdaPoinTr_baseline_smoke30 - INFO - config.step_per_update : 1
+2026-05-17 20:24:39,349 - AdaPoinTr_baseline_smoke30 - INFO - config.max_epoch : 30
+2026-05-17 20:24:39,349 - AdaPoinTr_baseline_smoke30 - INFO - config.consider_metric : CDL2
+2026-05-17 20:24:39,349 - AdaPoinTr_baseline_smoke30 - INFO - Distributed training: False
+2026-05-17 20:24:39,349 - AdaPoinTr_baseline_smoke30 - INFO - Set random seed to 42, deterministic: False
+[DATASET] Open file data/ShapeNet55-34/ShapeNet-55/train.txt
+[DATASET] 41952 instances were loaded
+[DATASET] Open file data/ShapeNet55-34/ShapeNet-55/test.txt
+[DATASET] 10518 instances were loaded
+2026-05-17 20:24:39,380 - MODEL - INFO - Transformer with config {'NAME': 'AdaPoinTr', 'num_query': 512, 'num_points': 8192, 'center_num': [512, 256], 'global_feature_dim': 1024, 'encoder_type': 'graph', 'decoder_type': 'fc', 'encoder_config': {'embed_dim': 384, 'depth': 6, 'num_heads': 6, 'k': 8, 'n_group': 2, 'mlp_ratio': 2.0, 'block_style_list': ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn'], 'combine_style': 'concat'}, 'decoder_config': {'embed_dim': 384, 'depth': 8, 'num_heads': 6, 'k': 8, 'n_group': 2, 'mlp_ratio': 2.0, 'self_attn_block_style_list': ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn'], 'self_attn_combine_style': 'concat', 'cross_attn_block_style_list': ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn'], 'cross_attn_combine_style': 'concat'}}
+using group version 2
+2026-05-17 20:24:41,150 - AdaPoinTr_baseline_smoke30 - INFO - Trainable_parameters:
+2026-05-17 20:24:41,150 - AdaPoinTr_baseline_smoke30 - INFO - =========================
+2026-05-17 20:24:41,150 - AdaPoinTr_baseline_smoke30 - INFO - base_model.grouper.input_trans.weight
+2026-05-17 20:24:41,150 - AdaPoinTr_baseline_smoke30 - INFO - base_model.grouper.input_trans.bias
+2026-05-17 20:24:41,150 - AdaPoinTr_baseline_smoke30 - INFO - base_model.grouper.layer1.0.weight
+2026-05-17 20:24:41,150 - AdaPoinTr_baseline_smoke30 - INFO - base_model.grouper.layer1.1.weight
+2026-05-17 20:24:41,150 - AdaPoinTr_baseline_smoke30 - INFO - base_model.grouper.layer1.1.bias
+2026-05-17 20:24:41,150 - AdaPoinTr_baseline_smoke30 - INFO - base_model.grouper.layer2.0.weight
+2026-05-17 20:24:41,150 - AdaPoinTr_baseline_smoke30 - INFO - base_model.grouper.layer2.1.weight
+2026-05-17 20:24:41,150 - AdaPoinTr_baseline_smoke30 - INFO - base_model.grouper.layer2.1.bias
+2026-05-17 20:24:41,150 - AdaPoinTr_baseline_smoke30 - INFO - base_model.grouper.layer3.0.weight
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.grouper.layer3.1.weight
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.grouper.layer3.1.bias
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.grouper.layer4.0.weight
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.grouper.layer4.1.weight
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.grouper.layer4.1.bias
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.pos_embed.0.weight
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.pos_embed.0.bias
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.pos_embed.2.weight
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.pos_embed.2.bias
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.input_proj.0.weight
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.input_proj.0.bias
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.input_proj.2.weight
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.input_proj.2.bias
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.0.norm1.weight
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.0.norm1.bias
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.0.norm2.weight
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.0.norm2.bias
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.0.mlp.fc1.weight
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.0.mlp.fc1.bias
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.0.mlp.fc2.weight
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.0.mlp.fc2.bias
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.0.attn.qkv.weight
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.0.attn.qkv.bias
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.0.attn.proj.weight
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.0.attn.proj.bias
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.0.local_attn.knn_map.0.weight
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.0.local_attn.knn_map.0.bias
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.0.merge_map.weight
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.0.merge_map.bias
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.1.norm1.weight
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.1.norm1.bias
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.1.norm2.weight
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.1.norm2.bias
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.1.mlp.fc1.weight
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.1.mlp.fc1.bias
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.1.mlp.fc2.weight
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.1.mlp.fc2.bias
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.1.attn.qkv.weight
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.1.attn.qkv.bias
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.1.attn.proj.weight
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.1.attn.proj.bias
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.2.norm1.weight
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.2.norm1.bias
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.2.norm2.weight
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.2.norm2.bias
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.2.mlp.fc1.weight
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.2.mlp.fc1.bias
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.2.mlp.fc2.weight
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.2.mlp.fc2.bias
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.2.attn.qkv.weight
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.2.attn.qkv.bias
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.2.attn.proj.weight
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.2.attn.proj.bias
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.3.norm1.weight
+2026-05-17 20:24:41,151 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.3.norm1.bias
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.3.norm2.weight
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.3.norm2.bias
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.3.mlp.fc1.weight
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.3.mlp.fc1.bias
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.3.mlp.fc2.weight
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.3.mlp.fc2.bias
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.3.attn.qkv.weight
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.3.attn.qkv.bias
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.3.attn.proj.weight
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.3.attn.proj.bias
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.4.norm1.weight
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.4.norm1.bias
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.4.norm2.weight
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.4.norm2.bias
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.4.mlp.fc1.weight
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.4.mlp.fc1.bias
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.4.mlp.fc2.weight
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.4.mlp.fc2.bias
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.4.attn.qkv.weight
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.4.attn.qkv.bias
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.4.attn.proj.weight
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.4.attn.proj.bias
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.5.norm1.weight
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.5.norm1.bias
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.5.norm2.weight
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.5.norm2.bias
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.5.mlp.fc1.weight
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.5.mlp.fc1.bias
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.5.mlp.fc2.weight
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.5.mlp.fc2.bias
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.5.attn.qkv.weight
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.5.attn.qkv.bias
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.5.attn.proj.weight
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.blocks.blocks.5.attn.proj.bias
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.norm.weight
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.encoder.norm.bias
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.increase_dim.0.weight
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.increase_dim.0.bias
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.increase_dim.2.weight
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.increase_dim.2.bias
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.coarse_pred.0.weight
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.coarse_pred.0.bias
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.coarse_pred.2.weight
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.coarse_pred.2.bias
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.mlp_query.0.weight
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.mlp_query.0.bias
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.mlp_query.2.weight
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.mlp_query.2.bias
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.mlp_query.4.weight
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.mlp_query.4.bias
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.0.norm2.weight
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.0.norm2.bias
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.0.mlp.fc1.weight
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.0.mlp.fc1.bias
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.0.mlp.fc2.weight
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.0.mlp.fc2.bias
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.0.norm1.weight
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.0.norm1.bias
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.0.self_attn.qkv.weight
+2026-05-17 20:24:41,152 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.0.self_attn.qkv.bias
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.0.self_attn.proj.weight
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.0.self_attn.proj.bias
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.0.local_self_attn.knn_map.0.weight
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.0.local_self_attn.knn_map.0.bias
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.0.self_attn_merge_map.weight
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.0.self_attn_merge_map.bias
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.0.norm_q.weight
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.0.norm_q.bias
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.0.norm_v.weight
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.0.norm_v.bias
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.0.cross_attn.q_map.weight
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.0.cross_attn.q_map.bias
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.0.cross_attn.k_map.weight
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.0.cross_attn.k_map.bias
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.0.cross_attn.v_map.weight
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.0.cross_attn.v_map.bias
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.0.cross_attn.proj.weight
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.0.cross_attn.proj.bias
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.0.local_cross_attn.knn_map.0.weight
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.0.local_cross_attn.knn_map.0.bias
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.0.cross_attn_merge_map.weight
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.0.cross_attn_merge_map.bias
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.1.norm2.weight
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.1.norm2.bias
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.1.mlp.fc1.weight
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.1.mlp.fc1.bias
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.1.mlp.fc2.weight
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.1.mlp.fc2.bias
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.1.norm1.weight
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.1.norm1.bias
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.1.self_attn.qkv.weight
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.1.self_attn.qkv.bias
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.1.self_attn.proj.weight
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.1.self_attn.proj.bias
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.1.norm_q.weight
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.1.norm_q.bias
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.1.norm_v.weight
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.1.norm_v.bias
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.1.cross_attn.q_map.weight
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.1.cross_attn.q_map.bias
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.1.cross_attn.k_map.weight
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.1.cross_attn.k_map.bias
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.1.cross_attn.v_map.weight
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.1.cross_attn.v_map.bias
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.1.cross_attn.proj.weight
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.1.cross_attn.proj.bias
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.2.norm2.weight
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.2.norm2.bias
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.2.mlp.fc1.weight
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.2.mlp.fc1.bias
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.2.mlp.fc2.weight
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.2.mlp.fc2.bias
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.2.norm1.weight
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.2.norm1.bias
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.2.self_attn.qkv.weight
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.2.self_attn.qkv.bias
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.2.self_attn.proj.weight
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.2.self_attn.proj.bias
+2026-05-17 20:24:41,153 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.2.norm_q.weight
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.2.norm_q.bias
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.2.norm_v.weight
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.2.norm_v.bias
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.2.cross_attn.q_map.weight
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.2.cross_attn.q_map.bias
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.2.cross_attn.k_map.weight
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.2.cross_attn.k_map.bias
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.2.cross_attn.v_map.weight
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.2.cross_attn.v_map.bias
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.2.cross_attn.proj.weight
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.2.cross_attn.proj.bias
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.3.norm2.weight
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.3.norm2.bias
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.3.mlp.fc1.weight
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.3.mlp.fc1.bias
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.3.mlp.fc2.weight
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.3.mlp.fc2.bias
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.3.norm1.weight
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.3.norm1.bias
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.3.self_attn.qkv.weight
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.3.self_attn.qkv.bias
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.3.self_attn.proj.weight
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.3.self_attn.proj.bias
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.3.norm_q.weight
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.3.norm_q.bias
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.3.norm_v.weight
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.3.norm_v.bias
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.3.cross_attn.q_map.weight
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.3.cross_attn.q_map.bias
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.3.cross_attn.k_map.weight
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.3.cross_attn.k_map.bias
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.3.cross_attn.v_map.weight
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.3.cross_attn.v_map.bias
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.3.cross_attn.proj.weight
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.3.cross_attn.proj.bias
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.4.norm2.weight
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.4.norm2.bias
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.4.mlp.fc1.weight
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.4.mlp.fc1.bias
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.4.mlp.fc2.weight
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.4.mlp.fc2.bias
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.4.norm1.weight
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.4.norm1.bias
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.4.self_attn.qkv.weight
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.4.self_attn.qkv.bias
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.4.self_attn.proj.weight
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.4.self_attn.proj.bias
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.4.norm_q.weight
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.4.norm_q.bias
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.4.norm_v.weight
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.4.norm_v.bias
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.4.cross_attn.q_map.weight
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.4.cross_attn.q_map.bias
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.4.cross_attn.k_map.weight
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.4.cross_attn.k_map.bias
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.4.cross_attn.v_map.weight
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.4.cross_attn.v_map.bias
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.4.cross_attn.proj.weight
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.4.cross_attn.proj.bias
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.5.norm2.weight
+2026-05-17 20:24:41,154 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.5.norm2.bias
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.5.mlp.fc1.weight
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.5.mlp.fc1.bias
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.5.mlp.fc2.weight
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.5.mlp.fc2.bias
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.5.norm1.weight
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.5.norm1.bias
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.5.self_attn.qkv.weight
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.5.self_attn.qkv.bias
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.5.self_attn.proj.weight
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.5.self_attn.proj.bias
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.5.norm_q.weight
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.5.norm_q.bias
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.5.norm_v.weight
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.5.norm_v.bias
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.5.cross_attn.q_map.weight
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.5.cross_attn.q_map.bias
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.5.cross_attn.k_map.weight
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.5.cross_attn.k_map.bias
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.5.cross_attn.v_map.weight
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.5.cross_attn.v_map.bias
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.5.cross_attn.proj.weight
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.5.cross_attn.proj.bias
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.6.norm2.weight
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.6.norm2.bias
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.6.mlp.fc1.weight
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.6.mlp.fc1.bias
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.6.mlp.fc2.weight
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.6.mlp.fc2.bias
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.6.norm1.weight
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.6.norm1.bias
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.6.self_attn.qkv.weight
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.6.self_attn.qkv.bias
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.6.self_attn.proj.weight
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.6.self_attn.proj.bias
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.6.norm_q.weight
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.6.norm_q.bias
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.6.norm_v.weight
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.6.norm_v.bias
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.6.cross_attn.q_map.weight
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.6.cross_attn.q_map.bias
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.6.cross_attn.k_map.weight
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.6.cross_attn.k_map.bias
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.6.cross_attn.v_map.weight
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.6.cross_attn.v_map.bias
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.6.cross_attn.proj.weight
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.6.cross_attn.proj.bias
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.7.norm2.weight
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.7.norm2.bias
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.7.mlp.fc1.weight
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.7.mlp.fc1.bias
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.7.mlp.fc2.weight
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.7.mlp.fc2.bias
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.7.norm1.weight
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.7.norm1.bias
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.7.self_attn.qkv.weight
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.7.self_attn.qkv.bias
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.7.self_attn.proj.weight
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.7.self_attn.proj.bias
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.7.norm_q.weight
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.7.norm_q.bias
+2026-05-17 20:24:41,155 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.7.norm_v.weight
+2026-05-17 20:24:41,156 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.7.norm_v.bias
+2026-05-17 20:24:41,156 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.7.cross_attn.q_map.weight
+2026-05-17 20:24:41,156 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.7.cross_attn.q_map.bias
+2026-05-17 20:24:41,156 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.7.cross_attn.k_map.weight
+2026-05-17 20:24:41,156 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.7.cross_attn.k_map.bias
+2026-05-17 20:24:41,156 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.7.cross_attn.v_map.weight
+2026-05-17 20:24:41,156 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.7.cross_attn.v_map.bias
+2026-05-17 20:24:41,156 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.7.cross_attn.proj.weight
+2026-05-17 20:24:41,156 - AdaPoinTr_baseline_smoke30 - INFO - base_model.decoder.blocks.blocks.7.cross_attn.proj.bias
+2026-05-17 20:24:41,156 - AdaPoinTr_baseline_smoke30 - INFO - base_model.query_ranking.0.weight
+2026-05-17 20:24:41,156 - AdaPoinTr_baseline_smoke30 - INFO - base_model.query_ranking.0.bias
+2026-05-17 20:24:41,156 - AdaPoinTr_baseline_smoke30 - INFO - base_model.query_ranking.2.weight
+2026-05-17 20:24:41,156 - AdaPoinTr_baseline_smoke30 - INFO - base_model.query_ranking.2.bias
+2026-05-17 20:24:41,156 - AdaPoinTr_baseline_smoke30 - INFO - base_model.query_ranking.4.weight
+2026-05-17 20:24:41,156 - AdaPoinTr_baseline_smoke30 - INFO - base_model.query_ranking.4.bias
+2026-05-17 20:24:41,156 - AdaPoinTr_baseline_smoke30 - INFO - decode_head.layer.fc1.weight
+2026-05-17 20:24:41,156 - AdaPoinTr_baseline_smoke30 - INFO - decode_head.layer.fc1.bias
+2026-05-17 20:24:41,156 - AdaPoinTr_baseline_smoke30 - INFO - decode_head.layer.fc2.weight
+2026-05-17 20:24:41,156 - AdaPoinTr_baseline_smoke30 - INFO - decode_head.layer.fc2.bias
+2026-05-17 20:24:41,156 - AdaPoinTr_baseline_smoke30 - INFO - increase_dim.0.weight
+2026-05-17 20:24:41,156 - AdaPoinTr_baseline_smoke30 - INFO - increase_dim.0.bias
+2026-05-17 20:24:41,156 - AdaPoinTr_baseline_smoke30 - INFO - increase_dim.1.weight
+2026-05-17 20:24:41,156 - AdaPoinTr_baseline_smoke30 - INFO - increase_dim.1.bias
+2026-05-17 20:24:41,156 - AdaPoinTr_baseline_smoke30 - INFO - increase_dim.3.weight
+2026-05-17 20:24:41,156 - AdaPoinTr_baseline_smoke30 - INFO - increase_dim.3.bias
+2026-05-17 20:24:41,156 - AdaPoinTr_baseline_smoke30 - INFO - reduce_map.weight
+2026-05-17 20:24:41,156 - AdaPoinTr_baseline_smoke30 - INFO - reduce_map.bias
+2026-05-17 20:24:41,156 - AdaPoinTr_baseline_smoke30 - INFO - =========================
+2026-05-17 20:24:41,156 - AdaPoinTr_baseline_smoke30 - INFO - Untrainable_parameters:
+2026-05-17 20:24:41,156 - AdaPoinTr_baseline_smoke30 - INFO - =========================
+2026-05-17 20:24:41,156 - AdaPoinTr_baseline_smoke30 - INFO - =========================
+2026-05-17 20:24:41,156 - AdaPoinTr_baseline_smoke30 - INFO - Using Data parallel ...
+2026-05-17 20:24:43,435 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 0/30][Batch 1/874] BatchTime = 2.273 (s) DataTime = 0.077 (s) Losses = ['24.7806', '267.7715'] lr = 0.000100
+2026-05-17 20:26:03,504 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 0/30][Batch 101/874] BatchTime = 0.801 (s) DataTime = 0.002 (s) Losses = ['13.0493', '108.2712'] lr = 0.000100
+2026-05-17 20:27:23,503 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 0/30][Batch 201/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['11.0716', '86.2362'] lr = 0.000100
+2026-05-17 20:28:43,493 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 0/30][Batch 301/874] BatchTime = 0.791 (s) DataTime = 0.002 (s) Losses = ['10.4544', '82.1848'] lr = 0.000100
+2026-05-17 20:30:03,502 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 0/30][Batch 401/874] BatchTime = 0.809 (s) DataTime = 0.002 (s) Losses = ['10.3467', '80.0367'] lr = 0.000100
+2026-05-17 20:31:23,609 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 0/30][Batch 501/874] BatchTime = 0.815 (s) DataTime = 0.002 (s) Losses = ['9.9417', '72.8192'] lr = 0.000100
+2026-05-17 20:32:43,603 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 0/30][Batch 601/874] BatchTime = 0.809 (s) DataTime = 0.002 (s) Losses = ['10.0052', '76.0934'] lr = 0.000100
+2026-05-17 20:34:03,603 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 0/30][Batch 701/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['8.9605', '68.6692'] lr = 0.000100
+2026-05-17 20:35:23,593 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 0/30][Batch 801/874] BatchTime = 0.791 (s) DataTime = 0.002 (s) Losses = ['9.8038', '68.5533'] lr = 0.000100
+2026-05-17 20:36:22,042 - AdaPoinTr_baseline_smoke30 - INFO - [Training] EPOCH: 0 EpochTime = 700.880 (s) Losses = ['10.7073', '84.3418']
+2026-05-17 20:36:22,043 - AdaPoinTr_baseline_smoke30 - INFO - [VALIDATION] Start validating epoch 0
+2026-05-17 20:36:47,088 - AdaPoinTr_baseline_smoke30 - INFO - Test[1051/10518] Taxonomy = 02691156 Sample = c7749c0a8b61f43bc9b9e28055202e3d Losses = ['27.9393', '3.1865', '21.1224', '2.0505'] Metrics = ['0.3382', '21.1224', '2.0505', '0.0000']
+2026-05-17 20:37:11,747 - AdaPoinTr_baseline_smoke30 - INFO - Test[2102/10518] Taxonomy = 03211117 Sample = ab2f9418c111cc6ddb965514105122a4 Losses = ['29.0765', '3.0604', '22.0185', '2.0160'] Metrics = ['0.2787', '22.0185', '2.0160', '0.0000']
+2026-05-17 20:37:36,401 - AdaPoinTr_baseline_smoke30 - INFO - Test[3153/10518] Taxonomy = 02876657 Sample = c5032e4be091aabb36fe7a88df793982 Losses = ['59.3330', '13.5270', '46.5303', '8.1759'] Metrics = ['0.1280', '46.5303', '8.1759', '0.0000']
+2026-05-17 20:38:01,106 - AdaPoinTr_baseline_smoke30 - INFO - Test[4204/10518] Taxonomy = 03211117 Sample = 722df1da5778d45b1e43523279c7f09f Losses = ['36.3865', '5.3392', '28.4791', '3.4632'] Metrics = ['0.2400', '28.4791', '3.4632', '0.0000']
+2026-05-17 20:38:25,858 - AdaPoinTr_baseline_smoke30 - INFO - Test[5255/10518] Taxonomy = 02828884 Sample = 14b63361a48a9fffe4a048c146e8bd43 Losses = ['34.2083', '4.6382', '24.3290', '2.3610'] Metrics = ['0.2632', '24.3290', '2.3610', '0.0000']
+2026-05-17 20:38:50,503 - AdaPoinTr_baseline_smoke30 - INFO - Test[6306/10518] Taxonomy = 03211117 Sample = d330d50a0255529d19ed6e1a590c9122 Losses = ['32.8080', '4.1535', '23.8917', '2.3151'] Metrics = ['0.2416', '23.8917', '2.3151', '0.0000']
+2026-05-17 20:39:15,101 - AdaPoinTr_baseline_smoke30 - INFO - Test[7357/10518] Taxonomy = 04379243 Sample = b1ca280d9567270ade98d10ab5975b59 Losses = ['46.6801', '10.4740', '33.5087', '5.4231'] Metrics = ['0.1621', '33.5087', '5.4231', '0.0000']
+2026-05-17 20:39:39,736 - AdaPoinTr_baseline_smoke30 - INFO - Test[8408/10518] Taxonomy = 03001627 Sample = 89208a619341d9fdb8c516ed5c4ce32 Losses = ['38.3934', '5.3735', '27.4461', '2.6844'] Metrics = ['0.1652', '27.4461', '2.6844', '0.0000']
+2026-05-17 20:40:04,443 - AdaPoinTr_baseline_smoke30 - INFO - Test[9459/10518] Taxonomy = 03001627 Sample = d0255120e3351121c3bd24f986301745 Losses = ['41.8028', '6.5167', '31.0240', '3.4704'] Metrics = ['0.1464', '31.0240', '3.4704', '0.0000']
+2026-05-17 20:40:29,071 - AdaPoinTr_baseline_smoke30 - INFO - Test[10510/10518] Taxonomy = 03636649 Sample = ea9ec4d9db2e06202471e6dd5ac3ef92 Losses = ['37.0684', '7.0896', '28.7074', '4.1150'] Metrics = ['0.3912', '28.7074', '4.1150', '0.0000']
+2026-05-17 20:40:29,351 - AdaPoinTr_baseline_smoke30 - INFO - [Validation] EPOCH: 0  Metrics = ['0.2141', '33.1029', '5.6174', '0.0000']
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - ============================ TEST RESULTS ============================
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 03759954	14	0.290 	50.283 	16.418 	0.000 	microphone	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 04330267	44	0.165 	33.653 	4.631 	0.000 	stove	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 03261776	15	0.199 	51.431 	19.695 	0.000 	earphone	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 03513137	33	0.116 	46.912 	10.102 	0.000 	helmet	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 04460130	27	0.248 	30.005 	4.051 	0.000 	tower	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 04468005	78	0.248 	22.732 	2.011 	0.000 	train	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 03761084	31	0.133 	38.953 	6.211 	0.000 	microwaves	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 04004475	34	0.153 	37.806 	5.925 	0.000 	printer	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 03938244	20	0.159 	35.114 	4.958 	0.000 	pillow	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 02992529	167	0.224 	24.800 	2.537 	0.000 	cellphone	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 02808440	172	0.161 	36.035 	5.817 	0.000 	bathtub	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 04530566	388	0.308 	21.858 	2.134 	0.000 	watercraft	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 02871439	91	0.156 	31.617 	4.013 	0.000 	bookshelf	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 03593526	120	0.142 	42.792 	8.103 	0.000 	jar	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 04554684	34	0.129 	37.904 	5.465 	0.000 	washer	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 03467517	160	0.520 	16.648 	1.559 	0.000 	guitar	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 04401088	218	0.222 	24.744 	2.423 	0.000 	telephone	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 02954340	12	0.139 	59.189 	18.256 	0.000 	cap	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 02933112	315	0.146 	30.270 	3.335 	0.000 	cabinet	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 03642806	92	0.202 	27.644 	3.423 	0.000 	laptop	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 02924116	188	0.208 	25.068 	2.306 	0.000 	bus	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 02946921	22	0.126 	39.319 	6.021 	0.000 	can	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 02818832	47	0.166 	38.582 	7.145 	0.000 	bed	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 04256520	635	0.165 	31.314 	4.338 	0.000 	sofa	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 04379243	1687	0.214 	31.080 	5.340 	0.000 	table	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 02747177	69	0.118 	36.040 	5.018 	0.000 	trash bin	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 03046257	131	0.173 	32.899 	4.621 	0.000 	clock	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 04225987	31	0.301 	25.654 	3.119 	0.000 	skateboard	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 03797390	43	0.113 	42.996 	7.894 	0.000 	mug	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 03001627	1356	0.203 	31.818 	4.855 	0.000 	chair	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 03691459	320	0.146 	36.648 	5.507 	0.000 	loudspeaker	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 02942699	23	0.146 	45.816 	9.911 	0.000 	camera	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 03636649	464	0.272 	42.250 	10.881 	0.000 	lamp	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 02691156	809	0.344 	20.249 	1.957 	0.000 	airplane	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 02773838	17	0.190 	32.322 	4.560 	0.000 	bag	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 02958343	703	0.154 	26.514 	2.393 	0.000 	car	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 02880940	38	0.114 	48.104 	11.332 	0.000 	bowl	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 04099429	17	0.481 	17.383 	1.627 	0.000 	rocket	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 02828884	363	0.251 	25.492 	3.099 	0.000 	bench	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 04090263	475	0.510 	15.517 	1.323 	0.000 	rifle	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 03211117	219	0.197 	28.234 	3.419 	0.000 	display	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 02876657	100	0.195 	31.601 	4.251 	0.000 	bottle	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 03710193	19	0.290 	32.658 	5.494 	0.000 	mailbox	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 03790512	68	0.197 	25.116 	2.530 	0.000 	motorbike	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 03325088	149	0.229 	53.764 	16.297 	0.000 	faucet	
+2026-05-17 20:40:29,352 - AdaPoinTr_baseline_smoke30 - INFO - 02801938	23	0.135 	39.177 	6.792 	0.000 	basket	
+2026-05-17 20:40:29,353 - AdaPoinTr_baseline_smoke30 - INFO - 03337140	60	0.145 	32.694 	4.453 	0.000 	file cabinet	
+2026-05-17 20:40:29,353 - AdaPoinTr_baseline_smoke30 - INFO - 02843684	15	0.140 	36.290 	5.146 	0.000 	birdhouse	
+2026-05-17 20:40:29,353 - AdaPoinTr_baseline_smoke30 - INFO - 03624134	85	0.499 	18.430 	1.828 	0.000 	knife	
+2026-05-17 20:40:29,353 - AdaPoinTr_baseline_smoke30 - INFO - 03991062	121	0.144 	38.699 	6.580 	0.000 	flowerpot	
+2026-05-17 20:40:29,353 - AdaPoinTr_baseline_smoke30 - INFO - 03948459	62	0.317 	23.596 	2.874 	0.000 	pistol	
+2026-05-17 20:40:29,353 - AdaPoinTr_baseline_smoke30 - INFO - 03928116	48	0.169 	34.840 	5.635 	0.000 	piano	
+2026-05-17 20:40:29,353 - AdaPoinTr_baseline_smoke30 - INFO - 03207941	19	0.134 	36.425 	5.331 	0.000 	dishwasher	
+2026-05-17 20:40:29,353 - AdaPoinTr_baseline_smoke30 - INFO - 04074963	14	0.237 	25.238 	2.572 	0.000 	remote	
+2026-05-17 20:40:29,353 - AdaPoinTr_baseline_smoke30 - INFO - 03085013	13	0.293 	18.440 	1.437 	0.000 	keyboard	
+2026-05-17 20:40:29,353 - AdaPoinTr_baseline_smoke30 - INFO - Overall		0.214 	33.103 	5.617 	0.000 	
+2026-05-17 20:40:29,677 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-best.pth
+2026-05-17 20:40:29,980 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-last.pth
+2026-05-17 20:40:31,229 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 1/30][Batch 1/874] BatchTime = 1.248 (s) DataTime = 0.289 (s) Losses = ['9.2509', '66.4568'] lr = 0.000099
+2026-05-17 20:41:51,193 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 1/30][Batch 101/874] BatchTime = 0.790 (s) DataTime = 0.002 (s) Losses = ['9.4435', '68.6575'] lr = 0.000099
+2026-05-17 20:43:11,303 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 1/30][Batch 201/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['9.2370', '67.0525'] lr = 0.000099
+2026-05-17 20:44:31,303 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 1/30][Batch 301/874] BatchTime = 0.799 (s) DataTime = 0.002 (s) Losses = ['8.7897', '65.5991'] lr = 0.000099
+2026-05-17 20:45:51,303 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 1/30][Batch 401/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['9.1141', '62.2761'] lr = 0.000099
+2026-05-17 20:47:43,504 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 1/30][Batch 501/874] BatchTime = 1.234 (s) DataTime = 0.002 (s) Losses = ['8.4615', '69.5575'] lr = 0.000099
+2026-05-17 20:49:47,803 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 1/30][Batch 601/874] BatchTime = 1.228 (s) DataTime = 0.002 (s) Losses = ['8.1032', '63.4731'] lr = 0.000099
+2026-05-17 20:51:52,303 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 1/30][Batch 701/874] BatchTime = 1.236 (s) DataTime = 0.002 (s) Losses = ['8.1598', '63.0628'] lr = 0.000099
+2026-05-17 20:53:56,997 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 1/30][Batch 801/874] BatchTime = 1.226 (s) DataTime = 0.002 (s) Losses = ['7.6637', '59.2303'] lr = 0.000099
+2026-05-17 20:55:24,887 - AdaPoinTr_baseline_smoke30 - INFO - [Training] EPOCH: 1 EpochTime = 894.906 (s) Losses = ['8.7459', '63.8424']
+2026-05-17 20:55:25,578 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-last.pth
+2026-05-17 20:55:26,597 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 2/30][Batch 1/874] BatchTime = 1.018 (s) DataTime = 0.126 (s) Losses = ['8.0382', '57.1103'] lr = 0.000099
+2026-05-17 20:56:46,609 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 2/30][Batch 101/874] BatchTime = 0.800 (s) DataTime = 0.001 (s) Losses = ['7.9367', '54.7479'] lr = 0.000099
+2026-05-17 20:58:06,603 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 2/30][Batch 201/874] BatchTime = 0.795 (s) DataTime = 0.002 (s) Losses = ['8.1721', '60.7917'] lr = 0.000099
+2026-05-17 20:59:26,609 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 2/30][Batch 301/874] BatchTime = 0.806 (s) DataTime = 0.002 (s) Losses = ['8.2467', '63.4764'] lr = 0.000099
+2026-05-17 21:00:46,603 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 2/30][Batch 401/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['8.0772', '55.9847'] lr = 0.000099
+2026-05-17 21:02:06,603 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 2/30][Batch 501/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['8.2745', '57.4505'] lr = 0.000099
+2026-05-17 21:03:26,603 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 2/30][Batch 601/874] BatchTime = 0.794 (s) DataTime = 0.002 (s) Losses = ['8.0334', '56.4603'] lr = 0.000099
+2026-05-17 21:04:46,602 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 2/30][Batch 701/874] BatchTime = 0.799 (s) DataTime = 0.002 (s) Losses = ['8.0088', '59.0562'] lr = 0.000099
+2026-05-17 21:06:06,603 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 2/30][Batch 801/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['7.8671', '55.7982'] lr = 0.000099
+2026-05-17 21:07:05,073 - AdaPoinTr_baseline_smoke30 - INFO - [Training] EPOCH: 2 EpochTime = 699.494 (s) Losses = ['8.0633', '57.9603']
+2026-05-17 21:07:05,779 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-last.pth
+2026-05-17 21:07:06,795 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 3/30][Batch 1/874] BatchTime = 1.015 (s) DataTime = 0.120 (s) Losses = ['7.8017', '54.8664'] lr = 0.000099
+2026-05-17 21:08:26,803 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 3/30][Batch 101/874] BatchTime = 0.801 (s) DataTime = 0.002 (s) Losses = ['7.2170', '58.7217'] lr = 0.000099
+2026-05-17 21:09:46,803 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 3/30][Batch 201/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['7.5521', '51.1675'] lr = 0.000099
+2026-05-17 21:11:06,802 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 3/30][Batch 301/874] BatchTime = 0.794 (s) DataTime = 0.002 (s) Losses = ['8.1743', '55.9676'] lr = 0.000099
+2026-05-17 21:12:26,803 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 3/30][Batch 401/874] BatchTime = 0.794 (s) DataTime = 0.002 (s) Losses = ['7.7960', '55.5693'] lr = 0.000099
+2026-05-17 21:13:46,803 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 3/30][Batch 501/874] BatchTime = 0.799 (s) DataTime = 0.002 (s) Losses = ['7.7544', '54.9697'] lr = 0.000099
+2026-05-17 21:15:06,802 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 3/30][Batch 601/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['7.0994', '53.4006'] lr = 0.000099
+2026-05-17 21:16:26,803 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 3/30][Batch 701/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['7.5233', '52.9194'] lr = 0.000099
+2026-05-17 21:17:46,803 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 3/30][Batch 801/874] BatchTime = 0.810 (s) DataTime = 0.002 (s) Losses = ['8.1219', '56.8211'] lr = 0.000099
+2026-05-17 21:18:45,278 - AdaPoinTr_baseline_smoke30 - INFO - [Training] EPOCH: 3 EpochTime = 699.498 (s) Losses = ['7.6995', '54.4769']
+2026-05-17 21:18:45,955 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-last.pth
+2026-05-17 21:18:47,006 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 4/30][Batch 1/874] BatchTime = 1.049 (s) DataTime = 0.154 (s) Losses = ['7.1748', '49.6244'] lr = 0.000098
+2026-05-17 21:20:07,003 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 4/30][Batch 101/874] BatchTime = 0.809 (s) DataTime = 0.002 (s) Losses = ['7.8813', '54.2168'] lr = 0.000098
+2026-05-17 21:21:27,003 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 4/30][Batch 201/874] BatchTime = 0.795 (s) DataTime = 0.002 (s) Losses = ['7.6096', '53.8170'] lr = 0.000098
+2026-05-17 21:22:47,003 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 4/30][Batch 301/874] BatchTime = 0.795 (s) DataTime = 0.002 (s) Losses = ['7.2246', '51.4983'] lr = 0.000098
+2026-05-17 21:24:07,003 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 4/30][Batch 401/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.9853', '50.2018'] lr = 0.000098
+2026-05-17 21:25:27,003 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 4/30][Batch 501/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['7.2694', '52.0143'] lr = 0.000098
+2026-05-17 21:26:47,003 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 4/30][Batch 601/874] BatchTime = 0.799 (s) DataTime = 0.002 (s) Losses = ['7.5780', '57.6643'] lr = 0.000098
+2026-05-17 21:28:07,003 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 4/30][Batch 701/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['7.7645', '55.5016'] lr = 0.000098
+2026-05-17 21:29:27,002 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 4/30][Batch 801/874] BatchTime = 0.794 (s) DataTime = 0.001 (s) Losses = ['6.7425', '47.5557'] lr = 0.000098
+2026-05-17 21:30:25,470 - AdaPoinTr_baseline_smoke30 - INFO - [Training] EPOCH: 4 EpochTime = 699.513 (s) Losses = ['7.4038', '52.6310']
+2026-05-17 21:30:26,266 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-last.pth
+2026-05-17 21:30:27,213 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 5/30][Batch 1/874] BatchTime = 0.945 (s) DataTime = 0.139 (s) Losses = ['7.0237', '51.3824'] lr = 0.000098
+2026-05-17 21:31:47,193 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 5/30][Batch 101/874] BatchTime = 0.791 (s) DataTime = 0.002 (s) Losses = ['7.5961', '53.6213'] lr = 0.000098
+2026-05-17 21:33:07,208 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 5/30][Batch 201/874] BatchTime = 0.806 (s) DataTime = 0.002 (s) Losses = ['7.1705', '50.1126'] lr = 0.000098
+2026-05-17 21:34:27,208 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 5/30][Batch 301/874] BatchTime = 0.806 (s) DataTime = 0.002 (s) Losses = ['7.3957', '52.6204'] lr = 0.000098
+2026-05-17 21:35:47,203 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 5/30][Batch 401/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['7.7845', '58.4233'] lr = 0.000098
+2026-05-17 21:37:07,202 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 5/30][Batch 501/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.9477', '49.8741'] lr = 0.000098
+2026-05-17 21:38:27,203 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 5/30][Batch 601/874] BatchTime = 0.794 (s) DataTime = 0.002 (s) Losses = ['7.2391', '51.3978'] lr = 0.000098
+2026-05-17 21:39:47,203 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 5/30][Batch 701/874] BatchTime = 0.794 (s) DataTime = 0.002 (s) Losses = ['6.9054', '49.6139'] lr = 0.000098
+2026-05-17 21:41:07,203 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 5/30][Batch 801/874] BatchTime = 0.794 (s) DataTime = 0.002 (s) Losses = ['7.0306', '49.0001'] lr = 0.000098
+2026-05-17 21:42:05,762 - AdaPoinTr_baseline_smoke30 - INFO - [Training] EPOCH: 5 EpochTime = 699.494 (s) Losses = ['7.1677', '51.3044']
+2026-05-17 21:42:06,494 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-last.pth
+2026-05-17 21:42:07,590 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 6/30][Batch 1/874] BatchTime = 1.095 (s) DataTime = 0.147 (s) Losses = ['7.1436', '55.7364'] lr = 0.000097
+2026-05-17 21:43:27,602 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 6/30][Batch 101/874] BatchTime = 0.794 (s) DataTime = 0.001 (s) Losses = ['7.1362', '52.7016'] lr = 0.000097
+2026-05-17 21:44:47,602 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 6/30][Batch 201/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['7.2928', '53.7030'] lr = 0.000097
+2026-05-17 21:46:07,602 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 6/30][Batch 301/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.5127', '46.4291'] lr = 0.000097
+2026-05-17 21:47:27,603 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 6/30][Batch 401/874] BatchTime = 0.801 (s) DataTime = 0.002 (s) Losses = ['7.1218', '51.7482'] lr = 0.000097
+2026-05-17 21:48:47,602 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 6/30][Batch 501/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['7.2412', '50.7913'] lr = 0.000097
+2026-05-17 21:50:07,602 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 6/30][Batch 601/874] BatchTime = 0.794 (s) DataTime = 0.002 (s) Losses = ['7.0297', '48.8642'] lr = 0.000097
+2026-05-17 21:51:27,609 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 6/30][Batch 701/874] BatchTime = 0.806 (s) DataTime = 0.002 (s) Losses = ['6.8520', '49.7087'] lr = 0.000097
+2026-05-17 21:52:47,603 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 6/30][Batch 801/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.6159', '45.8774'] lr = 0.000097
+2026-05-17 21:53:46,087 - AdaPoinTr_baseline_smoke30 - INFO - [Training] EPOCH: 6 EpochTime = 699.592 (s) Losses = ['7.0032', '50.2961']
+2026-05-17 21:53:46,789 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-last.pth
+2026-05-17 21:53:47,785 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 7/30][Batch 1/874] BatchTime = 0.995 (s) DataTime = 0.124 (s) Losses = ['7.0270', '48.9679'] lr = 0.000097
+2026-05-17 21:55:07,803 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 7/30][Batch 101/874] BatchTime = 0.801 (s) DataTime = 0.002 (s) Losses = ['7.0653', '51.1331'] lr = 0.000097
+2026-05-17 21:56:27,809 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 7/30][Batch 201/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['7.2311', '50.1272'] lr = 0.000097
+2026-05-17 21:57:47,793 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 7/30][Batch 301/874] BatchTime = 0.790 (s) DataTime = 0.002 (s) Losses = ['7.0810', '45.8753'] lr = 0.000097
+2026-05-17 21:59:07,805 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 7/30][Batch 401/874] BatchTime = 0.802 (s) DataTime = 0.002 (s) Losses = ['7.0291', '50.9598'] lr = 0.000097
+2026-05-17 22:00:27,802 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 7/30][Batch 501/874] BatchTime = 0.808 (s) DataTime = 0.002 (s) Losses = ['6.7388', '48.3887'] lr = 0.000097
+2026-05-17 22:01:47,803 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 7/30][Batch 601/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['7.5371', '55.9085'] lr = 0.000097
+2026-05-17 22:03:07,803 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 7/30][Batch 701/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.9294', '48.4301'] lr = 0.000097
+2026-05-17 22:04:27,803 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 7/30][Batch 801/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.8890', '50.0795'] lr = 0.000097
+2026-05-17 22:05:26,272 - AdaPoinTr_baseline_smoke30 - INFO - [Training] EPOCH: 7 EpochTime = 699.481 (s) Losses = ['6.9003', '49.6273']
+2026-05-17 22:05:27,012 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-last.pth
+2026-05-17 22:05:28,091 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 8/30][Batch 1/874] BatchTime = 1.078 (s) DataTime = 0.124 (s) Losses = ['6.7363', '48.8372'] lr = 0.000096
+2026-05-17 22:06:48,093 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 8/30][Batch 101/874] BatchTime = 0.791 (s) DataTime = 0.002 (s) Losses = ['6.6284', '47.5108'] lr = 0.000096
+2026-05-17 22:08:08,102 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 8/30][Batch 201/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.9058', '51.7350'] lr = 0.000096
+2026-05-17 22:09:28,093 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 8/30][Batch 301/874] BatchTime = 0.791 (s) DataTime = 0.002 (s) Losses = ['6.9018', '46.9174'] lr = 0.000096
+2026-05-17 22:10:48,102 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 8/30][Batch 401/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.8243', '48.9840'] lr = 0.000096
+2026-05-17 22:12:08,109 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 8/30][Batch 501/874] BatchTime = 0.806 (s) DataTime = 0.002 (s) Losses = ['6.5959', '48.9085'] lr = 0.000096
+2026-05-17 22:13:28,103 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 8/30][Batch 601/874] BatchTime = 0.810 (s) DataTime = 0.002 (s) Losses = ['6.8091', '49.3508'] lr = 0.000096
+2026-05-17 22:14:48,103 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 8/30][Batch 701/874] BatchTime = 0.801 (s) DataTime = 0.002 (s) Losses = ['6.3896', '46.7629'] lr = 0.000096
+2026-05-17 22:16:08,103 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 8/30][Batch 801/874] BatchTime = 0.801 (s) DataTime = 0.002 (s) Losses = ['6.7378', '47.3733'] lr = 0.000096
+2026-05-17 22:17:06,572 - AdaPoinTr_baseline_smoke30 - INFO - [Training] EPOCH: 8 EpochTime = 699.558 (s) Losses = ['6.8094', '48.9703']
+2026-05-17 22:17:07,268 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-last.pth
+2026-05-17 22:17:08,303 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 9/30][Batch 1/874] BatchTime = 1.034 (s) DataTime = 0.153 (s) Losses = ['6.6958', '45.5364'] lr = 0.000096
+2026-05-17 22:18:28,309 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 9/30][Batch 101/874] BatchTime = 0.806 (s) DataTime = 0.002 (s) Losses = ['6.9205', '48.9771'] lr = 0.000096
+2026-05-17 22:19:48,293 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 9/30][Batch 201/874] BatchTime = 0.790 (s) DataTime = 0.002 (s) Losses = ['6.7022', '46.8319'] lr = 0.000096
+2026-05-17 22:21:08,305 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 9/30][Batch 301/874] BatchTime = 0.802 (s) DataTime = 0.002 (s) Losses = ['6.7002', '47.6567'] lr = 0.000096
+2026-05-17 22:22:28,303 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 9/30][Batch 401/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.4249', '47.8356'] lr = 0.000096
+2026-05-17 22:23:48,302 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 9/30][Batch 501/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.4131', '45.9128'] lr = 0.000096
+2026-05-17 22:25:08,302 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 9/30][Batch 601/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.5642', '47.5163'] lr = 0.000096
+2026-05-17 22:26:28,304 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 9/30][Batch 701/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['7.3717', '50.9759'] lr = 0.000096
+2026-05-17 22:27:48,302 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 9/30][Batch 801/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.4903', '49.1963'] lr = 0.000096
+2026-05-17 22:28:46,780 - AdaPoinTr_baseline_smoke30 - INFO - [Training] EPOCH: 9 EpochTime = 699.511 (s) Losses = ['6.7334', '48.4669']
+2026-05-17 22:28:47,520 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-last.pth
+2026-05-17 22:28:48,512 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 10/30][Batch 1/874] BatchTime = 0.991 (s) DataTime = 0.143 (s) Losses = ['7.0271', '49.0929'] lr = 0.000095
+2026-05-17 22:30:08,502 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 10/30][Batch 101/874] BatchTime = 0.799 (s) DataTime = 0.002 (s) Losses = ['6.9514', '49.9651'] lr = 0.000095
+2026-05-17 22:31:28,503 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 10/30][Batch 201/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['7.0222', '48.2364'] lr = 0.000095
+2026-05-17 22:32:48,502 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 10/30][Batch 301/874] BatchTime = 0.794 (s) DataTime = 0.002 (s) Losses = ['6.6906', '46.6401'] lr = 0.000095
+2026-05-17 22:34:08,502 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 10/30][Batch 401/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.9502', '49.3182'] lr = 0.000095
+2026-05-17 22:35:28,503 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 10/30][Batch 501/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.4686', '51.5191'] lr = 0.000095
+2026-05-17 22:36:48,503 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 10/30][Batch 601/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.9683', '48.5068'] lr = 0.000095
+2026-05-17 22:38:08,503 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 10/30][Batch 701/874] BatchTime = 0.800 (s) DataTime = 0.001 (s) Losses = ['6.3303', '45.0210'] lr = 0.000095
+2026-05-17 22:39:28,508 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 10/30][Batch 801/874] BatchTime = 0.806 (s) DataTime = 0.002 (s) Losses = ['6.0622', '47.5391'] lr = 0.000095
+2026-05-17 22:40:26,961 - AdaPoinTr_baseline_smoke30 - INFO - [Training] EPOCH: 10 EpochTime = 699.439 (s) Losses = ['6.6806', '48.1745']
+2026-05-17 22:40:26,961 - AdaPoinTr_baseline_smoke30 - INFO - [VALIDATION] Start validating epoch 10
+2026-05-17 22:40:51,598 - AdaPoinTr_baseline_smoke30 - INFO - Test[1051/10518] Taxonomy = 02691156 Sample = c7749c0a8b61f43bc9b9e28055202e3d Losses = ['23.7547', '2.3243', '12.8460', '0.7093'] Metrics = ['0.4707', '12.8460', '0.7093', '0.0000']
+2026-05-17 22:41:16,180 - AdaPoinTr_baseline_smoke30 - INFO - Test[2102/10518] Taxonomy = 03211117 Sample = ab2f9418c111cc6ddb965514105122a4 Losses = ['23.0690', '2.3200', '10.8462', '0.6418'] Metrics = ['0.6301', '10.8462', '0.6418', '0.0000']
+2026-05-17 22:41:40,841 - AdaPoinTr_baseline_smoke30 - INFO - Test[3153/10518] Taxonomy = 02876657 Sample = c5032e4be091aabb36fe7a88df793982 Losses = ['36.0098', '5.2683', '18.7962', '1.2808'] Metrics = ['0.2594', '18.7962', '1.2808', '0.0000']
+2026-05-17 22:42:05,536 - AdaPoinTr_baseline_smoke30 - INFO - Test[4204/10518] Taxonomy = 03211117 Sample = 722df1da5778d45b1e43523279c7f09f Losses = ['43.5669', '7.1518', '31.5889', '4.8911'] Metrics = ['0.2896', '31.5889', '4.8911', '0.0000']
+2026-05-17 22:42:30,102 - AdaPoinTr_baseline_smoke30 - INFO - Test[5255/10518] Taxonomy = 02828884 Sample = 14b63361a48a9fffe4a048c146e8bd43 Losses = ['38.8637', '5.5935', '22.7800', '2.5545'] Metrics = ['0.3746', '22.7800', '2.5545', '0.0000']
+2026-05-17 22:42:54,640 - AdaPoinTr_baseline_smoke30 - INFO - Test[6306/10518] Taxonomy = 03211117 Sample = d330d50a0255529d19ed6e1a590c9122 Losses = ['30.2392', '3.9241', '13.4540', '0.6671'] Metrics = ['0.4264', '13.4540', '0.6671', '0.0000']
+2026-05-17 22:43:19,180 - AdaPoinTr_baseline_smoke30 - INFO - Test[7357/10518] Taxonomy = 04379243 Sample = b1ca280d9567270ade98d10ab5975b59 Losses = ['32.8771', '4.1245', '16.4834', '0.8614'] Metrics = ['0.2562', '16.4834', '0.8614', '0.0000']
+2026-05-17 22:43:43,788 - AdaPoinTr_baseline_smoke30 - INFO - Test[8408/10518] Taxonomy = 03001627 Sample = 89208a619341d9fdb8c516ed5c4ce32 Losses = ['33.8585', '4.1945', '16.4482', '0.8273'] Metrics = ['0.2500', '16.4482', '0.8273', '0.0000']
+2026-05-17 22:44:08,362 - AdaPoinTr_baseline_smoke30 - INFO - Test[9459/10518] Taxonomy = 03001627 Sample = d0255120e3351121c3bd24f986301745 Losses = ['41.1756', '6.3321', '22.5353', '1.9372'] Metrics = ['0.1930', '22.5353', '1.9372', '0.0000']
+2026-05-17 22:44:32,952 - AdaPoinTr_baseline_smoke30 - INFO - Test[10510/10518] Taxonomy = 03636649 Sample = ea9ec4d9db2e06202471e6dd5ac3ef92 Losses = ['35.7978', '4.9464', '15.7695', '1.2305'] Metrics = ['0.4907', '15.7695', '1.2305', '0.0000']
+2026-05-17 22:44:33,209 - AdaPoinTr_baseline_smoke30 - INFO - [Validation] EPOCH: 10  Metrics = ['0.3252', '17.8733', '1.4660', '0.0000']
+2026-05-17 22:44:33,209 - AdaPoinTr_baseline_smoke30 - INFO - ============================ TEST RESULTS ============================
+2026-05-17 22:44:33,209 - AdaPoinTr_baseline_smoke30 - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2026-05-17 22:44:33,209 - AdaPoinTr_baseline_smoke30 - INFO - 03759954	14	0.468 	19.355 	2.701 	0.000 	microphone	
+2026-05-17 22:44:33,209 - AdaPoinTr_baseline_smoke30 - INFO - 04330267	44	0.251 	19.448 	1.529 	0.000 	stove	
+2026-05-17 22:44:33,209 - AdaPoinTr_baseline_smoke30 - INFO - 03261776	15	0.275 	22.914 	3.206 	0.000 	earphone	
+2026-05-17 22:44:33,209 - AdaPoinTr_baseline_smoke30 - INFO - 03513137	33	0.185 	24.967 	2.786 	0.000 	helmet	
+2026-05-17 22:44:33,209 - AdaPoinTr_baseline_smoke30 - INFO - 04460130	27	0.369 	17.475 	1.309 	0.000 	tower	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 04468005	78	0.337 	15.868 	1.055 	0.000 	train	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 03761084	31	0.219 	19.873 	1.466 	0.000 	microwaves	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 04004475	34	0.237 	20.793 	1.783 	0.000 	printer	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 03938244	20	0.262 	17.626 	1.078 	0.000 	pillow	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 02992529	167	0.393 	13.400 	0.665 	0.000 	cellphone	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 02808440	172	0.260 	18.900 	1.496 	0.000 	bathtub	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 04530566	388	0.432 	13.842 	0.799 	0.000 	watercraft	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 02871439	91	0.225 	19.921 	1.579 	0.000 	bookshelf	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 03593526	120	0.227 	22.207 	2.080 	0.000 	jar	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 04554684	34	0.204 	21.541 	1.740 	0.000 	washer	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 03467517	160	0.754 	8.358 	0.343 	0.000 	guitar	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 04401088	218	0.399 	13.061 	0.647 	0.000 	telephone	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 02954340	12	0.263 	19.890 	2.001 	0.000 	cap	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 02933112	315	0.226 	18.138 	1.104 	0.000 	cabinet	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 03642806	92	0.354 	13.500 	0.625 	0.000 	laptop	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 02924116	188	0.319 	15.199 	0.788 	0.000 	bus	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 02946921	22	0.217 	21.291 	2.095 	0.000 	can	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 02818832	47	0.246 	20.796 	2.001 	0.000 	bed	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 04256520	635	0.261 	17.632 	1.143 	0.000 	sofa	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 04379243	1687	0.352 	15.704 	1.198 	0.000 	table	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 02747177	69	0.168 	22.580 	1.896 	0.000 	trash bin	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 03046257	131	0.288 	17.911 	1.343 	0.000 	clock	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 04225987	31	0.492 	11.908 	0.562 	0.000 	skateboard	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 03797390	43	0.159 	24.301 	2.211 	0.000 	mug	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 03001627	1356	0.316 	17.433 	1.338 	0.000 	chair	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 03691459	320	0.226 	21.233 	1.863 	0.000 	loudspeaker	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 02942699	23	0.209 	26.022 	3.261 	0.000 	camera	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 03636649	464	0.441 	19.143 	2.517 	0.000 	lamp	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 02691156	809	0.503 	11.972 	0.624 	0.000 	airplane	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 02773838	17	0.324 	16.206 	1.090 	0.000 	bag	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 02958343	703	0.200 	19.505 	1.230 	0.000 	car	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 02880940	38	0.193 	21.001 	1.510 	0.000 	bowl	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 04099429	17	0.634 	10.504 	0.543 	0.000 	rocket	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 02828884	363	0.401 	13.755 	0.845 	0.000 	bench	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 04090263	475	0.627 	10.769 	0.647 	0.000 	rifle	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 03211117	219	0.321 	16.397 	1.142 	0.000 	display	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 02876657	100	0.366 	15.647 	1.057 	0.000 	bottle	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 03710193	19	0.441 	16.786 	1.523 	0.000 	mailbox	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 03790512	68	0.224 	20.111 	1.499 	0.000 	motorbike	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 03325088	149	0.355 	22.446 	3.009 	0.000 	faucet	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 02801938	23	0.206 	20.325 	1.568 	0.000 	basket	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 03337140	60	0.222 	19.187 	1.353 	0.000 	file cabinet	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 02843684	15	0.201 	24.812 	2.772 	0.000 	birdhouse	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 03624134	85	0.702 	9.051 	0.374 	0.000 	knife	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 03991062	121	0.201 	24.208 	2.412 	0.000 	flowerpot	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 03948459	62	0.411 	14.896 	1.067 	0.000 	pistol	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 03928116	48	0.254 	20.470 	2.013 	0.000 	piano	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 03207941	19	0.226 	18.142 	1.092 	0.000 	dishwasher	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 04074963	14	0.416 	13.022 	0.621 	0.000 	remote	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - 03085013	13	0.424 	11.586 	0.430 	0.000 	keyboard	
+2026-05-17 22:44:33,210 - AdaPoinTr_baseline_smoke30 - INFO - Overall		0.325 	17.873 	1.466 	0.000 	
+2026-05-17 22:44:33,985 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-best.pth
+2026-05-17 22:44:34,764 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-last.pth
+2026-05-17 22:44:35,787 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 11/30][Batch 1/874] BatchTime = 1.022 (s) DataTime = 0.131 (s) Losses = ['6.9430', '48.4627'] lr = 0.000095
+2026-05-17 22:45:55,802 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 11/30][Batch 101/874] BatchTime = 0.794 (s) DataTime = 0.002 (s) Losses = ['6.5551', '48.9631'] lr = 0.000095
+2026-05-17 22:47:15,803 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 11/30][Batch 201/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.8879', '49.5094'] lr = 0.000095
+2026-05-17 22:48:35,809 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 11/30][Batch 301/874] BatchTime = 0.806 (s) DataTime = 0.002 (s) Losses = ['6.5531', '49.4841'] lr = 0.000095
+2026-05-17 22:49:55,802 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 11/30][Batch 401/874] BatchTime = 0.799 (s) DataTime = 0.002 (s) Losses = ['6.8397', '49.0146'] lr = 0.000095
+2026-05-17 22:51:15,908 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 11/30][Batch 501/874] BatchTime = 0.806 (s) DataTime = 0.001 (s) Losses = ['6.0780', '42.6520'] lr = 0.000095
+2026-05-17 22:52:35,908 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 11/30][Batch 601/874] BatchTime = 0.806 (s) DataTime = 0.002 (s) Losses = ['6.4417', '45.9905'] lr = 0.000095
+2026-05-17 22:53:55,909 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 11/30][Batch 701/874] BatchTime = 0.806 (s) DataTime = 0.002 (s) Losses = ['6.9064', '47.7708'] lr = 0.000095
+2026-05-17 22:55:15,902 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 11/30][Batch 801/874] BatchTime = 0.799 (s) DataTime = 0.002 (s) Losses = ['6.1332', '44.4366'] lr = 0.000095
+2026-05-17 22:56:14,369 - AdaPoinTr_baseline_smoke30 - INFO - [Training] EPOCH: 11 EpochTime = 699.603 (s) Losses = ['6.6210', '47.6374']
+2026-05-17 22:56:15,101 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-last.pth
+2026-05-17 22:56:16,207 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 12/30][Batch 1/874] BatchTime = 1.106 (s) DataTime = 0.151 (s) Losses = ['6.5186', '47.5630'] lr = 0.000094
+2026-05-17 22:57:36,202 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 12/30][Batch 101/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.4419', '47.9600'] lr = 0.000094
+2026-05-17 22:58:56,202 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 12/30][Batch 201/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['7.1491', '51.9145'] lr = 0.000094
+2026-05-17 23:00:16,194 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 12/30][Batch 301/874] BatchTime = 0.801 (s) DataTime = 0.002 (s) Losses = ['6.7813', '48.4331'] lr = 0.000094
+2026-05-17 23:01:36,202 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 12/30][Batch 401/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.3158', '44.2922'] lr = 0.000094
+2026-05-17 23:02:56,203 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 12/30][Batch 501/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.9766', '49.5528'] lr = 0.000094
+2026-05-17 23:04:16,204 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 12/30][Batch 601/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.7552', '45.7082'] lr = 0.000094
+2026-05-17 23:05:36,209 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 12/30][Batch 701/874] BatchTime = 0.806 (s) DataTime = 0.001 (s) Losses = ['6.6049', '49.0468'] lr = 0.000094
+2026-05-17 23:06:56,202 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 12/30][Batch 801/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.6149', '45.4445'] lr = 0.000094
+2026-05-17 23:07:54,678 - AdaPoinTr_baseline_smoke30 - INFO - [Training] EPOCH: 12 EpochTime = 699.577 (s) Losses = ['6.5766', '47.2860']
+2026-05-17 23:07:55,478 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-last.pth
+2026-05-17 23:07:56,406 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 13/30][Batch 1/874] BatchTime = 0.926 (s) DataTime = 0.128 (s) Losses = ['6.3630', '45.3270'] lr = 0.000094
+2026-05-17 23:09:16,402 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 13/30][Batch 101/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.9152', '45.4947'] lr = 0.000094
+2026-05-17 23:10:36,402 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 13/30][Batch 201/874] BatchTime = 0.800 (s) DataTime = 0.001 (s) Losses = ['6.9936', '50.6060'] lr = 0.000094
+2026-05-17 23:11:56,403 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 13/30][Batch 301/874] BatchTime = 0.798 (s) DataTime = 0.001 (s) Losses = ['6.4368', '45.6207'] lr = 0.000094
+2026-05-17 23:13:16,402 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 13/30][Batch 401/874] BatchTime = 0.800 (s) DataTime = 0.001 (s) Losses = ['6.4790', '44.7289'] lr = 0.000094
+2026-05-17 23:14:36,402 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 13/30][Batch 501/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.4280', '45.7641'] lr = 0.000094
+2026-05-17 23:15:56,393 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 13/30][Batch 601/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.4906', '47.1289'] lr = 0.000094
+2026-05-17 23:17:16,402 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 13/30][Batch 701/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.6788', '45.3838'] lr = 0.000094
+2026-05-17 23:18:36,408 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 13/30][Batch 801/874] BatchTime = 0.806 (s) DataTime = 0.002 (s) Losses = ['6.7112', '46.5976'] lr = 0.000094
+2026-05-17 23:19:34,870 - AdaPoinTr_baseline_smoke30 - INFO - [Training] EPOCH: 13 EpochTime = 699.390 (s) Losses = ['6.5255', '46.8714']
+2026-05-17 23:19:35,604 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-last.pth
+2026-05-17 23:19:36,702 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 14/30][Batch 1/874] BatchTime = 1.097 (s) DataTime = 0.141 (s) Losses = ['6.3919', '46.4384'] lr = 0.000093
+2026-05-17 23:20:56,702 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 14/30][Batch 101/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.3900', '47.4724'] lr = 0.000093
+2026-05-17 23:22:16,693 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 14/30][Batch 201/874] BatchTime = 0.790 (s) DataTime = 0.001 (s) Losses = ['6.2251', '43.7462'] lr = 0.000093
+2026-05-17 23:23:36,702 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 14/30][Batch 301/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.3875', '47.1319'] lr = 0.000093
+2026-05-17 23:24:56,703 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 14/30][Batch 401/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.5453', '47.4557'] lr = 0.000093
+2026-05-17 23:26:16,708 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 14/30][Batch 501/874] BatchTime = 0.806 (s) DataTime = 0.002 (s) Losses = ['6.4883', '45.8351'] lr = 0.000093
+2026-05-17 23:27:36,703 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 14/30][Batch 601/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.5823', '47.1697'] lr = 0.000093
+2026-05-17 23:28:56,709 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 14/30][Batch 701/874] BatchTime = 0.807 (s) DataTime = 0.002 (s) Losses = ['6.2029', '44.9433'] lr = 0.000093
+2026-05-17 23:30:16,703 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 14/30][Batch 801/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.5592', '45.1733'] lr = 0.000093
+2026-05-17 23:31:15,170 - AdaPoinTr_baseline_smoke30 - INFO - [Training] EPOCH: 14 EpochTime = 699.564 (s) Losses = ['6.4945', '46.9141']
+2026-05-17 23:31:15,907 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-last.pth
+2026-05-17 23:31:16,914 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 15/30][Batch 1/874] BatchTime = 1.006 (s) DataTime = 0.127 (s) Losses = ['6.4397', '46.4431'] lr = 0.000093
+2026-05-17 23:32:36,909 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 15/30][Batch 101/874] BatchTime = 0.807 (s) DataTime = 0.002 (s) Losses = ['6.1887', '45.8740'] lr = 0.000093
+2026-05-17 23:33:57,003 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 15/30][Batch 201/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.0930', '44.5431'] lr = 0.000093
+2026-05-17 23:35:17,003 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 15/30][Batch 301/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.4969', '47.0889'] lr = 0.000093
+2026-05-17 23:36:37,008 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 15/30][Batch 401/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['5.8920', '43.6067'] lr = 0.000093
+2026-05-17 23:37:57,009 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 15/30][Batch 501/874] BatchTime = 0.806 (s) DataTime = 0.001 (s) Losses = ['6.7993', '46.9882'] lr = 0.000093
+2026-05-17 23:39:17,103 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 15/30][Batch 601/874] BatchTime = 0.799 (s) DataTime = 0.002 (s) Losses = ['6.6872', '46.2371'] lr = 0.000093
+2026-05-17 23:40:37,102 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 15/30][Batch 701/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.6167', '46.1724'] lr = 0.000093
+2026-05-17 23:41:57,103 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 15/30][Batch 801/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.3135', '48.7047'] lr = 0.000093
+2026-05-17 23:42:55,568 - AdaPoinTr_baseline_smoke30 - INFO - [Training] EPOCH: 15 EpochTime = 699.660 (s) Losses = ['6.4560', '46.6027']
+2026-05-17 23:42:56,298 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-last.pth
+2026-05-17 23:42:57,299 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 16/30][Batch 1/874] BatchTime = 1.000 (s) DataTime = 0.125 (s) Losses = ['6.0620', '45.6792'] lr = 0.000092
+2026-05-17 23:44:17,302 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 16/30][Batch 101/874] BatchTime = 0.809 (s) DataTime = 0.002 (s) Losses = ['6.8971', '51.7879'] lr = 0.000092
+2026-05-17 23:45:37,302 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 16/30][Batch 201/874] BatchTime = 0.799 (s) DataTime = 0.002 (s) Losses = ['6.5502', '48.7726'] lr = 0.000092
+2026-05-17 23:46:57,303 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 16/30][Batch 301/874] BatchTime = 0.800 (s) DataTime = 0.001 (s) Losses = ['6.3900', '45.6148'] lr = 0.000092
+2026-05-17 23:48:17,293 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 16/30][Batch 401/874] BatchTime = 0.790 (s) DataTime = 0.002 (s) Losses = ['6.4132', '47.6136'] lr = 0.000092
+2026-05-17 23:49:37,302 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 16/30][Batch 501/874] BatchTime = 0.799 (s) DataTime = 0.002 (s) Losses = ['6.6355', '46.2326'] lr = 0.000092
+2026-05-17 23:50:57,303 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 16/30][Batch 601/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.1518', '45.5945'] lr = 0.000092
+2026-05-17 23:52:17,309 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 16/30][Batch 701/874] BatchTime = 0.806 (s) DataTime = 0.002 (s) Losses = ['6.3298', '46.4261'] lr = 0.000092
+2026-05-17 23:53:37,409 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 16/30][Batch 801/874] BatchTime = 0.806 (s) DataTime = 0.002 (s) Losses = ['6.6679', '45.1616'] lr = 0.000092
+2026-05-17 23:54:35,874 - AdaPoinTr_baseline_smoke30 - INFO - [Training] EPOCH: 16 EpochTime = 699.575 (s) Losses = ['6.4429', '46.6508']
+2026-05-17 23:54:36,587 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-last.pth
+2026-05-17 23:54:37,595 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 17/30][Batch 1/874] BatchTime = 1.007 (s) DataTime = 0.126 (s) Losses = ['6.1980', '42.9261'] lr = 0.000092
+2026-05-17 23:55:57,594 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 17/30][Batch 101/874] BatchTime = 0.791 (s) DataTime = 0.002 (s) Losses = ['6.2649', '45.2302'] lr = 0.000092
+2026-05-17 23:57:17,603 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 17/30][Batch 201/874] BatchTime = 0.810 (s) DataTime = 0.001 (s) Losses = ['6.6308', '49.2909'] lr = 0.000092
+2026-05-17 23:58:37,603 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 17/30][Batch 301/874] BatchTime = 0.794 (s) DataTime = 0.001 (s) Losses = ['6.6040', '49.9005'] lr = 0.000092
+2026-05-17 23:59:57,603 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 17/30][Batch 401/874] BatchTime = 0.793 (s) DataTime = 0.002 (s) Losses = ['6.3657', '44.1216'] lr = 0.000092
+2026-05-18 00:01:17,603 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 17/30][Batch 501/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.2656', '46.7764'] lr = 0.000092
+2026-05-18 00:02:37,602 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 17/30][Batch 601/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.2235', '44.1436'] lr = 0.000092
+2026-05-18 00:03:57,603 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 17/30][Batch 701/874] BatchTime = 0.800 (s) DataTime = 0.001 (s) Losses = ['5.8695', '42.1963'] lr = 0.000092
+2026-05-18 00:05:17,603 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 17/30][Batch 801/874] BatchTime = 0.794 (s) DataTime = 0.002 (s) Losses = ['6.8825', '47.8486'] lr = 0.000092
+2026-05-18 00:06:16,079 - AdaPoinTr_baseline_smoke30 - INFO - [Training] EPOCH: 17 EpochTime = 699.490 (s) Losses = ['6.4032', '46.4822']
+2026-05-18 00:06:16,775 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-last.pth
+2026-05-18 00:06:17,807 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 18/30][Batch 1/874] BatchTime = 1.031 (s) DataTime = 0.152 (s) Losses = ['6.4870', '48.3139'] lr = 0.000091
+2026-05-18 00:07:37,802 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 18/30][Batch 101/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.5680', '48.5115'] lr = 0.000091
+2026-05-18 00:08:57,703 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 18/30][Batch 201/874] BatchTime = 0.800 (s) DataTime = 0.001 (s) Losses = ['6.7828', '45.7133'] lr = 0.000091
+2026-05-18 00:10:17,703 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 18/30][Batch 301/874] BatchTime = 0.809 (s) DataTime = 0.002 (s) Losses = ['6.0329', '45.2312'] lr = 0.000091
+2026-05-18 00:11:37,702 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 18/30][Batch 401/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.2046', '47.8576'] lr = 0.000091
+2026-05-18 00:12:57,702 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 18/30][Batch 501/874] BatchTime = 0.799 (s) DataTime = 0.002 (s) Losses = ['6.7992', '46.4655'] lr = 0.000091
+2026-05-18 00:14:17,702 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 18/30][Batch 601/874] BatchTime = 0.799 (s) DataTime = 0.002 (s) Losses = ['6.4813', '46.0764'] lr = 0.000091
+2026-05-18 00:15:37,703 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 18/30][Batch 701/874] BatchTime = 0.794 (s) DataTime = 0.002 (s) Losses = ['6.1198', '45.9665'] lr = 0.000091
+2026-05-18 00:16:57,702 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 18/30][Batch 801/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.5914', '46.6854'] lr = 0.000091
+2026-05-18 00:17:56,170 - AdaPoinTr_baseline_smoke30 - INFO - [Training] EPOCH: 18 EpochTime = 699.394 (s) Losses = ['6.3764', '46.1095']
+2026-05-18 00:17:56,612 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-last.pth
+2026-05-18 00:17:57,595 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 19/30][Batch 1/874] BatchTime = 0.982 (s) DataTime = 0.128 (s) Losses = ['6.3310', '43.3914'] lr = 0.000091
+2026-05-18 00:19:17,604 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 19/30][Batch 101/874] BatchTime = 0.800 (s) DataTime = 0.001 (s) Losses = ['6.5143', '46.7072'] lr = 0.000091
+2026-05-18 00:20:37,602 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 19/30][Batch 201/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.3796', '46.8449'] lr = 0.000091
+2026-05-18 00:21:57,603 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 19/30][Batch 301/874] BatchTime = 0.809 (s) DataTime = 0.002 (s) Losses = ['6.5359', '47.4442'] lr = 0.000091
+2026-05-18 00:23:17,604 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 19/30][Batch 401/874] BatchTime = 0.795 (s) DataTime = 0.002 (s) Losses = ['6.0027', '46.2235'] lr = 0.000091
+2026-05-18 00:24:37,603 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 19/30][Batch 501/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.0521', '45.7022'] lr = 0.000091
+2026-05-18 00:25:57,603 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 19/30][Batch 601/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.2404', '45.7286'] lr = 0.000091
+2026-05-18 00:27:17,602 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 19/30][Batch 701/874] BatchTime = 0.799 (s) DataTime = 0.002 (s) Losses = ['6.8767', '51.6946'] lr = 0.000091
+2026-05-18 00:28:37,603 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 19/30][Batch 801/874] BatchTime = 0.801 (s) DataTime = 0.002 (s) Losses = ['5.9224', '41.4204'] lr = 0.000091
+2026-05-18 00:29:36,073 - AdaPoinTr_baseline_smoke30 - INFO - [Training] EPOCH: 19 EpochTime = 699.460 (s) Losses = ['6.3698', '46.3759']
+2026-05-18 00:29:36,777 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-last.pth
+2026-05-18 00:29:37,859 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 20/30][Batch 1/874] BatchTime = 1.081 (s) DataTime = 0.150 (s) Losses = ['6.3714', '42.9351'] lr = 0.000090
+2026-05-18 00:30:57,903 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 20/30][Batch 101/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.0068', '45.9346'] lr = 0.000090
+2026-05-18 00:32:17,908 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 20/30][Batch 201/874] BatchTime = 0.806 (s) DataTime = 0.002 (s) Losses = ['6.0133', '44.7031'] lr = 0.000090
+2026-05-18 00:33:37,893 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 20/30][Batch 301/874] BatchTime = 0.790 (s) DataTime = 0.002 (s) Losses = ['6.5292', '47.4649'] lr = 0.000090
+2026-05-18 00:34:57,903 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 20/30][Batch 401/874] BatchTime = 0.794 (s) DataTime = 0.002 (s) Losses = ['6.3312', '44.3173'] lr = 0.000090
+2026-05-18 00:36:17,902 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 20/30][Batch 501/874] BatchTime = 0.799 (s) DataTime = 0.002 (s) Losses = ['6.6753', '47.5027'] lr = 0.000090
+2026-05-18 00:37:37,902 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 20/30][Batch 601/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.4875', '47.5191'] lr = 0.000090
+2026-05-18 00:38:57,908 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 20/30][Batch 701/874] BatchTime = 0.806 (s) DataTime = 0.002 (s) Losses = ['6.4742', '45.9980'] lr = 0.000090
+2026-05-18 00:40:17,902 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 20/30][Batch 801/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.6167', '48.7898'] lr = 0.000090
+2026-05-18 00:41:16,370 - AdaPoinTr_baseline_smoke30 - INFO - [Training] EPOCH: 20 EpochTime = 699.592 (s) Losses = ['6.3534', '46.5081']
+2026-05-18 00:41:16,371 - AdaPoinTr_baseline_smoke30 - INFO - [VALIDATION] Start validating epoch 20
+2026-05-18 00:41:40,974 - AdaPoinTr_baseline_smoke30 - INFO - Test[1051/10518] Taxonomy = 02691156 Sample = c7749c0a8b61f43bc9b9e28055202e3d Losses = ['25.3357', '2.6709', '11.1449', '0.4327'] Metrics = ['0.4809', '11.1449', '0.4327', '0.0000']
+2026-05-18 00:42:05,465 - AdaPoinTr_baseline_smoke30 - INFO - Test[2102/10518] Taxonomy = 03211117 Sample = ab2f9418c111cc6ddb965514105122a4 Losses = ['24.6550', '2.2311', '9.4585', '0.3328'] Metrics = ['0.5793', '9.4585', '0.3328', '0.0000']
+2026-05-18 00:42:29,986 - AdaPoinTr_baseline_smoke30 - INFO - Test[3153/10518] Taxonomy = 02876657 Sample = c5032e4be091aabb36fe7a88df793982 Losses = ['42.2310', '7.2735', '20.7359', '2.0741'] Metrics = ['0.2927', '20.7359', '2.0741', '0.0000']
+2026-05-18 00:42:54,551 - AdaPoinTr_baseline_smoke30 - INFO - Test[4204/10518] Taxonomy = 03211117 Sample = 722df1da5778d45b1e43523279c7f09f Losses = ['33.0290', '4.0379', '15.5968', '0.9862'] Metrics = ['0.3574', '15.5968', '0.9862', '0.0000']
+2026-05-18 00:43:19,124 - AdaPoinTr_baseline_smoke30 - INFO - Test[5255/10518] Taxonomy = 02828884 Sample = 14b63361a48a9fffe4a048c146e8bd43 Losses = ['31.6158', '3.6798', '18.7818', '1.7929'] Metrics = ['0.3797', '18.7818', '1.7929', '0.0000']
+2026-05-18 00:43:43,686 - AdaPoinTr_baseline_smoke30 - INFO - Test[6306/10518] Taxonomy = 03211117 Sample = d330d50a0255529d19ed6e1a590c9122 Losses = ['29.2346', '4.0805', '13.7298', '0.7724'] Metrics = ['0.4206', '13.7298', '0.7724', '0.0000']
+2026-05-18 00:44:08,242 - AdaPoinTr_baseline_smoke30 - INFO - Test[7357/10518] Taxonomy = 04379243 Sample = b1ca280d9567270ade98d10ab5975b59 Losses = ['35.5610', '4.8759', '16.0837', '0.8485'] Metrics = ['0.2591', '16.0837', '0.8485', '0.0000']
+2026-05-18 00:44:32,797 - AdaPoinTr_baseline_smoke30 - INFO - Test[8408/10518] Taxonomy = 03001627 Sample = 89208a619341d9fdb8c516ed5c4ce32 Losses = ['32.1428', '3.6518', '14.2848', '0.6122'] Metrics = ['0.2788', '14.2848', '0.6122', '0.0000']
+2026-05-18 00:44:57,359 - AdaPoinTr_baseline_smoke30 - INFO - Test[9459/10518] Taxonomy = 03001627 Sample = d0255120e3351121c3bd24f986301745 Losses = ['36.2529', '4.6318', '17.5788', '0.9239'] Metrics = ['0.2142', '17.5788', '0.9239', '0.0000']
+2026-05-18 00:45:21,977 - AdaPoinTr_baseline_smoke30 - INFO - Test[10510/10518] Taxonomy = 03636649 Sample = ea9ec4d9db2e06202471e6dd5ac3ef92 Losses = ['32.3116', '4.8255', '15.8763', '1.9959'] Metrics = ['0.6115', '15.8763', '1.9959', '0.0000']
+2026-05-18 00:45:22,242 - AdaPoinTr_baseline_smoke30 - INFO - [Validation] EPOCH: 20  Metrics = ['0.3336', '16.6765', '1.3339', '0.0000']
+2026-05-18 00:45:22,243 - AdaPoinTr_baseline_smoke30 - INFO - ============================ TEST RESULTS ============================
+2026-05-18 00:45:22,243 - AdaPoinTr_baseline_smoke30 - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2026-05-18 00:45:22,243 - AdaPoinTr_baseline_smoke30 - INFO - 03759954	14	0.517 	16.698 	2.304 	0.000 	microphone	
+2026-05-18 00:45:22,243 - AdaPoinTr_baseline_smoke30 - INFO - 04330267	44	0.259 	17.783 	1.251 	0.000 	stove	
+2026-05-18 00:45:22,243 - AdaPoinTr_baseline_smoke30 - INFO - 03261776	15	0.265 	26.418 	5.811 	0.000 	earphone	
+2026-05-18 00:45:22,243 - AdaPoinTr_baseline_smoke30 - INFO - 03513137	33	0.187 	23.453 	2.491 	0.000 	helmet	
+2026-05-18 00:45:22,243 - AdaPoinTr_baseline_smoke30 - INFO - 04460130	27	0.386 	17.570 	1.780 	0.000 	tower	
+2026-05-18 00:45:22,243 - AdaPoinTr_baseline_smoke30 - INFO - 04468005	78	0.351 	14.408 	0.828 	0.000 	train	
+2026-05-18 00:45:22,244 - AdaPoinTr_baseline_smoke30 - INFO - 03761084	31	0.221 	18.694 	1.341 	0.000 	microwaves	
+2026-05-18 00:45:22,244 - AdaPoinTr_baseline_smoke30 - INFO - 04004475	34	0.242 	18.977 	1.495 	0.000 	printer	
+2026-05-18 00:45:22,244 - AdaPoinTr_baseline_smoke30 - INFO - 03938244	20	0.272 	17.575 	1.249 	0.000 	pillow	
+2026-05-18 00:45:22,244 - AdaPoinTr_baseline_smoke30 - INFO - 02992529	167	0.389 	12.512 	0.575 	0.000 	cellphone	
+2026-05-18 00:45:22,244 - AdaPoinTr_baseline_smoke30 - INFO - 02808440	172	0.265 	17.617 	1.331 	0.000 	bathtub	
+2026-05-18 00:45:22,244 - AdaPoinTr_baseline_smoke30 - INFO - 04530566	388	0.455 	12.793 	0.726 	0.000 	watercraft	
+2026-05-18 00:45:22,244 - AdaPoinTr_baseline_smoke30 - INFO - 02871439	91	0.229 	18.473 	1.330 	0.000 	bookshelf	
+2026-05-18 00:45:22,244 - AdaPoinTr_baseline_smoke30 - INFO - 03593526	120	0.228 	20.433 	1.721 	0.000 	jar	
+2026-05-18 00:45:22,244 - AdaPoinTr_baseline_smoke30 - INFO - 04554684	34	0.203 	20.449 	1.836 	0.000 	washer	
+2026-05-18 00:45:22,244 - AdaPoinTr_baseline_smoke30 - INFO - 03467517	160	0.770 	7.762 	0.285 	0.000 	guitar	
+2026-05-18 00:45:22,244 - AdaPoinTr_baseline_smoke30 - INFO - 04401088	218	0.392 	12.236 	0.534 	0.000 	telephone	
+2026-05-18 00:45:22,244 - AdaPoinTr_baseline_smoke30 - INFO - 02954340	12	0.262 	19.574 	1.973 	0.000 	cap	
+2026-05-18 00:45:22,244 - AdaPoinTr_baseline_smoke30 - INFO - 02933112	315	0.225 	17.023 	0.974 	0.000 	cabinet	
+2026-05-18 00:45:22,245 - AdaPoinTr_baseline_smoke30 - INFO - 03642806	92	0.355 	13.024 	0.620 	0.000 	laptop	
+2026-05-18 00:45:22,245 - AdaPoinTr_baseline_smoke30 - INFO - 02924116	188	0.330 	14.127 	0.699 	0.000 	bus	
+2026-05-18 00:45:22,245 - AdaPoinTr_baseline_smoke30 - INFO - 02946921	22	0.217 	18.712 	1.450 	0.000 	can	
+2026-05-18 00:45:22,245 - AdaPoinTr_baseline_smoke30 - INFO - 02818832	47	0.257 	18.513 	1.516 	0.000 	bed	
+2026-05-18 00:45:22,245 - AdaPoinTr_baseline_smoke30 - INFO - 04256520	635	0.271 	16.291 	0.987 	0.000 	sofa	
+2026-05-18 00:45:22,245 - AdaPoinTr_baseline_smoke30 - INFO - 04379243	1687	0.353 	14.772 	1.054 	0.000 	table	
+2026-05-18 00:45:22,245 - AdaPoinTr_baseline_smoke30 - INFO - 02747177	69	0.170 	21.001 	1.595 	0.000 	trash bin	
+2026-05-18 00:45:22,245 - AdaPoinTr_baseline_smoke30 - INFO - 03046257	131	0.280 	17.304 	1.297 	0.000 	clock	
+2026-05-18 00:45:22,245 - AdaPoinTr_baseline_smoke30 - INFO - 04225987	31	0.517 	10.860 	0.455 	0.000 	skateboard	
+2026-05-18 00:45:22,245 - AdaPoinTr_baseline_smoke30 - INFO - 03797390	43	0.161 	21.959 	1.737 	0.000 	mug	
+2026-05-18 00:45:22,245 - AdaPoinTr_baseline_smoke30 - INFO - 03001627	1356	0.328 	15.898 	1.112 	0.000 	chair	
+2026-05-18 00:45:22,245 - AdaPoinTr_baseline_smoke30 - INFO - 03691459	320	0.230 	19.523 	1.598 	0.000 	loudspeaker	
+2026-05-18 00:45:22,245 - AdaPoinTr_baseline_smoke30 - INFO - 02942699	23	0.207 	23.126 	2.418 	0.000 	camera	
+2026-05-18 00:45:22,245 - AdaPoinTr_baseline_smoke30 - INFO - 03636649	464	0.477 	15.984 	1.779 	0.000 	lamp	
+2026-05-18 00:45:22,246 - AdaPoinTr_baseline_smoke30 - INFO - 02691156	809	0.522 	11.155 	0.560 	0.000 	airplane	
+2026-05-18 00:45:22,246 - AdaPoinTr_baseline_smoke30 - INFO - 02773838	17	0.315 	15.406 	0.937 	0.000 	bag	
+2026-05-18 00:45:22,246 - AdaPoinTr_baseline_smoke30 - INFO - 02958343	703	0.205 	18.222 	1.111 	0.000 	car	
+2026-05-18 00:45:22,246 - AdaPoinTr_baseline_smoke30 - INFO - 02880940	38	0.201 	19.840 	1.640 	0.000 	bowl	
+2026-05-18 00:45:22,246 - AdaPoinTr_baseline_smoke30 - INFO - 04099429	17	0.639 	10.856 	0.616 	0.000 	rocket	
+2026-05-18 00:45:22,246 - AdaPoinTr_baseline_smoke30 - INFO - 02828884	363	0.405 	12.738 	0.707 	0.000 	bench	
+2026-05-18 00:45:22,246 - AdaPoinTr_baseline_smoke30 - INFO - 04090263	475	0.653 	9.826 	0.515 	0.000 	rifle	
+2026-05-18 00:45:22,246 - AdaPoinTr_baseline_smoke30 - INFO - 03211117	219	0.324 	15.103 	0.939 	0.000 	display	
+2026-05-18 00:45:22,246 - AdaPoinTr_baseline_smoke30 - INFO - 02876657	100	0.375 	14.369 	0.877 	0.000 	bottle	
+2026-05-18 00:45:22,246 - AdaPoinTr_baseline_smoke30 - INFO - 03710193	19	0.469 	15.143 	1.398 	0.000 	mailbox	
+2026-05-18 00:45:22,246 - AdaPoinTr_baseline_smoke30 - INFO - 03790512	68	0.229 	19.255 	1.461 	0.000 	motorbike	
+2026-05-18 00:45:22,246 - AdaPoinTr_baseline_smoke30 - INFO - 03325088	149	0.401 	18.309 	2.102 	0.000 	faucet	
+2026-05-18 00:45:22,246 - AdaPoinTr_baseline_smoke30 - INFO - 02801938	23	0.209 	18.364 	1.150 	0.000 	basket	
+2026-05-18 00:45:22,246 - AdaPoinTr_baseline_smoke30 - INFO - 03337140	60	0.224 	18.309 	1.294 	0.000 	file cabinet	
+2026-05-18 00:45:22,246 - AdaPoinTr_baseline_smoke30 - INFO - 02843684	15	0.205 	23.138 	2.403 	0.000 	birdhouse	
+2026-05-18 00:45:22,247 - AdaPoinTr_baseline_smoke30 - INFO - 03624134	85	0.729 	8.618 	0.386 	0.000 	knife	
+2026-05-18 00:45:22,247 - AdaPoinTr_baseline_smoke30 - INFO - 03991062	121	0.209 	22.504 	2.206 	0.000 	flowerpot	
+2026-05-18 00:45:22,247 - AdaPoinTr_baseline_smoke30 - INFO - 03948459	62	0.439 	13.452 	0.813 	0.000 	pistol	
+2026-05-18 00:45:22,247 - AdaPoinTr_baseline_smoke30 - INFO - 03928116	48	0.260 	18.585 	1.600 	0.000 	piano	
+2026-05-18 00:45:22,247 - AdaPoinTr_baseline_smoke30 - INFO - 03207941	19	0.218 	18.933 	1.489 	0.000 	dishwasher	
+2026-05-18 00:45:22,247 - AdaPoinTr_baseline_smoke30 - INFO - 04074963	14	0.417 	12.511 	0.597 	0.000 	remote	
+2026-05-18 00:45:22,247 - AdaPoinTr_baseline_smoke30 - INFO - 03085013	13	0.428 	11.033 	0.409 	0.000 	keyboard	
+2026-05-18 00:45:22,247 - AdaPoinTr_baseline_smoke30 - INFO - Overall		0.334 	16.677 	1.334 	0.000 	
+2026-05-18 00:45:22,975 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-best.pth
+2026-05-18 00:45:23,648 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-last.pth
+2026-05-18 00:45:24,699 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 21/30][Batch 1/874] BatchTime = 1.050 (s) DataTime = 0.126 (s) Losses = ['6.2805', '48.1990'] lr = 0.000090
+2026-05-18 00:46:44,702 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 21/30][Batch 101/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.3763', '53.6993'] lr = 0.000090
+2026-05-18 00:48:04,709 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 21/30][Batch 201/874] BatchTime = 0.806 (s) DataTime = 0.002 (s) Losses = ['6.0987', '45.8382'] lr = 0.000090
+2026-05-18 00:49:24,702 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 21/30][Batch 301/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.5174', '48.3453'] lr = 0.000090
+2026-05-18 00:50:44,709 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 21/30][Batch 401/874] BatchTime = 0.806 (s) DataTime = 0.001 (s) Losses = ['5.9629', '44.7211'] lr = 0.000090
+2026-05-18 00:52:04,703 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 21/30][Batch 501/874] BatchTime = 0.801 (s) DataTime = 0.002 (s) Losses = ['6.0369', '45.0546'] lr = 0.000090
+2026-05-18 00:53:24,703 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 21/30][Batch 601/874] BatchTime = 0.801 (s) DataTime = 0.002 (s) Losses = ['6.9200', '52.5525'] lr = 0.000090
+2026-05-18 00:54:44,709 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 21/30][Batch 701/874] BatchTime = 0.816 (s) DataTime = 0.002 (s) Losses = ['6.4584', '48.2896'] lr = 0.000090
+2026-05-18 00:56:04,694 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 21/30][Batch 801/874] BatchTime = 0.791 (s) DataTime = 0.002 (s) Losses = ['6.0460', '45.7021'] lr = 0.000090
+2026-05-18 00:57:03,184 - AdaPoinTr_baseline_smoke30 - INFO - [Training] EPOCH: 21 EpochTime = 699.535 (s) Losses = ['6.3387', '46.6184']
+2026-05-18 00:57:03,867 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-last.pth
+2026-05-18 00:57:04,892 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 22/30][Batch 1/874] BatchTime = 1.023 (s) DataTime = 0.126 (s) Losses = ['6.0141', '44.2429'] lr = 0.000090
+2026-05-18 00:58:24,905 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 22/30][Batch 101/874] BatchTime = 0.801 (s) DataTime = 0.002 (s) Losses = ['6.5374', '46.5058'] lr = 0.000090
+2026-05-18 00:59:44,902 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 22/30][Batch 201/874] BatchTime = 0.799 (s) DataTime = 0.002 (s) Losses = ['5.9661', '47.5625'] lr = 0.000090
+2026-05-18 01:01:04,902 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 22/30][Batch 301/874] BatchTime = 0.809 (s) DataTime = 0.002 (s) Losses = ['6.1268', '48.3181'] lr = 0.000090
+2026-05-18 01:02:24,909 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 22/30][Batch 401/874] BatchTime = 0.806 (s) DataTime = 0.001 (s) Losses = ['6.3631', '46.4107'] lr = 0.000090
+2026-05-18 01:03:44,903 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 22/30][Batch 501/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.2645', '46.5218'] lr = 0.000090
+2026-05-18 01:05:05,009 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 22/30][Batch 601/874] BatchTime = 0.805 (s) DataTime = 0.002 (s) Losses = ['6.1750', '45.5959'] lr = 0.000090
+2026-05-18 01:06:25,009 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 22/30][Batch 701/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.4284', '47.2339'] lr = 0.000090
+2026-05-18 01:07:45,003 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 22/30][Batch 801/874] BatchTime = 0.794 (s) DataTime = 0.002 (s) Losses = ['6.3652', '46.1428'] lr = 0.000090
+2026-05-18 01:08:43,501 - AdaPoinTr_baseline_smoke30 - INFO - [Training] EPOCH: 22 EpochTime = 699.632 (s) Losses = ['6.3118', '46.2986']
+2026-05-18 01:08:44,302 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-last.pth
+2026-05-18 01:08:45,298 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 23/30][Batch 1/874] BatchTime = 0.995 (s) DataTime = 0.145 (s) Losses = ['6.2914', '46.3487'] lr = 0.000089
+2026-05-18 01:10:05,303 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 23/30][Batch 101/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.9107', '49.1401'] lr = 0.000089
+2026-05-18 01:11:25,302 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 23/30][Batch 201/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.4827', '49.3596'] lr = 0.000089
+2026-05-18 01:12:45,302 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 23/30][Batch 301/874] BatchTime = 0.809 (s) DataTime = 0.002 (s) Losses = ['6.2848', '43.9981'] lr = 0.000089
+2026-05-18 01:14:05,309 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 23/30][Batch 401/874] BatchTime = 0.806 (s) DataTime = 0.002 (s) Losses = ['5.9931', '43.6616'] lr = 0.000089
+2026-05-18 01:15:25,403 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 23/30][Batch 501/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['5.9629', '45.6635'] lr = 0.000089
+2026-05-18 01:16:45,403 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 23/30][Batch 601/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.1756', '45.5672'] lr = 0.000089
+2026-05-18 01:18:05,403 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 23/30][Batch 701/874] BatchTime = 0.800 (s) DataTime = 0.001 (s) Losses = ['6.2730', '49.3534'] lr = 0.000089
+2026-05-18 01:19:25,403 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 23/30][Batch 801/874] BatchTime = 0.809 (s) DataTime = 0.002 (s) Losses = ['6.4299', '49.3462'] lr = 0.000089
+2026-05-18 01:20:23,870 - AdaPoinTr_baseline_smoke30 - INFO - [Training] EPOCH: 23 EpochTime = 699.567 (s) Losses = ['6.3062', '46.3700']
+2026-05-18 01:20:24,593 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-last.pth
+2026-05-18 01:20:25,697 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 24/30][Batch 1/874] BatchTime = 1.102 (s) DataTime = 0.149 (s) Losses = ['6.3542', '48.4004'] lr = 0.000089
+2026-05-18 01:21:45,703 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 24/30][Batch 101/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.7758', '45.9657'] lr = 0.000089
+2026-05-18 01:23:05,703 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 24/30][Batch 201/874] BatchTime = 0.794 (s) DataTime = 0.002 (s) Losses = ['6.3483', '45.3974'] lr = 0.000089
+2026-05-18 01:24:25,703 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 24/30][Batch 301/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.1254', '45.0157'] lr = 0.000089
+2026-05-18 01:25:45,694 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 24/30][Batch 401/874] BatchTime = 0.791 (s) DataTime = 0.002 (s) Losses = ['6.2352', '45.8542'] lr = 0.000089
+2026-05-18 01:27:05,703 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 24/30][Batch 501/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['5.6953', '44.8583'] lr = 0.000089
+2026-05-18 01:28:25,802 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 24/30][Batch 601/874] BatchTime = 0.794 (s) DataTime = 0.002 (s) Losses = ['6.6576', '48.0935'] lr = 0.000089
+2026-05-18 01:29:45,803 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 24/30][Batch 701/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.1317', '45.6469'] lr = 0.000089
+2026-05-18 01:31:05,803 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 24/30][Batch 801/874] BatchTime = 0.801 (s) DataTime = 0.002 (s) Losses = ['5.8966', '43.3308'] lr = 0.000089
+2026-05-18 01:32:04,273 - AdaPoinTr_baseline_smoke30 - INFO - [Training] EPOCH: 24 EpochTime = 699.678 (s) Losses = ['6.2862', '46.3010']
+2026-05-18 01:32:04,970 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-last.pth
+2026-05-18 01:32:06,009 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 25/30][Batch 1/874] BatchTime = 1.037 (s) DataTime = 0.134 (s) Losses = ['6.6910', '47.0667'] lr = 0.000088
+2026-05-18 01:33:26,003 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 25/30][Batch 101/874] BatchTime = 0.794 (s) DataTime = 0.002 (s) Losses = ['6.5035', '46.9168'] lr = 0.000088
+2026-05-18 01:34:46,009 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 25/30][Batch 201/874] BatchTime = 0.805 (s) DataTime = 0.002 (s) Losses = ['6.6233', '46.6219'] lr = 0.000088
+2026-05-18 01:36:06,002 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 25/30][Batch 301/874] BatchTime = 0.794 (s) DataTime = 0.001 (s) Losses = ['6.8201', '49.8278'] lr = 0.000088
+2026-05-18 01:37:26,002 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 25/30][Batch 401/874] BatchTime = 0.801 (s) DataTime = 0.002 (s) Losses = ['5.8975', '44.3191'] lr = 0.000088
+2026-05-18 01:38:46,003 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 25/30][Batch 501/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.0836', '43.2809'] lr = 0.000088
+2026-05-18 01:40:06,004 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 25/30][Batch 601/874] BatchTime = 0.801 (s) DataTime = 0.002 (s) Losses = ['6.5567', '48.0550'] lr = 0.000088
+2026-05-18 01:41:26,003 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 25/30][Batch 701/874] BatchTime = 0.794 (s) DataTime = 0.002 (s) Losses = ['6.2569', '46.3882'] lr = 0.000088
+2026-05-18 01:42:46,003 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 25/30][Batch 801/874] BatchTime = 0.810 (s) DataTime = 0.002 (s) Losses = ['5.8301', '44.7494'] lr = 0.000088
+2026-05-18 01:43:44,480 - AdaPoinTr_baseline_smoke30 - INFO - [Training] EPOCH: 25 EpochTime = 699.508 (s) Losses = ['6.2689', '46.2710']
+2026-05-18 01:43:45,226 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-last.pth
+2026-05-18 01:43:46,311 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 26/30][Batch 1/874] BatchTime = 1.084 (s) DataTime = 0.154 (s) Losses = ['5.8852', '45.1584'] lr = 0.000088
+2026-05-18 01:45:06,293 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 26/30][Batch 101/874] BatchTime = 0.791 (s) DataTime = 0.002 (s) Losses = ['6.5329', '48.9235'] lr = 0.000088
+2026-05-18 01:46:26,303 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 26/30][Batch 201/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.4443', '45.2566'] lr = 0.000088
+2026-05-18 01:47:46,303 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 26/30][Batch 301/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.1761', '47.2253'] lr = 0.000088
+2026-05-18 01:49:06,302 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 26/30][Batch 401/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.4867', '47.9741'] lr = 0.000088
+2026-05-18 01:50:26,304 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 26/30][Batch 501/874] BatchTime = 0.801 (s) DataTime = 0.001 (s) Losses = ['5.7994', '44.9867'] lr = 0.000088
+2026-05-18 01:51:46,309 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 26/30][Batch 601/874] BatchTime = 0.806 (s) DataTime = 0.002 (s) Losses = ['6.3034', '46.6748'] lr = 0.000088
+2026-05-18 01:53:06,303 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 26/30][Batch 701/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.2031', '48.0251'] lr = 0.000088
+2026-05-18 01:54:26,303 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 26/30][Batch 801/874] BatchTime = 0.800 (s) DataTime = 0.001 (s) Losses = ['6.0577', '48.5093'] lr = 0.000088
+2026-05-18 01:55:24,788 - AdaPoinTr_baseline_smoke30 - INFO - [Training] EPOCH: 26 EpochTime = 699.561 (s) Losses = ['6.2576', '46.1722']
+2026-05-18 01:55:25,528 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-last.pth
+2026-05-18 01:55:26,591 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 27/30][Batch 1/874] BatchTime = 1.062 (s) DataTime = 0.118 (s) Losses = ['6.4946', '46.5785'] lr = 0.000087
+2026-05-18 01:56:46,602 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 27/30][Batch 101/874] BatchTime = 0.809 (s) DataTime = 0.002 (s) Losses = ['5.9982', '46.1913'] lr = 0.000087
+2026-05-18 01:58:06,603 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 27/30][Batch 201/874] BatchTime = 0.799 (s) DataTime = 0.002 (s) Losses = ['6.1715', '45.2881'] lr = 0.000087
+2026-05-18 01:59:26,602 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 27/30][Batch 301/874] BatchTime = 0.799 (s) DataTime = 0.002 (s) Losses = ['5.8929', '44.1215'] lr = 0.000087
+2026-05-18 02:00:46,593 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 27/30][Batch 401/874] BatchTime = 0.790 (s) DataTime = 0.001 (s) Losses = ['5.7104', '45.3312'] lr = 0.000087
+2026-05-18 02:02:06,608 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 27/30][Batch 501/874] BatchTime = 0.806 (s) DataTime = 0.002 (s) Losses = ['6.3620', '44.3647'] lr = 0.000087
+2026-05-18 02:03:26,603 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 27/30][Batch 601/874] BatchTime = 0.810 (s) DataTime = 0.001 (s) Losses = ['5.6300', '43.4026'] lr = 0.000087
+2026-05-18 02:04:46,603 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 27/30][Batch 701/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.1066', '43.5470'] lr = 0.000087
+2026-05-18 02:06:06,603 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 27/30][Batch 801/874] BatchTime = 0.800 (s) DataTime = 0.001 (s) Losses = ['6.0469', '45.1465'] lr = 0.000087
+2026-05-18 02:07:05,075 - AdaPoinTr_baseline_smoke30 - INFO - [Training] EPOCH: 27 EpochTime = 699.546 (s) Losses = ['6.2520', '46.3233']
+2026-05-18 02:07:05,777 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-last.pth
+2026-05-18 02:07:06,794 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 28/30][Batch 1/874] BatchTime = 1.016 (s) DataTime = 0.125 (s) Losses = ['6.2754', '47.6933'] lr = 0.000087
+2026-05-18 02:08:26,802 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 28/30][Batch 101/874] BatchTime = 0.800 (s) DataTime = 0.001 (s) Losses = ['6.4471', '45.0583'] lr = 0.000087
+2026-05-18 02:09:46,803 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 28/30][Batch 201/874] BatchTime = 0.794 (s) DataTime = 0.002 (s) Losses = ['6.2967', '46.9704'] lr = 0.000087
+2026-05-18 02:11:06,793 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 28/30][Batch 301/874] BatchTime = 0.785 (s) DataTime = 0.002 (s) Losses = ['5.9838', '43.1187'] lr = 0.000087
+2026-05-18 02:12:26,802 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 28/30][Batch 401/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['5.9499', '44.8310'] lr = 0.000087
+2026-05-18 02:13:46,802 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 28/30][Batch 501/874] BatchTime = 0.801 (s) DataTime = 0.002 (s) Losses = ['6.3700', '46.9945'] lr = 0.000087
+2026-05-18 02:15:06,802 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 28/30][Batch 601/874] BatchTime = 0.799 (s) DataTime = 0.001 (s) Losses = ['6.7219', '48.5511'] lr = 0.000087
+2026-05-18 02:16:26,802 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 28/30][Batch 701/874] BatchTime = 0.794 (s) DataTime = 0.001 (s) Losses = ['6.6956', '50.7826'] lr = 0.000087
+2026-05-18 02:17:46,808 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 28/30][Batch 801/874] BatchTime = 0.816 (s) DataTime = 0.001 (s) Losses = ['5.7883', '44.3136'] lr = 0.000087
+2026-05-18 02:18:45,260 - AdaPoinTr_baseline_smoke30 - INFO - [Training] EPOCH: 28 EpochTime = 699.482 (s) Losses = ['6.2397', '46.2162']
+2026-05-18 02:18:46,022 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-last.pth
+2026-05-18 02:18:47,087 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 29/30][Batch 1/874] BatchTime = 1.064 (s) DataTime = 0.157 (s) Losses = ['5.9866', '44.2275'] lr = 0.000086
+2026-05-18 02:20:07,102 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 29/30][Batch 101/874] BatchTime = 0.800 (s) DataTime = 0.001 (s) Losses = ['5.6718', '42.4665'] lr = 0.000086
+2026-05-18 02:21:27,103 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 29/30][Batch 201/874] BatchTime = 0.800 (s) DataTime = 0.001 (s) Losses = ['5.7736', '41.7666'] lr = 0.000086
+2026-05-18 02:22:47,102 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 29/30][Batch 301/874] BatchTime = 0.799 (s) DataTime = 0.001 (s) Losses = ['6.3879', '52.2049'] lr = 0.000086
+2026-05-18 02:24:07,094 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 29/30][Batch 401/874] BatchTime = 0.791 (s) DataTime = 0.001 (s) Losses = ['6.1399', '45.0946'] lr = 0.000086
+2026-05-18 02:25:27,108 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 29/30][Batch 501/874] BatchTime = 0.805 (s) DataTime = 0.001 (s) Losses = ['6.0941', '44.0405'] lr = 0.000086
+2026-05-18 02:26:47,093 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 29/30][Batch 601/874] BatchTime = 0.800 (s) DataTime = 0.001 (s) Losses = ['6.4206', '46.9539'] lr = 0.000086
+2026-05-18 02:28:07,103 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 29/30][Batch 701/874] BatchTime = 0.801 (s) DataTime = 0.001 (s) Losses = ['5.9097', '46.2238'] lr = 0.000086
+2026-05-18 02:29:27,103 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 29/30][Batch 801/874] BatchTime = 0.801 (s) DataTime = 0.001 (s) Losses = ['6.2548', '44.7172'] lr = 0.000086
+2026-05-18 02:30:25,591 - AdaPoinTr_baseline_smoke30 - INFO - [Training] EPOCH: 29 EpochTime = 699.568 (s) Losses = ['6.2169', '46.1420']
+2026-05-18 02:30:26,347 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-last.pth
+2026-05-18 02:30:26,720 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-epoch-029.pth
+2026-05-18 02:30:27,709 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 30/30][Batch 1/874] BatchTime = 0.988 (s) DataTime = 0.129 (s) Losses = ['5.8388', '44.7421'] lr = 0.000086
+2026-05-18 02:31:47,703 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 30/30][Batch 101/874] BatchTime = 0.801 (s) DataTime = 0.002 (s) Losses = ['6.0163', '43.6770'] lr = 0.000086
+2026-05-18 02:33:07,702 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 30/30][Batch 201/874] BatchTime = 0.794 (s) DataTime = 0.001 (s) Losses = ['6.3535', '45.4871'] lr = 0.000086
+2026-05-18 02:34:27,702 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 30/30][Batch 301/874] BatchTime = 0.800 (s) DataTime = 0.002 (s) Losses = ['6.2108', '48.7976'] lr = 0.000086
+2026-05-18 02:35:47,708 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 30/30][Batch 401/874] BatchTime = 0.800 (s) DataTime = 0.001 (s) Losses = ['6.0860', '42.9640'] lr = 0.000086
+2026-05-18 02:37:07,703 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 30/30][Batch 501/874] BatchTime = 0.800 (s) DataTime = 0.001 (s) Losses = ['6.1311', '46.5664'] lr = 0.000086
+2026-05-18 02:38:27,703 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 30/30][Batch 601/874] BatchTime = 0.800 (s) DataTime = 0.001 (s) Losses = ['6.4606', '46.2861'] lr = 0.000086
+2026-05-18 02:39:47,702 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 30/30][Batch 701/874] BatchTime = 0.800 (s) DataTime = 0.001 (s) Losses = ['6.7023', '48.1430'] lr = 0.000086
+2026-05-18 02:41:07,709 - AdaPoinTr_baseline_smoke30 - INFO - [Epoch 30/30][Batch 801/874] BatchTime = 0.806 (s) DataTime = 0.001 (s) Losses = ['6.4121', '45.5896'] lr = 0.000086
+2026-05-18 02:42:06,167 - AdaPoinTr_baseline_smoke30 - INFO - [Training] EPOCH: 30 EpochTime = 699.446 (s) Losses = ['6.2162', '46.1949']
+2026-05-18 02:42:06,167 - AdaPoinTr_baseline_smoke30 - INFO - [VALIDATION] Start validating epoch 30
+2026-05-18 02:42:30,777 - AdaPoinTr_baseline_smoke30 - INFO - Test[1051/10518] Taxonomy = 02691156 Sample = c7749c0a8b61f43bc9b9e28055202e3d Losses = ['21.9579', '2.0314', '10.5156', '0.3616'] Metrics = ['0.5154', '10.5156', '0.3616', '0.0000']
+2026-05-18 02:42:55,276 - AdaPoinTr_baseline_smoke30 - INFO - Test[2102/10518] Taxonomy = 03211117 Sample = ab2f9418c111cc6ddb965514105122a4 Losses = ['26.3585', '2.5982', '10.3654', '0.5330'] Metrics = ['0.5431', '10.3654', '0.5330', '0.0000']
+2026-05-18 02:43:19,818 - AdaPoinTr_baseline_smoke30 - INFO - Test[3153/10518] Taxonomy = 02876657 Sample = c5032e4be091aabb36fe7a88df793982 Losses = ['36.7028', '5.4540', '17.0343', '1.2186'] Metrics = ['0.3204', '17.0343', '1.2186', '0.0000']
+2026-05-18 02:43:44,484 - AdaPoinTr_baseline_smoke30 - INFO - Test[4204/10518] Taxonomy = 03211117 Sample = 722df1da5778d45b1e43523279c7f09f Losses = ['37.9145', '5.5445', '20.7273', '2.7628'] Metrics = ['0.3567', '20.7273', '2.7628', '0.0000']
+2026-05-18 02:44:09,042 - AdaPoinTr_baseline_smoke30 - INFO - Test[5255/10518] Taxonomy = 02828884 Sample = 14b63361a48a9fffe4a048c146e8bd43 Losses = ['31.1127', '3.4963', '18.7203', '1.6272'] Metrics = ['0.3498', '18.7203', '1.6272', '0.0000']
+2026-05-18 02:44:33,571 - AdaPoinTr_baseline_smoke30 - INFO - Test[6306/10518] Taxonomy = 03211117 Sample = d330d50a0255529d19ed6e1a590c9122 Losses = ['29.8110', '3.5490', '12.1150', '0.6289'] Metrics = ['0.4307', '12.1150', '0.6289', '0.0000']
+2026-05-18 02:44:58,085 - AdaPoinTr_baseline_smoke30 - INFO - Test[7357/10518] Taxonomy = 04379243 Sample = b1ca280d9567270ade98d10ab5975b59 Losses = ['36.9369', '5.4437', '15.6954', '0.7306'] Metrics = ['0.2463', '15.6954', '0.7306', '0.0000']
+2026-05-18 02:45:22,653 - AdaPoinTr_baseline_smoke30 - INFO - Test[8408/10518] Taxonomy = 03001627 Sample = 89208a619341d9fdb8c516ed5c4ce32 Losses = ['34.3934', '4.9941', '17.4846', '1.3101'] Metrics = ['0.2628', '17.4846', '1.3101', '0.0000']
+2026-05-18 02:45:47,229 - AdaPoinTr_baseline_smoke30 - INFO - Test[9459/10518] Taxonomy = 03001627 Sample = d0255120e3351121c3bd24f986301745 Losses = ['38.7982', '5.4098', '19.2571', '1.3606'] Metrics = ['0.1992', '19.2571', '1.3606', '0.0000']
+2026-05-18 02:46:11,789 - AdaPoinTr_baseline_smoke30 - INFO - Test[10510/10518] Taxonomy = 03636649 Sample = ea9ec4d9db2e06202471e6dd5ac3ef92 Losses = ['28.4777', '3.7604', '8.6365', '0.2761'] Metrics = ['0.7014', '8.6365', '0.2761', '0.0000']
+2026-05-18 02:46:12,054 - AdaPoinTr_baseline_smoke30 - INFO - [Validation] EPOCH: 30  Metrics = ['0.3427', '15.7425', '1.1293', '0.0000']
+2026-05-18 02:46:12,055 - AdaPoinTr_baseline_smoke30 - INFO - ============================ TEST RESULTS ============================
+2026-05-18 02:46:12,055 - AdaPoinTr_baseline_smoke30 - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2026-05-18 02:46:12,055 - AdaPoinTr_baseline_smoke30 - INFO - 03759954	14	0.515 	14.953 	1.583 	0.000 	microphone	
+2026-05-18 02:46:12,055 - AdaPoinTr_baseline_smoke30 - INFO - 04330267	44	0.272 	17.843 	1.509 	0.000 	stove	
+2026-05-18 02:46:12,055 - AdaPoinTr_baseline_smoke30 - INFO - 03261776	15	0.286 	19.551 	1.894 	0.000 	earphone	
+2026-05-18 02:46:12,055 - AdaPoinTr_baseline_smoke30 - INFO - 03513137	33	0.200 	23.014 	2.828 	0.000 	helmet	
+2026-05-18 02:46:12,055 - AdaPoinTr_baseline_smoke30 - INFO - 04460130	27	0.393 	15.422 	1.037 	0.000 	tower	
+2026-05-18 02:46:12,055 - AdaPoinTr_baseline_smoke30 - INFO - 04468005	78	0.361 	13.986 	0.781 	0.000 	train	
+2026-05-18 02:46:12,055 - AdaPoinTr_baseline_smoke30 - INFO - 03761084	31	0.225 	17.907 	1.289 	0.000 	microwaves	
+2026-05-18 02:46:12,055 - AdaPoinTr_baseline_smoke30 - INFO - 04004475	34	0.245 	18.626 	1.577 	0.000 	printer	
+2026-05-18 02:46:12,055 - AdaPoinTr_baseline_smoke30 - INFO - 03938244	20	0.282 	17.264 	1.298 	0.000 	pillow	
+2026-05-18 02:46:12,055 - AdaPoinTr_baseline_smoke30 - INFO - 02992529	167	0.400 	11.989 	0.492 	0.000 	cellphone	
+2026-05-18 02:46:12,055 - AdaPoinTr_baseline_smoke30 - INFO - 02808440	172	0.271 	16.573 	1.114 	0.000 	bathtub	
+2026-05-18 02:46:12,055 - AdaPoinTr_baseline_smoke30 - INFO - 04530566	388	0.467 	12.340 	0.657 	0.000 	watercraft	
+2026-05-18 02:46:12,055 - AdaPoinTr_baseline_smoke30 - INFO - 02871439	91	0.234 	17.930 	1.285 	0.000 	bookshelf	
+2026-05-18 02:46:12,055 - AdaPoinTr_baseline_smoke30 - INFO - 03593526	120	0.249 	18.527 	1.378 	0.000 	jar	
+2026-05-18 02:46:12,055 - AdaPoinTr_baseline_smoke30 - INFO - 04554684	34	0.214 	18.875 	1.532 	0.000 	washer	
+2026-05-18 02:46:12,055 - AdaPoinTr_baseline_smoke30 - INFO - 03467517	160	0.785 	7.307 	0.237 	0.000 	guitar	
+2026-05-18 02:46:12,055 - AdaPoinTr_baseline_smoke30 - INFO - 04401088	218	0.404 	11.897 	0.510 	0.000 	telephone	
+2026-05-18 02:46:12,055 - AdaPoinTr_baseline_smoke30 - INFO - 02954340	12	0.286 	15.896 	1.015 	0.000 	cap	
+2026-05-18 02:46:12,055 - AdaPoinTr_baseline_smoke30 - INFO - 02933112	315	0.229 	16.541 	0.945 	0.000 	cabinet	
+2026-05-18 02:46:12,055 - AdaPoinTr_baseline_smoke30 - INFO - 03642806	92	0.361 	12.463 	0.526 	0.000 	laptop	
+2026-05-18 02:46:12,055 - AdaPoinTr_baseline_smoke30 - INFO - 02924116	188	0.340 	13.641 	0.654 	0.000 	bus	
+2026-05-18 02:46:12,055 - AdaPoinTr_baseline_smoke30 - INFO - 02946921	22	0.233 	17.596 	1.309 	0.000 	can	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - 02818832	47	0.261 	17.771 	1.362 	0.000 	bed	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - 04256520	635	0.276 	15.704 	0.925 	0.000 	sofa	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - 04379243	1687	0.357 	14.144 	0.911 	0.000 	table	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - 02747177	69	0.185 	19.602 	1.476 	0.000 	trash bin	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - 03046257	131	0.294 	16.240 	1.083 	0.000 	clock	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - 04225987	31	0.519 	10.820 	0.471 	0.000 	skateboard	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - 03797390	43	0.178 	20.726 	1.575 	0.000 	mug	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - 03001627	1356	0.338 	15.299 	1.022 	0.000 	chair	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - 03691459	320	0.237 	19.014 	1.545 	0.000 	loudspeaker	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - 02942699	23	0.218 	21.298 	1.927 	0.000 	camera	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - 03636649	464	0.481 	16.039 	1.780 	0.000 	lamp	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - 02691156	809	0.537 	10.622 	0.476 	0.000 	airplane	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - 02773838	17	0.318 	15.336 	0.956 	0.000 	bag	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - 02958343	703	0.209 	17.545 	1.046 	0.000 	car	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - 02880940	38	0.209 	18.249 	1.197 	0.000 	bowl	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - 04099429	17	0.663 	9.550 	0.438 	0.000 	rocket	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - 02828884	363	0.411 	12.337 	0.649 	0.000 	bench	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - 04090263	475	0.661 	9.606 	0.498 	0.000 	rifle	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - 03211117	219	0.327 	14.763 	0.924 	0.000 	display	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - 02876657	100	0.395 	13.405 	0.725 	0.000 	bottle	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - 03710193	19	0.485 	14.844 	1.397 	0.000 	mailbox	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - 03790512	68	0.237 	18.290 	1.304 	0.000 	motorbike	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - 03325088	149	0.404 	18.337 	2.234 	0.000 	faucet	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - 02801938	23	0.213 	18.235 	1.287 	0.000 	basket	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - 03337140	60	0.231 	17.532 	1.171 	0.000 	file cabinet	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - 02843684	15	0.208 	21.369 	2.103 	0.000 	birdhouse	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - 03624134	85	0.737 	8.182 	0.313 	0.000 	knife	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - 03991062	121	0.223 	20.721 	1.801 	0.000 	flowerpot	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - 03948459	62	0.440 	13.163 	0.796 	0.000 	pistol	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - 03928116	48	0.262 	17.693 	1.401 	0.000 	piano	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - 03207941	19	0.233 	16.624 	0.971 	0.000 	dishwasher	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - 04074963	14	0.426 	11.699 	0.491 	0.000 	remote	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - 03085013	13	0.422 	10.936 	0.408 	0.000 	keyboard	
+2026-05-18 02:46:12,056 - AdaPoinTr_baseline_smoke30 - INFO - Overall		0.343 	15.743 	1.129 	0.000 	
+2026-05-18 02:46:12,729 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-best.pth
+2026-05-18 02:46:13,471 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-last.pth
+2026-05-18 02:46:13,871 - AdaPoinTr_baseline_smoke30 - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-epoch-030.pth

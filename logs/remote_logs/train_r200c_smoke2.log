@@ -1,0 +1,557 @@
+/root/miniconda3/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Create experiment path successfully at ./experiments/AdaPoinTr_baseline_smoke2_diffcrop/ShapeNet55_models/r200c_smoke2
+Create TFBoard path successfully at ./experiments/AdaPoinTr_baseline_smoke2_diffcrop/ShapeNet55_models/TFBoard/r200c_smoke2
+2026-04-15 02:22:11,821 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - Copy the Config file from cfgs/ShapeNet55_models/AdaPoinTr_baseline_smoke2_diffcrop.yaml to ./experiments/AdaPoinTr_baseline_smoke2_diffcrop/ShapeNet55_models/r200c_smoke2/config.yaml
+2026-04-15 02:22:11,821 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - args.config : cfgs/ShapeNet55_models/AdaPoinTr_baseline_smoke2_diffcrop.yaml
+2026-04-15 02:22:11,821 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - args.launcher : none
+2026-04-15 02:22:11,821 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - args.local_rank : 0
+2026-04-15 02:22:11,821 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - args.num_workers : 4
+2026-04-15 02:22:11,821 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - args.seed : 42
+2026-04-15 02:22:11,821 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - args.deterministic : False
+2026-04-15 02:22:11,821 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - args.sync_bn : False
+2026-04-15 02:22:11,821 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - args.exp_name : r200c_smoke2
+2026-04-15 02:22:11,821 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - args.start_ckpts : experiments/AdaPoinTr/ShapeNet55_models/baseline_sn55/ckpt-best.pth
+2026-04-15 02:22:11,821 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - args.ckpts : None
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - args.val_freq : 10
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - args.resume : False
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - args.test : False
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - args.mode : None
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - args.difficulty_source : oracle
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - args.experiment_path : ./experiments/AdaPoinTr_baseline_smoke2_diffcrop/ShapeNet55_models/r200c_smoke2
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - args.tfboard_path : ./experiments/AdaPoinTr_baseline_smoke2_diffcrop/ShapeNet55_models/TFBoard/r200c_smoke2
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - args.log_name : AdaPoinTr_baseline_smoke2_diffcrop
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - args.use_gpu : True
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - args.distributed : False
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.optimizer = edict()
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.optimizer.type : AdamW
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.optimizer.kwargs = edict()
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.optimizer.kwargs.lr : 0.0001
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.optimizer.kwargs.weight_decay : 0.0005
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.scheduler = edict()
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.scheduler.type : LambdaLR
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.scheduler.kwargs = edict()
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.scheduler.kwargs.decay_step : 21
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.scheduler.kwargs.lr_decay : 0.9
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.scheduler.kwargs.lowest_decay : 0.02
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.bnmscheduler = edict()
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.bnmscheduler.type : Lambda
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.bnmscheduler.kwargs = edict()
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.bnmscheduler.kwargs.decay_step : 21
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.bnmscheduler.kwargs.bn_decay : 0.5
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.bnmscheduler.kwargs.bn_momentum : 0.9
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.bnmscheduler.kwargs.lowest_decay : 0.01
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.dataset = edict()
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.dataset.train = edict()
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.dataset.train._base_ = edict()
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.dataset.train._base_.NAME : ShapeNet
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.dataset.train._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.dataset.train._base_.N_POINTS : 8192
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.dataset.train._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.dataset.train.others = edict()
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.dataset.train.others.subset : train
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.dataset.train.others.bs : 48
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.dataset.val = edict()
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.dataset.val._base_ = edict()
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.dataset.val._base_.NAME : ShapeNet
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.dataset.val._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.dataset.val._base_.N_POINTS : 8192
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.dataset.val._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.dataset.val.others = edict()
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.dataset.val.others.subset : test
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.dataset.test = edict()
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.dataset.test._base_ = edict()
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.dataset.test._base_.NAME : ShapeNet
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.dataset.test._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.dataset.test._base_.N_POINTS : 8192
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.dataset.test._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.dataset.test.others = edict()
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.dataset.test.others.subset : test
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.model = edict()
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.model.NAME : AdaPoinTr
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.model.num_query : 512
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.model.num_points : 8192
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.model.center_num : [512, 256]
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.model.global_feature_dim : 1024
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.model.encoder_type : graph
+2026-04-15 02:22:11,822 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.model.decoder_type : fc
+2026-04-15 02:22:11,823 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.model.encoder_config = edict()
+2026-04-15 02:22:11,823 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.model.encoder_config.embed_dim : 384
+2026-04-15 02:22:11,823 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.model.encoder_config.depth : 6
+2026-04-15 02:22:11,823 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.model.encoder_config.num_heads : 6
+2026-04-15 02:22:11,823 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.model.encoder_config.k : 8
+2026-04-15 02:22:11,823 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.model.encoder_config.n_group : 2
+2026-04-15 02:22:11,823 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.model.encoder_config.mlp_ratio : 2.0
+2026-04-15 02:22:11,823 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.model.encoder_config.block_style_list : ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn']
+2026-04-15 02:22:11,823 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.model.encoder_config.combine_style : concat
+2026-04-15 02:22:11,823 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.model.decoder_config = edict()
+2026-04-15 02:22:11,823 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.model.decoder_config.embed_dim : 384
+2026-04-15 02:22:11,823 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.model.decoder_config.depth : 8
+2026-04-15 02:22:11,823 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.model.decoder_config.num_heads : 6
+2026-04-15 02:22:11,823 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.model.decoder_config.k : 8
+2026-04-15 02:22:11,823 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.model.decoder_config.n_group : 2
+2026-04-15 02:22:11,823 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.model.decoder_config.mlp_ratio : 2.0
+2026-04-15 02:22:11,823 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.model.decoder_config.self_attn_block_style_list : ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn']
+2026-04-15 02:22:11,823 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.model.decoder_config.self_attn_combine_style : concat
+2026-04-15 02:22:11,823 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.model.decoder_config.cross_attn_block_style_list : ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn']
+2026-04-15 02:22:11,823 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.model.decoder_config.cross_attn_combine_style : concat
+2026-04-15 02:22:11,823 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.total_bs : 48
+2026-04-15 02:22:11,823 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.step_per_update : 1
+2026-04-15 02:22:11,823 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.max_epoch : 2
+2026-04-15 02:22:11,823 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.consider_metric : CDL2
+2026-04-15 02:22:11,823 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - config.training_crop_mode : diffcond
+2026-04-15 02:22:11,823 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - Distributed training: False
+2026-04-15 02:22:11,823 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - Set random seed to 42, deterministic: False
+[DATASET] Open file data/ShapeNet55-34/ShapeNet-55/train.txt
+[DATASET] 41952 instances were loaded
+[DATASET] Open file data/ShapeNet55-34/ShapeNet-55/test.txt
+[DATASET] 10518 instances were loaded
+2026-04-15 02:22:11,855 - MODEL - INFO - Transformer with config {'NAME': 'AdaPoinTr', 'num_query': 512, 'num_points': 8192, 'center_num': [512, 256], 'global_feature_dim': 1024, 'encoder_type': 'graph', 'decoder_type': 'fc', 'encoder_config': {'embed_dim': 384, 'depth': 6, 'num_heads': 6, 'k': 8, 'n_group': 2, 'mlp_ratio': 2.0, 'block_style_list': ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn'], 'combine_style': 'concat'}, 'decoder_config': {'embed_dim': 384, 'depth': 8, 'num_heads': 6, 'k': 8, 'n_group': 2, 'mlp_ratio': 2.0, 'self_attn_block_style_list': ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn'], 'self_attn_combine_style': 'concat', 'cross_attn_block_style_list': ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn'], 'cross_attn_combine_style': 'concat'}}
+using group version 2
+2026-04-15 02:22:13,316 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - Loading weights from experiments/AdaPoinTr/ShapeNet55_models/baseline_sn55/ckpt-best.pth...
+2026-04-15 02:22:13,619 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - ckpts @ 290 epoch( performance = {'F-Score': 0.39654017948523784, 'CDL1': 13.109447510155132, 'CDL2': 0.7939230617268641, 'EMDistance': 0.0})
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - Trainable_parameters:
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - =========================
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.grouper.input_trans.weight
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.grouper.input_trans.bias
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.grouper.layer1.0.weight
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.grouper.layer1.1.weight
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.grouper.layer1.1.bias
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.grouper.layer2.0.weight
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.grouper.layer2.1.weight
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.grouper.layer2.1.bias
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.grouper.layer3.0.weight
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.grouper.layer3.1.weight
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.grouper.layer3.1.bias
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.grouper.layer4.0.weight
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.grouper.layer4.1.weight
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.grouper.layer4.1.bias
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.pos_embed.0.weight
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.pos_embed.0.bias
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.pos_embed.2.weight
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.pos_embed.2.bias
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.input_proj.0.weight
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.input_proj.0.bias
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.input_proj.2.weight
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.input_proj.2.bias
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.0.norm1.weight
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.0.norm1.bias
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.0.norm2.weight
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.0.norm2.bias
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.0.mlp.fc1.weight
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.0.mlp.fc1.bias
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.0.mlp.fc2.weight
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.0.mlp.fc2.bias
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.0.attn.qkv.weight
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.0.attn.qkv.bias
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.0.attn.proj.weight
+2026-04-15 02:22:13,637 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.0.attn.proj.bias
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.0.local_attn.knn_map.0.weight
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.0.local_attn.knn_map.0.bias
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.0.merge_map.weight
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.0.merge_map.bias
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.1.norm1.weight
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.1.norm1.bias
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.1.norm2.weight
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.1.norm2.bias
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.1.mlp.fc1.weight
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.1.mlp.fc1.bias
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.1.mlp.fc2.weight
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.1.mlp.fc2.bias
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.1.attn.qkv.weight
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.1.attn.qkv.bias
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.1.attn.proj.weight
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.1.attn.proj.bias
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.2.norm1.weight
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.2.norm1.bias
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.2.norm2.weight
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.2.norm2.bias
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.2.mlp.fc1.weight
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.2.mlp.fc1.bias
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.2.mlp.fc2.weight
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.2.mlp.fc2.bias
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.2.attn.qkv.weight
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.2.attn.qkv.bias
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.2.attn.proj.weight
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.2.attn.proj.bias
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.3.norm1.weight
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.3.norm1.bias
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.3.norm2.weight
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.3.norm2.bias
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.3.mlp.fc1.weight
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.3.mlp.fc1.bias
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.3.mlp.fc2.weight
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.3.mlp.fc2.bias
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.3.attn.qkv.weight
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.3.attn.qkv.bias
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.3.attn.proj.weight
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.3.attn.proj.bias
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.4.norm1.weight
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.4.norm1.bias
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.4.norm2.weight
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.4.norm2.bias
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.4.mlp.fc1.weight
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.4.mlp.fc1.bias
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.4.mlp.fc2.weight
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.4.mlp.fc2.bias
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.4.attn.qkv.weight
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.4.attn.qkv.bias
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.4.attn.proj.weight
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.4.attn.proj.bias
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.5.norm1.weight
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.5.norm1.bias
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.5.norm2.weight
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.5.norm2.bias
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.5.mlp.fc1.weight
+2026-04-15 02:22:13,638 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.5.mlp.fc1.bias
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.5.mlp.fc2.weight
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.5.mlp.fc2.bias
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.5.attn.qkv.weight
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.5.attn.qkv.bias
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.5.attn.proj.weight
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.blocks.blocks.5.attn.proj.bias
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.norm.weight
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.encoder.norm.bias
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.increase_dim.0.weight
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.increase_dim.0.bias
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.increase_dim.2.weight
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.increase_dim.2.bias
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.coarse_pred.0.weight
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.coarse_pred.0.bias
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.coarse_pred.2.weight
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.coarse_pred.2.bias
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.mlp_query.0.weight
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.mlp_query.0.bias
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.mlp_query.2.weight
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.mlp_query.2.bias
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.mlp_query.4.weight
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.mlp_query.4.bias
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.0.norm2.weight
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.0.norm2.bias
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.0.mlp.fc1.weight
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.0.mlp.fc1.bias
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.0.mlp.fc2.weight
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.0.mlp.fc2.bias
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.0.norm1.weight
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.0.norm1.bias
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.0.self_attn.qkv.weight
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.0.self_attn.qkv.bias
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.0.self_attn.proj.weight
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.0.self_attn.proj.bias
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.0.local_self_attn.knn_map.0.weight
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.0.local_self_attn.knn_map.0.bias
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.0.self_attn_merge_map.weight
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.0.self_attn_merge_map.bias
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.0.norm_q.weight
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.0.norm_q.bias
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.0.norm_v.weight
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.0.norm_v.bias
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.0.cross_attn.q_map.weight
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.0.cross_attn.q_map.bias
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.0.cross_attn.k_map.weight
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.0.cross_attn.k_map.bias
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.0.cross_attn.v_map.weight
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.0.cross_attn.v_map.bias
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.0.cross_attn.proj.weight
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.0.cross_attn.proj.bias
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.0.local_cross_attn.knn_map.0.weight
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.0.local_cross_attn.knn_map.0.bias
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.0.cross_attn_merge_map.weight
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.0.cross_attn_merge_map.bias
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.1.norm2.weight
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.1.norm2.bias
+2026-04-15 02:22:13,639 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.1.mlp.fc1.weight
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.1.mlp.fc1.bias
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.1.mlp.fc2.weight
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.1.mlp.fc2.bias
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.1.norm1.weight
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.1.norm1.bias
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.1.self_attn.qkv.weight
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.1.self_attn.qkv.bias
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.1.self_attn.proj.weight
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.1.self_attn.proj.bias
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.1.norm_q.weight
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.1.norm_q.bias
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.1.norm_v.weight
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.1.norm_v.bias
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.1.cross_attn.q_map.weight
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.1.cross_attn.q_map.bias
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.1.cross_attn.k_map.weight
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.1.cross_attn.k_map.bias
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.1.cross_attn.v_map.weight
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.1.cross_attn.v_map.bias
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.1.cross_attn.proj.weight
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.1.cross_attn.proj.bias
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.2.norm2.weight
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.2.norm2.bias
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.2.mlp.fc1.weight
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.2.mlp.fc1.bias
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.2.mlp.fc2.weight
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.2.mlp.fc2.bias
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.2.norm1.weight
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.2.norm1.bias
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.2.self_attn.qkv.weight
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.2.self_attn.qkv.bias
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.2.self_attn.proj.weight
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.2.self_attn.proj.bias
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.2.norm_q.weight
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.2.norm_q.bias
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.2.norm_v.weight
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.2.norm_v.bias
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.2.cross_attn.q_map.weight
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.2.cross_attn.q_map.bias
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.2.cross_attn.k_map.weight
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.2.cross_attn.k_map.bias
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.2.cross_attn.v_map.weight
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.2.cross_attn.v_map.bias
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.2.cross_attn.proj.weight
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.2.cross_attn.proj.bias
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.3.norm2.weight
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.3.norm2.bias
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.3.mlp.fc1.weight
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.3.mlp.fc1.bias
+2026-04-15 02:22:13,640 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.3.mlp.fc2.weight
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.3.mlp.fc2.bias
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.3.norm1.weight
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.3.norm1.bias
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.3.self_attn.qkv.weight
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.3.self_attn.qkv.bias
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.3.self_attn.proj.weight
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.3.self_attn.proj.bias
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.3.norm_q.weight
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.3.norm_q.bias
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.3.norm_v.weight
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.3.norm_v.bias
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.3.cross_attn.q_map.weight
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.3.cross_attn.q_map.bias
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.3.cross_attn.k_map.weight
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.3.cross_attn.k_map.bias
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.3.cross_attn.v_map.weight
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.3.cross_attn.v_map.bias
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.3.cross_attn.proj.weight
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.3.cross_attn.proj.bias
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.4.norm2.weight
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.4.norm2.bias
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.4.mlp.fc1.weight
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.4.mlp.fc1.bias
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.4.mlp.fc2.weight
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.4.mlp.fc2.bias
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.4.norm1.weight
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.4.norm1.bias
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.4.self_attn.qkv.weight
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.4.self_attn.qkv.bias
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.4.self_attn.proj.weight
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.4.self_attn.proj.bias
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.4.norm_q.weight
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.4.norm_q.bias
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.4.norm_v.weight
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.4.norm_v.bias
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.4.cross_attn.q_map.weight
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.4.cross_attn.q_map.bias
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.4.cross_attn.k_map.weight
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.4.cross_attn.k_map.bias
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.4.cross_attn.v_map.weight
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.4.cross_attn.v_map.bias
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.4.cross_attn.proj.weight
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.4.cross_attn.proj.bias
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.5.norm2.weight
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.5.norm2.bias
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.5.mlp.fc1.weight
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.5.mlp.fc1.bias
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.5.mlp.fc2.weight
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.5.mlp.fc2.bias
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.5.norm1.weight
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.5.norm1.bias
+2026-04-15 02:22:13,641 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.5.self_attn.qkv.weight
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.5.self_attn.qkv.bias
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.5.self_attn.proj.weight
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.5.self_attn.proj.bias
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.5.norm_q.weight
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.5.norm_q.bias
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.5.norm_v.weight
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.5.norm_v.bias
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.5.cross_attn.q_map.weight
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.5.cross_attn.q_map.bias
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.5.cross_attn.k_map.weight
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.5.cross_attn.k_map.bias
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.5.cross_attn.v_map.weight
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.5.cross_attn.v_map.bias
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.5.cross_attn.proj.weight
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.5.cross_attn.proj.bias
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.6.norm2.weight
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.6.norm2.bias
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.6.mlp.fc1.weight
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.6.mlp.fc1.bias
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.6.mlp.fc2.weight
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.6.mlp.fc2.bias
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.6.norm1.weight
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.6.norm1.bias
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.6.self_attn.qkv.weight
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.6.self_attn.qkv.bias
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.6.self_attn.proj.weight
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.6.self_attn.proj.bias
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.6.norm_q.weight
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.6.norm_q.bias
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.6.norm_v.weight
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.6.norm_v.bias
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.6.cross_attn.q_map.weight
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.6.cross_attn.q_map.bias
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.6.cross_attn.k_map.weight
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.6.cross_attn.k_map.bias
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.6.cross_attn.v_map.weight
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.6.cross_attn.v_map.bias
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.6.cross_attn.proj.weight
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.6.cross_attn.proj.bias
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.7.norm2.weight
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.7.norm2.bias
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.7.mlp.fc1.weight
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.7.mlp.fc1.bias
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.7.mlp.fc2.weight
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.7.mlp.fc2.bias
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.7.norm1.weight
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.7.norm1.bias
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.7.self_attn.qkv.weight
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.7.self_attn.qkv.bias
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.7.self_attn.proj.weight
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.7.self_attn.proj.bias
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.7.norm_q.weight
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.7.norm_q.bias
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.7.norm_v.weight
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.7.norm_v.bias
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.7.cross_attn.q_map.weight
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.7.cross_attn.q_map.bias
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.7.cross_attn.k_map.weight
+2026-04-15 02:22:13,642 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.7.cross_attn.k_map.bias
+2026-04-15 02:22:13,643 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.7.cross_attn.v_map.weight
+2026-04-15 02:22:13,643 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.7.cross_attn.v_map.bias
+2026-04-15 02:22:13,643 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.7.cross_attn.proj.weight
+2026-04-15 02:22:13,643 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.decoder.blocks.blocks.7.cross_attn.proj.bias
+2026-04-15 02:22:13,643 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.query_ranking.0.weight
+2026-04-15 02:22:13,643 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.query_ranking.0.bias
+2026-04-15 02:22:13,643 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.query_ranking.2.weight
+2026-04-15 02:22:13,643 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.query_ranking.2.bias
+2026-04-15 02:22:13,643 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.query_ranking.4.weight
+2026-04-15 02:22:13,643 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - base_model.query_ranking.4.bias
+2026-04-15 02:22:13,643 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - decode_head.layer.fc1.weight
+2026-04-15 02:22:13,643 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - decode_head.layer.fc1.bias
+2026-04-15 02:22:13,643 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - decode_head.layer.fc2.weight
+2026-04-15 02:22:13,643 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - decode_head.layer.fc2.bias
+2026-04-15 02:22:13,643 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - increase_dim.0.weight
+2026-04-15 02:22:13,643 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - increase_dim.0.bias
+2026-04-15 02:22:13,643 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - increase_dim.1.weight
+2026-04-15 02:22:13,643 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - increase_dim.1.bias
+2026-04-15 02:22:13,643 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - increase_dim.3.weight
+2026-04-15 02:22:13,643 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - increase_dim.3.bias
+2026-04-15 02:22:13,643 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - reduce_map.weight
+2026-04-15 02:22:13,643 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - reduce_map.bias
+2026-04-15 02:22:13,643 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - =========================
+2026-04-15 02:22:13,643 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - Untrainable_parameters:
+2026-04-15 02:22:13,643 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - =========================
+2026-04-15 02:22:13,643 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - =========================
+2026-04-15 02:22:13,643 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - Using Data parallel ...
+2026-04-15 02:22:15,276 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - [Epoch 0/2][Batch 1/874] BatchTime = 1.626 (s) DataTime = 0.115 (s) Losses = ['4.7054', '35.7418'] lr = 0.000100
+2026-04-15 02:22:52,314 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - [Epoch 0/2][Batch 101/874] BatchTime = 0.330 (s) DataTime = 0.002 (s) Losses = ['5.9544', '39.9150'] lr = 0.000100
+2026-04-15 02:23:29,821 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - [Epoch 0/2][Batch 201/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.2611', '46.3861'] lr = 0.000100
+2026-04-15 02:24:08,004 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - [Epoch 0/2][Batch 301/874] BatchTime = 0.378 (s) DataTime = 0.002 (s) Losses = ['5.3075', '45.4279'] lr = 0.000100
+2026-04-15 02:24:46,506 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - [Epoch 0/2][Batch 401/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.5220', '41.9285'] lr = 0.000100
+2026-04-15 02:25:25,406 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - [Epoch 0/2][Batch 501/874] BatchTime = 0.401 (s) DataTime = 0.002 (s) Losses = ['5.2799', '45.7050'] lr = 0.000100
+2026-04-15 02:26:04,214 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - [Epoch 0/2][Batch 601/874] BatchTime = 0.394 (s) DataTime = 0.002 (s) Losses = ['5.3662', '40.2528'] lr = 0.000100
+2026-04-15 02:26:42,515 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - [Epoch 0/2][Batch 701/874] BatchTime = 0.401 (s) DataTime = 0.002 (s) Losses = ['5.0258', '41.5218'] lr = 0.000100
+2026-04-15 02:27:21,314 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - [Epoch 0/2][Batch 801/874] BatchTime = 0.393 (s) DataTime = 0.002 (s) Losses = ['5.6508', '41.5256'] lr = 0.000100
+2026-04-15 02:27:49,144 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - [Training] EPOCH: 0 EpochTime = 335.495 (s) Losses = ['5.3077', '42.6574']
+2026-04-15 02:27:49,145 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - [VALIDATION] Start validating epoch 0
+2026-04-15 02:28:14,884 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - Test[1051/10518] Taxonomy = 02691156 Sample = c7749c0a8b61f43bc9b9e28055202e3d Losses = ['21.4786', '1.8535', '9.3706', '0.3121'] Metrics = ['0.5609', '9.3706', '0.3121', '0.0000']
+2026-04-15 02:28:40,232 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - Test[2102/10518] Taxonomy = 03211117 Sample = ab2f9418c111cc6ddb965514105122a4 Losses = ['25.4080', '2.3232', '8.8887', '0.3292'] Metrics = ['0.6132', '8.8887', '0.3292', '0.0000']
+2026-04-15 02:29:05,758 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - Test[3153/10518] Taxonomy = 02876657 Sample = c5032e4be091aabb36fe7a88df793982 Losses = ['31.0068', '3.3358', '11.6621', '0.4297'] Metrics = ['0.3654', '11.6621', '0.4297', '0.0000']
+2026-04-15 02:29:31,306 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - Test[4204/10518] Taxonomy = 03211117 Sample = 722df1da5778d45b1e43523279c7f09f Losses = ['34.9338', '4.6081', '14.5189', '0.9419'] Metrics = ['0.4027', '14.5189', '0.9419', '0.0000']
+2026-04-15 02:29:56,853 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - Test[5255/10518] Taxonomy = 02828884 Sample = 14b63361a48a9fffe4a048c146e8bd43 Losses = ['36.1042', '4.9073', '22.3070', '2.6598'] Metrics = ['0.3645', '22.3070', '2.6598', '0.0000']
+2026-04-15 02:30:22,317 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - Test[6306/10518] Taxonomy = 03211117 Sample = d330d50a0255529d19ed6e1a590c9122 Losses = ['28.2156', '3.2785', '10.5620', '0.3428'] Metrics = ['0.4681', '10.5620', '0.3428', '0.0000']
+2026-04-15 02:30:47,704 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - Test[7357/10518] Taxonomy = 04379243 Sample = b1ca280d9567270ade98d10ab5975b59 Losses = ['46.3815', '9.6192', '14.6228', '0.6389'] Metrics = ['0.2637', '14.6228', '0.6389', '0.0000']
+2026-04-15 02:31:13,043 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - Test[8408/10518] Taxonomy = 03001627 Sample = 89208a619341d9fdb8c516ed5c4ce32 Losses = ['28.3168', '2.7220', '13.2204', '0.5300'] Metrics = ['0.2799', '13.2204', '0.5300', '0.0000']
+2026-04-15 02:31:38,658 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - Test[9459/10518] Taxonomy = 03001627 Sample = d0255120e3351121c3bd24f986301745 Losses = ['35.5002', '4.4679', '15.5615', '0.8046'] Metrics = ['0.2318', '15.5615', '0.8046', '0.0000']
+2026-04-15 02:32:04,231 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - Test[10510/10518] Taxonomy = 03636649 Sample = ea9ec4d9db2e06202471e6dd5ac3ef92 Losses = ['31.5187', '4.9044', '9.6893', '0.4872'] Metrics = ['0.6812', '9.6893', '0.4872', '0.0000']
+2026-04-15 02:32:04,496 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - [Validation] EPOCH: 0  Metrics = ['0.3706', '14.2304', '0.9327', '0.0000']
+2026-04-15 02:32:04,497 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - ============================ TEST RESULTS ============================
+2026-04-15 02:32:04,497 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2026-04-15 02:32:04,497 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 03759954	14	0.556 	14.055 	1.418 	0.000 	microphone	
+2026-04-15 02:32:04,497 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 04330267	44	0.295 	16.327 	1.346 	0.000 	stove	
+2026-04-15 02:32:04,497 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 03261776	15	0.295 	18.611 	1.585 	0.000 	earphone	
+2026-04-15 02:32:04,497 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 03513137	33	0.214 	18.893 	1.574 	0.000 	helmet	
+2026-04-15 02:32:04,497 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 04460130	27	0.440 	13.235 	0.769 	0.000 	tower	
+2026-04-15 02:32:04,497 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 04468005	78	0.399 	12.732 	0.692 	0.000 	train	
+2026-04-15 02:32:04,497 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 03761084	31	0.239 	15.958 	0.919 	0.000 	microwaves	
+2026-04-15 02:32:04,497 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 04004475	34	0.269 	17.002 	1.364 	0.000 	printer	
+2026-04-15 02:32:04,497 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 03938244	20	0.318 	13.301 	0.625 	0.000 	pillow	
+2026-04-15 02:32:04,497 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 02992529	167	0.414 	11.486 	0.460 	0.000 	cellphone	
+2026-04-15 02:32:04,497 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 02808440	172	0.293 	15.034 	0.965 	0.000 	bathtub	
+2026-04-15 02:32:04,497 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 04530566	388	0.519 	11.037 	0.557 	0.000 	watercraft	
+2026-04-15 02:32:04,497 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 02871439	91	0.256 	16.671 	1.203 	0.000 	bookshelf	
+2026-04-15 02:32:04,497 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 03593526	120	0.268 	17.604 	1.401 	0.000 	jar	
+2026-04-15 02:32:04,497 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 04554684	34	0.225 	17.343 	1.146 	0.000 	washer	
+2026-04-15 02:32:04,497 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 03467517	160	0.815 	6.852 	0.202 	0.000 	guitar	
+2026-04-15 02:32:04,497 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 04401088	218	0.413 	11.485 	0.462 	0.000 	telephone	
+2026-04-15 02:32:04,497 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 02954340	12	0.314 	13.071 	0.582 	0.000 	cap	
+2026-04-15 02:32:04,497 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 02933112	315	0.242 	15.320 	0.816 	0.000 	cabinet	
+2026-04-15 02:32:04,497 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 03642806	92	0.377 	11.708 	0.457 	0.000 	laptop	
+2026-04-15 02:32:04,497 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 02924116	188	0.370 	12.505 	0.571 	0.000 	bus	
+2026-04-15 02:32:04,497 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 02946921	22	0.248 	15.834 	0.961 	0.000 	can	
+2026-04-15 02:32:04,497 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 02818832	47	0.285 	16.060 	1.116 	0.000 	bed	
+2026-04-15 02:32:04,498 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 04256520	635	0.298 	14.134 	0.726 	0.000 	sofa	
+2026-04-15 02:32:04,498 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 04379243	1687	0.377 	13.005 	0.793 	0.000 	table	
+2026-04-15 02:32:04,498 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 02747177	69	0.196 	17.677 	1.242 	0.000 	trash bin	
+2026-04-15 02:32:04,498 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 03046257	131	0.315 	14.702 	0.859 	0.000 	clock	
+2026-04-15 02:32:04,498 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 04225987	31	0.564 	9.258 	0.300 	0.000 	skateboard	
+2026-04-15 02:32:04,498 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 03797390	43	0.193 	19.942 	1.910 	0.000 	mug	
+2026-04-15 02:32:04,498 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 03001627	1356	0.373 	13.685 	0.839 	0.000 	chair	
+2026-04-15 02:32:04,498 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 03691459	320	0.253 	17.271 	1.280 	0.000 	loudspeaker	
+2026-04-15 02:32:04,498 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 02942699	23	0.247 	19.169 	1.784 	0.000 	camera	
+2026-04-15 02:32:04,498 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 03636649	464	0.539 	13.610 	1.429 	0.000 	lamp	
+2026-04-15 02:32:04,498 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 02691156	809	0.591 	9.438 	0.390 	0.000 	airplane	
+2026-04-15 02:32:04,498 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 02773838	17	0.355 	13.934 	0.911 	0.000 	bag	
+2026-04-15 02:32:04,498 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 02958343	703	0.228 	16.091 	0.901 	0.000 	car	
+2026-04-15 02:32:04,498 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 02880940	38	0.220 	16.448 	0.938 	0.000 	bowl	
+2026-04-15 02:32:04,498 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 04099429	17	0.754 	7.830 	0.318 	0.000 	rocket	
+2026-04-15 02:32:04,498 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 02828884	363	0.439 	11.134 	0.520 	0.000 	bench	
+2026-04-15 02:32:04,498 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 04090263	475	0.710 	8.556 	0.412 	0.000 	rifle	
+2026-04-15 02:32:04,498 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 03211117	219	0.348 	13.893 	0.894 	0.000 	display	
+2026-04-15 02:32:04,498 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 02876657	100	0.434 	12.283 	0.672 	0.000 	bottle	
+2026-04-15 02:32:04,498 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 03710193	19	0.499 	14.309 	1.365 	0.000 	mailbox	
+2026-04-15 02:32:04,498 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 03790512	68	0.268 	16.159 	1.015 	0.000 	motorbike	
+2026-04-15 02:32:04,498 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 03325088	149	0.464 	14.891 	1.402 	0.000 	faucet	
+2026-04-15 02:32:04,498 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 02801938	23	0.232 	17.008 	1.209 	0.000 	basket	
+2026-04-15 02:32:04,498 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 03337140	60	0.243 	16.081 	0.959 	0.000 	file cabinet	
+2026-04-15 02:32:04,498 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 02843684	15	0.235 	18.960 	1.561 	0.000 	birdhouse	
+2026-04-15 02:32:04,498 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 03624134	85	0.781 	7.591 	0.312 	0.000 	knife	
+2026-04-15 02:32:04,498 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 03991062	121	0.246 	18.693 	1.567 	0.000 	flowerpot	
+2026-04-15 02:32:04,498 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 03948459	62	0.484 	11.558 	0.585 	0.000 	pistol	
+2026-04-15 02:32:04,498 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 03928116	48	0.288 	16.246 	1.286 	0.000 	piano	
+2026-04-15 02:32:04,498 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 03207941	19	0.239 	15.644 	0.845 	0.000 	dishwasher	
+2026-04-15 02:32:04,498 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 04074963	14	0.460 	10.997 	0.457 	0.000 	remote	
+2026-04-15 02:32:04,498 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - 03085013	13	0.446 	10.354 	0.422 	0.000 	keyboard	
+2026-04-15 02:32:04,498 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - Overall		0.371 	14.230 	0.933 	0.000 	
+2026-04-15 02:32:04,996 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke2_diffcrop/ShapeNet55_models/r200c_smoke2/ckpt-best.pth
+2026-04-15 02:32:05,440 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke2_diffcrop/ShapeNet55_models/r200c_smoke2/ckpt-last.pth
+2026-04-15 02:32:06,026 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - [Epoch 1/2][Batch 1/874] BatchTime = 0.585 (s) DataTime = 0.193 (s) Losses = ['5.5021', '40.5919'] lr = 0.000099
+2026-04-15 02:32:44,305 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - [Epoch 1/2][Batch 101/874] BatchTime = 0.399 (s) DataTime = 0.002 (s) Losses = ['5.5558', '42.3871'] lr = 0.000099
+2026-04-15 02:33:22,215 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - [Epoch 1/2][Batch 201/874] BatchTime = 0.344 (s) DataTime = 0.002 (s) Losses = ['5.4719', '40.1322'] lr = 0.000099
+2026-04-15 02:34:00,905 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - [Epoch 1/2][Batch 301/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.0465', '47.8625'] lr = 0.000099
+2026-04-15 02:34:38,915 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - [Epoch 1/2][Batch 401/874] BatchTime = 0.400 (s) DataTime = 0.003 (s) Losses = ['5.5834', '41.1696'] lr = 0.000099
+2026-04-15 02:35:18,215 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - [Epoch 1/2][Batch 501/874] BatchTime = 0.396 (s) DataTime = 0.002 (s) Losses = ['5.1438', '41.6729'] lr = 0.000099
+2026-04-15 02:35:56,316 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - [Epoch 1/2][Batch 601/874] BatchTime = 0.396 (s) DataTime = 0.002 (s) Losses = ['5.0671', '40.1219'] lr = 0.000099
+2026-04-15 02:36:34,306 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - [Epoch 1/2][Batch 701/874] BatchTime = 0.391 (s) DataTime = 0.002 (s) Losses = ['5.1416', '44.1159'] lr = 0.000099
+2026-04-15 02:37:12,220 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - [Epoch 1/2][Batch 801/874] BatchTime = 0.328 (s) DataTime = 0.002 (s) Losses = ['4.8666', '46.7887'] lr = 0.000099
+2026-04-15 02:37:40,100 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - [Training] EPOCH: 1 EpochTime = 334.659 (s) Losses = ['5.2840', '42.7827']
+2026-04-15 02:37:40,871 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke2_diffcrop/ShapeNet55_models/r200c_smoke2/ckpt-last.pth
+2026-04-15 02:37:41,255 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke2_diffcrop/ShapeNet55_models/r200c_smoke2/ckpt-epoch-001.pth
+2026-04-15 02:37:41,821 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - [Epoch 2/2][Batch 1/874] BatchTime = 0.565 (s) DataTime = 0.138 (s) Losses = ['5.0818', '40.4993'] lr = 0.000099
+2026-04-15 02:38:19,405 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - [Epoch 2/2][Batch 101/874] BatchTime = 0.390 (s) DataTime = 0.002 (s) Losses = ['5.1107', '40.0674'] lr = 0.000099
+2026-04-15 02:38:57,426 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - [Epoch 2/2][Batch 201/874] BatchTime = 0.322 (s) DataTime = 0.002 (s) Losses = ['5.0780', '44.1296'] lr = 0.000099
+2026-04-15 02:39:35,193 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - [Epoch 2/2][Batch 301/874] BatchTime = 0.385 (s) DataTime = 0.002 (s) Losses = ['5.2584', '43.1457'] lr = 0.000099
+2026-04-15 02:40:13,315 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - [Epoch 2/2][Batch 401/874] BatchTime = 0.400 (s) DataTime = 0.002 (s) Losses = ['5.2240', '40.9891'] lr = 0.000099
+2026-04-15 02:40:52,206 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - [Epoch 2/2][Batch 501/874] BatchTime = 0.390 (s) DataTime = 0.002 (s) Losses = ['5.4142', '47.7093'] lr = 0.000099
+2026-04-15 02:41:30,924 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - [Epoch 2/2][Batch 601/874] BatchTime = 0.320 (s) DataTime = 0.002 (s) Losses = ['5.3414', '42.0333'] lr = 0.000099
+2026-04-15 02:42:10,122 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - [Epoch 2/2][Batch 701/874] BatchTime = 0.401 (s) DataTime = 0.002 (s) Losses = ['5.1750', '42.5046'] lr = 0.000099
+2026-04-15 02:42:49,316 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - [Epoch 2/2][Batch 801/874] BatchTime = 0.387 (s) DataTime = 0.002 (s) Losses = ['5.3593', '42.6898'] lr = 0.000099
+2026-04-15 02:43:16,888 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - [Training] EPOCH: 2 EpochTime = 335.632 (s) Losses = ['5.2861', '43.0270']
+2026-04-15 02:43:17,630 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke2_diffcrop/ShapeNet55_models/r200c_smoke2/ckpt-last.pth
+2026-04-15 02:43:17,981 - AdaPoinTr_baseline_smoke2_diffcrop - INFO - Save checkpoint at ./experiments/AdaPoinTr_baseline_smoke2_diffcrop/ShapeNet55_models/r200c_smoke2/ckpt-epoch-002.pth

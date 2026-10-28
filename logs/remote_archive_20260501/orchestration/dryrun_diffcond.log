@@ -1,0 +1,533 @@
+/root/miniconda3/lib/python3.12/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+Create experiment path successfully at ./experiments/UpTrans_DiffCond_dryrun/ShapeNet55_models/uptrans_diffcond_dryrun
+Create TFBoard path successfully at ./experiments/UpTrans_DiffCond_dryrun/ShapeNet55_models/TFBoard/uptrans_diffcond_dryrun
+2026-04-24 15:08:27,101 - UpTrans_DiffCond_dryrun - INFO - Copy the Config file from cfgs/ShapeNet55_models/UpTrans_DiffCond_dryrun.yaml to ./experiments/UpTrans_DiffCond_dryrun/ShapeNet55_models/uptrans_diffcond_dryrun/config.yaml
+2026-04-24 15:08:27,101 - UpTrans_DiffCond_dryrun - INFO - args.config : cfgs/ShapeNet55_models/UpTrans_DiffCond_dryrun.yaml
+2026-04-24 15:08:27,101 - UpTrans_DiffCond_dryrun - INFO - args.launcher : none
+2026-04-24 15:08:27,101 - UpTrans_DiffCond_dryrun - INFO - args.local_rank : 0
+2026-04-24 15:08:27,101 - UpTrans_DiffCond_dryrun - INFO - args.num_workers : 4
+2026-04-24 15:08:27,101 - UpTrans_DiffCond_dryrun - INFO - args.seed : 42
+2026-04-24 15:08:27,101 - UpTrans_DiffCond_dryrun - INFO - args.deterministic : False
+2026-04-24 15:08:27,101 - UpTrans_DiffCond_dryrun - INFO - args.sync_bn : False
+2026-04-24 15:08:27,101 - UpTrans_DiffCond_dryrun - INFO - args.exp_name : uptrans_diffcond_dryrun
+2026-04-24 15:08:27,101 - UpTrans_DiffCond_dryrun - INFO - args.start_ckpts : experiments/UpTrans/ShapeNet55_models/pretrained_400ep/ckpt-best.pth
+2026-04-24 15:08:27,101 - UpTrans_DiffCond_dryrun - INFO - args.ckpts : None
+2026-04-24 15:08:27,101 - UpTrans_DiffCond_dryrun - INFO - args.val_freq : 1
+2026-04-24 15:08:27,101 - UpTrans_DiffCond_dryrun - INFO - args.resume : False
+2026-04-24 15:08:27,101 - UpTrans_DiffCond_dryrun - INFO - args.test : False
+2026-04-24 15:08:27,101 - UpTrans_DiffCond_dryrun - INFO - args.mode : None
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - args.difficulty_source : oracle
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - args.experiment_path : ./experiments/UpTrans_DiffCond_dryrun/ShapeNet55_models/uptrans_diffcond_dryrun
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - args.tfboard_path : ./experiments/UpTrans_DiffCond_dryrun/ShapeNet55_models/TFBoard/uptrans_diffcond_dryrun
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - args.log_name : UpTrans_DiffCond_dryrun
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - args.use_gpu : True
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - args.distributed : False
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.optimizer = edict()
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.optimizer.type : AdamW
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.optimizer.kwargs = edict()
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.optimizer.kwargs.lr : 0.0001
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.optimizer.kwargs.weight_decay : 0.0005
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.scheduler = edict()
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.scheduler.type : LambdaLR
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.scheduler.kwargs = edict()
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.scheduler.kwargs.decay_step : 21
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.scheduler.kwargs.lr_decay : 0.9
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.scheduler.kwargs.lowest_decay : 0.02
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.bnmscheduler = edict()
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.bnmscheduler.type : Lambda
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.bnmscheduler.kwargs = edict()
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.bnmscheduler.kwargs.decay_step : 21
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.bnmscheduler.kwargs.bn_decay : 0.5
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.bnmscheduler.kwargs.bn_momentum : 0.9
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.bnmscheduler.kwargs.lowest_decay : 0.01
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.dataset = edict()
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.dataset.train = edict()
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.dataset.train._base_ = edict()
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.dataset.train._base_.NAME : ShapeNet
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.dataset.train._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.dataset.train._base_.N_POINTS : 8192
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.dataset.train._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.dataset.train.others = edict()
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.dataset.train.others.subset : train
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.dataset.train.others.bs : 32
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.dataset.val = edict()
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.dataset.val._base_ = edict()
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.dataset.val._base_.NAME : ShapeNet
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.dataset.val._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.dataset.val._base_.N_POINTS : 8192
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.dataset.val._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.dataset.val.others = edict()
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.dataset.val.others.subset : test
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.dataset.test = edict()
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.dataset.test._base_ = edict()
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.dataset.test._base_.NAME : ShapeNet
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.dataset.test._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.dataset.test._base_.N_POINTS : 8192
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.dataset.test._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.dataset.test.others = edict()
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.dataset.test.others.subset : test
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.model = edict()
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.model.NAME : UpTrans_DiffCond
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.model.num_pred : 8192
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.model.num_seeds : 1024
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.model.seed_fea : 128
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.model.dim_feat : 512
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.model.num_dicts : 512
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.model.upscales : [1, 2, 4]
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.model.l2_loss : 1
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.model.diff_embed_dim : 256
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.model.lambda_ce : 0.1
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.loss = edict()
+2026-04-24 15:08:27,102 - UpTrans_DiffCond_dryrun - INFO - config.loss.sparse_loss_weight : 1.0
+2026-04-24 15:08:27,103 - UpTrans_DiffCond_dryrun - INFO - config.loss.dense_loss_weight : 1.0
+2026-04-24 15:08:27,103 - UpTrans_DiffCond_dryrun - INFO - config.loss.dz_weight : 1.0
+2026-04-24 15:08:27,103 - UpTrans_DiffCond_dryrun - INFO - config.loss.orth_weight : 1.0
+2026-04-24 15:08:27,103 - UpTrans_DiffCond_dryrun - INFO - config.total_bs : 32
+2026-04-24 15:08:27,103 - UpTrans_DiffCond_dryrun - INFO - config.step_per_update : 1
+2026-04-24 15:08:27,103 - UpTrans_DiffCond_dryrun - INFO - config.max_epoch : 0
+2026-04-24 15:08:27,103 - UpTrans_DiffCond_dryrun - INFO - config.consider_metric : CDL2
+2026-04-24 15:08:27,103 - UpTrans_DiffCond_dryrun - INFO - config.training_crop_mode : diffcond
+2026-04-24 15:08:27,103 - UpTrans_DiffCond_dryrun - INFO - Distributed training: False
+2026-04-24 15:08:27,103 - UpTrans_DiffCond_dryrun - INFO - Set random seed to 42, deterministic: False
+[DATASET] Open file data/ShapeNet55-34/ShapeNet-55/train.txt
+[DATASET] 41952 instances were loaded
+[DATASET] Open file data/ShapeNet55-34/ShapeNet-55/test.txt
+[DATASET] 10518 instances were loaded
+2026-04-24 15:08:27,484 - UpTrans_DiffCond_dryrun - INFO - Loading weights from experiments/UpTrans/ShapeNet55_models/pretrained_400ep/ckpt-best.pth...
+2026-04-24 15:08:27,636 - UpTrans_DiffCond_dryrun - INFO - UpTrans_DiffCond load: missing=21, unexpected=0
+2026-04-24 15:08:27,638 - UpTrans_DiffCond_dryrun - INFO - ckpts @ 290 epoch( performance = {'F-Score': tensor(0.4461), 'CDL1': tensor(13.0321), 'CDL2': tensor(0.7718)})
+2026-04-24 15:08:27,641 - UpTrans_DiffCond_dryrun - INFO - Trainable_parameters:
+2026-04-24 15:08:27,641 - UpTrans_DiffCond_dryrun - INFO - =========================
+2026-04-24 15:08:27,641 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.sa_module_1.mlp_conv.0.conv.weight
+2026-04-24 15:08:27,641 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.sa_module_1.mlp_conv.0.conv.bias
+2026-04-24 15:08:27,641 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.sa_module_1.mlp_conv.0.bn.weight
+2026-04-24 15:08:27,641 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.sa_module_1.mlp_conv.0.bn.bias
+2026-04-24 15:08:27,641 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.sa_module_1.mlp_conv.1.conv.weight
+2026-04-24 15:08:27,641 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.sa_module_1.mlp_conv.1.conv.bias
+2026-04-24 15:08:27,641 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.sa_module_1.mlp_conv.1.bn.weight
+2026-04-24 15:08:27,641 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.sa_module_1.mlp_conv.1.bn.bias
+2026-04-24 15:08:27,641 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_1.conv_key.weight
+2026-04-24 15:08:27,641 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_1.conv_key.bias
+2026-04-24 15:08:27,641 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_1.conv_query.weight
+2026-04-24 15:08:27,641 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_1.conv_query.bias
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_1.conv_value.weight
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_1.conv_value.bias
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_1.pos_mlp.0.weight
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_1.pos_mlp.0.bias
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_1.pos_mlp.1.weight
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_1.pos_mlp.1.bias
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_1.pos_mlp.3.weight
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_1.pos_mlp.3.bias
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_1.attn_mlp.0.weight
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_1.attn_mlp.0.bias
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_1.attn_mlp.1.weight
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_1.attn_mlp.1.bias
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_1.attn_mlp.3.weight
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_1.attn_mlp.3.bias
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_1.linear_start.weight
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_1.linear_start.bias
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_1.linear_end.weight
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_1.linear_end.bias
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.sa_module_2.mlp_conv.0.conv.weight
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.sa_module_2.mlp_conv.0.conv.bias
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.sa_module_2.mlp_conv.0.bn.weight
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.sa_module_2.mlp_conv.0.bn.bias
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.sa_module_2.mlp_conv.1.conv.weight
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.sa_module_2.mlp_conv.1.conv.bias
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.sa_module_2.mlp_conv.1.bn.weight
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.sa_module_2.mlp_conv.1.bn.bias
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_2.conv_key.weight
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_2.conv_key.bias
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_2.conv_query.weight
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_2.conv_query.bias
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_2.conv_value.weight
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_2.conv_value.bias
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_2.pos_mlp.0.weight
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_2.pos_mlp.0.bias
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_2.pos_mlp.1.weight
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_2.pos_mlp.1.bias
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_2.pos_mlp.3.weight
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_2.pos_mlp.3.bias
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_2.attn_mlp.0.weight
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_2.attn_mlp.0.bias
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_2.attn_mlp.1.weight
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_2.attn_mlp.1.bias
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_2.attn_mlp.3.weight
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_2.attn_mlp.3.bias
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_2.linear_start.weight
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_2.linear_start.bias
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_2.linear_end.weight
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.transformer_2.linear_end.bias
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.sa_module_4.mlp_conv.0.conv.weight
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.sa_module_4.mlp_conv.0.conv.bias
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.sa_module_4.mlp_conv.0.bn.weight
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.sa_module_4.mlp_conv.0.bn.bias
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.sa_module_4.mlp_conv.1.conv.weight
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.sa_module_4.mlp_conv.1.conv.bias
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.sa_module_4.mlp_conv.1.bn.weight
+2026-04-24 15:08:27,642 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.sa_module_4.mlp_conv.1.bn.bias
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.ps_0.weight
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.ps_0.bias
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.mlp_1.conv_1.weight
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.mlp_1.conv_1.bias
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.mlp_1.conv_2.weight
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.mlp_1.conv_2.bias
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.mlp_1.conv_shortcut.weight
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.mlp_1.conv_shortcut.bias
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.ps_1.weight
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.ps_1.bias
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.ps_2.weight
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.ps_2.bias
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.refine_1.dict_embed.weight
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.refine_1.query.weight
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.refine_1.query.bias
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.refine_1.key.weight
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.refine_1.key.bias
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.refine_1.diff_key_delta.0.weight
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.refine_1.diff_key_delta.0.bias
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.refine_1.diff_key_delta.2.weight
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.refine_1.diff_key_delta.2.bias
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.refine_2.dict_embed.weight
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.refine_2.query.weight
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.refine_2.query.bias
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.refine_2.key.weight
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.refine_2.key.bias
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.refine_2.diff_key_delta.0.weight
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.refine_2.diff_key_delta.0.bias
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.refine_2.diff_key_delta.2.weight
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.refine_2.diff_key_delta.2.bias
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.mlp_3.conv_1.weight
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.mlp_3.conv_1.bias
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.mlp_3.conv_2.weight
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.mlp_3.conv_2.bias
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.mlp_3.conv_shortcut.weight
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.mlp_3.conv_shortcut.bias
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.film_gamma.0.weight
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.film_gamma.0.bias
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.film_gamma.2.weight
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.film_gamma.2.bias
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.film_beta.0.weight
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.film_beta.0.bias
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.film_beta.2.weight
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - feat_extractor.film_beta.2.bias
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.mlp_1.mlp.0.weight
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.mlp_1.mlp.0.bias
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.mlp_1.mlp.2.weight
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.mlp_1.mlp.2.bias
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.mlp_2.mlp.0.weight
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.mlp_2.mlp.0.bias
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.mlp_2.mlp.2.weight
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.mlp_2.mlp.2.bias
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans1.mlp_v.conv_1.weight
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans1.mlp_v.conv_1.bias
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans1.mlp_v.conv_2.weight
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans1.mlp_v.conv_2.bias
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans1.mlp_v.conv_shortcut.weight
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans1.mlp_v.conv_shortcut.bias
+2026-04-24 15:08:27,643 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans1.conv_key.weight
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans1.conv_key.bias
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans1.conv_query.weight
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans1.conv_query.bias
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans1.conv_value.weight
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans1.conv_value.bias
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans1.conv_upfeat.weight
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans1.conv_upfeat.bias
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans1.pos_mlp.0.weight
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans1.pos_mlp.0.bias
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans1.pos_mlp.1.weight
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans1.pos_mlp.1.bias
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans1.pos_mlp.3.weight
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans1.pos_mlp.3.bias
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans1.attn_mlp.0.weight
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans1.attn_mlp.0.bias
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans1.attn_mlp.1.weight
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans1.attn_mlp.1.bias
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans1.attn_mlp.3.weight
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans1.attn_mlp.3.bias
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans1.conv_end.weight
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans1.conv_end.bias
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans2.mlp_v.conv_1.weight
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans2.mlp_v.conv_1.bias
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans2.mlp_v.conv_2.weight
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans2.mlp_v.conv_2.bias
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans2.mlp_v.conv_shortcut.weight
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans2.mlp_v.conv_shortcut.bias
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans2.conv_key.weight
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans2.conv_key.bias
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans2.conv_query.weight
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans2.conv_query.bias
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans2.conv_value.weight
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans2.conv_value.bias
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans2.conv_upfeat.weight
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans2.conv_upfeat.bias
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans2.pos_mlp.0.weight
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans2.pos_mlp.0.bias
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans2.pos_mlp.1.weight
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans2.pos_mlp.1.bias
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans2.pos_mlp.3.weight
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans2.pos_mlp.3.bias
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans2.attn_mlp.0.weight
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans2.attn_mlp.0.bias
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans2.attn_mlp.1.weight
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans2.attn_mlp.1.bias
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans2.attn_mlp.3.weight
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans2.attn_mlp.3.bias
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans2.conv_end.weight
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.uptrans2.conv_end.bias
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.mlp_delta_feature.conv_1.weight
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.mlp_delta_feature.conv_1.bias
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.mlp_delta_feature.conv_2.weight
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.mlp_delta_feature.conv_2.bias
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.mlp_delta_feature.conv_shortcut.weight
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.mlp_delta_feature.conv_shortcut.bias
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.mlp_delta.mlp.0.weight
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.mlp_delta.mlp.0.bias
+2026-04-24 15:08:27,644 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.mlp_delta.mlp.2.weight
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.0.mlp_delta.mlp.2.bias
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.mlp_1.mlp.0.weight
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.mlp_1.mlp.0.bias
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.mlp_1.mlp.2.weight
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.mlp_1.mlp.2.bias
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.mlp_2.mlp.0.weight
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.mlp_2.mlp.0.bias
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.mlp_2.mlp.2.weight
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.mlp_2.mlp.2.bias
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans1.mlp_v.conv_1.weight
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans1.mlp_v.conv_1.bias
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans1.mlp_v.conv_2.weight
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans1.mlp_v.conv_2.bias
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans1.mlp_v.conv_shortcut.weight
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans1.mlp_v.conv_shortcut.bias
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans1.conv_key.weight
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans1.conv_key.bias
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans1.conv_query.weight
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans1.conv_query.bias
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans1.conv_value.weight
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans1.conv_value.bias
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans1.conv_upfeat.weight
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans1.conv_upfeat.bias
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans1.pos_mlp.0.weight
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans1.pos_mlp.0.bias
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans1.pos_mlp.1.weight
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans1.pos_mlp.1.bias
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans1.pos_mlp.3.weight
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans1.pos_mlp.3.bias
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans1.attn_mlp.0.weight
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans1.attn_mlp.0.bias
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans1.attn_mlp.1.weight
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans1.attn_mlp.1.bias
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans1.attn_mlp.3.weight
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans1.attn_mlp.3.bias
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans1.conv_end.weight
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans1.conv_end.bias
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans2.mlp_v.conv_1.weight
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans2.mlp_v.conv_1.bias
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans2.mlp_v.conv_2.weight
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans2.mlp_v.conv_2.bias
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans2.mlp_v.conv_shortcut.weight
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans2.mlp_v.conv_shortcut.bias
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans2.conv_key.weight
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans2.conv_key.bias
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans2.conv_query.weight
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans2.conv_query.bias
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans2.conv_value.weight
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans2.conv_value.bias
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans2.conv_upfeat.weight
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans2.conv_upfeat.bias
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans2.pos_mlp.0.weight
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans2.pos_mlp.0.bias
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans2.pos_mlp.1.weight
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans2.pos_mlp.1.bias
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans2.pos_mlp.3.weight
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans2.pos_mlp.3.bias
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans2.attn_mlp.0.weight
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans2.attn_mlp.0.bias
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans2.attn_mlp.1.weight
+2026-04-24 15:08:27,645 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans2.attn_mlp.1.bias
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans2.attn_mlp.3.weight
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans2.attn_mlp.3.bias
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans2.conv_end.weight
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.uptrans2.conv_end.bias
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.mlp_delta_feature.conv_1.weight
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.mlp_delta_feature.conv_1.bias
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.mlp_delta_feature.conv_2.weight
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.mlp_delta_feature.conv_2.bias
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.mlp_delta_feature.conv_shortcut.weight
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.mlp_delta_feature.conv_shortcut.bias
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.mlp_delta.mlp.0.weight
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.mlp_delta.mlp.0.bias
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.mlp_delta.mlp.2.weight
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.1.mlp_delta.mlp.2.bias
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.mlp_1.mlp.0.weight
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.mlp_1.mlp.0.bias
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.mlp_1.mlp.2.weight
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.mlp_1.mlp.2.bias
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.mlp_2.mlp.0.weight
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.mlp_2.mlp.0.bias
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.mlp_2.mlp.2.weight
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.mlp_2.mlp.2.bias
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans1.mlp_v.conv_1.weight
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans1.mlp_v.conv_1.bias
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans1.mlp_v.conv_2.weight
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans1.mlp_v.conv_2.bias
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans1.mlp_v.conv_shortcut.weight
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans1.mlp_v.conv_shortcut.bias
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans1.conv_key.weight
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans1.conv_key.bias
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans1.conv_query.weight
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans1.conv_query.bias
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans1.conv_value.weight
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans1.conv_value.bias
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans1.conv_upfeat.weight
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans1.conv_upfeat.bias
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans1.pos_mlp.0.weight
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans1.pos_mlp.0.bias
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans1.pos_mlp.1.weight
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans1.pos_mlp.1.bias
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans1.pos_mlp.3.weight
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans1.pos_mlp.3.bias
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans1.attn_mlp.0.weight
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans1.attn_mlp.0.bias
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans1.attn_mlp.1.weight
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans1.attn_mlp.1.bias
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans1.attn_mlp.3.weight
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans1.attn_mlp.3.bias
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans1.conv_end.weight
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans1.conv_end.bias
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans2.mlp_v.conv_1.weight
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans2.mlp_v.conv_1.bias
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans2.mlp_v.conv_2.weight
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans2.mlp_v.conv_2.bias
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans2.mlp_v.conv_shortcut.weight
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans2.mlp_v.conv_shortcut.bias
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans2.conv_key.weight
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans2.conv_key.bias
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans2.conv_query.weight
+2026-04-24 15:08:27,646 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans2.conv_query.bias
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans2.conv_value.weight
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans2.conv_value.bias
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans2.conv_upfeat.weight
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans2.conv_upfeat.bias
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans2.pos_mlp.0.weight
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans2.pos_mlp.0.bias
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans2.pos_mlp.1.weight
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans2.pos_mlp.1.bias
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans2.pos_mlp.3.weight
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans2.pos_mlp.3.bias
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans2.attn_mlp.0.weight
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans2.attn_mlp.0.bias
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans2.attn_mlp.1.weight
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans2.attn_mlp.1.bias
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans2.attn_mlp.3.weight
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans2.attn_mlp.3.bias
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans2.conv_end.weight
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.uptrans2.conv_end.bias
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.mlp_delta_feature.conv_1.weight
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.mlp_delta_feature.conv_1.bias
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.mlp_delta_feature.conv_2.weight
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.mlp_delta_feature.conv_2.bias
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.mlp_delta_feature.conv_shortcut.weight
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.mlp_delta_feature.conv_shortcut.bias
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.mlp_delta.mlp.0.weight
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.mlp_delta.mlp.0.bias
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.mlp_delta.mlp.2.weight
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - decoder.up_layers.2.mlp_delta.mlp.2.bias
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - difficulty_embedding.embed.weight
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - difficulty_predictor.0.weight
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - difficulty_predictor.0.bias
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - difficulty_predictor.2.weight
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - difficulty_predictor.2.bias
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - =========================
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - Untrainable_parameters:
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - =========================
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - =========================
+2026-04-24 15:08:27,647 - UpTrans_DiffCond_dryrun - INFO - Using Data parallel ...
+2026-04-24 15:08:31,540 - UpTrans_DiffCond_dryrun - INFO - [Epoch 0/0][Batch 1/1311] BatchTime = 3.887 (s) DataTime = 0.117 (s) Losses = ['2.1322', '0.6855'] lr = 0.000100
+2026-04-24 15:09:21,493 - UpTrans_DiffCond_dryrun - INFO - [Epoch 0/0][Batch 101/1311] BatchTime = 0.499 (s) DataTime = 0.002 (s) Losses = ['1.5224', '0.3862'] lr = 0.000100
+2026-04-24 15:10:11,293 - UpTrans_DiffCond_dryrun - INFO - [Epoch 0/0][Batch 201/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['3.3578', '1.1797'] lr = 0.000100
+2026-04-24 15:11:01,194 - UpTrans_DiffCond_dryrun - INFO - [Epoch 0/0][Batch 301/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.8862', '0.9183'] lr = 0.000100
+2026-04-24 15:11:51,195 - UpTrans_DiffCond_dryrun - INFO - [Epoch 0/0][Batch 401/1311] BatchTime = 0.501 (s) DataTime = 0.001 (s) Losses = ['1.9232', '0.5284'] lr = 0.000100
+2026-04-24 15:12:41,194 - UpTrans_DiffCond_dryrun - INFO - [Epoch 0/0][Batch 501/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['2.2756', '0.6033'] lr = 0.000100
+2026-04-24 15:13:31,293 - UpTrans_DiffCond_dryrun - INFO - [Epoch 0/0][Batch 601/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.6742', '0.3967'] lr = 0.000100
+2026-04-24 15:14:21,393 - UpTrans_DiffCond_dryrun - INFO - [Epoch 0/0][Batch 701/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['2.0409', '0.6514'] lr = 0.000100
+2026-04-24 15:15:11,193 - UpTrans_DiffCond_dryrun - INFO - [Epoch 0/0][Batch 801/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['1.7218', '0.4602'] lr = 0.000100
+2026-04-24 15:16:01,193 - UpTrans_DiffCond_dryrun - INFO - [Epoch 0/0][Batch 901/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['4.6078', '1.5164'] lr = 0.000100
+2026-04-24 15:16:51,007 - UpTrans_DiffCond_dryrun - INFO - [Epoch 0/0][Batch 1001/1311] BatchTime = 0.512 (s) DataTime = 0.006 (s) Losses = ['1.6776', '0.3872'] lr = 0.000100
+2026-04-24 15:17:40,794 - UpTrans_DiffCond_dryrun - INFO - [Epoch 0/0][Batch 1101/1311] BatchTime = 0.500 (s) DataTime = 0.002 (s) Losses = ['1.9022', '0.5573'] lr = 0.000100
+2026-04-24 15:18:30,796 - UpTrans_DiffCond_dryrun - INFO - [Epoch 0/0][Batch 1201/1311] BatchTime = 0.502 (s) DataTime = 0.002 (s) Losses = ['2.8737', '0.8433'] lr = 0.000100
+2026-04-24 15:19:20,893 - UpTrans_DiffCond_dryrun - INFO - [Epoch 0/0][Batch 1301/1311] BatchTime = 0.500 (s) DataTime = 0.001 (s) Losses = ['3.2011', '0.9046'] lr = 0.000100
+2026-04-24 15:19:26,039 - UpTrans_DiffCond_dryrun - INFO - [Training] EPOCH: 0 EpochTime = 658.386 (s) Losses = ['2.2582', '0.6437']
+2026-04-24 15:19:26,040 - UpTrans_DiffCond_dryrun - INFO - [VALIDATION] Start validating epoch 0
+2026-04-24 15:20:04,325 - UpTrans_DiffCond_dryrun - INFO - Test[1051/10518] Taxonomy = 02691156 Sample = c7749c0a8b61f43bc9b9e28055202e3d Losses = ['17.4174', '1.2822', '12.4462', '0.7903'] Metrics = ['0.5276', '12.4462', '0.7903', '0.0000']
+2026-04-24 15:20:42,365 - UpTrans_DiffCond_dryrun - INFO - Test[2102/10518] Taxonomy = 03211117 Sample = ab2f9418c111cc6ddb965514105122a4 Losses = ['14.9004', '0.7753', '7.2868', '0.1504'] Metrics = ['0.7292', '7.2868', '0.1504', '0.0000']
+2026-04-24 15:21:20,267 - UpTrans_DiffCond_dryrun - INFO - Test[3153/10518] Taxonomy = 02876657 Sample = c5032e4be091aabb36fe7a88df793982 Losses = ['29.2258', '3.4734', '13.5034', '0.6314'] Metrics = ['0.4065', '13.5034', '0.6314', '0.0000']
+2026-04-24 15:21:58,200 - UpTrans_DiffCond_dryrun - INFO - Test[4204/10518] Taxonomy = 03211117 Sample = 722df1da5778d45b1e43523279c7f09f Losses = ['21.7391', '1.8553', '11.8964', '0.5052'] Metrics = ['0.4976', '11.8964', '0.5052', '0.0000']
+2026-04-24 15:22:36,309 - UpTrans_DiffCond_dryrun - INFO - Test[5255/10518] Taxonomy = 02828884 Sample = 14b63361a48a9fffe4a048c146e8bd43 Losses = ['22.7803', '2.1061', '9.3310', '0.2903'] Metrics = ['0.5763', '9.3310', '0.2903', '0.0000']
+2026-04-24 15:23:14,208 - UpTrans_DiffCond_dryrun - INFO - Test[6306/10518] Taxonomy = 03211117 Sample = d330d50a0255529d19ed6e1a590c9122 Losses = ['20.6428', '1.7722', '11.4334', '0.5200'] Metrics = ['0.5409', '11.4334', '0.5200', '0.0000']
+2026-04-24 15:23:52,018 - UpTrans_DiffCond_dryrun - INFO - Test[7357/10518] Taxonomy = 04379243 Sample = b1ca280d9567270ade98d10ab5975b59 Losses = ['34.8568', '7.5845', '22.7569', '3.5341'] Metrics = ['0.3277', '22.7569', '3.5341', '0.0000']
+2026-04-24 15:24:29,915 - UpTrans_DiffCond_dryrun - INFO - Test[8408/10518] Taxonomy = 03001627 Sample = 89208a619341d9fdb8c516ed5c4ce32 Losses = ['21.9484', '1.6635', '12.1417', '0.4084'] Metrics = ['0.3683', '12.1417', '0.4084', '0.0000']
+2026-04-24 15:25:07,927 - UpTrans_DiffCond_dryrun - INFO - Test[9459/10518] Taxonomy = 03001627 Sample = d0255120e3351121c3bd24f986301745 Losses = ['32.6692', '4.4491', '21.1368', '1.9892'] Metrics = ['0.2680', '21.1368', '1.9892', '0.0000']
+2026-04-24 15:25:45,805 - UpTrans_DiffCond_dryrun - INFO - Test[10510/10518] Taxonomy = 03636649 Sample = ea9ec4d9db2e06202471e6dd5ac3ef92 Losses = ['16.3210', '1.2731', '7.3486', '0.2508'] Metrics = ['0.7562', '7.3486', '0.2508', '0.0000']
+2026-04-24 15:25:46,161 - UpTrans_DiffCond_dryrun - INFO - [Validation] EPOCH: 0  Metrics = ['0.4406', '13.4881', '0.8159', '0.0000']
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - ============================ TEST RESULTS ============================
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 03759954	14	0.598 	14.425 	1.739 	0.000 	microphone	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 04330267	44	0.362 	15.701 	1.117 	0.000 	stove	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 03261776	15	0.423 	14.374 	0.880 	0.000 	earphone	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 03513137	33	0.295 	18.567 	1.513 	0.000 	helmet	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 04460130	27	0.490 	13.186 	0.779 	0.000 	tower	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 04468005	78	0.469 	12.214 	0.577 	0.000 	train	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 03761084	31	0.315 	15.600 	0.896 	0.000 	microwaves	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 04004475	34	0.344 	16.319 	1.208 	0.000 	printer	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 03938244	20	0.370 	14.533 	0.748 	0.000 	pillow	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 02992529	167	0.496 	10.709 	0.376 	0.000 	cellphone	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 02808440	172	0.378 	14.389 	0.908 	0.000 	bathtub	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 04530566	388	0.576 	10.866 	0.538 	0.000 	watercraft	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 02871439	91	0.326 	15.228 	0.902 	0.000 	bookshelf	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 03593526	120	0.334 	17.185 	1.371 	0.000 	jar	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 04554684	34	0.299 	16.380 	1.081 	0.000 	washer	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 03467517	160	0.841 	6.512 	0.214 	0.000 	guitar	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 04401088	218	0.495 	10.680 	0.374 	0.000 	telephone	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 02954340	12	0.393 	13.080 	0.583 	0.000 	cap	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 02933112	315	0.310 	14.860 	0.770 	0.000 	cabinet	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 03642806	92	0.466 	10.730 	0.345 	0.000 	laptop	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 02924116	188	0.441 	12.125 	0.518 	0.000 	bus	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 02946921	22	0.314 	15.913 	1.208 	0.000 	can	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 02818832	47	0.361 	15.061 	0.972 	0.000 	bed	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 04256520	635	0.374 	13.671 	0.651 	0.000 	sofa	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 04379243	1687	0.461 	12.247 	0.666 	0.000 	table	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 02747177	69	0.260 	17.165 	1.026 	0.000 	trash bin	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 03046257	131	0.386 	14.144 	0.802 	0.000 	clock	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 04225987	31	0.622 	9.600 	0.365 	0.000 	skateboard	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 03797390	43	0.257 	18.273 	1.398 	0.000 	mug	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 03001627	1356	0.453 	12.978 	0.749 	0.000 	chair	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 03691459	320	0.330 	16.386 	1.140 	0.000 	loudspeaker	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 02942699	23	0.333 	18.301 	1.842 	0.000 	camera	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 03636649	464	0.607 	12.318 	1.192 	0.000 	lamp	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 02691156	809	0.639 	9.244 	0.363 	0.000 	airplane	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 02773838	17	0.421 	13.195 	0.693 	0.000 	bag	
+2026-04-24 15:25:46,162 - UpTrans_DiffCond_dryrun - INFO - 02958343	703	0.290 	15.648 	0.814 	0.000 	car	
+2026-04-24 15:25:46,163 - UpTrans_DiffCond_dryrun - INFO - 02880940	38	0.294 	15.972 	0.892 	0.000 	bowl	
+2026-04-24 15:25:46,163 - UpTrans_DiffCond_dryrun - INFO - 04099429	17	0.749 	8.044 	0.332 	0.000 	rocket	
+2026-04-24 15:25:46,163 - UpTrans_DiffCond_dryrun - INFO - 02828884	363	0.513 	10.780 	0.461 	0.000 	bench	
+2026-04-24 15:25:46,163 - UpTrans_DiffCond_dryrun - INFO - 04090263	475	0.742 	8.279 	0.382 	0.000 	rifle	
+2026-04-24 15:25:46,163 - UpTrans_DiffCond_dryrun - INFO - 03211117	219	0.426 	12.797 	0.660 	0.000 	display	
+2026-04-24 15:25:46,163 - UpTrans_DiffCond_dryrun - INFO - 02876657	100	0.495 	12.089 	0.651 	0.000 	bottle	
+2026-04-24 15:25:46,163 - UpTrans_DiffCond_dryrun - INFO - 03710193	19	0.616 	9.960 	0.429 	0.000 	mailbox	
+2026-04-24 15:25:46,163 - UpTrans_DiffCond_dryrun - INFO - 03790512	68	0.338 	15.247 	0.954 	0.000 	motorbike	
+2026-04-24 15:25:46,163 - UpTrans_DiffCond_dryrun - INFO - 03325088	149	0.565 	13.292 	1.295 	0.000 	faucet	
+2026-04-24 15:25:46,163 - UpTrans_DiffCond_dryrun - INFO - 02801938	23	0.304 	15.379 	0.785 	0.000 	basket	
+2026-04-24 15:25:46,163 - UpTrans_DiffCond_dryrun - INFO - 03337140	60	0.317 	15.163 	0.819 	0.000 	file cabinet	
+2026-04-24 15:25:46,163 - UpTrans_DiffCond_dryrun - INFO - 02843684	15	0.325 	16.214 	0.946 	0.000 	birdhouse	
+2026-04-24 15:25:46,163 - UpTrans_DiffCond_dryrun - INFO - 03624134	85	0.807 	6.663 	0.208 	0.000 	knife	
+2026-04-24 15:25:46,163 - UpTrans_DiffCond_dryrun - INFO - 03991062	121	0.316 	18.088 	1.500 	0.000 	flowerpot	
+2026-04-24 15:25:46,163 - UpTrans_DiffCond_dryrun - INFO - 03948459	62	0.560 	10.901 	0.559 	0.000 	pistol	
+2026-04-24 15:25:46,163 - UpTrans_DiffCond_dryrun - INFO - 03928116	48	0.362 	15.282 	1.054 	0.000 	piano	
+2026-04-24 15:25:46,163 - UpTrans_DiffCond_dryrun - INFO - 03207941	19	0.316 	15.247 	0.845 	0.000 	dishwasher	
+2026-04-24 15:25:46,163 - UpTrans_DiffCond_dryrun - INFO - 04074963	14	0.538 	10.465 	0.394 	0.000 	remote	
+2026-04-24 15:25:46,163 - UpTrans_DiffCond_dryrun - INFO - 03085013	13	0.526 	10.171 	0.389 	0.000 	keyboard	
+2026-04-24 15:25:46,163 - UpTrans_DiffCond_dryrun - INFO - Overall		0.441 	13.488 	0.816 	0.000 	
+2026-04-24 15:25:46,480 - UpTrans_DiffCond_dryrun - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond_dryrun/ShapeNet55_models/uptrans_diffcond_dryrun/ckpt-best.pth
+2026-04-24 15:25:46,747 - UpTrans_DiffCond_dryrun - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond_dryrun/ShapeNet55_models/uptrans_diffcond_dryrun/ckpt-last.pth
+2026-04-24 15:25:47,022 - UpTrans_DiffCond_dryrun - INFO - Save checkpoint at ./experiments/UpTrans_DiffCond_dryrun/ShapeNet55_models/uptrans_diffcond_dryrun/ckpt-epoch-000.pth

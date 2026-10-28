@@ -1,0 +1,25 @@
+[11:25:39] python Python 3.12.3 | torch 2.8.0+cu128 cuda 12.8
+[11:25:40] nvcc: Build cuda_12.8.r12.8/compiler.35583870_0
+[11:25:40] 1/6 python deps (pins relaxed per requirements.txt comments)
+WARNING: Running pip as the 'root' user can result in broken permissions and conflicting behaviour with the system package manager. It is recommended to use a virtual environment instead: https://pip.pypa.io/warnings/venv
+  torch unchanged: 2.8.0+cu128 12.8
+[11:25:44] 2/6 dataset SKIPPED (DATASET_REQUIRED=0)
+[11:25:44] 3/6 experiments/ on the data disk (checkpoints must not fill the 30 GB system disk)
+[11:25:44] 4/6 pointnet2_ops (clone via the academic proxy; build without it, no build isolation)
+  already installed
+[11:25:45] 5/6 CUDA extensions used by the AdaPoinTr path: chamfer_dist (loss/metrics) + emd (utils/metrics import)
+running install
+/root/miniconda3/lib/python3.12/site-packages/setuptools/_distutils/cmd.py:66: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` directly.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+        ********************************************************************************
+
+!!
+  self.initialize_options()
+error: [Errno 17] File exists: '/root/miniconda3/bin/python3.12'

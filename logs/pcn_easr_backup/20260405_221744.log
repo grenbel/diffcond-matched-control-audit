@@ -1,0 +1,502 @@
+2026-04-05 22:17:45,004 - AdaPoinTr_EASR_pilot - INFO - Copy the Config file from cfgs/PCN_models/AdaPoinTr_EASR_pilot.yaml to ./experiments/AdaPoinTr_EASR_pilot/PCN_models/easr_pilot_v3/config.yaml
+2026-04-05 22:17:45,004 - AdaPoinTr_EASR_pilot - INFO - args.config : cfgs/PCN_models/AdaPoinTr_EASR_pilot.yaml
+2026-04-05 22:17:45,005 - AdaPoinTr_EASR_pilot - INFO - args.launcher : none
+2026-04-05 22:17:45,005 - AdaPoinTr_EASR_pilot - INFO - args.local_rank : 0
+2026-04-05 22:17:45,005 - AdaPoinTr_EASR_pilot - INFO - args.num_workers : 8
+2026-04-05 22:17:45,005 - AdaPoinTr_EASR_pilot - INFO - args.seed : 42
+2026-04-05 22:17:45,005 - AdaPoinTr_EASR_pilot - INFO - args.deterministic : False
+2026-04-05 22:17:45,005 - AdaPoinTr_EASR_pilot - INFO - args.sync_bn : False
+2026-04-05 22:17:45,005 - AdaPoinTr_EASR_pilot - INFO - args.exp_name : easr_pilot_v3
+2026-04-05 22:17:45,005 - AdaPoinTr_EASR_pilot - INFO - args.start_ckpts : None
+2026-04-05 22:17:45,005 - AdaPoinTr_EASR_pilot - INFO - args.ckpts : None
+2026-04-05 22:17:45,005 - AdaPoinTr_EASR_pilot - INFO - args.val_freq : 1
+2026-04-05 22:17:45,005 - AdaPoinTr_EASR_pilot - INFO - args.resume : False
+2026-04-05 22:17:45,005 - AdaPoinTr_EASR_pilot - INFO - args.test : False
+2026-04-05 22:17:45,005 - AdaPoinTr_EASR_pilot - INFO - args.mode : None
+2026-04-05 22:17:45,005 - AdaPoinTr_EASR_pilot - INFO - args.experiment_path : ./experiments/AdaPoinTr_EASR_pilot/PCN_models/easr_pilot_v3
+2026-04-05 22:17:45,005 - AdaPoinTr_EASR_pilot - INFO - args.tfboard_path : ./experiments/AdaPoinTr_EASR_pilot/PCN_models/TFBoard/easr_pilot_v3
+2026-04-05 22:17:45,005 - AdaPoinTr_EASR_pilot - INFO - args.log_name : AdaPoinTr_EASR_pilot
+2026-04-05 22:17:45,005 - AdaPoinTr_EASR_pilot - INFO - args.use_gpu : True
+2026-04-05 22:17:45,005 - AdaPoinTr_EASR_pilot - INFO - args.distributed : False
+2026-04-05 22:17:45,005 - AdaPoinTr_EASR_pilot - INFO - config.optimizer = edict()
+2026-04-05 22:17:45,005 - AdaPoinTr_EASR_pilot - INFO - config.optimizer.type : AdamW
+2026-04-05 22:17:45,005 - AdaPoinTr_EASR_pilot - INFO - config.optimizer.kwargs = edict()
+2026-04-05 22:17:45,005 - AdaPoinTr_EASR_pilot - INFO - config.optimizer.kwargs.lr : 0.0002
+2026-04-05 22:17:45,005 - AdaPoinTr_EASR_pilot - INFO - config.optimizer.kwargs.weight_decay : 0.0005
+2026-04-05 22:17:45,005 - AdaPoinTr_EASR_pilot - INFO - config.scheduler = edict()
+2026-04-05 22:17:45,005 - AdaPoinTr_EASR_pilot - INFO - config.scheduler.type : LambdaLR
+2026-04-05 22:17:45,005 - AdaPoinTr_EASR_pilot - INFO - config.scheduler.kwargs = edict()
+2026-04-05 22:17:45,005 - AdaPoinTr_EASR_pilot - INFO - config.scheduler.kwargs.decay_step : 21
+2026-04-05 22:17:45,005 - AdaPoinTr_EASR_pilot - INFO - config.scheduler.kwargs.lr_decay : 0.9
+2026-04-05 22:17:45,005 - AdaPoinTr_EASR_pilot - INFO - config.scheduler.kwargs.lowest_decay : 0.02
+2026-04-05 22:17:45,005 - AdaPoinTr_EASR_pilot - INFO - config.bnmscheduler = edict()
+2026-04-05 22:17:45,005 - AdaPoinTr_EASR_pilot - INFO - config.bnmscheduler.type : Lambda
+2026-04-05 22:17:45,005 - AdaPoinTr_EASR_pilot - INFO - config.bnmscheduler.kwargs = edict()
+2026-04-05 22:17:45,005 - AdaPoinTr_EASR_pilot - INFO - config.bnmscheduler.kwargs.decay_step : 21
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.bnmscheduler.kwargs.bn_decay : 0.5
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.bnmscheduler.kwargs.bn_momentum : 0.9
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.bnmscheduler.kwargs.lowest_decay : 0.01
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.dataset = edict()
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.dataset.train = edict()
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.dataset.train._base_ = edict()
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.dataset.train._base_.NAME : PCN
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.dataset.train._base_.CATEGORY_FILE_PATH : data/PCN/PCN.json
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.dataset.train._base_.N_POINTS : 16384
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.dataset.train._base_.N_RENDERINGS : 8
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.dataset.train._base_.PARTIAL_POINTS_PATH : data/PCN/%s/partial/%s/%s/%02d.npy
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.dataset.train._base_.COMPLETE_POINTS_PATH : data/PCN/%s/complete/%s/%s.npy
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.dataset.train._base_.CARS : False
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.dataset.train.others = edict()
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.dataset.train.others.subset : train
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.dataset.train.others.bs : 32
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.dataset.val = edict()
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.dataset.val._base_ = edict()
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.dataset.val._base_.NAME : PCN
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.dataset.val._base_.CATEGORY_FILE_PATH : data/PCN/PCN.json
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.dataset.val._base_.N_POINTS : 16384
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.dataset.val._base_.N_RENDERINGS : 8
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.dataset.val._base_.PARTIAL_POINTS_PATH : data/PCN/%s/partial/%s/%s/%02d.npy
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.dataset.val._base_.COMPLETE_POINTS_PATH : data/PCN/%s/complete/%s/%s.npy
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.dataset.val._base_.CARS : False
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.dataset.val.others = edict()
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.dataset.val.others.subset : test
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.dataset.test = edict()
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.dataset.test._base_ = edict()
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.dataset.test._base_.NAME : PCN
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.dataset.test._base_.CATEGORY_FILE_PATH : data/PCN/PCN.json
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.dataset.test._base_.N_POINTS : 16384
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.dataset.test._base_.N_RENDERINGS : 8
+2026-04-05 22:17:45,006 - AdaPoinTr_EASR_pilot - INFO - config.dataset.test._base_.PARTIAL_POINTS_PATH : data/PCN/%s/partial/%s/%s/%02d.npy
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.dataset.test._base_.COMPLETE_POINTS_PATH : data/PCN/%s/complete/%s/%s.npy
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.dataset.test._base_.CARS : False
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.dataset.test.others = edict()
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.dataset.test.others.subset : test
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.model = edict()
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.model.NAME : AdaPoinTr_EASR
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.model.num_query : 512
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.model.num_points : 16384
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.model.center_num : [512, 256]
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.model.global_feature_dim : 1024
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.model.encoder_type : graph
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.model.decoder_type : fc
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.model.encoder_config = edict()
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.model.encoder_config.embed_dim : 384
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.model.encoder_config.depth : 6
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.model.encoder_config.num_heads : 6
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.model.encoder_config.k : 8
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.model.encoder_config.n_group : 2
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.model.encoder_config.mlp_ratio : 2.0
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.model.encoder_config.block_style_list : ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn']
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.model.encoder_config.combine_style : concat
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.model.decoder_config = edict()
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.model.decoder_config.embed_dim : 384
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.model.decoder_config.depth : 8
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.model.decoder_config.num_heads : 6
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.model.decoder_config.k : 8
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.model.decoder_config.n_group : 2
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.model.decoder_config.mlp_ratio : 2.0
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.model.decoder_config.self_attn_block_style_list : ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn']
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.model.decoder_config.self_attn_combine_style : concat
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.model.decoder_config.cross_attn_block_style_list : ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn']
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.model.decoder_config.cross_attn_combine_style : concat
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.model.easr_config = edict()
+2026-04-05 22:17:45,007 - AdaPoinTr_EASR_pilot - INFO - config.model.easr_config.top_k : 128
+2026-04-05 22:17:45,008 - AdaPoinTr_EASR_pilot - INFO - config.model.easr_config.lambda_error : 1.0
+2026-04-05 22:17:45,008 - AdaPoinTr_EASR_pilot - INFO - config.model.easr_config.lambda_normal : 0.0
+2026-04-05 22:17:45,008 - AdaPoinTr_EASR_pilot - INFO - config.model.easr_config.normal_warmup : 999
+2026-04-05 22:17:45,008 - AdaPoinTr_EASR_pilot - INFO - config.total_bs : 32
+2026-04-05 22:17:45,008 - AdaPoinTr_EASR_pilot - INFO - config.step_per_update : 1
+2026-04-05 22:17:45,008 - AdaPoinTr_EASR_pilot - INFO - config.max_epoch : 30
+2026-04-05 22:17:45,008 - AdaPoinTr_EASR_pilot - INFO - config.consider_metric : CDL1
+2026-04-05 22:17:45,008 - AdaPoinTr_EASR_pilot - INFO - Distributed training: False
+2026-04-05 22:17:45,008 - AdaPoinTr_EASR_pilot - INFO - Set random seed to 42, deterministic: False
+2026-04-05 22:17:51,314 - AdaPoinTr_EASR_pilot - INFO - Trainable_parameters:
+2026-04-05 22:17:51,314 - AdaPoinTr_EASR_pilot - INFO - =========================
+2026-04-05 22:17:51,314 - AdaPoinTr_EASR_pilot - INFO - base_model.grouper.input_trans.weight
+2026-04-05 22:17:51,314 - AdaPoinTr_EASR_pilot - INFO - base_model.grouper.input_trans.bias
+2026-04-05 22:17:51,314 - AdaPoinTr_EASR_pilot - INFO - base_model.grouper.layer1.0.weight
+2026-04-05 22:17:51,314 - AdaPoinTr_EASR_pilot - INFO - base_model.grouper.layer1.1.weight
+2026-04-05 22:17:51,314 - AdaPoinTr_EASR_pilot - INFO - base_model.grouper.layer1.1.bias
+2026-04-05 22:17:51,315 - AdaPoinTr_EASR_pilot - INFO - base_model.grouper.layer2.0.weight
+2026-04-05 22:17:51,315 - AdaPoinTr_EASR_pilot - INFO - base_model.grouper.layer2.1.weight
+2026-04-05 22:17:51,315 - AdaPoinTr_EASR_pilot - INFO - base_model.grouper.layer2.1.bias
+2026-04-05 22:17:51,315 - AdaPoinTr_EASR_pilot - INFO - base_model.grouper.layer3.0.weight
+2026-04-05 22:17:51,315 - AdaPoinTr_EASR_pilot - INFO - base_model.grouper.layer3.1.weight
+2026-04-05 22:17:51,315 - AdaPoinTr_EASR_pilot - INFO - base_model.grouper.layer3.1.bias
+2026-04-05 22:17:51,315 - AdaPoinTr_EASR_pilot - INFO - base_model.grouper.layer4.0.weight
+2026-04-05 22:17:51,315 - AdaPoinTr_EASR_pilot - INFO - base_model.grouper.layer4.1.weight
+2026-04-05 22:17:51,315 - AdaPoinTr_EASR_pilot - INFO - base_model.grouper.layer4.1.bias
+2026-04-05 22:17:51,315 - AdaPoinTr_EASR_pilot - INFO - base_model.pos_embed.0.weight
+2026-04-05 22:17:51,315 - AdaPoinTr_EASR_pilot - INFO - base_model.pos_embed.0.bias
+2026-04-05 22:17:51,315 - AdaPoinTr_EASR_pilot - INFO - base_model.pos_embed.2.weight
+2026-04-05 22:17:51,315 - AdaPoinTr_EASR_pilot - INFO - base_model.pos_embed.2.bias
+2026-04-05 22:17:51,315 - AdaPoinTr_EASR_pilot - INFO - base_model.input_proj.0.weight
+2026-04-05 22:17:51,315 - AdaPoinTr_EASR_pilot - INFO - base_model.input_proj.0.bias
+2026-04-05 22:17:51,315 - AdaPoinTr_EASR_pilot - INFO - base_model.input_proj.2.weight
+2026-04-05 22:17:51,315 - AdaPoinTr_EASR_pilot - INFO - base_model.input_proj.2.bias
+2026-04-05 22:17:51,315 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.0.norm1.weight
+2026-04-05 22:17:51,315 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.0.norm1.bias
+2026-04-05 22:17:51,315 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.0.norm2.weight
+2026-04-05 22:17:51,315 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.0.norm2.bias
+2026-04-05 22:17:51,315 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.0.mlp.fc1.weight
+2026-04-05 22:17:51,315 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.0.mlp.fc1.bias
+2026-04-05 22:17:51,315 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.0.mlp.fc2.weight
+2026-04-05 22:17:51,315 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.0.mlp.fc2.bias
+2026-04-05 22:17:51,315 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.0.attn.qkv.weight
+2026-04-05 22:17:51,315 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.0.attn.qkv.bias
+2026-04-05 22:17:51,315 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.0.attn.proj.weight
+2026-04-05 22:17:51,316 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.0.attn.proj.bias
+2026-04-05 22:17:51,316 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.0.local_attn.knn_map.0.weight
+2026-04-05 22:17:51,316 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.0.local_attn.knn_map.0.bias
+2026-04-05 22:17:51,316 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.0.merge_map.weight
+2026-04-05 22:17:51,316 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.0.merge_map.bias
+2026-04-05 22:17:51,316 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.1.norm1.weight
+2026-04-05 22:17:51,316 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.1.norm1.bias
+2026-04-05 22:17:51,316 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.1.norm2.weight
+2026-04-05 22:17:51,316 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.1.norm2.bias
+2026-04-05 22:17:51,316 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.1.mlp.fc1.weight
+2026-04-05 22:17:51,316 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.1.mlp.fc1.bias
+2026-04-05 22:17:51,316 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.1.mlp.fc2.weight
+2026-04-05 22:17:51,316 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.1.mlp.fc2.bias
+2026-04-05 22:17:51,316 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.1.attn.qkv.weight
+2026-04-05 22:17:51,316 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.1.attn.qkv.bias
+2026-04-05 22:17:51,316 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.1.attn.proj.weight
+2026-04-05 22:17:51,316 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.1.attn.proj.bias
+2026-04-05 22:17:51,316 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.2.norm1.weight
+2026-04-05 22:17:51,316 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.2.norm1.bias
+2026-04-05 22:17:51,316 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.2.norm2.weight
+2026-04-05 22:17:51,316 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.2.norm2.bias
+2026-04-05 22:17:51,316 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.2.mlp.fc1.weight
+2026-04-05 22:17:51,316 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.2.mlp.fc1.bias
+2026-04-05 22:17:51,316 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.2.mlp.fc2.weight
+2026-04-05 22:17:51,316 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.2.mlp.fc2.bias
+2026-04-05 22:17:51,316 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.2.attn.qkv.weight
+2026-04-05 22:17:51,316 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.2.attn.qkv.bias
+2026-04-05 22:17:51,316 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.2.attn.proj.weight
+2026-04-05 22:17:51,316 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.2.attn.proj.bias
+2026-04-05 22:17:51,317 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.3.norm1.weight
+2026-04-05 22:17:51,317 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.3.norm1.bias
+2026-04-05 22:17:51,317 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.3.norm2.weight
+2026-04-05 22:17:51,317 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.3.norm2.bias
+2026-04-05 22:17:51,317 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.3.mlp.fc1.weight
+2026-04-05 22:17:51,317 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.3.mlp.fc1.bias
+2026-04-05 22:17:51,317 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.3.mlp.fc2.weight
+2026-04-05 22:17:51,317 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.3.mlp.fc2.bias
+2026-04-05 22:17:51,317 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.3.attn.qkv.weight
+2026-04-05 22:17:51,317 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.3.attn.qkv.bias
+2026-04-05 22:17:51,317 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.3.attn.proj.weight
+2026-04-05 22:17:51,317 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.3.attn.proj.bias
+2026-04-05 22:17:51,317 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.4.norm1.weight
+2026-04-05 22:17:51,317 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.4.norm1.bias
+2026-04-05 22:17:51,317 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.4.norm2.weight
+2026-04-05 22:17:51,317 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.4.norm2.bias
+2026-04-05 22:17:51,317 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.4.mlp.fc1.weight
+2026-04-05 22:17:51,317 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.4.mlp.fc1.bias
+2026-04-05 22:17:51,317 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.4.mlp.fc2.weight
+2026-04-05 22:17:51,317 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.4.mlp.fc2.bias
+2026-04-05 22:17:51,317 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.4.attn.qkv.weight
+2026-04-05 22:17:51,317 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.4.attn.qkv.bias
+2026-04-05 22:17:51,317 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.4.attn.proj.weight
+2026-04-05 22:17:51,317 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.4.attn.proj.bias
+2026-04-05 22:17:51,317 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.5.norm1.weight
+2026-04-05 22:17:51,317 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.5.norm1.bias
+2026-04-05 22:17:51,317 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.5.norm2.weight
+2026-04-05 22:17:51,317 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.5.norm2.bias
+2026-04-05 22:17:51,317 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.5.mlp.fc1.weight
+2026-04-05 22:17:51,317 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.5.mlp.fc1.bias
+2026-04-05 22:17:51,318 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.5.mlp.fc2.weight
+2026-04-05 22:17:51,318 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.5.mlp.fc2.bias
+2026-04-05 22:17:51,318 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.5.attn.qkv.weight
+2026-04-05 22:17:51,318 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.5.attn.qkv.bias
+2026-04-05 22:17:51,318 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.5.attn.proj.weight
+2026-04-05 22:17:51,318 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.blocks.blocks.5.attn.proj.bias
+2026-04-05 22:17:51,318 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.norm.weight
+2026-04-05 22:17:51,318 - AdaPoinTr_EASR_pilot - INFO - base_model.encoder.norm.bias
+2026-04-05 22:17:51,318 - AdaPoinTr_EASR_pilot - INFO - base_model.increase_dim.0.weight
+2026-04-05 22:17:51,318 - AdaPoinTr_EASR_pilot - INFO - base_model.increase_dim.0.bias
+2026-04-05 22:17:51,318 - AdaPoinTr_EASR_pilot - INFO - base_model.increase_dim.2.weight
+2026-04-05 22:17:51,318 - AdaPoinTr_EASR_pilot - INFO - base_model.increase_dim.2.bias
+2026-04-05 22:17:51,318 - AdaPoinTr_EASR_pilot - INFO - base_model.coarse_pred.0.weight
+2026-04-05 22:17:51,318 - AdaPoinTr_EASR_pilot - INFO - base_model.coarse_pred.0.bias
+2026-04-05 22:17:51,318 - AdaPoinTr_EASR_pilot - INFO - base_model.coarse_pred.2.weight
+2026-04-05 22:17:51,318 - AdaPoinTr_EASR_pilot - INFO - base_model.coarse_pred.2.bias
+2026-04-05 22:17:51,318 - AdaPoinTr_EASR_pilot - INFO - base_model.mlp_query.0.weight
+2026-04-05 22:17:51,318 - AdaPoinTr_EASR_pilot - INFO - base_model.mlp_query.0.bias
+2026-04-05 22:17:51,318 - AdaPoinTr_EASR_pilot - INFO - base_model.mlp_query.2.weight
+2026-04-05 22:17:51,318 - AdaPoinTr_EASR_pilot - INFO - base_model.mlp_query.2.bias
+2026-04-05 22:17:51,318 - AdaPoinTr_EASR_pilot - INFO - base_model.mlp_query.4.weight
+2026-04-05 22:17:51,318 - AdaPoinTr_EASR_pilot - INFO - base_model.mlp_query.4.bias
+2026-04-05 22:17:51,318 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.0.norm2.weight
+2026-04-05 22:17:51,318 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.0.norm2.bias
+2026-04-05 22:17:51,318 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.0.mlp.fc1.weight
+2026-04-05 22:17:51,318 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.0.mlp.fc1.bias
+2026-04-05 22:17:51,318 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.0.mlp.fc2.weight
+2026-04-05 22:17:51,318 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.0.mlp.fc2.bias
+2026-04-05 22:17:51,318 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.0.norm1.weight
+2026-04-05 22:17:51,319 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.0.norm1.bias
+2026-04-05 22:17:51,319 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.0.self_attn.qkv.weight
+2026-04-05 22:17:51,319 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.0.self_attn.qkv.bias
+2026-04-05 22:17:51,319 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.0.self_attn.proj.weight
+2026-04-05 22:17:51,319 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.0.self_attn.proj.bias
+2026-04-05 22:17:51,319 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.0.local_self_attn.knn_map.0.weight
+2026-04-05 22:17:51,319 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.0.local_self_attn.knn_map.0.bias
+2026-04-05 22:17:51,319 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.0.self_attn_merge_map.weight
+2026-04-05 22:17:51,319 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.0.self_attn_merge_map.bias
+2026-04-05 22:17:51,319 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.0.norm_q.weight
+2026-04-05 22:17:51,319 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.0.norm_q.bias
+2026-04-05 22:17:51,319 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.0.norm_v.weight
+2026-04-05 22:17:51,319 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.0.norm_v.bias
+2026-04-05 22:17:51,319 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.0.cross_attn.q_map.weight
+2026-04-05 22:17:51,319 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.0.cross_attn.q_map.bias
+2026-04-05 22:17:51,319 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.0.cross_attn.k_map.weight
+2026-04-05 22:17:51,319 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.0.cross_attn.k_map.bias
+2026-04-05 22:17:51,319 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.0.cross_attn.v_map.weight
+2026-04-05 22:17:51,319 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.0.cross_attn.v_map.bias
+2026-04-05 22:17:51,319 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.0.cross_attn.proj.weight
+2026-04-05 22:17:51,319 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.0.cross_attn.proj.bias
+2026-04-05 22:17:51,319 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.0.local_cross_attn.knn_map.0.weight
+2026-04-05 22:17:51,319 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.0.local_cross_attn.knn_map.0.bias
+2026-04-05 22:17:51,319 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.0.cross_attn_merge_map.weight
+2026-04-05 22:17:51,319 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.0.cross_attn_merge_map.bias
+2026-04-05 22:17:51,319 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.1.norm2.weight
+2026-04-05 22:17:51,319 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.1.norm2.bias
+2026-04-05 22:17:51,319 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.1.mlp.fc1.weight
+2026-04-05 22:17:51,319 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.1.mlp.fc1.bias
+2026-04-05 22:17:51,319 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.1.mlp.fc2.weight
+2026-04-05 22:17:51,320 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.1.mlp.fc2.bias
+2026-04-05 22:17:51,320 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.1.norm1.weight
+2026-04-05 22:17:51,320 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.1.norm1.bias
+2026-04-05 22:17:51,320 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.1.self_attn.qkv.weight
+2026-04-05 22:17:51,320 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.1.self_attn.qkv.bias
+2026-04-05 22:17:51,320 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.1.self_attn.proj.weight
+2026-04-05 22:17:51,320 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.1.self_attn.proj.bias
+2026-04-05 22:17:51,320 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.1.norm_q.weight
+2026-04-05 22:17:51,320 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.1.norm_q.bias
+2026-04-05 22:17:51,320 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.1.norm_v.weight
+2026-04-05 22:17:51,320 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.1.norm_v.bias
+2026-04-05 22:17:51,320 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.1.cross_attn.q_map.weight
+2026-04-05 22:17:51,320 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.1.cross_attn.q_map.bias
+2026-04-05 22:17:51,320 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.1.cross_attn.k_map.weight
+2026-04-05 22:17:51,320 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.1.cross_attn.k_map.bias
+2026-04-05 22:17:51,320 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.1.cross_attn.v_map.weight
+2026-04-05 22:17:51,320 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.1.cross_attn.v_map.bias
+2026-04-05 22:17:51,320 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.1.cross_attn.proj.weight
+2026-04-05 22:17:51,320 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.1.cross_attn.proj.bias
+2026-04-05 22:17:51,320 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.2.norm2.weight
+2026-04-05 22:17:51,320 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.2.norm2.bias
+2026-04-05 22:17:51,320 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.2.mlp.fc1.weight
+2026-04-05 22:17:51,320 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.2.mlp.fc1.bias
+2026-04-05 22:17:51,320 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.2.mlp.fc2.weight
+2026-04-05 22:17:51,320 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.2.mlp.fc2.bias
+2026-04-05 22:17:51,320 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.2.norm1.weight
+2026-04-05 22:17:51,320 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.2.norm1.bias
+2026-04-05 22:17:51,320 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.2.self_attn.qkv.weight
+2026-04-05 22:17:51,320 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.2.self_attn.qkv.bias
+2026-04-05 22:17:51,320 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.2.self_attn.proj.weight
+2026-04-05 22:17:51,321 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.2.self_attn.proj.bias
+2026-04-05 22:17:51,321 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.2.norm_q.weight
+2026-04-05 22:17:51,321 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.2.norm_q.bias
+2026-04-05 22:17:51,321 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.2.norm_v.weight
+2026-04-05 22:17:51,321 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.2.norm_v.bias
+2026-04-05 22:17:51,321 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.2.cross_attn.q_map.weight
+2026-04-05 22:17:51,321 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.2.cross_attn.q_map.bias
+2026-04-05 22:17:51,321 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.2.cross_attn.k_map.weight
+2026-04-05 22:17:51,321 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.2.cross_attn.k_map.bias
+2026-04-05 22:17:51,321 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.2.cross_attn.v_map.weight
+2026-04-05 22:17:51,321 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.2.cross_attn.v_map.bias
+2026-04-05 22:17:51,321 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.2.cross_attn.proj.weight
+2026-04-05 22:17:51,321 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.2.cross_attn.proj.bias
+2026-04-05 22:17:51,321 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.3.norm2.weight
+2026-04-05 22:17:51,321 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.3.norm2.bias
+2026-04-05 22:17:51,321 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.3.mlp.fc1.weight
+2026-04-05 22:17:51,321 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.3.mlp.fc1.bias
+2026-04-05 22:17:51,321 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.3.mlp.fc2.weight
+2026-04-05 22:17:51,321 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.3.mlp.fc2.bias
+2026-04-05 22:17:51,321 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.3.norm1.weight
+2026-04-05 22:17:51,321 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.3.norm1.bias
+2026-04-05 22:17:51,321 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.3.self_attn.qkv.weight
+2026-04-05 22:17:51,321 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.3.self_attn.qkv.bias
+2026-04-05 22:17:51,321 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.3.self_attn.proj.weight
+2026-04-05 22:17:51,321 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.3.self_attn.proj.bias
+2026-04-05 22:17:51,321 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.3.norm_q.weight
+2026-04-05 22:17:51,321 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.3.norm_q.bias
+2026-04-05 22:17:51,321 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.3.norm_v.weight
+2026-04-05 22:17:51,321 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.3.norm_v.bias
+2026-04-05 22:17:51,321 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.3.cross_attn.q_map.weight
+2026-04-05 22:17:51,322 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.3.cross_attn.q_map.bias
+2026-04-05 22:17:51,322 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.3.cross_attn.k_map.weight
+2026-04-05 22:17:51,322 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.3.cross_attn.k_map.bias
+2026-04-05 22:17:51,322 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.3.cross_attn.v_map.weight
+2026-04-05 22:17:51,322 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.3.cross_attn.v_map.bias
+2026-04-05 22:17:51,322 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.3.cross_attn.proj.weight
+2026-04-05 22:17:51,322 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.3.cross_attn.proj.bias
+2026-04-05 22:17:51,322 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.4.norm2.weight
+2026-04-05 22:17:51,322 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.4.norm2.bias
+2026-04-05 22:17:51,322 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.4.mlp.fc1.weight
+2026-04-05 22:17:51,322 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.4.mlp.fc1.bias
+2026-04-05 22:17:51,322 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.4.mlp.fc2.weight
+2026-04-05 22:17:51,322 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.4.mlp.fc2.bias
+2026-04-05 22:17:51,322 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.4.norm1.weight
+2026-04-05 22:17:51,322 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.4.norm1.bias
+2026-04-05 22:17:51,322 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.4.self_attn.qkv.weight
+2026-04-05 22:17:51,322 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.4.self_attn.qkv.bias
+2026-04-05 22:17:51,322 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.4.self_attn.proj.weight
+2026-04-05 22:17:51,322 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.4.self_attn.proj.bias
+2026-04-05 22:17:51,322 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.4.norm_q.weight
+2026-04-05 22:17:51,322 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.4.norm_q.bias
+2026-04-05 22:17:51,322 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.4.norm_v.weight
+2026-04-05 22:17:51,322 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.4.norm_v.bias
+2026-04-05 22:17:51,322 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.4.cross_attn.q_map.weight
+2026-04-05 22:17:51,322 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.4.cross_attn.q_map.bias
+2026-04-05 22:17:51,322 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.4.cross_attn.k_map.weight
+2026-04-05 22:17:51,322 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.4.cross_attn.k_map.bias
+2026-04-05 22:17:51,322 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.4.cross_attn.v_map.weight
+2026-04-05 22:17:51,322 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.4.cross_attn.v_map.bias
+2026-04-05 22:17:51,322 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.4.cross_attn.proj.weight
+2026-04-05 22:17:51,323 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.4.cross_attn.proj.bias
+2026-04-05 22:17:51,323 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.5.norm2.weight
+2026-04-05 22:17:51,323 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.5.norm2.bias
+2026-04-05 22:17:51,323 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.5.mlp.fc1.weight
+2026-04-05 22:17:51,323 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.5.mlp.fc1.bias
+2026-04-05 22:17:51,323 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.5.mlp.fc2.weight
+2026-04-05 22:17:51,323 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.5.mlp.fc2.bias
+2026-04-05 22:17:51,323 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.5.norm1.weight
+2026-04-05 22:17:51,323 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.5.norm1.bias
+2026-04-05 22:17:51,323 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.5.self_attn.qkv.weight
+2026-04-05 22:17:51,323 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.5.self_attn.qkv.bias
+2026-04-05 22:17:51,323 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.5.self_attn.proj.weight
+2026-04-05 22:17:51,323 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.5.self_attn.proj.bias
+2026-04-05 22:17:51,323 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.5.norm_q.weight
+2026-04-05 22:17:51,323 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.5.norm_q.bias
+2026-04-05 22:17:51,323 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.5.norm_v.weight
+2026-04-05 22:17:51,323 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.5.norm_v.bias
+2026-04-05 22:17:51,323 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.5.cross_attn.q_map.weight
+2026-04-05 22:17:51,323 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.5.cross_attn.q_map.bias
+2026-04-05 22:17:51,323 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.5.cross_attn.k_map.weight
+2026-04-05 22:17:51,323 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.5.cross_attn.k_map.bias
+2026-04-05 22:17:51,323 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.5.cross_attn.v_map.weight
+2026-04-05 22:17:51,323 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.5.cross_attn.v_map.bias
+2026-04-05 22:17:51,323 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.5.cross_attn.proj.weight
+2026-04-05 22:17:51,323 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.5.cross_attn.proj.bias
+2026-04-05 22:17:51,323 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.6.norm2.weight
+2026-04-05 22:17:51,323 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.6.norm2.bias
+2026-04-05 22:17:51,323 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.6.mlp.fc1.weight
+2026-04-05 22:17:51,323 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.6.mlp.fc1.bias
+2026-04-05 22:17:51,323 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.6.mlp.fc2.weight
+2026-04-05 22:17:51,324 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.6.mlp.fc2.bias
+2026-04-05 22:17:51,324 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.6.norm1.weight
+2026-04-05 22:17:51,324 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.6.norm1.bias
+2026-04-05 22:17:51,324 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.6.self_attn.qkv.weight
+2026-04-05 22:17:51,324 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.6.self_attn.qkv.bias
+2026-04-05 22:17:51,324 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.6.self_attn.proj.weight
+2026-04-05 22:17:51,324 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.6.self_attn.proj.bias
+2026-04-05 22:17:51,324 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.6.norm_q.weight
+2026-04-05 22:17:51,324 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.6.norm_q.bias
+2026-04-05 22:17:51,324 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.6.norm_v.weight
+2026-04-05 22:17:51,324 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.6.norm_v.bias
+2026-04-05 22:17:51,324 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.6.cross_attn.q_map.weight
+2026-04-05 22:17:51,324 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.6.cross_attn.q_map.bias
+2026-04-05 22:17:51,324 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.6.cross_attn.k_map.weight
+2026-04-05 22:17:51,324 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.6.cross_attn.k_map.bias
+2026-04-05 22:17:51,324 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.6.cross_attn.v_map.weight
+2026-04-05 22:17:51,324 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.6.cross_attn.v_map.bias
+2026-04-05 22:17:51,324 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.6.cross_attn.proj.weight
+2026-04-05 22:17:51,324 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.6.cross_attn.proj.bias
+2026-04-05 22:17:51,324 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.7.norm2.weight
+2026-04-05 22:17:51,324 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.7.norm2.bias
+2026-04-05 22:17:51,324 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.7.mlp.fc1.weight
+2026-04-05 22:17:51,324 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.7.mlp.fc1.bias
+2026-04-05 22:17:51,324 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.7.mlp.fc2.weight
+2026-04-05 22:17:51,324 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.7.mlp.fc2.bias
+2026-04-05 22:17:51,324 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.7.norm1.weight
+2026-04-05 22:17:51,324 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.7.norm1.bias
+2026-04-05 22:17:51,324 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.7.self_attn.qkv.weight
+2026-04-05 22:17:51,324 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.7.self_attn.qkv.bias
+2026-04-05 22:17:51,324 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.7.self_attn.proj.weight
+2026-04-05 22:17:51,325 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.7.self_attn.proj.bias
+2026-04-05 22:17:51,325 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.7.norm_q.weight
+2026-04-05 22:17:51,325 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.7.norm_q.bias
+2026-04-05 22:17:51,325 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.7.norm_v.weight
+2026-04-05 22:17:51,325 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.7.norm_v.bias
+2026-04-05 22:17:51,325 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.7.cross_attn.q_map.weight
+2026-04-05 22:17:51,325 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.7.cross_attn.q_map.bias
+2026-04-05 22:17:51,325 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.7.cross_attn.k_map.weight
+2026-04-05 22:17:51,325 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.7.cross_attn.k_map.bias
+2026-04-05 22:17:51,325 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.7.cross_attn.v_map.weight
+2026-04-05 22:17:51,325 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.7.cross_attn.v_map.bias
+2026-04-05 22:17:51,325 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.7.cross_attn.proj.weight
+2026-04-05 22:17:51,325 - AdaPoinTr_EASR_pilot - INFO - base_model.decoder.blocks.blocks.7.cross_attn.proj.bias
+2026-04-05 22:17:51,325 - AdaPoinTr_EASR_pilot - INFO - base_model.query_ranking.0.weight
+2026-04-05 22:17:51,325 - AdaPoinTr_EASR_pilot - INFO - base_model.query_ranking.0.bias
+2026-04-05 22:17:51,325 - AdaPoinTr_EASR_pilot - INFO - base_model.query_ranking.2.weight
+2026-04-05 22:17:51,325 - AdaPoinTr_EASR_pilot - INFO - base_model.query_ranking.2.bias
+2026-04-05 22:17:51,325 - AdaPoinTr_EASR_pilot - INFO - base_model.query_ranking.4.weight
+2026-04-05 22:17:51,325 - AdaPoinTr_EASR_pilot - INFO - base_model.query_ranking.4.bias
+2026-04-05 22:17:51,325 - AdaPoinTr_EASR_pilot - INFO - decode_head.layer.fc1.weight
+2026-04-05 22:17:51,325 - AdaPoinTr_EASR_pilot - INFO - decode_head.layer.fc1.bias
+2026-04-05 22:17:51,325 - AdaPoinTr_EASR_pilot - INFO - decode_head.layer.fc2.weight
+2026-04-05 22:17:51,325 - AdaPoinTr_EASR_pilot - INFO - decode_head.layer.fc2.bias
+2026-04-05 22:17:51,325 - AdaPoinTr_EASR_pilot - INFO - increase_dim.0.weight
+2026-04-05 22:17:51,325 - AdaPoinTr_EASR_pilot - INFO - increase_dim.0.bias
+2026-04-05 22:17:51,325 - AdaPoinTr_EASR_pilot - INFO - increase_dim.1.weight
+2026-04-05 22:17:51,325 - AdaPoinTr_EASR_pilot - INFO - increase_dim.1.bias
+2026-04-05 22:17:51,325 - AdaPoinTr_EASR_pilot - INFO - increase_dim.3.weight
+2026-04-05 22:17:51,325 - AdaPoinTr_EASR_pilot - INFO - increase_dim.3.bias
+2026-04-05 22:17:51,325 - AdaPoinTr_EASR_pilot - INFO - reduce_map.weight
+2026-04-05 22:17:51,325 - AdaPoinTr_EASR_pilot - INFO - reduce_map.bias
+2026-04-05 22:17:51,326 - AdaPoinTr_EASR_pilot - INFO - easr.error_predictor.mlp.0.weight
+2026-04-05 22:17:51,326 - AdaPoinTr_EASR_pilot - INFO - easr.error_predictor.mlp.0.bias
+2026-04-05 22:17:51,326 - AdaPoinTr_EASR_pilot - INFO - easr.error_predictor.mlp.2.weight
+2026-04-05 22:17:51,326 - AdaPoinTr_EASR_pilot - INFO - easr.error_predictor.mlp.2.bias
+2026-04-05 22:17:51,326 - AdaPoinTr_EASR_pilot - INFO - easr.error_predictor.mlp.4.weight
+2026-04-05 22:17:51,326 - AdaPoinTr_EASR_pilot - INFO - easr.error_predictor.mlp.4.bias
+2026-04-05 22:17:51,326 - AdaPoinTr_EASR_pilot - INFO - easr.refine_head.fc1.weight
+2026-04-05 22:17:51,326 - AdaPoinTr_EASR_pilot - INFO - easr.refine_head.fc1.bias
+2026-04-05 22:17:51,326 - AdaPoinTr_EASR_pilot - INFO - easr.refine_head.fc2.weight
+2026-04-05 22:17:51,326 - AdaPoinTr_EASR_pilot - INFO - easr.refine_head.fc2.bias
+2026-04-05 22:17:51,326 - AdaPoinTr_EASR_pilot - INFO - easr.refine_head.fc_out.weight
+2026-04-05 22:17:51,326 - AdaPoinTr_EASR_pilot - INFO - easr.refine_head.fc_out.bias
+2026-04-05 22:17:51,326 - AdaPoinTr_EASR_pilot - INFO - =========================
+2026-04-05 22:17:51,326 - AdaPoinTr_EASR_pilot - INFO - Untrainable_parameters:
+2026-04-05 22:17:51,326 - AdaPoinTr_EASR_pilot - INFO - =========================
+2026-04-05 22:17:51,327 - AdaPoinTr_EASR_pilot - INFO - =========================
+2026-04-05 22:17:51,327 - AdaPoinTr_EASR_pilot - INFO - Using Data parallel ...
+2026-04-05 22:17:53,131 - AdaPoinTr_EASR_pilot - INFO - [Epoch 0/30][Batch 1/905] BatchTime = 1.794 (s) DataTime = 0.267 (s) Losses = ['21.7724', '136.0333'] lr = 0.000200
+2026-04-05 22:18:36,295 - AdaPoinTr_EASR_pilot - INFO - [Epoch 0/30][Batch 101/905] BatchTime = 0.442 (s) DataTime = 0.003 (s) Losses = ['7.8934', '50.9845'] lr = 0.000200
+2026-04-05 22:19:19,953 - AdaPoinTr_EASR_pilot - INFO - [Epoch 0/30][Batch 201/905] BatchTime = 0.500 (s) DataTime = 0.003 (s) Losses = ['5.7532', '50.3408'] lr = 0.000200
+2026-04-05 22:20:03,274 - AdaPoinTr_EASR_pilot - INFO - [Epoch 0/30][Batch 301/905] BatchTime = 0.394 (s) DataTime = 0.004 (s) Losses = ['5.8845', '50.1819'] lr = 0.000200
+2026-04-05 22:20:47,053 - AdaPoinTr_EASR_pilot - INFO - [Epoch 0/30][Batch 401/905] BatchTime = 0.473 (s) DataTime = 0.004 (s) Losses = ['6.1931', '42.4251'] lr = 0.000200
+2026-04-05 22:21:30,081 - AdaPoinTr_EASR_pilot - INFO - [Epoch 0/30][Batch 501/905] BatchTime = 0.401 (s) DataTime = 0.003 (s) Losses = ['5.6930', '46.0393'] lr = 0.000200
+2026-04-05 22:22:12,853 - AdaPoinTr_EASR_pilot - INFO - [Epoch 0/30][Batch 601/905] BatchTime = 0.472 (s) DataTime = 0.003 (s) Losses = ['5.6262', '41.3775'] lr = 0.000200
+2026-04-05 22:22:55,854 - AdaPoinTr_EASR_pilot - INFO - [Epoch 0/30][Batch 701/905] BatchTime = 0.500 (s) DataTime = 0.004 (s) Losses = ['5.6151', '38.9355'] lr = 0.000200
+2026-04-05 22:23:39,580 - AdaPoinTr_EASR_pilot - INFO - [Epoch 0/30][Batch 801/905] BatchTime = 0.400 (s) DataTime = 0.004 (s) Losses = ['5.6564', '36.8441'] lr = 0.000200
+2026-04-05 22:24:21,253 - AdaPoinTr_EASR_pilot - INFO - [Epoch 0/30][Batch 901/905] BatchTime = 0.480 (s) DataTime = 0.003 (s) Losses = ['5.2440', '38.9698'] lr = 0.000200
+2026-04-05 22:24:22,931 - AdaPoinTr_EASR_pilot - INFO - [Training] EPOCH: 0 EpochTime = 391.594 (s) Losses = ['6.4083', '46.3272']
+2026-04-05 22:24:22,932 - AdaPoinTr_EASR_pilot - INFO - [VALIDATION] Start validating epoch 0
+2026-04-05 22:24:35,342 - AdaPoinTr_EASR_pilot - INFO - Test[120/1200] Taxonomy = 02691156 Sample = d18f2aeae4146464bd46d022fd7d80aa Losses = ['13.8861', '1.0845', '9.9918', '0.5250'] Metrics = ['0.6990', '9.9918', '0.5250', '0.0000']
+2026-04-05 22:24:47,664 - AdaPoinTr_EASR_pilot - INFO - Test[240/1200] Taxonomy = 02933112 Sample = 8f55954a0b07a4b2bf64ff63662d244b Losses = ['25.3234', '2.4829', '17.6661', '1.2159'] Metrics = ['0.4609', '17.6661', '1.2159', '0.0000']
+2026-04-05 22:24:59,690 - AdaPoinTr_EASR_pilot - INFO - Test[360/1200] Taxonomy = 02958343 Sample = 5f148a8b824ed7e72a9eb0f146e94477 Losses = ['18.5183', '1.1509', '11.8924', '0.4398'] Metrics = ['0.5423', '11.8924', '0.4398', '0.0000']
+2026-04-05 22:25:11,784 - AdaPoinTr_EASR_pilot - INFO - Test[480/1200] Taxonomy = 03001627 Sample = 4344509d0442364d3f9d6e0ade5188b0 Losses = ['18.9769', '1.3193', '13.2125', '0.6924'] Metrics = ['0.5574', '13.2125', '0.6924', '0.0000']
+2026-04-05 22:25:24,134 - AdaPoinTr_EASR_pilot - INFO - Test[600/1200] Taxonomy = 03001627 Sample = ff5a945aef7a68ffcf9ff3ee543c2925 Losses = ['23.5391', '2.0005', '17.2135', '1.1342'] Metrics = ['0.4650', '17.2135', '1.1342', '0.0000']
+2026-04-05 22:25:36,301 - AdaPoinTr_EASR_pilot - INFO - Test[720/1200] Taxonomy = 03636649 Sample = d91cf049fa961ccb59f8e31ca87c470e Losses = ['22.0527', '1.9892', '17.4951', '1.4837'] Metrics = ['0.4814', '17.4951', '1.4837', '0.0000']
+2026-04-05 22:25:48,289 - AdaPoinTr_EASR_pilot - INFO - Test[840/1200] Taxonomy = 04256520 Sample = 9c0ed8415a0a9e5c49b1e464b71de577 Losses = ['22.0807', '1.6857', '14.1449', '0.8097'] Metrics = ['0.4817', '14.1449', '0.8097', '0.0000']
+2026-04-05 22:26:00,291 - AdaPoinTr_EASR_pilot - INFO - Test[960/1200] Taxonomy = 04379243 Sample = 668deaeb91295739664b3b9b23ddfcbc Losses = ['17.5538', '1.3150', '14.3887', '1.0665'] Metrics = ['0.5606', '14.3887', '1.0665', '0.0000']
+2026-04-05 22:26:12,285 - AdaPoinTr_EASR_pilot - INFO - Test[1080/1200] Taxonomy = 04530566 Sample = 370ab590d5f9f6e12998de2923cbf8ed Losses = ['18.2879', '1.1135', '12.3074', '0.5745'] Metrics = ['0.5798', '12.3074', '0.5745', '0.0000']
+2026-04-05 22:26:24,481 - AdaPoinTr_EASR_pilot - INFO - Test[1200/1200] Taxonomy = 04530566 Sample = fd52c80ae21d19251e0d0f6bac6856eb Losses = ['24.2151', '1.9733', '17.6639', '1.0748'] Metrics = ['0.4489', '17.6639', '1.0748', '0.0000']
+2026-04-05 22:26:24,599 - AdaPoinTr_EASR_pilot - INFO - [Validation] EPOCH: 0  Metrics = ['0.5019', '17.0496', '1.5099', '0.0000']
+2026-04-05 22:26:24,601 - AdaPoinTr_EASR_pilot - INFO - ============================ TEST RESULTS ============================
+2026-04-05 22:26:24,601 - AdaPoinTr_EASR_pilot - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2026-04-05 22:26:24,601 - AdaPoinTr_EASR_pilot - INFO - 02691156	150	0.641 	13.788 	1.260 	0.000 	airplane	
+2026-04-05 22:26:24,602 - AdaPoinTr_EASR_pilot - INFO - 02933112	150	0.390 	21.512 	1.939 	0.000 	cabinet	
+2026-04-05 22:26:24,602 - AdaPoinTr_EASR_pilot - INFO - 02958343	150	0.489 	14.389 	0.749 	0.000 	car	
+2026-04-05 22:26:24,602 - AdaPoinTr_EASR_pilot - INFO - 03001627	150	0.482 	17.121 	1.337 	0.000 	chair	
+2026-04-05 22:26:24,602 - AdaPoinTr_EASR_pilot - INFO - 03636649	150	0.501 	19.714 	2.246 	0.000 	lamp	
+2026-04-05 22:26:24,602 - AdaPoinTr_EASR_pilot - INFO - 04256520	150	0.406 	19.977 	2.160 	0.000 	sofa	
+2026-04-05 22:26:24,602 - AdaPoinTr_EASR_pilot - INFO - 04379243	150	0.528 	16.671 	1.587 	0.000 	table	
+2026-04-05 22:26:24,602 - AdaPoinTr_EASR_pilot - INFO - 04530566	150	0.579 	13.226 	0.801 	0.000 	watercraft	
+2026-04-05 22:26:24,603 - AdaPoinTr_EASR_pilot - INFO - Overall		0.502 	17.050 	1.510 	0.000 	
+2026-04-05 22:26:25,059 - AdaPoinTr_EASR_pilot - INFO - Save checkpoint at ./experiments/AdaPoinTr_EASR_pilot/PCN_models/easr_pilot_v3/ckpt-best.pth
+2026-04-05 22:26:25,437 - AdaPoinTr_EASR_pilot - INFO - Save checkpoint at ./experiments/AdaPoinTr_EASR_pilot/PCN_models/easr_pilot_v3/ckpt-last.pth
+2026-04-05 22:26:26,384 - AdaPoinTr_EASR_pilot - INFO - [Epoch 1/30][Batch 1/905] BatchTime = 0.944 (s) DataTime = 0.386 (s) Losses = ['5.5184', '41.6200'] lr = 0.000199
+2026-04-05 22:27:09,281 - AdaPoinTr_EASR_pilot - INFO - [Epoch 1/30][Batch 101/905] BatchTime = 0.399 (s) DataTime = 0.004 (s) Losses = ['5.7215', '37.0651'] lr = 0.000199
+2026-04-05 22:27:53,452 - AdaPoinTr_EASR_pilot - INFO - [Epoch 1/30][Batch 201/905] BatchTime = 0.472 (s) DataTime = 0.003 (s) Losses = ['5.8091', '38.6346'] lr = 0.000199

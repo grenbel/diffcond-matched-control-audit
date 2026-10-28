@@ -1,0 +1,144 @@
+=== Stage-2.5: PCN proxy difficulty precompute ===
+  config     : cfgs/dataset_configs/PCN.yaml
+  out        : data/PCN/difficulty_proxy.json
+  percentile : 95.0
+  device     : cuda
+  subsets    : ['train', 'test']
+
+--- Subset: train ---
+  enumerated 231792 sample entries
+  [2000/231792] rate=921.6/s  ETA=4.2min
+  [4000/231792] rate=1042.6/s  ETA=3.6min
+  [6000/231792] rate=1075.4/s  ETA=3.5min
+  [8000/231792] rate=1106.3/s  ETA=3.4min
+  [10000/231792] rate=1150.3/s  ETA=3.2min
+  [12000/231792] rate=1145.8/s  ETA=3.2min
+  [14000/231792] rate=1169.9/s  ETA=3.1min
+  [16000/231792] rate=1182.3/s  ETA=3.0min
+  [18000/231792] rate=1191.6/s  ETA=3.0min
+  [20000/231792] rate=1190.1/s  ETA=3.0min
+  [22000/231792] rate=1194.7/s  ETA=2.9min
+  [24000/231792] rate=1201.9/s  ETA=2.9min
+  [26000/231792] rate=1209.2/s  ETA=2.8min
+  [28000/231792] rate=1213.2/s  ETA=2.8min
+  [30000/231792] rate=1216.3/s  ETA=2.8min
+  [32000/231792] rate=1215.4/s  ETA=2.7min
+  [34000/231792] rate=1218.0/s  ETA=2.7min
+  [36000/231792] rate=1222.5/s  ETA=2.7min
+  [38000/231792] rate=1223.7/s  ETA=2.6min
+  [40000/231792] rate=1231.5/s  ETA=2.6min
+  [42000/231792] rate=1237.1/s  ETA=2.6min
+  [44000/231792] rate=1243.7/s  ETA=2.5min
+  [46000/231792] rate=1245.0/s  ETA=2.5min
+  [48000/231792] rate=1250.0/s  ETA=2.5min
+  [50000/231792] rate=1255.1/s  ETA=2.4min
+  [52000/231792] rate=1261.2/s  ETA=2.4min
+  [54000/231792] rate=1263.1/s  ETA=2.3min
+  [56000/231792] rate=1266.2/s  ETA=2.3min
+  [58000/231792] rate=1268.7/s  ETA=2.3min
+  [60000/231792] rate=1274.3/s  ETA=2.2min
+  [62000/231792] rate=1276.2/s  ETA=2.2min
+  [64000/231792] rate=1278.2/s  ETA=2.2min
+  [66000/231792] rate=1282.4/s  ETA=2.2min
+  [68000/231792] rate=1285.8/s  ETA=2.1min
+  [70000/231792] rate=1289.6/s  ETA=2.1min
+  [72000/231792] rate=1290.6/s  ETA=2.1min
+  [74000/231792] rate=1292.0/s  ETA=2.0min
+  [76000/231792] rate=1292.1/s  ETA=2.0min
+  [78000/231792] rate=1293.9/s  ETA=2.0min
+  [80000/231792] rate=1291.6/s  ETA=2.0min
+  [82000/231792] rate=1292.8/s  ETA=1.9min
+  [84000/231792] rate=1294.4/s  ETA=1.9min
+  [86000/231792] rate=1293.3/s  ETA=1.9min
+  [88000/231792] rate=1289.1/s  ETA=1.9min
+  [90000/231792] rate=1284.1/s  ETA=1.8min
+  [92000/231792] rate=1284.5/s  ETA=1.8min
+  [94000/231792] rate=1285.6/s  ETA=1.8min
+  [96000/231792] rate=1284.5/s  ETA=1.8min
+  [98000/231792] rate=1283.8/s  ETA=1.7min
+  [100000/231792] rate=1282.5/s  ETA=1.7min
+  [102000/231792] rate=1282.7/s  ETA=1.7min
+  [104000/231792] rate=1281.8/s  ETA=1.7min
+  [106000/231792] rate=1282.4/s  ETA=1.6min
+  [108000/231792] rate=1281.6/s  ETA=1.6min
+  [110000/231792] rate=1281.3/s  ETA=1.6min
+  [112000/231792] rate=1281.6/s  ETA=1.6min
+  [114000/231792] rate=1279.3/s  ETA=1.5min
+  [116000/231792] rate=1279.4/s  ETA=1.5min
+  [118000/231792] rate=1280.2/s  ETA=1.5min
+  [120000/231792] rate=1279.9/s  ETA=1.5min
+  [122000/231792] rate=1281.2/s  ETA=1.4min
+  [124000/231792] rate=1280.0/s  ETA=1.4min
+  [126000/231792] rate=1280.2/s  ETA=1.4min
+  [128000/231792] rate=1279.9/s  ETA=1.4min
+  [130000/231792] rate=1279.8/s  ETA=1.3min
+  [132000/231792] rate=1280.9/s  ETA=1.3min
+  [134000/231792] rate=1280.0/s  ETA=1.3min
+  [136000/231792] rate=1280.3/s  ETA=1.2min
+  [138000/231792] rate=1280.1/s  ETA=1.2min
+  [140000/231792] rate=1280.9/s  ETA=1.2min
+  [142000/231792] rate=1281.1/s  ETA=1.2min
+  [144000/231792] rate=1278.5/s  ETA=1.1min
+  [146000/231792] rate=1279.7/s  ETA=1.1min
+  [148000/231792] rate=1279.9/s  ETA=1.1min
+  [150000/231792] rate=1281.0/s  ETA=1.1min
+  [152000/231792] rate=1282.4/s  ETA=1.0min
+  [154000/231792] rate=1284.6/s  ETA=1.0min
+  [156000/231792] rate=1286.4/s  ETA=1.0min
+  [158000/231792] rate=1287.5/s  ETA=1.0min
+  [160000/231792] rate=1289.1/s  ETA=0.9min
+  [162000/231792] rate=1289.3/s  ETA=0.9min
+  [164000/231792] rate=1291.1/s  ETA=0.9min
+  [166000/231792] rate=1292.0/s  ETA=0.8min
+  [168000/231792] rate=1292.3/s  ETA=0.8min
+  [170000/231792] rate=1292.7/s  ETA=0.8min
+  [172000/231792] rate=1293.6/s  ETA=0.8min
+  [174000/231792] rate=1294.5/s  ETA=0.7min
+  [176000/231792] rate=1294.3/s  ETA=0.7min
+  [178000/231792] rate=1295.0/s  ETA=0.7min
+  [180000/231792] rate=1295.9/s  ETA=0.7min
+  [182000/231792] rate=1297.1/s  ETA=0.6min
+  [184000/231792] rate=1298.4/s  ETA=0.6min
+  [186000/231792] rate=1299.0/s  ETA=0.6min
+  [188000/231792] rate=1300.0/s  ETA=0.6min
+  [190000/231792] rate=1300.4/s  ETA=0.5min
+  [192000/231792] rate=1301.6/s  ETA=0.5min
+  [194000/231792] rate=1302.0/s  ETA=0.5min
+  [196000/231792] rate=1302.5/s  ETA=0.5min
+  [198000/231792] rate=1303.1/s  ETA=0.4min
+  [200000/231792] rate=1302.9/s  ETA=0.4min
+  [202000/231792] rate=1303.4/s  ETA=0.4min
+  [204000/231792] rate=1304.4/s  ETA=0.4min
+  [206000/231792] rate=1304.1/s  ETA=0.3min
+  [208000/231792] rate=1304.1/s  ETA=0.3min
+  [210000/231792] rate=1305.0/s  ETA=0.3min
+  [212000/231792] rate=1306.0/s  ETA=0.3min
+  [214000/231792] rate=1306.5/s  ETA=0.2min
+  [216000/231792] rate=1307.5/s  ETA=0.2min
+  [218000/231792] rate=1307.1/s  ETA=0.2min
+  [220000/231792] rate=1306.4/s  ETA=0.2min
+  [222000/231792] rate=1306.5/s  ETA=0.1min
+  [224000/231792] rate=1306.6/s  ETA=0.1min
+  [226000/231792] rate=1306.8/s  ETA=0.1min
+  [228000/231792] rate=1307.0/s  ETA=0.0min
+  [230000/231792] rate=1307.2/s  ETA=0.0min
+  [231792/231792] rate=1306.9/s  ETA=0.0min
+  done in 3.0min  (231792/231792 ok, errors=none)
+
+--- Subset: test ---
+  enumerated 1200 sample entries
+  [1200/1200] rate=877.9/s  ETA=0.0min
+  done in 0.0min  (1200/1200 ok, errors=none)
+
+--- Tertile thresholds (train-only, n=231792) ---
+  min    = 0.00811
+  p33.3  = 0.10982
+  median = 0.14434
+  p66.7  = 0.17781
+  max    = 0.98123
+  mean   = 0.15520
+  std    = 0.09241
+  train: easy=77264 (33.3%)  median=77264 (33.3%)  hard=77264 (33.3%)  total=231792
+  test: easy=430 (35.8%)  median=311 (25.9%)  hard=459 (38.2%)  total=1200
+
+=== Saved: data/PCN/difficulty_proxy.json (232992 difficulty entries, 29.24 MB) ===

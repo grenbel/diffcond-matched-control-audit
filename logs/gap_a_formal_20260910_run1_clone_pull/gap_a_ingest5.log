@@ -1,0 +1,61 @@
+[15:54:21] archive: 8367547065 bytes md5 6dd43641c2859114f162d497b6a1aa1a sha256 70774799990cbdc02bb7bfe9c78af940d418f404c58d9093e548222e2f01d0c1
+[15:54:23] listing: top-level [ShapeNet55 ] entries 52471 npy 52470
+[16:01:07] unpacked into /root/autodl-tmp/official_unpack.Vjaerw
+{
+  "pc_dir": "/root/autodl-tmp/official_unpack.Vjaerw/ShapeNet55/shapenet_pc",
+  "mode": "full",
+  "checked_at": "2026-09-09T16:01:08+0800",
+  "split_names": 52470,
+  "files_present": 52470,
+  "extra_entries": 0,
+  "missing_names": 0,
+  "extra_examples": [],
+  "missing_examples": [],
+  "not_regular_file": 0,
+  "wrong_size": 0,
+  "bad_npy_header": 0,
+  "references_found": 17,
+  "references_expected": 17,
+  "references_byte_identical": 17,
+  "reference_names": [
+    "02808440-2b9228db2c77130d44221bef0fa3c36b.npy",
+    "02992529-298ca71453baf6ee2a9eb0f146e94477.npy",
+    "02992529-5f600251394fabe6808ca88aece2e3dc.npy",
+    "02992529-baafe1add38af23a5f0b5b54dbc4f35c.npy",
+    "02992529-d2f3eb92a31649647c17b7a9bb17a24.npy",
+    "02992529-e33e1483c4c22b1ae71852a7b0e4fcb6.npy",
+    "03467517-2331b83b682e6dcd1082f2ea630bf69e.npy",
+    "03593526-276bff32316ddd3eec0dc003f0209134.npy",
+    "03761084-6942c30f25bbcde7ced224a469840964.npy",
+    "04330267-65eb72bf33da5b1511ff208156ce047.npy",
+    "04330267-aa0f6ff9f592b327eadb8f8b5bc7d9a5.npy",
+    "04401088-fc1675526d043e81a2811061ff7e0824.npy",
+    "04468005-3aafecb126c5e46d49906937a72a14ff.npy",
+    "04468005-84a3fd24d2cefcfcd781754d41e2576e.npy",
+    "04530566-2a86437a50f1b51727ac692756be9e24.npy",
+    "04530566-2c8725b9a09b6d0a44ebbc705ad8c07.npy",
+    "04530566-d188b20659011142c8067f9682b92f0e.npy"
+  ],
+  "manifest_sha256": "20ab2c57367a49a9e8815bd622952d0f18b95b6310c65ce7cd6d6786054fa0aa",
+  "manifest_files": 52470,
+  "parquet_crosscheck": {
+    "shards": 25,
+    "rows": 52470,
+    "signatures": "loaded",
+    "sample": 200,
+    "matched": 200,
+    "tolerance": 1e-08,
+    "loader_float32_deviation": {
+      "n": 200,
+      "max": 2.331688569931891e-05,
+      "n_above_1e-5": 9
+    },
+    "note": "float64 normalisation (what the parquet holds) matched by symmetric nearest neighbour: content-membership evidence only, basenames not bound. loader_float32_deviation = Hausdorff distance between the training loader's float32 normalisation of the same file and the parquet row (diagnostic only)"
+  },
+  "failures": [],
+  "verdict": "PASS"
+}
+[16:03:47] existing /root/autodl-tmp/ShapeNet55-34/shapenet_pc has no accepted manifest yet; hashing it for comparison
+[16:04:50] existing accepted directory matches the archive manifest exactly; keeping it
+ACCEPTED.json written; manifest sha256 20ab2c57367a49a9e8815bd622952d0f18b95b6310c65ce7cd6d6786054fa0aa
+[16:04:51] accepted: 52470 clouds; linked at /root/PoinTr/data/ShapeNet55-34/shapenet_pc; next: python tools/gap_a_remote.py setup

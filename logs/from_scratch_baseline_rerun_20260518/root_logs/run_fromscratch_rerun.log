@@ -1,0 +1,35 @@
+GPU 0: NVIDIA GeForce RTX 5090 (UUID: GPU-a39cf806-338f-06f7-b902-3171a8f788b9)
+[2026-05-17 20:24:36] === from-scratch 30-ep baseline RE-RUN ===
+  config : cfgs/ShapeNet55_models/AdaPoinTr_baseline_smoke30.yaml
+  exp    : baseline_smoke30_rerun_seed42
+  seed   : 42 (matches original)
+  Estimated total: ~7 h GPU
+
+[2026-05-17 20:24:36] === Phase 1/2: Training (30 epochs from random init) ===
+[2026-05-18 02:46:14] === Phase 1/2 DONE ===
+
+[2026-05-18 02:46:14] === Phase 2/2: Stratified S/M/H eval ===
+  [02:46:14] eval mode=easy ...
+    OK
+  [03:14:08] eval mode=median ...
+    OK
+  [03:39:08] eval mode=hard ...
+    OK
+[2026-05-18 04:01:46] === ALL DONE ===
+
+Artifacts:
+-rw-r--r-- 1 root root 389534051 May 18 02:46 experiments/AdaPoinTr_baseline_smoke30/ShapeNet55_models/baseline_smoke30_rerun_seed42/ckpt-epoch-030.pth
+total 148
+drwxr-xr-x 2 root root   188 May 18 04:01 .
+drwxr-xr-x 3 root root  4096 May 18 02:46 ..
+-rw-r--r-- 1 root root 31948 May 18 03:14 eval_easy.log
+-rw-r--r-- 1 root root 13431 May 18 03:14 eval_easy_summary.txt
+-rw-r--r-- 1 root root 31966 May 18 04:01 eval_hard.log
+-rw-r--r-- 1 root root 13445 May 18 04:01 eval_hard_summary.txt
+-rw-r--r-- 1 root root 31978 May 18 03:39 eval_median.log
+-rw-r--r-- 1 root root 13435 May 18 03:39 eval_median_summary.txt
+
+Final S/M/H Overall values (for paired delta computation):
+  easy: 2026-05-18 03:14:07,592 - AdaPoinTr_baseline_smoke30 - INFO - Overall 		0.363 	14.047 	0.730 	0.000 	
+  median: 2026-05-18 03:39:07,896 - AdaPoinTr_baseline_smoke30 - INFO - Overall 		0.346 	15.358 	1.028 	0.000 	
+  hard: 2026-05-18 04:01:45,574 - AdaPoinTr_baseline_smoke30 - INFO - Overall 		0.305 	18.889 	1.903 	0.000 	

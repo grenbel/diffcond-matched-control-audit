@@ -1,0 +1,214 @@
+2026-04-15 20:50:28,005 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Copy the Config file from cfgs/ShapeNet55_models/AdaPoinTr_baseline_smoke30_diffcrop.yaml to ./experiments/AdaPoinTr_baseline_smoke30_diffcrop/ShapeNet55_models/test_R200Cmatched_vanilla_p26_ep030_hard/config.yaml
+2026-04-15 20:50:28,005 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - args.config : cfgs/ShapeNet55_models/AdaPoinTr_baseline_smoke30_diffcrop.yaml
+2026-04-15 20:50:28,005 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - args.launcher : none
+2026-04-15 20:50:28,005 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - args.local_rank : 0
+2026-04-15 20:50:28,005 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - args.num_workers : 4
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - args.seed : 0
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - args.deterministic : False
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - args.sync_bn : False
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - args.exp_name : test_R200Cmatched_vanilla_p26_ep030_hard
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - args.start_ckpts : None
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - args.ckpts : experiments/AdaPoinTr_baseline_smoke30_diffcrop/ShapeNet55_models/r200c_warmstart30_diffcrop/ckpt-epoch-030.pth
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - args.val_freq : 1
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - args.resume : False
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - args.test : True
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - args.mode : hard
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - args.difficulty_source : oracle
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - args.experiment_path : ./experiments/AdaPoinTr_baseline_smoke30_diffcrop/ShapeNet55_models/test_R200Cmatched_vanilla_p26_ep030_hard
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - args.tfboard_path : ./experiments/AdaPoinTr_baseline_smoke30_diffcrop/ShapeNet55_models/TFBoard/test_R200Cmatched_vanilla_p26_ep030_hard
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - args.log_name : AdaPoinTr_baseline_smoke30_diffcrop
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - args.use_gpu : True
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - args.distributed : False
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.optimizer = edict()
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.optimizer.type : AdamW
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.optimizer.kwargs = edict()
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.optimizer.kwargs.lr : 0.0001
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.optimizer.kwargs.weight_decay : 0.0005
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.scheduler = edict()
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.scheduler.type : LambdaLR
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.scheduler.kwargs = edict()
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.scheduler.kwargs.decay_step : 21
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.scheduler.kwargs.lr_decay : 0.9
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.scheduler.kwargs.lowest_decay : 0.02
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.bnmscheduler = edict()
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.bnmscheduler.type : Lambda
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.bnmscheduler.kwargs = edict()
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.bnmscheduler.kwargs.decay_step : 21
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.bnmscheduler.kwargs.bn_decay : 0.5
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.bnmscheduler.kwargs.bn_momentum : 0.9
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.bnmscheduler.kwargs.lowest_decay : 0.01
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.dataset = edict()
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.dataset.train = edict()
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.dataset.train._base_ = edict()
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.dataset.train._base_.NAME : ShapeNet
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.dataset.train._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.dataset.train._base_.N_POINTS : 8192
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.dataset.train._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.dataset.train.others = edict()
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.dataset.train.others.subset : train
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.dataset.train.others.bs : 48
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.dataset.val = edict()
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.dataset.val._base_ = edict()
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.dataset.val._base_.NAME : ShapeNet
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.dataset.val._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.dataset.val._base_.N_POINTS : 8192
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.dataset.val._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.dataset.val.others = edict()
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.dataset.val.others.subset : test
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.dataset.test = edict()
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.dataset.test._base_ = edict()
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.dataset.test._base_.NAME : ShapeNet
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.dataset.test._base_.DATA_PATH : data/ShapeNet55-34/ShapeNet-55
+2026-04-15 20:50:28,006 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.dataset.test._base_.N_POINTS : 8192
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.dataset.test._base_.PC_PATH : data/ShapeNet55-34/shapenet_pc
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.dataset.test.others = edict()
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.dataset.test.others.subset : test
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.model = edict()
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.model.NAME : AdaPoinTr
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.model.num_query : 512
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.model.num_points : 8192
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.model.center_num : [512, 256]
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.model.global_feature_dim : 1024
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.model.encoder_type : graph
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.model.decoder_type : fc
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.model.encoder_config = edict()
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.model.encoder_config.embed_dim : 384
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.model.encoder_config.depth : 6
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.model.encoder_config.num_heads : 6
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.model.encoder_config.k : 8
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.model.encoder_config.n_group : 2
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.model.encoder_config.mlp_ratio : 2.0
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.model.encoder_config.block_style_list : ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn']
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.model.encoder_config.combine_style : concat
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.model.decoder_config = edict()
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.model.decoder_config.embed_dim : 384
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.model.decoder_config.depth : 8
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.model.decoder_config.num_heads : 6
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.model.decoder_config.k : 8
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.model.decoder_config.n_group : 2
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.model.decoder_config.mlp_ratio : 2.0
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.model.decoder_config.self_attn_block_style_list : ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn']
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.model.decoder_config.self_attn_combine_style : concat
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.model.decoder_config.cross_attn_block_style_list : ['attn-graph', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn', 'attn']
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.model.decoder_config.cross_attn_combine_style : concat
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.total_bs : 48
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.step_per_update : 1
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.max_epoch : 30
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.consider_metric : CDL2
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - config.training_crop_mode : diffcond
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Distributed training: False
+2026-04-15 20:50:28,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Set random seed to 0, deterministic: False
+2026-04-15 20:50:28,008 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Tester start ... 
+2026-04-15 20:50:29,358 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Loading weights from experiments/AdaPoinTr_baseline_smoke30_diffcrop/ShapeNet55_models/r200c_warmstart30_diffcrop/ckpt-epoch-030.pth...
+2026-04-15 20:50:29,651 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - ckpts @ 30 epoch( performance = {'F-Score': 0.37583517740539923, 'CDL1': 13.998663856075119, 'CDL2': 0.9065029979286042, 'EMDistance': 0.0})
+2026-04-15 20:50:56,875 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[200/10518] Taxonomy = 04530566 Sample = 3bb6a5deec68ef77fee64ca302793912 Losses = ['22.1188', '1.9745', '12.0313', '0.6323'] Metrics = ['0.4272', '12.0313', '0.6323', '0.0000']
+2026-04-15 20:51:23,048 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[400/10518] Taxonomy = 03636649 Sample = 90651b3febfc3afe15226aa76eb7c3e Losses = ['43.8421', '7.6381', '19.8023', '1.6434'] Metrics = ['0.3038', '19.8023', '1.6434', '0.0000']
+2026-04-15 20:51:49,218 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[600/10518] Taxonomy = 03001627 Sample = fae27953e0f0404ca99df2794ec76201 Losses = ['34.7966', '4.8006', '18.0178', '1.3859'] Metrics = ['0.3188', '18.0178', '1.3859', '0.0000']
+2026-04-15 20:52:15,384 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[800/10518] Taxonomy = 03593526 Sample = 324c9045843b9470d29670d38a4c9e7e Losses = ['48.9436', '10.5075', '23.6412', '2.9469'] Metrics = ['0.3112', '23.6412', '2.9469', '0.0000']
+2026-04-15 20:52:41,566 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[1000/10518] Taxonomy = 02958343 Sample = 39e10c5d24fee4a6311f5d9a1681aa3b Losses = ['29.0087', '3.1556', '13.6649', '0.5982'] Metrics = ['0.2838', '13.6649', '0.5982', '0.0000']
+2026-04-15 20:53:07,799 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[1200/10518] Taxonomy = 03001627 Sample = e50f1b2d0835bb392764cfba57a5de73 Losses = ['39.7631', '7.1592', '23.0426', '2.7512'] Metrics = ['0.2618', '23.0426', '2.7512', '0.0000']
+2026-04-15 20:53:34,007 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[1400/10518] Taxonomy = 04379243 Sample = 647692d3858790a1f1783a44a88d6274 Losses = ['40.0342', '10.2204', '17.2881', '2.0415'] Metrics = ['0.3718', '17.2881', '2.0415', '0.0000']
+2026-04-15 20:54:00,189 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[1600/10518] Taxonomy = 02691156 Sample = d8d9de967255b4c562b600da24e0965 Losses = ['20.5612', '1.9690', '9.8672', '0.4946'] Metrics = ['0.6133', '9.8672', '0.4946', '0.0000']
+2026-04-15 20:54:26,342 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[1800/10518] Taxonomy = 03001627 Sample = 24c0e6a8b10abb77df2b21995cbbbc4f Losses = ['45.7517', '7.4584', '21.4682', '1.6702'] Metrics = ['0.1729', '21.4682', '1.6702', '0.0000']
+2026-04-15 20:54:52,402 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[2000/10518] Taxonomy = 04379243 Sample = 5d77e8f6ad3741a0c30ab36bf7b0552 Losses = ['32.6546', '3.9759', '10.9816', '0.3622'] Metrics = ['0.3814', '10.9816', '0.3622', '0.0000']
+2026-04-15 20:55:18,624 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[2200/10518] Taxonomy = 03636649 Sample = b64e98c991d4103170365ad078f710ff Losses = ['56.3912', '13.4841', '33.1251', '5.1722'] Metrics = ['0.2466', '33.1251', '5.1722', '0.0000']
+2026-04-15 20:55:44,776 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[2400/10518] Taxonomy = 03211117 Sample = b4386438057e85988bfba3df1f776207 Losses = ['37.4270', '6.7195', '15.6418', '0.9612'] Metrics = ['0.2590', '15.6418', '0.9612', '0.0000']
+2026-04-15 20:56:10,924 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[2600/10518] Taxonomy = 04468005 Sample = 3b8c505fd1127ed88f134472f61cf6bb Losses = ['25.8612', '2.3938', '13.8895', '0.6306'] Metrics = ['0.2878', '13.8895', '0.6306', '0.0000']
+2026-04-15 20:56:37,025 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[2800/10518] Taxonomy = 03001627 Sample = e3e76d624f1f855bcc8a9c365968620 Losses = ['32.4171', '4.0612', '20.5058', '1.8902'] Metrics = ['0.2981', '20.5058', '1.8902', '0.0000']
+2026-04-15 20:57:03,327 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[3000/10518] Taxonomy = 03001627 Sample = 40020a5e90c75d94a93412f1b60e6fba Losses = ['28.5439', '3.9122', '15.0362', '1.2725'] Metrics = ['0.4784', '15.0362', '1.2725', '0.0000']
+2026-04-15 20:57:29,440 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[3200/10518] Taxonomy = 02691156 Sample = a96c1589731b06a1efbd0f357ff7c40a Losses = ['20.3646', '1.5792', '9.8723', '0.3885'] Metrics = ['0.6183', '9.8723', '0.3885', '0.0000']
+2026-04-15 20:57:55,605 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[3400/10518] Taxonomy = 03046257 Sample = b2b40e80c9d3f530d5f1db12f95f0fe4 Losses = ['28.1193', '2.9478', '12.8465', '0.4952'] Metrics = ['0.2917', '12.8465', '0.4952', '0.0000']
+2026-04-15 20:58:21,778 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[3600/10518] Taxonomy = 02933112 Sample = c18a4772bcfbb98e85bc264270ae0601 Losses = ['37.6524', '5.5332', '19.7277', '1.4223'] Metrics = ['0.1558', '19.7277', '1.4223', '0.0000']
+2026-04-15 20:58:47,950 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[3800/10518] Taxonomy = 04530566 Sample = 215861c4bebeb328d9a75de54b023ae1 Losses = ['21.7189', '1.7019', '12.3479', '0.5139'] Metrics = ['0.3737', '12.3479', '0.5139', '0.0000']
+2026-04-15 20:59:14,084 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[4000/10518] Taxonomy = 02828884 Sample = 5f9d3dae06acf0e4e93e1127627b834 Losses = ['29.8783', '3.4985', '12.8620', '0.7021'] Metrics = ['0.3401', '12.8619', '0.7021', '0.0000']
+2026-04-15 20:59:40,197 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[4200/10518] Taxonomy = 04401088 Sample = a3c1c9fc390b1bbbb099170e6f5a4af9 Losses = ['26.4673', '2.5937', '11.6574', '0.4129'] Metrics = ['0.3600', '11.6574', '0.4129', '0.0000']
+2026-04-15 21:00:06,366 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[4400/10518] Taxonomy = 04256520 Sample = 54506969a60017ac8f0a57a8b9390a Losses = ['38.3626', '6.3856', '17.8449', '2.5751'] Metrics = ['0.4019', '17.8449', '2.5751', '0.0000']
+2026-04-15 21:00:32,573 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[4600/10518] Taxonomy = 04074963 Sample = d9ca2dcaf1d9d850dc605801df3f66ec Losses = ['34.8657', '4.4975', '14.3380', '0.7426'] Metrics = ['0.3336', '14.3380', '0.7426', '0.0000']
+2026-04-15 21:00:58,845 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[4800/10518] Taxonomy = 04379243 Sample = ead93856b735ec90f0aeabfdcb4e1dd9 Losses = ['26.2566', '2.9193', '9.6370', '0.2994'] Metrics = ['0.5277', '9.6370', '0.2994', '0.0000']
+2026-04-15 21:01:24,977 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[5000/10518] Taxonomy = 03790512 Sample = 242d8c07fabbdabc78fe949fc1419876 Losses = ['34.2494', '4.4322', '19.3820', '1.3719'] Metrics = ['0.1898', '19.3820', '1.3719', '0.0000']
+2026-04-15 21:01:51,262 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[5200/10518] Taxonomy = 02691156 Sample = 7b6f528acc10d3fbcf5b9c6e0c7ce895 Losses = ['22.4484', '2.0652', '12.9131', '0.8870'] Metrics = ['0.4902', '12.9131', '0.8870', '0.0000']
+2026-04-15 21:02:17,532 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[5400/10518] Taxonomy = 04379243 Sample = 6765d83445c2338555f46d55537192b6 Losses = ['66.4896', '30.5967', '28.3865', '6.1356'] Metrics = ['0.3215', '28.3865', '6.1356', '0.0000']
+2026-04-15 21:02:43,913 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[5600/10518] Taxonomy = 03001627 Sample = 33dc06a8e0933b1efc385a284336f217 Losses = ['32.4363', '3.9589', '16.0799', '0.8694'] Metrics = ['0.2458', '16.0799', '0.8694', '0.0000']
+2026-04-15 21:03:10,144 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[5800/10518] Taxonomy = 02992529 Sample = 4a81237a7fc743763992b1138bb05b3c Losses = ['24.3175', '2.1832', '10.1769', '0.3073'] Metrics = ['0.4590', '10.1769', '0.3073', '0.0000']
+2026-04-15 21:03:36,477 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[6000/10518] Taxonomy = 02958343 Sample = 37249c6f16b203de2e877e82c90c24d Losses = ['29.8657', '3.3316', '14.5583', '0.6851'] Metrics = ['0.2653', '14.5583', '0.6851', '0.0000']
+2026-04-15 21:04:02,600 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[6200/10518] Taxonomy = 02933112 Sample = 956c437be87a2be5f51f77a6d7299806 Losses = ['34.3229', '4.4509', '13.7676', '0.6184'] Metrics = ['0.2922', '13.7676', '0.6184', '0.0000']
+2026-04-15 21:04:28,757 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[6400/10518] Taxonomy = 03691459 Sample = 9d62c46fc3fd343d1f9f3ce366e030fb Losses = ['43.6075', '6.9904', '16.7136', '0.8964'] Metrics = ['0.2161', '16.7136', '0.8964', '0.0000']
+2026-04-15 21:04:54,936 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[6600/10518] Taxonomy = 04379243 Sample = 7a8399fc51d83969a8b1d0fdee586dc9 Losses = ['28.6399', '5.6186', '8.4990', '0.2686'] Metrics = ['0.6546', '8.4990', '0.2686', '0.0000']
+2026-04-15 21:05:21,042 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[6800/10518] Taxonomy = 03001627 Sample = 78abbfe9ab73729f56d13e757b0dc374 Losses = ['61.4585', '15.5931', '26.0916', '4.2309'] Metrics = ['0.3520', '26.0916', '4.2309', '0.0000']
+2026-04-15 21:05:47,199 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[7000/10518] Taxonomy = 04379243 Sample = 264a075e293394a843638dabe1eb5336 Losses = ['32.0957', '4.9065', '14.0888', '0.6620'] Metrics = ['0.3001', '14.0888', '0.6620', '0.0000']
+2026-04-15 21:06:13,448 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[7200/10518] Taxonomy = 03211117 Sample = 96f01698d0446641ea6e0950aa8ac31b Losses = ['36.9984', '5.2608', '18.3009', '1.4340'] Metrics = ['0.2787', '18.3009', '1.4340', '0.0000']
+2026-04-15 21:06:39,619 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[7400/10518] Taxonomy = 03001627 Sample = b2239339005b14c8d675cc466d0d6fbc Losses = ['31.6215', '3.8440', '17.1441', '1.2091'] Metrics = ['0.2925', '17.1441', '1.2091', '0.0000']
+2026-04-15 21:07:05,781 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[7600/10518] Taxonomy = 04074963 Sample = 57759e351ec76d86d3c1501c166e6b2a Losses = ['26.1747', '2.4707', '12.5639', '0.5947'] Metrics = ['0.4091', '12.5639', '0.5947', '0.0000']
+2026-04-15 21:07:31,951 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[7800/10518] Taxonomy = 04090263 Sample = 41a9912bfe0dc96239169e4b52d9f093 Losses = ['38.0676', '10.3352', '21.4897', '5.2601'] Metrics = ['0.5514', '21.4897', '5.2601', '0.0000']
+2026-04-15 21:07:58,079 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[8000/10518] Taxonomy = 04379243 Sample = bcbc5e30e12a58f07ea323bc74055b8 Losses = ['27.0987', '3.1251', '11.5671', '0.4675'] Metrics = ['0.4124', '11.5671', '0.4675', '0.0000']
+2026-04-15 21:08:24,210 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[8200/10518] Taxonomy = 04379243 Sample = aabcb5d610e76ff19ca02c396af0c503 Losses = ['70.2032', '29.4526', '38.7451', '12.1958'] Metrics = ['0.3256', '38.7451', '12.1958', '0.0000']
+2026-04-15 21:08:50,375 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[8400/10518] Taxonomy = 04379243 Sample = dd2c3ff28a34556a47839bae1bc65257 Losses = ['29.4101', '6.3779', '13.7386', '1.3167'] Metrics = ['0.5191', '13.7386', '1.3167', '0.0000']
+2026-04-15 21:09:16,584 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[8600/10518] Taxonomy = 03337140 Sample = 149a105979cad722c1467c54b9e09ce5 Losses = ['53.2314', '11.7512', '23.1998', '2.9584'] Metrics = ['0.2064', '23.1998', '2.9584', '0.0000']
+2026-04-15 21:09:42,791 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[8800/10518] Taxonomy = 02691156 Sample = 4044d5954ef85af8279326882e8430cb Losses = ['27.8529', '3.2359', '12.4532', '0.9028'] Metrics = ['0.5574', '12.4532', '0.9028', '0.0000']
+2026-04-15 21:10:09,192 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[9000/10518] Taxonomy = 02828884 Sample = 4e512ab638542762d4d8765e3910f617 Losses = ['23.3096', '2.1130', '10.0997', '0.3126'] Metrics = ['0.4786', '10.0997', '0.3126', '0.0000']
+2026-04-15 21:10:35,511 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[9200/10518] Taxonomy = 04379243 Sample = 5247e4e978399f1b486040c0d9e85846 Losses = ['38.6691', '8.5398', '16.4569', '1.7229'] Metrics = ['0.4737', '16.4569', '1.7229', '0.0000']
+2026-04-15 21:11:01,786 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[9400/10518] Taxonomy = 03636649 Sample = 7ec821d5d8bd9f17d4aea4231844b26b Losses = ['13.0900', '0.6715', '6.2202', '0.1445'] Metrics = ['0.8416', '6.2202', '0.1445', '0.0000']
+2026-04-15 21:11:27,990 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[9600/10518] Taxonomy = 04090263 Sample = 3cb82befc3290e36b58435942a1b4dac Losses = ['11.8957', '0.6316', '6.7120', '0.1932'] Metrics = ['0.7956', '6.7119', '0.1932', '0.0000']
+2026-04-15 21:11:54,401 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[9800/10518] Taxonomy = 04379243 Sample = 6358336cbeedb9232d9fe390e23fd20f Losses = ['23.3132', '2.2140', '9.1527', '0.2572'] Metrics = ['0.5545', '9.1527', '0.2572', '0.0000']
+2026-04-15 21:12:20,534 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[10000/10518] Taxonomy = 04401088 Sample = f73493b7c8a78000b594bbf2c494ab81 Losses = ['35.0218', '6.0299', '17.7031', '1.6479'] Metrics = ['0.3636', '17.7031', '1.6479', '0.0000']
+2026-04-15 21:12:46,697 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[10200/10518] Taxonomy = 03001627 Sample = 3ffd794e5100258483bc207d8a5912e3 Losses = ['30.2015', '3.2884', '13.0859', '0.6585'] Metrics = ['0.3892', '13.0859', '0.6585', '0.0000']
+2026-04-15 21:13:12,865 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Test[10400/10518] Taxonomy = 04090263 Sample = 26744766d59c28fb6b2c8bb96250e4a0 Losses = ['15.6742', '1.1393', '8.7739', '0.3833'] Metrics = ['0.6718', '8.7739', '0.3833', '0.0000']
+2026-04-15 21:13:28,325 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - [TEST] Metrics = ['0.3372', '16.9055', '1.5289', '0.0000']
+2026-04-15 21:13:28,325 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - ============================ TEST RESULTS ============================
+2026-04-15 21:13:28,325 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Taxonomy	#Sample	F-Score	CDL1	CDL2	EMDistance	#ModelName	
+2026-04-15 21:13:28,326 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 03759954	112	0.447 	21.490 	3.771 	0.000 	microphone	
+2026-04-15 21:13:28,326 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 04330267	352	0.269 	17.950 	1.565 	0.000 	stove	
+2026-04-15 21:13:28,326 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 03261776	120	0.281 	21.446 	2.526 	0.000 	earphone	
+2026-04-15 21:13:28,326 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 03513137	264	0.192 	25.528 	3.644 	0.000 	helmet	
+2026-04-15 21:13:28,326 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 04460130	216	0.368 	17.514 	1.676 	0.000 	tower	
+2026-04-15 21:13:28,326 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 04468005	624	0.375 	14.355 	0.967 	0.000 	train	
+2026-04-15 21:13:28,326 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 03761084	248	0.226 	18.208 	1.459 	0.000 	microwaves	
+2026-04-15 21:13:28,326 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 04004475	272	0.251 	20.189 	2.120 	0.000 	printer	
+2026-04-15 21:13:28,326 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 03938244	160	0.277 	17.011 	1.216 	0.000 	pillow	
+2026-04-15 21:13:28,326 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 02992529	1336	0.397 	12.252 	0.576 	0.000 	cellphone	
+2026-04-15 21:13:28,326 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 02808440	1376	0.274 	17.164 	1.404 	0.000 	bathtub	
+2026-04-15 21:13:28,326 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 04530566	3104	0.459 	13.432 	0.926 	0.000 	watercraft	
+2026-04-15 21:13:28,327 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 02871439	728	0.239 	19.125 	1.674 	0.000 	bookshelf	
+2026-04-15 21:13:28,327 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 03593526	960	0.238 	21.934 	2.431 	0.000 	jar	
+2026-04-15 21:13:28,327 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 04554684	272	0.212 	20.431 	2.052 	0.000 	washer	
+2026-04-15 21:13:28,327 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 03467517	1280	0.742 	8.283 	0.388 	0.000 	guitar	
+2026-04-15 21:13:28,327 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 04401088	1744	0.402 	12.114 	0.582 	0.000 	telephone	
+2026-04-15 21:13:28,327 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 02954340	96	0.276 	16.410 	1.098 	0.000 	cap	
+2026-04-15 21:13:28,327 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 02933112	2520	0.232 	16.785 	1.091 	0.000 	cabinet	
+2026-04-15 21:13:28,327 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 03642806	736	0.371 	12.513 	0.590 	0.000 	laptop	
+2026-04-15 21:13:28,327 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 02924116	1504	0.351 	13.802 	0.747 	0.000 	bus	
+2026-04-15 21:13:28,327 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 02946921	176	0.228 	19.788 	2.042 	0.000 	can	
+2026-04-15 21:13:28,327 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 02818832	376	0.266 	19.687 	2.047 	0.000 	bed	
+2026-04-15 21:13:28,327 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 04256520	5080	0.293 	15.673 	1.052 	0.000 	sofa	
+2026-04-15 21:13:28,328 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 04379243	13496	0.373 	14.538 	1.197 	0.000 	table	
+2026-04-15 21:13:28,328 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 02747177	552	0.184 	20.666 	1.891 	0.000 	trash bin	
+2026-04-15 21:13:28,328 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 03046257	1048	0.290 	16.923 	1.380 	0.000 	clock	
+2026-04-15 21:13:28,328 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 04225987	248	0.524 	10.987 	0.550 	0.000 	skateboard	
+2026-04-15 21:13:28,328 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 03797390	344	0.179 	21.346 	2.094 	0.000 	mug	
+2026-04-15 21:13:28,328 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 03001627	10848	0.336 	16.703 	1.424 	0.000 	chair	
+2026-04-15 21:13:28,328 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 03691459	2560	0.237 	19.777 	1.875 	0.000 	loudspeaker	
+2026-04-15 21:13:28,328 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 02942699	184	0.218 	25.198 	3.477 	0.000 	camera	
+2026-04-15 21:13:28,328 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 03636649	3712	0.450 	19.259 	2.956 	0.000 	lamp	
+2026-04-15 21:13:28,328 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 02691156	6472	0.537 	11.103 	0.607 	0.000 	airplane	
+2026-04-15 21:13:28,328 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 02773838	136	0.320 	15.883 	1.217 	0.000 	bag	
+2026-04-15 21:13:28,328 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 02958343	5624	0.214 	17.932 	1.164 	0.000 	car	
+2026-04-15 21:13:28,328 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 02880940	304	0.213 	17.697 	1.137 	0.000 	bowl	
+2026-04-15 21:13:28,329 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 04099429	136	0.632 	11.466 	0.803 	0.000 	rocket	
+2026-04-15 21:13:28,329 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 02828884	2904	0.433 	12.417 	0.826 	0.000 	bench	
+2026-04-15 21:13:28,329 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 04090263	3800	0.623 	10.685 	0.707 	0.000 	rifle	
+2026-04-15 21:13:28,329 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 03211117	1752	0.330 	15.160 	1.092 	0.000 	display	
+2026-04-15 21:13:28,329 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 02876657	800	0.379 	15.759 	1.334 	0.000 	bottle	
+2026-04-15 21:13:28,329 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 03710193	152	0.435 	18.693 	2.456 	0.000 	mailbox	
+2026-04-15 21:13:28,329 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 03790512	544	0.236 	19.307 	1.619 	0.000 	motorbike	
+2026-04-15 21:13:28,329 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 03325088	1192	0.373 	20.918 	2.959 	0.000 	faucet	
+2026-04-15 21:13:28,329 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 02801938	184	0.216 	18.370 	1.443 	0.000 	basket	
+2026-04-15 21:13:28,329 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 03337140	480	0.229 	18.378 	1.514 	0.000 	file cabinet	
+2026-04-15 21:13:28,329 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 02843684	120	0.215 	22.735 	2.565 	0.000 	birdhouse	
+2026-04-15 21:13:28,329 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 03624134	680	0.667 	9.652 	0.542 	0.000 	knife	
+2026-04-15 21:13:28,329 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 03991062	968	0.218 	22.317 	2.415 	0.000 	flowerpot	
+2026-04-15 21:13:28,330 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 03948459	496	0.424 	14.023 	0.986 	0.000 	pistol	
+2026-04-15 21:13:28,330 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 03928116	384	0.277 	18.335 	1.808 	0.000 	piano	
+2026-04-15 21:13:28,330 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 03207941	152	0.228 	17.758 	1.377 	0.000 	dishwasher	
+2026-04-15 21:13:28,330 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 04074963	112	0.430 	12.248 	0.603 	0.000 	remote	
+2026-04-15 21:13:28,330 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - 03085013	104	0.460 	10.482 	0.429 	0.000 	keyboard	
+2026-04-15 21:13:28,330 - AdaPoinTr_baseline_smoke30_diffcrop - INFO - Overall 		0.337 	16.905 	1.529 	0.000 	

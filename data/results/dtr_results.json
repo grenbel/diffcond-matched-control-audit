@@ -1,0 +1,61 @@
+{
+  "_note": "n_total_samples counts test samples (the first 100 of the ShapeNet-55 Hard split); each sample is evaluated at the first 2 of the 8 official viewpoints (run log: viewpoints=2), so every strategy row averages 200 completions, category-balanced as in tools/eval_dtr.py.",
+  "hard": {
+    "cond_easy": {
+      "fscore": 0.30510310163884946,
+      "cdl1": 18.071886576123646,
+      "cdl2": 1.6956143109735495,
+      "emd": 36.90347023083759,
+      "n_categories": 18,
+      "n_total_samples": 100
+    },
+    "cond_median": {
+      "fscore": 0.30740535102885463,
+      "cdl1": 17.8513642228688,
+      "cdl2": 1.6665161870205185,
+      "emd": 35.956232405013715,
+      "n_categories": 18,
+      "n_total_samples": 100
+    },
+    "cond_hard": {
+      "fscore": 0.30897050085230515,
+      "cdl1": 17.64893175122365,
+      "cdl2": 1.6726447874126373,
+      "emd": 34.230216374564336,
+      "n_categories": 18,
+      "n_total_samples": 100
+    },
+    "predict": {
+      "fscore": 0.3089430197307077,
+      "cdl1": 17.651037764345077,
+      "cdl2": 1.6728831154809818,
+      "emd": 34.311280769584805,
+      "n_categories": 18,
+      "n_total_samples": 100
+    },
+    "mean": {
+      "fscore": 0.3074780855615164,
+      "cdl1": 17.84326436445188,
+      "cdl2": 1.66192752141508,
+      "emd": 35.77185972579265,
+      "n_categories": 18,
+      "n_total_samples": 100
+    },
+    "weighted": {
+      "fscore": 0.3089170989985529,
+      "cdl1": 17.654601957762097,
+      "cdl2": 1.6722221026085509,
+      "emd": 34.49114298404614,
+      "n_categories": 18,
+      "n_total_samples": 100
+    },
+    "oracle_best_cdl2": {
+      "fscore": 0.30827396953644737,
+      "cdl1": 17.515453106570867,
+      "cdl2": 1.5705140932699382,
+      "emd": 34.967767544924655,
+      "n_categories": 18,
+      "n_total_samples": 100
+    }
+  }
+}

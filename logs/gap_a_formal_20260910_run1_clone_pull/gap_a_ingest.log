@@ -1,0 +1,11 @@
+[12:43:24] archive: 8367547065 bytes 6dd43641c2859114f162d497b6a1aa1a
+[12:44:56] unpacked: 52470 npy files, 52470 of them 196736 bytes, at /root/autodl-tmp/official_unpack/ShapeNet55/shapenet_pc
+[12:44:58] every split name present
+{
+  "references": 17,
+  "references_byte_equal": 17,
+  "sample": 200,
+  "sample_matched_in_parquet": 200,
+  "verdict": "PASS"
+}
+[12:45:20] linked 52470 clouds at /root/PoinTr/data/ShapeNet55-34/shapenet_pc; now run: python tools/gap_a_remote.py setup --env MAX_JOBS=8

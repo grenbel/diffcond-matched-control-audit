@@ -1,0 +1,152 @@
+{
+  "written_at": "2026-09-11T01:06:40+0800",
+  "m0_sentinel_sha256": "413ffcdac7780d287cfb5170e9f02184d51641de3e753862b617660e0fe00d07",
+  "m1_sentinel_sha256": "67559814add7321fa0a335d9e7f877afd6fca4a4157c1482a9d37a707a2eb594",
+  "evals": {
+    "v1_lambda0_seed43_easy": {
+      "sidecar": "gap_a_logs/eval_meta_v1_lambda0_seed43_easy.json",
+      "sidecar_sha256": "9efded054867e701576cafa138e494647f1db203a9d883a272b86aa6b261810f",
+      "log": "experiments/AdaPoinTr_DiffCond_v1_lambda0/ShapeNet55_models/test_diffcond_v1_lambda0_seed43_eval_easy_easy/20260910_162735.log",
+      "log_sha256": "2d438be6767ad6643bbb7f967f411c1f93305432041261f76c47f8281c5c0f6a",
+      "overall": [
+        "0.403",
+        "12.415",
+        "0.585",
+        "0.000"
+      ]
+    },
+    "v1_lambda0_seed43_median": {
+      "sidecar": "gap_a_logs/eval_meta_v1_lambda0_seed43_median.json",
+      "sidecar_sha256": "91b90434cc2d4fd0271fb9a55f3cbd258d47220937b703f3e802e2c6658d36f2",
+      "log": "experiments/AdaPoinTr_DiffCond_v1_lambda0/ShapeNet55_models/test_diffcond_v1_lambda0_seed43_eval_median_median/20260910_171319.log",
+      "log_sha256": "ebb76f698b22c1c9097dbce7df68259ec0fbf2fe93b7f3dfb202512391678016",
+      "overall": [
+        "0.385",
+        "13.691",
+        "0.834",
+        "0.000"
+      ]
+    },
+    "v1_lambda0_seed43_hard": {
+      "sidecar": "gap_a_logs/eval_meta_v1_lambda0_seed43_hard.json",
+      "sidecar_sha256": "0042a5334fc8141c3f2af2dcd4b101923ba9127ab1a8019fe264a0f084f5a0ab",
+      "log": "experiments/AdaPoinTr_DiffCond_v1_lambda0/ShapeNet55_models/test_diffcond_v1_lambda0_seed43_eval_hard_hard/20260910_175610.log",
+      "log_sha256": "fa263a00b8b679f6c6b8a0cae4018dcdc76efa1a8392e458772cb3f7064ce20d",
+      "overall": [
+        "0.340",
+        "16.886",
+        "1.547",
+        "0.000"
+      ]
+    },
+    "v1_lambda0_seed44_easy": {
+      "sidecar": "gap_a_logs/eval_meta_v1_lambda0_seed44_easy.json",
+      "sidecar_sha256": "2f0dbcf4da321324189594857e8e57ac4674e74db93c13534eba9f30d869c679",
+      "log": "experiments/AdaPoinTr_DiffCond_v1_lambda0/ShapeNet55_models/test_diffcond_v1_lambda0_seed44_eval_easy_easy/20260910_183655.log",
+      "log_sha256": "c10e9e1cbff6bb642a73537997878c15e6b7bb7f4f276455695387ef8413550c",
+      "overall": [
+        "0.387",
+        "12.763",
+        "0.604",
+        "0.000"
+      ]
+    },
+    "v1_lambda0_seed44_median": {
+      "sidecar": "gap_a_logs/eval_meta_v1_lambda0_seed44_median.json",
+      "sidecar_sha256": "7a50a9c62137f4e5db5ccb22a657d105c82326f6f5ae184eed68ab906770f05f",
+      "log": "experiments/AdaPoinTr_DiffCond_v1_lambda0/ShapeNet55_models/test_diffcond_v1_lambda0_seed44_eval_median_median/20260910_192348.log",
+      "log_sha256": "d9e8f86d09a30558199071689c6f94b5765ea3f0407b8a32d957fbe177c00ddd",
+      "overall": [
+        "0.366",
+        "14.169",
+        "0.877",
+        "0.000"
+      ]
+    },
+    "v1_lambda0_seed44_hard": {
+      "sidecar": "gap_a_logs/eval_meta_v1_lambda0_seed44_hard.json",
+      "sidecar_sha256": "cdaf18912a3057f2196e95be0ff8c8d64a00517433078c7b74ba8f391d52c66d",
+      "log": "experiments/AdaPoinTr_DiffCond_v1_lambda0/ShapeNet55_models/test_diffcond_v1_lambda0_seed44_eval_hard_hard/20260910_200648.log",
+      "log_sha256": "0299ba09eff0f9f570d2dfe1a19dad489318b0524005d499263247dc011703d3",
+      "overall": [
+        "0.319",
+        "17.794",
+        "1.713",
+        "0.000"
+      ]
+    },
+    "v2b_seed43_easy": {
+      "sidecar": "gap_a_logs/eval_meta_v2b_seed43_easy.json",
+      "sidecar_sha256": "43660617701a5f1f1a5f5d0ec910b8c63712fa67f3a382f7582a62a9c583927e",
+      "log": "experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/test_diffcond_v2b_seed43_eval_easy_easy/20260910_204735.log",
+      "log_sha256": "deda5ec882818d920aa5842f1a70ac35a9f02eeb2d31225bc9d114a27985be83",
+      "overall": [
+        "0.393",
+        "12.497",
+        "0.586",
+        "0.000"
+      ]
+    },
+    "v2b_seed43_median": {
+      "sidecar": "gap_a_logs/eval_meta_v2b_seed43_median.json",
+      "sidecar_sha256": "f332cdb3506b47f332583f26dbb5c05579c352061acae0cf34b5805cd28840f7",
+      "log": "experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/test_diffcond_v2b_seed43_eval_median_median/20260910_213316.log",
+      "log_sha256": "cd7ee22ada4b1c6e52c263cfcdf29dea058b10b1844d2b9f74e60b983fd2798d",
+      "overall": [
+        "0.375",
+        "13.751",
+        "0.835",
+        "0.000"
+      ]
+    },
+    "v2b_seed43_hard": {
+      "sidecar": "gap_a_logs/eval_meta_v2b_seed43_hard.json",
+      "sidecar_sha256": "f0afcd185e5a6207e2b4139ed3c8de029c0950182b6340f4a5b0a4540217c56f",
+      "log": "experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/test_diffcond_v2b_seed43_eval_hard_hard/20260910_221556.log",
+      "log_sha256": "6e1636faa7652255df0520b818368c7060701913f4fa7335bd25fb4a659a6b02",
+      "overall": [
+        "0.335",
+        "17.074",
+        "1.603",
+        "0.000"
+      ]
+    },
+    "v2b_seed44_easy": {
+      "sidecar": "gap_a_logs/eval_meta_v2b_seed44_easy.json",
+      "sidecar_sha256": "13531f69592ab6606d7448a21e8c05bbd9b49ecb2b869d87f292ef18444b09ef",
+      "log": "experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/test_diffcond_v2b_seed44_eval_easy_easy/20260910_225635.log",
+      "log_sha256": "17e26a1f823b71472adbad050cd56ae46666caaa2972a5e90412101e83fb8b0c",
+      "overall": [
+        "0.403",
+        "12.225",
+        "0.554",
+        "0.000"
+      ]
+    },
+    "v2b_seed44_median": {
+      "sidecar": "gap_a_logs/eval_meta_v2b_seed44_median.json",
+      "sidecar_sha256": "dc83cb03562a8a333a3f9845eb602cd73143142c5ef0305fd5a48ca59281e2cf",
+      "log": "experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/test_diffcond_v2b_seed44_eval_median_median/20260910_234225.log",
+      "log_sha256": "bd57475354a347f42c4fc47a238d4525cdca04417a2ee368089f990cf54272e0",
+      "overall": [
+        "0.383",
+        "13.459",
+        "0.794",
+        "0.000"
+      ]
+    },
+    "v2b_seed44_hard": {
+      "sidecar": "gap_a_logs/eval_meta_v2b_seed44_hard.json",
+      "sidecar_sha256": "57b9dec9fe6079c47836ec28b363336a0a51dc0c9f98a62f0c15ce5855f95c28",
+      "log": "experiments/AdaPoinTr_DiffCond_v2b/ShapeNet55_models/test_diffcond_v2b_seed44_eval_hard_hard/20260911_002523.log",
+      "log_sha256": "0663be5e18fe885acf53e61de91c4c3aeddd4d2017ecde264aae582983e7c25e",
+      "overall": [
+        "0.340",
+        "16.566",
+        "1.485",
+        "0.000"
+      ]
+    }
+  },
+  "n_evals": 12
+}
